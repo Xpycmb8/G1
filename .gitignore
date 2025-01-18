@@ -1,0 +1,14 @@
+*.pak
+*.ply
+*.dds
+*.mtl
+*.anm
+*.wav
+*.zip
+*.tga
+/texture
+/map
+/sound
+/interface
+*.vol
+*.anm
