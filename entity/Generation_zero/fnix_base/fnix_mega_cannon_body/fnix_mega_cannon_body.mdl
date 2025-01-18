@@ -1,0 +1,44 @@
+;Exported by: Xpycmb
+;Date:        Thu Nov  3 18:45:22 2022
+;File:        C:\Users\Xpycmb\Documents\3dsMax\scenes\fnix_mega_cannon.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "body"
+			{parameters "ID=Body;"}
+			{Orientation
+				0	1	0
+				-1	0	0
+				0	0	1
+			}
+			{VolumeView "body.ply"}
+			{bone "rail_l"
+				{parameters "ID=Body;"}
+				{Position 76.8694	5.85944	-0.434326}
+				{VolumeView "rail_l.ply"}
+				{bone "wheel_l"
+					{parameters "ID=Body;"}
+					{Position 0	-150.669	7.79724}
+					{VolumeView "wheel_l.ply"}
+				}
+			}
+			{bone "rail_r"
+				{parameters "ID=Body;"}
+				{Position -76.8695	5.85944	-0.434326}
+				{VolumeView "rail_r.ply"}
+				{bone "wheel_r"
+					{parameters "ID=Body;"}
+					{Position 0	-150.669	7.79724}
+					{VolumeView "wheel_r.ply"}
+				}
+			}
+			{bone "horizontal_drive_place"
+				{Position 0	0.508667	64.7959}
+			}
+		}
+	}
+}

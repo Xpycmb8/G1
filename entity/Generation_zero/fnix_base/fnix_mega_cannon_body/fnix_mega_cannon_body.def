@@ -1,0 +1,7 @@
+{game_entity
+	{Extension "fnix_mega_cannon_body.mdl"}
+	{placer}
+	{extender "structure"
+		{place "horizontal_drive_place" "fnix_mega_cannon_hor_drive"}
+	}
+}

@@ -1,0 +1,7 @@
+{game_entity
+	{Skeleton}
+	{props "explosion" "orientation_gun"}
+	{extender "stuff"
+		{item "orientation_gun_ik"}
+	}
+}

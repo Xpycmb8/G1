@@ -1,0 +1,561 @@
+{actor
+	(include "/properties/machinery.ext")
+	{props "baze_machinery" "harvester_base" "event_script" "detect_tank_heavy"}
+	(include "/properties/selection/dreadnought.inc" scale(0.1))
+	{PatherID  "harvest_base"}
+	{collider "tank.heavy"}
+	{targetClass "heavy_machinery"} ;; select for best ammo
+
+;body component
+	{Volume "body_b" ;середина корпуса
+		{component "main_body"}
+		{material "armor"}
+		{tags "armor"}
+		{thickness	40 }
+	}
+	{Volume "body_c" ;перед по центру
+		{component "main_body"}
+		{material "armor"}
+		{tags "armor"}
+		{thickness	40 }
+	}
+	{Volume "body_d" ; нижняя пластина
+		{component "main_body"}
+		{material "armor"}
+		{tags "armor"}
+		{thickness	20 }
+	}
+	{Volume "body_l"; боковые части
+		{component "main_body"}
+		{material "steel"}
+		{tags "armor"}
+		{thickness	30 }
+	}
+	{Volume "body_r";боковые части
+		{component "main_body"}
+		{material "steel"}
+		{tags "armor"}
+		{thickness	30 }
+	}
+	{Volume "body_up";вверх
+		{component "main_body"}
+		{material "armor"}
+		{tags "armor"}
+		{thickness	30 }
+	}
+	{Volume "frontlegs_mount"
+		{component "frontlegs_mount"}
+		{thickness	30 }
+	}
+	{Volume "backlegs_mount"
+		{component "backlegs_mount"}
+		{thickness	30 }
+	}
+	{Volume "cpu_cover"
+		{thickness	15 }
+	}
+
+;armor
+	{volume "front_plate_l"
+		{material "armor"}
+		{tags "armor_crushed" }
+		{component "front_plate_l"}
+		{thickness	40 }
+		{tags "armor_crushed" }
+	}
+	{volume "front_plate_r"
+		{material "armor"}
+		{tags "armor_crushed" }
+		{component "front_plate_r"}
+		{thickness	40 }
+		{tags "armor_crushed" }
+	}
+	{volume "knee_plate_l"
+		{material "armor"}
+		{tags "armor_crushed" }
+		{component "knee_plate_l"}
+		{thickness	40 }
+		{tags "armor_crushed" }
+	}
+	{volume "knee_plate_r"
+		{material "armor"}
+		{tags "armor_crushed" }
+		{component "knee_plate_r"}
+		{thickness	40 }
+		{tags "armor_crushed" }
+	}
+
+
+
+
+;-------------crushed_parts
+	
+	{Volume "front_core_panel"  ;повреждаемые передние элементы
+		{thickness 12}
+		{component "front_core_panel"}
+	}
+	{Volume "structure_plate_right"  ;повреждаемые передние элементы
+		{thickness 12}
+		{component "structure_plate_right"}
+	}
+	{Volume "structure_plate_left"  ;повреждаемые передние элементы
+		{thickness 12}
+		{component "structure_plate_left"}
+	}
+	{Volume "front_hatch_r"  ;повреждаемые крышки на корпусе
+		{thickness 7}
+		{component "front_hatch_r"}
+	}
+	{Volume "front_hatch_l"  ;повреждаемые крышки на корпусе
+		{thickness 7}
+		{component "front_hatch_l"}
+	}
+	{Volume "drill_hatch_l"  ;повреждаемые крышки на дрели
+		{thickness 5}
+		{component "drill_hatch_l"}
+	}
+	{Volume "drill_hatch_r"  ;повреждаемые крышки на дрели
+		{thickness 5}
+		{component "drill_hatch_r"}
+	}
+
+
+;-----------------organ
+	{Volume "head_organ"
+		{material "steel"}
+		{thickness 1}
+		{component "head_organ"}
+		{tags "head_organ"  "organ" "main_organ"}
+	}
+	{Volume "cpu" 
+		{material "steel"}
+		{thickness 1}
+		{component "cpu"}
+		{tags "cpu" "main_organ" }
+	}
+	{Volume "Drillmount"  
+		{thickness 12}
+		{component "Drillmount"}
+	}
+
+	{Volume "Drill"  
+		{thickness 7}
+		{component "Drill"}
+	}
+
+	{Volume "fueltank_l" 
+		{component "fuel_l"}
+		{thickness 5}
+		{tags "fuel"}
+	}
+	{Volume "fueltank_r" 
+		{component "fuel_r"}
+		{thickness 5}
+		{tags "fuel"}
+	}
+	{Volume "fueltank_c" 
+		{component "fuel"}
+		{thickness 5}
+		{tags "fuel"}
+	}
+	
+	{Volume "tank_l" 
+		{component "tank_l"}
+		{thickness 5}
+		{tags "compressor_l"}
+	}
+	{Volume "tank_r" 
+		{component "tank_r"}
+		{thickness 5}
+		{tags "compressor_r"}
+	}
+
+	{Volume "hatch_m_l" 
+		{thickness 3}
+	}
+	{Volume "hatch_m_r"  
+		{thickness 3}
+	}
+
+;---------------head
+	{Volume "armour_head"
+		{material "misc"}
+		{thickness 5}
+		{component "armour_head"}
+		{tags "armor_crushed" }
+	}
+	{Volume "armour_head_upper"; броня на голове
+		{material "misc"}
+		{thickness 5}
+		{component "armour_head_upper"}
+		{tags "armor_crushed" }
+	}
+	; {Volume "visor" 		; голова
+		; {material "steel"}
+		; {thickness 15}
+		; {component "head"}
+		; {tags "head" }
+	; }
+	{Volume "head"		;	голова
+		{material "steel"}
+		{thickness 12}
+		{component "head"}
+		{tags "head"}
+	}
+	{Volume "neck"			; ротация
+		{material "steel"}
+		{thickness 8}
+		{component "neck"}
+		{tags "neck"}
+	}
+
+	
+	
+;----------simple(legs)
+	{Volume "leftarm"
+		{material "armor"}
+		{thickness 30}
+		{component "leftarm"}
+	}
+	{Volume "leftfoot"
+		{material "armor"}
+		{thickness 30}
+		{component "leftfoot"}
+	}
+	{Volume "leftforearm"
+		{material "armor"}
+		{thickness 30}
+		{component "leftforearm"}
+	}
+	{Volume "lefthand"
+		{material "armor"}
+		{thickness 30}
+		{component "lefthand"}
+	}
+	{Volume "leftleg"
+		{material "armor"}
+		{thickness 30}
+		{component "leftleg"}
+	}
+	{Volume "leftshoulder"
+		{material "armor"}
+		{thickness 30}
+		{component "leftshoulder"}
+	}
+	{Volume "lefttoe"
+		{material "armor"}
+		{thickness 30}
+		{component "LeftToe"}
+	}
+	{Volume "LeftUpLeg"
+		{material "armor"}
+		{thickness 30}
+		{component "LeftUpLeg"}
+	}
+	{Volume "rightarm"
+		{material "armor"}
+		{thickness 30}
+		{component "rightarm"}
+	}
+	{Volume "rightfoot"
+		{material "armor"}
+		{thickness 30}
+		{component "rightfoot"}
+	}
+	{Volume "rightforearm"
+		{material "armor"}
+		{thickness 30}
+		{component "rightforearm"}
+	}
+	{Volume "righthand"
+		{material "armor"}
+		{thickness 30}
+		{component "righthand"}
+	}
+	{Volume "rightleg"
+		{material "armor"}
+		{thickness 30}
+		{component "rightleg"}
+	}
+	{Volume "rightshoulder"
+		{material "armor"}
+		{thickness 30}
+		{component "rightshoulder"}
+	}
+	{Volume "righttoe"
+		{material "armor"}
+		{thickness 30}
+		{component "rightToe"}
+	}
+	{Volume "rightUpLeg"
+		{material "armor"}
+		{thickness 30}
+		{component "rightUpLeg"}
+	}
+
+
+	{Volume "Missile_r"
+		{material "steel"}
+		{thickness 14}
+		{component "Missile_r"}
+		{tags "Missile_r" }
+	}
+	{Volume "Missile_l"
+		{material "steel"}
+		{thickness 14}
+		{component "Missile_l"}
+		{tags "Missile_l" }
+	}
+	{Volume "container_c"
+		{material "steel"}
+		{thickness 14}
+		{component "container"}
+	}
+	{Volume "container_r"
+		{material "steel"}
+		{thickness 14}
+		{component "container"}
+	}
+	{Volume "container_l"
+		{material "steel"}
+		{thickness 14}
+		{component "container"}
+	}
+	
+	{Volume "front_left_leg_hatch" ; element damage
+		{material "steel"}
+		{thickness 6}
+		{component "front_left_leg_hatch"}
+		;{tags "" }
+	}
+	{Volume "front_right_leg_hatch" ; element damage
+		{material "steel"}
+		{thickness 6}
+		{component "front_right_leg_hatch"}
+		;{tags "" }
+	}
+	{Volume "back_left_leg_hatch" ; element damage
+		{material "steel"}
+		{thickness 6}
+		{component "back_left_leg_hatch"}
+		;{tags "" }
+	}
+	{Volume "back_right_leg_hatch" ; element damage
+		{material "steel"}
+		{thickness 6}
+		{component "back_right_leg_hatch"}
+		;{tags "" }
+	}
+
+
+
+
+
+	; {Volume "ammo"
+		; {material "steel"}
+		; {thickness 8}
+		; {component "ammo"}
+		; {tags "ammo" }
+	; }
+	
+	; ;element
+	; {Volume "fuel_holder_l"
+		; {material "armor"}
+		; {thickness 25}
+	; }
+
+	; {Volume "pestcontainer_arm"
+		; {material "armor"}
+		; {thickness 25}
+	; }
+	; {Volume "pestcontainer"
+		; {material "steel"}
+		; {thickness 8}
+		; {component "pestcontainer"}
+		; {tags "pestcontainer" }
+	; }
+
+
+	; {Volume "Area_Missile"
+		; {material "steel"}
+		; {thickness 10}
+		; {component "rocket_mount"}
+		; {tags "rocket_mount" }
+	; }
+
+	{Volume "visor_body" ;лщкпусный визор
+		{material "misc"}
+		{thickness 8}
+		{component "visor_body"}
+		{tags "visor_body" }
+	}
+	("composite_back_right" args sidearmor_18_r)
+	("composite_back_right" args sidearmor_19_r)
+	("composite_back_right" args sidearmor_19_r)
+	("composite_back_right" args sidearmor_20_r)
+	("composite_back_right" args sidearmor_21_r)
+	("composite_back_right" args sidearmor_22_r)
+	("composite_back_right" args sidearmor_23_r)
+	("composite_back_right" args sidearmor_24_r)
+	("composite_back_right" args sidearmor_00_r)
+	("composite_back_right" args sidearmor_01_r)
+	("composite_back_right" args sidearmor_02_r)
+	("composite_back_right" args sidearmor_03_r)
+	("composite_back_right" args sidearmor_04_r)
+	("composite_back_right" args sidearmor_05_r)
+	("composite_back_left" args sidearmor_18_l)
+	("composite_back_left" args sidearmor_19_l)
+	("composite_back_left" args sidearmor_19_l)
+	("composite_back_left" args sidearmor_20_l)
+	("composite_back_left" args sidearmor_21_l)
+	("composite_back_left" args sidearmor_22_l)
+	("composite_back_left" args sidearmor_23_l)
+	("composite_back_left" args sidearmor_24_l)
+	("composite_back_left" args sidearmor_00_l)
+	("composite_back_left" args sidearmor_01_l)
+	("composite_back_left" args sidearmor_02_l)
+	("composite_back_left" args sidearmor_03_l)
+	("composite_back_left" args sidearmor_04_l)
+	("composite_back_left" args sidearmor_05_l)
+
+	{sensor
+		{Visor "body"
+			{vision "dread_body"}
+			{bone "visor_body_bone"}
+		}
+		{Visor "body_support"
+			{vision "dread_body_support"}
+			{bone "visor_body_bone_support"}
+		}
+		{Visor "head"
+			{vision "dread_eyes"}
+			{bone "visor_head_bone"}
+		}
+		{Visor "head_support"
+			{vision "dread_eyes"}
+			{bone "visor_head_bone_support"}
+		}
+	}
+	("vision_mode" tag(thermal) time(60))	
+
+	{extender "inventory" ; создать лут
+		{box
+			{Size 12 12}
+			{Weight 5000}
+			{item "ammo type90" 50}
+			{item "ammo type90 cluster" 50}
+			{item "ammo visor"	10}
+			{item "ammo jump"	10}
+			{item "ammo gas"	1}
+		}
+	}
+	{placer
+		{place "gas_sound_r"
+			{entity "gas_sound"}
+			{Linkbone "gasdrop_r"}
+			{obstacle disable}
+		}
+		{place "gas_sound_l"
+			{entity "gas_sound"}
+			{Linkbone "gasdrop_l"}
+			{obstacle disable}
+		}
+	}
+	{Weaponry
+		("restore_ik_time")
+		{place "gun_l"
+			{weapon			"75mm_grad_l" filled}
+			{StationaryFiring}
+			{RestoreIKAfterAim}
+			{rotate}
+			{Barrels    9}
+			{foresight	"Foresight_rocket_l"}
+			{shooter	"shooter_l_"}
+			{basic}
+		}
+		{place "gun_r"
+			{weapon			"75mm_grad_r" filled}
+			{StationaryFiring}
+			{RestoreIKAfterAim}
+			{rotate}
+			{Barrels    9}
+			{foresight	"Foresight_rocket_r"}
+			{shooter	"shooter_r_"}
+			{basic}
+		}
+		{place "head_joint" ;head_joint
+			{weapon 	"head_joint" filled}
+			{foresight 	"visor_head_bone"}
+			{basic}
+			;{rotate}
+		}
+		{place "alarm_signal"    ;mgun_alarm
+			{weapon 	"alarm_update_250m" filled}
+			{foresight 	"signal"}
+			{basic}
+			;{rotate}
+		}		
+		{place "attack_gas"
+			{StationaryFiring}
+			{weapon 	"gasdrop" filled}
+			{foresight 	"gas_drop_foresight"}
+			{basic}
+			;{rotate}
+		}
+		{place "attack_pestdrop"
+			{weapon 	"container_harv" filled}
+			{foresight 	"pestcontainer_drop_foresight"}
+			{basic}
+			;{rotate}
+		}
+		
+		{place "attack_melee_r_stamp" ;melee_r
+			{StationaryFiring}
+			{weapon 	"harvest_melee" filled}
+			{foresight 	"attack_melee_foresight_r"}
+			{basic}
+			;{rotate}
+		}
+		{place "attack_melee_l_stamp" ;melee_l
+			{StationaryFiring}
+			{weapon 	"harvest_melee" filled}
+			{foresight 	"attack_melee_foresight_l"}
+			{basic}
+			;{rotate}
+		}
+		{place "attack_melee_charge" ;mgun_melee
+			{StationaryFiring}
+			{weapon 	"harvest_melee" filled}
+			{foresight 	"attack_melee_foresight"}
+			{basic}
+			;{rotate}
+		}
+		{place "attack_concussion"
+			{StationaryFiring}
+			{weapon 	"harvest_melee" filled}
+			{foresight 	"attack_melee_foresight"}
+			{basic}
+			;{rotate}
+		}
+	}
+	{mass 85000}
+	("movement_heavy" 
+		slow(8) 
+		normal(8)
+		fast(8)
+		maxspeed(8)
+		maxspeed_atmaxturn(2)
+		turnstart(2)
+		turnstop(1)
+		turnradius(6)
+		turntime(2)
+		starttime(2)
+		stoptime(1)
+		braketime(1)
+		fuelbag_vol(300)
+		rate(0.3)
+		remain(300)
+		fuel(tritium)
+	)	
+	{Extension "harvester_base.mdl"}
+}

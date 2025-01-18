@@ -1,0 +1,66 @@
+;Exported by: Xpycmb
+;Date:        Sun Jan  8 16:52:50 2023
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\pest_x3_bomb.max
+{Skeleton
+	{animation
+		{sequence "ems" {autostart}}
+	}
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "bomb"
+			{parameters "ID=Bomb;"}
+			{Matrix34
+				0.999563	-0.0142741	-0.0258951
+				0	0.875758	-0.482751
+				0.0295687	0.48254	0.875375
+				0.0183062	0.577126	-0.648407
+			}
+			{VolumeView "bomb.ply"}
+			{bone "ems"
+				{parameters "ID=Bomb;"}
+				{Matrix34
+					1	0	0
+					0	0.875758	0.482751
+					0	-0.482751	0.875758
+					-0.676256	-1.55361	2.56636
+				}
+				{visibility 0}
+				{VolumeView "ems.ply"}
+			}
+		}
+	}
+}
+{Volume "bomb"
+	{Box 3.08643 5.2065 1.62759}
+	{Bone "bomb"}
+	{Matrix34
+		1	0	0
+		0	0.875758	0.482751
+		0	-0.482751	0.875758
+		0.0589257	-1.34908	0.176735
+	}
+}
+{Volume "bomb2"
+	{Box 3.08643 5.2065 1.62759}
+	{Bone "bomb"}
+	{Matrix34
+		0.305099	0.459733	-0.834002
+		0	0.875758	0.482751
+		0.952321	-0.147287	0.267193
+		2.94881	-0.776704	-0.861616
+	}
+}
+{Volume "bomb3"
+	{Box 3.08643 5.2065 1.62759}
+	{Bone "bomb"}
+	{Matrix34
+		0.302218	-0.460177	0.834806
+		0	0.875758	0.482751
+		-0.953239	-0.145896	0.264669
+		-2.87217	-0.761943	-0.888398
+	}
+}

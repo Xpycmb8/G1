@@ -1,0 +1,65 @@
+{fx
+	{particleview smoke
+		{generator
+			{totalparticles 45}
+			{emissionarea
+				{radius 0}
+				{alpha0 0}
+				{alpha1 0}
+				{speed 1}
+			}
+			{particleinit
+				{speed 0}
+				{lifetime 0.75 0.25}
+			}
+			{## particlesinblock 5}
+		}
+		{#+ mover
+			{damping 0.95}
+			{## gravity
+				{value -0.002}
+			}
+			{nodependonwind}
+		}
+		{visualizer
+			{stage 
+				{sprite "$/additional/smoke_light4_smallb_30"
+					{## turn 1
+						{linear
+							{min 0}
+							{max 0 50}
+						}
+					}
+					{visibility 1
+						{linear
+							{min 0.2}
+							{max 0}
+						}
+					}
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{preturn 0 180}
+					{scalex 1
+						{power
+							{min 0.02}
+							{max 0.02}
+							{pow 1}
+						}
+					}
+					{scaley 1
+						{power
+							{min 0.02}
+							{max 0.02}
+							{pow 1}
+						}
+					}
+					{## highlight 0xffafafaf}
+				}
+				{## flags trace }
+			}
+		}
+		{notifyowner}
+	}
+}

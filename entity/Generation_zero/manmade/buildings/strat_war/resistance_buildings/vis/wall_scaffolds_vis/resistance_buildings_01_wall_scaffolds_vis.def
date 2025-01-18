@@ -1,0 +1,11 @@
+{Entity
+	{Extension "body.mdl"}
+	{bone "body"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.1 }
+				{shiftU 0 1 0.1 }	;min max delta [pingpong]
+			}
+		}
+	}
+}

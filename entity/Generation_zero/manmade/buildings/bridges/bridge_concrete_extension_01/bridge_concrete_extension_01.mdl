@@ -1,0 +1,58 @@
+;Exported by: Xpycmb
+;Date:        Wed Apr 19 00:25:15 2023
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\bridge_concrete_extension_01.max
+{Skeleton
+	{bone "bone0"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "bridge_concrete"
+			{Orientation
+				0	-1	0
+				1	0	0
+				0	0	1
+			}
+			{VolumeView "bridge_concrete.ply"}
+			{bone "bridge_railing"
+				{VolumeView "bridge_railing.ply"}
+			}
+			{bone "detail1"
+				{VolumeView "detail1.ply"}
+			}
+			{bone "land_patch"
+				{parameters "CommonMesh;Land;Ground;"}
+				{Position 0.843542	26.5785	4.71764}
+				{visibility 0}
+				{VolumeView "land_patch.ply" {Ground}}
+			}
+		}
+	}
+}
+{Obstacle "body"
+	{Obb2
+		{Center -1.20421 -110.878}
+		{Extent 140.348 1.50001}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Obstacle "body2"
+	{Obb2
+		{Center -1.20422 110.285}
+		{Extent 140.348 1.50001}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Volume "body"
+	{Box 3 280.696 21.9354}
+	{Bone "bridge_railing"}
+	{Position -110.878	-1.20422	24.3948}
+}
+{Volume "body2"
+	{Box 3 280.696 21.9354}
+	{Bone "bridge_railing"}
+	{Position 110.285	-1.20422	24.3948}
+}

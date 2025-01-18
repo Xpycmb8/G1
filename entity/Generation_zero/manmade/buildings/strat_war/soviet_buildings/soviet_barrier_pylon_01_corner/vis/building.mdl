@@ -1,0 +1,17 @@
+;Exported by: Xpycmb
+;Date:        Sat Jan  7 20:34:18 2023
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\building_soviet_barrier_pylon_01_corner_vis.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "body"
+			{parameters "ID=Body;"}
+			{Position 0	1.52588e-05	0}
+			{VolumeView "body.ply"}
+		}
+	}
+}

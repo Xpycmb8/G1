@@ -1,0 +1,15 @@
+{Actor
+	(include "/properties/stuff_weapon.ext")
+	{extender "stuff"
+		{item "rocket_launcher_skirmisher"}
+	}
+	{Extension "rocket_launcher_skirmisher.mdl"}
+	{bone "laser_point"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.5 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
+}

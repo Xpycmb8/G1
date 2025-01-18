@@ -1,0 +1,52 @@
+;Exported by: Xpycmb
+;Date:        Tue Apr 18 22:39:15 2023
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\bridges_stone_01_extention.max
+{Skeleton
+	{bone "bone0"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "bridge_stones"
+			{Orientation
+				0	1	0
+				-1	0	0
+				0	0	1
+			}
+			{VolumeView "bridge_stones.ply"}
+			{bone "land_patch"
+				{parameters "CommonMesh;Land;Ground;"}
+				{Position 2.40655	-60.243	13.1712}
+				{visibility 0}
+				{VolumeView "land_patch.ply" {Ground}}
+			}
+		}
+	}
+}
+{Obstacle "obstacle1"
+	{Obb2
+		{Center 86.9781 -93.9363}
+		{Extent 91.8748 7.69797}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Obstacle "obstacle2"
+	{Obb2
+		{Center 86.9781 95.0848}
+		{Extent 91.8748 7.69797}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Volume "body"
+	{Polyhedron "body.vol"}
+	{Bone "bridge_stones"}
+	{Position -95.0848	-86.9781	-156.9}
+}
+{Volume "body2"
+	{Polyhedron "body2.vol"}
+	{Bone "bridge_stones"}
+	{Position 93.9531	-86.9781	-156.9}
+}

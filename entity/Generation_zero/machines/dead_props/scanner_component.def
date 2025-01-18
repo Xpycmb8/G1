@@ -1,0 +1,11 @@
+{Entity
+	(include "/properties/dead_prop_skir.grn")
+	{Extension "scanner_component.mdl"}
+	{extender "stuff"
+		{item "scanner_component"}
+	}
+	{Volume "scanner"
+		{material "misc"}
+		{thickness 1}
+	}
+}

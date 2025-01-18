@@ -1,0 +1,83 @@
+;Exported by: Xpycmb
+;Date:        Tue Apr 18 19:23:24 2023
+;File:        C:\Users\Xpycmb\Documents\3dsMax\scene\castle_wall_02.max
+{Skeleton
+	{bone "bone0"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "stone_land"
+			{parameters "ID=Body;"}
+			{VolumeView "stone_land.ply"}
+			{bone "land_patch"
+				{parameters "CommonMesh;Land;Ground;"}
+				{Matrix34
+					0.642787	0	-0.766045
+					0	1	0
+					0.766045	0	0.642787
+					48.9477	5.6698	22.1644
+				}
+				{visibility 0}
+				{VolumeView "land_patch.ply" {Ground}}
+			}
+			{bone "body2"
+				{parameters "ID=Body;"}
+				{Position -40.4342	5.54496	54.9946}
+				{LODView
+					{VolumeView "body2.ply"}
+					{VolumeView "body2_lod1.ply"}
+					{VolumeView "body2_lod2.ply"}
+					{VolumeView "body2_lod3.ply"}
+				}
+			}
+			{bone "body3"
+				{parameters "ID=Body;"}
+				{Position -414.144	5.54496	54.9946}
+				{LODView
+					{VolumeView "body3.ply"}
+					{VolumeView "body3_lod1.ply"}
+					{VolumeView "body3_lod2.ply"}
+					{VolumeView "body3_lod3.ply"}
+				}
+			}
+			{bone "body"
+				{parameters "ID=Body;"}
+				{Position -228.878	5.54496	86.7065}
+				{LODView
+					{VolumeView "body.ply"}
+					{VolumeView "body_lod1.ply"}
+					{VolumeView "body_lod2.ply"}
+					{VolumeView "body_lod3.ply"}
+				}
+			}
+		}
+	}
+}
+{Obstacle "body"
+	{Obb2
+		{Center -216.575 -32.6887}
+		{Extent 284.31 3.97755}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Obstacle "body2"
+	{Obb2
+		{Center -216.575 21.2547}
+		{Extent 284.31 4.64196}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Volume "body"
+	{Polyhedron "body.vol"}
+	{Bone "stone_land"}
+	{Position -214.065	34.1851	0}
+}
+{Volume "body2"
+	{Polyhedron "body2.vol"}
+	{Bone "stone_land"}
+	{Position -214.065	-23.4155	0}
+}

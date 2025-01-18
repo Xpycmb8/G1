@@ -1,0 +1,87 @@
+;Exported by: Xpycmb
+;Date:        Wed Apr 26 18:16:35 2023
+;File:        C:\Users\Xpycmb\Documents\3dsMax\scene\rifle_scope_1-4x_24mm.max
+{Skeleton
+	{bone "scope"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{VolumeView "scope.ply"}
+		{bone "handle"
+			{parameters "Voxels=0;"}
+			{Matrix34
+				1	0	0
+				0	1	0
+				0	0	1
+				0.659869	0	0
+			}
+		}
+	}
+}
+{Volume "body"
+	{Box 0.6 4.06587 0.886912}
+	{Bone "scope"}
+	{Matrix34
+		0	1.1	0
+		-1.1	0	0
+		0	0	1.1
+		0.129349	-0.0043741	-0.0527882
+	}
+}
+{Volume "select"
+	{Box 2.5 4.5 2.12267}
+	{Bone "scope"}
+	{Matrix34
+		0	1.1	0
+		-1.1	0	0
+		0	0	1.1
+		0.129348	-0.115158	-0.127109
+	}
+}
+{Extender "preview"
+	{"Stuff_primary"
+		{camera
+			{origin 0.503025	10.7493	0.278235}
+			{lookat 0.469803	-42.8163	-3.56096}
+			{fov 45}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 25.9269	-67.3433	19.2605}
+			}
+			{"1"
+				{type directional}
+				{direction 0.0290605	-0.470465	-0.166788}
+			}
+			{"2"
+				{type point}
+				{position -16.9617	-72.0325	-16.9761}
+			}
+		}
+	}
+	{"Stuff"
+		{camera
+			{origin 0.22295	5.69739	0.400984}
+			{lookat 0.191039	-45.8079	-3.2906}
+			{fov 45}
+			{horizon 5.15054}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 24.6783	-70.128	16.6511}
+			}
+			{"1"
+				{type directional}
+				{direction 0.0290608	-0.470465	-0.166789}
+			}
+			{"2"
+				{type point}
+				{position -18.2103	-74.8171	-19.5856}
+			}
+		}
+	}
+}

@@ -1,0 +1,11 @@
+{Actor
+	(include "/properties/stuff_weapon.ext")
+	{Volume "receiver"
+		{material "wood"}
+		{thickness 2}
+	}
+	{extender "stuff"
+		{item "rifle270_stock_grade1_scope_4_8x_32mm" filled}
+	}
+	{Extension "rifle270_stock_grade1_scope_4_8x_32mm.mdl"}
+}

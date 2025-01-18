@@ -1,0 +1,48 @@
+;Exported by: Xpycmb
+;Date:        Mon Aug 30 21:02:01 2021
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\dark_aether.max
+{Skeleton
+	{animation
+		{sequence "spark" {autostart}}
+	}
+	{bone revolute "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "fx"
+		}
+		{bone "anim"
+			{bone "dark_aether"
+				{parameters "CommonMesh;"}
+				{VolumeView "dark_aether.ply"}
+			}
+		}
+		{bone "anim2"
+			{Orientation
+				-0.464896	-0.341505	-0.816851
+				0.0358924	-0.929126	0.368017
+				-0.884638	0.141771	0.444204
+			}
+			{bone "ems"
+				{parameters "CommonMesh;"}
+				{Orientation
+					-0.464896	0.0358923	-0.884638
+					-0.341505	-0.929126	0.141771
+					-0.816852	0.368017	0.444204
+				}
+				{VolumeView "ems.ply"}
+			}
+		}
+	}
+}
+{Volume "body"
+	{Sphere 37.5}
+	{Bone "dark_aether"}
+	{Orientation
+		0.1	0	0
+		0	0.1	0
+		0	0	0.1
+	}
+}

@@ -1,0 +1,142 @@
+{fx
+	{#+ particleview "smoke stream"
+		{## delay 0.05}
+		{generator
+			{totalparticles 3}
+			{emissionarea
+				{radius 0}
+				{alpha0 0}
+				{alpha1 7 13}
+				{speed 0.0001}
+			}
+			{particleinit
+				{speed 2 1}
+				{lifetime 1.2}
+			}
+			{particlesinblock 3}
+			{## timetolive 0.1}
+		}
+		{#+ mover
+			{damping 0.9}
+			{gravity
+				{value -0.007}
+			}
+		}
+		{visualizer
+			{stage 
+				{##+ sprite "$/additional/smoke_anm01"
+					{turn 1
+						{linear
+							{min 0}
+							{max 0 30}
+						}
+					}
+					{scale 1
+						{power
+							{min 0.04}
+							{max 0.25 0.05}
+							{pow 1.2}
+						}
+					}
+					{visibility 1
+						{power
+							{min 0.1}
+							{max 0}
+							{pow 1}
+						}
+					}
+					{preturn 0 180}
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{## highlight 0xffb2b2b2}
+				}
+				{#+ sprite "$/additional/smoke_light6"
+					{turn 1
+						{linear
+							{min 0}
+							{max 0 30}
+						}
+					}
+					{scale 1
+						{power
+							{min 0.015 0.005}
+							{max 0.31 0.29}
+							{pow 1.2}
+						}
+					}
+					{visibility 1
+						{power
+							{min 0.075 0.065}
+							{max 0}
+							{pow 1}
+						}
+					}
+					{preturn 0 180}
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{highlight 0xff232323}
+				}
+				{##+ sprite "$/additional/smoke_fast"
+					{turn 1
+						{linear
+							{min 0}
+							{max 0 30}
+						}
+					}
+					{scale 1
+						{power
+							{min 0.04}
+							{max 0.25 0.05}
+							{pow 1.2}
+						}
+					}
+					{visibility 1
+						{power
+							{min 0.03}
+							{max 0}
+							{pow 1}
+						}
+					}
+					{preturn 0 180}
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{highlight 0xff858585}
+				}
+				{sprite "$/additional/smoke_light6"
+					{turn 1
+						{linear
+							{min 0}
+							{max 0 30}
+						}
+					}
+					{scale 1
+						{power
+							{min 0.015 0.005}
+							{max 0.46 0.44}
+							{pow 1.2}
+						}
+					}
+					{visibility 1
+						{power
+							{min 0.135 0.115}
+							{max 0}
+							{pow 1}
+						}
+					}
+					{preturn 0 180}
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{highlight 0xff232323}
+				}
+			}
+		}
+	}
+}

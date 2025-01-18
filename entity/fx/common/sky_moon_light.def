@@ -1,0 +1,12 @@
+{fx
+	{lightview
+		{type point}
+		{animator
+			{highlight 0xffffffff}
+		}
+		{radius 7000}
+		{radiusfalloff 2}
+		{effectonground}
+		{intensity 25}
+	}
+}

@@ -1,0 +1,305 @@
+;Exported by: Xpycmb
+;Date:        Thu Jan  5 23:31:52 2023
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\base_building.max
+{Skeleton
+	{animation
+		{sequence "left" {resume} {movement}	}
+		{sequence "right" {resume} {movement}}
+		{sequence "front" {resume} {movement}}
+		{sequence "back" {resume} {movement}}
+		{sequence "rot45_1" {resume} {movement}}
+		{sequence "start" {speed 0.1} {autostart}}
+		{sequence "mode" 
+			{resume}
+			{events 
+				{3 "manual"}
+				{6 "manual_2"}
+				{9 "auto"}
+			}
+		}
+		{sequence "select" 
+			{resume}
+			{events 
+				{2 "select_1"}
+				{3 "clear"}
+				{4 "select_2"}
+				{5 "clear"}
+				{6 "select_3"}
+				{7 "clear"}
+				{8 "select_4"}
+				{9 "clear"}
+				{10 "select_5"}
+				{11 "clear"}
+				{12 "select_6"}
+				{13 "clear"}
+				{14 "select_7"}
+				{15 "clear"}
+				{16 "select_8"}
+				{17 "clear"}
+				{18 "select_9"}
+				{19 "clear"}
+				{20 "select_10"}
+			}
+		}
+	}
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "select"
+			{Matrix34
+				0	0	-1
+				-1	0	0
+				0	1	0
+				0	0	100
+			}
+			{VolumeView "select.ply"}
+		}
+		{bone "placement"
+		}
+		{bone "link"
+			{Orientation
+				0	-1	0
+				1	0	0
+				0	0	1
+			}
+			{bone "front"
+				{Matrix34
+					-1	0	0
+					0	-1	0
+					0	0	1
+					-20	0	62.5
+				}
+				{VolumeView "front.ply"}
+				{bone "front_start"
+					{Position 0	0	0}
+					{visibility 0}
+					{VolumeView "front_start.ply"}
+				}
+			}
+			{bone "right"
+				{Matrix34
+					0	1	0
+					-1	0	0
+					0	0	1
+					1.27621e-05	20	62.5
+				}
+				{VolumeView "right.ply"}
+				{bone "right_start"
+					{visibility 0}
+					{VolumeView "right_start.ply"}
+				}
+			}
+			{bone "back"
+				{Position 20	-1.22853e-05	62.5}
+				{VolumeView "back.ply"}
+				{bone "back_start"
+					{visibility 0}
+					{VolumeView "back_start.ply"}
+				}
+			}
+			{bone "left"
+				{Matrix34
+					0	-1	0
+					1	0	0
+					0	0	1
+					0	-20	62.5
+				}
+				{VolumeView "left.ply"}
+				{bone "left_start"
+					{visibility 0}
+					{VolumeView "left_start.ply"}
+				}
+			}
+			{bone "rotate"
+				{Matrix34
+					-1	0	0
+					0	-1	0
+					0	0	1
+					0	-4.01266	23.4568
+				}
+				{VolumeView "rotate.ply"}
+			}
+		}
+		{bone "mode_change"
+			{Matrix34
+				0	1	0
+				-1	0	0
+				0	0	1
+				0	-31.5449	92.4548
+			}
+			{bone "auto"
+				{Matrix34
+					-1	0	0
+					0	0	1
+					0	1	0
+					0	0	0
+				}
+				{VolumeView "auto.ply"}
+			}
+			{bone "manual"
+				{Matrix34
+					-1	0	0
+					0	0	1
+					0	1	0
+					0	0	0
+				}
+				{visibility 0}
+				{VolumeView "manual.ply"}
+			}
+			{bone "manual_2"
+				{Matrix34
+					-1	0	0
+					0	0	1
+					0	1	0
+					0	0.00199699	0
+				}
+				{visibility 0}
+				{VolumeView "manual_2.ply"}
+			}
+			{bone "stop"
+				{Matrix34
+					-1	0	0
+					0	-1	0
+					0	0	1
+					-15.5451	0.465627	12.2549
+				}
+				{visibility 0}
+				{VolumeView "stop.ply"}
+			}
+		}
+		{bone "sets"
+			{Matrix34
+				0	1	0
+				-1	0	0
+				0	0	1
+				0	20	105
+			}
+			{bone "instal"
+				{Matrix34
+					0.707107	-0.707107	0
+					0	0	1
+					-0.707107	-0.707107	0
+					0	0	0
+				}
+				{VolumeView "instal.ply"}
+			}
+		}
+		{bone "mode"
+			{Position 0	0	0}
+		}
+		{bone "select_event"
+			{Position 0	0	0}
+		}
+	}
+}
+{Volume "back"
+	{Box 35 17.5 6}
+	{Bone "back"}
+	{Orientation
+		0.5	0	0
+		0	0.5	0
+		0	0	0.5
+	}
+}
+{Volume "front"
+	{Box 35 17.5 6}
+	{Bone "front"}
+	{Orientation
+		0.5	0	0
+		0	-0.5	0
+		0	0	-0.5
+	}
+}
+{Volume "instal"
+	{Box 35 17.5 6}
+	{Bone "instal"}
+	{Matrix34
+		0	1	0
+		-1	0	0
+		0	0	1
+		0	-10.117	0
+	}
+}
+{Volume "left"
+	{Box 35 17.5 6}
+	{Bone "left"}
+	{Matrix34
+		-0.5	0	0
+		0	-0.5	0
+		0	0	0.5
+		0	0	0
+	}
+}
+{Volume "left_rotate"
+	{Box 22.5 17.5 6}
+	{Bone "rotate"}
+	{Matrix34
+		0.5625	0	0
+		0	0.5625	0
+		0	0	0.5625
+		-14.0625	-16.023	0
+	}
+}
+{Volume "mode"
+	{Box 37.5 10 5}
+	{Bone "mode_change"}
+	{Matrix34
+		-1	0	0
+		0	0	1
+		0	1	0
+		0	-0.500005	4.05444
+	}
+}
+{Volume "right"
+	{Box 35 17.5 6}
+	{Bone "right"}
+	{Matrix34
+		0.5	0	0
+		0	0.5	0
+		0	0	0.5
+		-1.81551	0	0
+	}
+}
+{Volume "right_rotate"
+	{Box 22.5 17.5 6}
+	{Bone "rotate"}
+	{Matrix34
+		0.5625	0	0
+		0	0.5625	0
+		0	0	0.5625
+		14.0625	-16.023	0
+	}
+}
+{Volume "select_next"
+	{Box 10 10 12.5}
+	{Bone "select"}
+	{Matrix34
+		0	0	0.5
+		0	0.5	0
+		-0.5	0	0
+		-3.67673	0	0
+	}
+}
+{Volume "select_prev"
+	{Box 10 10 12.5}
+	{Bone "select"}
+	{Matrix34
+		0	0	0.5
+		0	0.5	0
+		-0.5	0	0
+		3.85493	0	0
+	}
+}
+{Volume "stop"
+	{Box 5 5 3.5}
+	{Bone "mode_change"}
+	{Matrix34
+		-1	0	0
+		0	0	1
+		0	1	0
+		-15.5451	0.675519	12.2548
+	}
+}

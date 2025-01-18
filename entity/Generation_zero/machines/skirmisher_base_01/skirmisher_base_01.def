@@ -1,0 +1,404 @@
+{actor
+	(include "/properties/machinery.ext")
+	{props "baze_machinery" "skirmisher_base" "skirmisher_mg"}
+	(include "/properties/selection/skirmisher.inc" scale(0.2))
+	{obstacleID "human"}
+	{PatherID	"skirmisher_base"}
+
+;									material steel armor
+	("volume_body" args "body" "body"    12  steel )
+	("volume_body" args "armor" "armor"    10  steel )
+
+	("volume_body" args "fuel" "fuel"    4  steel )
+
+
+
+
+;armor
+
+	("volume_body" args "armor_main_15_03" "armor"    20  armor )
+	("volume_body" args "armor_main_15_02" "armor"    15  armor )
+
+	("volume_body" args "armor_main_10_01" "armor"    12  armor )
+	("volume_body" args "armor_main_10_02" "armor"    12  armor )
+
+
+
+	; {Volume "armour_fuel"
+	; }
+	{Volume "front_armor"
+		{material "armor"}
+		{thickness 20}
+		{tags "armor_crushed" "front_armor" }
+	}
+	{Volume "down_armor"
+		{material "armor"}
+		{thickness 15}
+		{tags "armor_crushed" }
+	}
+	{Volume "armour_head"
+		{material "armor"}
+		{thickness 15}
+		{tags "armor_crushed" }
+	}
+	{Volume "armour_knee_letf"
+		{material "armor"}
+		{thickness 7}
+		{tags "armor_crushed" }
+	}
+	{Volume "armour_knee_right"
+		{material "armor"}
+		{thickness 7}
+		{tags "armor_crushed" }
+	}
+	{Volume "armour_shoulder_left"
+		{material "armor"}
+		{thickness 20}
+		{tags "armor_crushed" }
+	}
+	{Volume "armour_shoulder_right"
+		{material "armor"}
+		{thickness 20}
+		{tags "armor_crushed" }
+	}
+;-------------
+
+;-----------------organ
+	{Volume "head_arm"
+		{material "steel"}
+		{thickness 12}
+		{component "head_arm"}
+		{tags "head_joint"}
+	}
+	{Volume "head_wire"
+		{material "kevlar"}
+		{thickness 4}
+		{component "head_joint"}
+		{tags "head_joint" }
+	}
+	{Volume "scanner"
+		{material "kevlar"}
+		{thickness 2}
+		{component "visor_head"}
+		{tags "visor_head" }
+	}
+	{Volume "body_organ"
+		{material "steel"}
+		{thickness 5}
+		{component "body_organ"}
+		{tags "body_organ" "organ" }
+	}
+	{Volume "back_engine_organ"
+		{material "steel"}
+		{thickness 2}
+		{component "back_engine_organ"}
+		{tags "back_engine_organ" "organ"}
+	}
+	{Volume "head_organ"
+		{material "steel"}
+		{thickness 1}
+		{component "head_organ"}
+		{tags "head_organ"  "organ"}
+	}
+	{Volume "cpu" ; back_volume
+		{material "steel"}
+		{thickness 1}
+		{component "cpu"}
+		{tags "cpu" }
+	}
+	{Volume "fuel" 
+		{component "fuel"}
+		{tags "fuel"}
+	}
+	{Volume "engine_hatch" 
+		{material "steel"}
+		{thickness 3}
+	}
+	
+	
+	
+;---------------base_vol
+	{Volume "head"
+		{material "steel"}
+		{thickness 5}
+		{component "head"}
+		{tags "head" }
+	}
+	{Volume "hips" 
+		{material "steel"}
+		{thickness 5}
+	}
+;----------simple(legs)
+
+	{Volume "leftupleg_knee"
+		{material "steel"}
+		{thickness 5}
+		;{component ""}
+		;{tags "" }
+	}
+	{Volume "rightupleg_knee"
+		{material "steel"}
+		{thickness 5}
+		;{component ""}
+		;{tags "" }
+	}
+
+
+
+	{Volume "leftarm"
+		{tags "limbs" }
+		{material "steel"}
+		{thickness 5}
+	}
+	{Volume "leftfoot"
+		{tags "limbs" }
+		{material "steel"}
+		{thickness 5}
+	}
+	{Volume "leftforearm"
+		{tags "limbs" }
+		{material "steel"}
+		{thickness 5}
+	}
+	{Volume "lefthand"
+		{tags "limbs" }
+		{material "steel"}
+		{thickness 5}
+	}
+	{Volume "lefthandtoe"
+		{tags "limbs" }
+		{material "steel"}
+		{thickness 5}
+	}
+	{Volume "leftleg"
+		{tags "limbs" }
+		{material "steel"}
+		{thickness 5}
+	}
+	{Volume "lefttoebase"
+		{tags "limbs" }
+		{material "steel"}
+		{thickness 5}
+	}
+	{Volume "leftupleg"
+		{tags "limbs" }
+		{material "steel"}
+		{thickness 5}
+	}
+	{Volume "rightarm"
+		{tags "limbs" }
+		{material "steel"}
+		{thickness 5}
+	}
+	{Volume "rightfoot"
+		{tags "limbs" }
+		{material "steel"}
+		{thickness 5}
+	}
+	{Volume "rightforearm"
+		{tags "limbs" }
+		{material "steel"}
+		{thickness 5}
+	}
+	{Volume "righthand"
+		{tags "limbs" }
+		{material "steel"}
+		{thickness 5}
+	}
+	{Volume "righthandtoe"
+		{tags "limbs" }
+		{material "steel"}
+		{thickness 5}
+	}
+	{Volume "rightleg"
+		{tags "limbs" }
+		{material "steel"}
+		{thickness 5}
+	}
+	{Volume "righttoebase"
+		{tags "limbs" }
+		{material "steel"}
+		{thickness 5}
+	}
+	{Volume "rightupleg"
+		{tags "limbs" }
+		{material "steel"}
+		{thickness 5}
+	}
+
+	{Volume "mgun"
+		{material "steel"}
+		{thickness 8}
+		{component "mgun"}
+		{tags "mgun" }
+	}
+	{Volume "ammo"
+		{material "steel"}
+		{thickness 8}
+		{component "ammo"}
+		{tags "ammo" }
+	}
+
+
+	{sensor
+		{Visor "eyes"
+			{vision "pets"}
+			{bone "head"}
+		}
+	}
+	("vision_mode" tag(thermal) time(60))	
+
+	{extender "inventory" ; создать лут
+		{box
+			{Size 4 4}
+			{Weight 100}
+			{item "ammo 556x45"	200}
+		}
+	}
+	{Weaponry
+		("restore_ik_time")
+		{place "mgun"
+			{weapon 	"mgun_skir_762" filled}
+			{foresight "foresight"}
+			{rotate}
+			{basic}
+		}
+		{place "mgun_melee"
+			{weapon 	"skir_jump" filled}
+			{foresight 	"jump_link_h"}
+			;{rotate}
+		}
+		{place "mgun2"
+			{weapon 	"search" filled}
+			{foresight 	"visor_head"}
+			;{rotate}
+		}
+		{place "mgun3"
+			{weapon 	"search" filled}
+			{foresight 	"foresight_signal"}
+			;{rotate}
+		}
+		{place "gun"
+			{weapon			"grenade_launcher_cluster_x6" filled}
+			{LinkBone		"grenade_launcher_link"}
+			{LinkAnimation	"off"}
+			{basic}
+		}
+	}
+	{mass 350}
+	("movement" 
+		slow(8) 
+		normal(12)
+		fast(35)
+		maxspeed(35)
+		maxspeed_atmaxturn(1)
+		turnstart(12)
+		turnstop(1)
+		turnradius(5)
+		turntime(0.2)
+		starttime(12)
+		stoptime(4)
+		braketime(2)
+		fuelbag_vol(20)
+		rate(0.1)
+		remain(2)
+		fuel(tritium)
+	)	
+	{Extension "skirmisher_base.mdl"}
+	{bone "head_ems_00_hold"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.5 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
+	{bone "head_ems_01_hold"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.5 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
+	{bone "head_ems_02_hold"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.5 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
+	{bone "head_ems_00_alarm"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.5 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
+	{bone "head_ems_01_alarm"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.5 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
+	{bone "head_ems_02_alarm"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.5 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
+	{bone "RightUpLeg_ems_alarm"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.5 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
+	{bone "RightUpLeg_ems_search"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.5 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
+	{bone "RightUpLeg_ems_hold"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.5 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
+	{bone "leftUpLeg_ems_alarm"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.5 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
+	{bone "leftUpLeg_ems_search"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.5 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
+	{bone "leftUpLeg_ems_hold"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.5 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
+}

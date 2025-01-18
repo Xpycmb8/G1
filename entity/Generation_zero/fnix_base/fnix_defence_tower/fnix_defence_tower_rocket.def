@@ -1,0 +1,12 @@
+{game_entity
+	(include "/properties/construction_fnix.ext")
+	{placer
+		{crew 0}
+		{place "mgun"
+			{entity "mount_tower_rocket"}
+			{Linkbone "weapon_attach"}
+			;{obstacle disable}
+		}
+	}	
+	{Extension "fnix_defence_tower.mdl"}
+}

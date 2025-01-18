@@ -1,0 +1,96 @@
+;Exported by: Xpycmb
+;Date:        Wed Aug  9 00:00:40 2023
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\type90_ammo.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "handle"
+			{Matrix34
+				0	0	1
+				0.996195	0.0871559	0
+				-0.0871559	0.996195	0
+				-0.255449	0.116422	-0.057819
+			}
+		}
+		{bone "body"
+			{parameters "CommonMesh;"}
+			{Matrix34
+				-0.996195	-0.0871559	0
+				0	0	1
+				-0.0871559	0.996195	0
+				0.0456624	0.00316077	-0.00147234
+			}
+			{VolumeView "body.ply"}
+		}
+	}
+}
+{Volume "body"
+	{Cylinder 0.548256 13.005}
+	{Bone "body"}
+	{Matrix34
+		0	0	-1
+		0	1	0
+		1	0	0
+		-0.0356636	0.00147238	0.000832122
+	}
+}
+{Volume "select"
+	{Box 6 12.5 6}
+	{Bone "basis"}
+	{Matrix34
+		0	0	1
+		0.996195	0.0871558	0
+		-0.0871558	0.996195	0
+		0.344018	0.0300986	0
+	}
+}
+{Extender "preview"
+	{"Stuff"
+		{camera
+			{origin 1.4412	-4.66505	16.4474}
+			{lookat -0.205522	4.24482	-12.9484}
+			{fov 45}
+			{horizon 164.388}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position -12.5094	19.2728	-21.9274}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0369007	0.00954522	-0.498545}
+			}
+			{"2"
+				{type point}
+				{position 15.4113	4.04482	-32.654}
+			}
+		}
+	}
+	{"Stuff_primary"
+		{camera
+			{origin 1.35669	-2.27259	15.7961}
+			{lookat -0.890953	2.38689	-15.774}
+			{fov 45}
+			{horizon 148.922}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position -15.1415	9.83664	-27.4334}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0325131	-0.0643784	-0.494771}
+			}
+			{"2"
+				{type point}
+				{position 14.1747	-4.09317	-35.9796}
+			}
+		}
+	}
+}

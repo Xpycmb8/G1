@@ -1,0 +1,12 @@
+{game_entity
+	(include "/properties/stuff_small.ext")
+	{props "steel" "stuff" "40mm_fg" "blast_physics_small" "40mm_base"}
+	{collider "ammo"}
+	{Extension "m47_fg_ammo.mdl"}
+	{extender "stuff"
+		{item "ammo m47 fg"}
+	}
+	{Volume "body"
+		{thickness 1}
+	}
+}

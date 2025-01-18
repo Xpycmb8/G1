@@ -1,0 +1,110 @@
+;Exported by: Xpycmb
+;Date:        Tue Apr 18 16:07:29 2023
+;File:        C:\Users\Xpycmb\Documents\3dsMax\scene\military_crate_ammo_large.max
+{Skeleton
+	{animation
+		{sequence "open"
+		{speed 0.3}
+		{resume}
+		}
+	}
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "body"
+			{parameters "ID=Body;"}
+			{Matrix34
+				0	1	0
+				-1	0	0
+				0	0	1
+				0.235733	0	0
+			}
+			{VolumeView "body.ply"}
+			{bone "roof_bone"
+				{Matrix34
+					-1	0	0
+					0	-1	0
+					0	0	1
+					-0.011578	3.62935	5.24537
+				}
+				{bone "roof"
+					{parameters "ID=Body;"}
+					{Matrix34
+						-1	0	0
+						0	-1	0
+						0	0	1
+						-0.011578	-0.000850677	-0.000177383
+					}
+					{VolumeView "roof.ply"}
+				}
+			}
+			{bone "ammo01"
+				{Matrix34
+					0	-1	0
+					1	0	0
+					0	0	1
+					2.51253	1.00092	1.08398
+				}
+			}
+			{bone "ammo02"
+				{Matrix34
+					0	-1	0
+					1	0	0
+					0	0	1
+					-2.2697	1.39838	1.69299
+				}
+			}
+			{bone "ammo00"
+				{Matrix34
+					0	-1	0
+					1	0	0
+					0	0	1
+					-0.676865	-0.637085	1.08398
+				}
+			}
+		}
+	}
+}
+{Volume "body"
+	{Box 10.4409 7.32283 5.31496}
+	{Bone "body"}
+	{Matrix34
+		-1	0	0
+		0	-1	0
+		0	0	1
+		0.00458478	0.20677	2.63831
+	}
+}
+{Volume "gear"
+	{Box 5.90551 8.04138 1.9685}
+	{Bone "roof"}
+	{Matrix34
+		0	-1.2	0
+		1.2	0	0
+		0	0	1.2
+		0	-3.44601	0.610723
+	}
+}
+{Volume "roof"
+	{Box 10.6299 6.88976 0.984252}
+	{Bone "roof"}
+	{Matrix34
+		-1	0	0
+		0	-1	0
+		0	0	1
+		0.0161638	-3.47457	0.439239
+	}
+}
+{Volume "touch"
+	{Box 11.0781 22.7417 4.64436}
+	{Bone "body"}
+	{Matrix34
+		0	-0.345949	0
+		0.396021	0	0
+		0	0	0.822497
+		0.00514452	0.211563	2.75954
+	}
+}

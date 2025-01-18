@@ -1,0 +1,28 @@
+;Exported by: Xpycmb
+;Date:        Tue Sep 13 16:34:18 2022
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\fnix_floor_panel_3x3_a.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "base"
+			{parameters "ID=Body;"}
+			{LODView
+				{VolumeView "base.ply"}
+				{VolumeView "base_lod1.ply"}
+				{VolumeView "base_lod2.ply"}
+				{VolumeView "base_lod3.ply"}
+				{VolumeView "base_lod4.ply"}
+			}
+			{bone "land_patch"
+				{visibility 0}
+				{parameters "CommonMesh;Land;Ground;"}
+				{Position 18.8105	-18.557	-0.144687}
+				{VolumeView "land_patch.ply" {Ground}}
+			}
+		}
+	}
+}

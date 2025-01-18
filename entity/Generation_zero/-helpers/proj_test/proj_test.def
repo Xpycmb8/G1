@@ -1,0 +1,72 @@
+{actor
+	{able "fight" "select"}		                  	
+	{props "steel" "stuff" "nocover" }	
+	{simulation {able 1} {disableLinked 1}}	
+	{constrain ground}		
+	{lodclass "part_big"}	
+	{mass 100}
+{PatherID  "cannon.small"}
+	{obstacleID "nothing"}		
+	{collider "grenade"}	
+	{sensor			
+		{AttackZone 350}
+		{MinRecognizeTime 0.01}
+		{RecognizeTime 0.01}
+		{InformRange 1000 1500}		;first - AI ;second - USER
+		{Visor "main"				
+			{vision "human_peripheral"}				
+			{bone "placement"}			
+		}		
+	}		
+	{Chassis "human_carrier"		
+		{locomotion		
+			{StopTime	0.1}
+			{BrakeTime	0.1}
+			{TurnRadius	3}	
+			{TurnStart	0.1}
+			{TurnStop	0.1}	
+			{Gears		0.35 0.5 0.7 1.0}
+			{RearGears	0.33 0.5}
+			{MaxSpeed	50}		
+			{StartTime	1}		
+			{TurnTime	1}	
+			{TurnRadius	6}	
+		}	
+		{FuelBag		
+			{volume 25 }	 
+			{remain 25 }		
+			{fuel "fuel"}	
+		}
+	}
+	{autooperatable 1}		
+	{placer{crew 0}}
+	{hearingBias 2.0}  	;// reduces units ability to hear sound signals. value = meters
+	{brain "vehicle"
+		{state "vehicle"}
+		{const "crush/min_danger_zone_time"		1}
+		{const "crush/min_danger_zone_length"	1}
+		{const "bomb/detect_explosives" 25}		;// detect explosives inside 7 meter radius
+		{const "bomb/detect_grenades" 	15}		;// detect grenades inside 5 meter radius
+		{const "bomb/danger_zone" 		27}		;// hide if danger is more than "x" meters away, otherwise run away
+	}
+	{body 
+		{proper body sensible} 
+		{permit body}
+	}		
+	{Extension "proj_test.mdl"}
+	{extender "inventory"
+		{box
+			{Size 4 4}
+			{Weight 100}
+			{item "ammo slope" 100}
+		}
+	}
+	{Weaponry		   
+		{place "mgun"
+			{rotate}
+			{weapon 	"slope_rocket" filled}		
+			{foresight "placement"}			
+			{basic}				
+		}			
+	}	
+}	

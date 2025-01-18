@@ -1,0 +1,79 @@
+;Exported by: Xpycmb
+;Date:        Tue Apr 18 20:40:37 2023
+;File:        C:\Users\Xpycmb\Documents\3dsMax\scene\castle_wall_03.max
+{Skeleton
+	{bone "bone0"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "wall01"
+			{parameters "ID=Body;"}
+			{LODView
+				{VolumeView "wall01.ply"}
+				{VolumeView "wall01_lod1.ply"}
+				{VolumeView "wall01_lod2.ply"}
+				{VolumeView "wall01_lod3.ply"}
+			}
+			{bone "wall03"
+				{parameters "ID=Body;"}
+				{LODView
+					{VolumeView "wall03.ply"}
+					{VolumeView "wall03_lod1.ply"}
+					{VolumeView "wall03_lod2.ply"}
+					{VolumeView "wall03_lod3.ply"}
+				}
+			}
+			{bone "wall02"
+				{parameters "ID=Body;"}
+				{LODView
+					{VolumeView "wall02.ply"}
+					{VolumeView "wall02_lod1.ply"}
+					{VolumeView "wall02_lod2.ply"}
+					{VolumeView "wall02_lod3.ply"}
+				}
+			}
+			{bone "wall04"
+				{parameters "ID=Body;"}
+				{LODView
+					{VolumeView "wall04.ply"}
+					{VolumeView "wall04_lod1.ply"}
+					{VolumeView "wall04_lod2.ply"}
+					{VolumeView "wall04_lod3.ply"}
+				}
+			}
+		}
+	}
+}
+{Obstacle "body"
+	{Obb2
+		{Center -31.0838 -179.149}
+		{Extent 29.3903 190.436}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Obstacle "body2"
+	{Obb2
+		{Center -138.913 16.8648}
+		{Extent 140.026 29.3903}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Volume "body"
+	{Box 380.871 58.7807 696.066}
+	{Bone "wall01"}
+	{Matrix34
+		0	1	0
+		-1	0	0
+		0	0	1
+		-31.0838	179.149	255.323
+	}
+}
+{Volume "body2"
+	{Box 280.052 58.7807 696.066}
+	{Bone "wall01"}
+	{Position -138.913	-16.8648	255.323}
+}

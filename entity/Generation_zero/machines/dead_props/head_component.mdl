@@ -1,0 +1,52 @@
+;Exported by: Xpycmb
+;Date:        Thu Jan  2 20:13:33 2025
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\skirmisher_base_shotgun_stuff.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "head"
+			{parameters "ID=head;"}
+			{Matrix34
+				1	0	0
+				0	1	0
+				0	0	1
+				0	0	0
+			}
+			{VolumeView "head.ply"}
+			{bone "detail2"
+				{parameters "ID=Head;"}
+				{Matrix34
+					0	1	0
+					-1	0	0
+					0	0	1
+					-0.472882	-0.273794	-1.04128
+				}
+				{VolumeView "detail2.ply"}
+			}
+			{bone "detail3"
+				{parameters "ID=Head;"}
+				{Matrix34
+					1	0	0
+					0	1	0
+					0	0	1
+					2.40783	-1.7309	-0.121856
+				}
+				{VolumeView "detail3.ply"}
+			}
+		}
+	}
+}
+{Volume "head"
+	{Box 1.23777 2.67268 2.29225}
+	{Bone "head"}
+	{Matrix34
+		0	1.4	-1.69873e-05
+		-1.4	0	0
+		0	-1.26362e-05	1.40001
+		-0.317601	-0.548639	0.40434
+	}
+}

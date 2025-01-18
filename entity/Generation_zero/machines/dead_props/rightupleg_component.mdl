@@ -1,0 +1,52 @@
+;Exported by: Xpycmb
+;Date:        Thu Jan  2 20:13:26 2025
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\skirmisher_base_shotgun_stuff.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "rightupleg"
+			{parameters "ID=RightUpLeg;"}
+			{Matrix34
+				1	0	0
+				0	1	0
+				0	0	1
+				0.000123024	-5.49555e-05	-9.82285e-05
+			}
+			{VolumeView "rightupleg.ply"}
+			{bone "rightupleg_knee"
+				{parameters "ID=LeftUpLeg_knee;"}
+				{Matrix34
+					-0.936106	0.0818984	0.342049
+					-0.0874059	-0.996173	-0.00069178
+					0.340684	-0.0305448	0.939682
+					-3.06245	-0.229947	-3.08839
+				}
+				{VolumeView "rightupleg_knee.ply"}
+			}
+		}
+	}
+}
+{Volume "rightupleg_knee"
+	{Box 1.14215 0.684969 2.29576}
+	{Bone "rightupleg_knee"}
+	{Matrix34
+		-0.114889	1.39464	0.042293
+		-1.35743	-0.121537	0.320304
+		0.322748	-0.0147237	1.36221
+		0.0167022	0.00421034	-1.04053
+	}
+}
+{Volume "rightupleg"
+	{Polyhedron "rightupleg.vol"}
+	{Bone "rightupleg"}
+	{Matrix34
+		0.72488	0.000306905	-0.688875
+		0	-1	-0.000422114
+		-0.688874	0.000317136	-0.724881
+		0.283023	-0.232348	-0.0483255
+	}
+}

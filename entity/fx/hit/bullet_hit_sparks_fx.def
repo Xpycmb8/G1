@@ -1,0 +1,82 @@
+{fx
+	{spriteview glow
+		{sprite "$/additional/sparks_tiles_n01"
+			{light 1
+				{## peak
+					{min 1}
+					{max 0.4}
+				}
+				{linear
+					{min 1}
+					{max 0}
+				}
+			}
+			{timer
+				{mode play }
+				{duration 4}
+			}
+			{scale 0.0175 0.0075
+				{linear
+					{min 0.02 -0.01}
+					{max 0}
+				}
+			}
+			{highlight 0xffffffe2}
+			{## visibility 1}
+		}
+		{halo}
+		{orientation trace}
+	}
+	{#+ lightview
+		{animator
+			{timer
+				{mode play }
+				{duration 0.6}
+			}
+			{highlight 0xffffffd8}
+			{visibility 1
+				{power
+					{min 3}
+					{max 0}
+					{pow 1}
+				}
+				{## linear
+					{min 1}
+					{max 0}
+				}
+			}
+		}
+		{type point}
+		{radius 4}
+		{fire}
+		{## pulseperiod 0.1}
+	}
+	{#+ spriteview glow
+		{sprite "$/flash/halo01"
+			{light 1
+				{##+ peak
+					{min 1}
+					{max 0.4}
+				}
+				{linear
+					{min 1}
+					{max 0}
+				}
+			}
+			{timer
+				{mode play }
+				{duration 3}
+			}
+			{scale 0.0175 0.0075
+				{linear
+					{min 0.0035 -0.0025}
+					{max 0}
+				}
+			}
+			{highlight 0xffffffe2}
+			{## visibility 1}
+		}
+		{halo}
+		{orientation trace}
+	}
+}

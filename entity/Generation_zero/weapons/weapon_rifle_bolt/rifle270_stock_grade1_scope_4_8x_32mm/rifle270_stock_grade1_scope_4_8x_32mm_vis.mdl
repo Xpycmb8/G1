@@ -1,0 +1,21 @@
+;Exported by: Xpycmb
+;Date:        Sat Apr 29 00:23:45 2023
+;File:        C:\Users\Xpycmb\Documents\3dsMax\scene\rifle270_stock_grade1_scope_4_8X_32Mm_vis.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "rifle270_stock_grade1_scope_4_8x_32mm_vis"
+			{parameters "ID=body;"}
+			{Orientation
+				1	0	0
+				0	0	-1
+				0	1	0
+			}
+			{VolumeView "rifle270_stock_grade1_scope_4_8x_32mm_vis.ply"}
+		}
+	}
+}

@@ -1,0 +1,236 @@
+{fx
+	{#+ particleview sparkles_round
+		{generator
+			{emissionarea
+				{radius 0}
+				{alpha0 0}
+				{alpha1 25}
+				{distributionlaw sphere}
+			}
+			{particleinit
+				{speed 4 -2}
+				{lifetime 0.1}
+			}
+			{particlesinblock 4}
+			{timetolive 0.01}
+			{totalparticles 4}
+		}
+		{mover
+			{damping 1}
+			{gravity
+				{value 0.2}
+			}
+			{collisions
+				{terrain}
+				{restitution 0.3}
+			}
+		}
+		{visualizer
+			{stage 
+				{sprite "$/additional/sparks_set/spark_fx04"
+					{light 1
+						{linear
+							{min 2}
+							{max 0.4}
+						}
+					}
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{scalex 0.01}
+					{scaley 0.01}
+					{preturn 90}
+				}
+				{flags trace }
+				{sprite "$/additional/sparks_set/spark_fx02"
+					{light 1
+						{linear
+							{min 1}
+							{max 0.6}
+						}
+					}
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{scalex 0.085 -0.015}
+					{scaley 0.015 -0.005}
+					{preturn 90}
+				}
+				{sprite "$/additional/sparks_set/spark_fx03"
+					{light 1
+						{linear
+							{min 2}
+							{max 0.4}
+						}
+					}
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{scalex 0.15 0.05}
+					{scaley 0.03}
+					{preturn 90}
+				}
+			}
+		}
+		{notifyowner}
+	}
+	{##+ particleview sparkles
+		{generator
+			{emissionarea
+				{radius 0}
+				{alpha0 0}
+				{alpha1 10}
+				{distributionlaw sphere}
+			}
+			{particleinit
+				{speed 8.5 3.5}
+				{lifetime 0.1}
+			}
+			{particlesinblock 3}
+			{timetolive 0.01}
+			{totalparticles 3}
+		}
+		{mover
+			{damping 1}
+			{gravity
+				{value 0.2}
+			}
+			{collisions
+				{terrain}
+				{restitution 0.3}
+			}
+		}
+		{visualizer
+			{stage 
+				{sprite "$/additional/sparks_set/spark_fx04"
+					{light 1
+						{linear
+							{min 2}
+							{max 0.4}
+						}
+					}
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{scalex 0.01}
+					{scaley 0.01}
+					{preturn 90}
+				}
+				{flags trace }
+				{sprite "$/additional/sparks_set/spark_fx02"
+					{light 1
+						{linear
+							{min 1}
+							{max 0.6}
+						}
+					}
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{scalex 0.085 -0.015}
+					{scaley 0.015 -0.005}
+					{preturn 90}
+				}
+				{sprite "$/additional/sparks_set/spark_fx03"
+					{light 1
+						{linear
+							{min 2}
+							{max 0.4}
+						}
+					}
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{scalex 0.15 0.05}
+					{scaley 0.03}
+					{preturn 90}
+				}
+			}
+		}
+		{notifyowner}
+	}
+	{##+ particleview sparkles_long
+		{generator
+			{emissionarea
+				{radius 0}
+				{alpha0 0}
+				{alpha1 5}
+				{distributionlaw sphere}
+			}
+			{particleinit
+				{speed 20 5}
+				{lifetime 0.1}
+			}
+			{particlesinblock 1}
+			{timetolive 0.05}
+			{totalparticles 1}
+		}
+		{mover
+			{damping 1}
+			{gravity
+				{value 0.2}
+			}
+			{collisions
+				{terrain}
+				{restitution 0.3}
+			}
+		}
+		{visualizer
+			{stage 
+				{#+ sprite "$/additional/sparks_set/spark_fx04"
+					{light 1
+						{linear
+							{min 2}
+							{max 0.4}
+						}
+					}
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{scalex 0.01}
+					{scaley 0.01}
+					{preturn 90}
+				}
+				{flags trace }
+				{sprite "$/additional/sparks_set/spark_fx02"
+					{light 1
+						{linear
+							{min 4}
+							{max 3}
+						}
+					}
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{scalex 0.135 0.015}
+					{scaley 0.025 0.005}
+					{preturn 90}
+				}
+				{sprite "$/additional/sparks_tiles_n04"
+					{light 1
+						{linear
+							{min 5}
+							{max 3}
+						}
+					}
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{scalex 0.135 0.015}
+					{scaley 0.025 0.005}
+					{preturn 90}
+				}
+			}
+		}
+		{notifyowner}
+	}
+}

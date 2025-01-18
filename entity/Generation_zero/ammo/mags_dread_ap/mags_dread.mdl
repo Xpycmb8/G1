@@ -1,0 +1,96 @@
+;Exported by: Xpycmb
+;Date:        Sun Mar  5 23:46:27 2023
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\dread_ammo.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "handle"
+			{Matrix34
+				0	0	1
+				0.996195	0.0871559	0
+				-0.0871559	0.996195	0
+				-0.255449	0.116422	-0.057819
+			}
+		}
+		{bone "ammo"
+			{parameters "ID=mgun;"}
+			{Matrix34
+				-0.996194	-0.0871591	0
+				0	0	1
+				-0.0871593	0.996194	0
+				0.0404064	0.0035351	-0.0446482
+			}
+			{VolumeView "ammo.ply"}
+		}
+	}
+}
+{Volume "body"
+	{Box 9 4.5 11.125}
+	{Bone "ammo"}
+	{Matrix34
+		0	1	0
+		-1	0	0
+		0	0	1
+		0.200028	0	-0.0383666
+	}
+}
+{Volume "select"
+	{Box 12.5 12.5 12.5}
+	{Bone "basis"}
+	{Matrix34
+		0	0	1
+		0.996195	0.0871558	0
+		-0.0871558	0.996195	0
+		0.0189599	0.653271	-0.0446482
+	}
+}
+{Extender "preview"
+	{"Stuff"
+		{camera
+			{origin -22.612	-6.93334	2.14365}
+			{lookat 6.69458	1.86688	-1.00147}
+			{fov 45}
+			{horizon -91.7908}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 14.9182	17.8348	-12.6309}
+			}
+			{"1"
+				{type directional}
+				{direction 0.494356	0.00899466	-0.0743706}
+			}
+			{"2"
+				{type point}
+				{position 27.5305	0.171552	12.971}
+			}
+		}
+	}
+	{"Stuff_primary"
+		{camera
+			{origin -20.8052	-0.470547	-4.95504}
+			{lookat 10.018	0.0284996	3.5959}
+			{fov 45}
+			{horizon -88.4021}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 26.8673	3.08751	-6.4669}
+			}
+			{"1"
+				{type directional}
+				{direction 0.457889	-0.125322	0.156946}
+			}
+			{"2"
+				{type point}
+				{position 22.5968	-5.53895	25.6868}
+			}
+		}
+	}
+}

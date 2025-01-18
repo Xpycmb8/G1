@@ -1,0 +1,5 @@
+{game_entity
+	
+	(include "/properties/construction_fnix.ext")
+	{Extension "fnix_supercomputer.mdl"}
+}

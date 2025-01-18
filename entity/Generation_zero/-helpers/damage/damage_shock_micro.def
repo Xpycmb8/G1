@@ -1,0 +1,7 @@
+{game_entity
+	{Skeleton}
+	{props "explosion" "damage_shock"}
+	{extender "stuff"
+		{item "damage_shock_micro"}
+	}
+}

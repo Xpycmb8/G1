@@ -1,0 +1,127 @@
+-= Animation: wpn_recoil, Node latch_bone =-
+	Frame 2870 {
+		Visibility 1
+		Position	1.1945	0.52771	2.14715
+		Orientation	0.0871256 0.00222337 -0.000620329 0.996195
+	}
+	Frame 2871 {
+		Orientation	0.093587 0.00238827 -0.000666318 0.995608
+	}
+	Frame 2872 {
+		Orientation	0.0871256 0.00222337 -0.000620329 0.996195
+	}
+	Frame 2873 {
+		Orientation	0.0353253 0.000901386 -0.000251621 0.999375
+	}
+	Frame 2874 {
+		Orientation	-0.0165703 -0.000423021 0.000117788 0.999863
+	}
+	Frame 2877 {
+		Orientation	0.00694775 0.000177177 -4.96132e-05 0.999976
+	}
+	Frame 2878 {
+		Orientation	0.0418084 0.00106685 -0.000297766 0.999125
+	}
+	Frame 2879 {
+		Orientation	0.0733833 0.00187266 -0.000522511 0.997302
+	}
+	Frame 2880 {
+		Visibility 1
+		Position	1.1945	0.52771	2.14715
+		Orientation	0.0871256 0.00222337 -0.000620329 0.996195
+	}
+-= Animation: wpn_recoil, Node armed_bone =-
+	Frame 2870 {
+		Visibility 1
+		Position	1.16362	1.48763	-0.661437
+		Orientation	0.0871256 0.00222337 -0.000620329 0.996195
+	}
+	Frame 2872 {
+		Position	1.16521	1.59919	-0.0378258
+	}
+	Frame 2873 {
+		Position	1.1668	1.71076	0.585785
+	}
+	Frame 2877 {
+		Position	1.16574	1.63638	0.170045
+	}
+	Frame 2878 {
+		Position	1.16468	1.562	-0.245696
+	}
+	Frame 2879 {
+		Position	1.16362	1.48763	-0.661437
+	}
+	Frame 2880 {
+		Visibility 1
+		Position	1.16362	1.48763	-0.661437
+		Orientation	0.0871256 0.00222337 -0.000620329 0.996195
+	}
+-= Animation: wpn_recoil, Node shell =-
+	Frame 2870 {
+		Visibility 1
+		Position	0.0208155	-1.03632	-1.31794
+		Orientation	-0.505185 0.495963 0.507492 -0.491192
+	}
+	Frame 2871 {
+		Orientation	0.506622 -0.497358 -0.506057 0.489775
+	}
+	Frame 2872 {
+		Orientation	-0.505185 0.495963 0.507492 -0.491192
+	}
+	Frame 2873 {
+		Position	0.0174648	-0.900748	-1.30246
+		Orientation	0.481531 -0.473061 -0.529988 0.513277
+	}
+	Frame 2874 {
+		Position	0.0111613	-0.63879	-1.2485
+		Orientation	0.450474 -0.442972 -0.556627 0.53946
+	}
+	Frame 2877 {
+		Position	-0.00170326	-0.301868	-1.84727
+		Orientation	0.404381 -0.398279 -0.590963 0.573249
+	}
+	Frame 2878 {
+		Position	-0.00899661	-0.049654	-1.96727
+		Orientation	0.476683 -0.468366 -0.534352 0.517565
+	}
+	Frame 2879 {
+		Position	-0.00919998	-0.041707	-1.96734
+		Orientation	0.506787 -0.497517 -0.505892 0.489613
+	}
+	Frame 2880 {
+		Visibility 1
+		Position	-0.0119022	-0.0451926	-2.35928
+		Orientation	0.506787 -0.497517 -0.505892 0.489613
+	}
+-= Animation: wpn_recoil, Node recoil_bone =-
+	Frame 2870 {
+		Visibility 1
+		Position	1.16362	1.48763	-0.661438
+		Orientation	0.0871256 0.00222336 -0.000620367 0.996195
+	}
+	Frame 2871 {
+		Position	1.16472	1.56467	-0.230778
+	}
+	Frame 2872 {
+		Position	1.16581	1.64172	0.199883
+	}
+	Frame 2873 {
+		Position	1.16691	1.71877	0.630544
+	}
+	Frame 2874 {
+		Position	1.16801	1.79581	1.0612
+	}
+	Frame 2877 {
+		Position	1.16691	1.71877	0.630544
+	}
+	Frame 2878 {
+		Position	1.16581	1.64172	0.199883
+	}
+	Frame 2879 {
+		Position	1.16472	1.56467	-0.230778
+	}
+	Frame 2880 {
+		Visibility 1
+		Position	1.16362	1.48763	-0.661438
+		Orientation	0.0871256 0.00222336 -0.000620367 0.996195
+	}

@@ -1,0 +1,84 @@
+;Exported by: Xpycmb
+;Date:        Fri Apr 28 13:54:51 2023
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\bullet7x64_fmj.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "handle"
+			{Position 0	0.591408	0}
+		}
+		{bone "bullet_7x64_fmj"
+			{Matrix34
+				0	1	0
+				-1	0	0
+				0	0	1
+				0.135182	0	0
+			}
+			{VolumeView "bullet_7x64_fmj.ply"}
+		}
+	}
+}
+{Volume "body"
+	{Cylinder 0.0582723 0.485735}
+	{Bone "bullet_7x64_fmj"}
+	{Matrix34
+		1.1	0	0
+		0	0	1.1
+		0	-1.1	0
+		0	0.143802	0
+	}
+}
+{Volume "select"
+	{Box 2.5 2.5 2.5}
+	{Bone "basis"}
+}
+{Extender "preview"
+	{"Stuff"
+		{camera
+			{origin -0.0929933	1.33858	0.0652502}
+			{lookat 0	0	0}
+			{fov 28.3138}
+			{horizon 29.8925}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 698.954	-463.711	4.64922}
+			}
+			{"1"
+				{type directional}
+				{direction -0.00762291	-0.499942	0.000309713}
+			}
+			{"2"
+				{type point}
+				{position -422.479	-341.217	-7.58194}
+			}
+		}
+	}
+	{"Stuff_primary"
+		{camera
+			{origin -0.379239	0.936877	0.0916586}
+			{lookat 10.8116	-28.8636	-3.0919}
+			{fov 45}
+			{horizon 141.689}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 48.3011	322.579	-5.41741}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0697646	-0.495096	0.003552}
+			}
+			{"2"
+				{type point}
+				{position 80.0272	328.871	3.54842}
+			}
+		}
+	}
+}

@@ -1,0 +1,53 @@
+;Exported by: Xpycmb
+;Date:        Mon Apr  8 00:06:49 2024
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\fnix_defence_tower_base_weapon_rocket.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "body"
+			{parameters "ID=Body;"}
+			{Matrix34
+				0	1	0
+				-1	0	0
+				0	0	1
+				1.12188	-0.0480795	60.74
+			}
+			{VolumeView "body.ply"}
+			{bone revolute "weapon_attach"
+				{Matrix34
+					0	-1	0
+					1	0	0
+					0	0	1
+					0.0122709	-17.5243	50.4595
+				}
+			}
+		}
+	}
+}
+{Obstacle "obs"
+	{Obb2
+		{Center 0 0}
+		{Extent 22.8925 26.6965}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Volume "armor_main_35_00"
+	{Polyhedron "armor_main_35_00.vol"}
+	{Bone "body"}
+	{Matrix34
+		-1	0	0
+		0	0	-1
+		0	-1	0
+		0.0480804	1.12188	-60.8425
+	}
+}
+{Volume "armor_main_50_00"
+	{Polyhedron "armor_main_50_00.vol"}
+	{Bone "body"}
+	{Position 0.0480804	1.12188	-60.8425}
+}

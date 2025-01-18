@@ -1,0 +1,174 @@
+{fx
+	{#+ spriteview glow
+		{sprite "$/additional/generalglow01_d"
+			{## preturn 0 180}
+			{light 1
+				{peak
+					{min 0.1}
+					{max 0.5}
+				}
+			}
+			{timer
+				{mode play loop }
+				{duration 0.03}
+			}
+			{scale 0.006}
+			{highlight 0xfffdfb6d}
+		}
+		{## halo}
+		{## offset 0 0 -0.5}
+	}
+	{#+ lightview
+		{type point}
+		{animator
+			{scale 1
+				{linear
+					{min 1}
+					{max 0.5}
+				}
+			}
+			{visibility 1
+				{linear
+					{min 1}
+					{max 0}
+				}
+			}
+			{highlight 0xff81b5ff}
+			{timer
+				{duration 0.04}
+				{mode play loop }
+			}
+		}
+		{attenuation0 0.07}
+		{attenuation1 0.9}
+		{radius 3}
+		{effectonground}
+	}
+	{#+ lightview small
+		{type spot}
+		{animator
+			{highlight 0xfffdfb6d}
+			{timer
+				{mode play loop }
+				{duration 0.1}
+			}
+			{visibility 1
+				{linear
+					{min 0.2}
+					{max 1}
+				}
+			}
+		}
+		{attenuation0 1}
+		{attenuation1 4}
+		{falloff 1.5}
+		{theta 1}
+		{phi 75}
+		{radius 45}
+		{priority 10}
+		{effectonground}
+	}
+	{#+ lightview small
+		{type spot}
+		{animator
+			{highlight 0xff081aff}
+			{timer
+				{mode play loop pingpong }
+				{duration 0.2}
+			}
+			{visibility 1
+				{linear
+					{min 0}
+					{max 1}
+				}
+			}
+		}
+		{attenuation0 1}
+		{attenuation1 4}
+		{falloff 1.5}
+		{theta 1}
+		{phi 75}
+		{radius 45}
+		{priority 25}
+		{effectonground}
+		{delay 0.05}
+	}
+	{spriteview main
+		{sprite "$/additional/light1"
+			{light 1
+				{peak
+					{min 0.03}
+					{max 0.05}
+				}
+			}
+			{timer
+				{mode play loop }
+				{duration 0.15}
+			}
+			{scalex 0.2}
+			{scaley 0.3}
+			{highlight 0xffbdb93a}
+			{##+ visibility 1
+				{## peak
+					{min 0.3}
+					{max 0.5}
+				}
+				{## linear
+					{min 0}
+					{max 1}
+				}
+				{power
+					{min 0}
+					{max 1}
+					{pow 1}
+				}
+			}
+		}
+		{orientation trace}
+		{#+ softintersection}
+	}
+	{spriteview main
+		{sprite "$/additional/light1"
+			{light 1
+				{peak
+					{min 0.04}
+					{max 0.06}
+				}
+			}
+			{timer
+				{mode play loop }
+				{duration 0.3}
+			}
+			{scalex 0.2}
+			{scaley 0.3}
+			{highlight 0xff081aff}
+		}
+		{orientation trace}
+		{#+ softintersection}
+		{##+ delay 0.1}
+	}
+	{##+ lightview small
+		{type spot}
+		{animator
+			{highlight 0xff081aff}
+			{timer
+				{mode play loop }
+				{duration 0.15}
+			}
+			{visibility 1
+				{linear
+					{min 0}
+					{max 1}
+				}
+			}
+		}
+		{attenuation0 1}
+		{attenuation1 5}
+		{falloff 2}
+		{theta 3}
+		{phi 90}
+		{radius 80}
+		{priority 10}
+		{effectonground}
+	}
+}

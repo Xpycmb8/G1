@@ -1,0 +1,82 @@
+;Exported by: Xpycmb
+;Date:        Mon Apr 17 21:07:12 2023
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\resistance_buildings_01_wall_scaffolds_noland.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "plywood"
+			{parameters "ID=Body;"}
+			{Position 0	1.52588e-05	0}
+			{VolumeView "plywood.ply"}
+		}
+		{bone "steel_aged_tiling"
+			{parameters "ID=Body;"}
+			{Position 0	1.52588e-05	0}
+			{VolumeView "steel_aged_tiling.ply"}
+			{bone "wood_3_2"
+				{parameters "ID=Body;"}
+				{Position 24.8118	0.214882	8.86599}
+				{VolumeView "wood_3_2.ply"}
+			}
+			{bone "wood_3_1"
+				{parameters "ID=Body;"}
+				{Position 0.175704	7.38199	28.5562}
+				{VolumeView "wood_3_1.ply"}
+			}
+			{bone "wood_3_3"
+				{parameters "ID=Body;"}
+				{Position -24.1648	0.214882	19.7235}
+				{VolumeView "wood_3_3.ply"}
+			}
+		}
+		{bone "rope"
+			{parameters "ID=Body;"}
+			{Position 0	1.52588e-05	0}
+			{VolumeView "rope.ply"}
+		}
+	}
+}
+{Volume "body_5_1"
+	{Box 0.5 12.4067 15.5992}
+	{Bone "wood_3_1"}
+	{Position 24.6361	-7.16711	-19.6903}
+}
+{Volume "body_5_2"
+	{Box 0.5 12.4067 15.5992}
+	{Bone "wood_3_1"}
+	{Position -24.3405	-7.16711	-8.83274}
+}
+{Volume "body_5_3"
+	{Box 0.5 46.8974 15.5992}
+	{Bone "wood_3_1"}
+	{Matrix34
+		0	1	0
+		-1	0	0
+		0	0	1
+		0	0	0
+	}
+}
+{Volume "body_7_1"
+	{Cylinder 0.5 38.0328}
+	{Bone "steel_aged_tiling"}
+	{Position 24.61	6.96198	19.0164}
+}
+{Volume "body_7_2"
+	{Cylinder 0.5 38.0328}
+	{Bone "steel_aged_tiling"}
+	{Position 24.61	-6.89737	19.0164}
+}
+{Volume "body_7_3"
+	{Cylinder 0.5 38.0328}
+	{Bone "steel_aged_tiling"}
+	{Position -24.5407	6.96198	19.0164}
+}
+{Volume "body_7_4"
+	{Cylinder 0.5 38.0328}
+	{Bone "steel_aged_tiling"}
+	{Position -24.5848	-6.89737	19.0164}
+}

@@ -1,0 +1,753 @@
+;Exported by: Xpycmb
+;Date:        Mon Apr 17 20:53:04 2023
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\barn_01_base_low_side_01.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "barn_details"
+			{parameters "ID=Body;"}
+			{Orientation
+				0	1	0
+				-1	0	0
+				0	0	1
+			}
+			{VolumeView "barn_details.ply"}
+		}
+		{bone "drainpipe"
+			{parameters "ID=Body;"}
+			{Orientation
+				0	1	0
+				-1	0	0
+				0	0	1
+			}
+			{VolumeView "drainpipe.ply"}
+		}
+		{bone "floor_concrete"
+			{parameters "ID=Body;"}
+			{Orientation
+				0	1	0
+				-1	0	0
+				0	0	1
+			}
+			{VolumeView "floor_concrete.ply"}
+		}
+		{bone "floor_wooden_"
+			{parameters "ID=Body;"}
+			{Orientation
+				0	1	0
+				-1	0	0
+				0	0	1
+			}
+			{VolumeView "floor_wooden_.ply"}
+		}
+		{bone "wall_concrete_painted"
+			{parameters "ID=Body;"}
+			{Orientation
+				0	1	0
+				-1	0	0
+				0	0	1
+			}
+			{VolumeView "wall_concrete_painted.ply"}
+		}
+		{bone "wood_painted"
+			{parameters "ID=Body;"}
+			{Orientation
+				0	1	0
+				-1	0	0
+				0	0	1
+			}
+			{VolumeView "wood_painted.ply"}
+		}
+		{bone "wooden_tile"
+			{parameters "ID=Body;"}
+			{Orientation
+				0	1	0
+				-1	0	0
+				0	0	1
+			}
+			{VolumeView "wooden_tile.ply"}
+		}
+		{bone "land_patch"
+			{parameters "CommonMesh;Land;Ground;"}
+			{Matrix34
+				0	1	0
+				-1	0	0
+				0	0	1
+				-1.25347	0	-0.0919458
+			}
+			{visibility 0}
+			{VolumeView "land_patch.ply" {Ground}}
+		}
+	}
+}
+{Obstacle "stone_25_00"
+	{Obb2
+		{Center -34.3848 100.324}
+		{Extent 106 5.00002}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Obstacle "stone_25_07"
+	{Obb2
+		{Center 105.559 -100.151}
+		{Extent 34.3999 5.00001}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Obstacle "stone_25_08"
+	{Obb2
+		{Center -34.3847 -100.151}
+		{Extent 106 5.00002}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Obstacle "stone_25_09"
+	{Obb2
+		{Center -135.672 -64.8755}
+		{Extent 5.00002 40}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Obstacle "stone_25_11"
+	{Obb2
+		{Center -135.672 65.0121}
+		{Extent 5.00002 40}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Obstacle "stone_25_15"
+	{Obb2
+		{Center 129.164 100.19}
+		{Extent 10.0767 5}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Obstacle "stone_25_16"
+	{Obb2
+		{Center 135.326 27.4388}
+		{Extent 5.00003 77.6612}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Obstacle "stone_25_18"
+	{Obb2
+		{Center 135.326 -90.3612}
+		{Extent 5.00002 13.5}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Obstacle "wood_5_00"
+	{Obb2
+		{Center 70.552 57.3491}
+		{Extent 1.20975 41.7849}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Obstacle "wood_5_01"
+	{Obb2
+		{Center 70.552 -55.0643}
+		{Extent 1.20975 41.7849}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Obstacle "wood_5_02"
+	{Obb2
+		{Center 6.40084 62.9616}
+		{Extent 1.20974 28.4137}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Obstacle "wood_5_03"
+	{Obb2
+		{Center -67.1371 62.9616}
+		{Extent 1.20974 28.4137}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Obstacle "wood_5_04"
+	{Obb2
+		{Center -130.681 62.9616}
+		{Extent 1.20974 28.4137}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Obstacle "wood_5_05"
+	{Obb2
+		{Center 6.40086 -61.5081}
+		{Extent 1.20974 28.4137}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Obstacle "wood_5_06"
+	{Obb2
+		{Center -67.1371 -61.5081}
+		{Extent 1.20974 28.4137}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Obstacle "wood_5_07"
+	{Obb2
+		{Center -130.681 -61.5081}
+		{Extent 1.20974 28.4137}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Obstacle "wood_5_08"
+	{Obb2
+		{Center -65.9154 -33.6621}
+		{Extent 20.1738 1.20973}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Obstacle "wood_5_09"
+	{Obb2
+		{Center -65.9154 33.0046}
+		{Extent 20.1738 1.20973}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Obstacle "wood_5_10"
+	{Obb2
+		{Center 3.4549 -33.6621}
+		{Extent 20.1738 1.20973}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Obstacle "wood_5_11"
+	{Obb2
+		{Center 3.45488 33.0046}
+		{Extent 20.1738 1.20973}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Obstacle "wood_5_12"
+	{Obb2
+		{Center 61.1041 -33.6621}
+		{Extent 8.25001 1.20973}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Obstacle "wood_5_13"
+	{Obb2
+		{Center 61.0734 33.0046}
+		{Extent 8.27125 1.20973}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Obstacle "wood_5_14"
+	{Obb2
+		{Center -121.627 -33.6621}
+		{Extent 8.25 1.20973}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Obstacle "wood_5_15"
+	{Obb2
+		{Center -121.657 33.0046}
+		{Extent 8.27124 1.20973}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Volume "hole_00"
+	{Box 19.0681 19.4 26.8849}
+	{Bone "basis"}
+	{Matrix34
+		0	-1	0
+		1	0	0
+		0	0	1
+		-6.67981	103.025	32.1579
+	}
+}
+{Volume "hole_01"
+	{Box 19.0681 19.4 26.8849}
+	{Bone "basis"}
+	{Matrix34
+		0	-1	0
+		1	0	0
+		0	0	1
+		-58.7504	103.025	32.1579
+	}
+}
+{Volume "hole_02"
+	{Box 19.0681 19.4 26.8849}
+	{Bone "basis"}
+	{Matrix34
+		0	-1	0
+		1	0	0
+		0	0	1
+		-110.694	103.025	32.1579
+	}
+}
+{Volume "hole_03"
+	{Box 19.0681 19.4 26.8849}
+	{Bone "basis"}
+	{Matrix34
+		0	-1	0
+		1	0	0
+		0	0	1
+		46.8939	103.025	32.1579
+	}
+}
+{Volume "hole_04"
+	{Box 19.0681 19.4 26.8849}
+	{Bone "basis"}
+	{Matrix34
+		0	-1	0
+		1	0	0
+		0	0	1
+		-110.694	-103.508	32.1579
+	}
+}
+{Volume "hole_05"
+	{Box 19.0681 19.4 26.8849}
+	{Bone "basis"}
+	{Matrix34
+		0	-1	0
+		1	0	0
+		0	0	1
+		-58.7504	-103.508	32.1579
+	}
+}
+{Volume "hole_06"
+	{Box 19.0681 19.4 26.8849}
+	{Bone "basis"}
+	{Matrix34
+		0	-1	0
+		1	0	0
+		0	0	1
+		-6.67981	-103.508	32.1579
+	}
+}
+{Volume "hole_07"
+	{Box 19.0681 19.4 26.8849}
+	{Bone "basis"}
+	{Matrix34
+		0	-1	0
+		1	0	0
+		0	0	1
+		45.0529	-103.508	32.158
+	}
+}
+{Volume "obstacle1"
+	{Box 10 75.4707 17.7189}
+	{Bone "wall_concrete_painted"}
+	{Position -101.321	103.269	-7.9345}
+}
+{Volume "obstacle2"
+	{Box 8.5 280.512 16.3014}
+	{Bone "wall_concrete_painted"}
+	{Position 100.986	0.0501137	-8.64333}
+}
+{Volume "obstacle3"
+	{Box 10 132.27 17.7189}
+	{Bone "wall_concrete_painted"}
+	{Position -101.321	-72.8454	-7.93455}
+}
+{Volume "roof_wood_00"
+	{Box 205 270 5}
+	{Bone "floor_wooden_"}
+	{Position 0.792097	-2.90024	58.9051}
+}
+{Volume "stone_25_00"
+	{Box 10 212 35.4483}
+	{Bone "wall_concrete_painted"}
+	{Position -100.324	34.3847	0.817129}
+}
+{Volume "stone_25_01"
+	{Box 10 212 17.7189}
+	{Bone "wall_concrete_painted"}
+	{Position -100.324	34.3847	54.3421}
+}
+{Volume "stone_25_02"
+	{Box 10 30 30}
+	{Bone "wall_concrete_painted"}
+	{Position -100.324	32.9284	33.0809}
+}
+{Volume "stone_25_03"
+	{Box 10 30 30}
+	{Bone "wall_concrete_painted"}
+	{Position -100.324	-20.1296	33.0809}
+}
+{Volume "stone_25_04"
+	{Box 10 30 30}
+	{Bone "wall_concrete_painted"}
+	{Position -100.324	-72.5614	33.0809}
+}
+{Volume "stone_25_05"
+	{Box 10 30 30}
+	{Bone "wall_concrete_painted"}
+	{Position -100.324	85.0059	33.0809}
+}
+{Volume "stone_25_06"
+	{Box 10 18 30}
+	{Bone "wall_concrete_painted"}
+	{Position -100.324	131.176	33.0809}
+}
+{Volume "stone_25_07"
+	{Box 10 68.7998 80}
+	{Bone "wall_concrete_painted"}
+	{Position 100.151	-105.559	23.093}
+}
+{Volume "stone_25_08"
+	{Box 10 212 35.4483}
+	{Bone "wall_concrete_painted"}
+	{Position 100.151	34.3847	0.817129}
+}
+{Volume "stone_25_09"
+	{Box 80 10 80}
+	{Bone "wall_concrete_painted"}
+	{Position 64.8754	135.672	23.093}
+}
+{Volume "stone_25_10"
+	{Box 60 10 17.5}
+	{Bone "wall_concrete_painted"}
+	{Position -0.317471	135.672	-8.15702}
+}
+{Volume "stone_25_11"
+	{Box 80 10 80}
+	{Bone "wall_concrete_painted"}
+	{Position -65.0122	135.672	23.093}
+}
+{Volume "stone_25_12"
+	{Box 10 23.8318 80}
+	{Bone "wall_concrete_painted"}
+	{Position -100.19	-80.4727	23.093}
+}
+{Volume "stone_25_13"
+	{Box 10 28.6324 18.3}
+	{Bone "wall_concrete_painted"}
+	{Position -100.19	-105.247	-7.75702}
+}
+{Volume "stone_25_14"
+	{Box 10 30.7558 18.1}
+	{Bone "wall_concrete_painted"}
+	{Position -100.19	-105.777	53.9464}
+}
+{Volume "stone_25_15"
+	{Box 10 20.1535 80}
+	{Bone "wall_concrete_painted"}
+	{Position -100.19	-129.164	23.093}
+}
+{Volume "stone_25_16"
+	{Box 155.322 10 80}
+	{Bone "wall_concrete_painted"}
+	{Position -27.4388	-135.326	23.093}
+}
+{Volume "stone_25_17"
+	{Box 29.25 10 18.1}
+	{Bone "wall_concrete_painted"}
+	{Position 63.6234	-135.326	-7.85702}
+}
+{Volume "stone_25_18"
+	{Box 27 10 80}
+	{Bone "wall_concrete_painted"}
+	{Position 90.3613	-135.326	23.093}
+}
+{Volume "stone_25_19"
+	{Box 29.25 10 18.1}
+	{Bone "wall_concrete_painted"}
+	{Position 63.6234	-135.326	53.9742}
+}
+{Volume "stone_25_20"
+	{Box 10 212 17.7189}
+	{Bone "wall_concrete_painted"}
+	{Position 100.151	34.3847	54.3421}
+}
+{Volume "stone_25_21"
+	{Box 10 30 30}
+	{Bone "wall_concrete_painted"}
+	{Position 100.151	32.9284	33.0809}
+}
+{Volume "stone_25_22"
+	{Box 10 30 30}
+	{Bone "wall_concrete_painted"}
+	{Position 100.151	-20.1296	33.0809}
+}
+{Volume "stone_25_23"
+	{Box 10 30 30}
+	{Bone "wall_concrete_painted"}
+	{Position 100.151	-72.5614	33.0809}
+}
+{Volume "stone_25_24"
+	{Box 10 30 30}
+	{Bone "wall_concrete_painted"}
+	{Position 100.151	85.0059	33.0809}
+}
+{Volume "stone_25_25"
+	{Box 10 18 30}
+	{Bone "wall_concrete_painted"}
+	{Position 100.151	131.176	33.0809}
+}
+{Volume "stone_25_26"
+	{Box 60 10 19.1395}
+	{Bone "wall_concrete_painted"}
+	{Position -0.317471	135.672	53.5389}
+}
+{Volume "wood_5_00"
+	{Box 83.5698 2.41946 57.7596}
+	{Bone "floor_wooden_"}
+	{Position -57.3491	-70.552	28.0916}
+}
+{Volume "wood_5_01"
+	{Box 83.5698 2.41946 57.7596}
+	{Bone "floor_wooden_"}
+	{Position 55.0643	-70.552	28.0916}
+}
+{Volume "wood_5_02"
+	{Box 56.8275 2.41946 31.1902}
+	{Bone "floor_wooden_"}
+	{Position -62.9616	-6.40086	14.8069}
+}
+{Volume "wood_5_03"
+	{Box 56.8275 2.41946 31.1902}
+	{Bone "floor_wooden_"}
+	{Position -62.9616	67.1371	14.8069}
+}
+{Volume "wood_5_04"
+	{Box 56.8275 2.41946 31.1902}
+	{Bone "floor_wooden_"}
+	{Position -62.9616	130.681	14.8069}
+}
+{Volume "wood_5_05"
+	{Box 56.8275 2.41946 31.1902}
+	{Bone "floor_wooden_"}
+	{Position 61.5081	-6.40086	14.8069}
+}
+{Volume "wood_5_06"
+	{Box 56.8275 2.41946 31.1902}
+	{Bone "floor_wooden_"}
+	{Position 61.5081	67.1371	14.8069}
+}
+{Volume "wood_5_07"
+	{Box 56.8275 2.41946 31.1902}
+	{Bone "floor_wooden_"}
+	{Position 61.5081	130.681	14.8069}
+}
+{Volume "wood_5_08"
+	{Box 40.3475 2.41946 31.1902}
+	{Bone "floor_wooden_"}
+	{Matrix34
+		0	1	0
+		-1	0	0
+		0	0	1
+		33.6621	65.9154	14.8069
+	}
+}
+{Volume "wood_5_09"
+	{Box 40.3475 2.41946 31.1902}
+	{Bone "floor_wooden_"}
+	{Matrix34
+		0	1	0
+		-1	0	0
+		0	0	1
+		-33.0046	65.9154	14.8069
+	}
+}
+{Volume "wood_5_10"
+	{Box 40.3475 2.41946 31.1902}
+	{Bone "floor_wooden_"}
+	{Matrix34
+		0	1	0
+		-1	0	0
+		0	0	1
+		33.6621	-3.4549	14.8069
+	}
+}
+{Volume "wood_5_11"
+	{Box 40.3475 2.41946 31.1902}
+	{Bone "floor_wooden_"}
+	{Matrix34
+		0	1	0
+		-1	0	0
+		0	0	1
+		-33.0046	-3.4549	14.8069
+	}
+}
+{Volume "wood_5_12"
+	{Box 16.5 2.41946 31.1902}
+	{Bone "floor_wooden_"}
+	{Matrix34
+		0	1	0
+		-1	0	0
+		0	0	1
+		33.6621	-61.1041	14.8069
+	}
+}
+{Volume "wood_5_13"
+	{Box 16.5425 2.41946 31.1902}
+	{Bone "floor_wooden_"}
+	{Matrix34
+		0	1	0
+		-1	0	0
+		0	0	1
+		-33.0046	-61.0734	14.8069
+	}
+}
+{Volume "wood_5_14"
+	{Box 16.5 2.41946 31.1902}
+	{Bone "floor_wooden_"}
+	{Matrix34
+		0	1	0
+		-1	0	0
+		0	0	1
+		33.6621	121.627	14.8069
+	}
+}
+{Volume "wood_5_15"
+	{Box 16.5425 2.41946 31.1902}
+	{Bone "floor_wooden_"}
+	{Matrix34
+		0	1	0
+		-1	0	0
+		0	0	1
+		-33.0046	121.657	14.8069
+	}
+}
+{Volume "wood_5_16"
+	{Box 56.8275 2.41946 11}
+	{Bone "floor_wooden_"}
+	{Position -62.9616	-6.40086	52.1476}
+}
+{Volume "wood_5_17"
+	{Box 56.8275 2.41946 11.2285}
+	{Bone "floor_wooden_"}
+	{Position -62.9616	67.1371	52.2618}
+}
+{Volume "wood_5_18"
+	{Box 56.8275 2.41946 11}
+	{Bone "floor_wooden_"}
+	{Position -62.9616	130.681	52.1476}
+}
+{Volume "wood_5_19"
+	{Box 56.8275 2.41946 11}
+	{Bone "floor_wooden_"}
+	{Position 61.5081	-6.40086	52.1476}
+}
+{Volume "wood_5_20"
+	{Box 56.8275 2.41946 11}
+	{Bone "floor_wooden_"}
+	{Position 61.5081	67.1371	52.1476}
+}
+{Volume "wood_5_21"
+	{Box 56.8275 2.41946 11}
+	{Bone "floor_wooden_"}
+	{Position 61.5081	130.681	52.1476}
+}
+{Volume "wood_5_22"
+	{Box 40.3475 2.41946 11}
+	{Bone "floor_wooden_"}
+	{Matrix34
+		0	1	0
+		-1	0	0
+		0	0	1
+		33.6621	65.9154	52.1476
+	}
+}
+{Volume "wood_5_23"
+	{Box 40.3475 2.41946 11}
+	{Bone "floor_wooden_"}
+	{Matrix34
+		0	1	0
+		-1	0	0
+		0	0	1
+		-33.0046	65.9154	52.1476
+	}
+}
+{Volume "wood_5_24"
+	{Box 40.3475 2.41946 11}
+	{Bone "floor_wooden_"}
+	{Matrix34
+		0	1	0
+		-1	0	0
+		0	0	1
+		33.6621	-3.4549	52.1476
+	}
+}
+{Volume "wood_5_25"
+	{Box 40.3475 2.41946 11}
+	{Bone "floor_wooden_"}
+	{Matrix34
+		0	1	0
+		-1	0	0
+		0	0	1
+		-33.0046	-3.4549	52.1476
+	}
+}
+{Volume "wood_5_26"
+	{Box 16.5 2.41946 11}
+	{Bone "floor_wooden_"}
+	{Matrix34
+		0	1	0
+		-1	0	0
+		0	0	1
+		33.6621	-61.1041	52.1476
+	}
+}
+{Volume "wood_5_27"
+	{Box 16.5425 2.41946 11}
+	{Bone "floor_wooden_"}
+	{Matrix34
+		0	1	0
+		-1	0	0
+		0	0	1
+		-33.0046	-61.0734	52.1476
+	}
+}
+{Volume "wood_5_28"
+	{Box 16.5 2.41946 11}
+	{Bone "floor_wooden_"}
+	{Matrix34
+		0	1	0
+		-1	0	0
+		0	0	1
+		33.6621	121.627	52.1476
+	}
+}
+{Volume "wood_5_29"
+	{Box 16.5 2.41946 11}
+	{Bone "floor_wooden_"}
+	{Matrix34
+		0	1	0
+		-1	0	0
+		0	0	1
+		-34.2158	121.627	52.1476
+	}
+}
+{Volume "wood_5_30"
+	{Box 34.0775 2.41946 11}
+	{Bone "floor_wooden_"}
+	{Matrix34
+		-1	0	0
+		0	-1	0
+		0	0	1
+		0.17958	-69.1583	50.9234
+	}
+}

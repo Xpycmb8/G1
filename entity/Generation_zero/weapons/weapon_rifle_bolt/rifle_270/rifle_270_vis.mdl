@@ -1,0 +1,16 @@
+;Exported by: Xpycmb
+;Date:        Wed Apr 26 17:43:39 2023
+;File:        C:\Users\Xpycmb\Documents\3dsMax\scene\rifle_270_vis.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "rifle_bolt_grade_1"
+			{parameters "ID=body;"}
+			{VolumeView "rifle_bolt_grade_1.ply"}
+		}
+	}
+}

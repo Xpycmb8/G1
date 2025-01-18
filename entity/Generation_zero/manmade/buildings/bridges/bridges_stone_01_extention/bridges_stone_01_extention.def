@@ -1,0 +1,22 @@
+{game_entity
+	(include "/properties/construction.inc")
+	{props "construction" "concrete"}
+	{obstacleID "unbreakable"}
+	{ZClipVisibility 0}
+	{Extension "bridges_stone_01_extention.mdl"}
+	{Volume "body"
+		{Tags  "body"}
+		{material "concrete"}
+		{able {visible 0}}
+		{Thickness 90}
+	}
+	{Volume "body2"
+		{Tags  "body"}
+		{material "concrete"}
+		{able {visible 0}}
+		{Thickness 90}
+	}
+	{Extender "land_patch"
+		{TerrainType "ground" "rock"}
+	}	
+}

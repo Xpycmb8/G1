@@ -1,0 +1,75 @@
+{fx
+	{#+ lightview
+		{type spot}
+		{animator
+			{highlight 0xffff0000}
+			{timer
+				{mode play}
+				{duration 0.2}
+			}
+			{visibility 1
+				{linear
+					{min 1}
+					{max 0}
+				}
+			}
+			{scale 1
+				{linear
+					{min 1}
+					{max 0}
+				}
+			}
+		}
+		{attenuation0 0.5}
+		{attenuation1 5}
+		{falloff 6}
+		{theta 2}
+		{phi 170}
+		{radius 25}
+		{priority 3}
+		{effectonground}
+	}
+	{#+ lightview
+		{animator
+			{highlight 0xffff0000}
+			{timer
+				{mode play}
+				{duration 0.2}
+			}
+			{visibility 1
+				{linear
+					{min 1}
+					{max 0}
+				}
+			}
+		}
+		{type point}
+		{radius 5}
+		{radiusfalloff 1}
+		{intensity 0.4}
+	}
+	{##+ lightview
+		{type spot}
+		{animator
+			{highlight 0xffff0000}
+			{## timer
+				{mode play}
+				{duration 0.5}
+			}
+			{## visibility 1
+				{linear
+					{min 1}
+					{max 0}
+				}
+			}
+		}
+		{attenuation0 0.05}
+		{attenuation1 10}
+		{falloff 120}
+		{theta 0.01}
+		{phi 0.1}
+		{radius 800}
+		{priority 0}
+		{attenuation2 25}
+	}
+}

@@ -1,0 +1,92 @@
+;Exported by: Xpycmb
+;Date:        Wed Jan  1 04:09:05 2025
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\fuel_ammo.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "handle"
+			{Matrix34
+				0	1	0
+				-1	0	0
+				0	0	1
+				0.24433	-0.0578189	0.138242
+			}
+		}
+		{bone "fuel"
+			{parameters "ID=flamethrower;"}
+			{Orientation
+				0	0	-1
+				0	1	0
+				1	0	0
+			}
+			{VolumeView "fuel.ply"}
+		}
+	}
+}
+{Volume "body"
+	{Cylinder 1.1 4.46497}
+	{Bone "fuel"}
+	{Orientation
+		-1	0	0
+		0	1	0
+		0	0	-1
+	}
+}
+{Volume "select"
+	{Box 3 6 3}
+	{Bone "basis"}
+	{Orientation
+		0	1	0
+		-1	0	0
+		0	0	1
+	}
+}
+{Extender "preview"
+	{"Stuff"
+		{camera
+			{origin -0.704178	-7.768	2.19719}
+			{lookat 1.71284	21.6278	-6.53523}
+			{fov 45}
+			{horizon 0.540679}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 16.1688	29.5546	-23.7297}
+			}
+			{"1"
+				{type directional}
+				{direction 0.0375925	0.498545	-0.00629275}
+			}
+			{"2"
+				{type point}
+				{position -12.9728	40.2812	-10.9931}
+			}
+		}
+	}
+	{"Stuff_primary"
+		{camera
+			{origin -0.934403	-10.6797	1.71589}
+			{lookat 1.7108	20.8904	-2.72995}
+			{fov 45}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 18.538	32.0802	-11.0647}
+			}
+			{"1"
+				{type directional}
+				{direction 0.0267785	0.494771	0.0669673}
+			}
+			{"2"
+				{type point}
+				{position -11.8807	40.6265	0.257021}
+			}
+		}
+	}
+}

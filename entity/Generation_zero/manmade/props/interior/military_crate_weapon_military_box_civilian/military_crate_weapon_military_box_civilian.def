@@ -1,0 +1,31 @@
+{game_entity
+	(include "/properties/physics_steel.ext")
+	{props "wood" "opened" "toolbox_locker" "spread_items" "ammocrate"}
+	{mass 50}
+	{extender "inventory"
+		{box
+			{weight 100}
+			{size 8 2}
+		}
+	}
+	{Volume "roof"
+		{Thickness 3}
+		{able {touch 0}}
+	}
+	{Volume "gear"
+		{Tags  "gear"}
+		{Thickness 1}
+		{able {touch 1}}
+	}
+	{Volume "touch"
+		{Tags  "touch" }
+		{Thickness 1}
+		{able {touch 1}}
+	}
+	{Volume "base"
+		{Tags  "body" }
+		{Thickness 3}
+		{able {touch 0}}
+	}
+	{Extension "military_crate_weapon_military_box.mdl"}
+}

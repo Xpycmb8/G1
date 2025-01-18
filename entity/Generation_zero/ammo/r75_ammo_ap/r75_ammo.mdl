@@ -1,0 +1,95 @@
+;Exported by: Xpycmb
+;Date:        Sat Jan 18 15:11:51 2025
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\r75_ammo.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "handle"
+			{Matrix34
+				0	1	0
+				-1	0	0
+				0	0	1
+				0.24433	-0.0578189	0.138242
+			}
+		}
+		{bone "body"
+			{parameters "ID=missile;"}
+			{Matrix34
+				0.000371247	-0.999999	-0.00139213
+				0.999985	0.000378922	-0.00546727
+				0.00546688	-0.00138974	0.999984
+				0	0	0
+			}
+			{VolumeView "body.ply"}
+		}
+	}
+}
+{Volume "body"
+	{Cylinder 1.66275 10.4716}
+	{Bone "body"}
+	{Matrix34
+		0.00139226	0.00547281	-0.999984
+		-0.999999	0.000374071	-0.0013897
+		0.000366319	0.999985	0.00546392
+		7.1967e-05	0.266154	0.00144706
+	}
+}
+{Volume "select"
+	{Box 6 12.15 6}
+	{Bone "basis"}
+	{Matrix34
+		0	1	0
+		-1	0	0
+		0	0	1
+		-0.345332	0	0
+	}
+}
+{Extender "preview"
+	{"Stuff"
+		{camera
+			{origin -2.73151	-33.2519	9.15829}
+			{lookat -0.314485	-3.85606	0.425872}
+			{fov 45}
+			{horizon 0.540679}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 14.1415	4.07071	-16.7686}
+			}
+			{"1"
+				{type directional}
+				{direction 0.0375925	0.498545	-0.00629275}
+			}
+			{"2"
+				{type point}
+				{position -15.0001	14.7973	-4.03201}
+			}
+		}
+	}
+	{"Stuff_primary"
+		{camera
+			{origin -3.53115	-33.1832	4.30107}
+			{lookat -0.885952	-1.61312	-0.144774}
+			{fov 45}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 15.9412	9.57671	-8.47953}
+			}
+			{"1"
+				{type directional}
+				{direction 0.0267785	0.494771	0.0669673}
+			}
+			{"2"
+				{type point}
+				{position -14.4775	18.123	2.84219}
+			}
+		}
+	}
+}

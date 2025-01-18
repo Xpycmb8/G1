@@ -1,0 +1,10 @@
+{Entity
+	(include "/properties/dead_prop_skir.grn")
+	{Extension "lefthand_component.mdl"}
+	{extender "stuff"
+		{item "lefthand_component"}
+	}
+	{Volume "lefthand"
+		{thickness 1}
+	}
+}

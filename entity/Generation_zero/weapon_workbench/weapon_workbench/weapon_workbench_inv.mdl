@@ -1,0 +1,23 @@
+;Exported by: Xpycmb
+;Date:        Wed Apr 26 17:17:06 2023
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\WorkbenchWeapons.max
+{Skeleton
+	{bone "upgrade_inv"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{VolumeView "upgrade_inv.ply"}
+	}
+}
+{Volume "body"
+	{Box 11.2365 5.80755 5.51697}
+	{Bone "upgrade_inv"}
+	{Matrix34
+		0.965926	0	0.258819
+		-0.258819	0	0.965926
+		0	-1	0
+		3.94278	-19.9246	22.4492
+	}
+}

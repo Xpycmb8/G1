@@ -1,0 +1,129 @@
+;Exported by: Xpycmb
+;Date:        Sat Jan  7 20:53:56 2023
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\building_soviet_barrier_01_cover.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "sandbags"
+			{parameters "ID=Body;"}
+			{LODView
+				{VolumeView "sandbags.ply"}
+				{VolumeView "sandbags_lod1.ply"}
+				{VolumeView "sandbags_lod2.ply"}
+				{VolumeView "sandbags_lod3.ply"}
+			}
+		}
+		{bone "soviet_wall"
+			{parameters "ID=Body;"}
+			{LODView
+				{VolumeView "soviet_wall.ply"}
+				{VolumeView "soviet_wall_lod1.ply"}
+				{VolumeView "soviet_wall_lod2.ply"}
+				{VolumeView "soviet_wall_lod3.ply"}
+			}
+		}
+	}
+}
+{Obstacle "obstacle1"
+	{Obb2
+		{Center -11.0592 -18.5453}
+		{Extent 5.49914 5.75}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Obstacle "obstacle2"
+	{Obb2
+		{Center -11.0592 18.0182}
+		{Extent 5.49914 5.75}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Obstacle "obstacle3"
+	{Obb2
+		{Center -15.4275 -0}
+		{Extent 1.37534 25.7025}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Volume "body_20_1"
+	{Box 1 52.3155 17.1359}
+	{Bone "soviet_wall"}
+	{Position -16.5462	0	9.81039}
+}
+{Volume "body_20_2"
+	{Box 1 51.2744 17.1359}
+	{Bone "soviet_wall"}
+	{Matrix34
+		0	0	-1
+		0	1	0
+		1	0	0
+		-8.36532	0	0.493191
+	}
+}
+{Volume "body_40_1"
+	{Box 11.5 10.9983 10.0666}
+	{Bone "sandbags"}
+	{Matrix34
+		0	1	0
+		-1	0	0
+		0	0	1
+		-11.0592	18.5453	5.03328
+	}
+}
+{Volume "body_40_2"
+	{Box 11.5 10.9983 10.0666}
+	{Bone "sandbags"}
+	{Matrix34
+		0	1	0
+		-1	0	0
+		0	0	1
+		-11.0592	-18.0182	5.03328
+	}
+}
+{Volume "body_40_3"
+	{Box 11.5 6.70895 7.24793}
+	{Bone "sandbags"}
+	{Matrix34
+		0	1	0
+		-1	0	0
+		0	0	1
+		-12.0614	-18.0182	13.2763
+	}
+}
+{Volume "body_40_4"
+	{Box 11.5 6.70895 7.24793}
+	{Bone "sandbags"}
+	{Matrix34
+		0	1	0
+		-1	0	0
+		0	0	1
+		-12.0614	18.4453	13.2763
+	}
+}
+{Volume "body_40_5"
+	{Box 11.5 2.75067 16.0179}
+	{Bone "sandbags"}
+	{Matrix34
+		0	1	0
+		-1	0	0
+		0	0	1
+		-15.4275	6.86849	10.0145
+	}
+}
+{Volume "body_40_6"
+	{Box 11.5 2.75067 16.0179}
+	{Bone "sandbags"}
+	{Matrix34
+		0	1	0
+		-1	0	0
+		0	0	1
+		-15.4275	-6.77167	10.0145
+	}
+}

@@ -1,0 +1,22 @@
+;Exported by: Xpycmb
+;Date:        Fri Oct  8 17:38:10 2021
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\grass_.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			2	0	0
+			0	-2	0
+			0	0	2
+		}
+		{bone "grass"
+			{parameters "ID=body;"}
+			{Matrix34
+				1	0	0
+				0	0	1
+				0	-1	0
+				0	0	-0.0611195
+			}
+			{VolumeView "land_grass_01.ply"}
+		}
+	}
+}

@@ -1,0 +1,283 @@
+{fx
+	{#+ particleview fire1
+		{generator
+			{totalparticles 2 -1}
+			{particlesinblock 2 -1}
+			{emissionarea
+				{radius 0}
+				{alpha0 1 1}
+				{alpha1 1 1}
+			}
+			{particleinit
+				{speed 0.6 0.4}
+				{lifetime 0.1}
+			}
+			{timetolive 0.1}
+		}
+		{mover
+			{damping 0.9}
+			{gravity
+				{value -0.007}
+			}
+		}
+		{visualizer
+			{stage 
+				{#+ sprite "$/additional/lp_muzzle/flash1"
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{preturn 0 180}
+					{#+ turn 1
+						{linear
+							{min 0}
+							{max 0 50}
+						}
+					}
+					{scale 1
+						{##+ power
+							{min 0}
+							{max 0.5}
+							{pow 1}
+						}
+						{linear
+							{min 0}
+							{max 0.015 -0.005}
+						}
+					}
+					{light 1
+						{power
+							{min 1}
+							{max 0}
+							{pow 1}
+						}
+						{##+ linear
+							{min 1}
+							{max 0}
+						}
+					}
+					{## highlight 0xfffe7842}
+				}
+				{#+ sprite "$/additional/lp_muzzle/flash5"
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{preturn 0 180}
+					{turn 1
+						{linear
+							{min 0}
+							{max 0 50}
+						}
+					}
+					{scale 1
+						{linear
+							{min 0}
+							{max 0.015 -0.005}
+						}
+					}
+					{light 1
+						{power
+							{min 1}
+							{max 0}
+							{pow 1}
+						}
+						{##+ linear
+							{min 1}
+							{max 0}
+						}
+					}
+					{## highlight 0xfffe7842}
+				}
+				{sprite "$/additional/lp_muzzle/flash3"
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{preturn 0 180}
+					{#+ turn 1
+						{linear
+							{min 0}
+							{max 0 50}
+						}
+					}
+					{scale 1
+						{##+ power
+							{min 0}
+							{max 0.5}
+							{pow 1}
+						}
+						{linear
+							{min 0}
+							{max 0.015 -0.005}
+						}
+					}
+					{light 1
+						{power
+							{min 1}
+							{max 0}
+							{pow 1}
+						}
+						{##+ linear
+							{min 1}
+							{max 0}
+						}
+					}
+					{## highlight 0xfffe7842}
+				}
+			}
+		}
+		{autopause}
+	}
+	{#+ lightview
+		{type point}
+		{animator
+			{scale 1
+				{linear
+					{min 1}
+					{max 0.5}
+				}
+			}
+			{visibility 1
+				{linear
+					{min 1}
+					{max 0}
+				}
+			}
+			{highlight 0xffa0a0a0}
+			{timer
+				{duration 0.06 0.02}
+			}
+		}
+		{attenuation0 0.5}
+		{radius 65}
+		{effectonground}
+	}
+	{#+ spriteview halo
+		{sprite "$/flash/halo02"
+			{timer
+				{mode play }
+				{duration 0.1}
+			}
+			{light 1
+				{linear
+					{min 0.2}
+					{max 0}
+				}
+			}
+			{scale 0.4}
+		}
+		{notifyowner}
+		{halo}
+		{autovisible}
+	}
+	{#+ spriteview "halo night"
+		{sprite "$/flash/halo02"
+			{timer
+				{mode play }
+				{duration 0.1}
+			}
+			{light 1
+				{linear
+					{min 0.2}
+					{max 0}
+				}
+			}
+			{scale 0.6}
+		}
+		{notifyowner}
+		{halo}
+		{autovisible}
+		{nightonly}
+	}
+	{#+ particleview "smoke fwd"
+		{generator
+			{emissionarea
+				{radius 0}
+				{alpha0 0}
+				{alpha1 3.5 2.5}
+			}
+			{particleinit
+				{speed 2 1}
+				{lifetime 0.5}
+			}
+			{totalparticles 1.5 -0.5}
+			{particlesinblock 1.5 -0.5}
+			{timetolive 0.01}
+		}
+		{mover
+			{damping 0.7}
+			{## gravity
+				{value 0.02}
+			}
+		}
+		{visualizer
+			{stage 
+				{sprite "$/additional/smoke_light1_small"
+					{turn 1
+						{linear
+							{min 0}
+							{max 0 50}
+						}
+					}
+					{scale 1
+						{##+ linear
+							{min 0.065 0.035}
+							{max 0.15 0.05}
+						}
+						{power
+							{min 0}
+							{max 0.15}
+							{pow 1}
+						}
+					}
+					{visibility 1
+						{linear
+							{min 0.3 0.1}
+							{max 0}
+						}
+					}
+					{preturn 0 20}
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{highlight 0xffffffff}
+				}
+				{##+ sprite "$/additional/smoke_light4"
+					{turn 1
+						{linear
+							{min 0}
+							{max 0 50}
+						}
+					}
+					{scale 1
+						{## linear
+							{min 0.065 0.035}
+							{max 0.15 0.05}
+						}
+						{power
+							{min 0.1}
+							{max 0.25 0.05}
+							{pow 1}
+						}
+					}
+					{visibility 1
+						{linear
+							{min 0.4 0.1}
+							{max 0}
+						}
+					}
+					{preturn 0 20}
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{highlight 0xff5f5f5f}
+				}
+			}
+		}
+		{notifyowner}
+		{#+ autopause}
+	}
+}

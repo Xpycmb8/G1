@@ -1,0 +1,13 @@
+{game_entity 
+	{props "delet_t15_hide" }
+	{DecalView "step"
+		{Sprite "footstep_hoofback.mtl" 
+			{Scale 0.02 }
+			
+		}
+		{ground}
+		{layer grounddecal}
+		{UseDirection}
+	}
+	{decalorder 20}
+}

@@ -1,0 +1,12 @@
+{game_entity
+	(include "/properties/stuff_small.ext")
+	{props "magazine"}
+	{collider "ammo"}
+	{Extension "magazine_rifle_270_with_fmj.mdl"}
+	{extender "stuff"
+		{item "ammo 7x64 rifle270 fmj"}
+	}
+	{Volume "magazine"
+		{thickness 1}
+	}
+}

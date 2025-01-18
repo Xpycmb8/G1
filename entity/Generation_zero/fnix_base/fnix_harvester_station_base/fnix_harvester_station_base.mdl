@@ -1,0 +1,98 @@
+;Exported by: Xpycmb
+;Date:        Mon Jan  6 17:11:50 2025
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\fnix_harvester_station_base.max
+{Skeleton
+	{animation
+		{sequence "open" {resume}}
+	}
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "body"
+			{VolumeView "body.ply"}
+			{bone "b1"
+				{Position 0	-18.3904	6.43692}
+				{bone "doorl"
+					{Position 0	9.23905	0.641213}
+					{VolumeView "doorl.ply"}
+				}
+			}
+			{bone "b2"
+				{Position 0	18.5161	6.43692}
+				{bone "doorr"
+					{Matrix34
+						-1	0	0
+						0	-1	0
+						0	0	1
+						0	-9.23905	0.641213
+					}
+					{VolumeView "doorr.ply"}
+				}
+			}
+		}
+	}
+}
+{Obstacle "body"
+	{Obb2
+		{Center 0 0}
+		{Extent 26.75 18.8179}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Volume "body"
+	{Box 53.5 37.6358 7}
+	{Bone "body"}
+	{Position 0	0	3.5}
+}
+{Volume "doorl"
+	{Box 40.125 16.5598 2.45}
+	{Bone "doorl"}
+	{Matrix34
+		1	0	0
+		0	0.996195	0.0871558
+		0	-0.0871558	0.996195
+		0	0.942323	0.359368
+	}
+}
+{Volume "doorr"
+	{Box 40.125 16.5598 2.45}
+	{Bone "doorr"}
+	{Matrix34
+		1	0	0
+		0	0.996195	0.0871557
+		0	-0.0871557	0.996195
+		0	0.942323	0.359368
+	}
+}
+{Volume "fx_l"
+	{Polyhedron "fx_l.vol"}
+	{Bone "doorl"}
+}
+{Volume "fx_r"
+	{Polyhedron "fx_r.vol"}
+	{Bone "doorr"}
+}
+{Volume "gear"
+	{Box 5.90551 33.4522 1.9685}
+	{Bone "body"}
+	{Matrix34
+		0	-1.2	0
+		1.2	0	0
+		0	0	1.2
+		0	-0.0944635	8.88186
+	}
+}
+{Volume "touch"
+	{Box 61.0405 92.1037 4.64436}
+	{Bone "body"}
+	{Matrix34
+		0	-0.345949	0
+		0.396021	0	0
+		0	0	0.822497
+		0.0051434	-0.0567551	2.07573
+	}
+}

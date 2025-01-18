@@ -1,0 +1,32 @@
+{game_entity
+	(include "/properties/construction_medium.ext")
+	{props "construction" "steel" }	
+	{Extension "resistance_buildings_01_wall_ramp.mdl"}
+	{Extender "land_patch"
+		{TerrainType "bridge_wood" "bridge_wood"}
+	}	
+	{volume "body_7_1"
+		{Tags "body"}
+		{thickness 7}
+		{able {visible 0}{obstacle 0}}
+		{material "steel"}
+	}
+	{volume "body_7_2"
+		{Tags "body"}
+		{thickness 7}
+		{able {visible 0}{obstacle 0}}
+		{material "steel"}
+	}
+	{volume "body_7_3"
+		{Tags "body"}
+		{thickness 7}
+		{able {visible 0}{obstacle 0}}
+		{material "steel"}
+	}
+	{volume "body_7_4"
+		{Tags "body"}
+		{thickness 7}
+		{able {visible 0}{obstacle 0}}
+		{material "steel"}
+	}
+}

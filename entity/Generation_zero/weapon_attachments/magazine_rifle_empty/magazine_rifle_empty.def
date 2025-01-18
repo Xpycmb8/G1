@@ -1,0 +1,12 @@
+{game_entity
+	(include "/properties/stuff_small.ext")
+	{props "magazine"}
+	{collider "ammo"}
+	{Extension "magazine_rifle_empty.mdl"}
+	{extender "stuff"
+		{item "magazine_rifle_empty"}
+	}
+	{Volume "magazine"
+		{thickness 1}
+	}
+}

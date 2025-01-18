@@ -1,0 +1,10 @@
+{fx
+	{lightview
+		{animator
+			{highlight 0xfffefea5}
+		}
+		{type point}
+		{radius 2}
+		{radiusfalloff 1}
+	}
+}

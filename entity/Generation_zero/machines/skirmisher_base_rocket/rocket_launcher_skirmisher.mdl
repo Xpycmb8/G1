@@ -1,0 +1,119 @@
+;Exported by: Xpycmb
+;Date:        Mon Dec 23 23:54:31 2024
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\skirmisher_base_rocket.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "missilelauncher"
+			{parameters "ID=missilelauncher;"}
+			{Matrix34
+				1	0	0
+				0	1	0
+				0	0	1
+				0	0	0
+			}
+			{VolumeView "missilelauncher.ply"}
+			{bone "laser"
+				{parameters "ID=missilelauncher;"}
+				{Matrix34
+					-0.999649	-0.0255084	0.00711419
+					-0.00251354	-0.176102	-0.984367
+					0.0263584	-0.98404	0.17599
+					2.02112	0.320662	-4.50488
+				}
+				{VolumeView "laser.ply"}
+				{bone "shoot_search_ems"
+					{parameters "CommonMesh;ID=missilelauncher;"}
+					{Matrix34
+						0	0.914253	0.405139
+						-1	0	0
+						0	-0.405144	0.914255
+						-0.294492	0.382019	0.0875711
+					}
+					{visibility 0}
+					{VolumeView "shoot_search_ems.ply"}
+				}
+				{bone "shoot_alarm_ems"
+					{parameters "CommonMesh;ID=missilelauncher;"}
+					{Matrix34
+						0	0.914253	0.405139
+						-1	0	0
+						0	-0.405144	0.914255
+						-0.294492	0.382019	0.087571
+					}
+					{visibility 0}
+					{VolumeView "shoot_alarm_ems.ply"}
+				}
+				{bone "shoot_hold_ems"
+					{parameters "CommonMesh;ID=missilelauncher;"}
+					{Matrix34
+						0	0.914253	0.405139
+						-1	0	0
+						0	-0.405144	0.914255
+						-0.294492	0.382019	0.087571
+					}
+					{VolumeView "shoot_hold_ems.ply"}
+				}
+				{bone "fx_laser_point"
+					{Matrix34
+						0	1	0
+						1	0	0
+						0	0	-1
+						-0.207568	0.426148	-0.147258
+					}
+					{bone "laser_point"
+						{parameters "ID=missilelauncher;"}
+						{Matrix34
+							0	1	0
+							0	0	1
+							1	0	0
+							-0.0467529	0	0
+						}
+						{visibility 0}
+						{VolumeView "laser_point.ply"}
+					}
+				}
+			}
+			{bone "foresight"
+				{Matrix34
+					-0.00251323	-0.176101	-0.984367
+					-0.999649	-0.0255087	0.00711417
+					-0.0263588	0.98404	-0.17599
+					1.47822	-0.780607	-6.07997
+				}
+			}
+			{bone "fx_shoot"
+				{Matrix34
+					0.00251326	0.176101	0.984367
+					0.999649	0.0255093	-0.00711431
+					-0.0263593	0.98404	-0.17599
+					1.49926	0.693917	2.16202
+				}
+			}
+			{bone "rocket"
+				{parameters "ID=missilelauncher;"}
+				{Matrix34
+					-0.00251313	-0.176102	-0.984367
+					-0.999649	-0.0255088	0.00711382
+					-0.0263587	0.98404	-0.17599
+					1.49572	0.445479	0.773369
+				}
+				{VolumeView "rocket.ply"}
+			}
+		}
+	}
+}
+{Volume "missilelauncher"
+	{Box 1.41209 8.99988 1.76278}
+	{Bone "missilelauncher"}
+	{Matrix34
+		-0.99965	-0.025511	0.00711379
+		0.0025147	0.176095	0.984365
+		-0.0263569	0.984043	-0.175997
+		1.5163	-0.160442	-1.99199
+	}
+}

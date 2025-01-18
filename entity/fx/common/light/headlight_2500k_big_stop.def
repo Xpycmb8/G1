@@ -1,0 +1,186 @@
+{fx
+	{#+ spriteview glow
+		{sprite "$/additional/generalglow01_d"
+			{preturn 0 180}
+			{light 1
+				{##+ peak
+					{min 0.4}
+					{max 0.45}
+				}
+				{linear
+					{min 0.45}
+					{max 0}
+				}
+			}
+			{timer
+				{mode play}
+				{duration 0.5}
+			}
+			{scale 0.03}
+			{highlight 0xfff5e292}
+			{##+ visibility 1
+				{linear
+					{min 1}
+					{max 0}
+				}
+			}
+		}
+		{softintersection}
+	}
+	{#+ lightview
+		{animator
+			{highlight 0xffffb865}
+			{timer
+				{mode play}
+				{duration 0.5}
+			}
+			{visibility 1
+				{linear
+					{min 1}
+					{max 0}
+				}
+			}
+			{scale 1
+				{linear
+					{min 1}
+					{max 0}
+				}
+			}
+		}
+		{type point}
+		{radius 4}
+	}
+	{#+ spriteview glow
+		{sprite "$/additional/fireglow_d"
+			{preturn 0 180}
+			{light 1
+				{## peak
+					{min 1}
+					{max 0}
+				}
+				{linear
+					{min 1}
+					{max 0}
+				}
+			}
+			{timer
+				{mode play}
+				{duration 0.5}
+			}
+			{scale 0.03
+				{linear
+					{min 0.03}
+					{max 0}
+				}
+			}
+			{highlight 0xffffb865}
+		}
+		{## halo}
+	}
+	{#+ spriteview l1
+		{sprite "$/additional/light2"
+			{light 1
+				{## peak
+					{min 0.03}
+					{max 0.04}
+				}
+				{linear
+					{min 0.03}
+					{max 0}
+				}
+			}
+			{timer
+				{mode play}
+				{duration 0.5}
+			}
+			{scalex 0.4}
+			{scaley 0.1}
+			{highlight 0xffffe1ae}
+			{preturn 0 10}
+			{visibility 1
+				{linear
+					{min 0.03}
+					{max 0}
+				}
+			}
+		}
+		{orientation trace}
+		{#+ softintersection}
+	}
+	{#+ spriteview l2
+		{sprite "$/additional/light2"
+			{light 1
+				{## peak
+					{min 0.04}
+					{max 0.045}
+				}
+				{linear
+					{min 0.04}
+					{max 0}
+				}
+			}
+			{timer
+				{mode play}
+				{duration 0.7}
+			}
+			{scalex 0.4}
+			{scaley 0.15}
+			{highlight 0xffffe1ae}
+			{preturn 0 10}
+		}
+		{orientation trace}
+		{#+ softintersection}
+	}
+	{#+ lightview
+		{type spot}
+		{animator
+			{highlight 0xffffb865}
+			{timer
+				{mode play}
+				{duration 0.5}
+			}
+			{visibility 1
+				{linear
+					{min 1}
+					{max 0}
+				}
+			}
+			{scale 1
+				{linear
+					{min 1}
+					{max 0}
+				}
+			}
+		}
+		{attenuation0 0.5}
+		{attenuation1 5}
+		{falloff 1.5}
+		{theta 5}
+		{phi 120}
+		{radius 700}
+		{priority 10}
+		{effectonground}
+	}
+	{#+ spriteview glow
+		{sprite "$/additional/generalglow01_d"
+			{preturn 0 180}
+			{light 1
+				{## peak
+					{min 0.22}
+					{max 0.24}
+				}
+				{linear
+					{min 0.22}
+					{max 0}
+				}
+			}
+			{timer
+				{mode play}
+				{duration 0.5}
+			}
+			{scale 0.015 0.005}
+			{highlight 0xffffb865}
+		}
+		{## offset 0 -1 0}
+	}
+}

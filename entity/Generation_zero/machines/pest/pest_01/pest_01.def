@@ -1,0 +1,113 @@
+{actor
+	(include "/properties/machinery.ext")
+	{obstacleID "human"}
+;	{collider "particle.big"}
+	{PatherID	"human"}
+	{props "baze_machinery" "pest_base" "pest" "pest_classic" "local_physics"}
+	(include "/properties/selection/pest.inc" scale(0.2))
+;									all	front top rear bottom ; material steel armor
+	{volume "main_body"
+		{component "main_body"}
+		{material "armor"}
+		{tags "main_body"}
+		{thickness	2 }
+	}
+	;("volume_body" args "front_armor" "armor_crushed"   15  steel )
+
+	{Volume "front_armor"
+		{material "armor"}
+		{thickness 15}
+		{tags "armor_crushed" "front_armor" }
+	}
+
+
+
+	("volume_component" args "fuel_small" "fuel_small"    2  steel )
+
+	("volume_component" args "RightToeBase" 		"limbs_micro"    3  steel )
+	("volume_component" args "RightFoot" 			"limbs_micro"    3  steel )
+	("volume_component" args "RightLeg" 			"limbs_micro"    3  steel )
+	("volume_component" args "RightUpLeg" 			"limbs_micro"    3  steel )
+	("volume_component" args "RightShoulder" 		"limbs_micro"    3  steel )
+	("volume_component" args "RightForeArm" 		"limbs_micro"    3  steel )
+	("volume_component" args "RightHand" 			"limbs_micro"    3  steel )
+	("volume_component" args "LeftToeBase" 			"limbs_micro"    3  steel )
+	("volume_component" args "LeftFoot" 			"limbs_micro"    3  steel )
+	("volume_component" args "LeftLeg" 				"limbs_micro"    3  steel )
+	("volume_component" args "LeftUpLeg" 			"limbs_micro"    3  steel )
+	("volume_component" args "LeftShoulder" 		"limbs_micro"    3  steel )
+	("volume_component" args "LeftForeArm" 			"limbs_micro"    3  steel )
+	("volume_component" args "LeftHand" 			"limbs_micro"    3  steel )
+
+
+
+
+	{sensor
+		{Visor "eyes"
+			{vision "pets"}
+			{bone "eyes"}
+		}
+	}
+
+	{extender "inventory" ; создать лут
+		{box
+			{Size 4 4}
+			{Weight 100}
+			{item "ammo jump"	1}
+			{item "ammo visor"	1}
+		}
+	}
+	{Weaponry
+		{place "mgun"
+			{weapon 	"pets_jump" filled}
+			{foresight "alarm_signal"}
+			{basic}
+			{rotate}
+		}
+		{place "alarm_signal"    ;mgun_alarm
+			{weapon 	"alarm_update_7m" filled}
+			{foresight 	"alarm_signal"}
+			{basic}
+			{rotate}
+		}
+	}
+	; {placer
+		; {place "link_front"
+			; {entity "melee_detect_front_pest"}
+			; {Linkbone "basis"}
+			; {obstacle disable}
+		; }
+		; {crew 0}
+	; }
+	{mass 50}
+	("movement" 
+		slow(0) 
+		normal(6)
+		fast(8)
+		maxspeed(8)
+		maxspeed_atmaxturn(1)
+		turnstart(5)
+		turnstop(1)
+		turnradius(5)
+		turntime(0.2)
+		starttime(1)
+		stoptime(0.6)
+		braketime(0.6)
+		fuelbag_vol(2)
+		rate(0.1)
+		remain(2)
+		fuel(tritium)
+	)	
+	{Extension "pest_01.mdl"}
+}
+
+
+
+
+
+
+
+
+
+
+

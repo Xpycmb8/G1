@@ -1,0 +1,82 @@
+;Exported by: Xpycmb
+;Date:        Thu Apr 27 20:07:38 2023
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\270_soft.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "handle"
+			{Position 0	0.591408	0}
+		}
+		{bone "body"
+			{Orientation
+				0	1	0
+				-1	0	0
+				0	0	1
+			}
+			{VolumeView "body.ply"}
+		}
+	}
+}
+{Volume "body"
+	{Cylinder 0.0932723 1.31558}
+	{Bone "body"}
+	{Matrix34
+		1.1	0	0
+		0	0	1.1
+		0	-1.1	0
+		0	-0.10286	0
+	}
+}
+{Volume "select"
+	{Box 2.5 2.5 2.5}
+	{Bone "basis"}
+}
+{Extender "preview"
+	{"Stuff"
+		{camera
+			{origin -0.0420499	1.53361	0.614259}
+			{lookat 1.7971	-27.0087	-10.7067}
+			{fov 45}
+			{horizon 0.540679}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position -21.494	-39.7866	-19.2067}
+			}
+			{"1"
+				{type directional}
+				{direction 0.0121405	-0.497136	-0.0520464}
+			}
+			{"2"
+				{type point}
+				{position 6.16795	-49.2304	-2.70983}
+			}
+		}
+	}
+	{"Stuff_primary"
+		{camera
+			{origin -0.653168	1.56637	0.130116}
+			{lookat 10.5376	-28.2341	-3.05345}
+			{fov 45}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position -16.9766	-52.9052	-5.41741}
+			}
+			{"1"
+				{type directional}
+				{direction 0.197057	-0.451613	0.0849368}
+			}
+			{"2"
+				{type point}
+				{position 14.7495	-46.6137	3.54841}
+			}
+		}
+	}
+}

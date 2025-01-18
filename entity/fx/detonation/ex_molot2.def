@@ -1,0 +1,136 @@
+{fx
+	{sound "detonation/hit_bottle"}
+	{particleview "smoke delay"
+		{delay 3}
+		{generator
+			{totalparticles 25}
+			{emissionarea
+				{radius 12.5 12.5}
+				{alpha0 0}
+				{alpha1 10}
+			}
+			{particleinit
+				{speed 0.25 0.25}
+				{lifetime 3.5 0.5}
+			}
+			{timetolive 6}
+			{particlesinblock 1}
+			{axisz}
+		}
+		{mover
+			{damping 0.97}
+			{gravity
+				{value -0.01}
+			}
+		}
+		{visualizer
+			{stage 
+				{#+ sprite "$/additional/smoke_round2"
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{preturn 0 180}
+					{turn 1
+						{linear
+							{min 0}
+							{max 0 50}
+						}
+					}
+					{scale 1
+						{linear
+							{min 0.2}
+							{max 0.35 0.05}
+						}
+					}
+					{visibility 1
+						{peak
+							{min 0}
+							{max 0.6 0.1}
+						}
+					}
+					{highlight 0xff919191}
+				}
+				{#+ sprite "$/additional/smoke_fast"
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{preturn 0 180}
+					{turn 1
+						{linear
+							{min 0}
+							{max 0 50}
+						}
+					}
+					{scale 1
+						{linear
+							{min 0.2}
+							{max 0.5 0.1}
+						}
+					}
+					{visibility 1
+						{peak
+							{min 0}
+							{max 0.65 0.15}
+						}
+					}
+					{highlight 0xff575757}
+				}
+				{#+ sprite "$/additional/smoke_light4"
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{preturn 0 180}
+					{turn 1
+						{linear
+							{min 0}
+							{max 0 50}
+						}
+					}
+					{scale 1
+						{linear
+							{min 0.2}
+							{max 0.375 0.075}
+						}
+					}
+					{visibility 1
+						{peak
+							{min 0}
+							{max 0.65 0.15}
+						}
+					}
+					{highlight 0xff6c6c6c}
+				}
+				{#+ sprite "$/additional/smoke_clouds"
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{preturn 0 180}
+					{turn 1
+						{linear
+							{min 0}
+							{max 0 50}
+						}
+					}
+					{scale 1
+						{linear
+							{min 0.2}
+							{max 0.5 0.1}
+						}
+					}
+					{visibility 1
+						{peak
+							{min 0}
+							{max 0.6 0.1}
+						}
+					}
+					{highlight 0xff919191}
+				}
+			}
+		}
+		{offset 0 0 15}
+	}
+}

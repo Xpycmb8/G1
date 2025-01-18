@@ -1,0 +1,24 @@
+;Exported by: Xpycmb
+;Date:        Fri Apr 14 17:16:41 2023
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\harvester.max
+{Skeleton
+	{bone "composite_broken_06"
+		{parameters "ID=Body;"}
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{VolumeView "composite_broken_06.ply"}
+	}
+}
+{Volume "body"
+	{Box 1.34069 3.18217 2.64338}
+	{Bone "composite_broken_06"}
+	{Matrix34
+		-0.707107	0	-0.707107
+		0	1	0
+		0.707107	0	-0.707107
+		0.0763463	-0.198059	0.00686365
+	}
+}

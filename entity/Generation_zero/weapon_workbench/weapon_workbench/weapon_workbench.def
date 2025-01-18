@@ -1,0 +1,30 @@
+{game_entity
+	(include "/properties/construction_small.ext")
+	{props "steel" "inventory_box" "weapon_workbench"}
+	{mass 0}
+	{extender "inventory" 
+		{box
+			{clear}
+			{Size 9 2}
+			{Weight 100}
+		}
+	}
+	; {placer
+		; {place "inventory"
+			; {entity "weapon_workbench_inv"}
+			; {Linkbone "WorkbenchWeapons"}
+		; }
+	; }	
+	{Volume "ready"
+		{able {touch} {obstacle 0}}
+	}
+	{Volume "body"
+		{material "steel"}
+		{thickness 8}
+	}
+	{Volume "body2"
+		{material "steel"}
+		{thickness 5}
+	}
+	{Extension "weapon_workbench.mdl"}
+}

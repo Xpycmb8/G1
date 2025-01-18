@@ -1,0 +1,251 @@
+{fx
+	{#+ lightview
+		{type point}
+		{animator
+			{highlight 0xff00fffa}
+			{timer
+				{duration 1}
+			}
+			{scale 1
+				{linear
+					{min 1}
+					{max 0.7}
+				}
+			}
+			{visibility 1
+				{linear
+					{min 0.8 0.2}
+					{max 0.8 0.2}
+				}
+			}
+		}
+		{radius 7}
+		{radiusfalloff 1}
+		{effectonground}
+		{intensity 1}
+		{pulseperiod 0.02}
+	}
+	{#+ spriteview tail_low
+		{sprite "$/additional/light1"
+			{light 1
+				{linear
+					{min 0.07}
+					{max 0.04}
+				}
+			}
+			{scalex 1
+				{linear
+					{min 0.1}
+					{max 0.1}
+				}
+			}
+			{scaley 1
+				{linear
+					{min 0.04}
+					{max 0.1}
+				}
+			}
+			{timer
+				{duration 0.1}
+				{mode play loop }
+			}
+			{## preturn 90}
+			{highlight 0xff0083ff}
+		}
+		{orientation trace}
+	}
+	{#+ spriteview halo1
+		{sprite "$/additional/lightflareburst"
+			{timer
+				{mode play loop }
+				{duration 0.01}
+			}
+			{## preturn 0 180}
+			{scale 1
+				{##+ peak
+					{min 0.005}
+					{max 0.006}
+				}
+				{linear
+					{min 0.0045}
+					{max 0.006}
+				}
+			}
+			{light 1}
+			{highlight 0xff94e5ff}
+			{visibility 1
+				{## linear
+					{min 0.1}
+					{max 0.2}
+				}
+				{peak
+					{min 0}
+					{max 1}
+				}
+			}
+			{turn 1
+				{peak
+					{min 0}
+					{max 360}
+				}
+			}
+		}
+		{## halo}
+		{notifyowner}
+		{autovisible}
+	}
+	{#+ spriteview flash
+		{sprite "$/explosion/flame_blue_144"
+			{## light 1
+				{linear
+					{min 1}
+					{max 0}
+				}
+			}
+			{scalex 1
+				{linear
+					{min 0.02}
+					{max 0.02}
+				}
+			}
+			{scaley 1
+				{linear
+					{min 0.02}
+					{max 0.02}
+				}
+			}
+			{timer
+				{duration 0.01}
+				{mode play loop pingpong }
+			}
+			{## preshiftx 1}
+			{preturn 90}
+			{## redlight 1}
+			{highlight 0xff0c00fe}
+		}
+		{orientation trace}
+		{autovisible}
+	}
+	{#+ particleview smoke
+		{generator
+			{totalparticles 5}
+			{emissionarea
+				{radius 0}
+				{alpha0 0}
+				{alpha1 2.5 2.5}
+				{speed 3}
+			}
+			{particleinit
+				{speed 3 1}
+				{lifetime 0.55 0.25}
+			}
+			{## axisz}
+			{## particlesinblock 5}
+		}
+		{mover
+			{damping 0.92}
+			{gravity
+				{value -0.0003}
+			}
+			{collisions
+				{terrain}
+				{restitution 0.1}
+			}
+		}
+		{visualizer
+			{stage 
+				{sprite "$/additional/smoke_light1_small"
+					{## turn 1
+						{linear
+							{min 0}
+							{max 0 30}
+						}
+					}
+					{scale 1
+						{linear
+							{min 0.05}
+							{max 0.2}
+						}
+					}
+					{visibility 1
+						{## peak
+							{min 0.2}
+							{max 0}
+						}
+						{linear
+							{min 0.1}
+							{max 0}
+						}
+					}
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{preturn 0 180}
+					{## highlight 0xff5a5a5a}
+				}
+				{sprite "$/additional/smoke_light2_small"
+					{## turn 1
+						{linear
+							{min 0}
+							{max 0 30}
+						}
+					}
+					{scale 1
+						{linear
+							{min 0.05}
+							{max 0.2}
+						}
+					}
+					{visibility 1
+						{## peak
+							{min 0.2}
+							{max 0}
+						}
+						{linear
+							{min 0.1}
+							{max 0}
+						}
+					}
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{preturn 0 180}
+					{## highlight 0xff5a5a5a}
+				}
+			}
+		}
+		{notifyowner}
+	}
+	{#+ spriteview flash
+		{sprite "$/explosion/flame_blue_64"
+			{##+ light 1
+				{linear
+					{min 1}
+					{max 0}
+				}
+			}
+			{scalex 1
+				{linear
+					{min 0.03}
+					{max 0.03}
+				}
+			}
+			{scaley 1
+				{linear
+					{min 0.02}
+					{max 0.02}
+				}
+			}
+			{timer
+				{duration 0.01}
+				{mode play loop pingpong }
+			}
+			{## preshiftx 1}
+			{preturn 90}
+		}
+		{orientation trace}
+		{autovisible}
+	}
+}

@@ -1,0 +1,6 @@
+{game_entity
+	{props "fxt_veterancy"}
+	{Volume "ems"
+	}
+	{Extension "fxt_veterancy.mdl"}
+}

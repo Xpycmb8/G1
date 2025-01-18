@@ -1,0 +1,27 @@
+{game_entity
+	{Extension "m47_mine_ammo.mdl"}
+	{props "mine_cluster"} 
+	{simulation {able 1} {state 1}}
+	{constrain ground}
+	{obstacleID "nothing"}
+	{collider "bush"}
+	{NoGroupMesh 1}
+	{NoVisibilityPatch 0}
+	{extender "stuff"
+		{item "ammo m47"}
+	}
+	{volume defaultmaterial "steel"}
+	{Volume "body"
+		{tags "body" }
+		{thickness 1}
+	}
+	{volume "mine"
+		{Able {contact 0} {bullet 0} {throwing 0} {obstacle 0} {touch 0} {overlap 1}}
+		{material "dummy"}
+	}
+	{body
+		{proper body}
+		{permit body}
+	}
+}
+

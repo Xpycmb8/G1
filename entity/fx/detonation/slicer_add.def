@@ -1,0 +1,36 @@
+{fx
+	{particleview pieces
+		{entitygenerator
+			{totalparticles 10}
+			{emissionarea
+				{radius 0.4}
+				{alpha0 90 90}
+				{alpha1 90 90}
+			}
+			{particleinit
+				{speed 45 35}
+				{lifetime 0.4}
+			}
+			{entity "#slicer"
+				{fx "smoke_smg"}
+			}
+		}
+	}
+	{particleview pieces2
+		{entitygenerator
+			{totalparticles 10}
+			{emissionarea
+				{radius 1}
+				{alpha0 90 90}
+				{alpha1 90 90}
+			}
+			{particleinit
+				{speed 45 35}
+				{lifetime 0.4}
+			}
+			{entity "#slicer"
+				{fx "smoke_smg"}
+			}
+		}
+	}
+}

@@ -1,0 +1,13 @@
+;Exported by: Xpycmb
+;Date:        Mon Apr 10 03:33:46 2023
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\barn_01_door_right_02.max
+{Skeleton
+	{bone "barn_01_door_hinge_right_01"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{VolumeView "barn_01_door_hinge_right_01.ply"}
+	}
+}

@@ -1,0 +1,12 @@
+{game_entity
+	(include "/properties/stuff_small.ext")
+	{props "bullet" "stuff" }
+	{collider "ammo"}
+	{Extension "casing_bullet7x64.mdl"}
+	{extender "stuff"
+		{item "7x64_casing item"}
+	}
+	{Volume "body"
+		{thickness 0.1}
+	}
+}

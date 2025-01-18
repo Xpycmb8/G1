@@ -1,0 +1,34 @@
+;Exported by: Xpycmb
+;Date:        Sun Dec 26 14:12:45 2021
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\fxt_veterancy.max
+{Skeleton
+	{animation
+		{sequence "fx" 
+			{events 
+				{1 "start_fx"}
+				{9 "end"}
+			}		
+			{speed 0.5} 
+			{autostart}
+		}
+	}
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "fxt_ems"
+			{Position 0	0	0}
+		}
+		{bone "ring"
+			{parameters "CommonMesh;"}
+			{Position 0	0	0}
+			{VolumeView "ring.ply"}
+		}
+	}
+}
+{Volume "ems"
+	{Polyhedron "ems.vol"}
+	{Bone "fxt_ems"}
+}

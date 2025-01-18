@@ -1,0 +1,14 @@
+{game_entity
+	(include "/properties/physics_steel.ext")
+	{props "steel" "metal_weight" "spawner_egg" "egg_01"}
+	{mass 25}
+	{Extension "pest_egg_class_d.mdl"}
+	{Volume "body"
+		{Tags  "body"}
+		{Thickness 4}
+	}
+	{Volume "part"
+		{Tags  "body"}
+		{Thickness 4}
+	}
+}

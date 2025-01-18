@@ -1,0 +1,17 @@
+{game_entity
+	(include "/properties/construction_small.ext")
+	{props "steel" "inventory_box" }
+	{mass 0}
+	{extender "inventory" 
+		{box
+			{Size 4 2}
+			{Weight 100}
+		}
+	}
+	{Extension "weapon_workbench_inv.mdl"}
+	{Volume "body"
+		{able {touch} {obstacle 0}}
+		{material "steel"}
+		{thickness 8}
+	}
+}

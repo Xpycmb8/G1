@@ -1,0 +1,16 @@
+;Exported by: Xpycmb
+;Date:        Sat Jan  7 18:01:00 2023
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\building_soviet_barrier_01_cover_vis.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "sandbags"
+			{parameters "ID=Body;"}
+			{VolumeView "sandbags.ply"}
+		}
+	}
+}

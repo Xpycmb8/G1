@@ -1,0 +1,22 @@
+{fx
+	{particleview pieces
+		{entitygenerator
+			{totalparticles 6}
+			{emissionarea
+				{radius 4 -2}
+				{alpha0 35 -25}
+				{alpha1 0}
+			}
+			{particleinit
+				{speed 8.5 -3.5}
+				{lifetime 1}
+			}
+			{entity "fx_dust"
+				{spinx 5}
+			}
+			{axisz}
+			{timetolive 0.1}
+		}
+		{offset 0 0 7}
+	}
+}

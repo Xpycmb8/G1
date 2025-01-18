@@ -1,0 +1,16 @@
+{Entity
+	(include "/properties/dead_prop_skir.grn")
+	{Extension "hips_component.mdl"}
+	{extender "stuff"
+		{item "hips_component"}
+	}
+	{Volume "armor_main_15_02"
+		{thickness 1}
+	}
+	{Volume "armor_main_15_03"
+		{thickness 1}
+	}
+	{Volume "hips"
+		{thickness 1}
+	}
+}

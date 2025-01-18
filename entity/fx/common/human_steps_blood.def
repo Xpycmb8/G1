@@ -1,0 +1,23 @@
+{fx
+	{spriteview start
+		{sprite "$/particle/biood3_10"
+			{visibility 1
+				{linear
+					{min 0.5}
+					{max 0}
+				}
+			}
+			{timer
+				{duration 10}
+			}
+			{## scale 0.09}
+			{preturn 0 2}
+			{scalex 0.5}
+			{scaley 0.5}
+			{## highlight 0xffaf0e00}
+		}
+		{usedirection}
+		{ground}
+		{layer grounddynamic}
+	}
+}

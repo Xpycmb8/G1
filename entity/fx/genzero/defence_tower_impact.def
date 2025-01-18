@@ -1,0 +1,164 @@
+{fx
+	{#+ particleview dust_trace
+		{generator
+			{totalparticles 15}
+			{particlesinblock 15}
+			{emissionarea
+				{radius 0}
+				{alpha0 6}
+				{alpha1 22.5 22.5}
+			}
+			{particleinit
+				{speed 7.5 2.5}
+				{lifetime 0.2}
+			}
+			{timetolive 0.2}
+			{## axisz}
+		}
+		{mover
+			{damping 0.93}
+		}
+		{visualizer
+			{stage 
+				{sprite "$/additional/smoke_light1"
+					{turn 1
+						{linear
+							{min 0}
+							{max 0 5}
+						}
+					}
+					{visibility 1
+						{linear
+							{min 0.1}
+							{max 0}
+						}
+					}
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{preturn 0 180}
+					{## highlight 0xffffffff}
+					{scalex 0.2}
+					{scaley 0.25
+						{power
+							{min 0}
+							{max 0.1}
+							{pow 1}
+						}
+					}
+				}
+				{flags trace }
+				{##+ sprite "$/additional/smoke_light1"
+					{turn 1
+						{linear
+							{min 0}
+							{max 0 20}
+						}
+					}
+					{visibility 1
+						{linear
+							{min 1}
+							{max 0}
+						}
+					}
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{preturn 0 180}
+					{highlight 0xffa8a8a8}
+					{scalex 0.3}
+					{scaley 1
+						{power
+							{min 0}
+							{max 0.3}
+							{pow 0.6}
+						}
+					}
+				}
+			}
+		}
+	}
+	{#+ particleview "smoke up"
+		{generator
+			{totalparticles 25}
+			{emissionarea
+				{radius 0}
+				{alpha0 0}
+				{alpha1 12.5 12.5}
+			}
+			{particleinit
+				{speed 6 2}
+				{lifetime 0.15 -0.05}
+			}
+			{## axisz}
+			{timetolive 0.01}
+		}
+		{## offset 0 0 -8}
+		{mover
+			{damping 0.85}
+			{gravity
+				{value -0.02}
+			}
+		}
+		{visualizer
+			{stage 
+				{sprite "$/additional/smoke_light2_small"
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{preturn 0 20}
+					{turn 1
+						{linear
+							{min 0}
+							{max 0 50}
+						}
+					}
+					{scale 1
+						{linear
+							{min 0.085 0.015}
+							{max 0.3 0.1}
+						}
+					}
+					{visibility 1
+						{linear
+							{min 0.1}
+							{max 0}
+						}
+					}
+					{## highlight 0xffa9a9a9}
+				}
+				{##+ sprite "$/smoke/smoke_s01"
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{preturn 0 20}
+					{turn 1
+						{linear
+							{min 0}
+							{max 0 20}
+						}
+					}
+					{scale 1
+						{linear
+							{min 0.085 0.015}
+							{max 0.3 0.1}
+						}
+					}
+					{visibility 1
+						{linear
+							{min 0.3}
+							{max 0}
+						}
+					}
+				}
+			}
+		}
+		{autopause}
+	}
+	{sound "generation_zero/characters/dreadnought/concussion/blast"}
+	{sound "generation_zero/characters/dreadnought/concussion/blast_rev"}
+}

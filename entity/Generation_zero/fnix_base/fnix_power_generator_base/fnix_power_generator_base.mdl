@@ -1,0 +1,65 @@
+;Exported by: Xpycmb
+;Date:        Tue Sep 13 18:30:33 2022
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\fnix_power_generator_base.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "turret"
+			{parameters "ID=Body;"}
+			{Position 0	0	-15.4489}
+			{VolumeView "turret.ply"}
+			{bone "roof"
+				{parameters "ID=Body;"}
+				{VolumeView "roof.ply"}
+				{bone "roof2"
+					{parameters "ID=Body;"}
+					{VolumeView "roof2.ply"}
+				}
+			}
+			{bone "generator"
+				{parameters "ID=Body;"}
+				{Position 0	0	41.227}
+				{VolumeView "generator.ply"}
+			}
+		}
+		{bone "base"
+			{parameters "ID=Body;"}
+			{VolumeView "base.ply"}
+			{bone "land_patch"
+				{parameters "CommonMesh;Land;Ground;"}
+				{Position -0.332235	-0.544888	0}
+				{visibility 0}
+				{VolumeView "land_patch.ply" {Ground}}
+			}
+		}
+	}
+}
+{Volume "armor_main_10_00"
+	{Polyhedron "armor_main_10_00.vol"}
+	{Bone "turret"}
+	{Position -14.212	-3.15186	32.0105}
+}
+{Volume "armor_main_10_01"
+	{Polyhedron "armor_main_10_01.vol"}
+	{Bone "turret"}
+	{Position 13.4096	-3.15186	32.0105}
+}
+{Volume "armor_main_15_00"
+	{Box 32.5157 40.6088 5.15422}
+	{Bone "roof"}
+	{Position 0	0	92.0202}
+}
+{Volume "armor_main_50_00"
+	{Cylinder 13.826 82.328}
+	{Bone "turret"}
+	{Matrix34
+		0.939693	0.34202	0
+		-0.34202	0.939693	0
+		0	0	1
+		0	0	10.5297
+	}
+}

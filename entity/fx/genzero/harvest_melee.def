@@ -1,0 +1,304 @@
+{fx
+	{#+ particleview fuzzy_centernew
+		{generator
+			{emissionarea
+				{radius 0.2}
+				{alpha0 0}
+				{alpha1 15 15}
+			}
+			{particleinit
+				{speed 1 1}
+				{lifetime 0.3}
+			}
+			{timetolive 0.01}
+			{totalparticles 12}
+			{particlesinblock 12}
+			{axisz}
+		}
+		{mover
+			{damping 0.92}
+			{## gravity
+				{value 0.1}
+			}
+			{nodependonwind}
+		}
+		{visualizer
+			{stage 
+				{flags trace }
+				{sprite "$/explosion/bum_new"
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{visibility 1
+						{npower
+							{min 0.7}
+							{max 0}
+							{pow 1}
+						}
+						{##+ linear
+							{min 1}
+							{max 0}
+						}
+					}
+					{##+ scale 1
+						{npower
+							{min 0.45 0.15}
+							{max 0.8 0.2}
+							{pow 0.5}
+						}
+					}
+					{preturn 90}
+					{## highlight 0xff9d9d9d}
+					{scalex 1
+						{npower
+							{min 0.01}
+							{max 0.1}
+							{pow 1}
+						}
+					}
+					{scaley 1
+						{npower
+							{min 0.01}
+							{max 0.1}
+							{pow 1}
+						}
+					}
+				}
+				{sprite "$/explosion/bum_one"
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{visibility 1
+						{npower
+							{min 0.7}
+							{max 0}
+							{pow 1}
+						}
+						{##+ linear
+							{min 1}
+							{max 0}
+						}
+					}
+					{##+ scale 1
+						{npower
+							{min 0.45 0.15}
+							{max 0.8 0.2}
+							{pow 0.5}
+						}
+					}
+					{preturn 90}
+					{## highlight 0xff9d9d9d}
+					{scalex 1
+						{npower
+							{min 0.01}
+							{max 0.1}
+							{pow 1}
+						}
+					}
+					{scaley 1
+						{npower
+							{min 0.01}
+							{max 0.1}
+							{pow 1}
+						}
+					}
+				}
+			}
+		}
+		{notifyowner}
+	}
+	{particleview "smoke ground1"
+		{## delay 0.15}
+		{generator
+			{totalparticles 20}
+			{particlesinblock 20}
+			{emissionarea
+				{radius 2}
+				{alpha0 30}
+				{alpha1 90}
+			}
+			{particleinit
+				{speed 3 1}
+				{lifetime 2.5}
+			}
+			{axisz}
+			{timetolive 0.1}
+		}
+		{offset 0 0 2}
+		{mover
+			{gravity
+				{value 0}
+			}
+			{damping 0.94}
+			{nodependonwind}
+		}
+		{visualizer
+			{stage 
+				{#+ sprite "$/additional/smoke_light6"
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{preturn 0 20}
+					{turn 1
+						{linear
+							{min 0}
+							{max 0 60}
+						}
+					}
+					{scale 1
+						{linear
+							{min 0.1}
+							{max 0.2}
+						}
+					}
+					{visibility 1
+						{peak
+							{min 0}
+							{max 1}
+						}
+					}
+					{highlight 0xffa8a589}
+				}
+				{#+ sprite "$/additional/smoke_light3"
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{preturn 0 20}
+					{turn 1
+						{linear
+							{min 0}
+							{max 0 60}
+						}
+					}
+					{scale 1
+						{linear
+							{min 0.1}
+							{max 0.2}
+						}
+					}
+					{visibility 1
+						{peak
+							{min 0}
+							{max 1}
+						}
+					}
+					{highlight 0xffa8a589}
+				}
+			}
+		}
+	}
+	{#+ particleview fuzzy_30_60new
+		{generator
+			{emissionarea
+				{radius 3}
+				{alpha0 0}
+				{alpha1 30 30}
+			}
+			{particleinit
+				{speed 3 1}
+				{lifetime 0.1}
+			}
+			{timetolive 0.1}
+			{totalparticles 10}
+			{particlesinblock 10}
+			{axisz}
+		}
+		{##+ mover
+			{damping 0.92}
+			{## gravity
+				{value 0.1}
+			}
+			{nodependonwind}
+		}
+		{visualizer
+			{stage 
+				{flags trace }
+				{#+ sprite "$/explosion/bum_one"
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{visibility 1
+						{npower
+							{min 1}
+							{max 0}
+							{pow 1}
+						}
+					}
+					{preturn 90 5}
+					{highlight 0xff7b7b7b}
+					{scalex 1
+						{npower
+							{min 0.01}
+							{max 0.1}
+							{pow 0.45}
+						}
+					}
+					{scaley 1
+						{npower
+							{min 0.01}
+							{max 0.1}
+							{pow 0.45}
+						}
+					}
+				}
+				{##+ sprite "$/additional/smoke_debris1"
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{visibility 1
+						{## npower
+							{min 1}
+							{max 0}
+							{pow 1}
+						}
+						{linear
+							{min 1}
+							{max 0}
+						}
+						{## power
+							{min 1}
+							{max 0}
+							{pow 1}
+						}
+						{## peak
+							{min 0}
+							{max 1}
+						}
+					}
+					{## scale 1
+						{npower
+							{min 0.9 0.1}
+							{max 1.35 0.15}
+							{pow 0.5}
+						}
+					}
+					{preturn 90 5}
+					{highlight 0xff5b5b5b}
+					{scalex 1
+						{npower
+							{min 0.2}
+							{max 0.55 0.25}
+							{pow 0.35}
+						}
+					}
+					{scaley 1
+						{npower
+							{min 0.1}
+							{max 0.75 0.15}
+							{pow 0.5}
+						}
+					}
+				}
+			}
+		}
+		{notifyowner}
+	}
+	{sound "generation_zero/characters/harvest/attack_legs/stomp"}
+	{sound "generation_zero/characters/bass_drop"}
+}

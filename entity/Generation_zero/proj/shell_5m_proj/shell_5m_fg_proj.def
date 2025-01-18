@@ -1,0 +1,12 @@
+{actor
+	(include "/properties/projectile_impactor.ext")
+	{extension "shell_5m_fg_proj.mdl"}
+	{props "missile_autoguidance_all" "shell_5m_fg"}
+	{extender "stuff"
+		{item "shell_5m_fg"}
+	}
+	{volume "body"
+		{able {contact} {bullet} {blast} {contact_ground}}
+	}
+	{targetClass 	"human"}
+}

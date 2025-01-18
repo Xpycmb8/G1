@@ -1,0 +1,53 @@
+;Exported by: Xpycmb
+;Date:        Sun Mar 31 12:51:30 2024
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\autoback\skirmisher_base_ags_recover.max
+{Skeleton
+	{animation
+		{sequence "tail" {autostart}}
+	}
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "tail"
+			{Matrix34
+				-1	0	0
+				0	-1	0
+				0	0	1
+				-0.223336	0	0
+			}
+		}
+		{bone "bullet"
+			{parameters "ID=ammo;"}
+			{Matrix34
+				0.0148153	0.999787	0.0143547
+				0.999886	-0.0148562	0.00274498
+				-0.00295775	-0.0143124	0.999893
+				0	0	0
+			}
+			{VolumeView "bullet.ply"}
+			{bone "gas"
+				{parameters "CommonMesh;ID=ammo;"}
+				{Matrix34
+					0.999787	-0.0148557	-0.0143119
+					-0.0143542	-0.00274515	-0.999893
+					-0.0148149	-0.999886	0.00295785
+					0.00167513	0.113009	-0.000334273
+				}
+				{VolumeView "gas.ply"}
+			}
+		}
+	}
+}
+{Volume "body"
+	{Cylinder 0.181903 0.701512}
+	{Bone "bullet"}
+	{Matrix34
+		0.999787	-0.0148567	-0.0143119
+		-0.0143542	-0.00274518	-0.999893
+		-0.0148158	-0.999886	0.00295781
+		-0.000418573	-0.0282367	8.57017e-05
+	}
+}

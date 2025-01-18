@@ -1,0 +1,46 @@
+{game_entity
+	{Skeleton
+		{bone "basis"
+			{Orientation
+				1	0	0
+				0	-1	0
+				0	0	1
+			}
+			{bone "spawn"
+				{Position 2.18435	0.0149734	104.413}
+			}
+			{bone "attack_melee_l_stamp_bwd"
+				{Matrix34
+					-0.328116	0.944637	0
+					-0.944637	-0.328116	0
+					0	0	1
+					-86.7754	56.0461	-0.352488
+				}
+			}
+		}
+	}
+	{volume "attack_melee_l_stamp_bwd"
+		{Position 0	0	15}
+		{Box 60 60 30} ;длина растояние высота
+		{tags "no_burn"}
+		{able
+			{window}
+			{contact 0} {contact_ground 0}
+			{bullet 0} {throwing 0} {obstacle 0}
+			{overlap 1} {visible 0}
+			{touch 0}
+		}
+		{density 0}
+		{bone "attack_melee_l_stamp_bwd"}
+		{material "dummy"}
+	}
+	{simulation {able 1}}
+	{body {permit body}}
+	{collider "bush"}
+	{obstacleid "nothing"}
+	{mass 0.1}
+	{volume defaultmaterial "wood"}
+	{lodclass "decor_small"}
+	{NoGroupMesh 1}
+	{props "attack_melee_l_stamp_bwd_place" } 
+}

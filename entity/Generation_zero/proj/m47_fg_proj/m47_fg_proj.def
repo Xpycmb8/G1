@@ -1,0 +1,4 @@
+{game_entity
+	{props "bullet"}
+	{Extension "m47_fg_proj.mdl"}
+}

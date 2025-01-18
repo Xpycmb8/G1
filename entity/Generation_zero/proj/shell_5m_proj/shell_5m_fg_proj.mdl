@@ -1,0 +1,57 @@
+;Exported by: Xpycmb
+;Date:        Mon Nov 14 23:04:16 2022
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\shell_5m_fg_proj.max
+{Skeleton
+	{animation
+		{sequence "tail"
+			{speed 3}
+			{events 
+				{1 "start_5m_fg"}
+			}		
+			{autostart}
+		}
+	}
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "rocket"
+			{parameters "ID=Gun;"}
+			{Matrix34
+				1	0	0
+				0	1	0
+				0	0	1
+				0	0	0
+			}
+			{VolumeView "rocket.ply"}
+		}
+		{bone "fx"
+			{Matrix34
+				-1	0	0
+				0	-1	0
+				0	0	1
+				-1.30949	0.0240871	0
+			}
+		}
+		{bone "tail"
+			{Matrix34
+				-1	0	0
+				0	-1	0
+				0	0	1
+				-1.43449	0.0484573	0
+			}
+		}
+	}
+}
+{Volume "body"
+	{Cylinder 0.6 3}
+	{Bone "rocket"}
+	{Matrix34
+		0	1	0
+		0	0	-1
+		-1	0	0
+		0.0271115	0	0
+	}
+}

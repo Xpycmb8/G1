@@ -1,0 +1,185 @@
+{fx
+	{#+ particleview sparkles
+		{generator
+			{totalparticles 15}
+			{particlesinblock 15}
+			{emissionarea
+				{radius 0}
+				{alpha0 10 10}
+				{alpha1 2.5 7.5}
+				{speed 0.001}
+			}
+			{particleinit
+				{speed 15 5}
+				{lifetime 0.125 -0.075}
+			}
+			{timetolive 0.055 0.045}
+		}
+		{mover
+			{damping 0.85}
+			{gravity
+				{value 0.1}
+			}
+		}
+		{visualizer
+			{stage 
+				{sprite "$/particle/oskolki2"
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{scalex 10
+						{power
+							{min 0.125 0.025}
+							{max 0.125 0.025}
+							{pow 1}
+						}
+					}
+					{scaley 0.03}
+					{## preturn 90}
+					{highlight 0xffff8465}
+				}
+				{#+ sprite "$/additional/sparks_tiles_n04"
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{scalex 10
+						{power
+							{min 0.125 0.025}
+							{max 0.01}
+							{pow 1}
+						}
+					}
+					{scaley 0.0015 0.0005}
+					{preturn 90}
+					{## highlight 0xffff8465}
+				}
+				{flags trace }
+			}
+		}
+		{notifyowner}
+	}
+	{##+ particleview sparkles_round
+		{generator
+			{totalparticles 1}
+			{particlesinblock 1}
+			{emissionarea
+				{radius 0}
+				{alpha0 10 10}
+				{alpha1 -8}
+				{speed 0.001}
+			}
+			{particleinit
+				{speed 10 -5}
+				{lifetime 0.3 -0.1}
+			}
+			{## timetolive 0.055 0.045}
+		}
+		{#+ mover
+			{damping 0.85}
+			{gravity
+				{value 0.1}
+			}
+		}
+		{visualizer
+			{stage 
+				{## sprite "$/particle/oskolki2"
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{scalex 10
+						{power
+							{min 0.125 0.025}
+							{max 0.125 0.025}
+							{pow 1}
+						}
+					}
+					{scaley 0.03}
+					{## preturn 90}
+					{highlight 0xffff8465}
+				}
+				{#+ sprite "$/additional/sparks_tiles_n04"
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{scalex 10
+						{power
+							{min 0.125 0.025}
+							{max 0.01}
+							{pow 1}
+						}
+					}
+					{scaley 0.0015 0.0005}
+					{preturn 90}
+					{## highlight 0xffff8465}
+				}
+				{flags trace }
+			}
+		}
+		{notifyowner}
+	}
+	{particleview sparkles_fast
+		{generator
+			{totalparticles 15}
+			{particlesinblock 15}
+			{emissionarea
+				{radius 0}
+				{alpha0 10 10}
+				{alpha1 1 3}
+				{speed 0.001}
+			}
+			{particleinit
+				{speed 17.5 -7.5}
+				{lifetime 0.175 -0.125}
+			}
+			{timetolive 0.055 0.045}
+		}
+		{mover
+			{damping 0.93}
+			{gravity
+				{value 0.1}
+			}
+		}
+		{visualizer
+			{stage 
+				{sprite "$/particle/oskolki2"
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{scalex 10
+						{power
+							{min 0.125 0.025}
+							{max 0.125 0.025}
+							{pow 1}
+						}
+					}
+					{scaley 0.03}
+					{## preturn 90}
+					{highlight 0xffff8465}
+				}
+				{#+ sprite "$/additional/sparks_tiles_n04"
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{scalex 10
+						{power
+							{min 0.125 0.025}
+							{max 0.01}
+							{pow 1}
+						}
+					}
+					{scaley 0.0015 0.0005}
+					{preturn 90}
+					{## highlight 0xffff8465}
+				}
+				{flags trace }
+			}
+		}
+		{notifyowner}
+	}
+}

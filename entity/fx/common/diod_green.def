@@ -1,0 +1,18 @@
+{fx
+	{spriteview glow
+		{sprite "$/additional/glow2"
+			{light 1
+				{peak
+					{min 0.7}
+					{max 0.9}
+				}
+			}
+			{timer
+				{mode play loop }
+				{duration 2}
+			}
+			{scale 0.002}
+			{highlight 0xff9bff65}
+		}
+	}
+}

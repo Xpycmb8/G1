@@ -1,0 +1,117 @@
+{fx
+	{spriteview muz2
+		{sprite "$/additional/sparks/fx_sparksb8"
+			{#+ light 1
+				{## linear
+					{min 0}
+					{max 1}
+				}
+				{power
+					{min 0}
+					{max 1}
+					{pow 3}
+				}
+			}
+			{scalex 0
+				{npower
+					{min 0}
+					{max 0.07}
+					{pow 0.5}
+				}
+			}
+			{scaley 0
+				{npower
+					{min 0}
+					{max 0.07}
+					{pow 0.5}
+				}
+			}
+			{timer
+				{duration 0.05}
+				{mode play }
+			}
+		}
+		{orientation trace}
+		{autovisible}
+	}
+	{##+ lightview small
+		{type spot}
+		{animator
+			{timer
+				{duration 0.06 0.02}
+			}
+			{highlight 0xffa0a0a0}
+		}
+		{attenuation0 1}
+		{attenuation1 5}
+		{falloff 4}
+		{theta 1}
+		{phi 45}
+		{radius 320}
+		{priority 10}
+		{effectonground}
+	}
+	{##+ lightview
+		{type point}
+		{animator
+			{scale 1
+				{linear
+					{min 1}
+					{max 0.5}
+				}
+			}
+			{visibility 1
+				{linear
+					{min 1}
+					{max 0}
+				}
+			}
+			{highlight 0xffa0a0a0}
+			{timer
+				{duration 0.06 0.02}
+			}
+		}
+		{attenuation0 0.5}
+		{radius 40}
+		{effectonground}
+	}
+	{##+ spriteview halo1
+		{sprite "$/flash/halo02"
+			{timer
+				{mode play }
+				{duration 0.1}
+			}
+			{light 1
+				{linear
+					{min 0.75}
+					{max 0}
+				}
+			}
+			{scale 0.5}
+		}
+		{notifyowner}
+		{halo}
+		{autovisible}
+		{## offset 1 1 1}
+		{nightonly}
+	}
+	{##+ spriteview halo2
+		{sprite "$/flash/halo02"
+			{timer
+				{mode play }
+				{duration 0.1}
+			}
+			{light 1
+				{linear
+					{min 0.75}
+					{max 0}
+				}
+			}
+			{scale 0.4}
+		}
+		{notifyowner}
+		{halo}
+		{autovisible}
+		{## offset 1 1 1}
+	}
+}

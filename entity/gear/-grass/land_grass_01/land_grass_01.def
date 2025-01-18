@@ -1,0 +1,6 @@
+{game_entity
+	(include "/properties/tiny_grass.inc")
+	{Extension "land_grass_01.mdl"}
+	{NoGroupMesh 1} 
+ 	{props "wind_has_foliage"}
+}

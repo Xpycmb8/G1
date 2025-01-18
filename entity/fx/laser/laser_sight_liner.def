@@ -1,0 +1,100 @@
+{fx
+	{#+ spriteview glow
+		{sprite "$/additional/laser_glow_red"
+			{## preturn 0 180}
+			{light 1
+				{peak
+					{min 0.8}
+					{max 1}
+				}
+			}
+			{timer
+				{mode play loop }
+				{duration 2}
+			}
+			{scale 0.0035}
+			{highlight 0xffff6052}
+			{## scalex 0.009}
+			{## scaley 0.003}
+		}
+		{## halo}
+		{## offset 0 0 -0.5}
+	}
+	{#+ spriteview main
+		{sprite "$/additional/laser_sight"
+			{light 1
+				{peak
+					{min 0.2}
+					{max 0.3}
+				}
+			}
+			{timer
+				{mode play loop }
+				{duration 3}
+			}
+			{scalex 0.12}
+			{scaley 0.013}
+			{highlight 0xfff20013}
+		}
+		{orientation trace}
+		{##+ softintersection}
+	}
+	{#+ spriteview 1
+		{sprite "$/additional/laser_sight2"
+			{light 0.4
+				{##+ peak
+					{min 0.3}
+					{max 0.5}
+				}
+			}
+			{timer
+				{mode play loop }
+				{duration 0.05}
+			}
+			{scalex 0.05
+				{linear
+					{min 0.05}
+					{max 0.04}
+				}
+			}
+			{#+ scaley 0.013
+				{## peak
+					{min 0}
+					{max 0.03}
+				}
+			}
+			{highlight 0xffff5555}
+		}
+		{orientation trace}
+		{##+ softintersection}
+	}
+	{#+ spriteview 2
+		{sprite "$/additional/laser_sight2"
+			{light 0.4
+				{## peak
+					{min 0.3}
+					{max 0.7}
+				}
+			}
+			{timer
+				{mode play loop }
+				{duration 0.05}
+			}
+			{scalex 0.05
+				{linear
+					{min 0.01}
+					{max 0.04}
+				}
+			}
+			{scaley 0.012
+				{## peak
+					{min 0}
+					{max 0.03}
+				}
+			}
+			{highlight 0xffff5555}
+		}
+		{orientation trace}
+		{##+ softintersection}
+	}
+}

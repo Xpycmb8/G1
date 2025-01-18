@@ -1,0 +1,5 @@
+{game_entity
+	(include "/properties/small_part.inc")
+	{props "steel" "ps_dummy" "composite_blast_rus"}
+	{Extension "composite_destroy_rus.mdl"}
+}

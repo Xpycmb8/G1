@@ -1,0 +1,426 @@
+{fx
+	{#+ spriteview flash_add
+		{sprite "$/explosion/flame_blue_64"
+			{##+ light 1
+				{linear
+					{min 1}
+					{max 0}
+				}
+			}
+			{##+ visibility 1
+				{power
+					{min 0}
+					{max 1}
+					{pow 1}
+				}
+			}
+			{#+ scalex 1
+				{linear
+					{min 0.08}
+					{max 0.08}
+				}
+			}
+			{#+ scaley 1
+				{linear
+					{min 0.04}
+					{max 0.04}
+				}
+			}
+			{#+ timer
+				{duration 0.01}
+				{mode play loop pingpong }
+			}
+			{## preshiftx 1}
+			{preturn 90}
+			{bluelight 1
+				{power
+					{min 0.5}
+					{max 1.3}
+					{pow 1}
+				}
+			}
+		}
+		{orientation trace}
+		{autovisible}
+	}
+	{#+ spriteview flash
+		{#+ sprite "$/explosion/flame_blue_144"
+			{##+ light 1
+				{linear
+					{min 1}
+					{max 0}
+				}
+			}
+			{scalex 1
+				{linear
+					{min 0.04}
+					{max 0.04}
+				}
+			}
+			{scaley 1
+				{linear
+					{min 0.04}
+					{max 0.04}
+				}
+			}
+			{timer
+				{duration 0.01}
+				{mode play loop pingpong }
+			}
+			{## preshiftx 1}
+			{preturn 90}
+			{## bluelight 1
+				{power
+					{min 0}
+					{max 3}
+					{pow 1}
+				}
+			}
+		}
+		{orientation trace}
+		{autovisible}
+	}
+	{#+ particleview sparkles
+		{generator
+			{totalparticles 1}
+			{emissionarea
+				{radius 0.5 0.5}
+				{alpha0 3 3}
+				{alpha1 3 3}
+				{speed 0.1}
+			}
+			{particleinit
+				{speed 1.55 0.45}
+				{lifetime 0.125 0.025}
+			}
+			{## axisz}
+		}
+		{mover
+			{damping 0.98}
+			{gravity
+				{value 0.01}
+			}
+		}
+		{visualizer
+			{stage 
+				{sprite "$/particle/metal_drops3"
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{scale 1
+						{linear
+							{min 0.02}
+							{max 0.01}
+						}
+					}
+					{light 1}
+					{highlight 0xff0095a9}
+				}
+			}
+		}
+	}
+	{#+ lightview
+		{type point}
+		{animator
+			{highlight 0xff00f8ff}
+			{timer
+				{duration 1}
+			}
+			{scale 1
+				{linear
+					{min 1}
+					{max 0.7}
+				}
+			}
+			{visibility 1
+				{linear
+					{min 0.75 0.25}
+					{max 0.75 0.25}
+				}
+			}
+		}
+		{radius 15}
+		{radiusfalloff 1}
+		{effectonground}
+		{intensity 1}
+		{pulseperiod 0.1}
+	}
+	{#+ spriteview halo2
+		{sprite "$/additional/glow1"
+			{timer
+				{mode play loop }
+				{duration 0.08}
+			}
+			{preturn 90 90}
+			{scale 0.1}
+			{light 0.1}
+			{highlight 0xff2fdfef}
+		}
+		{halo}
+		{notifyowner}
+		{autovisible}
+		{nightonly}
+	}
+	{#+ spriteview halo1
+		{sprite "$/additional/generalglow01_d"
+			{timer
+				{mode play loop pingpong}
+				{duration 0.01}
+			}
+			{scale 1
+				{linear
+					{min 0.015}
+					{max 0.02}
+				}
+			}
+			{highlight 0xff00b0c0}
+			{visibility 1
+				{linear
+					{min 0.1}
+					{max 0}
+				}
+			}
+			{light 0.3}
+		}
+		{halo}
+		{notifyowner}
+		{autovisible}
+	}
+	{#+ particleview smoke
+		{generator
+			{totalparticles 10}
+			{emissionarea
+				{radius 0}
+				{alpha0 0}
+				{alpha1 2.5 2.5}
+				{speed 1}
+			}
+			{particleinit
+				{speed 3.5 1.5}
+				{lifetime 0.5 0.1}
+			}
+			{## axisz}
+		}
+		{mover
+			{damping 0.99}
+			{gravity
+				{value -0.0003}
+			}
+			{collisions
+				{terrain}
+				{## objects}
+				{restitution 0.08}
+			}
+		}
+		{visualizer
+			{stage 
+				{sprite "$/additional/smoke_light5"
+					{turn 1
+						{linear
+							{min 0}
+							{max 0 30}
+						}
+					}
+					{scale 1
+						{linear
+							{min 0.03}
+							{max 0.1}
+						}
+					}
+					{visibility 1
+						{peak
+							{max 0.05}
+							{min 0}
+						}
+					}
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{preturn 0 180}
+					{## highlight 0xff5a5a5a}
+				}
+			}
+		}
+		{notifyowner}
+	}
+	{##+ spriteview tail_low
+		{sprite "$/additional/sparks_explosion_a"
+			{light 1
+				{linear
+					{min 1}
+					{max 0}
+				}
+			}
+			{scalex 1
+				{linear
+					{min 0.01}
+					{max 0.036}
+				}
+			}
+			{scaley 1
+				{linear
+					{min 0.001}
+					{max 0.005}
+				}
+			}
+			{timer
+				{duration 0.02}
+				{mode play loop }
+			}
+			{preturn 90}
+		}
+		{orientation trace}
+	}
+	{##+ particleview smoke
+		{generator
+			{totalparticles 80}
+			{emissionarea
+				{radius 0 2}
+				{alpha0 0 5}
+				{alpha1 0}
+			}
+			{particleinit
+				{speed 1}
+				{lifetime 2.5 0.5}
+			}
+		}
+		{mover
+			{## damping 0.95}
+			{## gravity
+				{value -0.002}
+			}
+			{nodependonwind}
+		}
+		{visualizer
+			{stage 
+				{sprite "$/additional/vfx_vol_smoke_wispy_anim"
+					{## turn 1
+						{linear
+							{min 0}
+							{max 0 50}
+						}
+					}
+					{visibility 1
+						{linear
+							{min 0.4 0.1}
+							{max 0}
+						}
+					}
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{preturn 0 180}
+					{scalex 1
+						{power
+							{min 0.3}
+							{max 1.5}
+							{pow 0.8}
+						}
+					}
+					{scaley 1
+						{power
+							{min 0.06 0.01}
+							{max 0.075 0.025}
+							{pow 1}
+						}
+					}
+					{highlight 0xffafafaf}
+				}
+				{flags trace }
+				{sprite "$/additional/smoke_ball_rolling_loop_1f"
+					{## turn 1
+						{linear
+							{min 0}
+							{max 0 50}
+						}
+					}
+					{visibility 1
+						{linear
+							{min 0.4 0.1}
+							{max 0}
+						}
+					}
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{preturn 0 180}
+					{scalex 1
+						{power
+							{min 0.3}
+							{max 1.5}
+							{pow 0.8}
+						}
+					}
+					{scaley 1
+						{power
+							{min 0.06 0.01}
+							{max 0.075 0.025}
+							{pow 1}
+						}
+					}
+					{highlight 0xffafafaf}
+				}
+			}
+		}
+		{notifyowner}
+	}
+	{##+ lightview
+		{type point}
+		{animator
+			{highlight 0xffffc084}
+			{timer
+				{duration 1}
+			}
+			{scale 1
+				{linear
+					{min 1}
+					{max 0.7}
+				}
+			}
+			{visibility 1
+				{linear
+					{min 0.6}
+					{max 1.2}
+				}
+			}
+		}
+		{radius 100}
+		{radiusfalloff 1}
+		{effectonground}
+		{## offset 0 0 20}
+		{intensity 1}
+		{pulseperiod 0.04 0.02}
+	}
+	{##+ spriteview tail_low
+		{#+ sprite "$/additional/sparks_explosion_a"
+			{light 1
+				{linear
+					{min 1}
+					{max 0}
+				}
+			}
+			{scalex 1
+				{linear
+					{min 0.01}
+					{max 0.03}
+				}
+			}
+			{scaley 1
+				{linear
+					{min 0.001}
+					{max 0.005}
+				}
+			}
+			{timer
+				{duration 0.01}
+				{mode play loop }
+			}
+			{preturn 90}
+		}
+		{orientation trace}
+	}
+}

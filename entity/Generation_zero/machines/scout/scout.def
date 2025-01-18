@@ -1,0 +1,298 @@
+{actor
+	(include "/properties/machinery.ext")
+	{obstacleID "human"}
+	{PatherID	"scout_base"}
+	{collider "moto"}
+	{props "baze_machinery" "scout_base" "detect_tank_light"}
+	(include "/properties/selection/pest.inc" scale(0.4))
+;									all	front top rear bottom ; material steel armor
+	{Volume "main_body" 
+		{component "main_body"}
+		{material "steel"}
+		{thickness	4 }
+	}
+	("volume_body" args "armor_arc" 		"armor"   			15  steel )
+
+	("volume_body" args "fuel" "fuel"    4  steel )
+
+	("volume_body" args "RightToeBase" 		"arm_tear"    3  steel )
+	("volume_body" args "RightFoot" 		"arm_tear"    2  steel )
+	("volume_body" args "RightLeg" 			"arm_tear"    2  steel )
+	("volume_body" args "rightupperleg" 	"arm_tear"    8  steel )
+
+	("volume_body" args "leftToeBase" 		"arm_tear"    3  steel )
+	("volume_body" args "leftFoot" 			"arm_tear"    2  steel )
+	("volume_body" args "leftLeg" 			"arm_tear"    2  steel )
+	("volume_body" args "leftupperleg" 		"arm_tear"    8  steel )
+
+	("volume_body" args "centralToeBase" 	"arm_tear"    3  steel )
+	("volume_body" args "centralFoot" 		"arm_tear"    2  steel )
+	("volume_body" args "centralLeg" 		"arm_tear"    2  steel )
+	("volume_body" args "centralupperleg" 	"arm_tear"    8  steel )
+
+
+	("volume_body" args "left_jetengine_armor_1" 	"armor_crushed"    1  steel )
+	("volume_body" args "left_jetengine_armor_2" 	"armor_crushed"    1  steel )
+	("volume_body" args "left_jetengine_armor_3" 	"armor_crushed"    1  steel )
+	("volume_body" args "left_jetengine_armor_4" 	"armor_crushed"    1  steel )
+	("volume_body" args "left_jetengine_armor_5" 	"armor_crushed"    1  steel )
+	("volume_body" args "left_jetengine_armor_6" 	"armor_crushed"    1  steel )
+	("volume_body" args "right_jetengine_armor_1" 	"armor_crushed"    1  steel )
+	("volume_body" args "right_jetengine_armor_2" 	"armor_crushed"    1  steel )
+	("volume_body" args "right_jetengine_armor_3" 	"armor_crushed"    1  steel )
+	("volume_body" args "right_jetengine_armor_4" 	"armor_crushed"    1  steel )
+	("volume_body" args "right_jetengine_armor_5" 	"armor_crushed"    1  steel )
+	("volume_body" args "right_jetengine_armor_6" 	"armor_crushed"    1  steel )
+
+
+	("volume_body" args "armorplate_front_left" 	"armor_crushed"   	5  steel )
+	("volume_body" args "armorplate_front_right" 	"armor_crushed"   	5  steel )
+	("volume_body" args "armorplate_back_left" 		"armor_crushed"   	5  steel )
+	("volume_body" args "armorplate_back_right" 	"armor_crushed"   	5  steel )
+	("volume_body" args "left_armplate" 		"armor_crushed"   	2   steel )
+	("volume_body" args "right_armplate" 		"armor_crushed"   	2   steel )
+
+
+
+
+
+	{Volume "head"
+		{material "steel"}
+		{thickness 3}
+		{component "head"}
+		{tags "head" }
+	}
+	{Volume "neck"
+		{material "steel"}
+		{thickness 3}
+		{component "neck"}
+		{tags "head_joint"}
+	}
+	{Volume "neck1"
+		{material "steel"}
+		{thickness 3}
+		{component "neck1"}
+		{tags "head_joint"}
+	}
+	{Volume "horn"
+		{material "steel"}
+		{thickness 2}
+		{component "horn"}
+		{tags "horn" }
+	}
+	{Volume "horn_part1"
+		{material "misc"}
+		{thickness 2}
+		{component "horn"}
+		{tags "horn" }
+	}
+	{Volume "horn_part2"
+		{material "misc"}
+		{thickness 2}
+		{component "horn"}
+		{tags "horn" }
+	}
+	{Volume "horn_part3"
+		{material "misc"}
+		{thickness 2}
+		{component "horn"}
+		{tags "horn" }
+	}
+	{Volume "horn_part4"
+		{material "misc"}
+		{thickness 2}
+		{component "horn"}
+		{tags "horn" }
+	}
+	{Volume "propeller"
+		{material "steel"}
+		{thickness 3}
+		{component "engine"}
+		{tags "engine"}
+	}
+	{Volume "left_jetengine"
+		{material "steel"}
+		{thickness 3}
+		{component "jetengine_l"}
+		{tags "jetengine"}
+	}
+	{Volume "right_jetengine"
+		{material "steel"}
+		{thickness 3}
+		{component "jetengine_r"}
+		{tags "jetengine"}
+	}
+
+
+
+;-----------------organ
+	{Volume "organ_neck"
+		{material "steel"}
+		{thickness 4}
+		{component "head_arm"}
+		{tags "head_joint" "main_organ"}
+	}
+	{Volume "organ_motor"
+		{material "steel"}
+		{thickness 1}
+		{component "back_engine_organ"}
+		{tags "back_engine_organ" "organ" "main_organ"}
+	}
+	{Volume "organ_cannister"
+		{material "steel"}
+		{thickness 1}
+		{component "fuel"}
+		{tags "fuel" "organ" "main_organ"}
+	}
+	{Volume "organ_head"
+		{material "steel"}
+		{thickness 1}
+		{component "head_organ"}
+		{tags "head_organ"  "organ" "main_organ"}
+	}
+
+	{sensor
+		{Visor "eyes"
+			{vision "scout"}
+			{bone "eyes"}
+		}
+		{Visor "alarm"
+			{vision "scout_round"}
+			{bone "visor_all"}
+		}
+	}
+	("vision_mode" tag(thermal) time(60))	
+	{placer
+		{place "right_jetengine"
+			{entity "turbine_micro_sound"}
+			{Linkbone "right_jetengine"}
+			{obstacle disable}
+		}
+		{place "left_jetengine"
+			{entity "turbine_micro_sound"}
+			{Linkbone "left_jetengine"}
+			{obstacle disable}
+		}
+	}
+
+	{extender "inventory" ; создать лут
+		{box
+			{Size 4 4}
+			{Weight 100}
+			{item "ammo jump"	1}
+			{item "ammo visor"	1}
+		}
+	}
+	{Weaponry
+		{place "alarm_signal"    ;mgun_alarm
+			{basic}
+			{weapon 	"horn_scout" filled}
+			{foresight 	"eyes"}
+			{rotate}
+		}
+		{place "slope_move" ;slope
+			{basic}
+			{weapon 	"slope_scout" filled}
+			{foresight 	"foresight_signal"}
+			;{rotate}
+		}
+		{place "head_joint" ;head_joint
+			{basic}
+			{weapon 	"search" filled}
+			{foresight 	"eyes"}
+			{rotate}
+		}
+	}
+	{mass 30}
+	("movement" 
+		slow(0) 
+		normal(6)
+		fast(8)
+		maxspeed(8)
+		maxspeed_atmaxturn(0.5)
+		turnstart(12)
+		turnstop(1)
+		turnradius(5)
+		turntime(0.5)
+		starttime(3)
+		stoptime(2)
+		braketime(2)
+		fuelbag_vol(2)
+		rate(0.1)
+		remain(2)
+		fuel(tritium)
+	)	
+	{Extension "scout.mdl"}
+	{bone "head_ems_00_hold"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.5 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
+	{bone "head_ems_01_hold"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.5 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
+	{bone "head_ems_02_hold"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.5 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
+	{bone "head_ems_00_search"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.5 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
+	{bone "head_ems_01_search"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.5 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
+	{bone "head_ems_02_search"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.5 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
+	{bone "head_ems_00_alarm"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.5 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
+	{bone "head_ems_01_alarm"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.5 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
+	{bone "head_ems_02_alarm"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.5 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
+}

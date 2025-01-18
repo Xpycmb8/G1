@@ -1,0 +1,39 @@
+{actor
+	(include "/properties/machinery.ext")
+	{targetclass "cannon" "bullet"}
+	{autooperatable 1}
+	{placer{crew 0}}
+	{Volume "cpu"
+		{thickness 15}
+	}
+	{sensor
+		{visor "main"
+			{vision "start_point"}
+			{bone "foresight3"}
+		}
+	}
+	{extender "inventory" 
+		{box
+			{Size 4 4}
+			{Weight 100}
+			{item "ammo 792x57" 100}
+		}
+	}
+	{Weaponry
+		{place "mgun"
+			{weapon 	"mg34_v1" filled}
+			{foresight 	"foresight3"}
+			{basic}
+			{rotate}
+		}
+	}
+	{Extension "autonomous_turret_gun.mdl"}
+	; {bone "head_ems_small_00"
+		; {animation
+			; {uv "run"
+				; {shiftV 0 1 0.5 }
+				; {shiftU 0 1 0.005 }	;min max delta [pingpong]
+			; }
+		; }
+	; }
+}

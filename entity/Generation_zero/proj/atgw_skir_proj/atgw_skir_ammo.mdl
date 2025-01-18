@@ -1,0 +1,146 @@
+;Exported by: Xpycmb
+;Date:        Tue Oct  4 22:40:01 2022
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\skirmisher_base_rebuild2.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "rocket"
+			{Position 2.91537	0	0}
+			{VolumeView "rocket.ply"}
+		}
+		{bone "tail"
+			{Matrix34
+				-1	0	0
+				0	-1	0
+				0	0	1
+				0.0818787	0	0
+			}
+		}
+		{bone "tail00"
+			{Matrix34
+				0	1	0
+				-1	0	0
+				0	0	1
+				1.24651	0.334854	-0.345294
+			}
+		}
+		{bone "tail01"
+			{Matrix34
+				0	1	0
+				-1	0	0
+				0	0	1
+				1.24651	0.343418	0.320582
+			}
+		}
+		{bone "tail04"
+			{Matrix34
+				0	1	0
+				-1	0	0
+				0	0	1
+				0.139826	0.342789	-0.354419
+			}
+		}
+		{bone "tail02"
+			{Matrix34
+				0	1	0
+				-1	0	0
+				0	0	1
+				1.24651	-0.339676	-0.345294
+			}
+		}
+		{bone "tail03"
+			{Matrix34
+				0	1	0
+				-1	0	0
+				0	0	1
+				1.24651	-0.343273	0.321856
+			}
+		}
+		{bone "tail05"
+			{Matrix34
+				0	1	0
+				-1	0	0
+				0	0	1
+				0.139827	0.343838	0.330995
+			}
+		}
+		{bone "tail06"
+			{Matrix34
+				0	1	0
+				-1	0	0
+				0	0	1
+				0.139827	-0.343235	0.330995
+			}
+		}
+		{bone "tail07"
+			{Matrix34
+				0	1	0
+				-1	0	0
+				0	0	1
+				0.139827	-0.343235	-0.35478
+			}
+		}
+		{bone "fly"
+		}
+	}
+}
+{Volume "body"
+	{Cylinder 0.36787 5.66347}
+	{Bone "rocket"}
+	{Matrix34
+		0	1	0
+		0	0	1
+		1	0	0
+		-0.0910549	0	0
+	}
+}
+{Extender "preview"
+	{"Stuff"
+		{camera
+			{origin 1.14165	-7.6499	0.442154}
+			{lookat 8.50851	35.7821	-3.51574}
+			{fov 45}
+			{horizon -0.260196}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 3.2372	54.3975	-27.455}
+			}
+			{"1"
+				{type directional}
+				{direction 0.211502	0.452844	-0.0141217}
+			}
+			{"2"
+				{type point}
+				{position 17.2199	62.5318	18.0131}
+			}
+		}
+	}
+	{"Stuff_primary"
+		{camera
+			{origin 2.14657	-5.61382	0.19689}
+			{lookat 9.72019	39.6716	-2.59152}
+			{fov 45}
+			{horizon -0.336882}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 19.2751	56.6886	-22.6775}
+			}
+			{"1"
+				{type directional}
+				{direction 0.203879	0.456011	0.0220808}
+			}
+			{"2"
+				{type point}
+				{position 25.057	64.9737	24.5132}
+			}
+		}
+	}
+}

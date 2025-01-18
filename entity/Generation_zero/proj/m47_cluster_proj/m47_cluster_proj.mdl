@@ -1,0 +1,71 @@
+;Exported by: Xpycmb
+;Date:        Wed Sep 11 13:27:19 2024
+;File:        C:\Users\Xpycmb\Documents\3dsMax\scene\m47_cluster_proj.max
+{Skeleton
+	{animation
+		{sequence "tail"
+			{speed 3}
+			{events 
+				{1 "start_tail_cluster"}
+			}		
+			{autostart}
+		}
+		{sequence "open"
+			{speed 0.05}
+			{events 
+				{3 "open_bullet"}
+			}		
+			{autostart}
+		}
+	}
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "fx"
+			{Matrix34
+				1	0	0
+				0	0	-1
+				0	1	0
+				-0.0367625	0	0.0240872
+			}
+		}
+		{bone "tail"
+			{Matrix34
+				-1	0	0
+				0	0	-1
+				0	-1	0
+				-0.601334	0	0.0240878
+			}
+		}
+		{bone "proj"
+			{Matrix34
+				1	0	0
+				0	0	-1
+				0	1	0
+				-0.601167	0	0.0240878
+			}
+		}
+		{bone "projectile"
+			{Matrix34
+				1	0	0
+				0	0	-1
+				0	1	0
+				0.0457334	0	0.0240872
+			}
+			{VolumeView "projectile.ply"}
+		}
+	}
+}
+{Volume "body"
+	{Box 2.302 0.831001 0.8305}
+	{Bone "projectile"}
+	{Matrix34
+		0.5	0	0
+		0	0.5	0
+		0	0	0.5
+		-0.0824959	0	0.000124762
+	}
+}

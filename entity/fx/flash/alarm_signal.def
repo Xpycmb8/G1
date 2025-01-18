@@ -1,0 +1,58 @@
+{fx
+	{lightview
+		{type spot}
+		{animator
+			{highlight 0xffffd556}
+			{timer
+				{mode }
+				{duration 0.3}
+			}
+			{visibility 1
+				{linear
+					{min 1}
+					{max 0}
+				}
+			}
+		}
+		{attenuation0 0.15}
+		{attenuation1 0.6}
+		{falloff 1.5}
+		{theta 80}
+		{phi 160}
+		{radius 25}
+		{priority 10}
+		{effectonground}
+	}
+	{#+ spriteview FlashSSP
+		{sprite "$/additional/glow1"
+			{scale 0.03}
+			{light 1
+				{linear
+					{min 0.6}
+					{max 0}
+				}
+			}
+			{timer
+				{duration 0.3}
+			}
+			{highlight 0xffffa81f}
+		}
+		{halo}
+	}
+	{#+ spriteview FlashSSP
+		{sprite "$/additional/generalglow01_d"
+			{scale 0.004}
+			{light 1
+				{linear
+					{min 0.6}
+					{max 0}
+				}
+			}
+			{timer
+				{duration 0.3}
+			}
+			{highlight 0xffffa200}
+		}
+		{halo}
+	}
+}

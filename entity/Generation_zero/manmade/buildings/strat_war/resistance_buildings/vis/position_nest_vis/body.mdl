@@ -1,0 +1,16 @@
+;Exported by: Xpycmb
+;Date:        Sat Jan  7 18:09:25 2023
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\buildings_resistance_sandbag_shooting_position_nest_vis.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "body"
+			{parameters "ID=Body;"}
+			{VolumeView "body.ply"}
+		}
+	}
+}

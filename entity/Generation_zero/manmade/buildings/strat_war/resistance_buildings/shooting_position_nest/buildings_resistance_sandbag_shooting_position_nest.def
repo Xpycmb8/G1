@@ -1,0 +1,120 @@
+{game_entity
+	(include "/properties/construction.inc")
+	{props "sand" "sandbag" "construction"}
+	{extension "buildings_resistance_sandbag_shooting_position_nest.mdl"}
+	{Extender "land_patch"
+		{TerrainType "bridge_wood" "bridge_wood"}
+	}	
+	{volume "body1"
+		{Tags "body"}
+		{thickness 60}
+		{material "sand"}
+		{able {visible 1}}
+	}
+	{volume "body2"
+		{Tags "body"}
+		{thickness 60}
+		{material "sand"}
+		{able {visible 1}}
+	}
+	{volume "body3"
+		{Tags "body"}
+		{thickness 60}
+		{material "sand"}
+		{able {visible 1}}
+	}
+	{volume "body4"
+		{Tags "body"}
+		{thickness 60}
+		{material "sand"}
+		{able {visible 1}}
+	}
+	{volume "body5"
+		{Tags "body"}
+		{thickness 60}
+		{material "sand"}
+		{able {visible 1}}
+	}
+	{volume "body6"
+		{Tags "body"}
+		{thickness 25}
+		{material "sand"}
+		{able {visible 1}}
+	}
+	{volume "body7"
+		{Tags "body"}
+		{thickness 25}
+		{material "sand"}
+		{able {visible 1}}
+	}
+	{volume "body8"
+		{Tags "body"}
+		{thickness 25}
+		{material "sand"}
+		{able {visible 1}}
+	}
+	
+	
+	{volume "armor_10_00"
+		;{Tags "body"}
+		{thickness 15}
+		{material "steel"}
+		{able {visible 1}}
+	}
+	{volume "armor_10_01"
+		;{Tags "body"}
+		{thickness 15}
+		{material "steel"}
+		{able {visible 1}}
+	}
+	{volume "armor_10_02"
+		;{Tags "body"}
+		{thickness 15}
+		{material "steel"}
+		{able {visible 1}}
+	}
+	{volume "armor_10_03"
+		;{Tags "body"}
+		{thickness 15}
+		{material "steel"}
+		{able {visible 1}}
+	}
+	{volume "armor_10_04"
+		;{Tags "body"}
+		{thickness 15}
+		{material "steel"}
+		{able {visible 1}}
+	}
+	{volume "armor_10_05"
+		;{Tags "body"}
+		{thickness 15}
+		{material "armor"}
+		{able {visible 1}}
+	}
+	{volume "armor_10_06"
+		;{Tags "body"}
+		{thickness 15}
+		{material "steel"}
+		{able {visible 1}}
+	}
+	
+	{volume "wheels_r"
+		{thickness 8}
+		{material "misc"}
+		{able {visible 1}}
+	}
+	{volume "wheels_l"
+		{thickness 8}
+		{material "misc"}
+		{able {visible 1}}
+	}
+	{Volume "spotlightpole_r_on"
+		{Tags  "spotlightpole_r_on"}
+		{able {visible 0} {touch 1}}
+	}
+	{Volume "spotlightpole_l_on"
+		{Tags  "spotlightpole_l_on"}
+		{able {visible 0} {touch 1}}
+	}
+	{lodclass "decor_medium"}
+}

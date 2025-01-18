@@ -1,0 +1,146 @@
+{fx
+	{#+ particleview pieces
+		{entitygenerator
+			{totalparticles 12}
+			{emissionarea
+				{radius 5}
+				{alpha0 90 90}
+				{alpha1 90 90}
+			}
+			{particleinit
+				{speed 120}
+				{lifetime 0.1}
+			}
+			{entity "fraction"}
+			{particlesinblock 5}
+		}
+	}
+	{#+ particleview pieces
+		{entitygenerator
+			{totalparticles 12}
+			{emissionarea
+				{radius 5}
+				{alpha0 90 90}
+				{alpha1 90 90}
+			}
+			{particleinit
+				{speed 120}
+				{lifetime 0.1}
+			}
+			{entity "fraction"}
+			{particlesinblock 5}
+		}
+	}
+	{#+ particleview pieces
+		{entitygenerator
+			{totalparticles 12}
+			{emissionarea
+				{radius 5}
+				{alpha0 90 90}
+				{alpha1 90 90}
+			}
+			{particleinit
+				{speed 120}
+				{lifetime 0.1}
+			}
+			{entity "fraction"}
+			{particlesinblock 5}
+		}
+	}
+	{#+ particleview pieces
+		{entitygenerator
+			{totalparticles 12}
+			{emissionarea
+				{radius 5}
+				{alpha0 90 90}
+				{alpha1 90 90}
+			}
+			{particleinit
+				{speed 120}
+				{lifetime 0.1}
+			}
+			{entity "fraction"}
+			{particlesinblock 5}
+		}
+	}
+	{#+ particleview pieces
+		{entitygenerator
+			{totalparticles 12}
+			{emissionarea
+				{radius 5}
+				{alpha0 90 90}
+				{alpha1 90 90}
+			}
+			{particleinit
+				{speed 120}
+				{lifetime 0.1}
+			}
+			{entity "fraction"}
+			{particlesinblock 5}
+		}
+	}
+	{#+ particleview pieces
+		{entitygenerator
+			{totalparticles 12}
+			{emissionarea
+				{radius 5}
+				{alpha0 90 90}
+				{alpha1 90 90}
+			}
+			{particleinit
+				{speed 120}
+				{lifetime 0.1}
+			}
+			{entity "fraction"}
+			{particlesinblock 5}
+		}
+	}
+	{#+ particleview pieces
+		{entitygenerator
+			{totalparticles 12}
+			{emissionarea
+				{radius 5}
+				{alpha0 90 90}
+				{alpha1 90 90}
+			}
+			{particleinit
+				{speed 120}
+				{lifetime 0.1}
+			}
+			{entity "fraction"}
+			{particlesinblock 5}
+		}
+	}
+	{#+ particleview pieces
+		{entitygenerator
+			{totalparticles 12}
+			{emissionarea
+				{radius 5}
+				{alpha0 90 90}
+				{alpha1 90 90}
+			}
+			{particleinit
+				{speed 120}
+				{lifetime 0.1}
+			}
+			{entity "fraction"}
+			{particlesinblock 5}
+		}
+	}
+	{#+ particleview pieces
+		{entitygenerator
+			{totalparticles 12}
+			{emissionarea
+				{radius 5}
+				{alpha0 90 90}
+				{alpha1 90 90}
+			}
+			{particleinit
+				{speed 120}
+				{lifetime 0.1}
+			}
+			{entity "fraction"}
+			{particlesinblock 5}
+		}
+	}
+}

@@ -1,0 +1,13 @@
+{Entity
+	(include "/properties/dead_prop_skir.grn")
+	{Extension "body_component.mdl"}
+	{extender "stuff"
+		{item "body_component"}
+	}
+	{Volume "armor_main_10_01"
+		{thickness 1}
+	}
+	{Volume "body"
+		{thickness 1}
+	}
+}

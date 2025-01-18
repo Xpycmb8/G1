@@ -1,0 +1,15 @@
+{
+	(include "/properties/physics_plastic.ext")
+	{mass 25}
+	{props "obstacle_ignore_height" "collectable" "capacity"}
+	{Extension "car_battery.mdl"}
+	{extender "stuff"
+		{item "car_battery" filled}
+	}
+	{Volume "body"
+		{thickness hollow 4}
+		{tags "body" }
+	}
+}
+
+

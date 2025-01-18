@@ -1,0 +1,68 @@
+;Exported by: Xpycmb
+;Date:        Wed Sep 11 15:18:56 2024
+;File:        C:\Users\Xpycmb\Documents\3dsMax\scene\m47_mine_ammo.max
+{Skeleton
+	{animation
+		{sequence "ems" {autostart}}
+	}
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "fx"
+			{Orientation
+				0	0	-1
+				0	1	0
+				1	0	0
+			}
+			{bone "ems_bone"
+				{Matrix34
+					0	0	1
+					0	-1	0
+					1	0	0
+					0.496946	-0.0482873	0.156416
+				}
+				{bone "ems"
+					{Matrix34
+						0	0	-1
+						0	1	0
+						1	0	0
+						0	0.00203094	0.00183505
+					}
+					{VolumeView "ems.ply"}
+				}
+			}
+		}
+		{bone "projectile"
+			{Matrix34
+				0	0	1
+				0	-1	0
+				1	0	0
+				-0.00398591	-0.0240872	-0.31743
+			}
+			{VolumeView "projectile.ply"}
+		}
+	}
+}
+{Volume "body"
+	{Cylinder 0.197372 1.18345}
+	{Bone "projectile"}
+	{Matrix34
+		0	0	-1
+		0	1	0
+		1	0	0
+		-0.0577038	0	0
+	}
+}
+{Volume "mine"
+	{Sphere 5.81908}
+	{Bone "basis"}
+	{Matrix34
+		0	0	1
+		0	-1	0
+		1	0	0
+		0	0	-0.419742
+	}
+}

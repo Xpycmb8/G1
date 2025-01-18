@@ -1,0 +1,4 @@
+{fx
+	{sound "generation_zero/characters/wpn_alarm/wpn_alarm_mortar/bb/tank_wpn_alarm_mortar_verb"}
+	{sound "generation_zero/characters/wpn_alarm/wpn_alarm_mortar/dir/tank_wpn_alarm_mortar_dir"}
+}

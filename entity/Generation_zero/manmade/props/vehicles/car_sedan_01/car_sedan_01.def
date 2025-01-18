@@ -1,0 +1,102 @@
+{game_entity
+	(include "/properties/car.ext")
+	(include "/properties/selection/vehicle.inc"  scale(0.9))	
+	{props  "wheeled" "modded"  "small_auto" "glass_damaged" "weight_3500" "no_minimap_view"}
+	{able "-select" "emit_on_attack"}
+	("armor_light")
+	{mass 3500}
+	{extender "inventory" 
+		{box
+			{Size 4 4}
+			{Weight 100}
+		}
+	}
+	("volume_simple" args "body10_01" "body" 10)
+	("volume_simple" args "body10_02" "body" 10)
+	("volume_simple" args "body10_03" "body" 10)
+	("volume_simple" args "body10_04" "body" 10)
+	("volume_simple" args "body15_01" "body" 15)
+	("volume_simple" args "body20_00" "body" 20)
+	("volume_simple" args "hood" "body" 15)
+	("volume_simple" args "roof" "body" 15)
+
+	
+	("damage_glass" args "front_glass" )
+	("damage_glass" args "glass_doorb" )
+	("damage_glass" args "glass_doorl1" )
+	("damage_glass" args "glass_doorl" )
+	("damage_glass" args "glass_doorr1" )
+	("damage_glass" args "glass_doorr" )
+	("damage_glass" args "glass_r_1" )
+	("damage_glass" args "glass_l_1" )
+
+	("lamp_glass" args "light_front_left_glass"			0.1)
+	("lamp_glass" args "light_front_right_glass"			0.1)
+	{Volume "doorl"
+		{Tags  "doorl" "doors"}
+		{Thickness 4}
+	}
+	{Volume "doorl1"
+		{Tags  "doorl1" "doors"}
+		{Thickness 4}
+	}
+	{Volume "doorr"
+		{Tags  "doorr" "doors"}
+		{Thickness 4}
+	}
+	{Volume "doorr1"
+		{Tags  "doorr1" "doors"}
+		{Thickness 4}
+	}
+	{Volume "doorb"
+		{Tags  "doorb" "doors"}
+		{Thickness 4}
+	}
+	{Volume "front_glass_damage"
+		{Tags  "hold" "damaged"}
+		{able {blockcamera 1}}
+		{thickness hollow 1}
+		{material "wound_glass"}		
+	}
+	{volume "wheelright1"
+		{material "misc"}
+		{thickness 5}
+		{tags "wheel"}
+		{component "wheelright1"}
+	}
+	{volume "wheelright2"
+		{material "misc"}
+		{thickness 5}
+		{tags "wheel"}
+		{component "wheelright2"}
+	}
+	{volume "wheelleft1"
+		{material "misc"}
+		{thickness 5}
+		{tags "wheel"}
+		{component "wheelleft1"}
+	}
+	{volume "wheelleft2"
+		{material "misc"}
+		{thickness 5}
+		{tags "wheel"}
+		{component "wheelleft2"}
+	}
+	{component "wheelright1"
+		{RepairTime 10}
+		{tags "wheel"}
+	}
+	{component "wheelright2"
+		{RepairTime 10}
+		{tags "wheel"}
+	}
+	{component "wheelleft1"
+		{RepairTime 10}
+		{tags "wheel"}
+	}
+	{component "wheelleft2"
+		{RepairTime 10}
+		{tags "wheel"}
+	}
+	{Extension "car_sedan_01.mdl"}	
+}

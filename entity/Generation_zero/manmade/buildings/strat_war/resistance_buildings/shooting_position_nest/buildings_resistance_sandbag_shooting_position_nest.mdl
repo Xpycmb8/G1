@@ -1,0 +1,400 @@
+;Exported by: Xpycmb
+;Date:        Sat Jan  7 20:48:57 2023
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\buildings_resistance_sandbag_shooting_position_nest.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "netting"
+			{parameters "ID=Body;"}
+			{LODView
+				{VolumeView "netting.ply"}
+				{VolumeView "netting_lod1.ply"}
+				{VolumeView "netting_lod2.ply"}
+				{VolumeView "netting_lod3.ply"}
+			}
+		}
+		{bone "wood_panel"
+			{parameters "ID=Body;"}
+			{LODView
+				{VolumeView "wood_panel.ply"}
+				{VolumeView "wood_panel_lod1.ply"}
+				{VolumeView "wood_panel_lod2.ply"}
+			}
+		}
+		{bone "wood_planks"
+			{parameters "ID=Body;"}
+			{VolumeView "wood_planks.ply"}
+		}
+		{bone "skirmisher_body"
+			{parameters "ID=Body;"}
+			{LODView
+				{VolumeView "skirmisher_body.ply"}
+				{VolumeView "skirmisher_body_lod1.ply"}
+				{VolumeView "skirmisher_body_lod2.ply"}
+				{VolumeView "skirmisher_body_lod3.ply"}
+			}
+		}
+		{bone "steel"
+			{parameters "ID=Body;"}
+			{LODView
+				{VolumeView "steel.ply"}
+				{VolumeView "steel_lod1.ply"}
+				{VolumeView "steel_lod2.ply"}
+				{VolumeView "steel_lod3.ply"}
+			}
+		}
+		{bone "pest"
+			{parameters "ID=Body;"}
+			{LODView
+				{VolumeView "pest.ply"}
+				{VolumeView "pest_lod1.ply"}
+				{VolumeView "pest_lod2.ply"}
+				{VolumeView "pest_lod3.ply"}
+			}
+		}
+		{bone "hunting_stand"
+			{parameters "ID=Body;"}
+			{LODView
+				{VolumeView "hunting_stand.ply"}
+				{VolumeView "hunting_stand_lod1.ply"}
+				{VolumeView "hunting_stand_lod2.ply"}
+				{VolumeView "hunting_stand_lod3.ply"}
+			}
+			{bone "spotlightpole_l"
+				{parameters "ID=Body;"}
+				{Position -14.3818	-34.5623	36.6511}
+				{LODView
+					{VolumeView "spotlightpole_l.ply"}
+					{VolumeView "spotlightpole_l_lod1.ply"}
+					{VolumeView "spotlightpole_l_lod2.ply"}
+					{VolumeView "spotlightpole_l_lod3.ply"}
+				}
+				{bone "spotlightpole_l_fx"
+					{Matrix34
+						-0.803666	-0.423166	-0.418391
+						0.00206613	0.701096	-0.713064
+						0.595077	-0.57393	-0.562573
+						-1.27621	-0.667126	-0.101639
+					}
+				}
+				{bone "spotlightpole_l_add"
+					{parameters "ID=Body;"}
+					{Position -0.0485029	0	0}
+					{visibility 0}
+					{VolumeView "spotlightpole_l_add.ply"}
+				}
+			}
+			{bone "spotlightpole_r"
+				{parameters "ID=Body;"}
+				{Position -14.3818	35.3364	37.3223}
+				{LODView
+					{VolumeView "spotlightpole_r.ply"}
+					{VolumeView "spotlightpole_r_lod1.ply"}
+					{VolumeView "spotlightpole_r_lod2.ply"}
+					{VolumeView "spotlightpole_r_lod3.ply"}
+				}
+				{bone "spotlightpole_r_add"
+					{parameters "ID=Body;"}
+					{Position -0.000214577	0	0}
+					{visibility 0}
+					{VolumeView "spotlightpole_r_add.ply"}
+				}
+				{bone "spotlightpole_r_fx"
+					{Matrix34
+						-0.807434	0.413949	-0.420353
+						0.576621	0.704383	-0.413949
+						0.124735	-0.576621	-0.807434
+						-1.34932	0.396389	-0.136108
+					}
+				}
+			}
+		}
+		{bone "floor"
+			{parameters "ID=Body;"}
+			{LODView
+				{VolumeView "floor.ply"}
+				{VolumeView "floor_lod1.ply"}
+				{VolumeView "floor_lod2.ply"}
+			}
+			{bone "land_patch"
+				{parameters "CommonMesh;Land;Ground;"}
+				{Position 4.48149	-0.471348	5.61627}
+				{visibility 0}
+				{VolumeView "land_patch.ply" {Ground}}
+			}
+		}
+		{bone "sandbags"
+			{parameters "ID=Body;"}
+			{LODView
+				{VolumeView "sandbags.ply"}
+				{VolumeView "sandbags_lod1.ply"}
+				{VolumeView "sandbags_lod2.ply"}
+				{VolumeView "sandbags_lod3.ply"}
+			}
+			{bone "wheels_r"
+				{parameters "ID=Body;"}
+				{Matrix34
+					-1	0	0
+					0	1	0
+					0	0	-1
+					-10.1717	32.6356	34.4886
+				}
+				{LODView
+					{VolumeView "wheels_r.ply"}
+					{VolumeView "wheels_r_lod1.ply"}
+					{VolumeView "wheels_r_lod2.ply"}
+					{VolumeView "wheels_r_lod3.ply"}
+				}
+			}
+			{bone "wheels_l"
+				{parameters "ID=Body;"}
+				{Matrix34
+					-1	0	0
+					0	1	0
+					0	0	-1
+					-9.78023	-31.4579	34.2794
+				}
+				{LODView
+					{VolumeView "wheels_l.ply"}
+					{VolumeView "wheels_l_lod1.ply"}
+					{VolumeView "wheels_l_lod2.ply"}
+					{VolumeView "wheels_l_lod3.ply"}
+				}
+			}
+		}
+	}
+}
+{Obstacle "obstacle"
+	{Obb2
+		{Center -20.6011 3.8147e-06}
+		{Extent 6.18956 25.9963}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Obstacle "obstacle2"
+	{Obb2
+		{Center -11.2897 32.5285}
+		{Extent 16.6889 6.32867}
+		{Axis 0.530354 0.847776}
+	}
+	{Rotate}
+}
+{Obstacle "obstacle3"
+	{Obb2
+		{Center -14.0228 -34.3982}
+		{Extent 6.25088 16.6604}
+		{Axis 0.848198 0.529679}
+	}
+	{Rotate}
+}
+{Obstacle "obstacle4"
+	{Obb2
+		{Center 8.6998 -44.5535}
+		{Extent 6.20542 16.6435}
+		{Axis 0.0182398 0.999834}
+	}
+	{Rotate}
+}
+{Obstacle "obstacle5"
+	{Obb2
+		{Center 8.69981 46.7809}
+		{Extent 6.20542 16.6435}
+		{Axis 0.0182398 0.999834}
+	}
+	{Rotate}
+}
+{Volume "armor_10_00"
+	{Box 0.795349 26.0352 13.039}
+	{Bone "steel"}
+	{Position -29.9546	0	6.77161}
+}
+{Volume "armor_10_01"
+	{Box 0.795349 13.5383 13.3011}
+	{Bone "steel"}
+	{Matrix34
+		0.832014	-0.554755	0
+		0.554755	0.832014	0
+		0	0	1
+		-21.8607	33.2461	6.04177
+	}
+}
+{Volume "armor_10_02"
+	{Box 0.795349 13.5383 13.3011}
+	{Bone "steel"}
+	{Matrix34
+		0.854257	-0.519851	0
+		0.519851	0.854257	0
+		0	0	1
+		-22.2963	25.8857	22.5261
+	}
+}
+{Volume "armor_10_03"
+	{Box 0.795349 13.6775 13.039}
+	{Bone "steel"}
+	{Matrix34
+		0.831366	0.555725	0
+		-0.555725	0.831366	0
+		0	0	1
+		-21.0772	-33.8383	5.8199
+	}
+}
+{Volume "armor_10_04"
+	{Box 0.795349 27.6369 12.524}
+	{Bone "steel"}
+	{Position -26.9976	0	25.2844}
+}
+{Volume "armor_10_05"
+	{Box 0.795349 32.8879 14.4026}
+	{Bone "steel"}
+	{Matrix34
+		0.825738	0	-0.564054
+		0	1	0
+		0.564054	0	0.825738
+		-16.1556	0	41.9551
+	}
+}
+{Volume "armor_10_06"
+	{Box 0.795349 13.9041 7.13868}
+	{Bone "steel"}
+	{Matrix34
+		0.931411	0.363969	0
+		-0.363969	0.931411	0
+		0	0	1
+		-23.7959	-20.7	19.3288
+	}
+}
+{Volume "body1"
+	{Polyhedron "body1.vol"}
+	{Bone "sandbags"}
+	{Matrix34
+		0.005194	-0.999987	0
+		0.999987	0.005194	0
+		0	0	1
+		-20.4037	-2.58896	0
+	}
+}
+{Volume "body2"
+	{Polyhedron "body2.vol"}
+	{Bone "sandbags"}
+	{Matrix34
+		-0.529345	-0.848407	0
+		0.848407	-0.529345	0
+		0	0	1
+		-12.7741	29.0135	0
+	}
+}
+{Volume "body3"
+	{Polyhedron "body3.vol"}
+	{Bone "sandbags"}
+	{Matrix34
+		0.52536	-0.85088	0
+		0.85088	0.52536	0
+		0	0	1
+		-10.6524	-32.8224	0
+	}
+}
+{Volume "body4"
+	{Polyhedron "body4.vol"}
+	{Bone "basis"}
+	{Matrix34
+		-0.999465	-0.0327194	0
+		0.0586433	-0.998279	0
+		0	0	1
+		5.57911	43.8103	0
+	}
+}
+{Volume "body5"
+	{Polyhedron "body5.vol"}
+	{Bone "basis"}
+	{Matrix34
+		-0.999951	0.00985615	0
+		0.0160947	-0.99987	0
+		0	0	1
+		4.9431	-47.5335	0
+	}
+}
+{Volume "body6"
+	{Box 2 5.00379 6.81006}
+	{Bone "sandbags"}
+	{Matrix34
+		0.816026	0	-0.578015
+		0	1	0
+		0.578015	0	0.816026
+		-23.0841	15.7651	33.0857
+	}
+}
+{Volume "body7"
+	{Box 2.2107 5.00379 6.54434}
+	{Bone "sandbags"}
+	{Matrix34
+		0.816026	0	-0.578015
+		0	1	0
+		0.578015	0	0.816026
+		-23.1859	-15.7935	32.7894
+	}
+}
+{Volume "body8"
+	{Box 2 16.6801 4.49464}
+	{Bone "sandbags"}
+	{Matrix34
+		0.816026	0	-0.578015
+		0	1	0
+		0.578015	0	0.816026
+		-20.5074	7.45992	38.8619
+	}
+}
+{Volume "body9"
+	{Box 2 9.17408 5.16884}
+	{Bone "sandbags"}
+	{Matrix34
+		0.816026	0	-0.578015
+		0	1	0
+		0.578015	0	0.816026
+		-20.3126	-11.8238	39.1369
+	}
+}
+{Volume "spotlightpole_l_on"
+	{Box 3 3 3}
+	{Bone "wheels_l"}
+	{Matrix34
+		-1	0	0
+		0	1	0
+		0	0	-1
+		-1.01578	0.785702	-0.65847
+	}
+}
+{Volume "spotlightpole_r_on"
+	{Box 3 3 3}
+	{Bone "wheels_r"}
+	{Matrix34
+		-1	0	0
+		0	1	0
+		0	0	-1
+		-1.34964	-0.17466	-1.10497
+	}
+}
+{Volume "wheels_l"
+	{Cylinder 6.33621 4.74492}
+	{Bone "wheels_l"}
+	{Matrix34
+		-1	0	0
+		0	1	0
+		0	0	-1
+		0	0	0.729166
+	}
+}
+{Volume "wheels_r"
+	{Cylinder 6.33621 4.74492}
+	{Bone "wheels_r"}
+	{Matrix34
+		-1	0	0
+		0	1	0
+		0	0	-1
+		0	0	0.938298
+	}
+}

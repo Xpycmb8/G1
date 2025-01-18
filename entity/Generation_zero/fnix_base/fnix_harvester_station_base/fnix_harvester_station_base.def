@@ -1,0 +1,33 @@
+{game_entity
+	(include "/properties/construction_fnix.ext")
+	{props "opened_fnix" }	
+	{extender "inventory"
+		{box
+			{weight 100}
+			{size 8 8}
+		}
+	}
+	{Volume "body"
+		{Thickness 25}
+		{able {touch 0}}
+	}
+	{Volume "gear"
+		{Tags  "gear"}
+		{Thickness 1}
+		{able {touch 1}}
+	}
+	{Volume "touch"
+		{Tags  "touch" }
+		{Thickness 1}
+		{able {touch 1}}
+	}
+	{Volume "doorr"
+		{Thickness 25}
+		{able {touch 0}}
+	}
+	{Volume "doorl"
+		{Thickness 25}
+		{able {touch 0}}
+	}
+	{Extension "fnix_harvester_station_base.mdl"}
+}

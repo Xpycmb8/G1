@@ -1,0 +1,30 @@
+{game_entity
+	(include "/properties/construction.inc")
+	{props "construction" "concrete"}
+	{obstacleID "unbreakable"}
+	{ZClipVisibility 0}
+	{Extension "bridge_concrete_landing_01.mdl"}
+	{Volume "body"
+		{material "steel"}
+		{able {visible 0}}
+		{Thickness 5}
+	}
+	{Volume "body2"
+		{material "steel"}
+		{able {visible 0}}
+		{Thickness 5}
+	}
+	{Volume "body3"
+		{material "steel"}
+		{able {visible 0}}
+		{Thickness 5}
+	}
+	{Volume "body4"
+		{material "steel"}
+		{able {visible 0}}
+		{Thickness 5}
+	}
+	{Extender "land_patch"
+		{TerrainType "ground" "road"}
+	}	
+}

@@ -1,0 +1,70 @@
+{Entity
+	(include "/properties/construction_medium.ext")
+	{props "construction" "concrete" "wall" "emitters_concrete_fence"}	
+	{Extension "building_resistance_wall_01_metal_fence_corner.mdl"}
+	{mass 500}
+	{Volume "body_40_1"
+		{Tags  "body"}
+		{Thickness 40}
+	}
+	{Volume "body_40_2"
+		{Tags  "body"}
+		{Thickness 40}
+	}
+	{Volume "body_6"
+		{Thickness hollow 6}
+		{material "steel"}
+	}
+	{Volume "body_6_1"
+		{Thickness hollow 6}
+		{material "steel"}
+	}
+	{Volume "body_6_2"
+		{Thickness hollow 6}
+		{material "steel"}
+	}
+	{Volume "body_6_3"
+		{Thickness hollow 6}
+		{material "steel"}
+	}
+	{Volume "body_6_4"
+		{Thickness hollow 6}
+		{material "steel"}
+	}
+	{Volume "metal_20_1"
+		{Thickness 20}
+		{material "armor"}
+	}
+	{Volume "metal_20_2"
+		{Thickness 20}
+		{material "armor"}
+	}
+	{Volume "metal_20_3"
+		{Thickness 20}
+		{material "armor"}
+	}
+	{Volume "metal_20_4"
+		{Thickness 20}
+		{material "armor"}
+	}
+	{Volume "wire"
+		{Thickness hollow 0.2}
+		{Tags  "rex_wire"}
+		{material "steel"}
+	}
+	{Volume "wire1"
+		{Thickness hollow 0.2}
+		{Tags  "rex_wire"}
+		{material "steel"}
+	}
+	{Volume "wire2"
+		{Thickness hollow 0.2}
+		{Tags  "rex_wire"}
+		{material "steel"}
+	}
+	{Volume "wire4"
+		{Thickness hollow 0.2}
+		{Tags  "rex_wire"}
+		{material "steel"}
+	}
+}

@@ -1,0 +1,503 @@
+{actor
+	(include "/properties/machinery.ext")
+	{props "baze_machinery" "skirmisher_base" "skirmisher_sniper" "detect_tank_light"}
+	(include "/properties/selection/skirmisher.inc" scale(0.2))
+	{obstacleID "human"}
+	{collider "car"}
+	{PatherID	"skirmisher_base"}
+	{targetClass "machinery"} ;; select for best ammo
+	{targetSelector "baze_machinery"}
+
+;									material steel armor
+	{Volume "main_body" ;середина корпуса
+		{component "main_body"}
+		{material "armor"}
+		{tags "main_body"}
+		{thickness	12 }
+	}
+	("volume_body" args "armor" "armor"    10  steel )
+
+	("volume_body" args "fuel" "fuel"    2  steel )
+
+
+
+
+;armor
+
+	("volume_body" args "armor_main_15_03" "hips"    20  armor )
+	("volume_body" args "armor_main_15_02" "hips"    15  armor )
+
+	("volume_body" args "armor_main_10_01" "armor"    12  armor )
+	("volume_body" args "armor_main_10_02" "armor"    12  armor )
+
+
+
+	; {Volume "armour_fuel"
+	; }
+	{Volume "front_armor"
+		{material "armor"}
+		{thickness 25}
+		{component "front_armor"}
+		{tags "armor_crushed" "front_armor" }
+	}
+	{Volume "down_armor"
+		{material "armor"}
+		{thickness 15}
+		{component "down_armor"}
+		{tags "armor_crushed" }
+	}
+	{Volume "armour_head"
+		{material "armor"}
+		{thickness 15}
+		{component "armour_head"}
+		{tags "armor_crushed" }
+	}
+	{Volume "armour_knee_left"
+		{material "armor"}
+		{thickness 7}
+		{component "armour_knee_left"}
+		{tags "armor_crushed" }
+	}
+	{Volume "armour_knee_right"
+		{material "armor"}
+		{thickness 7}
+		{component "armour_knee_right"}
+		{tags "armor_crushed" }
+	}
+	{Volume "armour_shoulder_left"
+		{material "armor"}
+		{thickness 20}
+		{component "armour_shoulder_left"}
+		{tags "armor_crushed" }
+	}
+	{Volume "armour_shoulder_right"
+		{material "armor"}
+		{thickness 20}
+		{component "armour_shoulder_right"}
+		{tags "armor_crushed" }
+	}
+;-------------
+
+;-----------------organ
+	{Volume "bridge"
+		{material "misc"}
+		{thickness 2}
+		{tags "bridge" "main_organ" }
+	}
+	{Volume "head_arm"
+		{material "steel"}
+		{thickness 12}
+		{component "head_arm"}
+		{tags "head_joint"}
+	}
+	{Volume "head_wire"
+		{material "kevlar"}
+		{thickness 2}
+		{component "head_joint"}
+		{tags "head_joint" "main_organ" }
+	}
+	{Volume "scanner"
+		{material "kevlar"}
+		{thickness 2}
+		{component "visor_head"}
+		{tags "visor_head" "main_organ" }
+	}
+	{Volume "body_organ"
+		{material "steel"}
+		{thickness 5}
+		{component "body_organ"}
+		{tags "body_organ" "organ" "main_organ" }
+	}
+	{Volume "back_engine_organ"
+		{material "steel"}
+		{thickness 2}
+		{component "back_engine_organ"}
+		{tags "back_engine_organ" "organ" "main_organ"}
+	}
+	{Volume "head_organ"
+		{material "steel"}
+		{thickness 1}
+		{component "head_organ"}
+		{tags "head_organ"  "organ" "main_organ"}
+	}
+	{Volume "cpu" ; back_volume
+		{material "steel"}
+		{thickness 1}
+		{component "cpu"}
+		{tags "cpu" "main_organ" }
+	}
+	{Volume "fuel" 
+		{component "fuel"}
+		{tags "fuel"}
+	}
+	{Volume "engine_hatch" 
+		{material "misc"}
+		{thickness 3}
+	}
+	
+	
+	
+;---------------base_vol
+	{Volume "head"
+		{material "steel"}
+		{thickness 3}
+		{component "head"}
+		{tags "head" }
+	}
+	{Volume "hips" 
+		{material "steel"}
+		{thickness 5}
+		{component "hips"}
+	}
+;----------simple(legs)
+
+	{Volume "leftupleg_knee"
+		{material "steel"}
+		{thickness 5}
+		{component "leftupleg_knee"}
+		;{tags "" }
+	}
+	{Volume "rightupleg_knee"
+		{material "steel"}
+		{thickness 5}
+		{component "RightUpLeg_knee"}
+		;{tags "" }
+	}
+	{Volume "leftarm"
+		{tags "limbs" "engine_leg" }
+		{material "steel"}
+		{thickness 5}
+		{component "leftarm"}
+	}
+	{Volume "leftfoot"
+		{tags "limbs" }
+		{material "steel"}
+		{thickness 5}
+		{component "leftfoot"}
+	}
+	{Volume "leftforearm"
+		{tags "limbs" }
+		{material "steel"}
+		{thickness 5}
+		{component "leftforearm"}
+	}
+	{Volume "lefthand"
+		{tags "limbs" }
+		{material "steel"}
+		{thickness 5}
+		{component "lefthand"}
+	}
+	{Volume "lefthandtoe"
+		{tags "limbs" }
+		{material "steel"}
+		{thickness 5}
+		{component "lefthandtoe"}
+	}
+	{Volume "leftleg"
+		{tags "limbs" }
+		{material "steel"}
+		{thickness 5}
+		{component "leftleg"}
+	}
+	{Volume "lefttoebase"
+		{tags "limbs" }
+		{material "steel"}
+		{thickness 5}
+		{component "lefttoebase"}
+	}
+	{Volume "leftupleg"
+		{tags "limbs" "engine_leg" }
+		{material "steel"}
+		{thickness 5}
+		{component "leftupleg"}
+	}
+	{Volume "rightarm"
+		{component "RightArm"}		
+		{tags "limbs"  "engine_leg"}
+		{material "steel"}
+		{thickness 5}
+	}
+	{Volume "rightfoot"
+		{component "RightFoot"}		
+		{tags "limbs" }
+		{material "steel"}
+		{thickness 5}
+	}
+	{Volume "rightforearm"
+		{component "RightForeArm"}		
+		{tags "limbs" }
+		{material "steel"}
+		{thickness 5}
+	}
+	{Volume "righthand"
+		{component "RightHand"}		
+		{tags "limbs" }
+		{material "steel"}
+		{thickness 5}
+	}
+	{Volume "righthandtoe"
+		{component "RightHandToe"}		
+		{tags "limbs" }
+		{material "steel"}		
+		{thickness 5}
+	}
+	{Volume "rightleg"
+		{component "RightLeg"}		
+		{tags "limbs" }
+		{material "steel"}
+		{thickness 5}
+	}
+	{Volume "righttoebase"
+		{component "righttoebase"}		
+		{tags "limbs" }
+		{material "steel"}
+		{thickness 5}
+	}
+	{Volume "rightupleg"
+		{component "rightupleg"}		
+		{tags "limbs" "engine_leg"}
+		{material "steel"}
+		{thickness 5}
+	}
+
+	{Volume "head_sight_glass"
+		{tags "glass"}
+		{material "wound_glass"}
+		{thickness 0.2}
+	}
+
+	{Volume "gun"
+		{material "steel"}
+		{thickness 7}
+		{component "sniper"}
+		{tags "sniper" }
+	}
+	{Volume "visor_sniper"
+		{material "steel"}
+		{thickness 7}
+		{component "visor_sniper"}
+		{tags "visor_sniper" }
+	}
+
+
+	{sensor
+		{Visor "eyes"
+			{vision "main_scaner"}
+			{bone "visor_head_bone"}
+		}
+		{Visor "eyes2"
+			{vision "main_scaner_support"}
+			{bone "visor_head_bone_support"}
+		}
+		{Visor "weapon"
+			{vision "visor_sniper"}
+			{bone "visor_sniper_socket"}
+		}
+		
+		
+		
+		
+	}
+	("vision_mode" tag(thermal) time(60))	
+	{extender "enumerator"
+		{digit_folder "red"}
+	}
+	{extender "inventory" ; создать лут
+		{box
+			{Size 4 4}
+			{Weight 100}
+			{item "ammo 15x75"	25}
+			{item "ammo 15x75 fg"	25}
+			{item "ammo 15x75 th"	25}
+			{item "ammo visor"	10}
+			{item "ammo jump"	10}
+		}
+	}
+	{Weaponry
+		("restore_ik_time")
+		{place "gun"
+			{weapon "xm25_f" filled}
+			{foresight "foresight"}
+			{rotate}
+			{basic}
+		}
+		; {place "sniper_on" ;led
+			; {weapon 	"alarm_update_sniper" filled}
+			; {foresight 	"open_fire_v"}
+			; {basic}
+			; ;{rotate}
+		; }
+		{place "alarm_signal"    ;mgun_alarm ;led
+			{weapon 	"alarm_update_100m" filled}
+			{foresight 	"foresight_signal"}
+			{basic}
+			;{rotate}
+		}
+		{place "attack_melee_charge" ;mgun_melee ; jump_run
+			{weapon 	"skir_jump" filled}
+			{foresight 	"jump_link_h"}
+			{basic}
+			;{rotate}
+		}
+		{place "attack_melee_charge_close" ;mgun_melee_close ;jump_close
+			{weapon 	"skir_jump" filled}
+			{foresight 	"jump_link_h"}
+			{basic}
+			;{rotate}
+		}
+		{place "head_joint" ;head_joint ; head_joint
+			{weapon 	"head_joint" filled}
+			{foresight 	"visor_head_bone"}
+			{basic}
+			;{rotate}
+		}
+		; {place "gun"
+			; {weapon			"grenade_launcher_cluster_x6" filled}
+			; {LinkBone		"grenade_launcher_link"}
+			; {LinkAnimation	"off"}
+			; {basic}
+		; }
+	}
+	{mass 90}
+	("movement_skirmisher" )	
+	{Extension "skirmisher_base_sniper.mdl"}
+
+
+	{bone "head_ems_small_00"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.5 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
+	{bone "head_ems_small_01"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.5 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
+	{bone "head_ems_small_02"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.5 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
+	{bone "head_ems_small_03"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.5 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
+
+
+
+
+
+
+
+
+
+	{bone "head_ems_00_hold"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.5 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
+	{bone "head_ems_01_hold"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.5 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
+	{bone "head_ems_02_hold"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.5 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
+	{bone "head_ems_00_alarm"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.5 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
+	{bone "head_ems_01_alarm"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.5 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
+	{bone "head_ems_02_alarm"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.5 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
+	{bone "RightUpLeg_ems_alarm"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.5 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
+	{bone "RightUpLeg_ems_search"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.5 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
+	{bone "RightUpLeg_ems_hold"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.5 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
+	{bone "leftUpLeg_ems_alarm"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.5 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
+	{bone "leftUpLeg_ems_search"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.5 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
+	{bone "leftUpLeg_ems_hold"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.5 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
+}

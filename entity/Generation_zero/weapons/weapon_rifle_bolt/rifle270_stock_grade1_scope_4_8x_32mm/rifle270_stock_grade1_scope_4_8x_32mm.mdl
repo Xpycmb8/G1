@@ -1,0 +1,389 @@
+;Exported by: Xpycmb
+;Date:        Fri Apr 28 23:56:41 2023
+;File:        C:\Users\Xpycmb\Documents\3dsMax\scene\rifle_270_scope_4_8X_32Mm.max
+{Skeleton
+	{animation
+		{sequence "fire"}
+		{sequence "charge" 
+			{speed 0.45}
+			{events 
+				{1 "open_bolt_handle"}
+				{7 "clear_casing_762_51"} 
+				{10 "close_bolt_handle"}
+				{18 "bullet_drop_view"}
+			}
+		}
+		{sequence "charge_load"  
+			{file "charge.anm"}
+			{resume}
+			{speed 0.45}
+			{events
+				{1 "open_bolt_handle"}
+				{2 "bullet_drop_hide"}				
+				{13 "close_bolt_handle"} 
+				{18 "bullet_drop_view"}
+			}
+		}
+		{sequence "clip_magazine_out" {speed 0.6}}
+	}
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "foresight3"
+			{parameters "Voxels=0;"}
+			{Matrix34
+				1	0	0
+				0	0	-1
+				0	1	0
+				15.4004	1.0367	0
+			}
+		}
+		{bone "fx_main"
+			{parameters "Voxels=0;"}
+			{Position 15.4004	1.0367	0}
+		}
+		{bone "receiver"
+			{parameters "ID=body;"}
+			{Orientation
+				1	0	0
+				0	0	-1
+				0	1	0
+			}
+			{VolumeView "receiver.ply"}
+			{bone "scope_attach"
+				{parameters "hkaSkeleton = Reference;hkaBone = 2;"}
+				{Matrix34
+					0	-1	0
+					0	0	1
+					-1	0	0
+					1.22208	0	1.4024
+				}
+				{bone "scope"
+					{parameters "ID=Body;"}
+					{Matrix34
+						-1	0	0
+						0	0	1
+						0	1	0
+						0.0735193	0.432333	-1.04027
+					}
+					{VolumeView "scope.ply"}
+				}
+			}
+			{bone "mag_release_button"
+				{parameters "hkaSkeleton = Reference;hkaBone = 4;"}
+				{Matrix34
+					0	-1	0
+					0	0	1
+					-1	0	0
+					1.44508	-0.00546288	0.10876
+				}
+			}
+			{bone "shoulder"
+				{parameters "hkaSkeleton = Reference;hkaBone = 5;"}
+				{Matrix34
+					0	-1	0
+					0	0	1
+					-1	0	0
+					-4.92136	0	0.0527739
+				}
+			}
+			{bone "pipe"
+				{parameters "hkaSkeleton = Reference;hkaBone = 6;"}
+				{Matrix34
+					0	-1	0
+					0	0	1
+					-1	0	0
+					15.3781	0	0.988187
+				}
+			}
+			{bone "trigger_bone"
+				{parameters "hkaSkeleton = Reference;hkaBone = 8;"}
+				{Matrix34
+					0	-1	0
+					0	0	1
+					-1	0	0
+					0.414866	0	0.138333
+				}
+				{bone "trigger"
+					{parameters "ID=body;"}
+					{Matrix34
+						-1	0	0
+						0	0	1
+						0	1	0
+						0	-0.254261	-0.0120905
+					}
+					{VolumeView "trigger.ply"}
+				}
+			}
+			{bone "bolt_button"
+				{parameters "hkaSkeleton = Reference;hkaBone = 11;"}
+				{Matrix34
+					0	-1	0
+					0	0	1
+					-1	0	0
+					-0.10147	0	0.845285
+				}
+			}
+			{bone "ammo_reload_worldparent"
+				{parameters "hkaSkeleton = Reference;hkaBone = 16;"}
+				{Matrix34
+					0	-1	0
+					0	0	1
+					-1	0	0
+					3.61676	0.000857592	1.07367
+				}
+				{bone "ammo_reload"
+					{parameters "hkaSkeleton = Reference;hkaBone = 17;"}
+					{Position 0	0	0}
+				}
+				{bone "bullet_charge"
+					{parameters "ID=body;"}
+					{Matrix34
+						-1	0	0
+						0	0	1
+						0	1	0
+						0	-0.0423728	0.460967
+					}
+					{VolumeView "bullet_charge.ply"}
+				}
+			}
+			{bone "magazine_clip"
+				{parameters "hkaSkeleton = Reference;hkaBone = 13;"}
+				{Matrix34
+					0	1	0
+					0	0	1
+					1	0	0
+					2.44664	0.0848212	0.42394
+				}
+				{bone "magazine"
+					{parameters "ID=body;"}
+					{Orientation
+						1	0	0
+						0	0	-1
+						0	1	0
+					}
+					{VolumeView "magazine.ply"}
+					{bone "bullet"
+						{parameters "ID=body;"}
+						{Position -0.0839638	0.908668	0.469258}
+						{VolumeView "bullet.ply"}
+					}
+				}
+			}
+			{bone "barrel"
+				{parameters "ID=body;"}
+				{Position 9.54289	0	1.12135}
+				{VolumeView "barrel.ply"}
+				{bone "part3"
+					{parameters "ID=body;"}
+					{Position 5.08059	0	0.241754}
+					{VolumeView "part3.ply"}
+				}
+			}
+			{bone "bolt_back"
+				{parameters "hkaSkeleton = Reference;hkaBone = 10;"}
+				{Matrix34
+					0	-1	0
+					0	0	1
+					-1	0	0
+					0.373502	0	1.09732
+				}
+				{bone "part1"
+					{parameters "ID=body;"}
+					{Matrix34
+						-1	0	0
+						0	0	1
+						0	1	0
+						0.0516032	-0.0365226	0.115726
+					}
+					{VolumeView "part1.ply"}
+				}
+				{bone "bolt"
+					{parameters "hkaSkeleton = Reference;hkaBone = 7;"}
+					{Position 0	-0.0633783	-0.37673}
+					{bone "recoil"
+						{parameters "ID=body;"}
+						{Matrix34
+							-1	0	0
+							0	0	1
+							0	1	0
+							0.352027	-0.366406	-1.12842
+						}
+						{VolumeView "recoil.ply"}
+					}
+					{bone "shell_drop"
+						{parameters "ID=body;"}
+						{Matrix34
+							0.936737	-0.350033	0
+							0	0	-1
+							0.350033	0.936737	0
+							-0.000857109	-0.00264037	-2.87091
+						}
+						{VolumeView "shell_drop.ply"}
+					}
+				}
+				{bone "ammo_used"
+					{parameters "hkaSkeleton = Reference;hkaBone = 14;"}
+					{Position -0.000856805	-0.0236459	-2.78229}
+				}
+			}
+		}
+		{bone "handle"
+			{parameters "Voxels=0;"}
+			{Matrix34
+				1	0	0
+				0	0	-1
+				0	1	0
+				3.96102	1.4024	0
+			}
+		}
+	}
+}
+{Volume "barrel"
+	{Box 10.5 0.3 0.3}
+	{Bone "barrel"}
+	{Matrix34
+		1.1	0	0
+		0	1.1	0
+		0	0	1.1
+		0	0	-0.0689504
+	}
+}
+{Volume "magazine"
+	{Box 0.341718 1.67951 0.78516}
+	{Bone "magazine"}
+	{Matrix34
+		1.1	0	0
+		0	1.1	0
+		0	0	1.1
+		-0.0772264	0.283557	0.0695812
+	}
+}
+{Volume "part1"
+	{Box 0.423872 0.736013 0.424129}
+	{Bone "part1"}
+	{Matrix34
+		1.1	0	0
+		0	1.1	0
+		0	0	1.1
+		0.0356114	0	0
+	}
+}
+{Volume "part3"
+	{Box 0.203872 0.736013 0.309129}
+	{Bone "part3"}
+	{Matrix34
+		0	1.1	0
+		-1.1	0	0
+		0	0	1.1
+		0.220705	0	-0.0199122
+	}
+}
+{Volume "receiver"
+	{Polyhedron "receiver.vol"}
+	{Bone "receiver"}
+	{Matrix34
+		0	1	0
+		-0.0871557	0	0.996195
+		0.996195	0	0.0871557
+		-5.64388	0	-0.775489
+	}
+}
+{Volume "recoil"
+	{Box 0.5 2.78768 0.5}
+	{Bone "recoil"}
+	{Matrix34
+		1.1	0	0
+		0	1.1	0
+		0	0	1.1
+		0.352026	-0.225612	0.343177
+	}
+}
+{Volume "scope"
+	{Box 0.6 6.0988 0.886912}
+	{Bone "scope"}
+	{Matrix34
+		-1	0	0
+		0	-1	0
+		0	0	1
+		0.104689	0.00348145	0.0308992
+	}
+}
+{Volume "select"
+	{Box 19 5 4}
+	{Bone "receiver"}
+	{Matrix34
+		1.1	0	0
+		0	1.1	0
+		0	0	1.1
+		4.74065	0.0188502	-0.248683
+	}
+}
+{Volume "shell_drop"
+	{Cylinder 0.101839 0.893629}
+	{Bone "shell_drop"}
+	{Matrix34
+		-1.03041	0	-0.385036
+		-0.385036	0	1.03041
+		0	1.1	0
+		0	-0.00239956	0
+	}
+}
+{Volume "trigger"
+	{Box 0.113101 0.183361 0.367578}
+	{Bone "trigger"}
+	{Orientation
+		1.1	0	0
+		0	1.1	0
+		0	0	1.1
+	}
+}
+{Extender "preview"
+	{"Stuff"
+		{camera
+			{origin 4.77569	-1.91173	26.5337}
+			{lookat 4.7438	1.77982	-24.9716}
+			{fov 45}
+			{horizon -175.346}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 26.2698	-19.2765	-49.3697}
+			}
+			{"1"
+				{type directional}
+				{direction 0.0290609	0.166789	-0.470465}
+			}
+			{"2"
+				{type point}
+				{position -16.6188	16.9602	-54.0589}
+			}
+		}
+	}
+	{"Stuff_primary"
+		{camera
+			{origin 5.25971	-2.02615	31.5684}
+			{lookat 5.22651	1.81302	-21.9971}
+			{fov 45}
+			{horizon 179.512}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 27.5184	-21.8859	-46.585}
+			}
+			{"1"
+				{type directional}
+				{direction 0.0290607	0.166788	-0.470465}
+			}
+			{"2"
+				{type point}
+				{position -15.3701	14.3507	-51.2743}
+			}
+		}
+	}
+}

@@ -1,0 +1,85 @@
+;Exported by: Xpycmb
+;Date:        Sat Apr  8 03:13:34 2023
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\barn_01_ramp_01.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "barn_01_ramp_01"
+			{parameters "ID=Body;"}
+			{Matrix34
+				0	1	0
+				-1	0	0
+				0	0	1
+				-128.342	-0.101913	19.9382
+			}
+			{VolumeView "barn_01_ramp_01.ply"}
+			{bone "land_patch"
+				{parameters "CommonMesh;Land;Ground;"}
+				{Matrix34
+					1	0	0
+					0	0.965926	-0.258819
+					0	0.258819	0.965926
+					0.101906	1.67749	6.57661
+				}
+				{visibility 0}
+				{VolumeView "land_patch.ply" {Ground}}
+			}
+		}
+	}
+}
+{Obstacle "obs1"
+	{Obb2
+		{Center -28.9703 -30.4485}
+		{Extent 27.8767 1.25}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Obstacle "obs2"
+	{Obb2
+		{Center -28.9703 29.8821}
+		{Extent 27.8767 1.25}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Obstacle "stone_25_00"
+	{Obb2
+		{Center -156.334 -30.503}
+		{Extent 102.969 1.67437}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Obstacle "stone_25_027"
+	{Obb2
+		{Center -156.334 29.8641}
+		{Extent 102.969 1.67437}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Volume "stone_25_00"
+	{Polyhedron "stone_25_00.vol"}
+	{Bone "barn_01_ramp_01"}
+	{Position 31.68	24.9613	-36.1542}
+}
+{Volume "stone_25_027"
+	{Polyhedron "stone_25_027.vol"}
+	{Bone "barn_01_ramp_01"}
+	{Position -28.6872	24.9613	-36.1542}
+}
+{Volume "stone_25_25"
+	{Box 2.5 60.66 64.128}
+	{Bone "barn_01_ramp_01"}
+	{Matrix34
+		0	1	0
+		-1	0	0
+		0	0	1
+		0.101906	-74.7076	-7.0985
+	}
+}

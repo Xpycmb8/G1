@@ -1,0 +1,96 @@
+;Exported by: Xpycmb
+;Date:        Sun Nov 13 17:57:06 2022
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\shell_5m_fg.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "handle"
+			{Matrix34
+				0	0	1
+				1	0	0
+				0	1	0
+				-0.24433	0.138242	-0.057819
+			}
+		}
+		{bone "rocket"
+			{parameters "ID=Gun;"}
+			{Matrix34
+				-1	0	0
+				0	0	1
+				0	1	0
+				0	0	0
+			}
+			{VolumeView "rocket.ply"}
+		}
+	}
+}
+{Volume "body"
+	{Cylinder 0.2655 2.95161}
+	{Bone "rocket"}
+	{Matrix34
+		0	1	0
+		0	0	-1
+		-1	0	0
+		0.0271119	0	0
+	}
+}
+{Volume "select"
+	{Box 1.5 2.5 1.5}
+	{Bone "basis"}
+	{Matrix34
+		0	0	1
+		1	0	0
+		0	1	0
+		-0.0271119	0	0
+	}
+}
+{Extender "preview"
+	{"Stuff"
+		{camera
+			{origin 1.05047	-0.224143	-4.48894}
+			{lookat -5.71708	0.90958	25.4965}
+			{fov 45}
+			{horizon 81.2662}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 15.9418	2.58918	44.2648}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0982827	-0.117819	0.475877}
+			}
+			{"2"
+				{type point}
+				{position -12.9398	-14.4508	42.8482}
+			}
+		}
+	}
+	{"Stuff_primary"
+		{camera
+			{origin -0.215183	-0.772422	-6.05271}
+			{lookat -0.538775	2.41115	25.778}
+			{fov 45}
+			{horizon 5.8412}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 33.4843	5.61563	39.4641}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0307125	-0.0849369	0.491775}
+			}
+			{"2"
+				{type point}
+				{position 1.51967	-3.35019	44.403}
+			}
+		}
+	}
+}

@@ -1,0 +1,82 @@
+;Exported by: Xpycmb
+;Date:        Wed Jan  1 05:20:47 2025
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\visor_ammo.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "handle"
+			{Matrix34
+				0	1	0
+				-1	0	0
+				0	0	1
+				0.24433	-0.0578189	0.138242
+			}
+		}
+		{bone "body"
+			{VolumeView "body.ply"}
+		}
+	}
+}
+{Volume "body"
+	{Box 1.31027 0.272551 0.686889}
+	{Bone "body"}
+	{Position -0.0708141	0.011839	-0.0479547}
+}
+{Volume "select"
+	{Box 3 6 3}
+	{Bone "basis"}
+	{Orientation
+		0	1	0
+		-1	0	0
+		0	0	1
+	}
+}
+{Extender "preview"
+	{"Stuff"
+		{camera
+			{origin -0.0280306	-3.44613	0.977157}
+			{lookat 2.38899	25.9497	-7.75526}
+			{fov 45}
+			{horizon 0.540679}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 16.845	33.8765	-24.9497}
+			}
+			{"1"
+				{type directional}
+				{direction 0.0375925	0.498545	-0.00629275}
+			}
+			{"2"
+				{type point}
+				{position -12.2967	44.6031	-12.2131}
+			}
+		}
+	}
+	{"Stuff_primary"
+		{camera
+			{origin -0.404008	-3.57658	0.675428}
+			{lookat 2.24119	27.9935	-3.77041}
+			{fov 45}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 19.0683	39.1833	-12.1052}
+			}
+			{"1"
+				{type directional}
+				{direction 0.0267785	0.494771	0.0669673}
+			}
+			{"2"
+				{type point}
+				{position -11.3503	47.7296	-0.783445}
+			}
+		}
+	}
+}

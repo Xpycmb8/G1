@@ -1,0 +1,20 @@
+{game_entity
+	(include "/properties/physics_generic.ext")
+	{body {proper body } {permit body}}
+	{props "crystal_zm_spawner"}
+	{simulation {able 1} {state 1}}
+	{collider "fraction"}
+	{obstacleID "fraction"}	
+	{Extension "dark_aether.mdl"}
+	{bone "ems"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.01 }
+				{shiftU 0 1 0.01 }	;min max delta [pingpong]
+			}
+		}
+	}
+	{volume "body"
+		{material "wound_glass_small"}		
+	}
+}

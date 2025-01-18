@@ -1,0 +1,33 @@
+{game_entity
+	{props "steel" "inventory_box" "small_ammo"}
+	{mass 0}
+	{extender "inventory" 
+		{box
+			{Size 1 1}
+			{Weight 100}
+			{item "7x64 rifle270 fmj ammo"	5}
+		}
+	}
+	{Volume "body"
+		{able {touch} {obstacle 0}}
+	}
+	{Skeleton
+		{bone "basis"
+			{Orientation
+				1	0	0
+				0	-1	0
+				0	0	1
+			}
+		}
+	}
+	{Volume "body"
+		{Box 1.31303 2.3754 1.20563}
+		{Bone "basis"}
+		{Matrix34
+			0.173648	-0.984808	0
+			0.984808	0.173648	0
+			0	0	1
+			0	0	0.602813
+		}
+	}
+}

@@ -1,0 +1,10 @@
+{game_entity
+	(include "/properties/construction_zero.ext")
+	{props "open_doors_wood"}
+	{Volume "wood10_00"		
+		{material "wood"}
+		{able {visible 0}{blockcamera 0}}
+		{Thickness 8}		
+	}
+	{Extension "barn_01_door_left_01.mdl"}
+}

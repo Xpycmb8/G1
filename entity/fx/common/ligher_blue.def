@@ -1,0 +1,106 @@
+{fx
+	{##+ spriteview glow
+		{sprite "$/additional/generalglow01_d"
+			{preturn 0 180}
+			{light 1
+				{peak
+					{min 0.22}
+					{max 0.24}
+				}
+			}
+			{timer
+				{mode play loop }
+				{duration 2}
+			}
+			{scale 0.0055 0.0005}
+			{highlight 0xff9ccefe}
+		}
+		{## halo}
+		{## offset 0 0 -0.5}
+	}
+	{##+ spriteview main
+		{sprite "$/additional/light1"
+			{light 1
+				{peak
+					{min 0.01}
+					{max 0.02}
+				}
+			}
+			{timer
+				{mode play loop }
+				{duration 10}
+			}
+			{scalex 0.5}
+			{scaley 0.3}
+			{highlight 0xff9ccefe}
+		}
+		{orientation trace}
+		{#+ softintersection}
+	}
+	{#+ spriteview lines1
+		{sprite "$/additional/light1"
+			{light 1
+				{peak
+					{min 0.01}
+					{max 0.03}
+				}
+			}
+			{timer
+				{mode play loop }
+				{duration 0.2}
+			}
+			{scalex 0.4}
+			{scaley 0.3}
+			{highlight 0xff235eff}
+			{preturn 0 10}
+		}
+		{orientation trace}
+		{#+ softintersection}
+	}
+	{spriteview glow
+		{sprite "$/additional/fireglow_d"
+			{preturn 0 180}
+			{light 1
+				{peak
+					{min 0}
+					{max 0.7}
+				}
+			}
+			{timer
+				{mode play loop }
+				{duration 0.06}
+			}
+			{scale 0.05}
+			{highlight 0xff1f58ff}
+		}
+		{## halo}
+	}
+	{#+ lightview small
+		{type spot}
+		{animator
+			{highlight 0xff233aff}
+			{## timer
+				{## mode play loop }
+				{## duration 1}
+			}
+			{## visibility 1.5 -0.5}
+			{scale 0.6 0.4}
+		}
+		{attenuation0 1}
+		{attenuation1 5}
+		{falloff 5}
+		{theta 26}
+		{phi 170}
+		{radius 140}
+		{priority 10}
+		{effectonground}
+		{pulseperiod 0.01}
+	}
+	{#+ lightview
+		{animator
+			{highlight 0xff1f58ff}
+		}
+		{type point}
+		{radius 8}
+	}
+}

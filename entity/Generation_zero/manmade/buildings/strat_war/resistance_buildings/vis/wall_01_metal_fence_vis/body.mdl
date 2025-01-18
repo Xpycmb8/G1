@@ -1,0 +1,21 @@
+;Exported by: Xpycmb
+;Date:        Sat Jan  7 18:11:38 2023
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\building_resistance_wall_01_metal_fence_01_vis.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "body"
+			{parameters "ID=body;"}
+			{Orientation
+				0	-1	0
+				1	0	0
+				0	0	1
+			}
+			{VolumeView "body.ply"}
+		}
+	}
+}

@@ -1,0 +1,7 @@
+{game_entity
+	(include "/properties/stuff.ext")
+	{Extension "mags1_xm53.mdl"}
+	{extender "stuff"
+		{item "ammo 15x75 cs"}
+	}
+}

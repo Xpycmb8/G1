@@ -1,0 +1,69 @@
+{fx
+	{fire}
+	{particleview smoke
+		{generator
+			{## totalparticles 40}
+			{emissionarea
+				{radius 0.5 0.5}
+				{alpha0 0}
+				{alpha1 -20 2}
+				{speed 0.2}
+			}
+			{particleinit
+				{speed 0.3 0.1}
+				{lifetime 0.5 0.1}
+			}
+			{axisz}
+		}
+		{mover
+			{damping 0.2}
+			{gravity
+				{value -0.005}
+			}
+		}
+		{visualizer
+			{stage 
+				{sprite "$/additional/smoke_light6"
+					{turn 1
+						{linear
+							{min 0}
+							{max 0 30}
+						}
+					}
+					{scale 1
+						{linear
+							{min 0.01}
+							{max 0.075 0.025}
+						}
+					}
+					{visibility 1
+						{peak
+							{min 0}
+							{max 0.3 0.1}
+						}
+					}
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{preturn 0 180}
+					{## redlight 1}
+					{## greenlight 1
+						{linear
+							{min 0.5}
+							{max 1}
+						}
+					}
+					{## bluelight 1
+						{linear
+							{min 0}
+							{max 1}
+						}
+					}
+					{highlight 0xff5a5a5a}
+				}
+			}
+		}
+		{notifyowner}
+	}
+}

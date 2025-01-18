@@ -1,0 +1,103 @@
+;Exported by: Xpycmb
+;Date:        Wed Apr 19 00:23:12 2023
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\bridge_concrete_landing_01.max
+{Skeleton
+	{bone "bone0"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "land_patch"
+			{parameters "CommonMesh;Land;Ground;"}
+			{Matrix34
+				0	-1	0
+				1	0	0
+				0	0	1
+				26.5785	-0.843544	4.71764
+			}
+			{visibility 0}
+			{VolumeView "land_patch.ply" {Ground}}
+		}
+		{bone "bridge_concrete"
+			{parameters "id=body;"}
+			{Orientation
+				0	-1	0
+				1	0	0
+				0	0	1
+			}
+			{VolumeView "bridge_concrete.ply"}
+		}
+		{bone "bridge_railing"
+			{parameters "id=body;"}
+			{Orientation
+				0	-1	0
+				1	0	0
+				0	0	1
+			}
+			{VolumeView "bridge_railing.ply"}
+		}
+	}
+}
+{Obstacle "body"
+	{Obb2
+		{Center 102.263 -79.7721}
+		{Extent 247.5 1.50001}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Obstacle "body2"
+	{Obb2
+		{Center 103.061 79.7042}
+		{Extent 247.5 1.50001}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Obstacle "body3"
+	{Obb2
+		{Center 410.06 79.7042}
+		{Extent 60.19 1.5}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Obstacle "body4"
+	{Obb2
+		{Center 410.06 -79.8694}
+		{Extent 60.19 1.5}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Volume "body"
+	{Box 3 495 8.11611}
+	{Bone "bridge_railing"}
+	{Position -79.7722	102.263	23.5414}
+}
+{Volume "body2"
+	{Box 3 495 6.79998}
+	{Bone "bridge_railing"}
+	{Position 79.7042	103.061	22.775}
+}
+{Volume "body3"
+	{Box 3 122.804 6.79998}
+	{Bone "bridge_railing"}
+	{Matrix34
+		1	0	0
+		0	0.965926	-0.258819
+		0	0.258819	0.965926
+		79.7042	410.06	8.1522
+	}
+}
+{Volume "body4"
+	{Box 3 122.804 6.79998}
+	{Bone "bridge_railing"}
+	{Matrix34
+		1	0	0
+		0	0.965926	-0.258819
+		0	0.258819	0.965926
+		-79.8694	410.059	8.1522
+	}
+}

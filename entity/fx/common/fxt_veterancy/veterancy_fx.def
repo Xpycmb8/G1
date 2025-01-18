@@ -1,0 +1,185 @@
+{fx
+	{#+ particleview smoke
+		{generator
+			{totalparticles 2}
+			{emissionarea
+				{radius 0}
+				{alpha0 0}
+				{alpha1 0}
+				{speed 1}
+			}
+			{particleinit
+				{speed 0.1}
+				{lifetime 0.1}
+			}
+			{axisz}
+			{## timetolive 0.2}
+		}
+		{mover
+			{damping 0.96}
+			{gravity
+				{value -0.001}
+			}
+		}
+		{visualizer
+			{stage 
+				{sprite "$/additional/smoke_light1_small"
+					{turn 1
+						{npower
+							{min -1 201}
+							{max 0}
+							{pow 0.5}
+						}
+					}
+					{scale 1
+						{linear
+							{min 0.01}
+							{max 0.1}
+						}
+					}
+					{visibility 1
+						{##+ npower
+							{min 0.4}
+							{max 0}
+							{pow 1.6}
+						}
+						{peak
+							{min 0}
+							{max 0.1}
+						}
+					}
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{preturn 0 180}
+					{highlight 0xff0041f2}
+				}
+				{##+ sprite "$/additional/clouds00"
+					{turn 1
+						{npower
+							{min 0 300}
+							{max 0}
+							{pow 0.5}
+						}
+					}
+					{scale 1
+						{linear
+							{min 0.3}
+							{max 0.05 -0.05}
+						}
+					}
+					{visibility 1
+						{peak
+							{min 0}
+							{max 0.25 0.05}
+						}
+					}
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{preturn 0 180}
+					{## highlight 0xff696969}
+				}
+			}
+		}
+		{notifyowner}
+	}
+	{particleview fire
+		{generator
+			{totalparticles 3}
+			{emissionarea
+				{radius 0.1}
+				{alpha0 0}
+				{alpha1 0}
+				{speed 1}
+			}
+			{particleinit
+				{speed 0}
+				{lifetime 0.1}
+			}
+			{particlesinblock 1}
+			{axisz}
+			{timetolive 0.1}
+		}
+		{mover
+			{damping 0.6}
+			{gravity
+				{value -0.01}
+			}
+		}
+		{visualizer
+			{stage 
+				{sprite "$/additional/pyro_spark"
+					{## turn 1
+						{linear
+							{min 0 5}
+							{max 60 100}
+						}
+					}
+					{scale 1
+						{linear
+							{min 0.02}
+							{max 0.005 -0.005}
+						}
+					}
+					{light 1
+						{## peak
+							{## min 0}
+							{max 0.4 0.1}
+						}
+						{power
+							{min 0.9 0.1}
+							{max 0}
+							{pow 1}
+						}
+					}
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{preturn 0 180}
+					{highlight 0xff005eb7}
+					{## redlight 1}
+					{bluelight 1
+						{power
+							{min 1}
+							{max 12}
+							{pow 1}
+						}
+					}
+					{greenlight 1
+						{power
+							{min 0}
+							{max 3}
+							{pow 1}
+						}
+					}
+				}
+				{##+ sprite "$/additional/fire_shot13"
+					{scale 1
+						{linear
+							{min 0}
+							{max 0.03 -0.02}
+						}
+					}
+					{light 1
+						{power
+							{min 0.9 0.1}
+							{max 0}
+							{pow 1}
+						}
+					}
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{preturn 0 180}
+					{highlight 0xffff7553}
+				}
+			}
+		}
+		{notifyowner}
+	}
+}

@@ -1,0 +1,41 @@
+{game_entity
+	(include "/properties/construction.inc")
+	{props "sand" "sandbag" "construction"}
+	{extension "building_soviet_barrier_01_cover.mdl"}
+	{Volume "body_40_1"
+		{Tags "body"}
+		{thickness 60}
+		{material "sand"}
+	}
+	{Volume "body_40_2"
+		{Tags "body"}
+		{thickness 60}
+		{material "sand"}
+	}
+	{Volume "body_40_3"
+		{Tags "body"}
+		{thickness 60}
+		{material "sand"}
+	}
+	{Volume "body_40_4"
+		{Tags "body"}
+		{thickness 60}
+		{material "sand"}
+	}
+	{Volume "body_40_5"
+		{Tags "body"}
+		{thickness 60}
+		{material "sand"}
+	}
+	{Volume "body_40_6"
+		{Tags "body"}
+		{thickness 60}
+		{material "sand"}
+	}
+	{volume "body_20"
+		;{Tags "body"}
+		{thickness 20}
+		{material "armor"}
+	}
+	{lodclass "decor_medium"}
+}

@@ -1,0 +1,349 @@
+{fx
+	{sound "human/hit/"}
+	{#+ particleview pieces
+		{generator
+			{totalparticles 3}
+			{emissionarea
+				{radius 0.1 0.1}
+				{alpha0 -170}
+				{alpha1 -180}
+			}
+			{particleinit
+				{speed 4}
+				{lifetime 3.6 1.2}
+			}
+			{particlesinblock 1}
+			{timetolive 1}
+			{axisz}
+		}
+		{#+ mover
+			{damping 0.9}
+			{gravity
+				{value 0.1}
+			}
+			{collisions
+				{terrain}
+				{restitution 0.05}
+			}
+			{nodependonwind}
+		}
+		{#+ visualizer
+			{#+ stage initial 
+				{sprite "$/particle/bloodspot02"
+					{turn 1
+						{linear
+							{min 600}
+							{max 0}
+						}
+					}
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{scale 0.0075 0.0025}
+					{preturn 90 90}
+				}
+				{sprite "$/particle/bloodspot02"
+					{turn 1
+						{linear
+							{min 0}
+							{max 5}
+						}
+					}
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{scale 0.0075 0.0025}
+					{preturn 90 90}
+				}
+			}
+			{stage collided dying 
+				{sprite "$/particle/bloodspot02"
+					{visibility 1
+						{linear
+							{min 1}
+							{max 0}
+						}
+					}
+					{timer
+						{mode play }
+						{duration 70 -50}
+					}
+					{scale 0.04 0.01}
+					{preturn 90 60}
+				}
+				{sprite "$/additional/fx_blood/fx_blood01"
+					{visibility 1
+						{linear
+							{min 1}
+							{max 0}
+						}
+					}
+					{timer
+						{mode play }
+						{duration 70 -50}
+					}
+					{scale 0.04 0.01}
+					{preturn 90 60}
+				}
+				{flags killparticle ground }
+				{sprite "$/additional/fx_blood/fx_blood02"
+					{visibility 1
+						{linear
+							{min 1}
+							{max 0}
+						}
+					}
+					{timer
+						{mode play }
+						{duration 70 -50}
+					}
+					{scale 0.04 0.01}
+					{preturn 90 60}
+				}
+				{sprite "$/additional/fx_blood/fx_blood04"
+					{visibility 1
+						{linear
+							{min 1}
+							{max 0}
+						}
+					}
+					{timer
+						{mode play }
+						{duration 70 -50}
+					}
+					{scale 0.04 0.01}
+					{preturn 90 60}
+				}
+				{sprite "$/additional/fx_blood/fx_blood03"
+					{visibility 1
+						{linear
+							{min 1}
+							{max 0}
+						}
+					}
+					{timer
+						{mode play }
+						{duration 70 -50}
+					}
+					{scale 0.04 0.01}
+					{preturn 90 60}
+				}
+			}
+		}
+		{notifyowner}
+	}
+	{#+ particleview stream
+		{generator
+			{totalparticles 40}
+			{particlesinblock 40}
+			{emissionarea
+				{radius 0}
+				{alpha0 0}
+				{alpha1 3.5 1.5}
+			}
+			{particleinit
+				{speed 2.5 4.5}
+				{lifetime 0.8 0.4}
+			}
+			{timetolive 0.1}
+		}
+		{mover
+			{gravity
+				{value 0.01}
+			}
+			{damping 0.81}
+			{collisions
+				{terrain}
+				{restitution 0.4}
+			}
+			{nodependonwind}
+		}
+		{visualizer
+			{stage 
+				{sprite "$/particle/bloodspot03"
+					{scale 1
+						{linear
+							{min 0.0075 0.0025}
+							{max 0.015 0.005}
+						}
+					}
+					{visibility 1
+						{linear
+							{min 1}
+							{max 0}
+						}
+					}
+					{turn 1
+						{linear
+							{min 0}
+							{max 0 100}
+						}
+					}
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{preturn 90 90}
+				}
+				{sprite "$/particle/bloodspot03"
+					{scale 1
+						{linear
+							{min 0.0075 0.0025}
+							{max 0.03 0.01}
+						}
+					}
+					{visibility 1
+						{linear
+							{min 1}
+							{max 0}
+						}
+					}
+					{turn 1
+						{linear
+							{min 0}
+							{max 0 100}
+						}
+					}
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{preturn 90 90}
+				}
+			}
+		}
+		{notifyowner}
+	}
+	{#+ spriteview splash1a
+		{sprite "$/additional/blood_splash/blood_tendril_a"
+			{timer
+				{mode play }
+				{duration 0.2}
+			}
+			{visibility 1
+				{linear
+					{min 1}
+					{max 0}
+				}
+			}
+			{preturn 270}
+			{scalex 1
+				{npower
+					{min 0}
+					{max 0.06}
+					{pow 0.05}
+				}
+			}
+			{scaley 0.04}
+		}
+		{orientation trace}
+		{notifyowner}
+		{autovisible}
+	}
+	{#+ spriteview splash1c
+		{sprite "$/additional/blood_splash/blood_tendril_c"
+			{timer
+				{mode play }
+				{duration 0.2}
+			}
+			{visibility 1
+				{linear
+					{min 1}
+					{max 0}
+				}
+			}
+			{preturn 270}
+			{scalex 1
+				{npower
+					{min 0}
+					{max 0.06}
+					{pow 0.05}
+				}
+			}
+			{scaley 0.02}
+		}
+		{orientation trace}
+		{notifyowner}
+		{autovisible}
+	}
+	{#+ spriteview splash1d
+		{sprite "$/additional/blood_splash/blood_tendril_d"
+			{timer
+				{mode play }
+				{duration 0.2}
+			}
+			{visibility 1
+				{linear
+					{min 1}
+					{max 0}
+				}
+			}
+			{preturn 270}
+			{scalex 1
+				{npower
+					{min 0}
+					{max 0.06}
+					{pow 0.05}
+				}
+			}
+			{scaley 0.04}
+		}
+		{orientation trace}
+		{notifyowner}
+		{autovisible}
+	}
+	{#+ spriteview splash2
+		{sprite "$/particle/bloodsplash01"
+			{timer
+				{mode play }
+				{duration 0.4}
+			}
+			{visibility 1
+				{#+ linear
+					{min 1}
+					{max 0}
+				}
+			}
+			{preturn 90}
+			{scalex 0.3
+				{npower
+					{min 0.05}
+					{max 0.2}
+					{pow 0.3}
+				}
+			}
+			{scaley 0.07}
+		}
+		{orientation trace}
+		{notifyowner}
+		{autovisible}
+	}
+	{#+ spriteview splash2d
+		{sprite "$/additional/blood_splash/blood_tendril_a"
+			{timer
+				{mode play }
+				{duration 0.4}
+			}
+			{visibility 1
+				{#+ linear
+					{min 1}
+					{max 0}
+				}
+			}
+			{preturn 90}
+			{scalex 0.3
+				{npower
+					{min 0.01}
+					{max 0.04}
+					{pow 0.3}
+				}
+			}
+			{scaley 0.02}
+		}
+		{orientation trace}
+		{notifyowner}
+		{autovisible}
+	}
+}

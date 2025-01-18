@@ -1,0 +1,80 @@
+;Exported by: Xpycmb
+;Date:        Sun Feb 13 12:38:45 2022
+;File:        C:\Users\Xpycmb\Documents\3dsMax\scenes\m203_ammo.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "handle"
+			{Position -0.057819	-0.24433	0.138242}
+		}
+		{bone "m203"
+			{parameters "CommonMesh;"}
+			{Position 0.00449944	0	-0.0027504}
+			{VolumeView "m203.ply"}
+		}
+	}
+}
+{Volume "m203"
+	{Cylinder 0.43125 1.98229}
+	{Bone "m203"}
+	{Matrix34
+		0	0	-1
+		0	1	0
+		1	0	0
+		0.00396132	0	0
+	}
+}
+{Volume "select"
+	{Box 4 4 4}
+	{Bone "basis"}
+	{Position -0.178445	0	-0.0415702}
+}
+{Extender "preview"
+	{"Stuff"
+		{camera
+			{origin 0.0550594	3.13334	0.23007}
+			{lookat -0.266317	-43.6896	-3.1106}
+			{fov 45}
+			{horizon 0.158259}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 12.6138	-65.9724	16.4888}
+			}
+			{"1"
+				{type directional}
+				{direction 0.0144137	-0.470465	-0.168687}
+			}
+			{"2"
+				{type point}
+				{position -29.0986	-70.2353	-12.9301}
+			}
+		}
+	}
+	{"Stuff_primary"
+		{camera
+			{origin -0.075181	4.84379	0.445}
+			{lookat -0.409431	-43.8522	-3.02922}
+			{fov 45}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 16.7448	-66.3199	18.7531}
+			}
+			{"1"
+				{type directional}
+				{direction 0.0144136	-0.470465	-0.168686}
+			}
+			{"2"
+				{type point}
+				{position -24.9676	-70.5829	-10.6657}
+			}
+		}
+	}
+}

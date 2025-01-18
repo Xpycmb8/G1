@@ -1,0 +1,20 @@
+{game_entity
+	(include "/properties/construction_small.ext")
+	{props "steel" "inventory_box" "ammo_workbench"}
+	{mass 0.000}
+	{extender "inventory" 
+		{box
+			{clear}
+			{Size 3 1}
+			{Weight 25}
+		}
+	}
+	{Volume "ready"
+		{able {touch} {obstacle 0}}
+	}
+	{Volume "body"
+		{material "wood"}
+		{thickness 8}
+	}
+	{Extension "ammo_workbench.mdl"}
+}

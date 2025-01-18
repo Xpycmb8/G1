@@ -1,0 +1,38 @@
+{game_entity
+	{skeleton
+		{bone "basis"
+			{matrix34
+				1  0  0
+				0 -1  0
+				0  0  1
+				0	0	0
+			}
+			{bone "spawn"
+				{Position -4.01962	0	10.4952}
+			}
+		}
+	}
+	{Volume "melee"
+		{Box 19.685 19.685 19.685}
+		;{Box 9 25 40} ;длина растояние высота
+		{Position 70.0165	0	9.84252}
+		{bone "basis"}
+		{tags "no_burn"}
+		{able
+			{window}
+			{contact 0} {contact_ground 0}
+			{bullet 0} {throwing 0} {obstacle 0}
+			{overlap 1} {visible 0}
+			{touch 0}
+		}
+		{density 0}
+		{material "dummy"}
+	}
+	{collider "bush"}
+	{obstacleID "nothing"}
+	{mass 0.1}
+	{volume defaultmaterial "wood"}
+	{NoGroupMesh 1}
+	{props "melee_detect_front_lynx" } 
+}
+

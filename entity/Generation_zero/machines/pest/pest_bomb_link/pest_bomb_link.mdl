@@ -1,0 +1,35 @@
+;Exported by: Xpycmb
+;Date:        Sun Jan  8 14:58:32 2023
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\pest_single_bomb.max
+{Skeleton
+	{animation
+		{sequence "ems" {autostart}}
+	}
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "bomb"
+			{parameters "ID=Bomb;"}
+			{Position 0	0	0}
+			{LODView
+				{VolumeView "bomb.ply"}
+				{VolumeView "bomb_lod1.ply"}
+				{VolumeView "bomb_lod2.ply"}
+				{VolumeView "bomb_lod3.ply"}
+			}
+			{bone "ems"
+				{parameters "ID=Bomb;"}
+				{visibility 0}
+				{VolumeView "ems.ply"}
+			}
+		}
+	}
+}
+{Volume "bomb"
+	{Box 3.08643 5.2065 1.62759}
+	{Bone "bomb"}
+	{Position 0	-1.04302	-0.128644}
+}

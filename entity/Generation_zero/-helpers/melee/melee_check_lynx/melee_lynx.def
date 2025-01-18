@@ -1,0 +1,5 @@
+{Entity
+	{Extension "melee_lynx.mdl"}
+	{Volume "box001"
+	}
+}

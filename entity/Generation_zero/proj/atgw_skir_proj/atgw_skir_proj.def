@@ -1,0 +1,8 @@
+{game_entity
+	{props "bullet"}
+	{volume "body"
+		{material "steel"}
+		{Able {contact 1} {bullet 0} {throwing 0} {obstacle 0} {touch 0} {overlap 1}}
+	}
+	{Extension "atgw_skir_proj.mdl"}
+}

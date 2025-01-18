@@ -1,0 +1,60 @@
+{fx
+	{lightview
+		{type spot}
+		{animator
+			{highlight 0xffffffff}
+		}
+		{attenuation0 0.1}
+		{attenuation1 30}
+		{falloff 0.5}
+		{theta 5}
+		{phi 179}
+		{radius 18}
+		{priority 4}
+		{effectonground}
+	}
+	{#+ spriteview glow
+		{sprite "$/additional/glow1"
+			{## preturn 0 180}
+			{light 1
+				{peak
+					{min 0.9}
+					{max 1}
+				}
+			}
+			{timer
+				{mode play loop }
+				{duration 2}
+			}
+			{scale 0.004}
+			{## highlight 0xffff6052}
+			{## scalex 0.009}
+			{## scaley 0.003}
+		}
+		{## halo}
+		{## offset 0 0 -0.5}
+	}
+	{## lightview
+		{animator
+			{highlight 0xffff0000}
+		}
+		{type point}
+		{radius 5}
+		{radiusfalloff 1}
+		{intensity 0.4}
+	}
+	{##+ lightview
+		{type spot}
+		{animator
+			{highlight 0xffff0000}
+		}
+		{attenuation0 0.05}
+		{attenuation1 10}
+		{falloff 120}
+		{theta 0.01}
+		{phi 0.1}
+		{radius 800}
+		{priority 0}
+		{attenuation2 25}
+	}
+}

@@ -1,0 +1,18 @@
+;Exported by: Xpycmb
+;Date:        Wed Jan  1 18:21:33 2025
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\debris_metal_shrapnel_.max
+{Skeleton
+	{bone "body"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{VolumeView "body.ply"}
+	}
+}
+{Volume "body"
+	{Box 1.84634 0.819812 0.717883}
+	{Bone "body"}
+	{Position 0.00752595	0.00226068	0.00160754}
+}

@@ -1,0 +1,17 @@
+-= Animation: ems, Node ems =-
+	Frame 0 {
+		Visibility 0
+		Position	-0.676256	-1.55361	2.56636
+		Orientation	-0.249241 0 0 0.968442
+	}
+	Frame 3 {
+		Visibility 1
+	}
+	Frame 8 {
+		Visibility 0
+	}
+	Frame 10 {
+		Visibility 0
+		Position	-0.676256	-1.55361	2.56636
+		Orientation	-0.249241 0 0 0.968442
+	}

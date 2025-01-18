@@ -1,0 +1,197 @@
+{fx
+	{#+ particleview pieces
+		{entitygenerator
+			{totalparticles 1}
+			{emissionarea
+				{radius 10}
+				{alpha0 0 5}
+				{alpha1 20 15}
+			}
+			{particleinit
+				{speed 5 3}
+				{lifetime 5.5 0.5}
+			}
+			{entity "#flotsam2"
+				{fx "dust_small"}
+			}
+			{## entity "#stone01"
+				{fx "spheredust_small"}
+			}
+		}
+	}
+	{#+ particleview dust
+		{generator
+			{particlesinblock 3}
+			{totalparticles 3}
+			{emissionarea
+				{radius 5 5}
+				{alpha0 0}
+				{alpha1 80 10}
+			}
+			{particleinit
+				{speed 1.75 1.25}
+				{lifetime 2 0.5}
+			}
+			{timetolive 0.1}
+			{axisz}
+		}
+		{mover
+			{damping 0.91}
+			{gravity
+				{value 0.02}
+			}
+			{collisions
+				{terrain}
+				{restitution 0.05}
+			}
+		}
+		{visualizer
+			{stage 
+				{sprite "$/additional/smoke_light7"
+					{turn 1
+						{linear
+							{min 0}
+							{max 0 30}
+						}
+					}
+					{visibility 1
+						{linear
+							{min 0.65 0.15}
+							{max 0}
+						}
+					}
+					{scale 1
+						{linear
+							{min 0.25 0.05}
+							{max 0.5 0.1}
+						}
+					}
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{preturn 0 180}
+					{highlight 0xffc3b89a}
+				}
+				{sprite "$/additional/smoke_light7"
+					{turn 1
+						{linear
+							{min 0}
+							{max 0 30}
+						}
+					}
+					{visibility 1
+						{linear
+							{min 0.65 0.15}
+							{max 0}
+						}
+					}
+					{scale 1
+						{linear
+							{min 0.25 0.05}
+							{max 0.5 0.1}
+						}
+					}
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{preturn 0 180}
+					{highlight 0xffc4b4a3}
+				}
+				{sprite "$/additional/smoke_light5"
+					{turn 1
+						{linear
+							{min 0}
+							{max 0 30}
+						}
+					}
+					{visibility 1
+						{linear
+							{min 0.65 0.15}
+							{max 0}
+						}
+					}
+					{scale 1
+						{linear
+							{min 0.15 0.05}
+							{max 0.35 0.05}
+						}
+					}
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{preturn 0 180}
+					{highlight 0xff7d7253}
+				}
+			}
+		}
+	}
+	{#+ particleview pieces_small
+		{entitygenerator
+			{totalparticles 6}
+			{emissionarea
+				{radius 10 10}
+				{alpha0 5 5}
+				{alpha1 70 10}
+			}
+			{particleinit
+				{speed 5 3}
+				{lifetime 2.5 0.5}
+			}
+			{entity "#stone03"
+				{fx "dust_empty"}
+			}
+			{axisz}
+		}
+	}
+	{##+ particleview dirt
+		{generator
+			{totalparticles 6}
+			{particlesinblock 6}
+			{emissionarea
+				{radius 10 10}
+				{alpha0 5 5}
+				{alpha1 70 10}
+			}
+			{particleinit
+				{speed 5 3}
+				{lifetime 1 0.5}
+			}
+			{timetolive 0.5}
+			{axisz}
+		}
+		{mover
+			{damping 0.97}
+			{gravity
+				{value 0.2}
+			}
+			{collisions
+				{terrain}
+				{restitution 0.3}
+			}
+			{nodependonwind}
+		}
+		{visualizer
+			{stage 
+				{sprite "$/particle/rock"
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{scale 0.15 0.05}
+					{preturn 90 90}
+				}
+				{sprite "$/particle/rock_4"
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{scale 0.15 0.05}
+					{preturn 0 180}
+				}
+			}
+		}
+	}
+}

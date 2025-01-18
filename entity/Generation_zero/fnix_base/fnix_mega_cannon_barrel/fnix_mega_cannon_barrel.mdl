@@ -1,0 +1,18 @@
+;Exported by: Xpycmb
+;Date:        Thu Nov  3 18:45:19 2022
+;File:        C:\Users\Xpycmb\Documents\3dsMax\scenes\fnix_mega_cannon.max
+{Skeleton
+	{bone "vertical_drive"
+		{parameters "ID=Body;"}
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{VolumeView "vertical_drive.ply"}
+		{bone "barrel"
+			{parameters "ID=Body;"}
+			{VolumeView "barrel.ply"}
+		}
+	}
+}

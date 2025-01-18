@@ -1,0 +1,68 @@
+;Exported by: Xpycmb
+;Date:        Fri Apr  7 22:36:00 2023
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\barn_01_base_high_side_01.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "barn_01_base_high_side_01"
+			{parameters "CommonMesh;ID=Body;"}
+			{Matrix34
+				0	0.996195	-0.087156
+				0	0.087156	0.996195
+				1	0	0
+				138.471	0.0579441	123.888
+			}
+			{VolumeView "barn_01_base_high_side_01.ply"}
+		}
+	}
+}
+{Obstacle "obs1"
+	{Obb2
+		{Center 140.293 66.3618}
+		{Extent 2.44447 39.9515}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Obstacle "obs2"
+	{Obb2
+		{Center 140.293 -66.0409}
+		{Extent 2.44447 39.9515}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Volume "wood_10_00"
+	{Polyhedron "wood_10_00.vol"}
+	{Bone "barn_01_base_high_side_01"}
+	{Matrix34
+		-0.996195	-0.0871559	0
+		0	0	1
+		-0.0871559	0.996195	0
+		-2.17625	24.5752	1.69109
+	}
+}
+{Volume "wood_10_01"
+	{Polyhedron "wood_10_01.vol"}
+	{Bone "barn_01_base_high_side_01"}
+	{Matrix34
+		-0.996195	-0.0871559	0
+		0	0	1
+		-0.0871559	0.996195	0
+		69.9178	-31.3604	1.6911
+	}
+}
+{Volume "wood_10_02"
+	{Polyhedron "wood_10_02.vol"}
+	{Bone "barn_01_base_high_side_01"}
+	{Matrix34
+		-0.996195	-0.0871559	0
+		0	0	1
+		-0.0871559	0.996195	0
+		-62.5866	-42.9531	1.6911
+	}
+}

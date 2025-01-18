@@ -1,0 +1,32 @@
+{game_entity
+	(include "/properties/construction_medium.ext")
+	{props "construction" "concrete" "wall" "emitters_concrete_fence"}	
+	{Extension "building_resistance_wall_01_metal_fence_01.mdl"}
+	{mass 800}
+	{Volume "body_10"
+		{Thickness hollow 10}
+		{material "steel"}
+	}
+	{Volume "body_40"
+		{Tags  "body"}
+		{Thickness 40}
+	}
+	{Volume "body_6"
+		{Thickness hollow 6}
+		{material "steel"}
+	}
+	{Volume "body_6_1"
+		{Thickness hollow 6}
+		{material "steel"}
+	}
+	{Volume "body_6_2"
+		{Thickness hollow 6}
+		{material "steel"}
+	}
+	{Volume "wire"
+		{Thickness hollow 0.2}
+		{able clear {NoWoundDecal}}
+		{Tags  "rex_wire"}
+		{material "steel"}
+	}
+}

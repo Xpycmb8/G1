@@ -1,0 +1,9 @@
+; 12 x 108mm yak-b
+
+{game_entity
+	(include "/properties/stuff.ext")
+	{Extension "atgw_skir_ammo.mdl"}
+	{extender "stuff"
+		{item "ammo atgw_skir"}
+	}
+}

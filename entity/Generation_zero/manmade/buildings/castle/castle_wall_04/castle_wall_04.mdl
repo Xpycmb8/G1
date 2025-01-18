@@ -1,0 +1,34 @@
+;Exported by: Xpycmb
+;Date:        Tue Apr 18 21:52:34 2023
+;File:        C:\Users\Xpycmb\Documents\3dsMax\scene\castle_wall_04.max
+{Skeleton
+	{bone "bone0"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "wall"
+			{parameters "ID=Body;"}
+			{LODView
+				{VolumeView "wall.ply"}
+				{VolumeView "wall_lod1.ply"}
+				{VolumeView "wall_lod2.ply"}
+				{VolumeView "wall_lod3.ply"}
+				{VolumeView "wall_lod4.ply"}
+			}
+		}
+	}
+}
+{Obstacle "body"
+	{Obb2
+		{Center -100.353 27.0352}
+		{Extent 154.74 29.4687}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Volume "body"
+	{Polyhedron "body.vol"}
+	{Bone "bone0"}
+}

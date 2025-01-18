@@ -1,0 +1,96 @@
+;Exported by: Xpycmb
+;Date:        Thu Mar  2 15:12:21 2023
+;File:        C:\Users\Xpycmb\Documents\3dsMax\scene\Car_Battery.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "handle"
+			{Matrix34
+				0	0	-1
+				0	-1	0
+				-1	0	0
+				0.163104	0	4.73011
+			}
+		}
+		{bone "body"
+			{parameters "ID=Body;"}
+			{Orientation
+				0	-1	0
+				1	0	0
+				0	0	1
+			}
+			{LODView
+				{VolumeView "body.ply"}
+				{VolumeView "body_lod1.ply"}
+				{VolumeView "body_lod2.ply"}
+				{VolumeView "body_lod3.ply"}
+				{VolumeView "body_lod4.ply"}
+			}
+		}
+	}
+}
+{Volume "body"
+	{Box 4.5 3 3}
+	{Bone "body"}
+	{Position 0.0568652	0.181148	1.48475}
+}
+{Volume "select"
+	{Box 5 5 5}
+	{Bone "basis"}
+	{Matrix34
+		0	-1	0
+		1	0	0
+		0	0	1
+		0.181147	-0.0875004	1.24791
+	}
+}
+{Extender "preview"
+	{"Stuff_primary"
+		{camera
+			{origin 7.66386	-0.0440376	4.05597}
+			{lookat 2.43084	-0.0459355	2.22757}
+			{fov 45}
+			{horizon 0.0197823}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 0.197059	-1.7057	1.48224}
+			}
+			{"1"
+				{type directional}
+				{direction -0.411357	0.0394226	-0.28148}
+			}
+			{"2"
+				{type point}
+				{position -0.170261	3.96501	0.245003}
+			}
+		}
+	}
+	{"Stuff"
+		{camera
+			{origin 7.44184	-0.0578972	4.29565}
+			{lookat 2.5778	-0.0574931	2.11612}
+			{fov 45}
+			{horizon 0.209357}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 0.359709	-2.53815	1.30619}
+			}
+			{"1"
+				{type directional}
+				{direction -0.385321	0.0344507	-0.316766}
+			}
+			{"2"
+				{type point}
+				{position 0.192439	3.08704	-0.160724}
+			}
+		}
+	}
+}

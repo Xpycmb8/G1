@@ -1,0 +1,62 @@
+;Exported by: Xpycmb
+;Date:        Mon Apr 10 01:37:18 2023
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\barn_door_02.max
+{Skeleton
+	{animation
+		{sequence "open"
+			{speed 0.25}
+			{events 
+				{1 "door_start"}
+				{15 "door_end"}
+			}
+			{resume}
+		}
+		{sequence "close"
+			{speed 0.25}
+			{events 
+				{1 "door_start"}
+				{15 "door_end"}
+			}
+			{resume}
+		}
+	}
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "door"
+			{bone "barn_door"
+				{parameters "ID=Wood;"}
+				{VolumeView "barn_door.ply"}
+			}
+		}
+	}
+}
+{Obstacle "close"
+	{Obb2
+		{Center 1.1991 14.6274}
+		{Extent 1.25 12.5}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Obstacle "open"
+	{Obb2
+		{Center -14.4576 2.19046}
+		{Extent 1.2519 12.5002}
+		{Axis 0.0531046 0.998589}
+	}
+	{Rotate}
+}
+{Volume "door_open"
+	{Box 4.92126 8.85827 17.7165}
+	{Bone "barn_door"}
+	{Position 0.793114	-21.3309	20.3275}
+}
+{Volume "wood10_00"
+	{Box 1 25 65}
+	{Bone "barn_door"}
+	{Position 0.793114	-13.2955	29.2529}
+}

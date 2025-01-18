@@ -1,0 +1,156 @@
+;Exported by: Xpycmb
+;Date:        Fri Apr 28 18:43:00 2023
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\ReloadingBench.max
+{Skeleton
+	{animation
+		{sequence "build" 
+			{events 
+				{16 "complete"}
+				{17 "build"}
+			}
+			{speed 0.5}
+		}
+		{sequence "open" {speed 0.5}}
+	}
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "reloadingbench"
+			{Matrix34
+				0	1	0
+				0	0	-1
+				-1	0	0
+				31.4989	0	0
+			}
+			{VolumeView "reloadingbench.ply"}
+			{bone "mag_bone"
+				{Matrix34
+					0.999633	-0.027106	0
+					0	0	1
+					-0.027106	-0.999633	0
+					1.63119	-18.2581	10.4093
+				}
+				{bone "ammo_bone"
+					{Matrix34
+						-0.999633	0	0.0271063
+						-0.0271063	0	-0.999633
+						0	-1	0
+						1.61347	0	0.268227
+					}
+				}
+			}
+			{bone "press"
+				{parameters "CommonMesh;"}
+				{VolumeView "press.ply"}
+			}
+			{bone "b2"
+				{Matrix34
+					-1	0	0
+					0	0	-1
+					0	-1	0
+					2.12868	-18.7186	8.27452
+				}
+				{bone "b1"
+					{Position -0.848658	-0.893703	5.4057}
+				}
+				{bone "bullet_bone"
+					{Matrix34
+						1	0	0
+						0	0	-1
+						0	1	0
+						0.00223374	-1.96074	2.17818
+					}
+				}
+			}
+			{bone "ammobox"
+				{Matrix34
+					-0.173648	0	0.984808
+					-0.984808	0	-0.173648
+					0	-1	0
+					7.62686	-17.6695	13.6319
+				}
+				{VolumeView "ammobox.ply"}
+				{bone "roof_bone"
+					{Position 0.0073452	-1.87699	2.07342}
+					{bone "roof"
+						{VolumeView "roof.ply"}
+					}
+				}
+			}
+			{bone "ammo_press_01"
+				{Matrix34
+					-0.906308	0	0.422618
+					0	1	0
+					-0.422618	0	-0.906308
+					-11.2558	-17.644	14.2502
+				}
+				{VolumeView "ammo_press_01.ply"}
+			}
+			{bone "ammo_press"
+				{Matrix34
+					-0.573577	0	-0.819152
+					0	1	0
+					0.819152	0	-0.573577
+					-6.72347	-17.644	19.4884
+				}
+				{VolumeView "ammo_press.ply"}
+			}
+			{bone "tool_box"
+				{Matrix34
+					-0.642787	0	0.766045
+					0	1	0
+					-0.766045	0	-0.642787
+					-9.49057	-4.69063	18.3023
+				}
+				{VolumeView "tool_box.ply"}
+			}
+			{bone "item_bone"
+				{Matrix34
+					-1	0	0
+					0	0	-1
+					0	-1	0
+					0.279158	-18.1782	11.4683
+				}
+			}
+			{bone "casing_bone"
+				{Matrix34
+					-1	0	0
+					0	1	0
+					0	0	-1
+					2.12645	-18.5693	10.2353
+				}
+			}
+			{bone "build_bullet_bone"
+				{Matrix34
+					0	-1	0
+					0	0	1
+					-1	0	0
+					2.12645	-18.5693	10.2353
+				}
+			}
+		}
+	}
+}
+{Volume "body"
+	{Box 29.9668 14.9619 17.7018}
+	{Bone "reloadingbench"}
+	{Matrix34
+		-1	0	0
+		0	0	-1
+		0	-1	0
+		-0.986729	-8.85091	15.5466
+	}
+}
+{Volume "ready"
+	{Box 2.00462 17.8191 2}
+	{Bone "reloadingbench"}
+	{Matrix34
+		-1	0	0
+		0	-1	0
+		0	0	1
+		2.43204	-26.7666	9.49877
+	}
+}

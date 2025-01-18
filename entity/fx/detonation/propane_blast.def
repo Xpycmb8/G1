@@ -1,0 +1,288 @@
+{fx
+	{#+ particleview propane_fragments_00
+		{entitygenerator
+			{totalparticles 1}
+			{emissionarea
+				{radius 0.5}
+				{alpha0 5}
+				{alpha1 67.5 -22.5}
+			}
+			{particleinit
+				{speed 20 10}
+				{lifetime 15}
+			}
+			{axisz}
+			{entity "propane_fragments_00"
+				{fx "dust_small"}
+				{spinx 120}
+				{spinz 40}
+			}
+			{timetolive 0.1}
+		}
+		{notifyowner}
+	}
+	{#+ particleview propane_fragments_01
+		{entitygenerator
+			{totalparticles 1}
+			{emissionarea
+				{radius 0.5}
+				{alpha0 5}
+				{alpha1 67.5 -22.5}
+			}
+			{particleinit
+				{speed 20 10}
+				{lifetime 15}
+			}
+			{axisz}
+			{entity "propane_fragments_01"
+				{fx "dust_small"}
+				{spinx 120}
+				{spinz 40}
+			}
+			{timetolive 0.1}
+		}
+		{notifyowner}
+	}
+	{#+ particleview propane_fragments_02
+		{entitygenerator
+			{totalparticles 1}
+			{emissionarea
+				{radius 0.5}
+				{alpha0 5}
+				{alpha1 7.5 -7.5}
+			}
+			{particleinit
+				{speed 20 5}
+				{lifetime 15}
+			}
+			{axisz}
+			{entity "propane_fragments_02"
+				{## fx "dust_small"}
+				{spinx 120}
+				{spinz 40}
+			}
+			{timetolive 0.1}
+		}
+		{notifyowner}
+	}
+	{#+ particleview propane_fragments_03
+		{entitygenerator
+			{totalparticles 1}
+			{emissionarea
+				{radius 0.5}
+				{alpha0 5}
+				{alpha1 6 -6}
+			}
+			{particleinit
+				{speed 9 -1}
+				{lifetime 15}
+			}
+			{axisz}
+			{entity "propane_fragments_03"
+				{## fx "dust_small"}
+				{spinx 120}
+				{spinz 40}
+			}
+			{timetolive 0.1}
+		}
+		{notifyowner}
+	}
+	{#+ particleview propane_fragments_04
+		{entitygenerator
+			{totalparticles 1}
+			{emissionarea
+				{radius 0.5}
+				{alpha0 5}
+				{alpha1 12}
+			}
+			{particleinit
+				{speed 20 10}
+				{lifetime 15}
+			}
+			{axisz}
+			{entity "propane_fragments_04"
+				{## fx "dust_small"}
+				{spinx 120}
+				{spinz 40}
+			}
+			{timetolive 0.1}
+		}
+		{notifyowner}
+	}
+	{#+ particleview propane_fragments_05
+		{entitygenerator
+			{totalparticles 1}
+			{emissionarea
+				{radius 0.5}
+				{alpha0 5}
+				{alpha1 10 -5}
+			}
+			{particleinit
+				{speed 15 5}
+				{lifetime 15}
+			}
+			{axisz}
+			{entity "propane_fragments_05"
+				{## fx "dust_small"}
+				{spinx 120}
+				{spinz 40}
+			}
+			{timetolive 0.1}
+		}
+		{notifyowner}
+	}
+	{#+ particleview propane_fragments_06
+		{entitygenerator
+			{totalparticles 1}
+			{emissionarea
+				{radius 0.5}
+				{alpha0 5}
+				{alpha1 10 -10}
+			}
+			{particleinit
+				{speed 20 10}
+				{lifetime 15}
+			}
+			{axisz}
+			{entity "propane_fragments_06"
+				{fx "dust_small"}
+				{spinx 120}
+				{spinz 40}
+			}
+			{timetolive 0.1}
+		}
+		{notifyowner}
+	}
+	{#+ particleview propane_fragments_07
+		{entitygenerator
+			{totalparticles 1}
+			{emissionarea
+				{radius 0.5}
+				{alpha0 5}
+				{alpha1 67.5 -22.5}
+			}
+			{particleinit
+				{speed 20 10}
+				{lifetime 15}
+			}
+			{axisz}
+			{entity "propane_fragments_07"
+				{fx "dust_small"}
+				{spinx 120}
+				{spinz 40}
+			}
+			{timetolive 0.1}
+		}
+		{notifyowner}
+	}
+	{#+ particleview propane_fragments_08
+		{entitygenerator
+			{totalparticles 1}
+			{emissionarea
+				{radius 0.5}
+				{alpha0 5}
+				{alpha1 67.5 -22.5}
+			}
+			{particleinit
+				{speed 20 10}
+				{lifetime 15}
+			}
+			{axisz}
+			{entity "propane_fragments_08"
+				{fx "dust_small"}
+				{spinx 120}
+				{spinz 40}
+			}
+			{timetolive 0.1}
+		}
+		{notifyowner}
+	}
+	{#+ particleview propane_fragments_09
+		{entitygenerator
+			{totalparticles 1}
+			{emissionarea
+				{radius 0.5}
+				{alpha0 5}
+				{alpha1 120}
+			}
+			{particleinit
+				{speed 1}
+				{lifetime 15}
+			}
+			{axisz}
+			{entity "propane_fragments_09"
+				{fx "dust_small"}
+				{spinx 360}
+				{spinz 40}
+			}
+			{timetolive 0.1}
+		}
+		{notifyowner}
+	}
+	{#+ particleview propane_fragments_10
+		{entitygenerator
+			{totalparticles 1}
+			{emissionarea
+				{radius 0.5}
+				{alpha0 5}
+				{alpha1 120}
+			}
+			{particleinit
+				{speed 1}
+				{lifetime 15}
+			}
+			{axisz}
+			{entity "propane_fragments_10"
+				{fx "dust_small"}
+				{spinx 360}
+				{spinz 40}
+			}
+			{timetolive 0.1}
+		}
+		{notifyowner}
+	}
+	{#+ particleview propane_fragments_11
+		{entitygenerator
+			{totalparticles 1}
+			{emissionarea
+				{radius 0.5}
+				{alpha0 5}
+				{alpha1 67.5 -22.5}
+			}
+			{particleinit
+				{speed 20 -5}
+				{lifetime 15}
+			}
+			{axisz}
+			{entity "propane_fragments_11"
+				{fx "dust_small"}
+				{spinx 360}
+				{spinz 40}
+			}
+			{timetolive 0.1}
+		}
+		{notifyowner}
+	}
+	{#+ particleview propane_fragments_12
+		{entitygenerator
+			{totalparticles 1}
+			{emissionarea
+				{radius 0.5}
+				{alpha0 5}
+				{alpha1 67.5 -22.5}
+			}
+			{particleinit
+				{speed 19.5 -4.5}
+				{lifetime 15}
+			}
+			{axisz}
+			{entity "propane_fragments_12"
+				{fx "dust_small"}
+				{spinx 360}
+				{spinz 40}
+			}
+			{timetolive 0.1}
+		}
+		{notifyowner}
+	}
+}

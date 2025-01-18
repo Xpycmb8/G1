@@ -1,0 +1,83 @@
+;Exported by: Xpycmb
+;Date:        Sat Dec 30 20:10:36 2023
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\bullet6x34.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "handle"
+			{Position 0	0.591408	0}
+		}
+		{bone "bullet"
+			{parameters "ID=ammo;"}
+			{Orientation
+				1	0	0
+				0	0.962056	-0.272853
+				0	0.272853	0.962056
+			}
+			{VolumeView "bullet.ply"}
+		}
+	}
+}
+{Volume "body"
+	{Box 0.829 1.26771 0.362917}
+	{Bone "bullet"}
+	{Matrix34
+		1	0	0
+		0	0.96322	0.268716
+		0	-0.268716	0.96322
+		0	-0.0122778	0.0418831
+	}
+}
+{Volume "select"
+	{Box 2.5 2.5 2.5}
+	{Bone "basis"}
+}
+{Extender "preview"
+	{"Stuff_primary"
+		{camera
+			{origin -1.09771	-0.0734754	3.33128}
+			{lookat 10.0936	-0.156783	-26.6385}
+			{fov 45}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 17.2097	44.3017	311.107}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0379937	-0.0314301	-0.267987}
+			}
+			{"2"
+				{type point}
+				{position 48.9416	36.0997	318.341}
+			}
+		}
+	}
+	{"Stuff"
+		{camera
+			{origin 0.662245	-0.0836177	2.34947}
+			{lookat -8.3953	-0.324704	-27.0464}
+			{fov 45}
+			{horizon 0.540317}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position -20.0273	-11.823	-37.5912}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0151677	-0.0349674	-0.498545}
+			}
+			{"2"
+				{type point}
+				{position -0.642607	13.3899	-48.3178}
+			}
+		}
+	}
+}

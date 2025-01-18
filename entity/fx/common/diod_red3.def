@@ -1,0 +1,13 @@
+{fx
+	{lightview
+		{animator
+			{timer
+				{mode }
+				{duration 0}
+			}
+			{highlight 0xffff2a43}
+		}
+		{type point}
+		{radius 5}
+	}
+}

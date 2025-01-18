@@ -1,0 +1,54 @@
+{game_entity
+	{props "base_building" "steel"}
+	{NoCastShadows}
+	{NoGetShadows}
+	{Extension "base_building.mdl"}
+	; {placer}
+	; {extender "structure"
+		; {place "basis" "fnix_mega_cannon_hor_drive"}
+	; }
+	{Volume "back"
+		{Tags  "back" "move"}
+		{able {touch 1}}
+	}
+	{Volume "front"
+		{Tags  "front" "move"}
+		{able {touch 1}}
+	}
+	{Volume "left"
+		{Tags  "left" "move"}
+		{able {touch 1}}
+	}
+	{Volume "right"
+		{Tags  "right" "move"}
+		{able {touch 1}}
+	}
+	{Volume "left_rotate"
+		{Tags  "left_rotate" "rotate"}
+		{able {touch 1}}
+	}
+	{Volume "right_rotate"
+		{Tags  "right_rotate" "rotate"}
+		{able {touch 1}}
+	}
+	{Volume "instal"
+		{Tags  "instal"}
+		{able {touch 1}}
+	}
+	{Volume "select_prev"
+		{Tags  "select_prev"}
+		{able {touch 1}}
+	}
+	{Volume "select_next"
+		{Tags  "select_next"}
+		{able {touch 1}}
+	}
+	{Volume "mode"
+		{Tags  "mode"}
+		{able {touch 1}}
+	}
+	{Volume "stop"
+		{Tags  "stop"}
+		{able {touch 1}}
+	}
+}

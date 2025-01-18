@@ -1,0 +1,63 @@
+{fx
+	{particleview sparkles
+		{generator
+			{emissionarea
+				{radius 0}
+				{alpha0 0}
+				{alpha1 4.5 4.5}
+				{distributionlaw sphere}
+			}
+			{particleinit
+				{speed 1}
+				{lifetime 0.15 0.05}
+			}
+			{totalparticles 3}
+			{particlesinblock 3}
+			{timetolive 0.1}
+		}
+		{#+ mover
+			{damping 0.93}
+			{gravity
+				{value 0.2}
+			}
+			{collisions
+				{terrain}
+				{restitution 0.3}
+			}
+		}
+		{visualizer
+			{stage 
+				{sprite "$/particle/oskolki"
+					{light 1
+						{linear
+							{min 1}
+							{max 0}
+						}
+					}
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{scalex 0.02}
+					{scaley 0.02}
+				}
+				{##+ sprite "$/particle/oskolkim"
+					{light 1
+						{linear
+							{min 2}
+							{max 0}
+						}
+					}
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{scalex 0.5 0.1}
+					{scaley 0.11 0.04}
+				}
+				{## flags trace}
+			}
+		}
+		{notifyowner}
+	}
+}

@@ -1,0 +1,32 @@
+;Exported by: Xpycmb
+;Date:        Thu Jan  2 20:12:59 2025
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\skirmisher_base_shotgun_stuff.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "scanner"
+			{parameters "ID=visor_head;"}
+			{Matrix34
+				1	0	0
+				0	1	0
+				0	0	1
+				0	0	0
+			}
+			{VolumeView "scanner.ply"}
+		}
+	}
+}
+{Volume "scanner"
+	{Box 0.479635 0.618534 1.08803}
+	{Bone "scanner"}
+	{Matrix34
+		0	1.4	-1.77323e-05
+		-1.4	0	1.02036e-05
+		0	-1.32323e-05	1.40001
+		0	0	-0.0568937
+	}
+}

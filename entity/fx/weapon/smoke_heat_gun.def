@@ -1,0 +1,51 @@
+{fx
+	{particleview
+		{generator
+			{totalparticles 20}
+			{emissionarea
+				{radius 0.1}
+				{alpha0 3 3}
+				{alpha1 3.5 3.5}
+			}
+			{particleinit
+				{speed 0}
+				{lifetime 1.75 0.25}
+			}
+		}
+		{mover
+			{damping 0.98}
+			{gravity
+				{value -0.01}
+			}
+		}
+		{visualizer
+			{stage 
+				{sprite "$/additional/smoke_clouds"
+					{turn 1
+						{linear
+							{min 0}
+							{max 90 60}
+						}
+					}
+					{scale 1
+						{linear
+							{min 0}
+							{max 0.035 0.015}
+						}
+					}
+					{visibility 1
+						{peak
+							{min 0}
+							{max 0.1}
+						}
+					}
+					{## preturn 0 180}
+					{timer
+						{mode play }
+						{duration -1}
+					}
+				}
+			}
+		}
+	}
+}

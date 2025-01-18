@@ -1,0 +1,20 @@
+;Exported by: Xpycmb
+;Date:        Wed Apr 19 00:34:24 2023
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\bridge_concrete_extension_01_pillars.max
+{Skeleton
+	{bone "bone0"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "pillars"
+			{Orientation
+				0	-1	0
+				1	0	0
+				0	0	1
+			}
+			{VolumeView "pillars.ply"}
+		}
+	}
+}

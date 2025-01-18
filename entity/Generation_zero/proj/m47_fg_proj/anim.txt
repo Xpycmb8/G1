@@ -1,0 +1,64 @@
+-= Animation: tail, Node tail =-
+	Frame 0 {
+		Visibility 1
+		Position	-0.601334	0	0.0240878
+		Orientation	0 -0.707107 0.707107 0
+	}
+	Frame 1 {
+		Orientation	0 0.965926 -0.258819 0
+	}
+	Frame 2 {
+		Orientation	0 0.965926 0.258819 0
+	}
+	Frame 3 {
+		Orientation	0 0.707107 0.707107 0
+	}
+	Frame 4 {
+		Orientation	0 0.258819 0.965926 0
+	}
+	Frame 5 {
+		Orientation	0 -0.258819 0.965926 0
+	}
+	Frame 6 {
+		Visibility 1
+		Position	-0.601334	0	0.0240878
+		Orientation	0 -0.707107 0.707107 0
+	}
+-= Animation: open, Node proj =-
+	Frame 10 {
+		Visibility 1
+		Position	-0.601167	0	0.0240878
+		Orientation	0.707106 0 0 0.707107
+	}
+	Frame 11 {
+		Position	-0.367751	0	0.0240878
+	}
+	Frame 12 {
+		Position	-0.134335	0	0.0240878
+	}
+	Frame 13 {
+		Position	0.0990808	0	0.0240878
+	}
+	Frame 14 {
+		Position	0.332497	0	0.0240878
+	}
+	Frame 15 {
+		Position	0.565912	0	0.0240878
+	}
+	Frame 16 {
+		Position	0.799328	0	0.0240878
+	}
+	Frame 17 {
+		Position	1.03274	0	0.0240877
+	}
+	Frame 18 {
+		Position	1.26616	0	0.0240877
+	}
+	Frame 19 {
+		Position	1.49958	0	0.0240877
+	}
+	Frame 20 {
+		Visibility 1
+		Position	1.73299	0	0.0240877
+		Orientation	0.707106 0 0 0.707107
+	}

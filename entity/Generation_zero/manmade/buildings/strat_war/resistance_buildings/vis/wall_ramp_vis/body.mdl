@@ -1,0 +1,17 @@
+;Exported by: Xpycmb
+;Date:        Sat Jan  7 17:53:08 2023
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\resistance_buildings_01_wall_ramp_vis.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "body"
+			{parameters "ID=Body;"}
+			{Position 0	1.52588e-05	0}
+			{VolumeView "body.ply"}
+		}
+	}
+}

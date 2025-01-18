@@ -1,0 +1,45 @@
+;Exported by: Xpycmb
+;Date:        Sat Feb 18 22:57:48 2023
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\skirmisher_base_smg2.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "part1"
+			{Matrix34
+				-1	0	0
+				0	-1	0
+				0	0	1
+				-4.10749	0	9.62362
+			}
+			{VolumeView "part1.ply"}
+		}
+		{bone "body"
+			{Matrix34
+				0	1	0
+				-1	0	0
+				0	0	1
+				0	0	3.18245
+			}
+			{VolumeView "body.ply"}
+		}
+	}
+}
+{Volume "body"
+	{Box 13.7059 11.9437 17.8857}
+	{Bone "body"}
+	{Position 0	-0.214355	5.97889}
+}
+{Volume "part1"
+	{Box 13.7059 4.06087 17.8857}
+	{Bone "part1"}
+	{Matrix34
+		0	-1	0
+		1	0	0
+		0	0	1
+		2.17743	0	-0.462274
+	}
+}

@@ -1,0 +1,371 @@
+;Exported by: Xpycmb
+;Date:        Fri Mar  3 02:02:07 2023
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\autonomous_turret.max
+{Skeleton
+	{animation
+		{sequence "ik_h" {resume}}
+		{sequence "power_up"
+			{speed 0.7} 
+			{resume}
+			{events 
+				{1 "power_down_check"}
+				{2 "power_up_load"}
+				{5 "restart_clunk_auto"}
+				{10 "restart_clunk_auto"}
+				{17 "restart_clunk_auto"}
+				{29 "power_down_leave"}
+			}
+		}
+		{sequence "power_down"
+			{speed 0.7} 
+			{events 
+				{1 "power_down_start"}
+				{5 "restart_clunk_auto"}
+				{19 "restart_clunk_auto"}
+			}
+			{resume}
+		}
+		{sequence "energy" 
+			{events 
+				{0   	"100"}
+				{5  	"95"}
+				{10  	"90"}
+				{15  	"85"}
+				{20  	"80"}
+				{25  	"75"}
+				{30  	"70"}
+				{35  	"65"}
+				{40  	"60"}
+				{45  	"55"}
+				{50  	"50"}
+				{55  	"45"}
+				{60  	"40"}
+				{65  	"35"}
+				{70  	"30"}
+				{75  	"25"}
+				{80  	"20"}
+				{85  	"15"}
+				{90  	"10"}
+				{95  	"5"}
+				{100 	"0"}
+			}
+			{speed 0.1} 
+			{resume}
+		}
+		{sequence "stage1" {speed 0.2} {resume}}
+		{sequence "stage2" {speed 0.2} {resume}}
+	}
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone revolute "h_dr_signal"
+			{limits -45 45}
+			{speed 1}
+			{Matrix34
+				0.999995	0.000183246	-0.0032958
+				-0.000183665	1	-0.000121505
+				0.00329578	0.00012211	0.999995
+				0.00457701	0.000346145	25.3789
+			}
+			{bone revolute "v_dr_signal"
+				{limits -45 45}
+				{speed 1}
+				{Matrix34
+					-0.0137737	-0.0366899	0.999232
+					0.998863	-0.0461298	0.0120689
+					0.0456488	0.998262	0.0372865
+					-0.00837136	-0.000312424	2.54045
+				}
+				{bone "foresight_signal"
+					{Orientation
+						-0.00405324	0.998722	0.050384
+						-0.0367139	-0.0505049	0.998049
+						0.999317	0.00218371	0.0368781
+					}
+				}
+			}
+		}
+		{bone "turret"
+			{parameters "ID=Body;"}
+			{Orientation
+				0	1	0
+				-1	0	0
+				0	0	1
+			}
+			{VolumeView "turret.ply"}
+			{bone "drive"
+				{parameters "ID=Gear;"}
+				{VolumeView "drive.ply"}
+				{bone "ik_h_bone"
+					{Position 0	4.09385	14.6138}
+					{bone "drive_v"
+						{parameters "ID=Gear;"}
+						{VolumeView "drive_v.ply"}
+					}
+				}
+			}
+			{bone revolute "h_drive_slow"
+				{parameters "ID=turret;"}
+				{speed 0.01}
+				{Matrix34
+					0	-1	0
+					1	0	0
+					0	0	1
+					0	0	11.3447
+				}
+				{bone revolute "h_drive"
+					{parameters "ID=turret;"}
+					{speed 0.04}
+					{bone "wheel_h"
+						{parameters "ID=Drive;"}
+						{Orientation
+							0	1	0
+							-1	0	0
+							0	0	1
+						}
+						{VolumeView "wheel_h.ply"}
+						{bone revolute "v_drive"
+							{parameters "ID=turret;"}
+							{limits -20 20}
+							{speed 0.1}
+							{Matrix34
+								0	-1	0
+								0	0	1
+								-1	0	0
+								0	0.855698	9.14108
+							}
+							{bone "cpu"
+								{parameters "ID;"}
+								{Orientation
+									0	0	-1
+									-1	0	0
+									0	1	0
+								}
+								{VolumeView "cpu.ply"}
+								{bone "front_armor"
+									{parameters "ID=armor;"}
+									{Matrix34
+										0	0	1
+										1	0	0
+										0	1	0
+										0	-2.35603	0.38504
+									}
+									{VolumeView "front_armor.ply"}
+								}
+								{bone "head"
+									{parameters "ID;"}
+									{Matrix34
+										0	-1	0
+										1	0	0
+										0	0	1
+										0.400068	1.05319	2.17273
+									}
+									{VolumeView "head.ply"}
+									{bone "wire"
+										{parameters "ID;"}
+										{Matrix34
+											0	1	0
+											-1	0	0
+											0	0	1
+											1.05319	-0.400068	-2.17273
+										}
+										{VolumeView "wire.ply"}
+									}
+									{bone "armour_head"
+										{parameters "ID;"}
+										{Matrix34
+											0	0	1
+											-1	0	0
+											0	-1	0
+											-0.753069	-0.400068	1.21537
+										}
+										{VolumeView "armour_head.ply"}
+									}
+									{bone "head_ems_00_hold"
+										{parameters "ID;"}
+										{Position 1.31874	-0.400068	0.578272}
+										{VolumeView "head_ems_00_hold.ply"}
+									}
+									{bone "head_ems_00_alarm"
+										{parameters "ID;"}
+										{Position 1.31874	-0.400068	0.578272}
+										{visibility 0}
+										{VolumeView "head_ems_00_alarm.ply"}
+									}
+									{bone "head_ems_00_search"
+										{parameters "ID;"}
+										{Position 1.31874	-0.400068	0.578272}
+										{visibility 0}
+										{VolumeView "head_ems_00_search.ply"}
+									}
+									{bone "fx_laser_point"
+										{Position 1.31874	-0.400068	0.578274}
+									}
+									{bone "leds"
+										{parameters "ID;"}
+										{Position -1.03334	1.226	0.740736}
+										{VolumeView "leds.ply"}
+									}
+								}
+								{bone "level"
+									{Matrix34
+										0.999681	0	0.0252483
+										0	1	0
+										-0.0252483	0	0.999681
+										-1.54004	1.83362	0.503937
+									}
+								}
+								{bone "energy"
+									{parameters "CommonMesh;"}
+									{Matrix34
+										-0.0173867	0	0.999849
+										0	1	0
+										-0.999849	0	-0.0173867
+										-1.54004	1.83362	0.0593262
+									}
+									{VolumeView "energy.ply"}
+								}
+							}
+							{bone "gun_attach"
+								{Orientation
+									1	0	0
+									0	0	-1
+									0	1	0
+								}
+								{bone "smg"
+									{parameters "ID=Gun;"}
+									{VolumeView "smg.ply"}
+									{bone "foresight3"
+										{Position 9.2246	0.411685	0.372591}
+									}
+									{bone "magazine"
+										{parameters "ID=Gun;"}
+										{Matrix34
+											0	0	-1
+											0	1	0
+											1	0	0
+											3.66412	-0.422893	-2.54642
+										}
+										{VolumeView "magazine.ply"}
+									}
+									{bone "fx_main"
+										{Position 9.2246	0.411685	0.372591}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			{bone "stage1"
+				{Position 0.411683	4.82891	20.8584}
+			}
+			{bone "stage2"
+				{Position 0.411683	4.82891	20.8584}
+			}
+		}
+		{bone "battery"
+			{parameters "ID=Body;"}
+			{Matrix34
+				0	1	0
+				-1	0	0
+				0	0	1
+				-9.5265	0	0
+			}
+			{VolumeView "battery.ply"}
+		}
+	}
+}
+{Volume "armour_head"
+	{Polyhedron "armour_head.vol"}
+	{Bone "armour_head"}
+	{Position 0.0212097	0.0400398	0}
+}
+{Volume "attach_battery"
+	{Box 9 9 9}
+	{Bone "turret"}
+	{Position 0.113731	9.8888	4.46951}
+}
+{Volume "battery"
+	{Box 4.5 3 3}
+	{Bone "battery"}
+	{Matrix34
+		2	0	0
+		0	2	0
+		0	0	2
+		0.11373	0.362297	2.96951
+	}
+}
+{Volume "body"
+	{Box 11 11 1}
+	{Bone "turret"}
+	{Position 0.11373	-0.113229	9.9247}
+}
+{Volume "body2"
+	{Cylinder 1.9434 13.6642}
+	{Bone "turret"}
+	{Position 0	0	4.72436}
+}
+{Volume "cpu"
+	{Box 2.89786 3.74153 2.71504}
+	{Bone "cpu"}
+	{Position 0	0.389094	-0.272464}
+}
+{Volume "engine"
+	{Box 2.11341 2.05784 1.98198}
+	{Bone "drive"}
+	{Position -0.0105893	5.60639	14.622}
+}
+{Volume "front_armor"
+	{Polyhedron "front_armor.vol"}
+	{Bone "front_armor"}
+	{Matrix34
+		-0.00245451	0	-0.999997
+		0	1	0
+		0.999997	0	-0.00245442
+		-0.0584412	0	0
+	}
+}
+{Volume "gun"
+	{Box 1.02035 5.95615 1.3782}
+	{Bone "smg"}
+	{Matrix34
+		0	1	0
+		-1	0	0
+		0	0	1
+		4.61599	0.426632	-0.00899857
+	}
+}
+{Volume "head"
+	{Box 1.47791 3.74153 1.98198}
+	{Bone "head"}
+	{Matrix34
+		0	1	0
+		-1	0	0
+		0	0	1
+		-0.824979	-0.410658	0.0523527
+	}
+}
+{Volume "magazine"
+	{Box 2.68513 1.5757 2.87124}
+	{Bone "magazine"}
+	{Matrix34
+		0	1	0
+		0	0	-1
+		-1	0	0
+		0.0326395	0	0.0578229
+	}
+}
+{Volume "smg"
+	{Box 1.01425 5.35038 1.65617}
+	{Bone "smg"}
+	{Matrix34
+		0	1	0
+		-1	0	0
+		0	0	1
+		4.4981	0.526499	-0.0661848
+	}
+}

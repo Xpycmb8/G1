@@ -1,0 +1,102 @@
+{actor
+	(include "/properties/machinery.ext")
+	{obstacleID "human"}
+	{collider "particle.big"}
+	{PatherID	"human"}
+	{props "baze_machinery" "pest_base" "pest" "pest_bomb" "local_physics"}
+	(include "/properties/selection/pest.inc" scale(0.2))
+;									all	front top rear bottom ; material steel armor
+	{volume "main_body"
+		{component "main_body"}
+		{material "armor"}
+		{tags "main_body"}
+		{thickness	2 }
+	}
+	("volume_body" args "front_armor" "armor_crushed"   6  steel )
+
+	("volume_body" args "fuel_small" "fuel_small"    2  steel )
+
+	("volume_component" args "RightToeBase" 		"limbs_micro"    3  steel )
+	("volume_component" args "RightFoot" 			"limbs_micro"    3  steel )
+	("volume_component" args "RightLeg" 			"limbs_micro"    3  steel )
+	("volume_component" args "RightUpLeg" 			"limbs_micro"    3  steel )
+	("volume_component" args "RightShoulder" 		"limbs_micro"    3  steel )
+	("volume_component" args "RightForeArm" 		"limbs_micro"    3  steel )
+	("volume_component" args "RightHand" 			"limbs_micro"    3  steel )
+	("volume_component" args "LeftToeBase" 			"limbs_micro"    3  steel )
+	("volume_component" args "LeftFoot" 			"limbs_micro"    3  steel )
+	("volume_component" args "LeftLeg" 				"limbs_micro"    3  steel )
+	("volume_component" args "LeftUpLeg" 			"limbs_micro"    3  steel )
+	("volume_component" args "LeftShoulder" 		"limbs_micro"    3  steel )
+	("volume_component" args "LeftForeArm" 			"limbs_micro"    3  steel )
+	("volume_component" args "LeftHand" 			"limbs_micro"    3  steel )
+
+
+
+
+	{sensor
+		{Visor "eyes"
+			{vision "pets"}
+			{bone "eyes"}
+		}
+	}
+	("vision_mode" tag(thermal) time(60))	
+
+	{extender "inventory" ; создать лут
+		{box
+			{Size 4 4}
+			{Weight 100}
+			{item "ammo jump"	35}
+		}
+	}
+	{Weaponry
+		{place "mgun"
+			{weapon 	"pets_jump" filled}
+			{foresight "turret_link_pets"}
+			{rotate}
+		}
+		{place "alarm_signal"    ;mgun_alarm
+			{weapon 	"alarm_update_50m" filled}
+			{foresight 	"foresight_signal"}
+			;{rotate}
+		}
+	}
+	{placer
+		{place "link_bomb"
+			{entity "pest_bomb_link"}
+			{Linkbone "link_bomb"}
+			{obstacle disable}
+		}
+	}
+	{mass 50}
+	("movement" 
+		slow(0) 
+		normal(6)
+		fast(8)
+		maxspeed(8)
+		maxspeed_atmaxturn(1)
+		turnstart(5)
+		turnstop(1)
+		turnradius(5)
+		turntime(0.2)
+		starttime(1)
+		stoptime(0.6)
+		braketime(0.6)
+		fuelbag_vol(2)
+		rate(0.1)
+		remain(2)
+		fuel(tritium)
+	)	
+	{Extension "pest_bomb.mdl"}
+}
+
+
+
+
+
+
+
+
+
+
+

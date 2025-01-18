@@ -1,0 +1,4 @@
+{game_entity
+	{props "land_dust_spawner"}
+	{constrain ground}
+}

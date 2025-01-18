@@ -1,0 +1,57 @@
+;Exported by: Xpycmb
+;Date:        Wed Sep 11 13:45:21 2024
+;File:        C:\Users\Xpycmb\Documents\3dsMax\scene\m47_fg_proj.max
+{Skeleton
+	{animation
+		{sequence "tail" {autostart}}
+		{sequence "open" {autostart}}
+	}
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "fx"
+			{Matrix34
+				1	0	0
+				0	0	-1
+				0	1	0
+				-0.0367625	0	0.0240872
+			}
+		}
+		{bone "tail"
+			{Matrix34
+				-1	0	0
+				0	0	-1
+				0	-1	0
+				-0.601334	0	0.0240878
+			}
+		}
+		{bone "proj"
+			{Matrix34
+				1	0	0
+				0	0	-1
+				0	1	0
+				-0.601167	0	0.0240878
+			}
+		}
+		{bone "body"
+			{Orientation
+				0	1	0
+				0	0	1
+				1	0	0
+			}
+			{VolumeView "body.ply"}
+		}
+	}
+}
+{Volume "body"
+	{Box 2.302 0.5 0.5}
+	{Bone "body"}
+	{Orientation
+		0	0	0.5
+		0	-0.5	0
+		0.5	0	0
+	}
+}

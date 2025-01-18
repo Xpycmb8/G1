@@ -1,0 +1,27 @@
+;Exported by: Xpycmb
+;Date:        Thu Jan  2 20:13:36 2025
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\skirmisher_base_shotgun_stuff.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "fuel"
+			{parameters "ID=fuel;"}
+			{Position 0	0	0}
+			{VolumeView "fuel.ply"}
+		}
+	}
+}
+{Volume "fuel"
+	{Cylinder 1.1061 3.27865}
+	{Bone "fuel"}
+	{Matrix34
+		0	0	1.4
+		0	1.4	0
+		-1.4	0	0
+		-0.0210583	0	0
+	}
+}

@@ -1,0 +1,4 @@
+{game_entity
+	(include "/properties/construction_fnix.ext")
+	{Extension "fnix_power_generator_base.mdl"}
+}

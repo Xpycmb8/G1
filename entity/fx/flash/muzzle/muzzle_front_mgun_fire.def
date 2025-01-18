@@ -1,0 +1,96 @@
+{fx
+	{#+ particleview fire1
+		{generator
+			{totalparticles 2}
+			{particlesinblock 1}
+			{emissionarea
+				{radius 0}
+				{alpha0 4 4}
+				{alpha1 4 4}
+			}
+			{particleinit
+				{speed 1.1 0.9}
+				{lifetime 0.075 -0.025}
+			}
+			{timetolive 0.04}
+		}
+		{mover
+			{damping 0.9}
+			{gravity
+				{value -0.007}
+			}
+		}
+		{visualizer
+			{stage 
+				{sprite "$/additional/lp_muzzle/flash3"
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{preturn 0 180}
+					{#+ turn 1
+						{linear
+							{min 0}
+							{max 0 50}
+						}
+					}
+					{scale 1
+						{##+ power
+							{min 0}
+							{max 0.5}
+							{pow 1}
+						}
+						{linear
+							{min 0}
+							{max 0.05}
+						}
+					}
+					{light 1
+						{power
+							{min 1}
+							{max 0}
+							{pow 1}
+						}
+						{##+ linear
+							{min 1}
+							{max 0}
+						}
+					}
+					{## highlight 0xfffe7842}
+				}
+				{sprite "$/additional/lp_muzzle/flash2"
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{preturn 0 180}
+					{turn 1
+						{linear
+							{min 0}
+							{max 0 50}
+						}
+					}
+					{scale 1
+						{linear
+							{min 0}
+							{max 0.05}
+						}
+					}
+					{light 1
+						{power
+							{min 1}
+							{max 0}
+							{pow 1}
+						}
+						{##+ linear
+							{min 1}
+							{max 0}
+						}
+					}
+					{## highlight 0xfffe7842}
+				}
+			}
+		}
+		{autopause}
+	}
+}

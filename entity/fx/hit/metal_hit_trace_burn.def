@@ -1,0 +1,21 @@
+{fx
+	{particleview pieces
+		{entitygenerator
+			{totalparticles 1}
+			{emissionarea
+				{radius 0.2}
+				{alpha0 22.5 22.5}
+				{alpha1 60 60}
+			}
+			{particleinit
+				{speed 6 -2}
+				{lifetime 1}
+			}
+			{entity "fx_piece_bullet_hit_burn"
+				{## fx "fx_trace_hit"}
+				{spinx 90}
+				{spiny 90}
+			}
+		}
+	}
+}

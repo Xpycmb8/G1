@@ -1,0 +1,242 @@
+;Exported by: Xpycmb
+;Date:        Wed Jan  3 12:49:58 2024
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\skirmisher_base_shotgun.max
+{Skeleton
+	{animation
+		{sequence "wpn_recoil"
+			{speed 1}
+			{events 
+				{1 "open_bolt_heavy"}
+				{2 "bullet_drop_view"}
+				{4 "clear_casing_12x55_fast"}
+			}
+			{resume}
+		}
+	}
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "heat"
+			{Matrix34
+				-0.00251209	-0.176108	-0.984368
+				-0.999649	-0.0255062	0.00711402
+				-0.0263606	0.98404	-0.175983
+				23.9847	0.598638	-13.6774
+			}
+		}
+		{bone "heat2"
+			{Matrix34
+				-0.00251209	-0.176108	-0.984368
+				-0.999649	-0.0255062	0.00711402
+				-0.0263606	0.98404	-0.175983
+				20.3403	0.598638	-13.6774
+			}
+		}
+		{bone "foresight"
+			{Matrix34
+				-0.00251122	-0.17611	-0.984367
+				-0.999649	-0.025505	0.00711455
+				-0.0263631	0.98404	-0.175982
+				1.11869	-0.893277	-13.4106
+			}
+			{bone "fx_main"
+				{Matrix34
+					0.999978	0.000425559	-0.00659357
+					-0.000429202	1	-0.000177329
+					0.00658946	0.000187893	0.999978
+					0	0	0
+				}
+			}
+		}
+		{bone "shotgun"
+			{parameters "ID=shotgun;"}
+			{Matrix34
+				-0.999649	-0.0255073	0.00711448
+				0.00251186	0.176108	0.984368
+				-0.0263614	0.98404	-0.175982
+				0.80933	0.187557	-0.385957
+			}
+			{VolumeView "shotgun.ply"}
+			{bone "barrel"
+				{parameters "ID=shotgun;"}
+				{Position -0.389128	-7.61262	1.22743}
+				{VolumeView "barrel.ply"}
+			}
+		}
+		{bone "latch_bone"
+			{parameters "hkaSkeleton = Reference;hkaBone = 35;"}
+			{Matrix34
+				0.999989	0.00162013	0.00432253
+				-0.000851744	0.984817	-0.173592
+				-0.00453711	0.173584	0.984809
+				1.1945	0.52771	2.14715
+			}
+			{bone "latch"
+				{parameters "ID=shotgun;"}
+				{Matrix34
+					-0.00705184	-0.00255357	-0.999972
+					-0.999649	-0.025521	0.00711407
+					-0.0255454	0.999671	-0.00237533
+					0	0	0
+				}
+				{VolumeView "latch.ply"}
+			}
+		}
+		{bone "armed_bone"
+			{parameters "hkaSkeleton = Reference;hkaBone = 35;"}
+			{Matrix34
+				0.999989	0.00162013	0.00432253
+				-0.000851744	0.984817	-0.173592
+				-0.00453711	0.173584	0.984809
+				1.16362	1.48763	-0.661437
+			}
+			{bone "armed"
+				{parameters "ID=shotgun;"}
+				{Matrix34
+					-0.999649	-0.0255034	0.00711403
+					0.0070518	0.00255394	0.999972
+					-0.0255277	0.999671	-0.00237584
+					-1.26664	-1.38167	-0.127693
+				}
+				{VolumeView "armed.ply"}
+			}
+			{bone "shell"
+				{parameters "hkaSkeleton = Reference;hkaBone = 35;"}
+				{Matrix34
+					-0.0070564	-0.00254485	-0.999972
+					-0.999649	-0.025507	0.00711725
+					-0.0255373	0.999671	-0.00236987
+					0.0208155	-1.03632	-1.31794
+				}
+				{bone "shell_view"
+					{parameters "ID=shotgun;"}
+					{Matrix34
+						1	0	0
+						0	1	0
+						0	0	1
+						0	0	0
+					}
+					{VolumeView "shell_view.ply"}
+				}
+			}
+		}
+		{bone "recoil_bone"
+			{parameters "hkaSkeleton = Reference;hkaBone = 35;"}
+			{Matrix34
+				0.999989	0.00162026	0.00432255
+				-0.000851762	0.984817	-0.173592
+				-0.00453706	0.173584	0.984809
+				1.16362	1.48763	-0.661438
+			}
+			{bone "shell_drop"
+				{parameters "ID=shotgun;"}
+				{Matrix34
+					-0.0255321	0.999671	-0.00237909
+					-0.999649	-0.0255032	0.0071071
+					0.0070528	0.00255026	0.999972
+					-0.0120471	-0.0449109	-2.38048
+				}
+				{VolumeView "shell_drop.ply"}
+			}
+			{bone "recoil"
+				{parameters "ID=shotgun;"}
+				{Matrix34
+					-0.999649	-0.0255035	0.00711392
+					0.0070519	0.00255366	0.999972
+					-0.0255275	0.999672	-0.0023756
+					0	0	0
+				}
+				{VolumeView "recoil.ply"}
+			}
+		}
+	}
+}
+{Volume "barrel"
+	{Box 0.748798 11.6253 0.819317}
+	{Bone "barrel"}
+	{Matrix34
+		1	0	0
+		0	0.999997	0
+		0	0	1
+		0	0	0
+	}
+}
+{Volume "recoil"
+	{Box 0.748798 3.95261 0.759367}
+	{Bone "recoil"}
+	{Matrix34
+		1	0	0
+		0	0.999997	0
+		0	0	1
+		-0.0152229	0.125183	-0.000175685
+	}
+}
+{Volume "shell_drop"
+	{Cylinder 0.52 2.97133}
+	{Bone "shell_drop"}
+	{Matrix34
+		-0.429826	0.000827774	0.00603303
+		0.00082665	0.429869	0
+		-0.00602931	1.7363e-05	-0.429824
+		-9.64203e-05	0.00105476	-0.00735784
+	}
+}
+{Volume "shotgun"
+	{Box 0.748798 11.6253 1.37885}
+	{Bone "shotgun"}
+	{Matrix34
+		1	0	0
+		0	0.999997	0
+		0	0	1
+		-0.364261	-2.92042	0.326927
+	}
+}
+{Extender "preview"
+	{"Stuff"
+		{camera
+			{origin 15.153	-2.44743	-2.8819}
+			{lookat -28.0406	5.97187	-7.32114}
+			{fov 45}
+			{horizon 100.959}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position -45.1559	7.70988	-32.2158}
+			}
+			{"1"
+				{type directional}
+				{direction -0.455603	0.204279	0.0263783}
+			}
+			{"2"
+				{type point}
+				{position -56.921	4.80412	14.4979}
+			}
+		}
+	}
+	{"Stuff_primary"
+		{camera
+			{origin 18.2198	-0.220291	-12.947}
+			{lookat -8.64354	0.646944	-2.71086}
+			{fov 45}
+			{horizon 106.381}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position -37.4267	9.88287	-17.6015}
+			}
+			{"1"
+				{type directional}
+				{direction -0.440828	0.116636	0.205101}
+			}
+			{"2"
+				{type point}
+				{position -32.8141	-2.75249	28.7461}
+			}
+		}
+	}
+}

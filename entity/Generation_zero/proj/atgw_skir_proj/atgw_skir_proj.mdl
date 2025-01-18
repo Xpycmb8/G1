@@ -1,0 +1,113 @@
+;Exported by: Xpycmb
+;Date:        Tue Oct  4 22:01:44 2022
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\skirmisher_base_rebuild2.max
+{Skeleton
+	{animation
+		{sequence "open"
+			{events 
+				{1 "open_atgw"}
+			}		
+		}
+		{sequence "tail_atgw"
+			{events 
+				{1 "start_atgw_skir"}
+			}		
+			{autostart}
+		}
+	}
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "rocket"
+			{Position 2.91537	0	0}
+			{VolumeView "rocket.ply"}
+		}
+		{bone "tail"
+			{Matrix34
+				-1	0	0
+				0	-1	0
+				0	0	1
+				0.0818787	0	0
+			}
+		}
+		{bone "tail00"
+			{Matrix34
+				0	1	0
+				-1	0	0
+				0	0	1
+				1.24651	0.334854	-0.345294
+			}
+		}
+		{bone "tail01"
+			{Matrix34
+				0	1	0
+				-1	0	0
+				0	0	1
+				1.24651	0.343418	0.320582
+			}
+		}
+		{bone "tail04"
+			{Matrix34
+				0	1	0
+				-1	0	0
+				0	0	1
+				0.139826	0.342789	-0.354419
+			}
+		}
+		{bone "tail02"
+			{Matrix34
+				0	1	0
+				-1	0	0
+				0	0	1
+				1.24651	-0.339676	-0.345294
+			}
+		}
+		{bone "tail03"
+			{Matrix34
+				0	1	0
+				-1	0	0
+				0	0	1
+				1.24651	-0.343273	0.321856
+			}
+		}
+		{bone "tail05"
+			{Matrix34
+				0	1	0
+				-1	0	0
+				0	0	1
+				0.139827	0.343838	0.330995
+			}
+		}
+		{bone "tail06"
+			{Matrix34
+				0	1	0
+				-1	0	0
+				0	0	1
+				0.139827	-0.343235	0.330995
+			}
+		}
+		{bone "tail07"
+			{Matrix34
+				0	1	0
+				-1	0	0
+				0	0	1
+				0.139827	-0.343235	-0.35478
+			}
+		}
+		{bone "fly"
+		}
+	}
+}
+{Volume "body"
+	{Cylinder 0.36787 5.66347}
+	{Bone "rocket"}
+	{Matrix34
+		0	1	0
+		0	0	1
+		1	0	0
+		-0.0910549	0	0
+	}
+}

@@ -1,0 +1,18 @@
+{game_entity
+	(include "/properties/construction_zero.ext")
+	{placer
+		{place "wall_c"
+			{entity "barn_01_base_high_side_end_plank_c"}
+			{Linkbone "walls_c"}
+		}
+		{place "wall_l"
+			{entity "barn_01_base_high_side_end_plank_l"}
+			{Linkbone "walls_l"}
+		}
+		{place "wall_r"
+			{entity "barn_01_base_high_side_end_plank_r"}
+			{Linkbone "walls_r"}
+		}
+	}
+	{Extension "barn_01_base_high_side_end_01.mdl"}
+}

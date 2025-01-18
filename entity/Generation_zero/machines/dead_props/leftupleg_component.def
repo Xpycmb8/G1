@@ -1,0 +1,13 @@
+{Entity
+	(include "/properties/dead_prop_skir.grn")
+	{Extension "leftupleg_component.mdl"}
+	{extender "stuff"
+		{item "leftupleg_component"}
+	}
+	{Volume "leftupleg_knee"
+		{thickness 1}
+	}
+	{Volume "leftupleg"
+		{thickness 1}
+	}
+}

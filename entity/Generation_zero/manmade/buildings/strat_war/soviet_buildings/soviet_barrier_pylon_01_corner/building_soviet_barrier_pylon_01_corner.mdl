@@ -1,0 +1,65 @@
+;Exported by: Xpycmb
+;Date:        Sat Jan  7 20:33:27 2023
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\building_soviet_barrier_pylon_01_corner.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "sandbags"
+			{parameters "ID=Body;"}
+			{Position 0	1.52588e-05	0}
+			{LODView
+				{VolumeView "sandbags.ply"}
+				{VolumeView "sandbags_lod1.ply"}
+				{VolumeView "sandbags_lod2.ply"}
+				{VolumeView "sandbags_lod3.ply"}
+			}
+		}
+		{bone "metal"
+			{parameters "ID=Body;"}
+			{Position 0	1.52588e-05	0}
+			{LODView
+				{VolumeView "metal.ply"}
+				{VolumeView "metal_lod1.ply"}
+				{VolumeView "metal_lod2.ply"}
+				{VolumeView "metal_lod3.ply"}
+			}
+		}
+		{bone "concrete"
+			{parameters "ID=Body;"}
+			{Position 0	1.52588e-05	0}
+			{LODView
+				{VolumeView "concrete.ply"}
+				{VolumeView "concrete_lod1.ply"}
+				{VolumeView "concrete_lod2.ply"}
+				{VolumeView "concrete_lod3.ply"}
+			}
+		}
+	}
+}
+{Obstacle "obstacle"
+	{Obb2
+		{Center 0 -1.52588e-05}
+		{Extent 8.75 8.75}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Volume "body40_1"
+	{Box 14.7137 13.8371 2.88017}
+	{Bone "sandbags"}
+	{Position -0.137874	-0.224316	14.431}
+}
+{Volume "body40_2"
+	{Box 6.47405 11.6232 2.88017}
+	{Bone "sandbags"}
+	{Position 0.964127	-0.224316	16.7262}
+}
+{Volume "body70_1"
+	{Polyhedron "body70_1.vol"}
+	{Bone "concrete"}
+	{Position 0.193115	0	0}
+}

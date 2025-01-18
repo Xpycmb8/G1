@@ -1,0 +1,10 @@
+{game_entity
+	(include "/properties/big_stone.inc")
+	{Extension "castle_wall_04.mdl"}
+	{Volume "body"
+		{Tags  "body"}
+		{material "concrete"}
+		{Thickness 90}
+	}
+	{lodclass "decor_big"}
+}

@@ -1,0 +1,308 @@
+-= Animation: move, Node placement =-
+	Frame 0 {
+		Visibility 1
+		Position	0	0	0
+		Orientation	0 0 0 1
+	}
+	Frame 1 {
+		Position	9.84252	0	0
+	}
+	Frame 2 {
+		Position	19.685	0	0
+	}
+	Frame 3 {
+		Position	29.5276	0	0
+	}
+	Frame 4 {
+		Position	39.3701	0	0
+	}
+	Frame 5 {
+		Position	49.2126	0	0
+	}
+	Frame 6 {
+		Position	59.0551	0	0
+	}
+	Frame 7 {
+		Position	68.8976	0	0
+	}
+	Frame 8 {
+		Position	78.7402	0	0
+	}
+	Frame 9 {
+		Position	88.5827	0	0
+	}
+	Frame 10 {
+		Position	98.4252	0	0
+	}
+	Frame 11 {
+		Position	108.268	0	0
+	}
+	Frame 12 {
+		Position	118.11	0	0
+	}
+	Frame 13 {
+		Position	127.953	0	0
+	}
+	Frame 14 {
+		Position	137.795	0	0
+	}
+	Frame 15 {
+		Position	147.638	0	0
+	}
+	Frame 16 {
+		Position	157.48	0	0
+	}
+	Frame 17 {
+		Position	167.323	0	0
+	}
+	Frame 18 {
+		Position	177.165	0	0
+	}
+	Frame 19 {
+		Position	187.008	0	0
+	}
+	Frame 20 {
+		Position	196.85	0	0
+	}
+	Frame 21 {
+		Position	206.693	0	0
+	}
+	Frame 22 {
+		Position	216.535	0	0
+	}
+	Frame 23 {
+		Position	226.378	0	0
+	}
+	Frame 24 {
+		Position	236.22	0	0
+	}
+	Frame 25 {
+		Position	246.063	0	0
+	}
+	Frame 26 {
+		Position	255.906	0	0
+	}
+	Frame 27 {
+		Position	265.748	0	0
+	}
+	Frame 28 {
+		Position	275.591	0	0
+	}
+	Frame 29 {
+		Position	285.433	0	0
+	}
+	Frame 30 {
+		Position	295.276	0	0
+	}
+	Frame 31 {
+		Position	305.118	0	0
+	}
+	Frame 32 {
+		Position	314.961	0	0
+	}
+	Frame 33 {
+		Position	324.803	0	0
+	}
+	Frame 34 {
+		Position	334.646	0	0
+	}
+	Frame 35 {
+		Position	344.488	0	0
+	}
+	Frame 36 {
+		Position	354.331	0	0
+	}
+	Frame 37 {
+		Position	364.173	0	0
+	}
+	Frame 38 {
+		Position	374.016	0	0
+	}
+	Frame 39 {
+		Position	383.858	0	0
+	}
+	Frame 40 {
+		Position	393.701	0	0
+	}
+	Frame 41 {
+		Position	403.543	0	0
+	}
+	Frame 42 {
+		Position	413.386	0	0
+	}
+	Frame 43 {
+		Position	423.228	0	0
+	}
+	Frame 44 {
+		Position	433.071	0	0
+	}
+	Frame 45 {
+		Position	442.913	0	0
+	}
+	Frame 46 {
+		Position	452.756	0	0
+	}
+	Frame 47 {
+		Position	462.598	0	0
+	}
+	Frame 48 {
+		Position	472.441	0	0
+	}
+	Frame 49 {
+		Position	482.283	0	0
+	}
+	Frame 50 {
+		Position	492.126	0	0
+	}
+	Frame 51 {
+		Position	501.968	0	0
+	}
+	Frame 52 {
+		Position	511.811	0	0
+	}
+	Frame 53 {
+		Position	521.654	0	0
+	}
+	Frame 54 {
+		Position	531.496	0	0
+	}
+	Frame 55 {
+		Position	541.339	0	0
+	}
+	Frame 56 {
+		Position	551.181	0	0
+	}
+	Frame 57 {
+		Position	561.024	0	0
+	}
+	Frame 58 {
+		Position	570.866	0	0
+	}
+	Frame 59 {
+		Position	580.709	0	0
+	}
+	Frame 60 {
+		Position	590.551	0	0
+	}
+	Frame 61 {
+		Position	600.394	0	0
+	}
+	Frame 62 {
+		Position	610.236	0	0
+	}
+	Frame 63 {
+		Position	620.079	0	0
+	}
+	Frame 64 {
+		Position	629.921	0	0
+	}
+	Frame 65 {
+		Position	639.764	0	0
+	}
+	Frame 66 {
+		Position	649.606	0	0
+	}
+	Frame 67 {
+		Position	659.449	0	0
+	}
+	Frame 68 {
+		Position	669.291	0	0
+	}
+	Frame 69 {
+		Position	679.134	0	0
+	}
+	Frame 70 {
+		Position	688.976	0	0
+	}
+	Frame 71 {
+		Position	698.819	0	0
+	}
+	Frame 72 {
+		Position	708.661	0	0
+	}
+	Frame 73 {
+		Position	718.504	0	0
+	}
+	Frame 74 {
+		Position	728.346	0	0
+	}
+	Frame 75 {
+		Position	738.189	0	0
+	}
+	Frame 76 {
+		Position	748.031	0	0
+	}
+	Frame 77 {
+		Position	757.874	0	0
+	}
+	Frame 78 {
+		Position	767.716	0	0
+	}
+	Frame 79 {
+		Position	777.559	0	0
+	}
+	Frame 80 {
+		Position	787.402	0	0
+	}
+	Frame 81 {
+		Position	797.244	0	0
+	}
+	Frame 82 {
+		Position	807.087	0	0
+	}
+	Frame 83 {
+		Position	816.929	0	0
+	}
+	Frame 84 {
+		Position	826.772	0	0
+	}
+	Frame 85 {
+		Position	836.614	0	0
+	}
+	Frame 86 {
+		Position	846.457	0	0
+	}
+	Frame 87 {
+		Position	856.299	0	0
+	}
+	Frame 88 {
+		Position	866.142	0	0
+	}
+	Frame 89 {
+		Position	875.984	0	0
+	}
+	Frame 90 {
+		Position	885.827	0	0
+	}
+	Frame 91 {
+		Position	895.669	0	0
+	}
+	Frame 92 {
+		Position	905.512	0	0
+	}
+	Frame 93 {
+		Position	915.354	0	0
+	}
+	Frame 94 {
+		Position	925.197	0	0
+	}
+	Frame 95 {
+		Position	935.039	0	0
+	}
+	Frame 96 {
+		Position	944.882	0	0
+	}
+	Frame 97 {
+		Position	954.724	0	0
+	}
+	Frame 98 {
+		Position	964.567	0	0
+	}
+	Frame 99 {
+		Position	974.409	0	0
+	}
+	Frame 100 {
+		Visibility 1
+		Position	984.252	0	0
+		Orientation	0 0 0 1
+	}

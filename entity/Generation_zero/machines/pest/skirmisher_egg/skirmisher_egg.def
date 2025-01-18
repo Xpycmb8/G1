@@ -1,0 +1,14 @@
+{game_entity
+	(include "/properties/physics_steel.ext")
+	{props "steel" "metal_weight" "spawner_egg" "egg_skirmisher"}
+	{mass 25}
+	{Extension "skirmisher_egg.mdl"}
+	{Volume "body"
+		{Tags  "body"}
+		{Thickness 4}
+	}
+	{Volume "part1"
+		{Tags  "body"}
+		{Thickness 4}
+	}
+}

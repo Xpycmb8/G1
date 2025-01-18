@@ -1,0 +1,13 @@
+;Exported by: Xpycmb
+;Date:        Mon Oct 10 20:47:43 2022
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\grenade_cluster_proj.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{VolumeView "cluster.ply"}
+	}
+}

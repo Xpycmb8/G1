@@ -1,0 +1,7 @@
+{game_entity
+	{Skeleton}
+	{props "orientation_melee_back"}
+	{extender "stuff"
+		{item "orientation_melee_back"}
+	}
+}

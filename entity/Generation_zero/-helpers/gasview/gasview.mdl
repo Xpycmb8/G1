@@ -1,0 +1,17 @@
+;Exported by: Xpycmb
+;Date:        Mon Oct 24 21:28:48 2022
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\dreadnought_base.max
+{Skeleton
+	{animation
+		{sequence "gas_loop" {resume}}
+	}
+	{bone "gasdrop_view"
+		{parameters "ID=gas;"}
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{VolumeView "gasdrop_view.ply"}
+	}
+}

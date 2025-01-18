@@ -1,0 +1,74 @@
+;Exported by: Xpycmb
+;Date:        Tue Aug  3 14:58:09 2021
+;File:        C:\Users\Xpycmb\Documents\3dsMax\scenes\xm109_proj.max
+{Skeleton
+	{animation
+		{sequence "tail"
+			{speed 3}
+			{events 
+				{1 "start_tail_cluster"}
+			}		
+			{autostart}
+		}
+		{sequence "open"
+			{speed 0.05}
+			{events 
+				{3 "open_bullet"}
+			}		
+			{autostart}
+		}
+	}
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "projectile"
+			{parameters "ID=body;"}
+			{Matrix34
+				1	0	0
+				0	0	-1
+				0	1	0
+				-0.0367625	0	0.0240872
+			}
+			{LODView
+				{VolumeView "projectile.ply"}
+				{VolumeView "projectile_lod1.ply"}
+				{VolumeView "projectile_lod2.ply"}
+			}
+		}
+		{bone "fx"
+			{Matrix34
+				1	0	0
+				0	0	-1
+				0	1	0
+				-0.0367625	0	0.0240872
+			}
+		}
+		{bone "open"
+			{Matrix34
+				-1	0	0
+				0	0	-1
+				0	-1	0
+				-0.601334	0	0.0240878
+			}
+		}
+		{bone "proj"
+			{Matrix34
+				1	0	0
+				0	0	-1
+				0	1	0
+				0.596819	0	0.0240878
+			}
+		}
+		{bone "tail"
+			{Matrix34
+				-1	0	0
+				0	0	-1
+				0	-1	0
+				-0.601334	0	0.0240878
+			}
+		}
+	}
+}

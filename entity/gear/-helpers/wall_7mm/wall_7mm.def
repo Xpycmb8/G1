@@ -1,0 +1,10 @@
+{game_entity ;150sc
+	(include "/properties/hall_concrete.ext")
+	{Volume "body"
+		{thickness 7}
+		{Tags  "body"}
+		{material "steel"}
+		{able {visible 0}{blockcamera 1}}
+	}
+	{Extension "wall_7mm.mdl"}
+}

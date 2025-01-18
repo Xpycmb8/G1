@@ -1,0 +1,23 @@
+;Exported by: Xpycmb
+;Date:        Sat Dec 28 01:02:19 2024
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\hunter_base_3.max
+{Skeleton
+	{bone "place"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "spawn"
+			{Position 0.163765	51.1361	45.5913}
+		}
+		{bone "place_front"
+		}
+		{bone "place_back"
+			{Position 0	89.4063	2.28351e-05}
+		}
+		{bone "place_stab"
+			{Position 0	-342.039	-8.73597e-05}
+		}
+	}
+}

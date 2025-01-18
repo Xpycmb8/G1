@@ -1,0 +1,177 @@
+{fx
+	{##+ particleview
+		{generator
+			{totalparticles 15}
+			{emissionarea
+				{radius 1 1}
+				{alpha0 0 5}
+				{alpha1 8 5}
+				{speed 0.06}
+			}
+			{particleinit
+				{speed 0.1}
+				{lifetime 1.5 -0.5}
+			}
+			{particlesinblock 15}
+			{timetolive 0.1}
+		}
+		{mover
+			{gravity
+				{value -0.007}
+			}
+			{damping 0.985}
+		}
+		{visualizer
+			{stage 
+				{sprite "$/additional/smoke_clouds"
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{preturn 90 90}
+					{turn 1
+						{linear
+							{min 0}
+							{max 0 100}
+						}
+					}
+					{visibility 1
+						{peak
+							{min 0}
+							{max 0.25 0.15}
+						}
+					}
+					{scale 1
+						{linear
+							{min 0.11 0.01}
+							{max 0.4 0.1}
+						}
+					}
+					{highlight 0xff9f9f9f}
+				}
+				{##+ sprite "$/additional/smoke_light1_small"
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{preturn 90 90}
+					{turn 1
+						{linear
+							{min 0}
+							{max 0 70}
+						}
+					}
+					{visibility 1
+						{peak
+							{min 0}
+							{max 1}
+						}
+					}
+					{scale 1
+						{linear
+							{min 0.25 0.1}
+							{max 1.1 0.4}
+						}
+					}
+					{highlight 0xff9c9c9c}
+				}
+			}
+		}
+	}
+	{#+ spriteview Sled
+		{sprite "$/explosion/fire_sled"
+			{visibility 1
+				{linear
+					{min 0.8}
+					{max 0}
+				}
+			}
+			{scale 0.1}
+			{timer
+				{mode play }
+				{duration 7}
+			}
+		}
+		{ground}
+		{layer grounddynamic}
+		{notifyowner}
+		{autovisible}
+	}
+	{particleview "small flames"
+		{#+ generator
+			{totalparticles 2}
+			{emissionarea
+				{radius 1}
+				{speed 0.4}
+			}
+			{particleinit
+				{speed 0}
+				{lifetime 6}
+			}
+			{axisz}
+			{particlesinblock 2}
+			{timetolive 1}
+		}
+		{mover
+			{damping 0}
+			{gravity
+				{value 0.01}
+			}
+			{nodependonwind}
+			{## collisions
+				{## terrain}
+			}
+		}
+		{visualizer
+			{stage 
+				{##+ sprite "$/explosion/flame_hi"
+					{timer
+						{## mode loop }
+						{duration -1}
+					}
+					{## scalex 0.4 0.1}
+					{## scaley 0.25 0.05}
+					{light 1
+						{peak
+							{min 0}
+							{max 0.2 0.1}
+						}
+					}
+					{scale 1
+						{power
+							{min 0.04}
+							{max 0.125 0.025}
+							{pow 1}
+						}
+					}
+					{highlight 0xff416bfd}
+				}
+				{sprite "$/explosion/flame_blue_64"
+					{timer
+						{## mode loop }
+						{duration -1}
+					}
+					{## scalex 0.4 0.1}
+					{## scaley 0.25 0.05}
+					{light 1
+						{peak
+							{min 0}
+							{max 0.2 0.1}
+						}
+					}
+					{scale 1
+						{power
+							{min 0.1}
+							{max 0.125 0.025}
+							{pow 1}
+						}
+					}
+					{highlight 0xff416bfd}
+				}
+			}
+		}
+		{offset 0 0 -3}
+		{## ground}
+		{## ground}
+	}
+}

@@ -1,0 +1,102 @@
+;Exported by: Xpycmb
+;Date:        Thu Apr 27 12:39:25 2023
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\magazine_rifle_270_with_fmj.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "handle"
+			{Matrix34
+				0	-1	0
+				1	0	0
+				0	0	1
+				0.650549	0	0
+			}
+		}
+		{bone "magazine"
+			{parameters "ID=body;"}
+			{Orientation
+				0	-1	0
+				1	0	0
+				0	0	1
+			}
+			{VolumeView "magazine.ply"}
+			{bone "bullet"
+				{Matrix34
+					-1	0	0
+					0	-0.999269	0.0382245
+					0	0.0382245	0.999269
+					-0.00508091	-0.698041	0.149845
+				}
+				{VolumeView "bullet.ply"}
+			}
+		}
+	}
+}
+{Volume "magazine"
+	{Box 0.341718 1.67951 0.78516}
+	{Bone "magazine"}
+	{Matrix34
+		1.1	0	0
+		0	1.1	0
+		0	0	1.1
+		0	0	0.0209278
+	}
+}
+{Volume "select"
+	{Box 2.5 2.5 2.5}
+	{Bone "magazine"}
+	{Orientation
+		1.1	0	0
+		0	1.1	0
+		0	0	1.1
+	}
+}
+{Extender "preview"
+	{"Stuff"
+		{camera
+			{origin 0.0612069	-2.42146	0.958788}
+			{lookat 0.782219	29.0319	-11.4943}
+			{fov 45}
+			{horizon 0.540679}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 26.866	40.5898	-21.4166}
+			}
+			{"1"
+				{type directional}
+				{direction 0.0312338	0.496302	-0.0520463}
+			}
+			{"2"
+				{type point}
+				{position -2.54101	53.5904	-3.27012}
+			}
+		}
+	}
+	{"Stuff_primary"
+		{camera
+			{origin -1.72301	-0.718494	0.143128}
+			{lookat 31.0575	11.5914	-3.35879}
+			{fov 45}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 58.1957	-18.6742	-5.95913}
+			}
+			{"1"
+				{type directional}
+				{direction 0.451613	0.197057	0.084937}
+			}
+			{"2"
+				{type point}
+				{position 51.2751	16.2245	3.90327}
+			}
+		}
+	}
+}

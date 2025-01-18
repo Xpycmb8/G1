@@ -1,0 +1,12 @@
+{game_entity
+	(include "/properties/stuff_small.ext")
+	{props "stuff" }
+	{collider "stuff"}
+	{Extension "item_flammeable.mdl"}
+	{extender "stuff"
+		{item "item_flammeable"}
+	}
+	{Volume "body"
+		{thickness 0.1}
+	}
+}

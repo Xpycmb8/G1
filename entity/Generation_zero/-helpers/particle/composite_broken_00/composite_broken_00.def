@@ -1,0 +1,8 @@
+{game_entity
+	(include "/properties/small_part.inc")
+	{props "steel" "ps_dummy" "small_fx" "metal_small"}
+	{Extension "composite_broken_00.mdl"}
+	{Volume "body"
+		{tags "body"}
+	}
+}

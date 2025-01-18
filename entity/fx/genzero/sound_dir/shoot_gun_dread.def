@@ -1,0 +1,6 @@
+{fx
+	{sound "weapon/shot/reactive/d1/shared/rocket_launcher"}
+	{sound "weapon/reactive/wrist_rocket"}
+	{sound "weapon/shot/reactive/d2/shared/rocket_launcher"}
+	{sound "weapon/shot/reactive/d3/shared/rocket_launcher"}
+}

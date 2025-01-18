@@ -1,0 +1,30 @@
+{game_entity
+	{obstacleID "stuff"}
+	{props "m43_ammo_gas" "grenade" "steel" "local_physics"}
+	{simulation {able 1} {state 1}}
+	{body {proper body sensible} {permit body}}
+	{collider "stuff"}
+	{mass 50}
+	{extension "m43_gas_bullet.mdl"}
+	; {extender "stuff"
+		; {item "40x46 thermite ammo"}
+	; }
+	; {Volume "armed"
+		; {tags "detonator"}
+		; {able {obstacle 1} {contact 1}}
+		; {thickness 0.5}
+	; }
+	{Volume "body"
+		;{tags "detonator"}
+		{able {obstacle 1} {contact 1}}
+		{thickness 0.5}
+	}
+	{bone "gas"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.5 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
+}

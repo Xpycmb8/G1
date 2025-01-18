@@ -1,0 +1,20 @@
+{fx
+	{particleview pieces
+		{entitygenerator
+			{totalparticles 1}
+			{emissionarea
+				{radius 0.1}
+				{alpha0 0}
+				{alpha1 57.5 -7.5}
+			}
+			{particleinit
+				{speed 7 2}
+				{lifetime 2}
+			}
+			{## axisz}
+			{entity "fraction_view"
+				{## fx "dust_small"}
+			}
+		}
+	}
+}

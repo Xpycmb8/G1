@@ -1,0 +1,391 @@
+;Exported by: Xpycmb
+;Date:        Sun Apr  9 17:39:44 2023
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\barn_01_base_high_side_end_01_tile.max
+{Skeleton
+	{bone "wood_plank_c"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "wood_plank_down_00"
+			{parameters "ID=Wood;"}
+			{Position -25.8646	-3.05176e-05	4.53583}
+			{VolumeView "wood_plank_down_00.ply"}
+		}
+		{bone "wood_plank_down_01"
+			{parameters "ID=Wood;"}
+			{Position -21.5627	-3.05176e-05	3.63385}
+			{VolumeView "wood_plank_down_01.ply"}
+		}
+		{bone "wood_plank_down_02"
+			{parameters "ID=Wood;"}
+			{Position -17.1713	-3.05176e-05	0.393448}
+			{VolumeView "wood_plank_down_02.ply"}
+		}
+		{bone "wood_plank_down_03"
+			{parameters "ID=Wood;"}
+			{Position -12.9159	-3.05176e-05	0}
+			{VolumeView "wood_plank_down_03.ply"}
+		}
+		{bone "wood_plank_down_04"
+			{parameters "ID=Wood;"}
+			{Position -13.6063	-3.05176e-05	5.9451}
+			{VolumeView "wood_plank_down_04.ply"}
+			{bone "wood_plank_down_05"
+				{parameters "ID=Wood;"}
+				{Position -0.374594	0	-4.22655}
+				{VolumeView "wood_plank_down_05.ply"}
+			}
+		}
+		{bone "wood_plank_down_06"
+			{parameters "ID=Wood;"}
+			{Position -8.63627	-3.05176e-05	3.91757}
+			{VolumeView "wood_plank_down_06.ply"}
+		}
+		{bone "wood_plank_down_07"
+			{parameters "ID=Wood;"}
+			{Position -4.32811	-3.05176e-05	3.99428}
+			{VolumeView "wood_plank_down_07.ply"}
+		}
+		{bone "wood_plank_down_08"
+			{parameters "ID=Wood;"}
+			{Position -0.0197058	-3.05176e-05	2.526}
+			{VolumeView "wood_plank_down_08.ply"}
+		}
+		{bone "wood_plank_down_09"
+			{parameters "ID=Wood;"}
+			{Position 4.28544	-3.05176e-05	4.1958}
+			{VolumeView "wood_plank_down_09.ply"}
+		}
+		{bone "wood_plank_down_10"
+			{parameters "ID=Wood;"}
+			{Position 8.59921	-3.05176e-05	1.9794}
+			{VolumeView "wood_plank_down_10.ply"}
+		}
+		{bone "wood_plank_down_11"
+			{parameters "ID=Wood;"}
+			{Position 13.6754	-3.05176e-05	4.66693}
+			{VolumeView "wood_plank_down_11.ply"}
+		}
+		{bone "wood_plank_down_12"
+			{parameters "ID=Wood;"}
+			{Position 12.0828	-3.05176e-05	4.41327}
+			{VolumeView "wood_plank_down_12.ply"}
+		}
+		{bone "wood_plank_down_13"
+			{parameters "ID=Wood;"}
+			{Position 17.2042	-3.05176e-05	4.31946}
+			{VolumeView "wood_plank_down_13.ply"}
+		}
+		{bone "wood_plank_down_14"
+			{parameters "ID=Wood;"}
+			{Position 21.5171	-3.05176e-05	5.21088}
+			{VolumeView "wood_plank_down_14.ply"}
+		}
+		{bone "wood_plank_down_15"
+			{parameters "ID=Wood;"}
+			{Position -25.8006	-3.05176e-05	-3.53662}
+			{VolumeView "wood_plank_down_15.ply"}
+			{bone "wood_plank_down_16"
+				{parameters "ID=Wood;"}
+				{Position -0.0296631	0	4.10878}
+				{VolumeView "wood_plank_down_16.ply"}
+			}
+		}
+		{bone "wood_plank_down_17"
+			{parameters "ID=Wood;"}
+			{Position -21.5084	-3.05176e-05	-3.0076}
+			{VolumeView "wood_plank_down_17.ply"}
+			{bone "wood_plank_down_18"
+				{parameters "ID=Wood;"}
+				{Position 0.396229	0	5.15367}
+				{VolumeView "wood_plank_down_18.ply"}
+			}
+		}
+		{bone "wood_plank_down_19"
+			{parameters "ID=Wood;"}
+			{Position -17.1977	-3.05176e-05	-5.96453}
+			{VolumeView "wood_plank_down_19.ply"}
+			{bone "wood_plank_down_20"
+				{parameters "ID=Wood;"}
+				{Position -1.11238	0	6.60831}
+				{VolumeView "wood_plank_down_20.ply"}
+			}
+		}
+		{bone "wood_plank_down_21"
+			{parameters "ID=Wood;"}
+			{Position -8.77943	-3.05176e-05	-2.93036}
+			{VolumeView "wood_plank_down_21.ply"}
+			{bone "wood_plank_down_22"
+				{parameters "ID=Wood;"}
+				{Position 1.47734	0	0.333267}
+				{VolumeView "wood_plank_down_22.ply"}
+			}
+		}
+		{bone "wood_plank_down_23"
+			{parameters "ID=Wood;"}
+			{Position -4.3257	-3.05176e-05	-2.89035}
+			{VolumeView "wood_plank_down_23.ply"}
+			{bone "wood_plank_down_24"
+				{parameters "ID=Wood;"}
+				{Position -0.75928	0	0.302841}
+				{VolumeView "wood_plank_down_24.ply"}
+			}
+		}
+		{bone "wood_plank_down_25"
+			{parameters "ID=Wood;"}
+			{Position -0.0337697	-3.05176e-05	-4.26579}
+			{VolumeView "wood_plank_down_25.ply"}
+			{bone "wood_plank_down_26"
+				{parameters "ID=Wood;"}
+				{Position -0.4958	0	3.71207}
+				{VolumeView "wood_plank_down_26.ply"}
+			}
+		}
+		{bone "wood_plank_down_27"
+			{parameters "ID=Wood;"}
+			{Position 4.14138	-3.05176e-05	-4.17258}
+			{VolumeView "wood_plank_down_27.ply"}
+			{bone "wood_plank_down_28"
+				{parameters "ID=Wood;"}
+				{Position 0.130685	0	1.54846}
+				{VolumeView "wood_plank_down_28.ply"}
+			}
+		}
+		{bone "wood_plank_down_29"
+			{parameters "ID=Wood;"}
+			{Position 8.5483	-3.05176e-05	-4.73999}
+			{VolumeView "wood_plank_down_29.ply"}
+			{bone "wood_plank_down_30"
+				{parameters "ID=Wood;"}
+				{Position -0.570304	0	5.34264}
+				{VolumeView "wood_plank_down_30.ply"}
+			}
+		}
+		{bone "wood_plank_down_31"
+			{parameters "ID=Wood;"}
+			{Position 12.8586	-3.05176e-05	-2.10623}
+			{VolumeView "wood_plank_down_31.ply"}
+		}
+		{bone "wood_plank_down_32"
+			{parameters "ID=Wood;"}
+			{Position 17.1253	-3.05176e-05	-2.57031}
+			{VolumeView "wood_plank_down_32.ply"}
+			{bone "wood_plank_down_33"
+				{parameters "ID=Wood;"}
+				{Position 0.70977	0	2.01944}
+				{VolumeView "wood_plank_down_33.ply"}
+			}
+		}
+		{bone "wood_plank_down_34"
+			{parameters "ID=Wood;"}
+			{Position 21.4196	-3.05176e-05	-4.27234}
+			{VolumeView "wood_plank_down_34.ply"}
+			{bone "wood_plank_down_35"
+				{parameters "ID=Wood;"}
+				{Position 0.0615463	0	4.34323}
+				{VolumeView "wood_plank_down_35.ply"}
+			}
+		}
+		{bone "wood_plank_down_36"
+			{parameters "ID=Wood;"}
+			{Position 25.8044	-3.05176e-05	3.16705}
+			{VolumeView "wood_plank_down_36.ply"}
+		}
+		{bone "wood_plank_down_37"
+			{parameters "ID=Wood;"}
+			{Position 25.7338	-3.05176e-05	-3.39516}
+			{VolumeView "wood_plank_down_37.ply"}
+			{bone "wood_plank_down_38"
+				{parameters "ID=Wood;"}
+				{Position -0.396412	0	0.862305}
+				{VolumeView "wood_plank_down_38.ply"}
+			}
+		}
+	}
+}
+{Volume "wood_00"
+	{Box 4.34017 0.956665 4.87068}
+	{Bone "wood_plank_down_00"}
+}
+{Volume "wood_01"
+	{Box 3.86466 0.956635 5.93251}
+	{Bone "wood_plank_down_01"}
+	{Position 0.0169849	0	0.322449}
+}
+{Volume "wood_02"
+	{Box 4.23912 0.956635 13.1554}
+	{Bone "wood_plank_down_02"}
+}
+{Volume "wood_03"
+	{Box 4.31716 0.956665 13.9423}
+	{Bone "wood_plank_down_03"}
+	{Position 0	0	0}
+}
+{Volume "wood_04"
+	{Box 3.00006 0.956665 2.05212}
+	{Bone "wood_plank_down_04"}
+	{Position 0	0	-1.14441e-05}
+}
+{Volume "wood_05"
+	{Box 2.23545 0.956635 7.37828}
+	{Bone "wood_plank_down_05"}
+	{Position 0	0	0}
+}
+{Volume "wood_06"
+	{Box 4.3225 0.956635 6.10718}
+	{Bone "wood_plank_down_06"}
+	{Position 0	0	0}
+}
+{Volume "wood_07"
+	{Box 4.32121 0.956665 5.95377}
+	{Bone "wood_plank_down_07"}
+}
+{Volume "wood_08"
+	{Box 4.32681 0.956665 8.89031}
+	{Bone "wood_plank_down_08"}
+	{Position 0	0	-1.14441e-05}
+}
+{Volume "wood_09"
+	{Box 4.33892 0.956635 5.5507}
+	{Bone "wood_plank_down_09"}
+}
+{Volume "wood_10"
+	{Box 4.3338 0.956696 9.98353}
+	{Bone "wood_plank_down_10"}
+	{Position 0	0	1.14441e-05}
+}
+{Volume "wood_11"
+	{Box 2.80375 0.956635 4.60844}
+	{Bone "wood_plank_down_11"}
+	{Position 0	0	0}
+}
+{Volume "wood_12"
+	{Box 2.72671 0.956665 5.11578}
+	{Bone "wood_plank_down_12"}
+	{Position 0	0	-1.14441e-05}
+}
+{Volume "wood_13"
+	{Box 4.36868 0.956665 5.30338}
+	{Bone "wood_plank_down_13"}
+	{Position 0	0	1.14441e-05}
+}
+{Volume "wood_14"
+	{Box 4.36526 0.956635 3.52055}
+	{Bone "wood_plank_down_14"}
+	{Position 0	0	1.14441e-05}
+}
+{Volume "wood_15"
+	{Box 4.34751 0.956635 6.86913}
+	{Bone "wood_plank_down_15"}
+	{Position 0	0	0}
+}
+{Volume "wood_16"
+	{Box 4.32919 0.956665 4.2679}
+	{Bone "wood_plank_down_16"}
+	{Position 0	0	0}
+}
+{Volume "wood_17"
+	{Box 4.34278 0.956635 7.92713}
+	{Bone "wood_plank_down_17"}
+	{Position 0	0	0}
+}
+{Volume "wood_18"
+	{Box 3.48168 0.956635 5.93251}
+	{Bone "wood_plank_down_18"}
+}
+{Volume "wood_19"
+	{Box 4.30116 0.956635 2.01327}
+	{Bone "wood_plank_down_19"}
+}
+{Volume "wood_20"
+	{Box 2.21002 0.956665 12.6548}
+	{Bone "wood_plank_down_20"}
+}
+{Volume "wood_21"
+	{Box 4.00908 0.956665 8.08166}
+	{Bone "wood_plank_down_21"}
+	{Position 0	0	0}
+}
+{Volume "wood_22"
+	{Box 1.66923 0.956665 8.74818}
+	{Bone "wood_plank_down_22"}
+	{Position 0	0	0}
+}
+{Volume "wood_23"
+	{Box 4.30678 0.956635 8.16167}
+	{Bone "wood_plank_down_23"}
+	{Position 0	0	0}
+}
+{Volume "wood_24"
+	{Box 2.79977 0.956635 8.28584}
+	{Bone "wood_plank_down_24"}
+}
+{Volume "wood_25"
+	{Box 4.31487 0.956665 5.41078}
+	{Bone "wood_plank_down_25"}
+	{Position 0	0	0}
+}
+{Volume "wood_26"
+	{Box 3.31867 0.956635 7.15295}
+	{Bone "wood_plank_down_26"}
+	{Position 0	0	-1.14441e-05}
+}
+{Volume "wood_27"
+	{Box 4.09002 0.956635 5.59721}
+	{Bone "wood_plank_down_27"}
+	{Position 0	0	0}
+}
+{Volume "wood_28"
+	{Box 4.32528 0.956665 8.69412}
+	{Bone "wood_plank_down_28"}
+	{Position 0	0	0}
+}
+{Volume "wood_29"
+	{Box 4.32869 0.956665 4.4624}
+	{Bone "wood_plank_down_29"}
+	{Position 0	0	0}
+}
+{Volume "wood_30"
+	{Box 3.16821 0.956665 9.99243}
+	{Bone "wood_plank_down_30"}
+}
+{Volume "wood_31"
+	{Box 4.37417 0.956696 9.7299}
+	{Bone "wood_plank_down_31"}
+	{Position 0	0	0}
+}
+{Volume "wood_32"
+	{Box 4.33241 0.956635 8.80176}
+	{Bone "wood_plank_down_32"}
+}
+{Volume "wood_33"
+	{Box 3.04756 0.956665 8.04493}
+	{Bone "wood_plank_down_33"}
+	{Position 0	0	1.14441e-05}
+}
+{Volume "wood_34"
+	{Box 4.34585 0.956665 5.39771}
+	{Bone "wood_plank_down_34"}
+	{Position 0	0	0}
+}
+{Volume "wood_35"
+	{Box 4.37805 0.956665 7.80851}
+	{Bone "wood_plank_down_35"}
+	{Position 0	0	0}
+}
+{Volume "wood_36"
+	{Box 4.41302 0.956635 7.60818}
+	{Bone "wood_plank_down_36"}
+	{Position 0	0	0}
+}
+{Volume "wood_37"
+	{Box 4.39907 0.956665 7.15208}
+	{Bone "wood_plank_down_37"}
+	{Position 0	0	0}
+}
+{Volume "wood_38"
+	{Box 3.56581 0.956635 4.80988}
+	{Bone "wood_plank_down_38"}
+}

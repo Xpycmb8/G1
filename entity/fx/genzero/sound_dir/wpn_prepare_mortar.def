@@ -1,0 +1,4 @@
+{fx
+	{sound "generation_zero/weapon/load/tank_wpn_prepare_mortar"}
+	{## sound "generation_zero/characters/wpn_alarm/wpn_alarm_clustermine/dir"}
+}

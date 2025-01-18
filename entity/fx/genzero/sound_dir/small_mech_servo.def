@@ -1,0 +1,4 @@
+{fx
+	{sound "generation_zero/characters/small_mech/servo"}
+	{## sound "generation_zero/characters/wpn_alarm/wpn_alarm_mgun/dir"}
+}

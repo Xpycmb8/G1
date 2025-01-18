@@ -1,0 +1,4 @@
+{fx
+	{sound "generation_zero/characters/wpn_alarm/wpn_alarm_missiles/bb/tank_wpn_alarm_missiles_verb"}
+	{sound "generation_zero/characters/wpn_alarm/wpn_alarm_missiles/dir/tank_wpn_alarm_missiles_dir"}
+}

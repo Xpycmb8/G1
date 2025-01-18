@@ -1,0 +1,15 @@
+{actor
+	(include "/properties/stuff_grenade.ext")
+	(include "/properties/shadow/round.inc")
+	{props "pest_bomb_link"}
+	{extender "stuff"
+		{item "pest_bomb_single"}
+	}
+	{mass 2}
+	{Extension "pest_bomb_link.mdl"}
+	{nogroupmesh 1}
+	{Volume "bomb"
+		{tags "explosive"}
+		{Thickness 1}
+	}
+}

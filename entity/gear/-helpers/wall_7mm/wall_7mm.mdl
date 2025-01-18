@@ -1,0 +1,22 @@
+;Exported by: Xpycmb
+;Date:        Sat Dec 30 18:38:13 2023
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\wall7mm.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "body"
+			{parameters "CommonMesh;"}
+			{Position 0.727726	0	0}
+			{VolumeView "body.ply"}
+		}
+	}
+}
+{Volume "body"
+	{Box 37.5 0.5 37.5}
+	{Bone "body"}
+	{Position 0	0	18.8179}
+}

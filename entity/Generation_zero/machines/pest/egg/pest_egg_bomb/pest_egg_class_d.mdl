@@ -1,0 +1,50 @@
+;Exported by: Xpycmb
+;Date:        Wed Jan 11 00:04:57 2023
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\pest_class_d.max
+{Skeleton
+	{bone revolute "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "body"
+			{Matrix34
+				0	-1	0
+				0	0	-1
+				1	0	0
+				-1.71734	-0.0118339	2.64513
+			}
+			{VolumeView "body.ply"}
+		}
+		{bone "part"
+			{Matrix34
+				0	0	-1
+				0	1	0
+				1	0	0
+				0.395095	-0.0118368	1.29805
+			}
+			{VolumeView "part.ply"}
+		}
+	}
+}
+{Volume "body"
+	{Box 5.56743 4.53534 2.86473}
+	{Bone "body"}
+	{Matrix34
+		0	0	1
+		-1	0	0
+		0	-1	0
+		0	-0.690654	2.11243
+	}
+}
+{Volume "part"
+	{Box 5.56743 4.53534 1.55692}
+	{Bone "part"}
+	{Matrix34
+		0	0	1
+		0	1	0
+		-1	0	0
+		0.477525	0	0
+	}
+}

@@ -1,0 +1,79 @@
+;Exported by: Xpycmb
+;Date:        Fri Apr 28 16:51:17 2023
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\item_flammeable.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "handle"
+			{Position 0	0	-0.0217475}
+		}
+		{bone "body"
+			{VolumeView "body.ply"}
+		}
+	}
+}
+{Volume "body"
+	{Cylinder 0.193272 0.470735}
+	{Bone "body"}
+	{Matrix34
+		0.707066	0.842649	0
+		-0.842649	0.707066	0
+		0	0	1.1
+		0	0	2.59578e-05
+	}
+}
+{Volume "select"
+	{Box 2.5 2.5 2.5}
+	{Bone "basis"}
+	{Position 0	0	-0.0217476}
+}
+{Extender "preview"
+	{"Stuff"
+		{camera
+			{origin -0.0929955	1.33858	0.0435048}
+			{lookat 0	0	-0.0217466}
+			{fov 28.3138}
+			{horizon -0.139882}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 698.954	-463.711	4.62781}
+			}
+			{"1"
+				{type directional}
+				{direction -0.00762296	-0.499942	0.000309654}
+			}
+			{"2"
+				{type point}
+				{position -422.478	-341.217	-7.60399}
+			}
+		}
+	}
+	{"Stuff_primary"
+		{camera
+			{origin -0.379243	0.936877	0.0699117}
+			{lookat 10.8116	-28.8636	-3.11364}
+			{fov 45}
+			{horizon 2.95115}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 48.3011	322.579	-5.43911}
+			}
+			{"1"
+				{type directional}
+				{direction -0.0697646	-0.495096	0.00355192}
+			}
+			{"2"
+				{type point}
+				{position 80.0272	328.871	3.52674}
+			}
+		}
+	}
+}

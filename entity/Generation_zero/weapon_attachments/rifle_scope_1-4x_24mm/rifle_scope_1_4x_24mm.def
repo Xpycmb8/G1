@@ -1,0 +1,8 @@
+{game_entity
+	(include "/properties/stuff_small.ext")
+	{collider "stuff"}
+	{extender "stuff"
+		{item "rifle_scope_1_4x_24mm"}
+	}
+	{Extension "rifle_scope_1-4x_24mm.mdl"}
+}

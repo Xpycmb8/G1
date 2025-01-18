@@ -1,0 +1,4 @@
+{game_entity
+	(include "/properties/small_part_destroy.inc")
+	{Extension "debris_metal_shrapnel_12.mdl"}
+}

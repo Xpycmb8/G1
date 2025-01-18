@@ -1,0 +1,62 @@
+{fx
+	{particleview sparkles
+		{generator
+			{emissionarea
+				{radius 0}
+				{alpha0 0}
+				{alpha1 7 5}
+				{distributionlaw sphere}
+			}
+			{particleinit
+				{speed 35.5 14.5}
+				{lifetime 0.15 0.05}
+			}
+			{particlesinblock 2.5 1.5}
+			{timetolive 0.1}
+		}
+		{mover
+			{damping 2}
+			{gravity
+				{value 0.2}
+			}
+			{collisions
+				{terrain}
+				{restitution 0.3}
+			}
+		}
+		{visualizer
+			{stage 
+				{sprite "$/rebuild/flash_02"
+					{light 1
+						{linear
+							{min 1}
+							{max 0}
+						}
+					}
+					{timer
+						{mode play}
+						{duration -1}
+					}
+					{scalex 0.02}
+					{scaley 0.002}
+				}
+				{sprite "$/rebuild/flash_02"
+					{light 1
+						{linear
+							{min 2}
+							{max 0}
+						}
+					}
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{scalex 0.035 0.015}
+					{scaley 0.0035 0.0015}
+				}
+				{flags trace }
+			}
+		}
+		{notifyowner}
+	}
+}

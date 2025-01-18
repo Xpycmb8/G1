@@ -1,0 +1,37 @@
+{fx
+	{spriteview muz2
+		{sprite "$/additional/sparks/fx_sparksb2"
+			{#+ light 1
+				{## linear
+					{min 0}
+					{max 1}
+				}
+				{power
+					{min 0}
+					{max 1}
+					{pow 3}
+				}
+			}
+			{scalex 0
+				{npower
+					{min 0}
+					{max 0.03}
+					{pow 0.5}
+				}
+			}
+			{scaley 0
+				{npower
+					{min 0}
+					{max 0.03}
+					{pow 0.5}
+				}
+			}
+			{timer
+				{duration 0.05}
+				{mode play }
+			}
+		}
+		{orientation trace}
+		{autovisible}
+	}
+}

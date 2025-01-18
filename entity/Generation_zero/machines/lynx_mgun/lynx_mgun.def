@@ -1,0 +1,255 @@
+{actor
+	(include "/properties/machinery.ext")
+	{PatherID	"lynx_base"}
+	{targetClass "machinery"} ;; select for best ammo
+	{targetSelector "baze_machinery"}
+	{props "baze_machinery" "lynx_base" "detect_tank_light"}
+	(include "/properties/selection/skirmisher.inc" scale(0.2))
+	{placer
+		{place "link_front"
+			{entity "melee_detect_front_lynx"}
+			{Linkbone "basis"}
+			{obstacle disable}
+		}
+		{crew 0}
+	}
+	{Volume "body"  
+		{component "main_body"}
+		{material "steel"}
+		{thickness	12 }
+		{tags "ground_contact" "main_body" "backup_melee" }
+	}
+	{Volume "body2"  
+		{component "main_body"}
+		{material "steel"}
+		{thickness	12 }
+		{tags "ground_contact" "main_body" }
+	}
+	{Volume "body3"  
+		{component "main_body"}
+		{material "steel"}
+		{thickness	12 }
+		{tags "main_body" }
+	}
+	{Volume "railing_b_armor"  
+		{component "armor"}
+		{material "steel"}
+		{thickness	12 }
+		{tags "ground_contact" "backup_melee" }
+	}
+	{Volume "railing_l"  
+		{component "armor"}
+		{material "armor"}
+		{thickness	8 }
+		{tags "ground_contact" "backup_melee" }
+	}
+	{Volume "railing_r"  
+		{component "armor"}
+		{material "armor"}
+		{thickness	8 }
+		{tags "ground_contact" "backup_melee" }
+	}
+	{Volume "sideplate_left"
+		{material "armor"}
+		{thickness 12}
+		{component "sideplate_left"}
+		{tags "armor_crushed" }
+	}
+	{Volume "sideplate_right"
+		{material "armor"}
+		{thickness 12}
+		{component "sideplate_right"}
+		{tags "armor_crushed" }
+	}
+	{Volume "kneepad_l"
+		{material "armor"}
+		{thickness 12}
+		{component "kneepad_l"}
+		{tags "armor_crushed" "front_armor" }
+	}
+	{Volume "kneepad_r"
+		{material "armor"}
+		{thickness 12}
+		{component "kneepad_r"}
+		{tags "armor_crushed" "front_armor" }
+	}
+
+	{Volume "wheell2"
+		{material "armor"}
+		{thickness 20}
+		{component "trackLeft"}
+		{tags "wheell" }
+	}
+	{Volume "wheelr2"
+		{material "armor"}
+		{thickness 20}
+		{component "trackRight"}
+		{tags "wheell" }
+	}
+
+	{Volume "front_hatch"
+		{material "steel"}
+		{thickness 2}
+		{component "front_hatch"}
+		{tags "front_hatch" }
+	}
+
+	{Volume "head"
+		{material "steel"}
+		{thickness 3}
+		{component "head"}
+		{tags "head" "main_organ" }
+	}
+
+	{Volume "fuel" 
+		{material "steel"}
+		{component "fuel"}
+		{thickness 1}
+		{tags "fuel" "main_organ"}
+	}
+;-----------------organ
+	{Volume "cpu" ; back_volume
+		{material "steel"}
+		{thickness 1}
+		{component "cpu"}
+		{tags "cpu" "main_organ" }
+	}
+	{Volume "hydraulic" 
+		{material "steel"}
+		{thickness 7}
+		{component "hydraulic"}
+		{tags "hydraulic" "main_organ" }
+	}
+	{Volume "organ_head"
+		{material "steel"}
+		{thickness 1}
+		{component "head_organ"}
+		{tags "head_organ"  "organ" "main_organ"}
+	}
+
+	{Volume "Left_Engine"
+		{thickness 8}
+		{component "Left_Engine"}
+		{tags "Left_Engine" }
+	}
+	{Volume "Right_Engine"
+		{thickness 8}
+		{component "Right_Engine"}
+		{tags "Right_Engine" }
+	}
+	{Volume "mgun"
+		{material "steel"}
+		{thickness 6}
+		{component "mgun"}
+		{tags "mgun" }
+	}
+	{Volume "barrel"
+		{material "steel"}
+		{thickness 6}
+		{component "mgun"}
+		{tags "mgun" }
+	}
+	{Volume "upper"
+		{material "steel"}
+		{thickness 6}
+		{component "mgun"}
+		{tags "mgun" }
+	}
+	{Volume "magazine"
+		{material "steel"}
+		{thickness 8}
+		{component "ammo"}
+		{tags "ammo" }
+	}
+
+	{sensor
+		{Visor "eyes"
+			{vision "main_scaner"}
+			{bone "visor_head_bone"}
+		}
+		{Visor "eyes2"
+			{vision "main_scaner_support"}
+			{bone "visor_head_bone_support"}
+		}
+	}
+	{extender "inventory" ; создать лут
+		{box
+			{Size 4 4}
+			{Weight 500}
+			{item "ammo 762x39" 100}
+			{item "ammo visor"	10}
+			{item "ammo jump"	10}
+		}
+	}
+	{Weaponry
+		{place "mgun"
+			{weapon 	"rpd_lynx" filled}
+			{foresight "Foresight"}
+			{rotate}
+			{basic}
+		}
+		{place "alarm_signal"    ;mgun_alarm ;led
+			{weapon 	"alarm_update_100m" filled}
+			{foresight 	"signal"}
+			{basic}
+			;{rotate}
+		}
+		{place "saw_signal"    ;mgun_alarm ;led
+			{weapon 	"alarm_update_7_6m" filled}
+			{foresight 	"signal_saw"}
+			{basic}
+			;{rotate}
+		}
+		{place "head_joint" ;head_joint 
+			{weapon 	"head_joint" filled}
+			{foresight 	"visor_head_bone"}
+			{basic}
+			;{rotate}
+		}
+	}
+	{mass 250}
+	("movement_light_track" 
+		slow(0) 
+		normal(15)
+		fast(17)
+		maxspeed(17)
+		maxspeed_atmaxturn(0.5)
+		turnstart(2)
+		turnstop(2)
+		turnradius(2)
+		turntime(0.5)
+		starttime(1.5)
+		stoptime(2)
+		braketime(1)
+		fuelbag_vol(25)
+		rate(0.1)
+		remain(20)
+		fuel(diesel)
+	)	
+	{Extension "lynx_mgun.mdl"}
+	{bone "head_ems_00_hold"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.5 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
+	{bone "head_ems_00_search"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.5 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
+	{bone "head_ems_00_alarm"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.5 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
+}
+

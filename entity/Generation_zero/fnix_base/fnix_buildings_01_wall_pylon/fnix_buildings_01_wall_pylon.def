@@ -1,0 +1,4 @@
+{game_entity
+	(include "/properties/construction_fnix.ext")
+	{Extension "fnix_buildings_01_wall_pylon.mdl"}
+}

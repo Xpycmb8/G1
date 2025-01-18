@@ -1,0 +1,4 @@
+{game_entity
+	(include "/properties/construction_fnix.ext")
+	{Extension "fnix_buildings_wall_straight_resize_01_wall_straight_3x2.mdl"}
+}

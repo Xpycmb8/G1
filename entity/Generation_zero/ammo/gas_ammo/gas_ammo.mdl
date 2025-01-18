@@ -1,0 +1,105 @@
+;Exported by: Xpycmb
+;Date:        Sat Nov  9 16:40:24 2024
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\gas_ammo.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "handle"
+			{Matrix34
+				0	1	0
+				-1	0	0
+				0	0	1
+				0.24433	-0.0578189	0.138242
+			}
+		}
+		{bone "body"
+			{parameters "ID=gasdrop_l;"}
+			{Matrix34
+				1	0	0
+				0	0.999635	0.0270325
+				0	-0.0270325	0.999635
+				-0.647304	0.554293	0.721733
+			}
+			{VolumeView "body.ply"}
+		}
+		{bone "view"
+			{parameters "ID=gasdrop_l;"}
+			{Matrix34
+				1	0	0
+				0	0.999635	0.0270325
+				0	-0.0270325	0.999635
+				-0.647304	0.554293	0.721733
+			}
+			{VolumeView "view.ply"}
+		}
+	}
+}
+{Volume "body"
+	{Cylinder 1.99285 7.42531}
+	{Bone "body"}
+	{Matrix34
+		1	0	0
+		0	1	0
+		0	0	1
+		-0.00813068	-0.122274	0.13894
+	}
+}
+{Volume "select"
+	{Box 6 6 6}
+	{Bone "basis"}
+	{Matrix34
+		0	1	0
+		-1	0	0
+		0	0	1
+		-0.655445	0.432014	0.810961
+	}
+}
+{Extender "preview"
+	{"Stuff"
+		{camera
+			{origin -1.11213	-14.876	4.62844}
+			{lookat 1.30489	14.5198	-4.10399}
+			{fov 45}
+			{horizon 0.540679}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 14.1415	23.5272	-18.1092}
+			}
+			{"1"
+				{type directional}
+				{direction 0.0375925	0.498545	-0.00629275}
+			}
+			{"2"
+				{type point}
+				{position -15.0001	34.2538	-5.37261}
+			}
+		}
+	}
+	{"Stuff_primary"
+		{camera
+			{origin -2.62047	-13.9396	3.33115}
+			{lookat 0.0247246	17.6304	-1.11469}
+			{fov 45}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 15.9412	29.0332	-8.47953}
+			}
+			{"1"
+				{type directional}
+				{direction 0.0267785	0.494771	0.0669673}
+			}
+			{"2"
+				{type point}
+				{position -14.4775	37.5794	2.84219}
+			}
+		}
+	}
+}

@@ -1,0 +1,25 @@
+{fx
+	{spriteview
+		{sprite "$/interface/dynamite_set"
+			{timer
+				{mode play loop }
+				{duration 5}
+			}
+			{scale 1
+				{peak
+					{min 0.07}
+					{max 0.07}
+				}
+			}
+			{light 1
+				{linear
+					{min 0.5}
+					{max 0.5}
+				}
+			}
+		}
+		{offset 0 0 7}
+		{halo}
+		{autovisible}
+	}
+}

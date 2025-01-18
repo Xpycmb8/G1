@@ -1,0 +1,7 @@
+{Actor
+	(include "/properties/stuff_weapon.ext")
+	{extender "stuff"
+		{item "grenade_launcher_cluster"}
+	}
+	{Extension "grenade_launcher_skirmisher.mdl"}
+}

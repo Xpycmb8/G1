@@ -1,0 +1,99 @@
+;Exported by: Xpycmb
+;Date:        Thu Jan  5 21:11:19 2023
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\building_resistance_wall_01_metal_fence_01.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "building_resistance_chain_link"
+			{parameters "ID=body;"}
+			{VolumeView "building_resistance_chain_link.ply"}
+		}
+		{bone "metal_barbed_wire"
+			{parameters "ID=body;"}
+			{VolumeView "metal_barbed_wire.ply"}
+		}
+		{bone "metal_galvanized_tiling"
+			{parameters "ID=body;"}
+			{VolumeView "metal_galvanized_tiling.ply"}
+		}
+		{bone "floor_concrete"
+			{parameters "ID=body;"}
+			{VolumeView "floor_concrete.ply"}
+		}
+		{bone "buildings_resistnace_wall_metal_uniqe"
+			{parameters "ID=body;"}
+			{VolumeView "buildings_resistnace_wall_metal_uniqe.ply"}
+		}
+	}
+}
+{Obstacle "obstacle"
+	{Obb2
+		{Center 0 -7.62939e-06}
+		{Extent 3.38228 25.9963}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Volume "body_10"
+	{Box 49 1 4.8}
+	{Bone "buildings_resistnace_wall_metal_uniqe"}
+	{Matrix34
+		0	-1	0
+		1	0	0
+		0	0	1
+		0	0	13.1676
+	}
+}
+{Volume "body_40"
+	{Polyhedron "body_40.vol"}
+	{Bone "floor_concrete"}
+	{Orientation
+		0	-1	0
+		1	0	0
+		0	0	1
+	}
+}
+{Volume "body_6"
+	{Box 1 1 48.047}
+	{Bone "buildings_resistnace_wall_metal_uniqe"}
+	{Matrix34
+		0	-1	0
+		1	0	0
+		0	0	1
+		0.052124	-24.866	34.6648
+	}
+}
+{Volume "body_6_1"
+	{Box 1 1 48.047}
+	{Bone "buildings_resistnace_wall_metal_uniqe"}
+	{Matrix34
+		0	-1	0
+		1	0	0
+		0	0	1
+		0.052124	24.825	34.6648
+	}
+}
+{Volume "body_6_2"
+	{Box 49 1 1}
+	{Bone "buildings_resistnace_wall_metal_uniqe"}
+	{Matrix34
+		0	-1	0
+		1	0	0
+		0	0	1
+		0	0	50.1941
+	}
+}
+{Volume "wire"
+	{Box 48 0.5 33.5}
+	{Bone "building_resistance_chain_link"}
+	{Matrix34
+		0	-1	0
+		1	0	0
+		0	0	1
+		0	0	32.589
+	}
+}

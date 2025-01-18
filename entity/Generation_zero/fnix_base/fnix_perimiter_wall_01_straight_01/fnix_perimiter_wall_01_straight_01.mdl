@@ -1,0 +1,57 @@
+;Exported by: Xpycmb
+;Date:        Tue Sep 13 16:22:48 2022
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\fnix_perimiter_wall_01_straight_01.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "base"
+			{parameters "ID=Body;"}
+			{Orientation
+				-1	0	0
+				0	-1	0
+				0	0	1
+			}
+			{LODView
+				{VolumeView "base.ply"}
+				{VolumeView "base_lod1.ply"}
+				{VolumeView "base_lod2.ply"}
+				{VolumeView "base_lod3.ply"}
+				{VolumeView "base_lod4.ply"}
+			}
+		}
+	}
+}
+{Volume "armor_main_20_00"
+	{Polyhedron "armor_main_20_00.vol"}
+	{Bone "base"}
+	{Matrix34
+		0	-1	0
+		1	0	0
+		0	0	1
+		-0.0272546	3.12249	-11.5257
+	}
+}
+{Volume "armor_main_20_01"
+	{Polyhedron "armor_main_20_01.vol"}
+	{Bone "base"}
+	{Matrix34
+		0	-1	0
+		1	0	0
+		0	0	1
+		-0.0272522	34.3843	-11.5257
+	}
+}
+{Volume "armor_main_50_00"
+	{Polyhedron "armor_main_50_00.vol"}
+	{Bone "base"}
+	{Matrix34
+		0	-1	0
+		1	0	0
+		0	0	1
+		0	18.7067	-12.4791
+	}
+}

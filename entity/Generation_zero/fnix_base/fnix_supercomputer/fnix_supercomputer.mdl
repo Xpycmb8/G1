@@ -1,0 +1,141 @@
+;Exported by: Xpycmb
+;Date:        Wed Apr  3 00:17:46 2024
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\fnix_supercomputer.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "body"
+			{parameters "ID=Body;"}
+			{Position 0	-0.350807	33.0891}
+			{VolumeView "body.ply"}
+			{bone "alarm_ems"
+				{parameters "ID=Body;"}
+				{Position 0	0.350807	10.1622}
+				{visibility 0}
+				{VolumeView "alarm_ems.ply"}
+			}
+			{bone "glass"
+				{parameters "ID=Body;"}
+				{Position 0	0.350807	-33.0891}
+				{VolumeView "glass.ply"}
+			}
+		}
+	}
+}
+{Obstacle "obs"
+	{Obb2
+		{Center 0 0}
+		{Extent 18.75 18.75}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Volume "armor_main_35_00"
+	{Polyhedron "armor_main_35_00.vol"}
+	{Bone "body"}
+	{Position 0	0.350807	-24.2664}
+}
+{Volume "armor_main_50_00"
+	{Box 44 44 9.50205}
+	{Bone "body"}
+	{Position 0	0.350807	-28.3381}
+}
+{Volume "ems_white_00"
+	{Box 4.19358 0.5 27.3166}
+	{Bone "basis"}
+	{Position -9.33506	14.0347	43.1575}
+}
+{Volume "ems_white_01"
+	{Box 4.19358 0.5 27.3166}
+	{Bone "basis"}
+	{Position 0.0148191	14.0347	43.1575}
+}
+{Volume "ems_white_02"
+	{Box 4.19358 0.5 27.3166}
+	{Bone "basis"}
+	{Position 9.42342	14.0347	43.1575}
+}
+{Volume "ems_white_03"
+	{Box 4.19358 0.5 27.3166}
+	{Bone "basis"}
+	{Position -9.33506	-14.0262	43.1575}
+}
+{Volume "ems_white_04"
+	{Box 4.19358 0.5 27.3166}
+	{Bone "basis"}
+	{Position 0.0148191	-14.0262	43.1575}
+}
+{Volume "ems_white_05"
+	{Box 4.19358 0.5 27.3166}
+	{Bone "basis"}
+	{Position 9.42342	-14.0262	43.1575}
+}
+{Volume "ems_white_06"
+	{Box 4.19358 0.5 27.3166}
+	{Bone "basis"}
+	{Matrix34
+		0	-1	0
+		1	0	0
+		0	0	1
+		14.0147	9.42819	43.1575
+	}
+}
+{Volume "ems_white_07"
+	{Box 4.19358 0.5 27.3166}
+	{Bone "basis"}
+	{Matrix34
+		0	-1	0
+		1	0	0
+		0	0	1
+		14.0147	0.0783024	43.1575
+	}
+}
+{Volume "ems_white_08"
+	{Box 4.19358 0.5 27.3166}
+	{Bone "basis"}
+	{Matrix34
+		0	-1	0
+		1	0	0
+		0	0	1
+		14.0147	-9.3303	43.1575
+	}
+}
+{Volume "ems_white_09"
+	{Box 4.19358 0.5 27.3166}
+	{Bone "basis"}
+	{Matrix34
+		0	-1	0
+		1	0	0
+		0	0	1
+		-14.0182	9.42819	43.1575
+	}
+}
+{Volume "ems_white_10"
+	{Box 4.19358 0.5 27.3166}
+	{Bone "basis"}
+	{Matrix34
+		0	-1	0
+		1	0	0
+		0	0	1
+		-14.0182	0.0783024	43.1575
+	}
+}
+{Volume "ems_white_11"
+	{Box 4.19358 0.5 27.3166}
+	{Bone "basis"}
+	{Matrix34
+		0	-1	0
+		1	0	0
+		0	0	1
+		-14.0182	-9.3303	43.1575
+	}
+}
+{Volume "glass"
+	{Box 29 29 27.5}
+	{Bone "glass"}
+	{Position 0	0	43.243}
+}

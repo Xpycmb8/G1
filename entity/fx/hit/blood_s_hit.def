@@ -1,0 +1,153 @@
+{fx
+	{particleview pieces
+		{generator
+			{## totalparticles 6}
+			{emissionarea
+				{radius 0.15 0.15}
+				{alpha0 0}
+				{alpha1 0}
+				{speed 0.2}
+			}
+			{particleinit
+				{speed 0}
+				{lifetime 15 3}
+			}
+			{## particlesinblock 6}
+			{timetolive 4}
+			{axisz}
+		}
+		{#+ mover
+			{damping 0.9}
+			{gravity
+				{value 0.1}
+			}
+			{collisions
+				{terrain}
+				{restitution 0.05}
+			}
+			{nodependonwind}
+		}
+		{visualizer
+			{stage initial 
+				{sprite "$/particle/blood_p1"
+					{scale 0.02}
+					{preturn 90 90}
+				}
+				{sprite "$/particle/blood_p2"
+					{scale 0.02}
+					{preturn 90 90}
+				}
+				{sprite "$/particle/blood_p3"
+					{scale 0.02}
+					{preturn 90 90}
+				}
+				{sprite "$/particle/blood_p4"
+					{scale 0.02}
+					{preturn 90 90}
+				}
+			}
+			{#+ stage collided dying 
+				{#+ sprite "$/particle/bloodspot01"
+					{visibility 1
+						{linear
+							{min 0.6}
+							{max 0}
+						}
+					}
+					{timer
+						{mode play }
+						{duration 110 -100}
+					}
+					{scale 0.02 0.01}
+					{preturn 90 60}
+				}
+				{#+ sprite "$/particle/bloodsplat5"
+					{visibility 1
+						{linear
+							{min 0.6}
+							{max 0}
+						}
+					}
+					{timer
+						{mode play }
+						{duration 110 -100}
+					}
+					{scale 0.015 0.005}
+					{preturn 90 60}
+				}
+				{#+ sprite "$/particle/bloodsplat4"
+					{visibility 1
+						{linear
+							{min 0.6}
+							{max 0}
+						}
+					}
+					{timer
+						{mode play }
+						{duration 110 -100}
+					}
+					{scale 0.017 0.007}
+					{preturn 90 60}
+				}
+				{flags killparticle ground }
+			}
+		}
+		{notifyowner}
+	}
+	{##+ particleview blood
+		{generator
+			{particlesinblock 5}
+			{totalparticles 5}
+			{emissionarea
+				{radius 0.5 0.5}
+				{alpha0 0}
+				{alpha1 180}
+			}
+			{particleinit
+				{speed 1 1}
+				{lifetime 1.4 0.2}
+			}
+			{timetolive 0.1}
+			{axisz}
+		}
+		{mover
+			{damping 0.88}
+			{gravity
+				{value 0.03}
+			}
+			{collisions
+				{terrain}
+				{restitution 0.1}
+			}
+			{nodependonwind}
+		}
+		{visualizer
+			{stage 
+				{sprite "$/particle/bloodspot02"
+					{visibility 1
+						{linear
+							{min 1}
+							{max 0}
+						}
+					}
+					{scale 1
+						{linear
+							{min 0.065 0.015}
+							{max 0.135 0.015}
+						}
+					}
+					{turn 1
+						{linear
+							{min 10 20}
+							{max 90 30}
+						}
+					}
+					{timer
+						{mode play }
+						{duration -1}
+					}
+				}
+			}
+		}
+	}
+}

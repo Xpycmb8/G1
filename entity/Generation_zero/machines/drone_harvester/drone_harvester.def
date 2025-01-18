@@ -1,0 +1,57 @@
+{game_entity
+	(include "/properties/quad_move.ext")
+	{targetClass "cannon"}
+	{targetSelector "cannon"}
+	{Props "drone_c4"}
+	{autooperatable 1}
+	{placer{crew 0}}
+	{Sensor
+		{Visor "main"
+			{vision "human"}
+			{bone	"camera"}
+		}
+	}
+	;volume, component/tag, thickness
+	{mass 5}
+	{Extender "vision_mode"
+		{timer_object
+			{tag				"thermal"}
+			{active_time		20}
+			{recharge_rate		0.25}
+			{type				"recharge"}
+		}
+	}
+	{Extender "inventory"
+		{Box
+			{Size 4 4}
+			{Weight 100}
+		}
+	}
+	{Weaponry
+		{place "gun"
+			{rotate}
+			{weapon 	"drop_20m" filled}
+			{foresight 	"turret_link_c4"}
+			{basic}
+		}
+	}
+	("movement" 
+		slow(8) 
+		normal(25)
+		fast(35)
+		maxspeed(35)
+		maxspeed_atmaxturn(0.5)
+		turnstart(3)
+		turnstop(1)
+		turnradius(5)
+		turntime(0.5)
+		starttime(6)
+		stoptime(2)
+		braketime(2)
+		fuelbag_vol(2)
+		rate(0.1)
+		remain(2)
+		fuel(volt)
+	)	
+	{Extension "drone_harvester.mdl"}
+}

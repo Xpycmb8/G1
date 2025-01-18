@@ -1,0 +1,68 @@
+;Exported by: Xpycmb
+;Date:        Sat Apr  8 02:46:36 2023
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\barn_01_base_top_end_01.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "barn_01_base_top_end_01"
+			{parameters "ID=Body;"}
+			{Matrix34
+				0	0.996195	-0.0871558
+				0	0.0871558	0.996195
+				1	0	0
+				138.471	0.0579987	123.888
+			}
+			{VolumeView "barn_01_base_top_end_01.ply"}
+		}
+	}
+}
+{Obstacle "wood_10_00"
+	{Obb2
+		{Center 140.108 67.0638}
+		{Extent 1.25001 40}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Obstacle "wood_10_01"
+	{Obb2
+		{Center 140.107 -65.0122}
+		{Extent 1.25001 40}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Volume "wood_10_00"
+	{Box 80 2.5 50}
+	{Bone "barn_01_base_top_end_01"}
+	{Matrix34
+		-0.996194	-0.0871559	0
+		0	0	1
+		-0.0871559	0.996194	0
+		-63.4024	-45.4436	1.63661
+	}
+}
+{Volume "wood_10_01"
+	{Box 80 2.5 50}
+	{Bone "barn_01_base_top_end_01"}
+	{Matrix34
+		-0.996194	-0.0871559	0
+		0	0	1
+		-0.0871559	0.996194	0
+		68.171	-33.9324	1.63658
+	}
+}
+{Volume "wood_10_02"
+	{Polyhedron "wood_10_02.vol"}
+	{Bone "barn_01_base_top_end_01"}
+	{Matrix34
+		-0.996195	-0.0871559	0
+		0	0	1
+		-0.0871559	0.996195	0
+		0.746961	-17.496	1.6366
+	}
+}

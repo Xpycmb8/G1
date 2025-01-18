@@ -1,0 +1,26 @@
+-= Animation: tail, Node tail =-
+	Frame 0 {
+		Visibility 1
+		Position	-0.601334	0	0.0240878
+		Orientation	0 -0.707107 0.707107 0
+	}
+	Frame 1 {
+		Orientation	0 0.965926 -0.258819 0
+	}
+	Frame 2 {
+		Orientation	0 0.965926 0.258819 0
+	}
+	Frame 3 {
+		Orientation	0 0.707107 0.707107 0
+	}
+	Frame 4 {
+		Orientation	0 0.258819 0.965926 0
+	}
+	Frame 5 {
+		Orientation	0 -0.258819 0.965926 0
+	}
+	Frame 6 {
+		Visibility 1
+		Position	-0.601334	0	0.0240878
+		Orientation	0 -0.707107 0.707107 0
+	}

@@ -1,0 +1,73 @@
+{fx
+	{##+ lightview
+		{type point}
+		{animator
+			{highlight 0xbf8143}
+		}
+		{radius 5}
+		{radiusfalloff 1}
+		{effectonground}
+	}
+	{particleview smoke
+		{generator
+			{## totalparticles 1}
+			{emissionarea
+				{radius 0}
+				{alpha0 0}
+				{alpha1 0}
+				{speed 20}
+			}
+			{particleinit
+				{speed 25}
+				{lifetime 0.05}
+			}
+		}
+		{mover
+			{damping 0.2}
+			{gravity
+				{value 0.001}
+			}
+			{nodependonwind}
+		}
+		{visualizer
+			{stage 
+				{sprite "$/particle/metal_drops1"
+					{## turn 1
+						{linear
+							{min 0}
+							{max 0 50}
+						}
+					}
+					{visibility 1
+						{linear
+							{min 0.2}
+							{max 0}
+						}
+					}
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{preturn 0 180}
+					{scalex 1
+						{power
+							{min 0.01}
+							{max 0.1}
+							{pow 0.8}
+						}
+					}
+					{scaley 1
+						{power
+							{min 0.001}
+							{max 0.01}
+							{pow 1}
+						}
+					}
+					{## highlight 0xffafafaf}
+				}
+				{flags trace }
+			}
+		}
+		{notifyowner}
+	}
+}

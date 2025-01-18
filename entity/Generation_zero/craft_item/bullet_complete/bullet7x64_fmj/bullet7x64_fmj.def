@@ -1,0 +1,12 @@
+{game_entity
+	(include "/properties/stuff_small.ext")
+	{props "bullet" "stuff" "shell762"}
+	{collider "ammo"}
+	{Extension "bullet7x64_fmj.mdl"}
+	{extender "stuff"
+		{item "7x64_bullet_fmj"}
+	}
+	{Volume "body"
+		{thickness 0.1}
+	}
+}

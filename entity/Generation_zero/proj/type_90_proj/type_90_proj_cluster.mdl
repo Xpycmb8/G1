@@ -1,0 +1,100 @@
+;Exported by: Xpycmb
+;Date:        Tue Aug  8 23:08:40 2023
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\type90.max
+{Skeleton
+	{animation
+		{sequence "tail"
+			{events 
+				{1 "start_type90_cluster"}
+			}		
+			{autostart}
+		}
+		{sequence "start"
+			{file "open.anm"}
+			{speed 0.01}
+			{events 
+				{3 "open_bullet"}
+			}		
+			{autostart}
+		}
+		{sequence "open" {resume}}
+	}
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "flash"
+			{Matrix34
+				1	0	0
+				0	-1	0
+				0	0	-1
+				10.8249	0.212004	0
+			}
+		}
+		{bone "fx"
+			{Matrix34
+				-1	0	0
+				0	-1	0
+				0	0	1
+				-4.62533	0.105384	0
+			}
+		}
+		{bone "tail"
+			{Matrix34
+				-1	0	0
+				0	-1	0
+				0	0	1
+				-4.7274	0.212006	0
+			}
+		}
+		{bone "body"
+			{parameters "CommonMesh;"}
+			{Position 6.40529	0	0}
+			{VolumeView "body.ply"}
+		}
+		{bone "j_4"
+			{Matrix34
+				0.5	0	-0.866025
+				0	1	0
+				0.866025	0	0.5
+				-4.65888	0.0396648	-0.414549
+			}
+		}
+		{bone "j_3"
+			{Matrix34
+				0.5	0	0.866025
+				0	1	0
+				-0.866025	0	0.5
+				-4.65888	0.0396647	0.411159
+			}
+		}
+		{bone "j_2"
+			{Matrix34
+				0.5	0.866025	0
+				-0.866025	0.5	0
+				0	0	1
+				-4.65888	0.408575	0
+			}
+		}
+		{bone "j_1"
+			{Matrix34
+				0.5	-0.866025	0
+				0.866025	0.5	0
+				0	0	1
+				-4.65888	-0.414463	0
+			}
+		}
+	}
+}
+{Volume "body"
+	{Cylinder 0.548256 13.005}
+	{Bone "body"}
+	{Matrix34
+		0	0	-1
+		0	1	0
+		1	0	0
+		-6.48672	0	0
+	}
+}

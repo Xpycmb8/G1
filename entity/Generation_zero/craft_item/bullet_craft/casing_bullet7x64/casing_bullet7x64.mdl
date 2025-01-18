@@ -1,0 +1,83 @@
+;Exported by: Xpycmb
+;Date:        Fri Apr 28 11:16:35 2023
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\casing_bullet7x64.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "handle"
+			{Position 0	0.591408	0}
+		}
+		{bone "body"
+			{Orientation
+				0	1	0
+				-1	0	0
+				0	0	1
+			}
+			{VolumeView "body.ply"}
+		}
+	}
+}
+{Volume "body"
+	{Cylinder 0.0932723 0.920905}
+	{Bone "body"}
+	{Matrix34
+		1.1	0	0
+		0	0	1.1
+		0	-1.1	0
+		0	0.125393	0
+	}
+}
+{Volume "select"
+	{Box 2.5 2.5 2.5}
+	{Bone "basis"}
+}
+{Extender "preview"
+	{"Stuff"
+		{camera
+			{origin -0.244689	1.53843	0.569203}
+			{lookat 1.59446	-27.0039	-10.7518}
+			{fov 45}
+			{horizon 0.540679}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position -21.494	-39.7866	-19.2067}
+			}
+			{"1"
+				{type directional}
+				{direction 0.0121405	-0.497136	-0.0520464}
+			}
+			{"2"
+				{type point}
+				{position 6.16795	-49.2304	-2.70983}
+			}
+		}
+	}
+	{"Stuff_primary"
+		{camera
+			{origin -0.751428	1.52947	0.130133}
+			{lookat 10.4394	-28.271	-3.05344}
+			{fov 45}
+			{horizon 0.0197823}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position -16.9766	-52.9052	-5.41741}
+			}
+			{"1"
+				{type directional}
+				{direction 0.197057	-0.451613	0.0849368}
+			}
+			{"2"
+				{type point}
+				{position 14.7495	-46.6137	3.54841}
+			}
+		}
+	}
+}

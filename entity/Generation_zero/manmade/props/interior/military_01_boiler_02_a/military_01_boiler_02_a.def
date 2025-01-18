@@ -1,0 +1,15 @@
+{game_entity
+	(include "/properties/building_medium.ext")
+	{props "construction" "steel" "emitters_big_barrel"}	
+	{Volume "body"
+		{Tags  "body"}
+		{material "steel"}
+		{Thickness 40}
+	}
+	{Volume "body2"
+		{Tags  "body"}
+		{material "steel"}
+		{Thickness 25}
+	}
+	{Extension "military_01_boiler_02_a.mdl"}	
+}

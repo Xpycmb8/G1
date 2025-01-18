@@ -1,0 +1,262 @@
+;Exported by: Xpycmb
+;Date:        Sun Apr  9 19:35:35 2023
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\barn_01_base_high_side_end_01_tile.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "corrugated_clean_01"
+			{parameters "ID=Body;"}
+			{Matrix34
+				0	-1	0
+				1	0	0
+				0	0	1
+				3.05176e-05	0.000183105	-0.000183105
+			}
+			{VolumeView "corrugated_clean_01.ply"}
+		}
+		{bone "barn_details_01"
+			{parameters "ID=Body;"}
+			{Matrix34
+				0	-1	0
+				1	0	0
+				0	0	1
+				3.05176e-05	0.000183105	-0.000183105
+			}
+			{VolumeView "barn_details_01.ply"}
+		}
+		{bone "wood_painted_01"
+			{parameters "ID=Body;"}
+			{Matrix34
+				0	-1	0
+				1	0	0
+				0	0	1
+				3.05176e-05	0.000183105	-0.000183105
+			}
+			{VolumeView "wood_painted_01.ply"}
+		}
+		{bone "ceiling_wood_tile_01"
+			{parameters "ID=Body;"}
+			{Matrix34
+				0	-1	0
+				1	0	0
+				0	0	1
+				3.05176e-05	0.000183105	-0.000183105
+			}
+			{VolumeView "ceiling_wood_tile_01.ply"}
+		}
+		{bone "wooden_tile_01"
+			{parameters "ID=Body;"}
+			{Matrix34
+				0	-1	0
+				1	0	0
+				0	0	1
+				3.05176e-05	0.000183105	-0.000183105
+			}
+			{VolumeView "wooden_tile_01.ply"}
+			{bone "walls_l"
+				{Position -66.9806	-417.767	31.9276}
+			}
+			{bone "walls_r"
+				{Position 65.9207	-417.767	35.5105}
+			}
+			{bone "walls_c"
+				{Position -0.943611	-417.767	69.0323}
+			}
+			{bone "wood_painted"
+				{parameters "ID=Body;"}
+				{Position -0.0332184	-417.767	116.699}
+				{VolumeView "wood_painted.ply"}
+				{bone "wood_painted_up"
+					{parameters "ID=Body;"}
+					{Position 0.0190163	3.05176e-05	56.7765}
+					{VolumeView "wood_painted_up.ply"}
+				}
+			}
+		}
+		{bone "trims_01"
+			{parameters "ID=Body;"}
+			{Matrix34
+				0	-1	0
+				1	0	0
+				0	0	1
+				3.05176e-05	0.000183105	-0.000183105
+			}
+			{VolumeView "trims_01.ply"}
+		}
+		{bone "hole1"
+			{Matrix34
+				0	1	0
+				-1	0	0
+				0	0	1
+				-418.929	0.817131	111.146
+			}
+		}
+	}
+}
+{Obstacle "wood_15_05"
+	{Obb2
+		{Center -414.904 65.8847}
+		{Extent 1.00002 38.5}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Obstacle "wood_15_06"
+	{Obb2
+		{Center -414.904 -66.4285}
+		{Extent 1.00002 38.5}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Obstacle "wood_15_07"
+	{Obb2
+		{Center -416.319 65.8847}
+		{Extent 1.00002 38.5}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Obstacle "wood_15_08"
+	{Obb2
+		{Center -416.319 -66.4285}
+		{Extent 1.00002 38.5}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Obstacle "wood_15_09"
+	{Obb2
+		{Center -416.319 65.8847}
+		{Extent 1.00002 38.5}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Obstacle "wood_15_10"
+	{Obb2
+		{Center -416.319 -66.4285}
+		{Extent 1.00002 38.5}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Volume "roof10_01"
+	{Box 3.79931 16.9616 144.055}
+	{Bone "basis"}
+	{Matrix34
+		0	0.573576	-0.819152
+		-1	0	0
+		0	0.819152	0.573576
+		-426.515	-57.1057	148.881
+	}
+}
+{Volume "roof10_02"
+	{Box 3.79931 16.9616 144.055}
+	{Bone "basis"}
+	{Matrix34
+		0	0.573576	0.819152
+		-1	0	0
+		0	-0.819152	0.573576
+		-426.515	58.892	148.881
+	}
+}
+{Volume "wood_10_01"
+	{Polyhedron "wood_10_01.vol"}
+	{Bone "wood_painted"}
+	{Position -3.05176e-05	-0.423004	9.13035}
+}
+{Volume "wood_15_00"
+	{Box 4 5.24 119.42}
+	{Bone "wooden_tile_01"}
+	{Position -103.415	-414.73	54.6865}
+}
+{Volume "wood_15_02"
+	{Box 4 4 119.42}
+	{Bone "wooden_tile_01"}
+	{Position -35.4043	-415.432	54.6865}
+}
+{Volume "wood_15_03"
+	{Box 4 5.24 119.42}
+	{Bone "wooden_tile_01"}
+	{Position 35.2063	-414.73	54.6865}
+}
+{Volume "wood_15_04"
+	{Box 4 4 119.42}
+	{Bone "wooden_tile_01"}
+	{Position 103.217	-415.432	54.6865}
+}
+{Volume "wood_15_05"
+	{Box 4 2 77}
+	{Bone "wooden_tile_01"}
+	{Matrix34
+		0	0	1
+		0	1	0
+		-1	0	0
+		65.8847	-414.904	0.789257
+	}
+}
+{Volume "wood_15_06"
+	{Box 4 2 77}
+	{Bone "wooden_tile_01"}
+	{Matrix34
+		0	0	1
+		0	1	0
+		-1	0	0
+		-66.4285	-414.904	0.789236
+	}
+}
+{Volume "wood_15_07"
+	{Box 4 2 77}
+	{Bone "wooden_tile_01"}
+	{Matrix34
+		0	0	1
+		0	1	0
+		-1	0	0
+		65.8847	-416.319	36.2055
+	}
+}
+{Volume "wood_15_08"
+	{Box 4 2 77}
+	{Bone "wooden_tile_01"}
+	{Matrix34
+		0	0	1
+		0	1	0
+		-1	0	0
+		-66.4285	-416.319	36.2055
+	}
+}
+{Volume "wood_15_09"
+	{Box 4 2 77}
+	{Bone "wooden_tile_01"}
+	{Matrix34
+		0	0	1
+		0	1	0
+		-1	0	0
+		65.8847	-416.319	70.2558
+	}
+}
+{Volume "wood_15_10"
+	{Box 4 2 77}
+	{Bone "wooden_tile_01"}
+	{Matrix34
+		0	0	1
+		0	1	0
+		-1	0	0
+		-66.4285	-416.319	70.2558
+	}
+}
+{Volume "wood_15_11"
+	{Box 4 2 77}
+	{Bone "wooden_tile_01"}
+	{Matrix34
+		0	0	1
+		0	1	0
+		-1	0	0
+		-1.44248	-416.319	70.2558
+	}
+}

@@ -1,0 +1,53 @@
+{actor
+	(include "/properties/projectile.ext")
+	{Extension "shell_5m_proj.mdl"}
+	{props "normal"  "detect_tank_light"}	     
+	{Placer		
+		{place "missile"			
+			{entity "shell_5m_ap_proj"}			
+			{Linkbone "missile_point"}		
+			{obstacle disable}		
+		}	    
+	}		
+	{extender "inventory"
+		{box
+			{Size 4 4}
+			{Weight 100}
+			{item "ammo slope" 100}
+		}
+	}
+	{Weaponry		   
+		{place "targeting_sys_anti_jamming"				
+			{weapon 	"slope_rocket" filled}		
+			{foresight "missle_foresight"}			
+			{basic}				
+			{SequentialAim 0}		
+		}			
+		{place "targeting_sys"				
+			{weapon 	"slope_rocket" filled}	
+			{foresight "missle_foresight"}
+			{basic}		
+			{SequentialAim 0}			
+		}		
+	}	
+	{Volume "missile"			
+		{Cylinder 1.35 40}			
+		{Bone "missile_point"}		
+		{Matrix34				
+			0	0	-1				
+			0	1	0				
+			1	0	0				
+			24.5	0	0			
+		}		
+	}		
+	{Volume "target"		
+		{Cylinder 1.35 20}			
+		{Bone "missile_point"}			
+		{Matrix34			
+ 			0	0	-1			
+ 			0	1	0			
+ 			1	0	0			
+ 			-4.6	0	0		
+		}		
+	}		
+}	

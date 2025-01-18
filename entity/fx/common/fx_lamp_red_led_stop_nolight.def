@@ -1,0 +1,25 @@
+{fx
+	{lightview
+		{type spot}
+		{animator
+			{highlight 0xffff0000}
+		}
+		{attenuation0 0.5}
+		{attenuation1 5}
+		{falloff 3}
+		{theta 2}
+		{phi 120}
+		{radius 45}
+		{priority 3}
+		{effectonground}
+	}
+	{lightview
+		{animator
+			{highlight 0xffff0000}
+		}
+		{type point}
+		{radius 5}
+		{radiusfalloff 1}
+		{intensity 0.4}
+	}
+}

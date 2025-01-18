@@ -1,0 +1,7 @@
+{game_entity
+	{Skeleton}
+	{props "explosion"  "damage_overlap"}
+	{extender "stuff"
+		{item "damage_blade"}
+	}
+}

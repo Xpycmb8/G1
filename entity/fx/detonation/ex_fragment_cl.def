@@ -1,0 +1,35 @@
+{fx
+	{particleview pieces
+		{entitygenerator
+			{totalparticles 2}
+			{emissionarea
+				{radius 3}
+				{alpha0 60 60}
+				{alpha1 60 60}
+			}
+			{particleinit
+				{speed 52.5 27.5}
+				{lifetime 5.5 0.5}
+			}
+			{entity "#metall1_s"
+				{fx "slicer_tail"}
+			}
+		}
+	}
+	{particleview pieces
+		{entitygenerator
+			{totalparticles 1}
+			{emissionarea
+				{radius 1}
+				{alpha0 90 90}
+				{alpha1 90 90}
+			}
+			{particleinit
+				{speed 1}
+				{lifetime 0.1}
+			}
+			{entity "fraction_help"}
+			{particlesinblock 1}
+		}
+	}
+}

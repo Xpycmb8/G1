@@ -1,0 +1,10 @@
+{Entity
+	(include "/properties/dead_prop_skir.grn")
+	{Extension "fuel_component.mdl"}
+	{extender "stuff"
+		{item "fuel_component"}
+	}
+	{Volume "fuel"
+		{thickness 1}
+	}
+}

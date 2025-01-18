@@ -1,0 +1,137 @@
+{actor
+	(include "/properties/machinery.ext")
+	{props "baze_machinery" "hunter_base" "hunter_smg_rocket" "detect_tank_medium"}
+	(include "/properties/selection/skirmisher.inc" scale(0.2))
+	{obstacleID "human"}
+	{targetClass "machinery"} ;; select for best ammo
+	{targetSelector "baze_machinery"}
+	{PatherID	"hunter_base"}
+	{placer
+		{place "link_front"
+			{entity "melee_check"}
+			{Linkbone "link_melee"}
+			{obstacle disable}
+		}
+		{crew 0}
+	}
+	(include "/properties/armor_machinery/hunter_rocket.ext" )
+	{sensor
+		{Visor "eyes"
+			{vision "main_scaner"}
+			{bone "visor_head_bone"}
+		}
+		{Visor "eyes2"
+			{vision "main_scaner_support"}
+			{bone "visor_head_bone_support"}
+		}
+				
+		{Visor "body"
+			{vision "hunter_round"}
+			{bone "visor_body_bone"}
+		}
+		{Visor "body"
+			{vision "hunter_round"}
+			{bone "visor_body_support_bone"}
+		}
+	}
+	("vision_mode" tag(thermal) time(60))	
+	; {extender "enumerator"
+		; {digit_folder "red"}
+	; }
+	{extender "inventory" ; создать лут
+		{box
+			{Size 8 8}
+			{Weight 5000}
+			{item "ammo 127x99"		100}
+			{item "ammo 127x99 ap"	100}
+			{item "ammo visor"	10}
+			{item "ammo jump"	10}
+			{item "ammo melee"	10}
+			{item "ammo shell_5m"	4}
+			{item "ammo shell_5m fg"	4}
+			{item "ammo shell_5m ap"	4}
+			{item "ammo shell_5m th"	4}
+		}
+	}
+	{Weaponry
+		("restore_ik_time")
+		{place "gun" ;
+			{weapon			"rocket_launcher_x4" filled}
+			{StationaryFiring}
+			{RestoreIKAfterAim}
+			;{rotate}
+			{Barrels    4}
+			{foresight	"foresight_rocket"}
+			{shooter	"shooter"}
+			{basic}
+		}
+		{place "mgun"
+			{weapon 	"mgun_hunter_12" filling "ammo 127x99" 200}
+			{foresight "foresight_main"}
+			{rotate}
+			{basic}
+		}
+		{place "alarm_signal"    ;mgun_alarm ;led
+			{weapon 	"alarm_update_250m" filled}
+			{foresight 	"signal"}
+			{basic}
+			;{rotate}
+		}
+		{place "head_joint" ;head_joint 
+			{weapon 	"head_joint" filled}
+			{foresight 	"visor_head_bone"}
+			{basic}
+			;{rotate}
+		}
+		{place "attack_pestdrop"
+			{weapon 	"container_hunter" filled}
+			{foresight 	"pestcontainer_drop"}
+			{basic}
+			;{rotate}
+		}
+	}
+	{mass 3500}
+	("movement" 
+		slow(0) 
+		normal(12)
+		fast(12)
+		maxspeed(12)
+		maxspeed_atmaxturn(1)
+		turnstart(12)
+		turnstop(1)
+		turnradius(80)
+		turntime(0.2)
+		starttime(1)
+		stoptime(1)
+		braketime(1)
+		fuelbag_vol(20)
+		rate(0.1)
+		remain(2)
+		fuel(tritium)
+	)	
+	{Extension "hunter_base_rocket.mdl"}
+	{bone "head_ems_00_hold"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.5 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
+	{bone "head_ems_00_search"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.5 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
+	{bone "head_ems_00_alarm"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.5 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
+}

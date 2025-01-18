@@ -1,0 +1,32 @@
+;Exported by: Xpycmb
+;Date:        Mon Apr 17 20:36:00 2023
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\resistance_buildings_01_wall_ramp.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "steel_aged_tiling"
+			{parameters "ID=Body;"}
+			{Position 0	1.52588e-05	0}
+			{VolumeView "steel_aged_tiling.ply"}
+			{bone "plywood"
+				{parameters "ID=Body;"}
+				{VolumeView "plywood.ply"}
+			}
+		}
+		{bone "land_patch"
+			{parameters "CommonMesh;Land;Ground;"}
+			{Matrix34
+				0	0.78953	0.613712
+				-1	0	0
+				0	-0.613712	0.78953
+				0	1.52588e-05	18.6243
+			}
+			{visibility 0}
+			{VolumeView "land_patch.ply" {Ground}}
+		}
+	}
+}

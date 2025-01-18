@@ -1,0 +1,10 @@
+{Entity
+	(include "/properties/dead_prop_skir.grn")
+	{Extension "bridge_component.mdl"}
+	{extender "stuff"
+		{item "bridge_component"}
+	}
+	{Volume "body"
+		{thickness 1}
+	}
+}

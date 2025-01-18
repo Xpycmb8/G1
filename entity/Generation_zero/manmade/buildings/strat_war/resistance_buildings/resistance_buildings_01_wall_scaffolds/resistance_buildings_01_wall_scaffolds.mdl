@@ -1,0 +1,48 @@
+;Exported by: Xpycmb
+;Date:        Mon Apr 17 20:39:09 2023
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\resistance_buildings_01_wall_scaffolds.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "plywood"
+			{parameters "ID=Body;"}
+			{Position 0	1.52588e-05	0}
+			{VolumeView "plywood.ply"}
+		}
+		{bone "steel_aged_tiling"
+			{parameters "ID=Body;"}
+			{Position 0	1.52588e-05	0}
+			{VolumeView "steel_aged_tiling.ply"}
+			{bone "wood_3_2"
+				{parameters "ID=Body;"}
+				{Position 24.8118	0.214882	8.86599}
+				{VolumeView "wood_3_2.ply"}
+			}
+			{bone "wood_3_1"
+				{parameters "ID=Body;"}
+				{Position 0.175704	7.38199	28.5562}
+				{VolumeView "wood_3_1.ply"}
+			}
+			{bone "wood_3_3"
+				{parameters "ID=Body;"}
+				{Position -24.1648	0.214882	19.7235}
+				{VolumeView "wood_3_3.ply"}
+			}
+		}
+		{bone "rope"
+			{parameters "ID=Body;"}
+			{Position 0	1.52588e-05	0}
+			{VolumeView "rope.ply"}
+		}
+		{bone "land_patch"
+			{parameters "CommonMesh;Land;Ground;"}
+			{Position 0	1.52588e-05	38.4731}
+			{visibility 0}
+			{VolumeView "land_patch.ply" {Ground}}
+		}
+	}
+}

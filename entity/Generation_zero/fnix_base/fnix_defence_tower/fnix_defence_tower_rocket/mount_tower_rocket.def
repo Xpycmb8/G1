@@ -1,0 +1,124 @@
+{actor
+	(include "/properties/machinery.ext")
+	{props "vision_lev04" "defence_tower_base" "defence_tower_rocket"}
+	{targetClass "machinery"} ;; select for best ammo
+	{targetSelector "baze_machinery"}
+	{obstacleID "human"}
+	{collider "cannon_small"}
+	{autooperatable 1}
+	{placer
+		{crew 0}
+	}
+	{Volume "armor_main_20_00"
+		{thickness 20}
+		{material "armor"}
+
+	}
+	{Volume "head"
+		{thickness 8}
+		{component "head"}
+		{tags "head" }
+	}
+	{Volume "guided_missile"
+		{material "steel"}
+		{thickness 10}
+		{component "missilelauncher"}
+		{tags "missilelauncher" }
+	}
+	{Volume "ammo"
+		{thickness 8}
+		{component "ammo"}
+		{tags "ammo" }
+	}
+	{Volume "cpu"
+		{thickness 1}
+		{component "cpu"}
+		{material "misc"}
+		{tags "cpu" "organ"}
+	}
+	{Volume "battery"
+		{thickness 1}
+		{component "battery"}
+		{material "misc"}
+		{tags "battery" "organ"}
+	}
+	{Volume "head_organ"
+		{material "steel"}
+		{thickness 1}
+		{component "head_organ"}
+		{tags "head_organ" "organ"}
+	}
+	{Volume "joint"
+		{thickness 6}
+		{component "head_arm"}
+		{tags "joint" "organ"}
+	}
+	{Volume "visor"
+		{material "kevlar"}
+		{thickness 2}
+		{component "visor_body"}
+		{tags "visor_body" }
+	}
+	{sensor
+		{visor "main"
+			{vision "main_scaner"}
+			{bone "visor_head_bone"}
+		}
+		{visor "round"
+			{vision "dread_body"}
+			{bone "visor_body"}
+		}
+	}
+	{extender "inventory" ; создать лут
+		{box
+			{Size 6 6}
+			{Weight 2000}
+			{item "ammo visor"				5}
+			{item "ammo r75"		5}
+			{item "ammo r75 ap"		5}
+		}
+	}
+	{Weaponry
+		{place "impact_fire" 
+			{weapon 	"impact_7m" filled}
+			{foresight 	"impact"}
+			{basic}
+			{rotate}
+		}
+		{place "alarm_signal" ;led
+			{weapon 	"alarm_update_500m" filled}
+			{foresight 	"foresight_signal"}
+			{basic}
+			;{rotate}
+		}
+		{place "mgun" 
+			{weapon 	"r75_recoil" filling "ammo r75" 6}
+			{foresight 	"foresight3"}
+		}
+	}
+	{Extension "fnix_defence_tower_rocket.mdl"}
+	{bone "head_ems_00_hold"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.5 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
+	{bone "head_ems_00_search"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.5 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
+	{bone "head_ems_00_alarm"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.5 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
+}

@@ -1,0 +1,22 @@
+{fx
+	{spriteview start
+		{sprite "$/explosion/fire_sled"
+			{visibility 1
+				{linear
+					{min 0.7}
+					{max 0}
+				}
+			}
+			{timer
+				{duration 6}
+			}
+			{## scale 0.09}
+			{preturn 0 2}
+			{scalex 0.03}
+			{scaley 0.05}
+		}
+		{usedirection}
+		{ground}
+		{layer grounddynamic}
+	}
+}

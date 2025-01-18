@@ -1,0 +1,75 @@
+{fx
+	{#+ lightview small
+		{type spot}
+		{animator
+			{highlight 0xfffdfb6d}
+			{timer
+				{mode play loop }
+				{duration 0.1}
+			}
+			{visibility 1
+				{linear
+					{min 1}
+					{max 4}
+				}
+			}
+		}
+		{attenuation0 1}
+		{attenuation1 40}
+		{falloff 0.2}
+		{theta 0.2}
+		{phi 0.2}
+		{radius 35}
+		{priority 10}
+		{effectonground}
+	}
+	{##+ lightview small
+		{type spot}
+		{animator
+			{highlight 0xff081aff}
+			{timer
+				{mode play loop pingpong }
+				{duration 0.2}
+			}
+			{visibility 1
+				{linear
+					{min 0}
+					{max 1}
+				}
+			}
+		}
+		{attenuation0 1}
+		{attenuation1 4}
+		{falloff 1.5}
+		{theta 1}
+		{phi 75}
+		{radius 45}
+		{priority 25}
+		{effectonground}
+		{delay 0.05}
+	}
+	{lightview small
+		{type spot}
+		{animator
+			{highlight 0xff081aff}
+			{timer
+				{mode play loop }
+				{duration 0.1}
+			}
+			{visibility 1
+				{linear
+					{min 1}
+					{max 4}
+				}
+			}
+		}
+		{attenuation0 1}
+		{attenuation1 40}
+		{falloff 0.2}
+		{theta 0.2}
+		{phi 0.2}
+		{radius 35}
+		{priority 10}
+		{effectonground}
+	}
+}

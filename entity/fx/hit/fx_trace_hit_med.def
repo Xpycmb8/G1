@@ -1,0 +1,58 @@
+{fx
+	{particleview spark
+		{generator
+			{totalparticles 12}
+			{emissionarea
+				{radius 0.1}
+				{alpha0 22.5 22.5}
+				{alpha1 22.5 22.5}
+				{speed 0}
+			}
+			{particleinit
+				{speed 3 -1}
+				{lifetime 0.45 0.35}
+			}
+			{## axisz}
+		}
+		{mover
+			{damping 0.9}
+			{gravity
+				{value 0.01}
+			}
+			{## nodependonwind}
+		}
+		{visualizer
+			{stage 
+				{sprite "$/particle/metal_drops1"
+					{timer
+						{mode play }
+						{duration -1}
+					}
+					{scale 0
+						{linear
+							{min 0.02}
+							{max 0.05}
+						}
+					}
+					{## light 1}
+					{highlight 0xffd38d28}
+					{light 1
+						{power
+							{min 1}
+							{max 0}
+							{pow 1}
+						}
+					}
+					{visibility 1
+						{linear
+							{min 1}
+							{max 0}
+						}
+					}
+				}
+			}
+		}
+		{notifyowner}
+		{autopause}
+	}
+}

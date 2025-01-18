@@ -1,0 +1,48 @@
+;Exported by: Xpycmb
+;Date:        Tue Apr 18 17:49:07 2023
+;File:        C:\Users\Xpycmb\Documents\3dsMax\scene\military_01_boiler_01_a.max
+{Skeleton
+	{bone "bone0"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "body"
+			{parameters "ID=Body;"}
+			{LODView
+				{VolumeView "body.ply"}
+				{VolumeView "body_lod1.ply"}
+				{VolumeView "body_lod2.ply"}
+				{VolumeView "body_lod3.ply"}
+				{VolumeView "body_lod4.ply"}
+			}
+		}
+	}
+}
+{Obstacle "body"
+	{Obb2
+		{Center 0 0}
+		{Extent 10.1817 10.1935}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Obstacle "body2"
+	{Obb2
+		{Center -16.0428 2.48758}
+		{Extent 6.10902 4.42362}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Volume "body"
+	{Box 20.3634 20.3871 40.7919}
+	{Bone "body"}
+	{Position 0	0	20.396}
+}
+{Volume "body2"
+	{Box 12.218 8.84723 12.3681}
+	{Bone "body"}
+	{Position -16.0428	-2.48758	13.6507}
+}

@@ -1,0 +1,20 @@
+;Exported by: Xpycmb
+;Date:        Wed Jan  8 22:49:27 2025
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\lynx.max
+{Skeleton
+	{bone "dummy001"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "spawn"
+			{Position -4.01962	0	10.4952}
+		}
+	}
+}
+{Volume "box001"
+	{Box 19.685 19.685 19.685}
+	{Bone "dummy001"}
+	{Position 70.0165	0	9.84252}
+}

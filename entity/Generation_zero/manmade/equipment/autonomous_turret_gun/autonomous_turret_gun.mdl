@@ -1,0 +1,27 @@
+;Exported by: Xpycmb
+;Date:        Thu Mar  2 18:37:23 2023
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\autonomous_turret.max
+{Skeleton
+	{bone "smg"
+		{parameters "ID=Gun;"}
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{VolumeView "smg.ply"}
+		{bone "foresight3"
+			{Position 9.2246	0.411685	0.372592}
+		}
+	}
+}
+{Volume "smg"
+	{Box 1.01425 5.35038 1.65617}
+	{Bone "smg"}
+	{Matrix34
+		0	1	0
+		-1	0	0
+		0	0	1
+		4.4981	0.526499	-0.0661848
+	}
+}

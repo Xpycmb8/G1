@@ -1,0 +1,48 @@
+;Exported by: Xpycmb
+;Date:        Tue Apr 18 17:58:04 2023
+;File:        C:\Users\Xpycmb\Documents\3dsMax\scene\civilian_01_boiler_01_a.max
+{Skeleton
+	{bone "bone0"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "body"
+			{parameters "ID=Body;"}
+			{LODView
+				{VolumeView "body.ply"}
+				{VolumeView "body_lod1.ply"}
+				{VolumeView "body_lod2.ply"}
+				{VolumeView "body_lod3.ply"}
+				{VolumeView "body_lod4.ply"}
+			}
+		}
+	}
+}
+{Obstacle "body"
+	{Obb2
+		{Center 0 0}
+		{Extent 9.05692 9.0413}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Obstacle "body2"
+	{Obb2
+		{Center -14.7698 1.50104}
+		{Extent 6.52098 4.159}
+		{Axis 1 0}
+	}
+	{Rotate}
+}
+{Volume "body"
+	{Box 18.1138 18.0826 34.874}
+	{Bone "body"}
+	{Position 0	0	17.437}
+}
+{Volume "body2"
+	{Box 13.042 8.318 10.3994}
+	{Bone "body"}
+	{Position -14.7698	-1.50104	11.5082}
+}

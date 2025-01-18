@@ -1,0 +1,7 @@
+{Actor
+	(include "/properties/stuff_weapon.ext")
+	{extender "stuff"
+		{item "shotgun127x55_skirmisher"}
+	}
+	{Extension "shotgun127x55_skirmisher_mount.mdl"}
+}

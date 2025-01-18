@@ -1,0 +1,4 @@
+{game_entity
+	{props "gas_view_dread"} 
+	{Extension "gasview.mdl"}
+}

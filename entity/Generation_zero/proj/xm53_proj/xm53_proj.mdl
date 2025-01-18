@@ -1,0 +1,55 @@
+;Exported by: Xpycmb
+;Date:        Fri Apr  7 03:30:38 2023
+;File:        C:\Users\Xpycmb\Documents\3dsMax\scene\xm109_proj.max
+{Skeleton
+	{animation
+		{sequence "tail"
+			{events 
+				{1 "start_xm109"}
+			}		
+			{autostart}
+		}
+	}
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "fx"
+			{Matrix34
+				1	0	0
+				0	0	-1
+				0	1	0
+				-0.592578	0	0.0240872
+			}
+		}
+		{bone "tail"
+			{Matrix34
+				-1	0	0
+				0	0	-1
+				0	-1	0
+				-0.601334	0	0.0240878
+			}
+		}
+		{bone "bullet"
+			{Matrix34
+				1	0	0
+				0	0	-1
+				0	1	0
+				-0.22449	0	0
+			}
+			{VolumeView "bullet.ply"}
+		}
+	}
+}
+{Volume "body"
+	{Box 2.302 0.831001 0.8305}
+	{Bone "bullet"}
+	{Matrix34
+		0.5	0	0
+		0	0.5	0
+		0	0	0.5
+		0.187727	-0.0240875	0.0001247
+	}
+}

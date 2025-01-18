@@ -1,0 +1,105 @@
+{fx
+	{##+ spriteview glow
+		{sprite "$/flash/halo02"
+			{preturn 0 180}
+			{light 1
+				{peak
+					{min 1}
+					{max 1}
+				}
+			}
+			{timer
+				{mode play loop }
+				{duration 3}
+			}
+			{scale 0.001}
+			{highlight 0xffe40000}
+		}
+		{## halo}
+	}
+	{#+ lightview small
+		{type spot}
+		{animator
+			{highlight 0xffe40000}
+		}
+		{attenuation0 0.01}
+		{attenuation1 0.2}
+		{falloff 0.1}
+		{theta 1}
+		{phi 1}
+		{radius 1.5}
+		{priority 25}
+		{## effectonground}
+	}
+	{##+ lightview
+		{animator
+			{highlight 0xffe40000}
+		}
+		{type point}
+		{radius 0.7}
+	}
+	{#+ spriteview 2
+		{sprite "$/additional/laser_sight2"
+			{##+ light 0.5
+				{peak
+					{min 0.3}
+					{max 0.7}
+				}
+			}
+			{timer
+				{mode play loop }
+				{duration 0.01}
+			}
+			{scalex 0.05
+				{linear
+					{min 0.001}
+					{max 0.0015}
+				}
+			}
+			{scaley 0.012
+				{peak
+					{min 0.0005}
+					{max 0.0003}
+				}
+			}
+			{highlight 0xffe40000}
+			{visibility 1
+				{##+ linear
+					{min 0.4}
+					{max 1}
+				}
+				{##+ peak
+					{min 0}
+					{max 0.1}
+				}
+				{##+ power
+					{min 0}
+					{max 0.1}
+					{pow 1}
+				}
+			}
+			{light 1
+				{peak
+					{min 1}
+					{max 1.1}
+				}
+			}
+		}
+		{orientation trace}
+		{##+ softintersection}
+	}
+	{#+ lightview small_radial
+		{type spot}
+		{animator
+			{highlight 0xffe40000}
+		}
+		{attenuation0 1}
+		{attenuation1 5}
+		{falloff 35}
+		{theta 0.01}
+		{phi 150}
+		{radius 2}
+		{priority 10}
+		{effectonground}
+	}
+}
