@@ -1,0 +1,31 @@
+;Exported by: 000
+;Date:        Wed Jun 04 01:48:05 2014
+;File:        D:\спасти все\3dsmax\scenes\АНТУРАЖ\ПЫТКИ\АНТУРАЖ органы легкие.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "body"
+			{Matrix34
+				-1	0	0
+				0	0	-1
+				0	-1	0
+				-0.0153461	-0.145951	1.71367
+			}
+			{VolumeView "body.ply"}
+		}
+	}
+}
+{Volume "body"
+	{Box 1.9727 3.83422 4.30911}
+	{Bone "body"}
+	{Matrix34
+		1	0	0
+		0	0	1
+		0	-1	0
+		0.145951	-0.559343	0.184922
+	}
+}

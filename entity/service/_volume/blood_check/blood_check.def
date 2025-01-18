@@ -1,0 +1,21 @@
+{game_entity
+	{extension "/properties/piece.ext"}
+	{props "decal_blood_ground" "delet_t120s"} 
+	{simulation {able 1} {state 1}}
+	{constrain ground}
+	{obstacleID "nothing"}
+	{collider "bush"}
+	{NoGroupMesh 1}
+	{NoVisibilityPatch 0}
+	{volume defaultmaterial "wood"}
+	{volume "body"
+		{sphere 3}
+		{Able {contact 0} {bullet 0} {throwing 0} {obstacle 0} {touch 0} {overlap 1}}
+		{bone "basis"}
+		{material "dummy"}
+	}
+	{body
+		{proper body}
+		{permit body}
+	}
+}

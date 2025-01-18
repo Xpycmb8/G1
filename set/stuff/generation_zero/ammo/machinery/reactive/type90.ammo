@@ -1,0 +1,24 @@
+{from "pattern fg"
+	{tag "ammo shell_minimum fg"}
+	{inventory
+		{size 5 1}
+	}
+	{mass 18.2}
+	{view "type_90_proj"
+	} 
+	{damage blastwave
+		{energy 3}
+		{area 0.25 1.0}
+	}
+	; anti-apc
+	{damage add blastwave
+		{energy 2}
+		{area 1 5}
+	}
+	; anti-personel
+	{damage add blastwave
+		{energy 1.2}
+		{area 5 10}
+	}
+	{entity "type90_ammo"}
+}

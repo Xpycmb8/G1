@@ -1,0 +1,13 @@
+{bullet
+	{tag "detect"}
+	{desc "Cluster_mortar"}
+	{inventory
+		{weight 3.3}
+		{block 30}
+		{size 1 1}
+		{fsm "belt"}
+	}
+	{view "cluster_proj"
+	}
+	{entity "xm109_mags_ap"}
+}

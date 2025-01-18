@@ -1,0 +1,15 @@
+;// 12.7x99mm
+
+{bullet
+	{tag "bullet big sp hmgun stackable pierce smallarms_heavy"}
+	{desc ".408 Chey Tac 10,3×77 мм"}
+	{inventory
+		{weight 3.3}
+		{block 30}
+		{size 1 1}
+		{fsm "belt"}
+	}
+	{mass 0.11}
+	{entity "103x77_mags"}
+	("trace103")
+}

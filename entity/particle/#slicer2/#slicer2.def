@@ -1,0 +1,8 @@
+{game_entity
+	(include "/properties/knife.ext")
+	{props "steel ps_dummy slicer2 knife_s"}
+	{Extension "slicer2.mdl"}
+	{extender "stuff"
+		{item "tactical_knife"}
+	}
+}

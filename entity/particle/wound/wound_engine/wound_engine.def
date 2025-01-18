@@ -1,0 +1,5 @@
+{game_entity
+	{props "delete_60h" "wound_engine"}
+	{constrain ground}
+	{Extension "wound_fire.mdl"}
+}

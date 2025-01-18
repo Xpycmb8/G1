@@ -1,0 +1,49 @@
+{from "pattern bullet"
+	{tag "mgun weapon bullet to_hand mgun_set"}
+	{entity "rpd_v1"}
+	("clickSound_ar")
+	{filling "ammo 762x39" 75}
+	{inventory
+		{size 6 2 }
+		{weight 100 }
+	}
+	{mass 5}
+	{traceFreq 4}
+	{Automatic}
+	{calibre 7.62}
+	{rechargeTime 6.5}
+	("recoveryTime" r(750))
+ 	("spreading_medium_mgun")
+	{speed 745}
+	{minRange 8}
+	{burst
+		{short 12 6}			; short burst shots on long distance, rand (+-)shots
+		{long 24 12}			; long burst shots on short distance, rand (+-)shots
+		{rangeKoef 0.5}		; rangeKoef * aimRange = max long burst distance
+	}
+	{parameters "sp"
+		("burst_mg")
+		("accuracy_mg_med_sp_762")
+		("health_damage_762x39" d(745))	
+		{range 230 270};F	
+		("speed" s(745))	
+		("projectileDamage_762x39_sp")
+		
+	}
+	{parameters "ap"
+		("burst_mg")
+		("accuracy_mg_med_ap_762")
+		("health_damage_762x39" d(1070))
+		("projectileDamage_762x39_ap")
+		{range 280 320};F	
+		("speed" s(845))
+	}
+	{parameters "os"
+		("burst_mg")
+		("accuracy_mg_med_fg_762")
+		("health_damage_762x39" d(884))
+		("projectileDamage_762x39_sp")
+		{range 210 250};F	
+		("speed" s(570))
+	}
+}

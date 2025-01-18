@@ -1,0 +1,427 @@
+{if tagged "100_bullet"
+	{ani_play "shot_small100" 1}
+	{tags add "99_bullet"}
+	{tags remove "100_bullet"}
+else tagged "99_bullet"
+	{ani_play "shot_small99" 1}
+	{tags add "98_bullet"}
+	{tags remove "99_bullet"}
+else tagged "98_bullet"
+	{ani_play "shot_small98" 1}
+	{tags add "97_bullet"}
+	{tags remove "98_bullet"}
+else tagged "97_bullet"
+	{ani_play "shot_small97" 1}
+	{tags add "96_bullet"}
+	{tags remove "97_bullet"}
+else tagged "96_bullet"
+	{ani_play "shot_small96" 1}
+	{tags add "95_bullet"}
+	{tags remove "96_bullet"}
+else tagged "95_bullet"
+	{tags add "94_bullet"}
+	{tags remove "95_bullet"}
+else tagged "94_bullet"
+	{tags add "93_bullet"}
+	{tags remove "94_bullet"}
+else tagged "93_bullet"
+	{tags add "92_bullet"}
+	{tags remove "93_bullet"}
+else tagged "92_bullet"
+	{tags add "91_bullet"}
+	{tags remove "92_bullet"}
+else tagged "91_bullet"
+	{tags add "90_bullet"}
+	{tags remove "91_bullet"}
+else tagged "90_bullet"
+	{tags add "89_bullet"}
+	{tags remove "90_bullet"}
+else tagged "89_bullet"
+	{tags add "88_bullet"}
+	{tags remove "89_bullet"}
+else tagged "88_bullet"
+	{tags add "87_bullet"}
+	{tags remove "88_bullet"}
+else tagged "87_bullet"
+	{tags add "86_bullet"}
+	{tags remove "87_bullet"}
+else tagged "86_bullet"
+	{tags add "85_bullet"}
+	{tags remove "86_bullet"}
+else tagged "85_bullet"
+	{tags add "84_bullet"}
+	{tags remove "85_bullet"}
+else tagged "84_bullet"
+	{tags add "83_bullet"}
+	{tags remove "84_bullet"}
+else tagged "83_bullet"
+	{tags add "82_bullet"}
+	{tags remove "83_bullet"}
+else tagged "82_bullet"
+	{tags add "81_bullet"}
+	{tags remove "82_bullet"}
+else tagged "81_bullet"
+	{tags add "80_bullet"}
+	{tags remove "81_bullet"}
+else tagged "80_bullet"
+	{tags add "79_bullet"}
+	{tags remove "80_bullet"}
+else tagged "79_bullet"
+	{tags add "78_bullet"}
+	{tags remove "79_bullet"}
+else tagged "78_bullet"
+	{tags add "77_bullet"}
+	{tags remove "78_bullet"}
+else tagged "77_bullet"
+	{tags add "76_bullet"}
+	{tags remove "77_bullet"}
+else tagged "76_bullet"
+	{tags add "75_bullet"}
+	{tags remove "76_bullet"}
+else tagged "75_bullet"
+	{tags add "74_bullet"}
+	{tags remove "75_bullet"}
+else tagged "74_bullet"
+	{tags add "73_bullet"}
+	{tags remove "74_bullet"}
+else tagged "73_bullet"
+	{tags add "72_bullet"}
+	{tags remove "73_bullet"}
+else tagged "72_bullet"
+	{tags add "71_bullet"}
+	{tags remove "72_bullet"}
+else tagged "71_bullet"
+	{tags add "70_bullet"}
+	{tags remove "71_bullet"}
+else tagged "70_bullet"
+	{tags add "69_bullet"}
+	{tags remove "70_bullet"}
+else tagged "69_bullet"
+	{tags add "68_bullet"}
+	{tags remove "69_bullet"}
+else tagged "68_bullet"
+	{tags add "67_bullet"}
+	{tags remove "68_bullet"}
+else tagged "67_bullet"
+	{tags add "66_bullet"}
+	{tags remove "67_bullet"}
+else tagged "66_bullet"
+	{tags add "65_bullet"}
+	{tags remove "66_bullet"}
+else tagged "65_bullet"
+	{tags add "64_bullet"}
+	{tags remove "65_bullet"}
+else tagged "64_bullet"
+	{tags add "63_bullet"}
+	{tags remove "64_bullet"}
+else tagged "63_bullet"
+	{tags add "62_bullet"}
+	{tags remove "63_bullet"}
+else tagged "62_bullet"
+	{tags add "61_bullet"}
+	{tags remove "62_bullet"}
+else tagged "61_bullet"
+	{tags add "60_bullet"}
+	{tags remove "61_bullet"}
+else tagged "60_bullet"
+	{ani_play "shot_small60" 1}
+	{tags add "59_bullet"}
+	{tags remove "60_bullet"}
+else tagged "59_bullet"
+	{ani_play "shot_small59" 1}
+	{tags add "58_bullet"}
+	{tags remove "59_bullet"}
+else tagged "58_bullet"
+	{ani_play "shot_small58" 1}
+	{tags add "57_bullet"}
+	{tags remove "58_bullet"}
+else tagged "57_bullet"
+	{ani_play "shot_small57" 1}
+	{tags add "56_bullet"}
+	{tags remove "57_bullet"}
+else tagged "56_bullet"
+	{ani_play "shot_small56" 1}
+	{tags add "55_bullet"}
+	{tags remove "56_bullet"}
+else tagged "55_bullet"
+	{ani_play "shot_small55" 1}
+	{tags add "54_bullet"}
+	{tags remove "55_bullet"}
+else tagged "54_bullet"
+	{ani_play "shot_small54" 1}
+	{tags add "53_bullet"}
+	{tags remove "54_bullet"}
+else tagged "53_bullet"
+	{ani_play "shot_small53" 1}
+	{tags add "52_bullet"}
+	{tags remove "53_bullet"}
+else tagged "52_bullet"
+	{ani_play "shot_small52" 1}
+	{tags add "51_bullet"}
+	{tags remove "52_bullet"}
+else tagged "51_bullet"
+	{ani_play "shot_small51" 1}
+	{tags add "50_bullet"}
+	{tags remove "51_bullet"}
+else tagged "50_bullet"
+	{ani_play "shot_small50" 1}
+	{tags add "49_bullet"}
+	{tags remove "50_bullet"}
+else tagged "49_bullet"
+	{ani_play "shot_small49" 1}
+	{tags add "48_bullet"}
+	{tags remove "49_bullet"}
+else tagged "48_bullet"
+	{ani_play "shot_small48" 1}
+	{tags add "47_bullet"}
+	{tags remove "48_bullet"}
+else tagged "47_bullet"
+	{ani_play "shot_small47" 1}
+	{tags add "46_bullet"}
+	{tags remove "47_bullet"}
+else tagged "46_bullet"
+	{ani_play "shot_small46" 1}
+	{tags add "45_bullet"}
+	{tags remove "46_bullet"}
+else tagged "45_bullet"
+	{ani_play "shot_small45" 1}
+	{tags add "44_bullet"}
+	{tags remove "45_bullet"}
+else tagged "44_bullet"
+	{ani_play "shot_small44" 1}
+	{tags add "43_bullet"}
+	{tags remove "44_bullet"}
+else tagged "43_bullet"
+	{ani_play "shot_small43" 1}
+	{tags add "42_bullet"}
+	{tags remove "43_bullet"}
+else tagged "42_bullet"
+	{ani_play "shot_small42" 1}
+	{tags add "41_bullet"}
+	{tags remove "42_bullet"}
+else tagged "41_bullet"
+	{ani_play "shot_small41" 1}
+	{tags add "40_bullet"}
+	{tags remove "41_bullet"}
+else tagged "40_bullet"
+	{ani_play "shot_small40" 1}
+	{tags add "39_bullet"}
+	{tags remove "40_bullet"}
+else tagged "39_bullet"
+	{ani_play "shot_small39" 1}
+	{tags add "38_bullet"}
+	{tags remove "39_bullet"}
+else tagged "38_bullet"
+	{ani_play "shot_small38" 1}
+	{tags add "37_bullet"}
+	{tags remove "38_bullet"}
+else tagged "37_bullet"
+	{ani_play "shot_small37" 1}
+	{tags add "36_bullet"}
+	{tags remove "37_bullet"}
+else tagged "36_bullet"
+	{ani_play "shot_small36" 1}
+	{tags add "35_bullet"}
+	{tags remove "36_bullet"}
+else tagged "35_bullet"
+	{ani_play "shot_small35" 1}
+	{tags add "34_bullet"}
+	{tags remove "35_bullet"}
+else tagged "34_bullet"
+	{ani_play "shot_small34" 1}
+	{tags add "33_bullet"}
+	{tags remove "34_bullet"}
+else tagged "33_bullet"
+	{ani_play "shot_small33" 1}
+	{tags add "32_bullet"}
+	{tags remove "33_bullet"}
+else tagged "32_bullet"
+	{ani_play "shot_small32" 1}
+	{tags add "31_bullet"}
+	{tags remove "32_bullet"}
+else tagged "31_bullet"
+	{ani_play "shot_small31" 1}
+	{tags add "30_bullet"}
+	{tags remove "31_bullet"}
+else tagged "30_bullet"
+	{ani_play "shot_small30" 1}
+	{tags add "29_bullet"}
+	{tags remove "30_bullet"}
+else tagged "29_bullet"
+	{ani_play "shot_small29" 1}
+	{tags add "28_bullet"}
+	{tags remove "29_bullet"}
+else tagged "28_bullet"
+	{ani_play "shot_small28" 1}
+	{tags add "27_bullet"}
+	{tags remove "28_bullet"}
+else tagged "27_bullet"
+	{ani_play "shot_small27" 1}
+	{tags add "26_bullet"}
+	{tags remove "27_bullet"}
+else tagged "26_bullet"
+	{ani_play "shot_small26" 1}
+	{tags add "25_bullet"}
+	{tags remove "26_bullet"}
+else tagged "25_bullet"
+	{ani_play "shot_small25" 1}
+	{ani_play "shot22" 1}
+	{tags add "24_bullet"}
+	{tags remove "25_bullet"}
+else tagged "24_bullet"
+	{ani_play "shot_small24" 1}
+	{ani_play "shot21" 1}
+	{tags add "23_bullet"}
+	{tags remove "24_bullet"}
+else tagged "23_bullet"
+	{ani_play "shot_small23" 1}
+	{ani_play "shot20" 1}
+	{tags add "22_bullet"}
+	{tags remove "23_bullet"}
+else tagged "22_bullet"
+	{ani_play "shot_small22" 1}
+	{ani_play "shot19" 1}
+	{tags add "21_bullet"}
+	{tags remove "22_bullet"}
+else tagged "21_bullet"
+	{ani_play "shot_small21" 1}
+	{ani_play "shot18" 1}
+	{tags add "20_bullet"}
+	{tags remove "21_bullet"}
+else tagged "20_bullet"
+	{ani_play "shot_small20" 1}
+	{ani_play "shot17" 1}
+	{tags add "19_bullet"}
+	{tags remove "20_bullet"}
+else tagged "19_bullet"
+	{ani_play "shot_small19" 1}
+	{ani_play "shot16" 1}
+	{tags add "18_bullet"}
+	{tags remove "19_bullet"}
+else tagged "18_bullet"
+	{ani_play "shot_small18" 1}
+	{ani_play "shot15" 1}
+	{tags add "17_bullet"}
+	{tags remove "18_bullet"}
+else tagged "17_bullet"
+	{ani_play "shot_small17" 1}
+	{ani_play "shot14" 1}
+	{tags add "16_bullet"}
+	{tags remove "17_bullet"}
+else tagged "16_bullet"
+	{ani_play "shot_small16" 1}
+	{ani_play "shot13" 1}
+	{tags add "15_bullet"}
+	{tags remove "16_bullet"}
+else tagged "15_bullet"
+	{ani_play "shot_small15" 1}
+	{ani_play "shot12" 1}
+	{tags add "14_bullet"}
+	{tags remove "15_bullet"}
+else tagged "14_bullet"
+	{ani_play "shot_small14" 1}
+	{ani_play "shot11" 1}
+	{tags add "13_bullet"}
+	{tags remove "14_bullet"}
+else tagged "13_bullet"
+	{ani_play "shot_small13" 1}
+	{bone hide "bullet13"}	
+	{ani_play "shot10" 1}
+	{tags add "12_bullet"}
+	{tags remove "13_bullet"}
+else tagged "12_bullet"
+	{ani_play "shot_small12" 1}
+	{bone hide "bullet12"}	
+	{ani_play "shot09" 1}
+	{tags add "11_bullet"}
+	{tags remove "12_bullet"}
+else tagged "11_bullet"
+	{ani_play "shot_small11" 1}
+	{bone hide "bullet11"}	
+	{ani_play "shot08" 1}
+	{tags add "10_bullet"}
+	{tags remove "11_bullet"}
+else tagged "10_bullet"
+	{ani_play "shot_small10" 1}
+	{bone hide "bullet10"}	
+	{ani_play "shot07" 1}
+	{tags add "9_bullet"}
+	{tags remove "10_bullet"}
+else tagged "9_bullet"
+	{ani_play "shot_small09" 1}
+	{bone hide "bullet09"}	
+	{ani_play "shot06" 1}
+	{tags add "8_bullet"}
+	{tags remove "9_bullet"}
+else tagged "8_bullet"
+	{ani_play "shot_small08" 1}
+	{bone hide "bullet08"}	
+	{ani_play "shot05" 1}
+	{tags add "7_bullet"}
+	{tags remove "8_bullet"}
+else tagged "7_bullet"
+	{ani_play "shot_small07" 1}
+	{bone hide "bullet07"}	
+	{ani_play "shot04" 1}
+	{tags add "6_bullet"}
+	{tags remove "7_bullet"}
+else tagged "6_bullet"
+	{ani_play "shot_small06" 1}
+	{bone hide "bullet06"}	
+	{ani_play "shot03" 1}
+	{tags add "5_bullet"}
+	{tags remove "6_bullet"}
+else tagged "5_bullet"
+	{bone hide "bullet_06"}	
+	{ani_play "shot_small05" 1}
+	{bone hide "bullet05"}	
+	{ani_play "shot02" 1}
+	{tags add "4_bullet"}
+	{tags remove "5_bullet"}
+else tagged "4_bullet"
+	{bone hide "bullet_05"}	
+	{ani_play "shot_small04" 1}
+	{bone hide "bullet04"}	
+	{ani_play "empty_spin" 1}
+	{delay 0.1 
+		{view hide "shell03"}
+	}
+	{tags add "3_bullet"}
+	{tags remove "4_bullet"}
+else tagged "3_bullet"
+	{bone hide "bullet_04"}	
+	{ani_play "shot_small03" 1}
+	{bone hide "bullet03"}	
+;	{ani_play "shot03" 1}
+	{delay 0.1 
+		{view hide "shell02"}
+	}
+	{tags add "2_bullet"}
+	{tags remove "3_bullet"}
+else tagged "2_bullet"
+	{bone hide "bullet_03"}	
+	{ani_play "shot_small02" 1}
+	{bone hide "bullet02"}	
+;	{ani_play "shot02" 1}
+	{tags add "1_bullet"}
+	{tags remove "2_bullet"}
+else tagged "1_bullet"
+	{bone hide "bullet_02"}	
+	{ani_play "shot_small01" 1}
+	{bone hide "bullet01"}	
+;	{ani_play "shot01" 1}
+	{tags add "0_bullet"}
+	{tags add "empty"}
+	{delay 2 
+		{tags remove "empty"}
+	}
+	{tags remove "1_bullet"}
+else tagged "0_bullet"
+	{bone hide "bullet_01"}	
+	{ani_play "shot_small00" 1}
+	{bone hide "bullet00"}	
+	; {delay 0 
+		; {ani_play "empty" }
+	; }
+	{tags add "0_bullet"}
+}

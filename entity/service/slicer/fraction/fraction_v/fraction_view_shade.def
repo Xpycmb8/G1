@@ -1,0 +1,9 @@
+{game_entity
+	(include "/properties/physics_generic.ext")
+	{Extension "fraction_v.mdl"}
+	{obstacleID "fraction"}	
+	{props "fraction_view_shade"}
+	{extender "stuff"
+		{item "fraction_v"}
+	}
+}

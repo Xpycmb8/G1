@@ -1,0 +1,15 @@
+;// 12-gauge
+
+{bullet
+	{desc "12 cal BuckShot AA12"}
+	{tag "bullet noview buckshot stackable smallarms"}
+	{inventory
+		{weight 3.3}
+		{block 30}
+		{size 1 1}
+		{fsm "belt"}
+	}
+	{mass 0.038}
+	("no_trace")
+	{entity "aa12_mags"}
+}

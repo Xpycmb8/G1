@@ -1,0 +1,41 @@
+{from "pattern bullet"
+	{tag "smg assaultrifle weapon bullet to_hand shoot_walking_manual -shoot_walking flash_single_sided_pistol g36_series 60_bullet shortsmg_set heat_small large_drum_magazine"}
+	{entity "tar21_v3"}
+	("clickSound_smg")	
+	{filling "ammo 9x19" 60}
+	{inventory
+		{size 5 2 }
+		{link_bone "gun_back"}
+		{weight 100 }
+	}
+	{mass 3.79}
+	{traceFreq 0}
+	{Automatic}
+	{rechargeTime 4.5}
+	("recoveryTime" r(750))
+	("recoil_low_boost")
+	("sway_medium_long")
+	{calibre 9.19}
+	{speed 560}
+	{parameters "sp"
+		("accuracy_ar_short_sp_919")
+		("accuracy_boost")
+		("health_damage_9x19" d(325))
+		{projectileDamage 3}
+		{projectileDamageClip 3}
+		("projectileDamage_range_500m" damping(0.7) damage(3))
+		{range 140 150};F	
+		("speed" s(560))
+	}
+	{parameters "ap"
+		("accuracy_ar_short_ap_919")
+		("accuracy_boost")
+		("health_damage_9x19" d(475))
+		{projectileDamage 3}
+		{projectileDamageClip 3}
+		("projectileDamage_range_500m" damping(1) damage(3))
+		{range 170 190};F	
+		("speed" s(650))
+	}
+	("zoom_holographic")
+}

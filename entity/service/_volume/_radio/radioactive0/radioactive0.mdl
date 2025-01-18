@@ -1,0 +1,26 @@
+;Exported by: 12345
+;Date:        Thu Oct 04 21:16:51 2012
+;File:        D:\ÒÔ‡ÒÚË ‚ÒÂ\3dsmax\scenes\¿Õ“”–¿∆ -  –»—“¿À€ “»¡≈–»ﬂ.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "body"
+			{Position 0	0	5.04159}
+			{VolumeView "body.ply"}
+		}
+	}
+}
+{Volume "body"
+	{Polyhedron "body.vol"}
+	{Bone "body"}
+	{Matrix34
+		1	0	0
+		0	0.999977	0.00679476
+		0	0	1
+		-0.290504	-0.319763	-6.89409
+	}
+}

@@ -1,0 +1,13 @@
+;// fuel 
+
+{bullet
+	{tag "flame"}
+	{entity "flame_ammo"}
+	{inventory
+		{weight 1}
+		{block 100}
+		{size 2 1}
+		{fsm "belt"}
+	}
+	{mass 0.006}
+}

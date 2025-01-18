@@ -1,0 +1,12 @@
+{bullet
+	{tag "bullet normal stackable pierce sp"}
+	{inventory
+		{weight 1.5}
+		{block 60}
+		{size 1 2}
+		{fsm "belt"}
+	}	
+	{mass 0.020}
+	{entity "mags50_tar21"}
+	("trace5")
+}

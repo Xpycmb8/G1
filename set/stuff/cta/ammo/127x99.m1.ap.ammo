@@ -1,0 +1,13 @@
+{bullet
+	{tag "bullet big hmgun sniper stackable pierce ap smallarms_heavy"}
+	{inventory
+		{weight 3.3}
+		{block 30}
+		{size 1 2}
+		{fsm "belt"}
+	}
+	{mass 0.11}
+	{entity "m107_mag"}
+	{desc "127x99 ap sniper"}
+	("trace12ap")
+}

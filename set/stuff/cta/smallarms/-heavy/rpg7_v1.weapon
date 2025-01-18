@@ -1,0 +1,133 @@
+{weapon_bullet
+	{tag "rocketlauncher to_hand ap cannot_lie nokeep cumulative rpg7hp"}
+	{filling "ammo rpg7" 1}
+	{preloaded}
+	{inventory
+		{size 6 1}
+		{link_bone "gun_back_left"}
+		{weight 100}
+		{fsm "bazooka"}
+	}
+	{mass 6.1}
+	{states
+		{reload	"reload-bazooka"}
+		{unload	"unload-bazooka"}
+		{fire	"fire-bazooka"	}
+		{aim 	"aim-bazooka"	}
+		{can_aim  "can-aim-bazooka"	}
+	}
+	{entity "rpg7_v1"}
+	{fireSound	"small_arms/rpg_bolt"}
+	{fireSoundClose	"small_arms/rpg_bolt"}
+	{clickSound "empty_rpg_shot"}
+	{speed 280}
+	{autoreload 0}
+	{AccuracyByMotionK 0.1}
+	{AimingTolerance 1}
+	{calibre 50}
+	{DisableRicochet}
+	{foresight "Foresight3"}
+	{reactive}
+	{gravity 0}
+	{rechargeTime 7}
+	;бп скорость дальность
+	{parameters "pg7v" ;ПГ-7В / 7П1		кумулятивная 260	120	500
+		{calibre 50}
+		{fillingVisible "pg7v"}
+		{projectileDamageThreshold 1}
+		{projectileDamage 260}
+		{range 320 340}
+		("accuracy_grenade_launcher_boost")
+		{ZeroingAccuracy 0.75 0.5}
+		{speed 120}	; 10m 115ms, 30m 295ms
+	}
+	{parameters "og7v" ;ОГ-7В «Осколок» / 7П50	осколочная Масса ВВ 0,4 кг, 1000 осколков. Площадь поражения 150 м².	120	350 (700 с УП-7В)
+		{calibre 25}
+		{fillingVisible "og7v"}
+		{projectileDamageThreshold 0.2}
+		{projectileDamage 5}
+		{range 160 190}
+		("accuracy_grenade_launcher_boost")
+		{ZeroingAccuracy 0.75 0.5}
+		{speed 120}	; 10m 115ms, 30m 295ms
+	}
+	{parameters "pg7vl" ;ПГ-7ВЛ «Луч» / 7П16  500	120	300
+		{calibre 50}
+		{fillingVisible "pg7vl"}
+		{projectileDamageThreshold 1}
+		{projectileDamageTable {20 500} {200 350} {300 0}}
+		{projectileDamage 500}
+		{range 320 340}
+		("accuracy_grenade_launcher_boost")
+		{ZeroingAccuracy 0.75 0.5}
+		{speed 120}	; 10m 115ms, 30m 295ms
+	}
+	{parameters "pg7vm" ;ПГ-7ВМ / 7П6  кумулятивная 300	120	500
+		{calibre 75}
+		{fillingVisible "pg7vm"}
+		{projectileDamageThreshold 1}
+		{projectileDamage 300}
+		{projectileDamageTable {20 300} {200 200} {250 0}}
+		{range 320 340}
+		("accuracy_grenade_launcher_boost")
+		{ZeroingAccuracy 0.75 0.5}
+		{speed 120}	; 10m 115ms, 30m 295ms
+	}
+	{parameters "pg7vr";ПГ-7ВР «Резюме» / 7П28	тандемная кумулятивная	4,5	64 / 105	ДЗ + 650[13]	100	200
+		{calibre 50}
+		{fillingVisible "pg7vr"}
+		{projectileDamageThreshold 1}
+		{projectileDamage 650}
+		{projectileDamageTable {20 650} {200 450} {250 25}}
+		{range 250 290}
+		{spreading 1.75
+			{SpreadPower 2}
+			{SpreadXYRatio 0.7}
+			{SpreadYadjust 0}
+			{radiusFunction
+				0.0		0
+				0.85	0.9
+				1.0		1.3
+				1.2		6
+				2		30
+			}
+		}
+		{ZeroingAccuracy 0.7 0.6 0.5 0.4}
+		{overmatchSlope
+			{0 1}
+			{90 1}
+		}
+		{speed 100}	; 10m 115ms, 30m 295ms
+	}
+	{parameters "pg7vs";ПГ-7ВС / 7П13		кумулятивная	400	120	500
+		{calibre 50}
+		{fillingVisible "pg7vs"}
+		{projectileDamageThreshold 1}
+		{projectileDamage 400}
+		{projectileDamageTable {20 400} {200 200} {250 25}}
+		{range 250 290}
+		("accuracy_grenade_launcher_boost")
+		{ZeroingAccuracy 0.75 0.5}
+		{speed 120}	; 10m 115ms, 30m 295ms
+	}
+	{parameters "tbg7v";ТБГ-7В «Танин» / 7П33	термобарическая	4,5 105 н/драдиус поражения живой силы: 10 м	100	200 (550 с УП-7В)
+		{calibre 50}
+		{fillingVisible "tbg7v"}
+		{projectileDamageThreshold 1}
+		{projectileDamage 50}
+		{projectileDamageTable {20 35} {150 35} {200 5}}
+		{range 210 250}
+		("accuracy_grenade_launcher_boost")
+		{ZeroingAccuracy 0.75 0.5}
+		{speed 120}	; 10m 115ms, 30m 295ms
+	}
+	{curve "cumulative"}
+	{cursor "cannon_on"}
+	("recoil_high")
+	("sway_medium")
+	{clickSound "LauncherMissile_click_01"}
+	("zoom_pgo")	
+	{crosshair "crosshair6"}
+	{crosshairReloading "crosshair6_reload"}
+	{FiringTimeout 4 2}	; min delay between ai shots (note: will be affected by "grenade_timeout" modifier)
+}

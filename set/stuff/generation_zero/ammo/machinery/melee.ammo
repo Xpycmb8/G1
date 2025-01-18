@@ -1,0 +1,5 @@
+{bullet
+	{tag "jump no_hit"}
+	{desc "Melee"}
+	{inventory {noView}}
+}

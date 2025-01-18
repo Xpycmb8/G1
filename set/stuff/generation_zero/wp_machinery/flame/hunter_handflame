@@ -1,0 +1,28 @@
+{weapon_bullet
+	{tag "weapon flame_thrower bullet to_hand"}
+	{filling "ammo gasfuel" 500}
+	{inventory
+		{size 2 2}
+		{fsm "smg"}
+	}
+	{burst
+		{short 20 10}		; burst shots on long distance, rand (+-)shots
+		{long 10 8}			; burst shots on short distance, rand (+-)shots
+		{rangeKoef 0.5}		; rangeKoef * aimRange = max long burst distance
+	}
+
+	{FiringTimeout 0.8 0.2}
+	{DisableRicochet}
+
+	{foresight "foresight_main"}
+	{minRange 3}
+	{range 20 20}
+	{recoveryTime 0.1}
+	{rechargeTime 0.1}
+	{gravity 0.65}
+	{speed 30}
+	{AimingTolerance 3}
+	{cursor "cannon_on"}
+	{Automatic}
+	{preloaded}
+}

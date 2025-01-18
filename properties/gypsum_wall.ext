@@ -1,0 +1,149 @@
+	{props  "-concrete" "gypsum_frame" }
+	{collider "particle.big"}
+	{obstacleID "building"}
+	; {constrain ground}
+	; {lodclass "decor_small"}
+	{simulation {able 1} {disableLinked 1}}
+	{extender "detail"
+		{random}
+	}
+	; {body {permit body}}
+	; (define "armor_wound"
+		; {armor
+			; {setting "body"
+				; {threshold
+					; {pierce 
+						; {value 1}
+					; }
+				; }
+				; {volumes "*"}
+			; }
+		; }
+	; )
+	; ("armor_wound")	
+	{Volume "broken_00"
+		{material "gypsum"}
+		{able {window} {blockcamera 1}}
+		{Tags  "shard_down"}		
+		{Thickness hollow 0.5}
+	}
+	{Volume "broken_01"
+		{material "gypsum"}
+		{able {window} {blockcamera 1}}
+		{Tags  "shard_down"}		
+		{Thickness hollow 0.5}
+	}
+	{Volume "broken_02"
+		{material "gypsum"}
+		{able {window} {blockcamera 1}}
+		{Tags  "shard_down"}		
+		{Thickness hollow 0.5}
+	}
+	{Volume "broken_03"
+		{material "gypsum"}
+		{able {window} {blockcamera 1}}
+		{Tags  "shard_down"}		
+		{Thickness hollow 0.5}
+	}
+	{Volume "broken_04"
+		{material "gypsum"}
+		{able {window} {blockcamera 1}}
+		{Tags  "shard_down"}		
+		{Thickness hollow 0.5}
+	}
+	{Volume "broken_05"
+		{material "gypsum"}
+		{able {window} {blockcamera 1}}
+		{Tags  "shard_down"}		
+		{Thickness hollow 0.5}
+	}
+	{Volume "broken_06"
+		{material "gypsum"}
+		{able {window} {blockcamera 1}}
+		{Tags  "shard_down"}		
+		{Thickness hollow 0.5}
+	}
+	{Volume "broken_07"
+		{material "gypsum"}
+		{able {window} {blockcamera 1}}
+		{Tags  "shard_upper"}		
+		{Thickness hollow 0.5}
+	}
+	{Volume "broken_08"
+		{material "gypsum"}
+		{able {window} {blockcamera 1}}
+		{Tags  "shard_upper"}		
+		{Thickness hollow 0.5}
+	}
+	{Volume "broken_09"
+		{material "gypsum"}
+		{able {window} {blockcamera 1}}
+		{Tags  "shard_upper"}		
+		{Thickness hollow 0.5}
+	}
+	{Volume "broken_10"
+		{material "gypsum"}
+		{able {window} {blockcamera 1}}
+		{Tags  "shard_upper"}		
+		{Thickness hollow 0.5}
+	}
+	{Volume "broken_11"
+		{material "gypsum"}
+		{able {window} {blockcamera 1}}
+		{Tags  "shard_upper"}		
+		{Thickness hollow 0.5}
+	}
+	{Volume "broken_12"
+		{material "gypsum"}
+		{able {window} {blockcamera 1}}
+		{Tags  "shard_upper"}		
+		{Thickness hollow 0.5}
+	}
+	{Volume "broken_13"
+		{material "gypsum"}
+		{able {window} {blockcamera 1}}
+		{Tags  "shard_upper"}		
+		{Thickness hollow 0.5}
+	}
+	{Volume "broken_14"
+		{material "gypsum"}
+		{able {window} {blockcamera 1}}
+		{Tags  "shard_upper"}		
+		{Thickness hollow 0.5}
+	}
+	{Volume "broken_15"
+		{material "gypsum"}
+		{able {window} {blockcamera 1}}
+		{Tags  "shard_upper"}		
+		{Thickness hollow 0.5}
+	}
+	{Volume "broken_16"
+		{material "gypsum"}
+		{able {window} {blockcamera 1}}
+		{Tags  "shard_upper"}		
+		{Thickness hollow 0.5}
+	}
+	{Volume "broken_17"
+		{material "gypsum"}
+		{able {window} {blockcamera 1}}
+		{Tags  "shard_upper"}		
+		{Thickness hollow 0.5}
+	}
+	{Volume "broken_18"
+		{material "gypsum"}
+		{able {window} {blockcamera 1}}
+		{Tags  "shard_upper"}		
+		{Thickness hollow 0.5}
+	}
+	{Volume "broken_19"
+		{material "gypsum"}
+		{able {window} {blockcamera 1}}
+		{Tags  "shard_upper"}		
+		{Thickness hollow 0.5}
+	}
+	{Volume "broken_20"
+		{material "gypsum"}
+		{able {window} {blockcamera 1}}
+		{Tags  "shard_upper"}		
+		{Thickness hollow 0.5}
+	}

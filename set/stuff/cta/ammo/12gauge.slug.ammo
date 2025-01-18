@@ -1,0 +1,14 @@
+;// 12-gauge
+
+{bullet
+	{desc "12 cal Slug"}
+	{tag "bullet big hmgun stackable pierce ap slug smallarms"}
+	{inventory
+		{size 1 1}
+		{weight 4}
+		{block 25}
+	}
+	{mass 0.038}
+	("trace127_slug")
+	{entity "bullet12x55_slug"}
+}

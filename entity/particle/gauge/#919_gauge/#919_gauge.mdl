@@ -1,0 +1,39 @@
+;Exported by: ?????
+;Date:        Sat Nov  2 20:07:03 2019
+;File:        D:\?????\Documents\3dsMax\scenes\9mm_shell.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "fx_shell"
+			{parameters "Voxels=0;"}
+			{Position 0.405633	0	0}
+		}
+		{bone "casing"
+			{parameters "CommonMesh;"}
+			{Matrix34
+				0	-1	0
+				1	0	0
+				0	0	1
+				0.204633	0	0
+			}
+			{LODView
+				{VolumeView "casing.ply"}
+				{VolumeView "casing_lod1.ply"}
+			}
+		}
+	}
+}
+{Volume "body"
+	{Cylinder 0.0610617 0.279121}
+	{Bone "basis"}
+	{Matrix34
+		0	0	-1.88381
+		0	1.88381	0
+		1.58243	0	0
+		0.215427	-9.32872e-05	0.00137055
+	}
+}

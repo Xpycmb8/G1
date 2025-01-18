@@ -1,0 +1,13 @@
+{bullet
+	{tag "bullet normal stackable pierce sp"}
+	{desc "7.62x51 mag G3"}
+	{inventory
+		{weight 2}
+		{block 20}
+		{size 1 2}
+		{fsm "belt"}
+	}	
+	{mass 0.010}
+	{entity "762x51_g3"}
+	("trace7")
+}

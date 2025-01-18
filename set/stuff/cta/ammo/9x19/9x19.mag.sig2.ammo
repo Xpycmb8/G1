@@ -1,0 +1,15 @@
+;// 9x19mm
+
+{bullet
+	{tag "bullet sp small stackable pierce"}
+	{inventory
+		{weight 3.3}
+		{block 30}
+		{size 1 2}
+		{fsm "belt"}
+	}
+	{mass 0.008}
+;	{desc "9х19 Магазин SIG SAUER MCX x30\n<c(ff0010)>Пробитие <c(ffffff)>-<c(ffffff)> <c(10ff01)>3мм на 50м\n<c(ffffff)>"}
+	{entity "sigsauer_mags2"}
+	("trace9")
+}

@@ -1,0 +1,8 @@
+(include "physics_generic.ext")
+
+{props "wood" "crusher_wood" "break_action"}
+{mass 90}
+{collider "particle.meds"}
+{volume "body"
+	{thickness 2}
+}

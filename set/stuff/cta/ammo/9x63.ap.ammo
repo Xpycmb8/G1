@@ -1,0 +1,13 @@
+{bullet
+	{desc ".357 Magnum AP"}
+	{tag "bullet ap small stackable pierce smallarms"}
+	{inventory
+		{weight 3.3}
+		{block 30}
+		{size 1 1}
+		{fsm "belt"}
+	}
+	{mass 0.017}
+	{entity "9x63ap"}
+	("trace9x39")
+}

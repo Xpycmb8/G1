@@ -1,0 +1,23 @@
+(include "\set\ballistics\accuracy_distance.inc")
+(include "\set\ballistics\burst.inc")
+(include "\set\ballistics\health_damage.inc")
+(include "\set\ballistics\other.inc")
+(include "\set\ballistics\spreading_distance.inc")
+(include "\set\ballistics\sway.inc")
+(include "\set\ballistics\projectiledamage.inc")
+(include "\set\ballistics\zoom.inc")
+(define "accuracy_zenite_high_mount_sp" ; dread
+	("accuracy_curve" r1(0.5))
+)
+(define "accuracy_zenite_high_mount_fg" ; dread
+	("accuracy_curve" r1(1.5))
+)
+(define "accuracy_zenite_high_mount_ap" ; dread
+	("accuracy_curve" r1(0.2))
+)
+
+(define "accuracy_curve"
+	{Spreading
+		{radiusTable {10 0} {80 (* 0.50 %r1)} {200 (* 1.00 %r1)} {350 (* 1.50 %r1)} {600 (* 2.00 %r1)} {800 (* 2.50 %r1)}}
+	}
+)

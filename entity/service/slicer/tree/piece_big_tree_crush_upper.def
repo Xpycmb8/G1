@@ -1,0 +1,67 @@
+{game_entity
+	{skeleton
+		{animation
+			{sequence "crown1_wind" {resume}}
+			{sequence "crown1" {resume}}
+			{sequence "crown2_wind" {resume}}
+			{sequence "crown2" {resume}}
+			{sequence "crown3_wind" {resume}}
+			{sequence "crown3" {resume}}
+		}
+		{TexMods
+			{"burned"		"burned"	}
+			{"_burned0"		"burned"	}
+			{"_burned1"		"burned2"	}
+			{"_burned2"		"broken"	}
+			{"_crushed"		"crushed"	}
+		}
+		{bone "basis"
+			{matrix34
+				1  0  0
+				0 -1  0
+				0  0  1
+				0  0  0
+			}
+		}
+	}
+	{simulation {able 1}}
+	{constrain none}
+	{props "dummy" "wood" "big" "part" "crown_crush"}
+	{collider "bush"}
+	{obstacleid "nothing"}
+	{mass 1200}
+	(define "crown"
+		{volume "crown%0"
+			{able
+				{window}
+				{contact 0} {contact_ground 0}
+				{bullet 1} {throwing 0} {obstacle 0}
+				{overlap 1} {visible 0}
+				{touch 0}
+			}
+			{density 0.007}
+			{tags "crown_crushed"}
+		}
+	)
+
+	("crown" args 1)
+	("crown" args 2)
+	("crown" args 3)
+	("crown" args 4)
+	("crown" args 5)
+	("crown" args 6)
+	("crown" args 7)
+	("crown" args 8)
+	("crown" args 9)
+	("crown" args 10)
+	("crown" args 11)
+	("crown" args 12)
+	("crown" args 13)
+	("crown" args 14)
+	("crown" args 15)
+	("crown" args 16)
+	("crown" args 17)
+	("crown" args 18)
+	("crown" args 19)
+}
+

@@ -1,0 +1,96 @@
+{weapon_bullet
+	{tag "weapon bullet rocketlauncher to_hand ap cannot_lie nokeep cumulative carl_gustav"}
+	{desc "Carl Gustaf M4"}
+	{inventory
+		{size 4 1}
+		{link_bone "gun_back"}
+		{weight 100}
+		{fsm "bazooka"}
+	}
+	{mass 6.7}
+	{states
+		{reload	"reload-bazooka"}
+		{unload	"unload-bazooka"}
+		{fire	"fire-bazooka"	}
+		{aim 	"aim-bazooka"	}
+		{can_aim  "can-aim-bazooka"	}
+	}
+	{reloadAnimBonus 0}
+	{filling "ammo 84mm" 1}
+	{preloaded}
+	{entity "carl_gustav_v1"}
+	{fireSound	"small_arms/rpg_bolt"}
+	{fireSoundClose	"small_arms/rpg_bolt"}
+	{clickSound "empty_rpg_shot"}
+	{speed 210}
+	{AimingTolerance 1}
+	{autoreload 0}
+	{calibre 84}
+	{DisableRicochet}
+	;вес калибр бп скрость дальность
+	{parameters "heat551" ;84 мм HEAT 551	кумулятивная	3,2	84	350	254	700
+		{fillingVisible "rocket"}
+		{projectileDamageThreshold 1}
+		{projectileDamage 350}
+		{gravity 1.5}
+		{range 450 500}
+		{AimingTolerance 3}
+		{Spreading
+			{radiusTable {10 0} {25 0.85} {40 1.80} {60 3} {80 5} {100 7}}
+		}
+		("accuracy_boost")
+		("speed2" s(254))	
+	}
+	{parameters "heat751";84 мм HEAT 751 	тандемная кумулятивная	3,8	84	ДЗ + 500	210	600
+		{unlimitedRangeTPC 1}
+		{fillingVisible "rocket"}
+		{projectileDamageThreshold 1}
+		{projectileDamage 500}
+		{gravity 0}
+		{range 450 500}
+		{AimingTolerance 1}
+		{Spreading
+			{radiusTable {10 0} {25 0.75} {40 1.50} {60 2.4} {80 4} {100 6}}
+		}
+		("accuracy_boost")
+		("speed2" s(120))	
+	}
+	
+	{parameters "hedp4410";84 мм HEDP 502    бронебойно-осколочная	3,3	84	150	210	500 по цели типа «бункер», 300 по движущейся цели	
+		{fillingVisible "rocket"}
+		{projectileDamageThreshold 1}
+		{projectileDamageTable {10 150} {30 150} {45 145} {60 140} {80 138} {120 100}}
+		{gravity 2}
+		{range 400 410}
+		{Spreading
+			{radiusTable {10 0} {25 1.25} {40 2.30} {60 4} {80 6} {100 9}}
+		}
+		("accuracy_boost")
+		("speed2" s(210))	
+	}
+	{parameters "hedp441d";84 мм HEDP 441D   осколочная	3,2	84	-	240	-
+		{fillingVisible "rocket"}
+		{projectileDamageThreshold 1}
+		{projectileDamageTable {10 20} {30 20} {45 18} {60 16} {80 12} {120 8}}
+		{gravity 2}
+		{range 400 410}
+		{AimingTolerance 9}
+		{Spreading
+			{radiusTable {10 0} {25 1.25} {40 2.30} {60 4} {80 6} {100 9}}
+		}
+		("accuracy_boost")
+		("speed2" s(240))	
+	}
+	{foresight "Foresight3"}
+	{reactive}
+	{gravity 0.1}
+	{rechargeTime 8}
+	{curve "cumulative"}
+	{cursor "cannon_on"}
+	("recoil_high")
+	("sway_medium")
+	("zoom_holo_cg")	
+	{crosshair "crosshair6"}
+	{crosshairReloading "crosshair6_reload"}
+	{FiringTimeout 4 2}	; min delay between ai shots (note: will be affected by "grenade_timeout" modifier)
+}

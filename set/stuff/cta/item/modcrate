@@ -1,0 +1,11 @@
+{item
+	{tag "smallitemin1hand" "modcrate"}
+	{desc "Пак модификаций"}
+	{entity "modcrate"}
+	{inventory
+		{size 2 1}
+		{weight 5}
+		{fsm "belt"}
+	}
+	{mass 1}
+}

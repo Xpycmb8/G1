@@ -1,0 +1,17 @@
+{game_entity
+	{extension "/properties/piece.ext"}
+	{simulation {able 1} {state 1}}
+	{constrain none}
+	{props "wound_blood" "blood_part_slow_fx" "fx_blood" }
+	{collider "distant"}
+	{obstacleID "fraction"}	
+	{volume "body"
+		{sphere 2}
+		{bone "basis"}
+		{material "dummy"}
+	}
+	{body
+		{proper body}
+	}
+	{mass 1}
+}

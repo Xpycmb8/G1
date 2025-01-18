@@ -1,0 +1,9 @@
+{from "pattern grenade_smoke"
+	{tag "-missile"}
+	{desc "Дроп Повстанцев"}
+	{inventory 
+		{size 2 1}
+	}
+	{entity "smoke_paradrop_ammo_grm"}
+	{mass 0.2}
+}

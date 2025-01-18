@@ -1,0 +1,11 @@
+{item
+	{tag "smallitemin1hand" "remote_tablet" }
+	{desc "c4 clutch"}
+	{entity "c4_clutch"}
+	{inventory
+		{size 1 1}
+		{weight 100}
+		{fsm "belt"}
+	}
+	{mass 1}
+}

@@ -1,0 +1,13 @@
+{bullet
+	{tag "bullet normal stackable pierce sp"}
+	{desc "7.62x51 L96A1 Mag"}
+	{inventory
+		{weight 3.3}
+		{block 10}
+		{size 1 1}
+		{fsm "belt"}
+	}	
+	{mass 0.010}
+	{entity "l96a1_mags"}
+	("trace7")
+}

@@ -1,0 +1,49 @@
+;Exported by: Xpycmb
+;Date:        Thu Feb 24 18:15:59 2022
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\82mm_shell.max
+{Skeleton
+	{animation
+		{sequence "tail"
+			{speed 3}
+			{events 
+				{1 "start_tail_82mm"}
+			}		
+			{autostart}
+		}
+		{sequence "open"
+			{speed 0.05}
+			{events 
+				{3 "open_bullet"}
+			}		
+			{autostart}
+		}
+	}
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "82mm_shell"
+			{parameters "CommonMesh;"}
+			{Position -3.03491	0	0}
+			{VolumeView "82mm_shell.ply"}
+		}
+		{bone "tail"
+			{Matrix34
+				-1	0	0
+				0	1	0
+				0	0	-1
+				-5.95374	0	0
+			}
+		}
+		{bone "open"
+			{Matrix34
+				-1	0	0
+				0	1	0
+				0	0	-1
+				-5.95374	0	0
+			}
+		}
+	}
+}

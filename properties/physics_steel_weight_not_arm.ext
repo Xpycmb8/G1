@@ -1,0 +1,24 @@
+game_entity
+
+{props "weight_not_armor" "steel" "big_props" "local_physics"}
+{mass 250}
+{volume "body"
+	{able clear {visible} {bullet} {select} {contact_ground} {touch} {contact} {blast} {obstacle}}
+	{thickness 15}
+}
+{volume "select"
+	{able clear {select}}
+	{density 0}
+}
+{collider "particle.big2"}
+{obstacleID "construction"}
+
+{simulation {able 1}}
+{constrain ground}
+
+{body
+	{permit body}
+}
+(include "wound_def.ext")
+
+{lodclass "decor_small"}

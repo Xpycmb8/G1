@@ -1,0 +1,14 @@
+{game_entity
+
+
+	{Extension "#12g.mdl"}
+	{collider "stuff"}
+        {simulation {able 1}}
+	{lodclass "stuff_small"}
+
+{body {proper body sensible} {permit body}}
+
+
+}
+
+

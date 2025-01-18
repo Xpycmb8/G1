@@ -1,0 +1,93 @@
+actor		
+	{able "fight" "select"}		                  	
+	{props "steel" "stuff" "nocover" "proj_dummy"}	
+{targetClass "machinery"} ;; select for best ammo
+{targetSelector "baze_machinery"}
+	{simulation {able 1} {disableLinked 1}}	
+	{constrain ground}		
+	{lodclass "part_big"}	
+	{body 
+		{proper body sensible} 
+		{permit body}
+	}		
+	(include "/properties/shadow/round.inc")	
+	{Chassis "human_carrier"		
+		{locomotion		
+			{StopTime	0.2}
+			{BrakeTime	0.7}
+			{TurnRadius	3}	
+			{TurnStart	0.8}
+			{TurnStop	0.5}	
+			{Gears		0.35 0.5 0.7 1.0}
+			{RearGears	0.33 0.5}
+			{MaxSpeed	1}		
+			{StartTime	1}		
+			{TurnTime	2}	
+			{TurnRadius	2}	
+		}	
+		{FuelBag		
+			{volume 0 }	 
+			{remain 0 }		
+			{fuel "fuel"}	
+		}
+	}
+	{mass 100}
+	{Volume "missile"
+		{tags "missile"} 
+		{able clear 
+			{Overlap 1} 
+			{Visible 0}
+		}
+		{Thickness 0.1} 
+		{component "missile"}
+	}		
+	{Volume "target"
+		{tags "missile"} 
+		{able clear 
+			{Overlap 0} 
+			{Visible 1}
+		} 
+		{Thickness 0.1}
+		{component "missile"}
+	}			
+	{component "missile"}		
+	{obstacleID "nothing"}		
+	{collider "grenade"}	
+	{constrain water}	
+	{sensor			
+		{AttackZone 350}
+		{MinRecognizeTime 0.01}
+		{RecognizeTime 0.01}
+		{InformRange 1000 1500}		;first - AI ;second - USER
+		{Visor "main"				
+			{vision "human_peripheral"}				
+			{bone "missle_foresight"}			
+		}		
+		{Visor "close"				
+			{vision "human_peripheral"}				
+			{bone "missle_foresight"}			
+		}		
+	}		
+	{autooperatable 1}		
+	{placer{crew 0}}
+	{brain "vehicle"
+		{state "vehicle"}
+		{const "crush/min_danger_zone_time"		1}
+		{const "crush/min_danger_zone_length"	1}
+		{const "bomb/detect_explosives" 25}		;// detect explosives inside 7 meter radius
+		{const "bomb/detect_grenades" 	15}		;// detect grenades inside 5 meter radius
+		{const "bomb/danger_zone" 		27}		;// hide if danger is more than "x" meters away, otherwise run away
+	}
+	{hearingBias 2.0}  	;// reduces units ability to hear sound signals. value = meters
+	{extender "inventory"		
+		{box			
+			{Size 6 2}		
+			{weight 500}		
+		}	
+	}		
+	(define "custom_maneuvrability"		{bone "stage_hor01"            	{speed (* %deg_per_s1 0.000355) } {limits -%angle1 %angle1}}		{bone "stage_ver01"            	{speed (* %deg_per_s1 0.000355) } {limits -%angle1 %angle1}}		{bone "stage_hor02"            	{speed (* %deg_per_s1 0.000355) } {limits -%angle1 %angle1}}		{bone "stage_ver02"            	{speed (* %deg_per_s1 0.000355) } {limits -%angle1 %angle1}}		{bone "stage_hor03"            	{speed (* %deg_per_s1 0.000355) } {limits -%angle1 %angle1}}		{bone "stage_ver03"            	{speed (* %deg_per_s1 0.000355) } {limits -%angle1 %angle1}}		{bone "stage_hor04"            	{speed (* %deg_per_s1 0.000355) } {limits -%angle1 %angle1}}		{bone "stage_ver04"            	{speed (* %deg_per_s1 0.000355) } {limits -%angle1 %angle1}}		{bone "stage_hor05"            	{speed (* %deg_per_s1 0.000355) } {limits -%angle1 %angle1}}		{bone "stage_ver05"            	{speed (* %deg_per_s1 0.000355) } {limits -%angle1 %angle1}}		{bone "stage_hor06"            	{speed (* %deg_per_s2 0.000355) } {limits -%angle2 %angle2}}		{bone "stage_ver06"            	{speed (* %deg_per_s2 0.000355) } {limits -%angle2 %angle2}}		{bone "stage_hor07"            	{speed (* %deg_per_s2 0.000355) } {limits -%angle2 %angle2}}		{bone "stage_ver07"            	{speed (* %deg_per_s2 0.000355) } {limits -%angle2 %angle2}}		{bone "stage_hor08"            	{speed (* %deg_per_s2 0.000355) } {limits -%angle2 %angle2}}		{bone "stage_ver08"            	{speed (* %deg_per_s2 0.000355) } {limits -%angle2 %angle2}}		{bone "stage_hor09"            	{speed (* %deg_per_s2 0.000355) } {limits -%angle2 %angle2}}		{bone "stage_ver09"            	{speed (* %deg_per_s2 0.000355) } {limits -%angle2 %angle2}}		{bone "stage_hor10"            	{speed (* %deg_per_s2 0.000355) } {limits -%angle2 %angle2}}		{bone "stage_ver10"            	{speed (* %deg_per_s2 0.000355) } {limits -%angle2 %angle2}}		{bone "stage_hor11"            	{speed (* %deg_per_s3 0.000355) } {limits -%angle3 %angle3}}		{bone "stage_ver11"            	{speed (* %deg_per_s3 0.000355) } {limits -%angle3 %angle3}}		{bone "stage_hor12"            	{speed (* %deg_per_s3 0.000355) } {limits -%angle3 %angle3}}		{bone "stage_ver12"            	{speed (* %deg_per_s3 0.000355) } {limits -%angle3 %angle3}}		{bone "stage_hor13"            	{speed (* %deg_per_s3 0.000355) } {limits -%angle3 %angle3}}		{bone "stage_ver13"            	{speed (* %deg_per_s3 0.000355) } {limits -%angle3 %angle3}}		{bone "stage_hor14"            	{speed (* %deg_per_s3 0.000355) } {limits -%angle3 %angle3}}		{bone "stage_ver14"            	{speed (* %deg_per_s3 0.000355) } {limits -%angle3 %angle3}}		{bone "stage_hor15"            	{speed (* %deg_per_s3 0.000355) } {limits -%angle3 %angle3}}		{bone "stage_ver15"            	{speed (* %deg_per_s3 0.000355) } {limits -%angle3 %angle3}}		{bone "stage_hor16"            	{speed (* %deg_per_s4 0.000355) } {limits -%angle4 %angle4}}		{bone "stage_ver16"            	{speed (* %deg_per_s4 0.000355) } {limits -%angle4 %angle4}}		{bone "stage_hor17"            	{speed (* %deg_per_s4 0.000355) } {limits -%angle4 %angle4}}		{bone "stage_ver17"            	{speed (* %deg_per_s4 0.000355) } {limits -%angle4 %angle4}}		{bone "stage_hor18"            	{speed (* %deg_per_s4 0.000355) } {limits -%angle4 %angle4}}		{bone "stage_ver18"            	{speed (* %deg_per_s4 0.000355) } {limits -%angle4 %angle4}}		{bone "stage_hor19"            	{speed (* %deg_per_s4 0.000355) } {limits -%angle4 %angle4}}		{bone "stage_ver19"            	{speed (* %deg_per_s4 0.000355) } {limits -%angle4 %angle4}}		{bone "stage_hor20"            	{speed (* %deg_per_s4 0.000355) } {limits -%angle4 %angle4}}		{bone "stage_ver20"            	{speed (* %deg_per_s4 0.000355) } {limits -%angle4 %angle4}}		{bone "stage_hor21"            	{speed (* %deg_per_s5 0.000355) } {limits -%angle5 %angle5}}		{bone "stage_ver21"            	{speed (* %deg_per_s5 0.000355) } {limits -%angle5 %angle5}}		{bone "stage_hor22"            	{speed (* %deg_per_s5 0.000355) } {limits -%angle5 %angle5}}		{bone "stage_ver22"            	{speed (* %deg_per_s5 0.000355) } {limits -%angle5 %angle5}}		{bone "stage_hor23"            	{speed (* %deg_per_s5 0.000355) } {limits -%angle5 %angle5}}		{bone "stage_ver23"            	{speed (* %deg_per_s5 0.000355) } {limits -%angle5 %angle5}}		{bone "stage_hor24"            	{speed (* %deg_per_s5 0.000355) } {limits -%angle5 %angle5}}		{bone "stage_ver24"            	{speed (* %deg_per_s5 0.000355) } {limits -%angle5 %angle5}}		{bone "stage_hor25"            	{speed (* %deg_per_s5 0.000355) } {limits -%angle5 %angle5}}		{bone "stage_ver25"            	{speed (* %deg_per_s5 0.000355) } {limits -%angle5 %angle5}}		{bone "stage_hor26"            	{speed (* %deg_per_s6 0.000355) } {limits -%angle6 %angle6}}		{bone "stage_ver26"            	{speed (* %deg_per_s6 0.000355) } {limits -%angle6 %angle6}}		{bone "stage_hor27"            	{speed (* %deg_per_s6 0.000355) } {limits -%angle6 %angle6}}		{bone "stage_ver27"            	{speed (* %deg_per_s6 0.000355) } {limits -%angle6 %angle6}}		{bone "stage_hor28"            	{speed (* %deg_per_s6 0.000355) } {limits -%angle6 %angle6}}		{bone "stage_ver28"            	{speed (* %deg_per_s6 0.000355) } {limits -%angle6 %angle6}}		{bone "stage_hor29"            	{speed (* %deg_per_s6 0.000355) } {limits -%angle6 %angle6}}		{bone "stage_ver29"            	{speed (* %deg_per_s6 0.000355) } {limits -%angle6 %angle6}}		{bone "stage_hor30"            	{speed (* %deg_per_s6 0.000355) } {limits -%angle6 %angle6}}		{bone "stage_ver30"            	{speed (* %deg_per_s6 0.000355) } {limits -%angle6 %angle6}}		{bone "stage_hor31"            	{speed (* %deg_per_s7 0.000355) } {limits -%angle7 %angle7}}		{bone "stage_ver31"            	{speed (* %deg_per_s7 0.000355) } {limits -%angle7 %angle7}}		{bone "stage_hor32"            	{speed (* %deg_per_s7 0.000355) } {limits -%angle7 %angle7}}		{bone "stage_ver32"            	{speed (* %deg_per_s7 0.000355) } {limits -%angle7 %angle7}}		{bone "stage_hor33"            	{speed (* %deg_per_s7 0.000355) } {limits -%angle7 %angle7}}		{bone "stage_ver33"            	{speed (* %deg_per_s7 0.000355) } {limits -%angle7 %angle7}}		{bone "stage_hor34"            	{speed (* %deg_per_s7 0.000355) } {limits -%angle7 %angle7}}		{bone "stage_ver34"            	{speed (* %deg_per_s7 0.000355) } {limits -%angle7 %angle7}}		{bone "stage_hor35"            	{speed (* %deg_per_s7 0.000355) } {limits -%angle7 %angle7}}		{bone "stage_ver35"            	{speed (* %deg_per_s7 0.000355) } {limits -%angle7 %angle7}}		{bone "stage_hor36"            	{speed (* %deg_per_s8 0.000355) } {limits -%angle8 %angle8}}		{bone "stage_ver36"            	{speed (* %deg_per_s8 0.000355) } {limits -%angle8 %angle8}}		{bone "stage_hor37"            	{speed (* %deg_per_s8 0.000355) } {limits -%angle8 %angle8}}		{bone "stage_ver37"            	{speed (* %deg_per_s8 0.000355) } {limits -%angle8 %angle8}}		{bone "stage_hor38"            	{speed (* %deg_per_s8 0.000355) } {limits -%angle8 %angle8}}		{bone "stage_ver38"            	{speed (* %deg_per_s8 0.000355) } {limits -%angle8 %angle8}}		{bone "stage_hor39"            	{speed (* %deg_per_s8 0.000355) } {limits -%angle8 %angle8}}		{bone "stage_ver39"            	{speed (* %deg_per_s8 0.000355) } {limits -%angle8 %angle8}}		{bone "stage_hor40"            	{speed (* %deg_per_s8 0.000355) } {limits -%angle8 %angle8}}		{bone "stage_ver40"            	{speed (* %deg_per_s8 0.000355) } {limits -%angle8 %angle8}}	)	                  
+	(define "maneuvrability_cwps3"		
+		("custom_maneuvrability" 	deg_per_s1(%deg_per_s) 	deg_per_s2(%deg_per_s) deg_per_s3(%deg_per_s) deg_per_s4(%deg_per_s) deg_per_s5(%deg_per_s) 	deg_per_s6(%deg_per_s) deg_per_s7(%deg_per_s) deg_per_s8(%deg_per_s)		
+									angle1(90) 				angle2(90) 			    angle3(90)  		  angle4(90) 			 angle5(90) 				angle6(90) 				angle7(90) 				angle8(90))	
+	)	
+	

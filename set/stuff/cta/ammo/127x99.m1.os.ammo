@@ -1,0 +1,19 @@
+;// 12.7x99mm
+
+{bullet
+	{tag "bullet os big hmgun sniper fg stackable pierce smallarms_heavy"}
+	{inventory
+		{weight 3.3}
+		{block 30}
+		{size 1 2}
+		{fsm "belt"}
+	}
+	{damage blastwave
+		{energy 0.4}
+		{area 0.2 0.3}
+	}	
+	{mass 0.11}
+	{entity "m107_mag"}
+	{desc "127x99 APEI"}
+	("trace12fg")
+}

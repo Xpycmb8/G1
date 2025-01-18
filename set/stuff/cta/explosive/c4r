@@ -1,0 +1,30 @@
+{from "pattern throwable"
+	{tag "smallitemin1hand" "grenade" "dynamite" "radio_bomb" }
+	{desc "C-4 R"}
+	{special
+		{PrepareTime 20}
+		{PrepareCursor "grenade"}
+		{mode detonate}
+	}
+	{throw
+		{range 1}
+		{startAngle 50}
+	}		
+	{entity "c4r"}
+	{inventory
+		{size 2 3}
+		{weight 100}
+		{fsm "belt"}
+	}
+	{mass 2}
+	{damage blastwave
+		{ground_interaction_radius 0.0}
+		{energy 30}
+		{area 2 5}
+	}
+	{damage add blastwave
+		{ground_interaction_radius 0.0}
+		{energy 3}
+		{area 5 15}
+	}
+}

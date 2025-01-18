@@ -1,0 +1,8 @@
+{game_entity
+	(include "/properties/flashlight.inc")
+	{Extension "lgt.mdl"}
+	{props "flashlight_vol"} 
+	{volume "light_vol"
+		{Able {contact 1} {bullet 0} {obstacle 0} {touch 0} {overlap 1} {visible 0}}
+	}
+}

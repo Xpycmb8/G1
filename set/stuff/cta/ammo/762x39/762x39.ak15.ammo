@@ -1,0 +1,15 @@
+;// 7.62x39mm
+
+{bullet
+	{tag "bullet sp normal stackable pierce"}
+	{inventory
+		{weight 3.3}
+		{block 30}
+		{size 1 2}
+		{fsm "belt"}
+	}	
+	{mass 0.008}
+	{desc "7.62x39 mag ak15"}
+	{entity "ak15_mags"}
+	("trace7")
+}

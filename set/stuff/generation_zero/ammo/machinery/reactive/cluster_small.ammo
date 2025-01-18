@@ -1,0 +1,16 @@
+{bullet
+	{tag "grenade_cluster"}
+	{detonationThickness 2}
+	{inventory
+		{weight 25}
+		{size 2 2}
+		{fsm "stuff"}
+		{block 5}
+	}
+	{mass 0.3}
+	{entity "grenade_cluster_proj"}
+	{damage blastwave
+		{energy 1}
+		{area 1 1.7}
+	}		
+}

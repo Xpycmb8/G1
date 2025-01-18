@@ -1,0 +1,23 @@
+{from "pattern throwable"
+	{tag "knife sharp_edge hand"}
+	{desc "баллистический нож"}
+	{inventory
+		{size 2 1}
+		{weight 100}
+	}	
+	{mass 0.3}
+	{entity "balistic_knife"}
+	{throw
+		{startAngle 5}
+		{constantSpeed 15}
+		{range 27}
+		{spreading 0.2}
+	}
+	
+	{thirdpersonparams inherit "human default"
+		{level 0
+			{offset	-150 0 250}
+		}
+		{maxlevel 0}
+	}
+}

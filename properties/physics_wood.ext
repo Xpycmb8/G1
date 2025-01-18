@@ -1,0 +1,7 @@
+(include "physics_generic.ext")
+
+{props "wood" "crusher_wood" "touched"}
+{mass 30}
+{volume "body"
+	{thickness 2}
+}

@@ -1,0 +1,11 @@
+{Game_entity
+	(include "/properties/human_part.ext")
+	;(include "/properties/shadow/human_part.inc" scale(0.1))
+	{props "ps_dummy" "flesh" "big"}
+	{Extension "organ_d_liver.mdl"}
+	{mass 1}
+        {Volume "body"
+		{able {float}}
+	}
+	{simulatorID "water"}
+}

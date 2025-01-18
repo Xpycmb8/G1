@@ -1,0 +1,14 @@
+;// 12-gauge
+
+{bullet
+	{desc "12 cal BuckShot"}
+	{tag "bullet noview buckshot stackable smallarms"}
+	{inventory
+		{size 2 2}
+		{weight 2}
+		{block 25}
+	}
+	{mass 0.038}
+	("no_trace")
+	{entity "mags_oscar12_12g"}
+}

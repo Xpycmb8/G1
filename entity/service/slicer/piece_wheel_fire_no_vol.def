@@ -1,0 +1,15 @@
+{game_entity
+	{extension "/properties/piece.ext"}
+	{obstacleID "nothing"}
+	{collider "particle.small"}
+	{constrain none}
+	{body {proper body} {permit body}}
+	{props "dummy" "piece_whell_fire" "small" "nocover" "ps_dummy"}
+	{simulation {able 1} {state 1}}
+	{mass 0.2}
+	{volume "body"
+		{material "dummy"}		
+		{sphere 0.5}
+		{bone "basis"}
+	}
+}

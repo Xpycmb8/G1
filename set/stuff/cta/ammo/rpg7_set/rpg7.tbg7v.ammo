@@ -1,0 +1,31 @@
+{bullet ;ПГ-7ВС / 7П13
+	{tag "ammo rocketlauncher shell 105_th dropboxed pierce tbg7v"}
+;	{desc "ТБГ-7В «Танин» / 7П33"}
+	{entity "tbg7v_ammo"}
+	{view "tbg7v_ammo_proj"
+		{tail "rpg7_tail2_fx" "tail"}
+	} 
+	{cumulative 3.0}
+	{possibleDamageRadius 3}
+	{inventory
+		{link_bone "ammo_back_right"}
+		{weight 100}
+		{size 5 1}
+	}	
+	{mass 4.5}
+	{damage fire
+		{radius 7}
+		{heating 5}
+		{time 3}
+	}
+	{damage blastwave
+		{ground_interaction_radius 0.0}
+		{energy 3}
+		{area 2 4}
+	}
+	{damage add blastwave
+		{ground_interaction_radius 0.0}
+		{energy 1}
+		{area 4 8}
+	}
+}

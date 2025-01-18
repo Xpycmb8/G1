@@ -1,0 +1,21 @@
+{weapon_bullet
+	{tag "weapon bullet to_hand"}
+	{filling "ammo slope" 1}
+	{inventory
+		{size 2 2}
+		{fsm "smg"}
+	}
+	{FiringTimeout 0.8 0.2}
+
+	{foresight "missile_sight"}
+	{minRange 50}
+	{range 150 150}
+	{recoveryTime 0.1}
+	{rechargeTime 360}
+	{gravity 0}
+	{speed 30}
+	{AimingTolerance 0.2}
+	{cursor "cannon_on"}
+	{Automatic}
+	{preloaded}
+}

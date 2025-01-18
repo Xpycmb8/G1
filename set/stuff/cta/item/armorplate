@@ -1,0 +1,11 @@
+{item
+	{tag "smallitemin1hand" "armorplate"}
+	{desc "Бронепластины"}
+	{entity "armorplate"}
+	{inventory
+		{size 2 2}
+		{weight 100}
+		{fsm "belt"}
+	}
+	{mass 1}
+}

@@ -1,0 +1,75 @@
+{from "pattern bullet"
+	{tag "weapon bullet rifle xm109_series to_hand to_hand -shoot_walking -shoot_walking_ai -shoot_walking_manual at_rifle flash_two_sided_heavy_xm109 5_bullet heavy sniper ar_metal_magazine"}
+	{entity "xm109_v2"}
+	{desc "XM 109 TR"}
+	("clickSound_shotgun")	
+	{cursor "smg_on"}
+	{cursorReloading "smg_reload"}
+	{states
+		{reload		"reload"}
+		{unload		"unload"}
+		{fire		"fire"	}
+		{aim 		"aim"	}
+		{can_aim	"can-aim-bolt"}
+	}
+	{special
+		{mode aim}
+		{PrepareTime 4.0}
+		{PrepareCursor "aimed_shot"}
+		{PrepareCursorScene "aimed_shot_scene"}
+		{accuracy 18}
+		{damage 10.0}
+		{sway 0.03}
+		{throw_off_always}
+	}
+	{filling "ammo 25x59" 5}
+	{inventory
+		{size 8 2 }
+		{link_bone "gun_back"}
+		{weight 100 }
+	}
+	{speed 475}
+	{parameters "fg"
+		("health_damage_127x99" d(2560))
+		{projectileDamage 25}
+		{projectileDamageClip 15}
+		{projectileDamageTable {22.5 15} {500 12} {1200 0}}
+		{range 630 630}
+		("speed" s(470))
+	}
+	{parameters "th"
+		("health_damage_127x99" d(2560))
+		{projectileDamage 25}
+		{projectileDamageClip 20}
+		{projectileDamageTable {22.5 20} {1200 0}}
+		{range 630 630}
+		("speed" s(470))
+	}
+	{parameters "cs"
+		{range 650 650}
+		("health_damage_127x99" d(2560))
+		{projectileDamage 54}
+		{projectileDamageClip 39}
+		{projectileDamageTable {22.5 48} {800 32} {2000 0}}
+		("speed" s(545))
+	}
+	{calibre 25}
+	{mass 9}
+	{traceFreq 0}
+	{rechargeTime 5}
+	("recoveryTime" r(120))
+	("burst_rifle")
+	("spreading_high_boost")
+	("accuracy_sniper_rifle")
+	("accuracy_boost")
+	("recoil_long_at_rifle")
+	("sway_very_high")
+	{minimumDamageModifier 30}
+	(mod "hardcore"
+		{autoreload 0}
+		{minimumDamageModifier 50}
+	)
+	{cursor "carbine_on"}
+	{cursorReloading "carbine_reload"}	
+	("zoom_scope_ops_6")
+}

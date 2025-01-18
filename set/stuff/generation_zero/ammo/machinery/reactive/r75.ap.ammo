@@ -1,0 +1,21 @@
+{bullet 
+	{tag "ammo shell ap atgm dropboxed cumulative pierce no_ricochet"}
+	{entity "r75_ammo_ap"}
+	{mass 18.2}
+	{inventory
+		{size 3 1}
+	}
+	{view "r75_proj"
+	} 
+	{detonationThickness 8}
+	{damage blastwave
+		{ground_interaction_radius 0.0}
+		{energy 1}
+		{area 2 8}
+	}
+	{damage add blastwave
+		{ground_interaction_radius 0.0}
+		{energy 3}
+		{area 1 3}
+	}
+}

@@ -1,0 +1,27 @@
+{item
+	{tag "smallitemin1hand dropboxed nokeep mine antipersonnel single claymore"}
+	{entity "at_mine_proximity"}
+	{inventory
+		{size 2 2}
+		{weight 100}
+		{fsm "belt"}
+	}
+	{mass 4.5}
+	{damage fire
+		{radius 3}
+		{heating 1}
+		{time 1}
+	}
+	{damage blastwave
+		{energy 9.0}
+		{area 0.5 2.5}
+	}	
+	{damage add blastwave
+		{energy 2.5}
+		{area 1.5 5.0}
+	}
+	{damage add blastwave
+		{energy 0.5}
+		{area 12 15.0}
+	}
+}

@@ -1,0 +1,11 @@
+{item
+	{tag "smallitemin1hand" "axe"}
+	{desc "Топор"}
+	{entity "axe"}
+	{inventory
+		{size 2 1}
+		{weight 5}
+		{fsm "belt"}
+	}
+	{mass 1}
+}

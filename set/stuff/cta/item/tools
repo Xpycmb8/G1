@@ -1,0 +1,11 @@
+{item
+	{tag "smallitemin1hand" "tools"}
+	{desc "Универсальный инструмент"}
+	{entity "tools"}
+	{inventory
+		{size 2 1}
+		{weight 100}
+		{fsm "belt"}
+	}
+	{mass 1}
+}

@@ -1,0 +1,13 @@
+{bullet
+	{tag "bullet normal stackable pierce sp"}
+	{desc "556x45 PLR 16 mag"}
+	{inventory
+		{weight 3.3}
+		{block 30}
+		{size 1 2}
+		{fsm "belt"}
+	}	
+	{mass 0.010}
+	{entity "plr_mags"}
+	("trace5")
+}

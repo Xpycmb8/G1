@@ -1,0 +1,13 @@
+{bullet
+	{tag "bullet normal stackable pierce ap"}
+	{desc "7.62x51 mk48 AP"}
+	{inventory
+		{weight 2}
+		{block 50}
+		{size 1 2}
+		{fsm "belt"}
+	}	
+	{mass 0.020}
+	{entity "mags_mk8_ext_ap"}
+	("trace7")
+}

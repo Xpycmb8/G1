@@ -1,0 +1,15 @@
+{game_entity
+	{extension "/properties/piece.ext"}
+	{props "burn_tile_tree"}
+	{simulation {able 1} {state 1}}
+	{Skeleton
+		{bone "root"
+			{Orientation
+				1	0	0
+				0	-1	0
+				0	0	1
+			}
+		}
+	}
+	{constrain none}
+}

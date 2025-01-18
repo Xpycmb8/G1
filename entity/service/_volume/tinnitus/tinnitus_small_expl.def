@@ -1,0 +1,13 @@
+{
+	(include "/properties/physics_generic.ext")
+	{collider "bush"}
+	{obstacleID "nothing"}
+	{NoGroupMesh 1}
+	{NoVisibilityPatch 0}
+	{Extension "tinnitus.mdl"}
+	{props "obstacle_ignore_height" "tinnitus_small"} 
+	{NoVisibilityPatch 0}
+	{volume "tinnitus"
+		{Able {contact 0} {bullet 0} {throwing 0} {obstacle 0} {touch 0} {overlap 1}}
+	}
+}

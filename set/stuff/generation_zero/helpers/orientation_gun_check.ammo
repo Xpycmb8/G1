@@ -1,0 +1,14 @@
+{bullet
+	{tag "ammo"}
+	{tag "orientation_gun_check"}
+	{tag "no_crater"}
+	{inventory
+		{noView}
+	}
+	{mass 1}
+	{damage blastwave				
+		{energy 0.5}
+		{area 0.1 0.1}
+	}
+	{entity "orientation_gun_check"}
+}

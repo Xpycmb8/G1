@@ -1,0 +1,13 @@
+(define "armor_wound"
+	{armor
+		{setting "body"
+			{threshold
+				{pierce 
+					{value 1}
+				}
+			}
+			{volumes "*"}
+		}
+	}
+)
+("armor_wound")	

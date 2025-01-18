@@ -1,0 +1,22 @@
+;Exported by: ?????
+;Date:        Mon Mar 11 15:26:34 2019
+;File:        D:\?????\Documents\3dsMax\scenes\1.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+	}
+}
+{Volume "body"
+	{Sphere 25}
+	{Bone "basis"}
+	{Matrix34
+		1	0	0
+		0	1	0
+		0	0	1
+		0	0	0
+	}
+}

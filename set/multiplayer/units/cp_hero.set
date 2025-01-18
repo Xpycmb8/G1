@@ -1,0 +1,48 @@
+;-- HEROES -----------------------------------------------------------------------------------
+
+(define "th_infantry_t1"
+	{tags	"%side infantry man"}
+	{cp		1.00}
+	{basic}
+	{breed}
+	{cw 1.0}
+)
+{"gear/ger/maxsis"		("th_infantry_t1" side(ger)) {score_factor 0.05} {cost 100.0}}
+{"gear/rus/roze"		("th_infantry_t1" side(rus)) {score_factor 0.05} {cost 100.0}}
+
+
+(define "th_infantry_t2"
+	{tags	"%side infantry man"}
+	{cp		1.00}
+	{basic}
+	{breed}
+	{cw 1.0}
+)
+{"gear/ger/civilian_female1"		("th_infantry_t2" side(ger)) {score_factor 0.05} {cost 120.0}}
+{"gear/ger/civilian_female2"		("th_infantry_t2" side(ger)) {score_factor 0.05} {cost 120.0}}
+{"gear/ger/civilian_female3"		("th_infantry_t2" side(ger)) {score_factor 0.05} {cost 120.0}}
+{"gear/rus/civilian_female1"		("th_infantry_t2" side(rus)) {score_factor 0.05} {cost 120.0}}
+{"gear/rus/civilian_female2"		("th_infantry_t2" side(rus)) {score_factor 0.05} {cost 120.0}}
+{"gear/rus/civilian_female3"		("th_infantry_t2" side(rus)) {score_factor 0.05} {cost 120.0}}
+
+(define "th_infantry_t3"
+	{tags	"%side infantry man"}
+	{cp		1.00}
+	{basic}
+	{breed}
+	{cw 1.0}
+)
+{"gear/ger/civilian1"		("th_infantry_t2" side(ger)) {score_factor 0.05} {cost 140.0}}
+{"gear/ger/civilian2"		("th_infantry_t2" side(ger)) {score_factor 0.05} {cost 140.0}}
+{"gear/rus/civilian1"		("th_infantry_t2" side(rus)) {score_factor 0.05} {cost 140.0}}
+{"gear/rus/civilian2"		("th_infantry_t2" side(rus)) {score_factor 0.05} {cost 140.0}}
+
+(define "th_infantry_t4"
+	{tags	"%side infantry man"}
+	{cp		1.00}
+	{basic}
+	{breed}
+	{cw 1.0}
+)
+{"gear/ger/civilian2_at"		("th_infantry_t4" side(ger)) {score_factor 0.05} {cost 150.0}}
+{"gear/rus/civilian2_at"		("th_infantry_t4" side(rus)) {score_factor 0.05} {cost 150.0}}

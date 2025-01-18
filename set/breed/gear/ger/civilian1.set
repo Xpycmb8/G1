@@ -1,0 +1,26 @@
+{breed
+	{behaviour soldier}
+	{skin "civilian2"}
+	{portrait "civilian_male"}
+	{icon "civilian"}
+	{icon_priority 0}
+	{nationality ger}
+	{perks
+		(include "ability.inc")
+		("rifle_skill_rank_2")("tier2_standard")
+		("engineer")
+	}
+	{veterancy
+		(include "ability.inc")
+		("veterancy_lvl_0")
+	}
+	{inventory
+		{item "tar21_v1" filled}
+		{item "grenade m67" 2}
+		{item "556x45 mags30_hk433 ammo" 90}
+		{item "m84_flashbang grenade" }
+		{item "matchbox" 3 }
+		{item "bandage_ger" 10}
+		{in_hands 0}
+	}
+}

@@ -1,0 +1,138 @@
+(include "construction.inc")
+{obstacleID "small_building"}
+{obstacleID "unbreakable"}
+{ZClipVisibility 0}
+{props "construction" "steel" "emitters_tunnel" "big_build" }
+{mass 3000}
+(define "armor_wound"
+	{armor
+		{setting "body"
+			{threshold
+				{pierce 
+					{value 1}
+				}
+			}
+			{volumes "*"}
+		}
+	}
+)
+("armor_wound")	
+{Volume "roof_r_add"
+	{thickness 30}
+	{Tags  "body"}
+	{material "steel"}
+	{able {visible 0}{blockcamera 1}}
+}
+{Volume "roof_l_add"
+	{thickness 30}
+	{Tags  "body"}
+	{material "steel"}
+	{able {visible 0}{blockcamera 1}}
+}
+{Volume "roof_b_add"
+	{thickness 30}
+	{Tags  "body"}
+	{material "steel"}
+	{able {visible 0}{blockcamera 1}}
+}
+{Volume "roof_f_add"
+	{thickness 30}
+	{Tags  "body"}
+	{material "steel"}
+	{able {visible 0}{blockcamera 1}}
+}
+
+{Volume "left2_win"
+	{thickness 30}
+	{Tags  "body"}
+	{material "steel"}
+	{able {visible 0}{blockcamera 1}}
+}
+
+{Volume "left_win"
+	{Thickness 25}
+	{Tags  "body"}
+	{material "steel"}
+	{able {visible 1}{blockcamera 1}}
+}
+
+{Volume "right2_win"
+	{thickness 25}
+	{Tags  "body"}
+	{material "steel"}
+	{able {visible 0}{blockcamera 1}}
+}
+
+{Volume "right_win"
+	{Thickness 25}
+	{Tags  "body"}
+	{material "steel"}
+	{able {visible 1}{blockcamera 1}}
+}
+
+{Volume "back2_win"
+	{thickness 25}
+	{Tags  "body"}
+	{material "steel"}
+	{able {visible 0}{blockcamera 1}}
+}
+
+{Volume "back_win"
+	{Thickness 25}
+	{Tags  "body"}
+	{material "steel"}
+	{able {visible 1}{blockcamera 1}}
+}
+
+{Volume "left2"
+	{Thickness 50}
+	{Tags  "body"}
+	{material "steel"}
+	{able {visible 1}{blockcamera 1}}
+}
+{Volume "back"
+	{Thickness 50}
+	{Tags  "body"}
+	{material "steel"}
+	{able {visible 1}{blockcamera 1}}
+}
+{Volume "front"
+	{Thickness 50}
+	{Tags  "body"}
+	{material "steel"}
+	{able {visible 1}{blockcamera 1}}
+}
+{Volume "right2"
+	{thickness 50}
+	{Tags  "body"}
+	{material "steel"}
+	{able {visible 1}{blockcamera 1}}
+}
+{Volume "left"
+	{Thickness 50}
+	{Tags  "body"}
+	{material "steel"}
+	{able {visible 1}{blockcamera 1}}
+}
+{Volume "right"
+	{thickness 50}
+	{Tags  "body"}
+	{material "steel"}
+	{able {visible 1}{blockcamera 1}}
+}
+{Volume "roof"
+	{thickness 30}
+	{Tags  "body"}
+	{material "steel"}
+	{able {visible 0}{blockcamera 1}}
+}
+{Volume "land"
+	{thickness 30}
+	{Tags  "body"}
+	{material "steel"}
+	{able {visible 0}{blockcamera 1}}
+}
+{Extender "land_patch"
+	{TerrainType "shoot_emit_mtl_int" "shoot_emit_mtl_int"}
+}	
+{lodclass "decor_big"}

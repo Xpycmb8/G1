@@ -1,0 +1,14 @@
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+	}
+}
+{Volume "open_doors"
+	{Cylinder 10 10}
+	{Bone "basis"}
+	{Position 0	0	18.865}
+}

@@ -1,0 +1,50 @@
+{from "pattern bullet"
+	{tag "mgun weapon bullet to_hand m134_heavy mgun_set"}
+	{entity "m134_heavy"}
+	{reloadSound "small_arms/mgun_tank/"}
+	("clickSound_ar")
+	{desc "M-134"}
+	{filling "ammo 762x51" 100}
+	{inventory
+		{size 8 2 }
+		{link_bone "gun_back"}
+		{weight 100 }
+	}
+	{mass 11}
+	{traceFreq 4}
+	{Automatic}
+	{rechargeTime 8}
+	("recoveryTime" r(1500))
+	{burst
+		{short 25 25}			; short burst shots on long distance, rand (+-)shots
+		{long 50 75}			; long burst shots on short distance, rand (+-)shots
+		{rangeKoef 1}		; rangeKoef * aimRange = max long burst distance
+	}
+	("spreading_high_mgun")
+	("recoil_high")
+	("sway_medium")
+	{speed 780}
+	{parameters "sp"
+		("accuracy_mg_med_sp_762")
+		("health_damage_556x45" d(884))	
+		{range 250 290};F	
+		("speed" s(750))	
+		{projectileDamage 12}
+		{projectileDamageClip 12}
+		{projectileDamageTable {25 12} {50 10} {400 5} {800 1} }
+	}
+	{parameters "ap"
+		("accuracy_mg_med_ap_762")
+		("health_damage_556x45" d(950))
+		{projectileDamageTable {25 17} {50 14} {400 7} {800 1} }
+		{range 320 360};F	
+		("speed" s(1114))
+	}
+	{parameters "os"
+		("accuracy_mg_med_fg_762")
+		("health_damage_556x45" d(884))
+		{projectileDamageTable {25 4} {50 4} {400 4} {800 2} }
+		{range 210 250};F	
+		("speed" s(650))
+	}
+}

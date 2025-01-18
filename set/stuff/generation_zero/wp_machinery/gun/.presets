@@ -1,0 +1,31 @@
+{curve "gun_std"}
+
+(define "speed"
+	{speed (* 1.0 %s)}
+)
+
+(define "speed2"
+	{speed (* 0.75 %s)}
+	(mod "hardcore"
+		{speed (* 0.75 %s)}
+	)
+)
+
+(define "recoveryTime"
+	{recoveryTime (/ 60 %r)}
+)
+
+(define "accuracy_curve"
+	{Spreading
+		{radiusTable {10 0} {80 (* 0.50 %r1)} {200 (* 1.00 %r1)} {350 (* 1.50 %r1)} {600 (* 2.00 %r1)} {800 (* 2.50 %r1)}}
+	}
+)
+(define "accuracy_zenite_high_mount_sp" ; dread
+	("accuracy_curve" r1(2.5))
+)
+(define "accuracy_zenite_high_mount_fg" ; dread
+	("accuracy_curve" r1(4))
+)
+(define "accuracy_zenite_high_mount_ap" ; dread
+	("accuracy_curve" r1(1))
+)

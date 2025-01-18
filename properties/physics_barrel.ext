@@ -1,0 +1,8 @@
+(include "physics_generic.ext")
+
+{props "steel" "smsteel" "physics_barrel" "big_props" "old_stuff" "emitters_light_metalls" "barrel_small"}
+{mass 100}
+
+{volume "body"
+	{thickness 3}
+}

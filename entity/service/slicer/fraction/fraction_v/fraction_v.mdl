@@ -1,0 +1,27 @@
+;Exported by: ?????
+;Date:        Mon Mar 11 15:26:34 2019
+;File:        D:\?????\Documents\3dsMax\scenes\1.max
+{Skeleton
+	{bone "fraction_v"
+		{parameters "ID=body;"}
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{VolumeView "fraction_v.ply"}
+		{bone "body"
+			{Position -0.00659612	-0.00185729	0}
+		}
+	}
+}
+{Volume "body"
+	{Sphere 2}
+	{Bone "fraction_v"}
+	{Matrix34
+		0.0676547	0	0
+		0	0.0676547	0
+		0	0	0.0676547
+		0	0.000126392	0
+	}
+}

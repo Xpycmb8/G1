@@ -1,0 +1,15 @@
+{game_entity
+	{extension "/properties/piece.ext"}
+	{props "fraction_round" "fraction_small" "wound_shotgun" "wound_piece" "steel"}
+	{collider "fraction"}
+	{constrain none}
+	{obstacleid "nothing"}
+	{body {proper body } {permit body}}
+	{simulation {able 1} {state 1}}
+	{mass 0.1}
+	{volume "body"
+		{material "steel"}		
+		{sphere 0.5}
+		{bone "basis"}
+	}
+}

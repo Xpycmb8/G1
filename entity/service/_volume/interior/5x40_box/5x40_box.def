@@ -1,0 +1,5 @@
+{game_entity
+	(include "/properties/interior.inc")
+	{props "interior"} 
+	{Extension "5x40_box.mdl"}
+}

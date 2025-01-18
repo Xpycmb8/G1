@@ -1,0 +1,26 @@
+{bullet
+	{tag "ammo rocketlauncher shell ap dropboxed cumulative 75mm pierce pg7vm"}
+;	{desc "ПГ-7ВМ/7П6"}
+	{entity "pg7vm_ammo"}
+	{view "pg7vm_ammo_proj"
+		{tail "rpg7_tail_fx" "tail"}
+	} 
+	{cumulative 3.0}
+	{possibleDamageRadius 3}
+	{inventory
+		{link_bone "ammo_back_right"}
+		{weight 100}
+		{size 5 1}
+	}	
+	{mass 2}
+	{damage blastwave
+		{ground_interaction_radius 0.0}
+		{energy 1}
+		{area 2 8}
+	}
+	{damage add blastwave
+		{ground_interaction_radius 0.0}
+		{energy 3}
+		{area 1 3}
+	}
+}

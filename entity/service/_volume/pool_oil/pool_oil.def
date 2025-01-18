@@ -1,0 +1,6 @@
+{game_entity
+	(include "/properties/pool_oil.inc")
+	{props "pool_oil"} 
+	{Extension "pool_oil.mdl"}
+	
+}

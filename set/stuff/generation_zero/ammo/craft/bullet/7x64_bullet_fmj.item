@@ -1,0 +1,12 @@
+{item
+	{entity "bullet_7x64_fmj"}
+	{tag "craft"}
+	{desc "Bullet 7x64 Fmj(craft)"}
+	{mass 0.0045};	{mass 0.0111} fmj bullet {mass 0.003}-Casing 0,0075
+	{inventory
+		{weight 5}
+		{block 5}
+		{size 1 1}
+		{fsm "belt"}
+	}	
+}

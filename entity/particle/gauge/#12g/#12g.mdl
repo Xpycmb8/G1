@@ -1,0 +1,39 @@
+{Skeleton
+	{bone "shell_12cal"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		
+	{bone "body"
+	{Matrix34
+		0	1	0 
+		0	0	1
+		1	0	0
+		0	0	0
+
+	}
+
+{VolumeView "shell_12cal.ply"}
+
+}
+}
+}
+
+{Volume "body_2"
+	{Cylinder 0.0880571 0.913178}
+	{Bone "shell_12cal"}
+	{Matrix34
+		0	-1	0
+		0	0	1
+		-1	0	0
+		0.443962	-1.38868e-005	0
+	}
+}
+
+
+
+	;Rot x- 90
+	;rot y- 180
+	;roz-	-90

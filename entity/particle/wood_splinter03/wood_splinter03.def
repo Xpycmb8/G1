@@ -1,0 +1,8 @@
+{game_entity
+	(include "/properties/small_part.inc")
+	{props "wood" "ps_dummy" "delet_t15"}
+	{Extension "wood_splinter01.mdl"}
+	{Volume "body"
+		{tags "body"}
+	}
+}

@@ -1,0 +1,392 @@
+
+	{volume "body_c"
+		{material "steel"}
+		{tags "main_body" }
+		{component "main_body"}
+		{thickness	25 }
+	}
+	{volume "body_r"
+		{material "steel"}
+		{tags "main_body" }
+		{component "main_body"}
+		{thickness	25 }
+	}
+	{volume "body_l"
+		{material "steel"}
+		{tags "main_body" }
+		{component "main_body"}
+		{thickness	25 }
+	}
+	{volume "body_d"
+		{material "steel"}
+		{tags "main_body" }
+		{component "main_body"}
+		{thickness	25 }
+	}
+
+
+
+;armor
+
+	; ("volume_body" args "armor_main_15_03" "hips"    20  armor )
+	; ("volume_body" args "armor_main_15_02" "hips"    15  armor )
+
+	; ("volume_body" args "armor_main_10_01" "armor"    12  armor )
+	; ("volume_body" args "armor_main_10_02" "armor"    12  armor )
+
+
+
+	; {Volume "armour_fuel"
+	; }
+
+	{Volume "RightHand"
+		{component "RightHand"}		
+		{material "steel"}
+		{thickness 12}
+	}
+
+	{Volume "sniper"
+		{component "sniper"}		
+		{material "steel"}
+		{thickness 8}
+	}
+;shotgun
+	{Volume "shotgun"
+		{component "shotgun"}		
+		{material "steel"}
+		{thickness 8}
+	}
+	{Volume "barrel_shotgun"
+		{component "shotgun"}		
+		{material "steel"}
+		{thickness 8}
+	}
+	{Volume "rail_shotgun"
+		{component "shotgun"}		
+		{material "steel"}
+		{thickness 8}
+	}
+	{Volume "magazine_shotgun"
+		{component "shotgun"}		
+		{material "steel"}
+		{thickness 8}
+	}
+;shotgun
+
+	{Volume "armor_body_upper_r"
+		{material "armor"}
+		{thickness 25}
+	}
+	{Volume "armor_body_upper_l"
+		{material "armor"}
+		{thickness 25}
+	}
+	{Volume "armour_head_upper"
+		{material "armor"}
+		{thickness 15}
+		{component "armour_head_upper"}
+		{tags "armor_crushed" }
+	}
+
+	{Volume "armour_head_upper"
+		{material "armor"}
+		{thickness 15}
+		{component "armour_head_upper"}
+		{tags "armor_crushed" }
+	}
+	{Volume "armour_head_lower"
+		{material "armor"}
+		{thickness 15}
+		{component "armour_head_lower"}
+		{tags "armor_crushed" }
+	}
+	{Volume "head_sideplate_front_r"
+		{material "armor"}
+		{thickness 8}
+		{component "head_sideplate_front_r"}
+		{tags "armor_crushed" }
+	}
+	{Volume "head_sideplate_back_r"
+		{material "armor"}
+		{thickness 8}
+		{component "head_sideplate_back_r"}
+		{tags "armor_crushed" }
+	}
+	{Volume "head_sideplate_front_l"
+		{material "armor"}
+		{thickness 8}
+		{component "head_sideplate_front_l"}
+		{tags "armor_crushed" }
+	}
+	{Volume "head_sideplate_back_l"
+		{material "armor"}
+		{thickness 8}
+		{component "head_sideplate_back_l"}
+		{tags "armor_crushed" }
+	}
+
+	{Volume "cyl_prot_plate_right"
+		{material "armor"}
+		{thickness 25}
+		{component "cyl_prot_plate_right"}
+		{tags "armor_crushed"  }
+	}
+	{Volume "cyl_prot_plate_left"
+		{material "armor"}
+		{thickness 25}
+		{component "cyl_prot_plate_left"}
+		{tags "armor_crushed"  }
+	}
+
+	{Volume "armour_prot_right"
+		{material "armor"}
+		{thickness 25}
+		{component "cyl_prot_plate_right"}
+		{tags "armor_crushed"  }
+	}
+	{Volume "armour_prot_left"
+		{material "armor"}
+		{thickness 25}
+		{component "armour_prot_left"}
+		{tags "armor_crushed"  }
+	}
+
+
+
+;-------------
+
+;-----------------organ
+	{Volume "head_wire"
+		{material "kevlar"}
+		{thickness 2}
+		{component "Head_wire"}
+		{tags "Head_wire"  "main_organ"}
+	}
+	{Volume "visor_body"
+		{material "kevlar"}
+		{thickness 2}
+		{component "visor_body"}
+		{tags "visor_body"  "main_organ"}
+	}
+	{Volume "organs_engine_drive_left"
+		{material "steel"}
+		{thickness 4}
+		{component "organs_engine_drive_left"}
+		{tags "engine_front" "main_organ"}
+	}
+	{Volume "organs_engine_drive_right"
+		{material "steel"}
+		{thickness 4}
+		{component "organs_engine_drive_right"}
+		{tags "Engine_front" "main_organ"}
+	}
+
+	{Volume "organs_waist_01"
+		{material "steel"}
+		{thickness 4}
+		{component "engine_move"}
+		{tags "engine_move" "main_organ"}
+	}
+	{Volume "organs_waist_02"
+		{material "steel"}
+		{thickness 4}
+		{component "engine_move"}
+		{tags "engine_move" "main_organ"}
+	}
+	{Volume "organs_waist_03"
+		{material "steel"}
+		{thickness 4}
+		{component "engine_move"}
+		{tags "engine_move" "main_organ"}
+	}
+	{Volume "head_organ"
+		{material "steel"}
+		{thickness 1}
+		{component "head_organ"}
+		{tags "head_organ" "organ" "main_organ"}
+	}
+	{Volume "cpu" ; back_volume
+		{material "steel"}
+		{thickness 5}
+		{component "cpu"}
+		{tags "cpu" "main_organ"}
+	}
+	{Volume "bridge"
+		{material "misc"}
+		{thickness 4}
+		{tags "bridge" "main_organ"}
+	}
+	{Volume "fuel" 
+		{component "fuel"}
+		{thickness 5}
+		{tags "fuel" "main_organ"}
+	}
+	{Volume "pestcontainer_arm"
+		{material "armor"}
+		{thickness 15}
+	}
+	{Volume "pestcontainer"
+		{material "steel"}
+		{thickness 8}
+		{component "pestcontainer"}
+		{tags "pestcontainer" }
+	}
+;---------------base_vol
+	{Volume "frame_body"
+		{material "armor"}
+		{thickness 35}
+	}
+	{Volume "head"
+		{material "steel"}
+		{thickness 5}
+		{component "head"}
+		{tags "head" }
+	}
+	{Volume "hips" 
+		{material "steel"}
+		{thickness 5}
+		{component "hips"}
+	}
+	{Volume "front_hatch_l"
+		{component "front_hatch_l"}		
+		{tags  "engine_hatch"}
+		{material "steel"}
+		{thickness 8}
+	}
+	{Volume "front_hatch_r"
+		{component "front_hatch_r"}		
+		{tags  "engine_hatch"}
+		{material "steel"}
+		{thickness 8}
+	}
+	{Volume "back_hatch_r"
+		{component "back_hatch_r"}		
+		{tags  "engine_hatch"}
+		{material "steel"}
+		{thickness 8}
+	}
+	{Volume "back_hatch_l"
+		{component "back_hatch_l"}		
+		{tags  "engine_hatch"}
+		{material "steel"}
+		{thickness 8}
+	}	
+	{Volume "left_engine"
+		{component "left_engine"}		
+		{tags  "engine_hatch"}
+		{material "steel"}
+		{thickness 5}
+	}
+	{Volume "right_engine"
+		{component "right_engine"}		
+		{tags  "engine_hatch"}
+		{material "steel"}
+		{thickness 5}
+	}	
+	{Volume "left_engine2"
+		{component "left_engine2"}		
+		{tags  "engine_hatch"}
+		{material "steel"}
+		{thickness 5}
+	}
+	{Volume "right_engine2"
+		{component "right_engine2"}		
+		{tags  "engine_hatch"}
+		{material "steel"}
+		{thickness 5}
+	}	
+	
+;----------simple(hand)
+	{Volume "rightarm"
+		{component "RightArm"}		
+		{tags "limbs"  "engine_hand"}
+		{material "steel"}
+		{thickness 5}
+	}
+	{Volume "rightforearm"
+		{component "RightForeArm"}		
+		{tags "limbs" }
+		{material "steel"}
+		{thickness 5}
+	}
+;-------------
+	{Volume "leftarm"
+		{component "leftArm"}		
+		{tags "limbs"  "engine_hand"}
+		{material "steel"}
+		{thickness 5}
+	}
+	{Volume "leftforearm"
+		{component "leftForeArm"}		
+		{tags "limbs" }
+		{material "steel"}
+		{thickness 5}
+	}
+;----------simple(legs)
+	
+	{Volume "rightupleg"
+		{component "rightupleg"}		
+		{tags "limbs" "engine_leg"}
+		{material "steel"}
+		{thickness 12}
+	}
+	{Volume "rightleg"
+		{component "RightLeg"}		
+		{tags "limbs" }
+		{material "steel"}
+		{thickness 10}
+	}
+	{Volume "righttoebase"
+		{component "righttoebase"}		
+		{tags "limbs" }
+		{material "steel"}
+		{thickness 20}
+	}
+	{Volume "rightfoot"
+		{component "RightFoot"}		
+		{tags "limbs" }
+		{material "steel"}
+		{thickness 8}
+	}
+	{Volume "rightfoot_2"
+		{component "RightFoot"}		
+		{tags "limbs" }
+		{material "steel"}
+		{thickness 8}
+	}
+	
+	
+;------------------------
+	{Volume "leftupleg"
+		{component "leftupleg"}		
+		{tags "limbs" "engine_leg"}
+		{material "steel"}
+		{thickness 12}
+	}
+	{Volume "leftleg"
+		{component "leftLeg"}		
+		{tags "limbs" }
+		{material "steel"}
+		{thickness 10}
+	}
+	{Volume "lefttoebase"
+		{component "lefttoebase"}		
+		{tags "limbs" }
+		{material "steel"}
+		{thickness 20}
+	}
+	{Volume "leftfoot"
+		{component "leftFoot"}		
+		{tags "limbs" }
+		{material "steel"}
+		{thickness 8}
+	}
+	{Volume "leftfoot_2"
+		{component "leftFoot"}		
+		{tags "limbs" }
+		{material "steel"}
+		{thickness 8}
+	}
+;------------------------------------
+
+

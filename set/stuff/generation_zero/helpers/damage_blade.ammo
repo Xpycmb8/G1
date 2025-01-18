@@ -1,0 +1,17 @@
+{bullet
+	{tag "ammo" "damage_overlap"}
+	{tag "no_crater"}
+	{inventory
+		{noView}
+	}
+	{mass 1}
+  	{damage blastwave    
+		{energy 0.4}
+		{area 2 4}
+	}		
+	; {damage flash
+		; {radius 1 1} ; full flash radius, shorter flash radius
+		; {duration 4 3} ; max duration, min duration
+	; }
+	{entity "damage_blade"}
+}

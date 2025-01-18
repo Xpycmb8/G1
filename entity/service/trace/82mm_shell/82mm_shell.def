@@ -1,0 +1,4 @@
+{actor
+	{props "bullet"}
+	{Extension "82mm_shell.mdl"}
+}

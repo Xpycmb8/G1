@@ -1,0 +1,10 @@
+{bullet
+	{tag "jump no_hit"}
+	{desc "Прыг"}
+	{inventory
+		{size 1 2}
+		{weight 4}
+		{block 25}
+	}
+	{entity "jump_ammo"}
+}

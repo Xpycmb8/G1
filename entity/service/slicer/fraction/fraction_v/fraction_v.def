@@ -1,0 +1,13 @@
+{game_entity
+	(include "/properties/physics_generic.ext")
+	{collider "grenade"}
+	{Extension "fraction_v.mdl"}
+	{volume "body"
+		{material "dummy"}
+		{thickness 0.1}
+	}
+	{props "fraction" "wound_shotgun" "fraction_small"}
+	{extender "stuff"
+		{item "fraction_v"}
+	}
+}

@@ -1,0 +1,35 @@
+{game_entity
+	{extension "/properties/piece.ext"}
+	{simulation {able 1} {state 1}}
+	{props "vfx_spark_round"}
+	{constrain none}
+	{obstacleID "nothing"}
+	{collider "particle.small"}
+	{volume "body"
+		{sphere 0.1}
+		{able clear {contact 1} {contact_ground 1}}
+		{bone "root"}
+		{material "dummy"}
+	}
+	{body
+		{proper body}
+		{permit body}
+	}
+	{Skeleton
+		{animation
+			{sequence "start" {speed 9} {autostart}}
+		}
+		{bone "root"
+			{Orientation
+				2	0	0
+				0	-2	0
+				0	0	2
+			}
+			{bone "pivot"
+				{bone "fx"
+					{Position 10.0206	-0.0142992	0}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,14 @@
+;// 12-gauge
+
+{bullet
+	{desc "18 cal BuckShot"}
+	{tag "bullet noview buckshot stackable smallarms"}
+	{inventory
+		{size 1 1}
+		{weight 4}
+		{block 25}
+	}
+	{mass 0.038}
+	("no_trace")
+	{entity "12gauge"}
+}

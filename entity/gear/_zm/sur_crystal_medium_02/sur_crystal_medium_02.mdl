@@ -1,0 +1,109 @@
+;Exported by: Xpycmb
+;Date:        Mon Jul 12 21:04:56 2021
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\p9_zm_ndu_dark_aether_crystals.max
+{Skeleton
+	{animation
+		{sequence "grow" 
+			{speed 0.05} 
+			{events 
+				{3 "grow"}
+			}
+		}
+	}
+	{bone "basis"
+		{parameters "ID=body;"}
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "crystal"
+			{bone "animate"
+				{bone "1"
+					{Matrix34
+						-0.914747	-0.403596	-0.018641
+						0.125302	-0.327255	0.936592
+						-0.384105	0.854409	0.349927
+						-0.195277	-2.52723	19.3834
+					}
+				}
+				{bone "2"
+					{Matrix34
+						0.833054	-0.544546	0.0974215
+						0.0371246	0.230743	0.972306
+						-0.551945	-0.806367	0.212437
+						10.4426	0.361258	9.80787
+					}
+				}
+				{bone "3"
+					{Matrix34
+						0.790585	0.61099	0.0408289
+						-0.498592	0.603573	0.622178
+						0.355501	-0.512242	0.78181
+						-3.85699	2.93636	15.6293
+					}
+				}
+			}
+		}
+		{bone "crystal_medium_02"
+			{parameters "ID=body;"}
+			{VolumeView "crystal_medium_02.ply"{Layer water}}
+		}
+		{bone "ems"
+			{parameters "ID=body;"}
+			{VolumeView "ems.ply"}
+		}
+		{bone "crystal_medium_02_dmg"
+			{parameters "ID=body;"}
+			{visibility 0}
+			{VolumeView "crystal_medium_02_dmg.ply"{Layer water}}
+		}
+		{bone "ems_inside"
+			{parameters "ID=body;"}
+			{VolumeView "ems_inside.ply"}
+		}
+	}
+}
+{Volume "body"
+	{Polyhedron "body.vol"}
+	{Bone "crystal_medium_02"}
+}
+{Volume "burn1"
+	{Box 6.54814 2.12873 0.5}
+	{Bone "1"}
+	{Matrix34
+		-0.409348	-0.000947097	-0.912378
+		-0.42398	0.885667	0.189304
+		0.807883	0.464321	-0.362948
+		0.176557	0.0999002	-0.0487787
+	}
+}
+{Volume "burn2"
+	{Box 3 1 0.5}
+	{Bone "3"}
+	{Matrix34
+		-0.0185857	0.431414	0.901963
+		-0.992657	-0.115813	0.03494
+		0.119534	-0.894689	0.430399
+		0.107623	-0.118808	0.0200858
+	}
+}
+{Volume "burn3"
+	{Box 3 1 0.5}
+	{Bone "2"}
+	{Matrix34
+		-0.0976006	0.324442	0.940857
+		0.971666	0.235546	0.0195715
+		-0.215266	0.916109	-0.338238
+		0.151204	-0.0279145	0.179003
+	}
+}
+{Volume "ems_inside"
+	{Polyhedron "ems_inside.vol"}
+	{Bone "ems_inside"}
+}
+{Volume "overlap"
+	{Cylinder 58.1908 40}
+	{Bone "basis"}
+	{Position 0	0	20}
+}

@@ -1,0 +1,11 @@
+{item
+	{tag "smallitemin1hand" "light_weapon" "upgrade_set"}
+	{desc "Liner"}
+	{entity "liner"}
+	{inventory
+		{size 2 1}
+		{weight 100}
+		{fsm "belt"}
+	}
+	{mass 1}
+}

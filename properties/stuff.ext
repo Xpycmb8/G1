@@ -1,0 +1,50 @@
+;SDL
+game_entity
+	{Skeleton
+		{TexMods
+			{"hot"			"hot"	}
+			{"heat"			"heat"	}
+			{"cold"			"cold"	}
+			{"burned"		"burned"	}
+			{"_burned0"		"burned"	}
+			{"_burned1"		"burned2"	}
+			{"_burned2"		"broken"	}
+			{"_crushed"		"crushed"	}
+		}
+	}
+	{extender "stuff"}	
+	{volume "body"
+		{able clear {visible} {bullet} {select} {contact_ground} {touch} {contact} {blast}}
+	}
+	{volume "select"
+		{able clear {select}}
+		{density 0}
+	}
+	(define "armor_wound"
+		{armor
+			{setting "body"
+				{threshold
+					{pierce 
+						{value 3}
+					}
+				}
+				{volumes "*"}
+			}
+		}
+	)
+	("armor_wound")	
+	{obstacleID "stuff"}
+	{props "steel" "stuff" "collectable"  "local_physics"}
+	{simulation {able 1} {disableLinked 1}}
+	{body {permit body}}
+	{constrain ground}
+	{collider "stuff"}
+	{lodclass "stuff_small"}
+
+	{NoVisibilityPatch}
+	
+	
+	
+	
+	
+	

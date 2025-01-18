@@ -1,0 +1,12 @@
+{item
+	{entity "bullet_7x64_soft"}
+	{tag "craft"}
+	{desc "Bullet 7x64 Soft(craft)"}
+	{mass 0.005};	{mass 0.0121} soft bullet {mass 0.003}-Casing      0.0080
+	{inventory
+		{weight 5}
+		{block 5}
+		{size 1 1}
+		{fsm "belt"}
+	}	
+}

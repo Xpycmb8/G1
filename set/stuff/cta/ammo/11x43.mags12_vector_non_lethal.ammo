@@ -1,0 +1,15 @@
+;// 9x19mm
+
+{bullet
+	{tag "bullet stackable smallarms non_lethal"}
+	{inventory
+		{weight 1}
+		{block 30}
+		{size 1 2}
+		{fsm "belt"}
+	}
+	{mass 0.008}
+	{desc "11x43 Vector x12 NL"}
+	{entity "mags12_vector"}
+	("no_trace")
+}

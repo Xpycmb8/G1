@@ -1,0 +1,19 @@
+{game_entity
+	{extension "/properties/piece.ext"}
+	{constrain none}
+	{props "dummy" "medium" "part" "wood" "small_wood_crushed" "delet_t120"}
+	{collider "particle.small"}
+	{obstacleid "nothing"}
+	{simulation {able 1}}
+	{body
+		{permit body}
+	}
+	{volume "end_crush"
+		{material "wood"}
+		{sphere 0.01}
+		{Tags  "end_crush" "burned"}		
+		{able clear {contact 0} {contact_ground 1}}
+		{bone "basis"}
+	}
+	{mass 500}
+}

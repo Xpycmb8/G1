@@ -1,0 +1,218 @@
+(include "construction.inc")
+{obstacleID "small_building"}
+{obstacleID "unbreakable"}
+{ZClipVisibility 0}
+{props "construction" "concrete" "big_build"}
+{mass 15000}
+
+{Volume "roof_r_add"
+	{thickness 30}
+	{Tags  "body"}
+	{material "concrete"}
+	{able {visible 0}{blockcamera 1}}
+}
+{Volume "roof_l_add"
+	{thickness 30}
+	{Tags  "body"}
+	{material "concrete"}
+	{able {visible 0}{blockcamera 1}}
+}
+{Volume "roof_b_add"
+	{thickness 30}
+	{Tags  "body"}
+	{material "concrete"}
+	{able {visible 0}{blockcamera 1}}
+}
+{Volume "roof_f_add"
+	{thickness 30}
+	{Tags  "body"}
+	{material "concrete"}
+	{able {visible 0}{blockcamera 1}}
+}
+
+{Volume "left2_win"
+	{thickness 30}
+	{Tags  "body"}
+	{material "concrete"}
+	{able {visible 0}{blockcamera 1}}
+}
+
+{Volume "left_win"
+	{Thickness 25}
+	{Tags  "body"}
+	{material "concrete"}
+	{able {visible 1}{blockcamera 1}}
+}
+
+{Volume "right2_win"
+	{thickness 25}
+	{Tags  "body"}
+	{material "concrete"}
+	{able {visible 0}{blockcamera 1}}
+}
+
+{Volume "right_win"
+	{Thickness 25}
+	{Tags  "body"}
+	{material "concrete"}
+	{able {visible 1}{blockcamera 1}}
+}
+
+{Volume "back2_win"
+	{thickness 25}
+	{Tags  "body"}
+	{material "concrete"}
+	{able {visible 0}{blockcamera 1}}
+}
+
+{Volume "back_win"
+	{Thickness 25}
+	{Tags  "body"}
+	{material "concrete"}
+	{able {visible 1}{blockcamera 1}}
+}
+
+{Volume "left2"
+	{Thickness 50}
+	{Tags  "body"}
+	{material "concrete"}
+	{able {visible 1}{blockcamera 1}}
+}
+{Volume "right2"
+	{thickness 50}
+	{Tags  "body"}
+	{material "concrete"}
+	{able {visible 1}{blockcamera 1}}
+}
+{Volume "back"
+	{Thickness 50}
+	{Tags  "body"}
+	{material "concrete"}
+	{able {visible 1}{blockcamera 1}}
+}
+{Volume "front"
+	{Thickness 50}
+	{Tags  "body"}
+	{material "concrete"}
+	{able {visible 1}{blockcamera 1}}
+}
+{Volume "left"
+	{Thickness 50}
+	{Tags  "body"}
+	{material "concrete"}
+	{able {visible 1}{blockcamera 1}}
+}
+{Volume "right"
+	{thickness 50}
+	{Tags  "body"}
+	{material "concrete"}
+	{able {visible 1}{blockcamera 1}}
+}
+{Volume "roof"
+	{thickness 30}
+	{Tags  "body"}
+	{material "concrete"}
+	{able {visible 0}{blockcamera 1}}
+}
+{Volume "land"
+	{thickness 30}
+	{Tags  "body"}
+	{material "concrete"}
+	{able {visible 0}{blockcamera 1}}
+}
+
+
+{Volume "back_steel"
+	{Thickness 50}
+	{Tags  "body"}
+	{material "steel"}
+	{able {visible 1}{blockcamera 1}}
+}
+{Volume "front_steel"
+	{Thickness 50}
+	{Tags  "body"}
+	{material "steel"}
+	{able {visible 1}{blockcamera 1}}
+}
+{Volume "left_steel"
+	{Thickness 50}
+	{Tags  "body"}
+	{material "steel"}
+	{able {visible 1}{blockcamera 1}}
+}
+{Volume "right_steel"
+	{thickness 50}
+	{Tags  "body"}
+	{material "steel"}
+	{able {visible 1}{blockcamera 1}}
+}
+{Volume "left_steel_add"
+	{Thickness 20}
+	{material "steel"}
+	{able {visible 1}{blockcamera 1}}
+}
+{Volume "right_steel_add"
+	{thickness 20}
+	{material "steel"}
+	{able {visible 1}{blockcamera 1}}
+}
+{Volume "roof_steel"
+	{thickness 30}
+	{Tags  "body"}
+	{material "steel"}
+	{able {visible 0}{blockcamera 1}}
+}
+
+{Volume "tube_misc_1"
+	{thickness 20}
+	{Tags  "pipes"}
+	{material "kevlar"}
+	{able {visible 0}{blockcamera 1}}
+}
+{Volume "tube_misc_2"
+	{thickness 20}
+	{Tags  "pipes"}
+	{material "kevlar"}
+	{able {visible 0}{blockcamera 1}}
+}
+{Volume "tube_misc_3"
+	{thickness 20}
+	{Tags  "pipes"}
+	{material "kevlar"}
+	{able {visible 0}{blockcamera 1}}
+}
+{Volume "tube_misc_4"
+	{thickness 20}
+	{Tags  "pipes"}
+	{material "kevlar"}
+	{able {visible 0}{blockcamera 1}}
+}
+
+{Volume "tube_steel_1"
+	{thickness 45}
+	{Tags  "pipes"}
+	{material "steel"}
+	{able {visible 0}{blockcamera 1}}
+}
+{Volume "tube_steel_2"
+	{thickness 45}
+	{Tags  "pipes"}
+	{material "steel"}
+	{able {visible 0}{blockcamera 1}}
+}
+{Volume "tube_steel_3"
+	{thickness 45}
+	{Tags  "pipes"}
+	{material "steel"}
+	{able {visible 0}{blockcamera 1}}
+}
+{Volume "tube_steel_4"
+	{thickness 45}
+	{Tags  "pipes"}
+	{material "steel"}
+	{able {visible 0}{blockcamera 1}}
+}
+{Extender "land_patch"
+	{TerrainType "shoot_emit_int" "shoot_emit_int"}
+}	
+{lodclass "decor_big"}

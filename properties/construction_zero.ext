@@ -1,0 +1,148 @@
+	(include "construction.inc")
+	{collider "construction"}
+	{obstacleID "construction"}
+	{lodclass "decor_big"}
+	{Extender "land_patch"
+		{TerrainType "shoot_emit_mtl" "shoot_emit_mtl"}
+	}	
+	(define "armor_wound"
+		{armor
+			{setting "body"
+				{threshold
+					{pierce 
+						{value 1}
+					}
+				}
+				{volumes "*"}
+			}
+		}
+	)
+	("armor_wound")	
+{Volume "door_open"
+	{Tags  "door_wood_touch" }
+	{able {touch 1}{visible 0}}
+}
+(define "armor_set"	
+	{volume "wood_5_%0"
+		{material "wood"}
+		{tags "wood"}
+		{thickness hollow 5 }
+	}
+	{volume "wood_10_%0"
+		{material "wood"}
+		{tags "wood"}
+		{thickness hollow 10 }
+	}
+	{volume "wood_15_%0"
+		{material "wood"}
+		{tags "wood"}
+		{thickness hollow 15 }
+	}
+	{volume "wood_20_%0"
+		{material "wood"}
+		{tags "wood"}
+		{thickness hollow 20 }
+	}
+	{volume "roof_steel_5_%0"
+		{material "steel"}
+		{able {visible 0}{blockcamera 1}}
+		{tags "roof"}
+		{thickness hollow 5 }
+	}
+	{volume "roof_steel_10_%0"
+		{material "steel"}
+		{able {visible 0}{blockcamera 1}}
+		{tags "roof"}
+		{thickness hollow 10 }
+	}
+	{volume "roof_steel_15_%0"
+		{material "steel"}
+		{able {visible 0}{blockcamera 1}}
+		{tags "roof"}
+		{thickness hollow 15 }
+	}
+	{volume "roof_wood_5_%0"
+		{material "steel"}
+		{able {visible 0}{blockcamera 1}}
+		{tags "roof"}
+		{thickness hollow 5 }
+	}
+	{volume "roof_wood_10_%0"
+		{material "steel"}
+		{able {visible 0}{blockcamera 1}}
+		{tags "roof"}
+		{thickness hollow 10 }
+	}
+	{volume "roof_wood_20_%0"
+		{material "steel"}
+		{able {visible 0}{blockcamera 1}}
+		{tags "roof"}
+		{thickness hollow 20 }
+	}
+	{volume "stone_10_%0"
+		{material "concrete"}
+		{thickness  10 }
+	}
+	{volume "stone_15_%0"
+		{material "concrete"}
+		{thickness  15 }
+	}
+	{volume "stone_20_%0"
+		{material "concrete"}
+		{thickness  20 }
+	}
+	{volume "stone_25_%0"
+		{material "concrete"}
+		{thickness  20 }
+	}
+	{volume "stone_30_%0"
+		{material "concrete"}
+		{thickness  20 }
+	}
+	{volume "stone_land_30_%0"
+		{material "concrete"}
+		{able {visible 0}}
+		{thickness  20 }
+	}
+	
+)
+("armor_set" args 00)
+("armor_set" args 01)
+("armor_set" args 02)
+("armor_set" args 03)
+("armor_set" args 04)
+("armor_set" args 05)
+("armor_set" args 06)
+("armor_set" args 07)
+("armor_set" args 08)
+("armor_set" args 09)
+("armor_set" args 10)
+("armor_set" args 11)
+("armor_set" args 12)
+("armor_set" args 13)
+("armor_set" args 14)
+("armor_set" args 15)
+("armor_set" args 16)
+("armor_set" args 17)
+("armor_set" args 18)
+("armor_set" args 19)
+("armor_set" args 20)
+("armor_set" args 21)
+("armor_set" args 22)
+("armor_set" args 23)
+("armor_set" args 24)
+("armor_set" args 25)
+("armor_set" args 26)
+("armor_set" args 27)
+("armor_set" args 28)
+("armor_set" args 29)
+("armor_set" args 30)
+("armor_set" args 31)
+("armor_set" args 32)
+("armor_set" args 33)
+("armor_set" args 34)
+("armor_set" args 35)
+("armor_set" args 36)
+("armor_set" args 37)
+("armor_set" args 38)
+("armor_set" args 39)

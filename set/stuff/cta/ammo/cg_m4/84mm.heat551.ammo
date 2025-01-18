@@ -1,0 +1,24 @@
+{bullet;84 мм HEAT 551
+	{tag "ammo shell ap atgm dropboxed cumulative 90mm pierce no_ricochet heat751"}
+	{desc "84 мм HEAT 551"}
+	{entity "84mm_heat551"}
+	{view "88mm_heat55_proj"
+	} 
+	{cumulative 3.0}
+	{possibleDamageRadius 3}
+	{inventory
+		{weight 100}
+		{size 5 1}
+	}	
+	{mass 2}
+	{damage blastwave
+		{ground_interaction_radius 0.0}
+		{energy 1}
+		{area 2 8}
+	}
+	{damage add blastwave
+		{ground_interaction_radius 0.0}
+		{energy 3}
+		{area 1 3}
+	}
+}

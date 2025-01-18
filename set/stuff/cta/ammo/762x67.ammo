@@ -1,0 +1,14 @@
+;// 7.62x67mm
+
+{bullet
+	{tag "bullet sp normal stackable pierce smallarms"}
+	{inventory
+		{weight 2}
+		{block 50}
+		{size 2 1}
+		{fsm "belt"}
+	}	
+	{mass 0.012}
+	{entity "7x54"}
+	("trace7")
+}

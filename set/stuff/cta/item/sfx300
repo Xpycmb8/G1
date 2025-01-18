@@ -1,0 +1,11 @@
+{item
+	{tag "smallitemin1hand" "light_weapon" "upgrade_set"}
+	{desc "Surefire X300U-B"}
+	{entity "sfx300"}
+	{inventory
+		{size 2 1}
+		{weight 100}
+		{fsm "belt"}
+	}
+	{mass 1}
+}

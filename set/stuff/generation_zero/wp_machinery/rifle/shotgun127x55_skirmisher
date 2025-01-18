@@ -1,0 +1,56 @@
+{weapon_bullet
+	{tag "weapon rifle bullet shotgun127x55_skirmisher"}
+	{desc "HK sm 12"}
+	{reloadSound "small_arms//"}
+	{filling "ammo 18gauge" 8}
+	{entity "shotgun127x55_skirmisher_mount"}
+	{foresight "foresight"}
+	{mass 3}
+	{cursor "cannon2_on"}
+	{cursorReloading "cannon2_reload"}	
+	{rechargeTime 2}
+	("recoveryTime" r(200))
+	{traceFreq 0}
+	{speed 735}
+	("spreading_medium")
+	{minRange 2}
+	("accuracy_shotgun_long_skir")
+	{parameters "ap"
+		{fillingVisible "bullet_fg"}
+		{fireSound	"small_arms/xm109/"}
+		{fireSoundClose	"small_arms/xm109_close/"}
+		{cursor "cannon2_slug_on"}
+		{DisableRicochet}
+		{calibre 12.2}
+		("health_damage_12gauge" d(500))	
+		{projectileDamage 17}
+		{projectileDamageClip 17}
+		{projectileDamageTable {25 25} {75 18} {120 8} {200 2} {450 0}}
+		{range 150 160};F
+		("speed" s(550))
+	}
+	{parameters "dragon"
+		{fireSound	"small_arms/origin/"}
+		{fireSoundClose	"small_arms/origin_close/"}
+		{cursor "cannon2_dragon_on"}
+		{calibre 5}
+		{range 65 75}
+		("health_damage_12gauge" d(100))	
+		{projectileDamage 1}
+		{projectileDamageClip 1}
+		{projectileDamageTable {50 1} {250 0}}
+		("speed" s(513))
+	}
+	{parameters "buckshot"
+		{fillingVisible "bullet_sp"}
+		{fireSound	"small_arms/origin/"}
+		{fireSoundClose	"small_arms/origin_close/"}
+		{calibre 5}
+		{range 75 80}
+		("health_damage_12gauge" d(100))	
+		{projectileDamage 2}
+		{projectileDamageClip 2}
+		{projectileDamageTable {50 2} {250 0}}
+		("speed" s(513))
+	}
+}

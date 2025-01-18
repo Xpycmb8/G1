@@ -1,0 +1,12 @@
+{item
+	{tag "smallitemin1hand" }
+	{desc "Empty magazine"}
+	{entity "magazine_rifle_empty"}
+	{inventory
+		{size 1 1}
+		{block 1}
+		{weight 25}
+		{fsm "belt"}
+	}
+	{mass 0.15}
+}

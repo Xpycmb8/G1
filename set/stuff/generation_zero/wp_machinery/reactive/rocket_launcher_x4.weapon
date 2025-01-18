@@ -1,0 +1,29 @@
+{weapon_bullet
+	{tag "weapon mgun bullet to_hand"}
+	{desc "Rocket"}
+	{filling "ammo shell_5m" 4}
+	{inventory
+		{size 2 2}
+		{fsm "smg"}
+	}
+	{burst
+		{short 10 1}		; burst shots on long distance, rand (+-)shots
+		{long 5 1}			; burst shots on short distance, rand (+-)shots
+		{rangeKoef 0.5}		; rangeKoef * aimRange = max long burst distance
+	}
+
+	{FiringTimeout 0.8 0.2}
+	{foresight "Foresight_sniper"}
+	{fillingVisible "rocket_"}
+	{minRange 25}
+	{range 200 200}
+	{rechargeTime 8}
+	{recoveryTime 1}
+	{fireSound	"small_arms/rpg_bolt"}
+	{gravity 0}
+	{speed 120}
+	{AimingTolerance 0.2}
+	{cursor "cannon_on"}
+	{Automatic}
+	{preloaded}
+}

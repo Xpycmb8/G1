@@ -1,0 +1,6 @@
+{game_entity
+	(include "/properties/radio_signal.inc")
+	{Extension "radio_signal.mdl"}
+	{props "radio_signal"} 
+	{NoVisibilityPatch 0}
+}

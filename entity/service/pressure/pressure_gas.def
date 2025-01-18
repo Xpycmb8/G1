@@ -1,0 +1,24 @@
+{game_entity
+	{extension "/properties/piece.ext"}
+	{simulation {able 1}}
+	{constrain none}
+	{props "dummy" "ps_dummy" "pressure_gas"}
+	{collider "fx_obstacles"}
+	{obstacleid "nothing"}
+	{volume "body"
+		{sphere 10}
+		{able
+			{contact 1} {contact_ground 0}
+			{bullet 0} {throwing 0} {obstacle 0}
+			{overlap 1} {visible 0}
+			{touch 0}
+		}
+		{bone "basis"}
+		{material "dummy"}
+	}
+	{body
+		{proper body}
+		{permit body}
+	}
+	{mass 100}
+}

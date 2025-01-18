@@ -1,0 +1,14 @@
+{item
+	{entity "blind"}
+	{damage flash
+		{radius 1.0 1.0} ; full flash radius, shorter flash radius
+		{duration 0.5 0.5} ; max duration, min duration
+	}
+	{tag "blind"}
+	{inventory
+		{size 1 1}
+		{weight 1}
+		{fsm "stuff"}
+	}
+	{mass 1}
+}

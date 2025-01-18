@@ -1,0 +1,26 @@
+{bullet;ПГ-7ВР «Резюме» / 7П28
+	{tag "ammo rocketlauncher shell ap dropboxed cumulative 90mm pierce pg7vr"}
+;	{desc "ПГ-7ВР «Резюме»/7П28"}
+	{entity "pg7vr_ammo"}
+	{view "pg7vr_ammo_proj"
+		{tail "rpg7_tail_fx" "tail"}
+	} 
+	{cumulative 3.0}
+	{possibleDamageRadius 3}
+	{inventory
+		{link_bone "ammo_back_right"}
+		{weight 100}
+		{size 5 1}
+	}	
+	{mass 4.5}
+	{damage blastwave
+		{ground_interaction_radius 0.0}
+		{energy 1}
+		{area 2 8}
+	}
+	{damage add blastwave
+		{ground_interaction_radius 0.0}
+		{energy 3}
+		{area 1 3}
+	}
+}

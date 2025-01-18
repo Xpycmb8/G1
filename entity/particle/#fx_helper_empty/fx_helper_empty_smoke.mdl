@@ -1,0 +1,39 @@
+;Exported by: ubrashaev
+;Date:        Sat Jun 25 16:38:08 2016
+;File:        E:\work\Chris\fx_helper_empty.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "dummy002"
+		}
+	}
+}
+{Volume "smoke1"
+	{box 75 75 75}
+	{Bone "basis"}
+	{Matrix34
+		-1	0	0
+		0	0	-1
+		0	-1	0
+		0.00861867	0.175069	0.00596238
+	}
+}
+{Volume "smoke2"
+	{box 150 150 150}
+	{Bone "basis"}
+	{Matrix34
+		-1	0	0
+		0	0	-1
+		0	-1	0
+		0.00861867	0.175069	0.00596238
+	}
+}
+{Volume "body1"
+	{Box 7.94573 3.96479 0.200349}
+	{Bone "dummy002"}
+	{Position -0.00958776	0	0.145996}
+}

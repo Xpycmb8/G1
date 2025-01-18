@@ -1,0 +1,5 @@
+{game_entity
+	{props "thermite_fire_big_spawn" }
+	{obstacleID "unbreakable"}
+	{mass 1}
+}

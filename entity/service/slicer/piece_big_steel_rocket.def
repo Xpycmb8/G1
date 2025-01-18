@@ -1,0 +1,17 @@
+{game_entity
+	{extension "/properties/piece.ext"}
+	{simulation {able 1}}
+	{body
+		{permit body}
+	}
+	{constrain none}
+	{props "dummy" "steel" "big" "part" "piece_big_steel_rocket"}
+	{collider "particle.small"}
+	{mass 25}
+	{volume "body"
+		{sphere 0.5}
+		{able clear {contact 1} {contact_ground 1}}
+		{bone "basis"}
+		{material "steel"}
+	}
+}

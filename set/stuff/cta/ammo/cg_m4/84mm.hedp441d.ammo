@@ -1,0 +1,28 @@
+{bullet ;
+	{tag "ammo rocketlauncher no_ricochet shell 40mm_fg dropboxed fg hedp441d"}
+	{desc "84 мм HEDP 441D"}
+	{entity "84mm_hedp441d"}
+	{view "88mm_he_proj"
+	} 
+	{detonationThickness 2}
+	{inventory
+		{weight 100}
+		{size 5 1}
+	}	
+	{mass 4.5}
+	{damage fire
+		{radius 0.1}
+		{heating 5}
+		{time 1}
+	}
+	{damage blastwave
+		{ground_interaction_radius 0.0}
+		{energy 0.4}
+		{area 2 8}
+	}
+	{damage add blastwave
+		{ground_interaction_radius 0.0}
+		{energy 1}
+		{area 1 3}
+	}
+}

@@ -1,0 +1,4 @@
+{game_entity
+	{props "delete_60" "wound"}
+	{Extension "wound_stone01.mdl"}
+}

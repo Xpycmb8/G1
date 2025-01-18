@@ -1,0 +1,13 @@
+{bullet
+	{tag "check_side" "orientation_melee_front"}
+	{tag "no_crater"}
+	{inventory
+		{noView}
+	}
+	{mass 1}
+	{damage blastwave				
+		{energy 0.2}
+		{area 0.1 0.1}
+	}
+	{entity "orientation_melee_back"}
+}

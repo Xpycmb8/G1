@@ -1,0 +1,9 @@
+{from "pattern throwable"
+	{tag "knife sharp_edge hand"}
+	{inventory
+		{size 1 1}
+		{weight 100}
+	}	
+	{mass 0.1}
+	{entity "fraction_v"}
+}

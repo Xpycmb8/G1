@@ -1,0 +1,15 @@
+;// 9x19mm
+
+{bullet
+	{tag "bullet sp small stackable pierce"}
+;	{desc "9х19 Магазин Бизон Шнековый\n<c(ff0010)>Пробитие <c(ffffff)>-<c(ffffff)> <c(10ff01)>3мм на 50м\n<c(ffffff)>"}
+	{inventory
+		{weight 1.5625}
+		{block 40}
+		{size 2 1}
+		{fsm "belt"}
+	}
+	{mass 0.008}
+	{entity "bizon_mags"}
+	("trace9")
+}

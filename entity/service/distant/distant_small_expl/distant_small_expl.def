@@ -1,0 +1,5 @@
+{game_entity
+	{props "distant_small_expl"}
+	{constrain ground}
+	{Extension "distant_small.mdl"}
+}

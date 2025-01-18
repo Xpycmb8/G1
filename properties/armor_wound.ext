@@ -1,0 +1,167 @@
+;SDL
+(define "adjust_car_volume"
+	{volume %0
+		{tags %1}
+		{component %1}
+		{thickness %2}
+	}
+)
+{volume "body"
+	{thickness 8}
+}
+(define "armor_car"
+	{armor
+		{setting "body"
+			;{thickness %b}
+			{threshold
+				{blast
+					{value 5}
+				}
+				{pierce
+					{value (+ 3 %th)}
+				}
+			}
+			{durability
+				{blast
+					{value 10}
+				}
+				{pierce
+					{value %pb}
+				}
+			}
+			{volumes "body*"}
+		}
+		{setting "body_back"
+			;{thickness %bb}
+			{threshold
+				{blast
+					{value 5}
+				}
+				{pierce
+					{value (+ 1 %th)}
+				}
+			}
+			{durability
+				{blast
+					{value 10}
+				}
+				{pierce
+					{value %pb}
+				}
+			}
+			{volumes "bodyback*"}
+		}
+		{setting "engine"
+			;{thickness (* 2.5 %b)}
+			{threshold
+				{blast
+					{value 5}
+				}
+				{pierce
+					{value (+ 3 %th)}
+				}
+			}
+			{durability
+				{blast
+					{value 10}
+				}
+				{pierce
+					{value %pe}
+				}
+			}
+			{whole_wound}
+			{volumes "engine*"}
+		}
+		{setting "wheel"
+			{thickness 1}
+			{threshold
+				{blast
+					{value 10}
+				}
+				{pierce
+					{value 1}
+				}
+			}
+			{durability
+				{blast
+					{value 10}
+				}
+				{pierce
+					{value 10}
+				}
+			}
+			{whole_wound}
+			{volumes "wheel*"}
+		}
+		{setting "cabin"
+			{thickness 5}
+			{threshold
+				{blast
+					{value 1}
+				}
+			}
+			{durability
+				{blast
+					{value 10}
+				}
+				{pierce
+					{value 15}
+				}
+			}
+			{volumes "cabin*"}
+		}
+		{setting "door"
+			{thickness 2}
+			{threshold
+				{blast
+					{value 1}
+				}
+			}
+			{durability
+				{blast
+					{value 3}
+				}
+				{pierce
+					{value 3}
+				}
+			}
+			{volumes "door*"}
+		}
+		{setting "shields"
+			;{thickness 5}
+			{threshold
+				{blast
+					{value 8}
+				}
+				{pierce
+					{value 7}
+				}
+			}
+			{durability
+				{blast
+					{value 17}
+				}
+				{pierce
+					{value 22}
+				}
+			}
+			{volumes "shield*"}
+		}
+	}
+)
+
+;b = body + engine thickness (currently not used)
+;bb = body + body_back thickness (currently not used)
+;pb = body + body_back durability pierce
+;pe = engine durability pierce
+;th = add to threshold pierce of body & engine volumes
+
+(define "armor_light"
+	("armor_car" b(10) bb(0.5) pb(50) pe(100) th(0))
+)
+(define "armor_medium"
+	("armor_car" b(15) bb(0.5) pb(150) pe(200) th(0))
+)
+(define "armor_heavy"
+	("armor_car" b(15) bb(0.5) pb(200) pe(250) th(1))
+)

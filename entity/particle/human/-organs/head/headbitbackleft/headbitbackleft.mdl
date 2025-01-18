@@ -1,0 +1,24 @@
+;Exported by: ?????
+;Date:        Mon Mar 25 17:10:15 2019
+;File:        D:\?????\Documents\3dsMax\scenes\abraxo.max
+{Skeleton
+	{bone "headbitbackleft"
+		{parameters "CommonMesh;"}
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{VolumeView "headbitbackleft.ply"}
+	}
+}
+{Volume "backl"
+	{Box 3.10858 3.63672 6.70645}
+	{Bone "headbitbackleft"}
+	{Matrix34
+		0.45	0	0
+		0	0.45	0
+		0	0	0.45
+		-1.38552	0.429546	2.03842
+	}
+}

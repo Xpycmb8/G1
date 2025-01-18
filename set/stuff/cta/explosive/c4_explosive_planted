@@ -1,0 +1,37 @@
+{item
+	{tag "smallitemin1hand" "planted" "c4_explosive_planted" "c4_explosive"}
+	{desc "C4 radio"}
+	{entity "c4_explosive_planted"}
+	{throw
+		{startAngle 85}
+		{constantSpeed 6}
+		{range 10}
+		{spreading 0.5}
+	}
+	{inventory
+		{size 2 2}
+		{weight 100}
+		{fsm "belt"}
+	}
+	{mass 2}
+	{damage fire
+		{radius 3}
+		{heating 2}
+		{time 1}
+	}
+	{damage blastwave
+		{ground_interaction_radius 0.0}
+		{energy 25}
+		{area 2 5}
+	}
+	{damage add blastwave
+		{ground_interaction_radius 0.0}
+		{energy 3}
+		{area 5 15}
+	}
+	{damage add blastwave
+		{ground_interaction_radius 0.0}
+		{energy 1}
+		{area 1 17}
+	}
+}

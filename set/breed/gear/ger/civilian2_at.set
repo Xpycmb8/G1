@@ -1,0 +1,27 @@
+{breed
+	{behaviour soldier}
+	{skin "civilian2"}
+	{portrait "civilian_male"}
+	{icon "bazooka"}
+	{icon_priority 0}
+	{tags "soldier_pzscheck"}
+	{nationality ger}
+	{perks
+		(include "ability.inc")
+		("rifle_skill_rank_2")("tier2_standard")
+		("at_rank_3")
+	}
+	{veterancy
+		(include "ability.inc")
+		("veterancy_lvl_0")
+	}
+	{inventory
+		{item "rpg7_v1" filled}
+		{item "rpg7 ammo"  }
+		{item "rpg7 og7v ammo" 2}
+		{item "rpg7 pg7vm ammo"}
+		{item "rpg7 pg7vr ammo"}
+		{item "bandage_ger" 5}
+		{in_hands 0}
+	}
+}

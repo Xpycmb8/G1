@@ -1,0 +1,6 @@
+{item
+	{tag "Volt"}
+	{desc "Volt"}
+	{inventory {noView}}
+	{mass 0}
+}

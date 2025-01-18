@@ -1,0 +1,1084 @@
+;Exported by: ?????
+;Date:        Thu Dec 10 22:00:55 2020
+;File:        D:\?????\Documents\3ds Max 2020\scenes\female_1_1_head_sc_f_balthazar.max
+{Skeleton
+	{bone revolute "basis"
+		{limits -30 30}
+		{speed 0.1}
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "body"
+			{Matrix34
+				0	0	1
+				0	-1	0
+				1	0	0
+				0	0.0344553	19.9224
+			}
+			{bone "foot1l"
+				{Matrix34
+					-0.993535	-0.0202594	0.111708
+					0.11167	0.00297451	0.993741
+					0.0204649	-0.99979	0.000692963
+					-0.143509	-2.13095	-0.488995
+				}
+				{bone "foot2l"
+					{Matrix34
+						0.952382	-0.304908	-0.000107972
+						0.304908	0.952382	-4.07621e-05
+						0.000115257	0	1
+						9.37838	-0.0471728	0
+					}
+					{bone "bone06"
+						{Matrix34
+							0.221381	0.973964	0.0488399
+							-0.972284	0.216583	0.0880677
+							0.0751968	-0.0669827	0.994916
+							8.74023	0.113252	0.00567913
+						}
+					}
+					{bone "foot3l"
+						{Matrix34
+							0.0905535	0.979616	0.179312
+							0.00345668	-0.18036	0.983595
+							0.995885	-0.0884483	-0.0197185
+							9.2003	-0.34629	-0.0729971
+						}
+						{bone "bone07"
+							{Position 2.60015	0	0}
+						}
+					}
+				}
+			}
+			{bone revolute "ik_leftright"
+				{limits -20 20}
+				{speed 0.1}
+				{Matrix34
+					0	0	1
+					0	-1	0
+					1	0	0
+					1.90368	0.0344548	0
+				}
+				{bone "ik_socket"
+					{Matrix34
+						0	1	0
+						1	0	0
+						0	0	1
+						0	0	0
+					}
+					{bone "compensate"
+						{Matrix34
+							0	1	0
+							1	0	0
+							0	0	1
+							0	0	0
+						}
+						{bone revolute "ik_updown"
+							{limits -40 20}
+							{speed 0.1}
+							{Matrix34
+								1	0	0
+								0	0	1
+								0	-1	0
+								0	0	1.66801
+							}
+							{bone "gun_back"
+								{Matrix34
+									0.0147834	0.996075	0.0872693
+									-0.149675	0.0884998	-0.984766
+									-0.988625	0.00149536	0.150396
+									-4.16774	-4.2536	2.42593
+								}
+							}
+							{bone "clavicle_right"
+								{Position -0.139178	6.12486	1.17254}
+								{bone "hand1r"
+									{Matrix34
+										0.0313573	-0.248123	0.968221
+										0.9728	0.230014	0.0274393
+										-0.229512	0.941025	0.248587
+										0.0503404	-0.225971	2.95336
+									}
+									{bone "hand2r"
+										{Matrix34
+											0.460806	0.887501	0
+											-0.887501	0.460806	0
+											0	0	1
+											6.26813	0	0
+										}
+										{bone "hand3r"
+											{Matrix34
+												0.982611	-0.185677	0
+												0.185676	0.982611	0
+												0	0	1
+												5.19218	0	0
+											}
+										}
+										{bone "right_hand"
+											{Matrix34
+												0.968615	-0.225094	0.105442
+												0.191903	0.946804	0.258332
+												-0.157981	-0.22999	0.960285
+												6.33401	0.91394	-0.654924
+											}
+										}
+										{bone "hand_rot1r"
+											{Matrix34
+												0.0033366	-0.999958	0.0085583
+												-0.999992	-0.00331742	0.00210683
+												-0.00207922	-0.00856462	-0.999961
+												5.19224	0	0
+											}
+											{bone "palm1r"
+												{Matrix34
+													-0.963565	-0.249481	-0.0964401
+													-0.0459582	-0.20077	0.97856
+													-0.263496	0.947338	0.181991
+													0.0853558	-0.397721	0.0915833
+												}
+												{bone "palm2r_hide"
+													{Matrix34
+														-0.0995044	0.561591	-0.82141
+														-0.0593575	0.820687	0.568287
+														0.993265	0.105305	-0.0483275
+														0.146143	0.242285	-1.2575
+													}
+													{bone "palm3r_hide"
+														{Matrix34
+															0.304938	0.952372	0
+															-0.952372	0.304938	0
+															0	0	1
+															0.58188	-0.000116348	0
+														}
+														{bone "palm4r_hide"
+															{Matrix34
+																1	0	0
+																0	1	0
+																0	0	1
+																0.53446	0	0
+															}
+														}
+													}
+												}
+												{bone "palm2r"
+													{Matrix34
+														-0.0995062	0.561591	-0.82141
+														-0.0593584	0.820687	0.568287
+														0.993265	0.105304	-0.0483265
+														0.146144	0.242285	-1.2575
+													}
+													{bone "palm3r"
+														{Matrix34
+															0.304939	0.952372	0
+															-0.952372	0.304937	0
+															0	0	1
+															0.58188	-0.000116348	0
+														}
+													}
+												}
+												{bone "righthandindexbase"
+													{Matrix34
+														0.264357	0.207069	-0.941933
+														-0.197279	-0.944416	-0.262984
+														-0.944032	0.255345	-0.208813
+														0.73683	-0.0176945	-1.47122
+													}
+													{bone "righthandindex1"
+														{parameters "LastPose = undefined;"}
+														{Matrix34
+															1	0	0
+															0	1	0
+															0	0	1
+															0	0	0
+														}
+														{bone "righthandindex2"
+															{Matrix34
+																1	0	0
+																0	1	0
+																0	0	1
+																0.858057	0	0
+															}
+															{bone "righthandindex3"
+																{Matrix34
+																	1	1.01402e-05	0
+																	0	1	0
+																	0	0	1
+																	0.642819	0	0
+																}
+																{bone "righthandindex4"
+																	{Matrix34
+																		1	0	0
+																		0	1	0
+																		0	0	1
+																		0.479883	0	0
+																	}
+																}
+															}
+															{bone "r_index3"
+																{parameters "LastPose = undefined;"}
+																{Matrix34
+																	1	0	0
+																	0	1	0
+																	0	0	1
+																	0.642817	0.555473	0
+																}
+															}
+														}
+														{bone "r_index2"
+															{parameters "LastPose = undefined;"}
+															{Position 0.858055	0.582945	0}
+														}
+													}
+													{bone "r_index1"
+														{Matrix34
+															1	0	0
+															0	1	0
+															0	0	1
+															0	0.585602	0
+														}
+													}
+												}
+												{bone "righthandmiddlebase"
+													{parameters "LastPose = undefined;"}
+													{Matrix34
+														0.0964119	0.24826	-0.963883
+														-0.197277	-0.944417	-0.26298
+														-0.975596	0.215507	-0.0420787
+														0.279717	0.0875149	-1.50613
+													}
+													{bone "righthandmiddle1"
+														{parameters "LastPose = undefined;"}
+														{Orientation
+															1	0	0
+															0	1	0
+															0	0	1
+														}
+														{bone "righthandmiddle2"
+															{Matrix34
+																1	0	0
+																0	1	0
+																0	0	1
+																0.991685	0	0
+															}
+															{bone "righthandmiddle3"
+																{Matrix34
+																	1	0	-1.8904e-05
+																	0	1	0
+																	2.03196e-05	0	1
+																	0.741716	0	0
+																}
+																{bone "righthandmiddle4"
+																	{Matrix34
+																		1	0	1.01011e-05
+																		0	1	-3.66569e-05
+																		0	3.88622e-05	1
+																		0.560162	0	1.14441e-05
+																	}
+																}
+															}
+															{bone "r_middle3"
+																{parameters "LastPose = undefined;"}
+																{Matrix34
+																	1	0	0
+																	0	1	0
+																	0	0	1
+																	0.74171	0.453117	0
+																}
+															}
+														}
+														{bone "r_middle2"
+															{parameters "LastPose = undefined;"}
+															{Matrix34
+																1	0	0
+																0	1	0
+																0	0	1
+																0.991686	0.507702	0
+															}
+														}
+													}
+													{bone "r_middle1"
+														{parameters "LastPose = undefined;"}
+														{Matrix34
+															1	0	0
+															0	1	0
+															0	0	1
+															0	0.555182	0
+														}
+													}
+												}
+												{bone "righthandringbase"
+													{parameters "LastPose = undefined;"}
+													{Matrix34
+														-0.074462	0.281915	-0.956545
+														-0.197278	-0.944416	-0.262985
+														-0.977516	0.169124	0.125936
+														-0.181876	0.189144	-1.52485
+													}
+													{bone "righthandring1"
+														{parameters "LastPose = undefined;"}
+														{Matrix34
+															1	0	0
+															0	1	0
+															0	0	1
+															0	0	0
+														}
+														{bone "righthandring2"
+															{parameters "LastPose = undefined;"}
+															{Matrix34
+																1	0	0
+																0	1	0
+																0	0	1
+																0.858054	0	0
+															}
+															{bone "righthandring3"
+																{Matrix34
+																	1	0	0
+																	0	1	-6.92606e-05
+																	0	7.08103e-05	1
+																	0.642821	0	0
+																}
+																{bone "righthandring4"
+																	{Matrix34
+																		1	0	0
+																		0	1	0
+																		0	0	1
+																		0.487396	0	0
+																	}
+																}
+															}
+															{bone "r_ring3"
+																{parameters "LastPose = undefined;"}
+																{Matrix34
+																	1	0	0
+																	0	1	0
+																	0	0	1
+																	0.642817	0.461632	0
+																}
+															}
+														}
+														{bone "r_ring2"
+															{parameters "LastPose = undefined;"}
+															{Matrix34
+																1	0	0
+																0	1	0
+																0	0	1
+																0.858057	0.518654	0
+															}
+														}
+													}
+													{bone "r_ring1"
+														{parameters "LastPose = undefined;"}
+														{Matrix34
+															1	0	0
+															0	1	0
+															0	0	1
+															0	0.560665	0
+														}
+													}
+												}
+												{bone "righthandpinkybase"
+													{parameters "LastPose = undefined;"}
+													{Matrix34
+														-0.243077	0.307	-0.920144
+														-0.197278	-0.944416	-0.262984
+														-0.949735	0.1176	0.290127
+														-0.611532	0.282125	-1.53644
+													}
+													{bone "righthandpinky1"
+														{parameters "LastPose = undefined;"}
+														{Matrix34
+															1	0	0
+															0	1	0
+															0	0	1
+															0	0	0
+														}
+														{bone "righthandpinky2"
+															{Matrix34
+																1	0	1.4402e-05
+																0	1	0
+																-1.32471e-05	0	1
+																0.716185	0	0
+															}
+															{bone "righthandpinky3"
+																{Matrix34
+																	1	0	0
+																	0	1	-4.85182e-05
+																	0	4.95911e-05	1
+																	0.535683	0	0
+																}
+																{bone "righthandpinky4"
+																	{Matrix34
+																		1	0	0
+																		0	1	0
+																		0	0	1
+																		0.396512	0	0
+																	}
+																}
+															}
+															{bone "r_pinky3"
+																{parameters "LastPose = undefined;"}
+																{Matrix34
+																	1	0	0
+																	0	1	0
+																	0	0	1
+																	0.53568	0.465425	0
+																}
+															}
+														}
+														{bone "r_pinky2"
+															{parameters "LastPose = undefined;"}
+															{Matrix34
+																1	0	0
+																0	1	0
+																0	0	1
+																0.716186	0.434147	0
+															}
+														}
+													}
+													{bone "r_pinky1"
+														{parameters "LastPose = undefined;"}
+														{Matrix34
+															1	0	0
+															0	1	0
+															0	0	1
+															0	0.463673	0
+														}
+													}
+												}
+												{bone "righthandthumbbase"
+													{parameters "LastPose = undefined;"}
+													{Matrix34
+														0.718793	0.324475	-0.614859
+														0.527117	-0.831012	0.177673
+														-0.453305	-0.451814	-0.768362
+														0.606989	-0.128696	-0.0563545
+													}
+													{bone "righthandthumb1"
+														{Position 0	0	0}
+														{bone "righthandthumb2"
+															{Matrix34
+																1	-1.5229e-05	1.73189e-05
+																1.53184e-05	1	0
+																-1.7032e-05	0	1
+																1.02929	0	0
+															}
+															{bone "righthandthumb3"
+																{Matrix34
+																	1	0	-1.34297e-05
+																	0	1	0
+																	1.36495e-05	0	1
+																	0.730941	0	0
+																}
+																{bone "righthandthumb4"
+																	{Matrix34
+																		1	0	0
+																		0	1	0
+																		0	0	1
+																		0.529865	0	0
+																	}
+																}
+															}
+															{bone "r_thumb3"
+																{parameters "LastPose = undefined;"}
+																{Matrix34
+																	1	0	0
+																	0	1	0
+																	0	0	1
+																	0.730938	0.514259	0
+																}
+															}
+														}
+														{bone "r_thumb2"
+															{parameters "LastPose = undefined;"}
+															{Matrix34
+																1	0	0
+																0	1	0
+																0	0	1
+																1.0293	0.535986	0
+															}
+														}
+													}
+													{bone "r_thumb1"
+														{parameters "LastPose = undefined;"}
+														{Matrix34
+															1	0	0
+															0	1	0
+															0	0	1
+															0	0.592852	0
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+							{bone "clavicle_left"
+								{Position -0.139178	6.12487	-1.18112}
+								{bone "hand1l"
+									{Matrix34
+										0.0307142	-0.248445	-0.968159
+										0.97283	0.229809	-0.0281101
+										0.229474	-0.94099	0.248754
+										0.0503407	-0.225973	-2.95274
+									}
+									{bone "hand2l"
+										{Matrix34
+											0.458669	0.888607	0
+											-0.888607	0.458669	0
+											0	0	1
+											6.26812	0	0
+										}
+										{bone "hand3l"
+											{Matrix34
+												0.982611	-0.185677	0
+												0.185676	0.982611	0
+												0	0	1
+												5.19218	0	0
+											}
+										}
+										{bone "left_hand"
+											{Matrix34
+												0.275672	0.823504	-0.495828
+												0.00418913	-0.516839	-0.856072
+												-0.961242	0.23392	-0.145927
+												5.99778	-0.667304	0.40992
+											}
+										}
+										{bone "hand_rot1l"
+											{Matrix34
+												0.0013024	-0.999931	0.0116371
+												-0.999999	-0.00131384	-0.0010379
+												0.00105414	-0.0116363	-0.999932
+												5.25743	-0.000658035	-0.00162506
+											}
+											{bone "palm1l"
+												{Matrix34
+													0.965404	0.24925	-0.076609
+													-0.0261244	-0.199864	-0.979475
+													-0.259447	0.947591	-0.18644
+													0.0886898	-0.337659	-0.09161
+												}
+												{bone "palm2l"
+													{Matrix34
+														-0.00578362	0.491337	-0.87095
+														-0.00434244	-0.870969	-0.49132
+														-0.999974	0.000940859	0.00717114
+														-0.0738363	0.242491	-1.26342
+													}
+													{bone "palm3l"
+														{Matrix34
+															0.578449	-0.815719	0
+															0.815719	0.578449	0
+															0	0	1
+															0.578553	0.000164032	0
+														}
+													}
+												}
+												{bone "palm2l_hide"
+													{Matrix34
+														-0.0057837	0.491336	-0.870951
+														-0.0043419	-0.870969	-0.49132
+														-0.999974	0.000941604	0.00717107
+														-0.0738363	0.242491	-1.26342
+													}
+													{bone "palm3l_hide"
+														{Matrix34
+															0.578448	-0.815718	0
+															0.815719	0.57845	0
+															0	0	1
+															0.57855	0.000167847	0
+														}
+														{bone "palm4l_hide"
+															{Matrix34
+																1	0	0
+																0	1	0
+																0	0	1
+																0.511898	-3.8147e-05	0
+															}
+														}
+													}
+												}
+												{bone "lefthandindexbase"
+													{parameters "LastPose = undefined;"}
+													{Matrix34
+														-0.264357	0.207069	-0.941933
+														-0.19728	0.944416	0.262984
+														0.944032	0.255346	-0.208813
+														-0.736828	-0.0177021	-1.47122
+													}
+													{bone "lefthandindex1"
+														{Position 0	0	0}
+														{bone "lefthandindex2"
+															{Matrix34
+																1	0	0
+																0	1	0
+																0	0	1
+																0.858052	0	0
+															}
+															{bone "lefthandindex3"
+																{Matrix34
+																	1	-1.03191e-05	0
+																	0	1	0
+																	0	0	1
+																	0.642821	0	0
+																}
+																{bone "lefthandindex4"
+																	{Matrix34
+																		1	0	0
+																		0	1	0
+																		0	0	1
+																		0.479889	0	0
+																	}
+																}
+															}
+															{bone "l_index3"
+																{parameters "LastPose = undefined;"}
+																{Matrix34
+																	1	0	0
+																	0	1	0
+																	0	0	1
+																	0.634827	-0.419489	0
+																}
+															}
+														}
+														{bone "l_index2"
+															{parameters "LastPose = undefined;"}
+															{Position 0.858051	-0.418211	0}
+														}
+													}
+													{bone "l_index1"
+														{parameters "LastPose = undefined;"}
+														{Position 0	-0.43047	0}
+													}
+												}
+												{bone "lefthandmiddlebase"
+													{parameters "LastPose = undefined;"}
+													{Matrix34
+														-0.0964108	0.24826	-0.963884
+														-0.197277	0.944417	0.26298
+														0.975595	0.215506	-0.042077
+														-0.279716	0.087513	-1.50614
+													}
+													{bone "lefthandmiddle1"
+														{Matrix34
+															1	0	0
+															0	1	0
+															0	0	1
+															0	0	0
+														}
+														{bone "lefthandmiddle2"
+															{Matrix34
+																1	0	0
+																-1.13277e-05	1	0
+																0	0	1
+																0.991682	0	0
+															}
+															{bone "lefthandmiddle3"
+																{Matrix34
+																	1	0	-2.00048e-05
+																	0	1	0
+																	2.02367e-05	0	1
+																	0.741718	0	0
+																}
+																{bone "lefthandmiddle4"
+																	{Matrix34
+																		1	-1.04597e-05	1.00387e-05
+																		0	1	3.80874e-05
+																		0	-3.76105e-05	1
+																		0.560159	0	1.52588e-05
+																	}
+																}
+															}
+															{bone "l_middle3"
+																{parameters "LastPose = undefined;"}
+																{Matrix34
+																	1	0	0
+																	0	1	0
+																	0	0	1
+																	0.741717	-0.448395	0
+																}
+															}
+														}
+														{bone "l_middle2"
+															{parameters "LastPose = undefined;"}
+															{Matrix34
+																1	0	0
+																0	1	0
+																0	0	1
+																0.991683	-0.461321	0
+															}
+														}
+													}
+													{bone "l_middle1"
+														{parameters "LastPose = undefined;"}
+														{Matrix34
+															1	0	0
+															0	1	0
+															0	0	1
+															0	-0.463575	0
+														}
+													}
+												}
+												{bone "lefthandringbase"
+													{parameters "LastPose = undefined;"}
+													{Matrix34
+														0.0744627	0.281914	-0.956546
+														-0.197277	0.944416	0.262984
+														0.977516	0.169122	0.125938
+														0.181878	0.18914	-1.52485
+													}
+													{bone "lefthandring1"
+														{Matrix34
+															1	0	0
+															0	1	0
+															0	0	1
+															0	0	0
+														}
+														{bone "lefthandring2"
+															{Matrix34
+																1	0	0
+																0	1	0
+																0	0	1
+																0.858052	0	0
+															}
+															{bone "lefthandring3"
+																{Matrix34
+																	1	0	0
+																	0	1	7.08699e-05
+																	0	-7.11977e-05	1
+																	0.642823	0	0
+																}
+																{bone "lefthandring4"
+																	{Matrix34
+																		1	0	0
+																		0	1	0
+																		0	0	1
+																		0.487396	0	0
+																	}
+																}
+															}
+															{bone "l_ring3"
+																{parameters "LastPose = undefined;"}
+																{Matrix34
+																	1	0	0
+																	0	1	0
+																	0	0	1
+																	0.642824	-0.517252	0
+																}
+															}
+														}
+														{bone "l_ring2"
+															{parameters "LastPose = undefined;"}
+															{Matrix34
+																1	0	0
+																0	1	0
+																0	0	1
+																0.858057	-0.428919	0
+															}
+														}
+													}
+													{bone "l_ring1"
+														{parameters "LastPose = undefined;"}
+														{Position 0	-0.493237	0}
+													}
+												}
+												{bone "lefthandpinkybase"
+													{parameters "LastPose = undefined;"}
+													{Matrix34
+														0.243077	0.306999	-0.920144
+														-0.197278	0.944416	0.262984
+														0.949734	0.117599	0.290129
+														0.611537	0.282122	-1.53645
+													}
+													{bone "lefthandpinky1"
+														{Matrix34
+															1	0	0
+															0	1	0
+															0	0	1
+															0	0	0
+														}
+														{bone "lefthandpinky2"
+															{Matrix34
+																1	0	1.42679e-05
+																0	1	0
+																-1.34632e-05	0	1
+																0.716188	0	0
+															}
+															{bone "lefthandpinky3"
+																{Matrix34
+																	1	0	0
+																	0	1	4.93228e-05
+																	0	-4.97997e-05	1
+																	0.535683	0	0
+																}
+																{bone "lefthandpinky4"
+																	{Matrix34
+																		1	0	0
+																		0	1	0
+																		0	0	1
+																		0.396507	0	0
+																	}
+																}
+															}
+															{bone "l_pinky3"
+																{parameters "LastPose = undefined;"}
+																{Matrix34
+																	1	0	0
+																	0	1	0
+																	0	0	1
+																	0.535685	-0.471788	0
+																}
+															}
+														}
+														{bone "l_pinky2"
+															{parameters "LastPose = undefined;"}
+															{Matrix34
+																1	0	0
+																0	1	0
+																0	0	1
+																0.716193	-0.383928	0
+															}
+														}
+													}
+													{bone "l_pinky1"
+														{parameters "LastPose = undefined;"}
+														{Matrix34
+															1	0	0
+															0	1	0
+															0	0	1
+															0	-0.49864	0
+														}
+													}
+												}
+												{bone "lefthandthumbbase"
+													{parameters "LastPose = undefined;"}
+													{Matrix34
+														-0.718791	0.324476	-0.61486
+														0.527118	0.83101	-0.177673
+														0.453306	-0.451814	-0.768361
+														-0.606987	-0.1287	-0.0563641
+													}
+													{bone "lefthandthumb1"
+														{Matrix34
+															1	0	0
+															0	1	0
+															0	0	1
+															0	0	0
+														}
+														{bone "lefthandthumb2"
+															{Matrix34
+																1	1.29938e-05	1.65179e-05
+																-1.37463e-05	1	0
+																-1.59517e-05	0	1
+																1.02929	0	0
+															}
+															{bone "lefthandthumb3"
+																{Matrix34
+																	1	-1.0848e-05	-1.40108e-05
+																	1.017e-05	1	0
+																	1.46516e-05	0	1
+																	0.730939	0	0
+																}
+																{bone "bone009(mirrored)"
+																	{Matrix34
+																		1	0	0
+																		0	1	0
+																		0	0	1
+																		0.529863	0	0
+																	}
+																}
+															}
+															{bone "l_thumb3"
+																{parameters "LastPose = undefined;"}
+																{Matrix34
+																	1	0	0
+																	0	1	0
+																	0	0	1
+																	0.730937	-0.541817	0
+																}
+															}
+														}
+														{bone "l_thumb2"
+															{parameters "LastPose = undefined;"}
+															{Matrix34
+																1	0	0
+																0	1	0
+																0	0	1
+																1.0293	-0.545839	0
+															}
+														}
+													}
+													{bone "l_thumb1"
+														{parameters "LastPose = undefined;"}
+														{Matrix34
+															1	0	0
+															0	1	0
+															0	0	1
+															0	-0.602825	0
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+							{bone "head"
+								{Matrix34
+									0.999952	0.00413722	-0.00886167
+									-0.00885882	-0.000694344	-0.999961
+									-0.00414221	0.999991	-0.000657619
+									0	7.21457	0
+								}
+								{bone "visor"
+									{Matrix34
+										1	0	0
+										0	1	0
+										0	0	1
+										2.31916	0	2.33291
+									}
+								}
+								{bone "helmet_link"
+									{Matrix34
+										0.00885574	0.999961	0.000665007
+										-0.99874	0.00887765	-0.0493838
+										-0.0493863	-0.000227108	0.99878
+										0.42921	-0.00263493	2.93856
+									}
+								}
+								{bone "head_skin"
+									{parameters "ID=body;"}
+									{Matrix34
+										0.999952	-0.00885273	-0.00414241
+										0.00885564	0.999961	0.000668054
+										0.00413707	-0.000704752	0.999991
+										-0.127047	0.0215503	-30.7084
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			{bone revolute "placement"
+				{Matrix34
+					0	1	0
+					-1	0	0
+					0	0	1
+					0.783108	0	0
+				}
+			}
+			{bone "foot1r"
+				{Matrix34
+					-0.993574	0.0113922	0.112613
+					0.112601	-0.00168383	0.993639
+					0.0115094	0.999934	0.000390052
+					-0.143518	2.17103	-0.488755
+				}
+				{bone "foot2r"
+					{Matrix34
+						0.951795	-0.306736	-0.00010452
+						0.306736	0.951795	-3.96455e-05
+						0.00011162	0	1
+						9.37831	-0.0472314	0
+					}
+					{bone "bone03"
+						{Matrix34
+							0.221381	0.973964	0.0488397
+							-0.972284	0.216583	0.0880676
+							0.0751968	-0.0669828	0.994917
+							8.74023	0.113253	0.00567937
+						}
+					}
+					{bone "foot3r"
+						{Matrix34
+							0.0880284	0.974738	0.205272
+							0.00721268	0.205443	-0.978643
+							-0.996092	0.0876285	0.0110542
+							9.2003	-0.346288	-0.0729969
+						}
+						{bone "bone05"
+							{Position 2.60015	0	0}
+						}
+					}
+				}
+			}
+		}
+		{bone revolute "foresight2rot"
+			{limits -20 20}
+			{speed 0.1}
+			{Position 13.7429	0.0246876	27.5947}
+		}
+		{bone "palm_ik_holder_right02"
+			{Matrix34
+				0.877807	-0.470519	0.0898106
+				0.420446	0.846653	0.326195
+				-0.22952	-0.248576	0.941026
+				0.107621	-10.1948	27.8378
+			}
+			{bone "palm_ik_holder_right01"
+				{Matrix34
+					0.00333611	-0.999958	0.00855821
+					-0.999992	-0.00331761	0.00210752
+					-0.00207911	-0.00856498	-0.999961
+					5.19224	0	0
+				}
+				{bone "palm_ik_holder_right"
+					{Matrix34
+						-0.963565	-0.249482	-0.0964403
+						-0.0459583	-0.200771	0.97856
+						-0.263496	0.947338	0.18199
+						0.119854	-0.164878	0.148727
+					}
+					{bone "ik_chain07"
+						{Matrix34
+							0.999956	0.00324053	-0.00886286
+							2.7597e-05	0.938188	0.346125
+							0.00943671	-0.346109	0.938147
+							0.13865	1.07072	-1.80207
+						}
+					}
+				}
+			}
+		}
+		{bone "palm_ik_holder_left02"
+			{Matrix34
+				0.878554	0.469038	0.0902555
+				0.418907	-0.847419	0.326187
+				0.229479	-0.248765	-0.940987
+				0.103727	10.2025	27.8356
+			}
+			{bone "palm_ik_holder_left01"
+				{Matrix34
+					0.00130182	-0.999932	0.0116375
+					-0.999999	-0.00131397	-0.00103856
+					0.00105374	-0.011636	-0.999932
+					5.25744	-0.000656128	-0.00162315
+				}
+				{bone "palm_ik_holder_left"
+					{Matrix34
+						0.965404	0.24925	-0.0766093
+						-0.0261239	-0.199865	-0.979475
+						-0.259446	0.947591	-0.186439
+						0.0856142	-0.338799	-0.0894661
+					}
+					{bone "ik_chain08"
+						{Matrix34
+							0.999967	-0.00286254	0.00758447
+							0.000204533	0.944171	0.329455
+							-0.00810446	-0.329442	0.944141
+							-0.0736461	1.03671	-1.8188
+						}
+					}
+				}
+			}
+		}
+		{bone "skin"
+			{parameters "ID=body;"}
+			{VolumeView "1stp.ply"}
+		}
+	}
+}

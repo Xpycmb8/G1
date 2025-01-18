@@ -1,0 +1,5 @@
+{game_entity
+	{props "delete_60" "wound_blood"}
+	{constrain ground}
+	{Extension "decal_blood_fx.mdl"}
+}

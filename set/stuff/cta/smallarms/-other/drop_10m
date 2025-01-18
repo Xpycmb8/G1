@@ -1,0 +1,37 @@
+{from "pattern bullet"
+	{tag "mgun weapon bullet"}
+	{fireSound	"weapon/armed/с4/detpack_button"}
+	{fireSoundClose	"weapon/armed/с4/detpack_button"}
+	{reloadSound "small_arms/0/"}
+	{filling "ammo drop" 1}
+	{desc "C4"}
+	{entity "semtex105"}
+	{inventory
+		{size 2 2 }
+		{link_bone "gun_back"}
+		{weight 100 }
+	}
+	{mass 0}
+	{traceFreq 4}
+	{Automatic}
+	{rechargeTime 8.0}
+	{reloadAnimBonus 3}
+	("recoveryTime" r(25))
+	{speed 400}
+	{range 10 10};F	
+	("burst_mg")
+	("spreading_low_boost")
+	("accuracy_smg_boost")
+	("recoil_high")
+	("sway_medium")
+	("health_damage_127x108" d(0))
+	{projectileDamage 0}
+	{projectileDamageTable {25 0} {50 0} {75 0} {100 0}}
+	{projectileDamageThreshold 1.1}
+	{aimingTolerance 1}	
+	{cursor "zenite_on"}
+	{cursorReloading "zenite_reload"}	
+	{crosshair "crosshair_mgun2"}
+	{crosshairReloading "crosshair_mgun2_reload"}	
+	{toplayerVignette "/texture/common/environment/lens_effects/zoom_vignette_vehicle_mg_heavy_crosshair"} 
+}

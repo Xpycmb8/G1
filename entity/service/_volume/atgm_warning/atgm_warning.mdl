@@ -1,0 +1,17 @@
+;Exported by: Xpycmb
+;Date:        Wed Apr  6 20:45:50 2022
+;File:        C:\Users\Xpycmb\Documents\3dsMax\scenes\rpg_igla.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+	}
+}
+{Volume "body"
+	{Box 4000 200 200}
+	{Bone "basis"}
+	{Position 2036.97	0	30.8271}
+}

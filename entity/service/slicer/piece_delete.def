@@ -1,0 +1,9 @@
+{game_entity
+	{extension "/properties/piece.ext"}
+	{simulation {able 1} {state 1}}
+	{constrain none}
+	{props "delete_spawn"}
+	{body
+		{permit body}
+	}
+}

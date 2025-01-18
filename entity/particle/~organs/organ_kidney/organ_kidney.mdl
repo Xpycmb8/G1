@@ -1,0 +1,31 @@
+;Exported by: 000
+;Date:        Wed Jun 04 01:38:37 2014
+;File:        D:\спасти все\3dsmax\scenes\АНТУРАЖ\ПЫТКИ\АНТУРАЖ органы мозг.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "body"
+			{Matrix34
+				0	1	0
+				0	0	-1
+				-1	0	0
+				0.0383389	-0.142903	0.334426
+			}
+			{VolumeView "body.ply"}
+		}
+	}
+}
+{Volume "body"
+	{Box 1.49653 1.30747 1.37774}
+	{Bone "body"}
+	{Matrix34
+		1	0	0
+		0	0	1
+		0	-1	0
+		0.0890342	-0.54697	0.0121262
+	}
+}

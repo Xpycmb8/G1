@@ -1,0 +1,32 @@
+;Exported by: Xpycmb
+;Date:        Tue Aug  3 16:24:10 2021
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\trace25fg.max
+{Skeleton
+	{animation
+		{sequence "tail"
+			{events 
+				{1 "start_57mm"}
+			}		
+			{autostart}
+		}
+	}
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "tail"
+			{Matrix34
+				-1	0	0
+				0	1	0
+				0	0	-1
+				-15.2537	0	0
+			}
+		}
+		{bone "trace"
+			{visibility 0}
+			{VolumeView "trace.ply"}
+		}
+	}
+}

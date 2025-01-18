@@ -1,0 +1,10 @@
+{game_entity
+	(include "/properties/construction.inc")
+	{Extension "radioactive0.mdl"}
+	{props "kristall-s" "radiation"} 
+	{Volume "body_vol"
+		{thickness 10}
+		{Tags  "body"}
+	}
+	{lodclass "decor_medium"}
+}

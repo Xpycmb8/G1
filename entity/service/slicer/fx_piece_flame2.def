@@ -1,0 +1,21 @@
+{game_entity
+	{extension "/properties/piece.ext"}
+	{simulation {able 1} {state 1}}
+	{constrain none}
+	{obstacleID "nothing"}
+	{collider "particle.fire"}
+	{volume "body"
+		{sphere 0.5}
+		{able clear {contact 1} {contact_ground 1}}
+		{bone "basis"}
+		{material "dummy"}
+	}
+	{body
+		{proper body}
+		{permit body}
+	}
+	{props "fx_piece_flame2"}
+	{extender "stuff"
+		{item "knife_v1"}
+	}
+}

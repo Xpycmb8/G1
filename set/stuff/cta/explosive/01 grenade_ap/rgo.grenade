@@ -1,0 +1,7 @@
+{from "pattern grenade_ap"
+	{tag "contact"}	
+	{desc "Граната РГО"}
+	{inventory {size 1 1}}
+	{entity "grenade_rgo"}
+	
+}

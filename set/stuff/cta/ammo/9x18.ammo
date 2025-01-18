@@ -1,0 +1,14 @@
+;// 9x18mm
+
+{bullet
+	{tag "bullet sp small stackable pierce smallarms"}
+	{inventory
+		{weight 3.3}
+		{block 50}
+		{size 1 1}
+		{fsm "belt"}
+	}
+	{mass 0.006}
+	{entity "9x18"}
+	("trace9")
+}

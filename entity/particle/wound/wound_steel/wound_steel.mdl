@@ -1,0 +1,19 @@
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "wound"
+			{parameters "CommonMesh;"}
+			{Matrix34
+				-1	0	0
+				0	1	0
+				0	0	-1
+				0.0289322	0	0
+			}
+			{VolumeView "wound.ply"}
+		}
+	}
+}

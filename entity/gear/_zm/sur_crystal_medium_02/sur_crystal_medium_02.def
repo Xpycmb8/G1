@@ -1,0 +1,41 @@
+{game_entity
+	(include "/properties/construction_small.ext")
+	{props "crystal_zm"}	
+	{collider "bush"}
+	{Volume "overlap"
+		{Able {window} {contact 0} {bullet 0} {obstacle 0} {touch 0} {overlap 1} {visible 0}}
+	}
+	{Volume "body"
+		{thickness hollow 1}
+		{material "wound_glass_small"}		
+	}
+	{Volume "burn1"
+		{thickness hollow 1}
+		{material "wound_glass_small"}		
+	}
+	{Volume "burn2"
+		{thickness hollow 1}
+		{material "wound_glass_small"}		
+	}
+	{Volume "burn3"
+		{thickness hollow 1}
+		{material "wound_glass_small"}		
+	}
+	{Extension "sur_crystal_medium_02.mdl"}	
+	{bone "ems"
+		{animation
+			{uv "run"
+				;{shiftV 0 1 0.001 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
+	{bone "ems_inside"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.05 }
+				{shiftU 0 1 0.07 }	;min max delta [pingpong]
+			}
+		}
+	}
+}

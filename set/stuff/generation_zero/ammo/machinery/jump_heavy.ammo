@@ -1,0 +1,5 @@
+{bullet
+	{tag "jump_heavy no_hit"}
+	{desc "Прыг"}
+	{inventory {noView}}
+}

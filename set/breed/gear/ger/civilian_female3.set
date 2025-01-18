@@ -1,0 +1,29 @@
+{breed
+	{behaviour soldier}
+	{skin "civilian_female3"}
+	{portrait "civilian_female"}
+	{icon "stg"}
+	{icon_priority 0}
+	{nationality woman}
+	{perks
+		(include "ability.inc")
+		("rifle_skill_rank_2")("tier2_standard")
+		("engineer")
+	}
+	{veterancy
+		(include "ability.inc")
+		("veterancy_lvl_0")
+	}
+	{inventory
+		{item "xm109_v3" filled}
+		{item "25x59 ammo" 50}
+		{item "25x59 fg ammo" 50}
+		{item "25x59 th ammo" 20}
+		{item "m67 grenade" 2.25 0.5}
+		{item "m61 grenade" 2.25 0.5}
+		{item "thermite grenade" 1.25 0.5}
+		{item "semtex grenade" 1.25 0.5}
+		{item "bandage_ger" 5.5 0.5}
+		{in_hands 0}
+	}
+}

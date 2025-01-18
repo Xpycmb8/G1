@@ -1,0 +1,10 @@
+{bullet
+	{tag "detect no_hit"}
+	{desc "Сканер"}
+	{inventory
+		{size 2 1}
+		{weight 4}
+		{block 25}
+	}
+	{entity "visor_ammo"}
+}

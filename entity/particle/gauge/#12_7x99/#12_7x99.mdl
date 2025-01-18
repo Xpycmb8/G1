@@ -1,0 +1,20 @@
+{Skeleton
+	{bone "#12_7x99"
+		{Orientation
+			1.2	0	0
+			0	-1.2	0
+			0	0	1.2
+		}
+		{VolumeView "#12_7x99.ply"}
+	}
+}
+{Volume "body"
+	{Cylinder 0.185042 2.00899}
+	{Bone "#12_7x99"}
+	{Matrix34
+		0	-1	0
+		0	0	1
+		-1	0	0
+		0.987104	-1.37974e-005	0
+	}
+}

@@ -1,0 +1,9 @@
+{game_entity
+	(include "/properties/traper.inc")
+	{Extension "radioactive20.mdl"}
+	{props "swamp"} 
+	{Volume "swamp" {able clear} {density 0} {depend_on_wind}}
+	{volume "crown"
+		{Able {contact 1} {bullet 0} {obstacle 0} {touch 1} {overlap 0} {visible 0}}
+	}
+}

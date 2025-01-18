@@ -1,0 +1,26 @@
+;Exported by: 12345
+;Date:        Wed Jan 16 15:45:13 2013
+;File:        D:\ÒÔ‡ÒÚË ‚ÒÂ\3dsmax\scenes\¿Õ“”–¿∆ -  –»—“¿À€ –¿ƒ»¿÷»ﬂ.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "pla02"
+			{Matrix34
+				1	0	0
+				0	1	0
+				0	0	-1
+				-0.20388	-0.807474	-1.23985
+			}
+			{VolumeView "pla02.ply"}
+		}
+	}
+}
+{Volume "crown"
+	{Cylinder 25.4337 13.636}
+	{Bone "basis"}
+	{Position 0	0	6.81802}
+}

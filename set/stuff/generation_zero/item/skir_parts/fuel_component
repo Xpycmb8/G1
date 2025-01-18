@@ -1,0 +1,11 @@
+{item
+	{tag "itemin1hands" "drop_to_vehicle_when_board"}
+	{desc "fuel_component"}
+	{entity "fuel_component"}
+	{inventory
+		{size 3 3}
+		{weight 100}
+		{fsm "belt"}
+	}
+	{mass 50}
+}

@@ -1,0 +1,15 @@
+;// 9x19mm
+
+{bullet
+	{tag "bullet sp small stackable pierce"}
+	{inventory
+		{weight 3.3}
+		{block 40}
+		{size 1 2}
+		{fsm "belt"}
+	}
+	{mass 0.008}
+;	{desc "9x19mm CZ EVO x30"}
+	{entity "mags30_cz_evo"}
+	("trace9")
+}

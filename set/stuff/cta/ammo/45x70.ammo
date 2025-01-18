@@ -1,0 +1,13 @@
+{bullet
+	{tag "bullet big hmgun stackable pierce ap slug smallarms"}
+	{desc ".45-70"}
+	{inventory
+		{weight 3.3}
+		{block 30}
+		{size 2 1}
+		{fsm "belt"}
+	}	
+	{mass 0.040}
+	{entity "ammo45x70"}
+	("trace127_slug")
+}

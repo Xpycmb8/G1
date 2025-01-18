@@ -1,0 +1,15 @@
+{game_entity
+	{extension "/properties/piece.ext"}
+	{simulation {able 1}}
+	{constrain none}
+	{props "dummy" "ps_dummy" "oil_drop" "delet_t5"}
+	{collider "particle"}
+	{obstacleid "nothing"}
+	{volume "body"
+		{sphere 0.3}
+		{able clear {contact 1} {contact_ground 1}}
+		{bone "basis"}
+		{material "dummy"}
+	}
+	{mass 1}
+}

@@ -1,0 +1,11 @@
+;SDL
+(include "stuff_small.ext")
+{props "grenade" "steel"}
+{volume "body" 
+	{thickness 3}
+}
+{simulation {able 1} }
+{collider "grenade"}
+{lodclass "stuff_small"}
+{simulatorId "grenade"}
+{body {proper body sensible} {permit body}}

@@ -1,0 +1,9 @@
+{game_entity
+	{extension "/properties/piece.ext"}
+	{simulation {able 1}}
+	{constrain none}
+	{props "dummy" "wood" "small" "part" "nocover" "wood_plate" "burning" "hit_small_wood" "blast_physics" "small_wood_crushed"}
+	{collider "particle.small"}
+	{obstacleid "nothing"}
+	{mass 120}
+}

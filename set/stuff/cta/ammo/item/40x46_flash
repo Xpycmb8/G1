@@ -1,0 +1,26 @@
+{bullet
+	{tag "bullet ammo grenade dropboxed flashbang 40mm_grenade_flash_set"}	
+	{desc "40 MM Flash"}
+	{entity "40mm_flash"}
+	{inventory
+		{weight 100}
+		{size 2 1}
+	}
+	{damage blastwave
+		{ground_interaction_radius 1}
+		{energy 2.5}
+		{area 1.5 3.0}
+	}
+	{damage add blastwave
+		{ground_interaction_radius 1}
+		{energy 0.8}
+		{area 2.5 3.0}
+	}
+  	{mass 0.023}
+
+	{possibleDamageRadius 5}
+	
+	{view "grenade_40mm"
+		{tail "grenade_tail" "tail"}
+	}
+}

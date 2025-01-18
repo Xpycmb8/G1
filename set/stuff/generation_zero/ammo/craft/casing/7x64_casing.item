@@ -1,0 +1,12 @@
+{item
+	{entity "casing_bullet7x64"}
+	{tag "craft"}
+	{desc "Casing 7x64(craft)"}
+	{mass 0.003} ;casing
+	{inventory
+		{weight 5}
+		{block 5}
+		{size 1 1}
+		{fsm "belt"}
+	}	
+}

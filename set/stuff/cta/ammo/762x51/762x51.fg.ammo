@@ -1,0 +1,15 @@
+;// 7.62x51mm Incendiary
+ 
+{bullet
+	{tag "bullet sm_ic 7x51 normal stackable pierce os"}
+	{desc "7.62x51 Incendiary"}
+	{inventory
+		{weight 2}
+		{block 50}
+		{size 2 1}
+		{fsm "belt"}
+	}	
+	{mass 0.010}
+	{entity "7x51ic"}
+	("trace7")
+}

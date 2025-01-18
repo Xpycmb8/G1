@@ -1,0 +1,6 @@
+{item
+	{tag "battery"}
+	{desc "Заряд"}
+	{inventory {noView}}
+	{mass 0.1}
+}

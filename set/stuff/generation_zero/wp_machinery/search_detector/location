@@ -1,0 +1,13 @@
+;SDL
+{from "pattern gun"
+	{tag "visor"}
+	{filling "light" 0}
+	{inventory {noView}}
+	{foresight "foresight_signal"}
+	{aimRange 500}				; m
+	{gravity 0}
+	{speed 800}			; m/s
+    {AimingTolerance 3}			; degree
+	{cursor "cannon_on"}
+}
+

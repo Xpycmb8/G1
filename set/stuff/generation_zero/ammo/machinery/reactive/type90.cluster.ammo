@@ -1,0 +1,12 @@
+{bullet
+	{tag "detect" "cluster"}
+	{inventory
+		{weight 100}
+		{block 30}
+		{size 5 1}
+		{fsm "belt"}
+	}
+	{view "type_90_proj_cluster"
+	} 
+	{entity "type90_ammo_cluster"}
+}

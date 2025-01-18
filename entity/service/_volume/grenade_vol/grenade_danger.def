@@ -1,0 +1,5 @@
+{game_entity
+	(include "/properties/open_gas.inc")
+	{props "grenade_danger"} 
+	{Extension "gr_vol.mdl"}
+}

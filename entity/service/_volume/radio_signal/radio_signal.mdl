@@ -1,0 +1,19 @@
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+	}
+}
+{Volume "radio_signal"
+	{Cylinder 5000 5000}
+	{Bone "basis"}
+	{Matrix34
+		0.892657	0	0
+		0	0.892657	0
+		0	0	-2.092657
+		2.10879	0.807475	-34.8236
+	}
+}

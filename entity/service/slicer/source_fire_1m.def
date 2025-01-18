@@ -1,0 +1,17 @@
+{game_entity
+	{Body
+		{proper sensible}
+	}
+	{volume "body"
+		{sphere 1}
+		{bone "root"}
+		{able clear}
+	}
+	{props "source_fire_1m"}
+	{extender "speaker"
+		{soundName "world/birds"}
+		{loop}
+		{recoveryTime 20 5}
+		{signalDepend "shot explosion movement"}
+	}
+}

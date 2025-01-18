@@ -1,0 +1,15 @@
+{game_entity
+	{extension "/properties/piece.ext"}
+	{simulation {able 1}}
+	{constrain none}
+	{props "dummy" "steel" "medium" "part" "sound_fall_metalls" "hit_medium" "crushed_steel"}
+	{collider "particle.small"}
+	{obstacleid "nothing"}
+	{mass 45}
+	{volume "end_crush"
+		{sphere 0.01}
+		{Tags  "end_crush"}		
+		{able clear {contact 0} {contact_ground 1}}
+		{bone "basis"}
+	}
+}

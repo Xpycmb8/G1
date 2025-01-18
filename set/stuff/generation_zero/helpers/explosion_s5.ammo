@@ -1,0 +1,16 @@
+{bullet
+	{tag "ammo shell_minimum fg"}
+	{inventory
+		{noView}
+	}
+	{mass 1}
+	{damage blastwave    
+		{energy 1}
+		{area 3 7}
+	}		
+ 	{damage flash
+		{radius 6 4} ; full flash radius, shorter flash radius
+		{duration 1.4 1.0} ; max duration, min duration
+	}
+	{entity "explosion_s5"}
+}

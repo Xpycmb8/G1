@@ -1,0 +1,40 @@
+{from "pattern throwable"
+	{tag "smallitemin1hand" "grenade"  "c4_explosive" "explosion_spawn"}
+	{desc "C4 T"}
+	{special
+		{PrepareTime 18}
+		{PrepareCursor "grenade"}
+		{mode detonate}
+	}
+	{throw
+		{range 5.9}
+		{startAngle 50}
+	}		
+	{entity "c4_explosive_blasted"}
+	{inventory
+		{size 2 2}
+		{weight 100}
+		{fsm "belt"}
+	}
+	{mass 2}
+	{damage fire
+		{radius 3}
+		{heating 2}
+		{time 2}
+	}
+	{damage blastwave
+		{ground_interaction_radius 0.0}
+		{energy 45}
+		{area 1 5}
+	}
+	{damage add blastwave
+		{ground_interaction_radius 0.0}
+		{energy 2}
+		{area 5 15}
+	}
+	{damage add blastwave
+		{ground_interaction_radius 0.0}
+		{energy 0.9}
+		{area 12 17}
+	}
+}

@@ -1,0 +1,12 @@
+{bullet
+	{tag "ptr pierce bullet"}
+	{tag "bullet_fx size3"}
+	{inventory
+		{size 2 1}
+		{weight 20}
+		{block 5}
+	}
+	{entity "atrifle_rus"}
+	{mass 0.2}
+	("trace12ap")
+}

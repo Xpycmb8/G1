@@ -1,0 +1,14 @@
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+	}
+}
+{Volume "crown"
+	{Cylinder 90 90}
+	{Bone "basis"}
+	{Position 0 0 0}
+}

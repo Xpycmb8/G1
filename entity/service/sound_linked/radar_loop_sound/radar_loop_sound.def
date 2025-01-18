@@ -1,0 +1,3 @@
+{game_entity
+	{props "sound_link" "radar_loop_sound"} 
+}

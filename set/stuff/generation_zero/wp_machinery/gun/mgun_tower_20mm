@@ -1,0 +1,101 @@
+{from "pattern bullet"
+	{tag "weapon build_in gun 20mm"}
+	{inventory
+		{size 2 2}
+		{weight 1000}
+	}
+	{mass 1000}
+	{filling "bullet20_dread" 800}
+	{foresight "Foresight_mg"}					; bone for muzzleflash fx
+	;{fireSound ""}
+	{reloadSound "gun_small/"}
+	{rechargeTime 16}
+	{RelaxationTime 0.1}						; время ожидания после изменения цели прицеливания
+	{FiringTimeout 0.35 0.15}					; delay between bursts
+	{preloaded}
+	{gravity 0.1}	
+	{speed 600}
+	("recoveryTime" r(800))
+	{calibre 24}
+	{Automatic}
+	{minRange 5}
+	{range 500 550}
+	{parameters "sp"
+		{burst
+			{min 2}
+			{short 8 12}
+			{long 24 30}
+		}
+		{healthDamage 500}
+		(mod "hardcore"
+			{healthDamage 650}
+		)
+		{SpreadTolerance 0.6}
+		{range 500 550}
+		{projectileDamageThreshold 1.10}
+		("accuracy_zenite_high_mount_sp")
+		("speed" s(600))	
+		{projectileDamage 35}
+		{minimumDamageModifier 20}
+		{projectileDamageTable {50 25} {100 23} {200 20} {350 16} {600 11} {1000 1}}
+	}
+	{parameters "fg"
+		{burst
+			{min 2}
+			{short 4 8}
+			{long 10 14}
+		}
+		{healthDamage 750}
+		(mod "hardcore"
+			{healthDamage 900}
+		)
+		{SpreadTolerance 0.6}
+		{range 400 450}
+		{projectileDamageThreshold 1.10}
+		("accuracy_zenite_high_mount_fg")
+		("speed" s(600))	
+		{projectileDamage 7}
+		{minimumDamageModifier 3}
+		{projectileDamageTable {50 7} {100 7} {200 5} {350 3} {600 2} {1000 0}}
+	}
+	{parameters "ap"
+		{burst
+			{min 2}
+			{short 4 2}
+			{long 8 4}
+		}
+		{healthDamage 750}
+		(mod "hardcore"
+			{healthDamage 900}
+		)
+		{SpreadTolerance 0.6}
+		{range 700 800}
+		{projectileDamageThreshold 1.10}
+		("accuracy_zenite_high_mount_sp")
+		("speed" s(1150))	
+		{projectileDamage 50}
+		{minimumDamageModifier 35}
+		{projectileDamageTable {50 50} {100 45} {200 37} {350 32} {600 25} {1000 12} {1500 3}}
+	}
+	{cursor "zenite_on"}
+	{cursorReloading "zenite_reload"}	
+	{curve "gun_std"}
+	{RicochetEnergyDamping						; penetration energy damping after ricochet (angle - damping)
+		{0	1}
+		{20	1}
+		{30	0.8}
+		{45	0.4}
+		{60	0}	
+	}
+	
+	{OvermatchDamping							; [??] (angle - damping)
+		{0 1}
+		{30 1.1}
+		{55	1.15}
+		{60	1.45}
+		{70	4}
+		{90	6}
+	}
+	{crosshair "crosshair9"}
+	{crosshairReloading "crosshair9_reload"}
+}

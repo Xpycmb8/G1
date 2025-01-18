@@ -1,0 +1,9 @@
+{bullet
+	{tag "bullet th_proj noview"}
+	{entity "shell_5m_fg"}
+	{inventory
+		{weight 100}
+		{size 5 1}
+	}	
+	{mass 0.038}
+}

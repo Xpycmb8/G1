@@ -1,0 +1,7 @@
+{from "pattern throwable"
+	{throw
+		{range 25}
+		{startAngle 22.5}
+		{spreading 0.1}
+	}
+}

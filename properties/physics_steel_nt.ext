@@ -1,0 +1,8 @@
+(include "physics_generic.ext")
+
+{props "steel" "break_action" "big_props"}
+{mass 250}
+{collider "particle.small"}
+{volume "body"
+	{thickness 1}
+}

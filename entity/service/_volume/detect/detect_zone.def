@@ -1,0 +1,19 @@
+{actor
+	{Extension "detect_zone.mdl"}
+	{able "-select"}
+	{obstacleid "unbreakable"}	
+	{collider "bush"}
+	{volume "crown"
+		{Able {contact 0} {bullet 0} {throwing 0} {obstacle 0} {touch 0} {overlap 1}}
+		{bone "basis"}
+		{material "dummy"}
+	}
+	{sensor
+		{visor "main"
+    		{vision "flag_point"}
+			{bone "basis"}
+		}
+		{operatableRequired 0}
+   	}
+	{props "detect_zone"} 	
+}

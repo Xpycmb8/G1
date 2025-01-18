@@ -1,0 +1,13 @@
+{bullet 
+	{tag "bullet small_arms stackable pierce"}
+	{tag "bullet_fx size2"}
+	{inventory
+		{weight 5.50}
+		{block 25}
+		{size 2 1}
+		{fsm "belt"}
+	}
+	{entity "chauchat_ammo"}
+	{mass 0.03}
+	("trace5")
+}

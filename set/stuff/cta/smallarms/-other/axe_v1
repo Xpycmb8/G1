@@ -1,0 +1,27 @@
+{from "pattern bullet"
+	{tag "weapon bullet smallitemin1hand crowbar"}
+	{entity "crowbar_v2"}
+	{filling "ammo 12gauge" -1}
+	{inventory
+		{size 6 2 }
+		{link_bone "gun_back"}
+		{weight 100 }
+	}
+	{mass 3}
+	{traceFreq 0}
+	{Automatic}
+	{rechargeTime 1.0}
+	("recoveryTime" r(120))
+ 	("speed" s(900 ))
+	("burst_assault")
+	("spreading_high_boost")
+	("accuracy_assault_boost2")
+;	("accuracy_boost")
+	("recoil_medium_boost")
+	("sway_medium")	
+	("health_damage_545x39" d(900))	
+	{projectileDamage 5}
+	{projectileDamageClip 5}
+	{projectileDamageTable {50 5} {250 0}}
+	{range 12 12}
+}

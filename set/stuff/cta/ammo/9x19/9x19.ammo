@@ -1,0 +1,15 @@
+;// 9x19mm
+
+{bullet
+	{tag "bullet sp small stackable pierce"}
+;	{desc "9х19 ПС\n<c(ff0010)>Пробитие <c(ffffff)>-<c(ffffff)><c(10ff01)>3мм на 50м\n<c(ffffff)>"}
+	{inventory
+		{weight 3.3}
+		{block 50}
+		{size 1 1}
+		{fsm "belt"}
+	}
+	{mass 0.008}
+	{entity "mags10_9x19"}
+	("trace9")
+}

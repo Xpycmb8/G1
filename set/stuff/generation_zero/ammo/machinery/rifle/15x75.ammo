@@ -1,0 +1,22 @@
+{bullet
+	{tag "ammo bullet pierce stackable zenite cs ap heavy_zenite smallarms_heavy"}
+	{desc "15x75 CS"}
+	{cumulative 3}
+	{possibleDamageRadius 2}
+	{inventory
+		{weight 3.3}
+		{block 30}
+		{size 1 1}
+		{fsm "belt"}
+	}
+	{mass 0.34}
+	{damage blastwave
+		{ground_interaction_radius 0.0}
+		{energy 4}
+		{area 0.1 0.12}
+	}	
+	{view "xm53_proj"
+		{tail "grenade_tail" "tail"}
+	}
+	{entity "xm109_mags_ap"}
+}

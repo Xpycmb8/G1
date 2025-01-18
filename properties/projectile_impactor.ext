@@ -1,0 +1,41 @@
+actor
+{able "-select"}
+{brain "actor"
+	{state "animal"}
+}	                  	
+{props "steel" "stuff" "collectable" "nocover" "projectile_impactor"}	
+{Chassis "human_carrier"		
+	{locomotion			
+		{StopTime	0.2}			
+		{BrakeTime	0.7}			
+		{TurnRadius	3}			
+		{TurnStart	0.8}			
+		{TurnStop	0.5}			
+		{Gears		0.35 0.5 0.7 1.0}			
+		{RearGears	0.33 0.5}			
+		{MaxSpeed	1}			
+		{StartTime	1}			
+		{TurnTime	2}			
+		{TurnRadius	2}	
+	}
+}		
+{extender "stuff"}	
+{volume "body"		
+	{able clear {visible} {bullet} {contact_ground} {contact} {blast} {select 0} {touch 0}}	
+	{thickness 0}	
+}	
+{volume "select"		
+	{able clear {select 0} {touch 0}}		
+	{density 0}	
+}		
+{obstacleID "stuff"}
+{simulation {able 1} {disableLinked 1}}	
+{constrain ground}	
+{simulatorId "grenade"}
+{lodclass "part_big"}
+{body
+	{proper body sensible} 
+	{permit body}
+}	
+{collider "grenade"}	                                                    		
+{targetClass 	"human"}		

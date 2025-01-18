@@ -1,0 +1,50 @@
+{from "pattern bullet"
+	{tag "smg assaultrifle weapon bullet to_hand silenced mg_series 100_bullet mgun_silenced_set heat50 autoshot ar_metal_magazine"}
+	{entity "mgun_skir_762"}
+	{reloadSound "clear/ar/"}	
+	("clickSound_ar")
+	{filling "ammo 6x45" 75}
+	{inventory
+		{size 7 2 }
+		{link_bone "gun_back"}
+		{weight 100 }
+	}
+	{mass 4}
+	{calibre 5.56}
+	{traceFreq 0}
+	{rechargeTime 5.0}
+	("recoveryTime" r(950))
+	{Automatic}
+	("spreading_high_boost")
+	("recoil_medium_mgun")
+	("sway_medium")
+	{speed 948}
+	{minRange 4}
+	{burst
+		{short 12 6}			; short burst shots on long distance, rand (+-)shots
+		{long 24 12}			; long burst shots on short distance, rand (+-)shots
+		{rangeKoef 0.5}		; rangeKoef * aimRange = max long burst distance
+	}
+	{parameters "sp"
+		("accuracy_mg_med_sp_556")
+		("health_damage_556x45" d(884))	
+		{range 250 290};F	
+		("speed" s(750))	
+		("projectileDamage_556x45_sp")
+		
+	}
+	{parameters "ap"
+		("accuracy_mg_med_ap_556")
+		("health_damage_556x45" d(950))
+		("projectileDamage_556x45_ap")
+		{range 320 360};F	
+		("speed" s(1114))
+	}
+	{parameters "os"
+		("accuracy_mg_med_fg_556")
+		("health_damage_556x45" d(884))
+		("projectileDamage_556x45_fg")
+		{range 210 250};F	
+		("speed" s(650))
+	}
+}

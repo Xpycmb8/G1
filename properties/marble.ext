@@ -1,0 +1,146 @@
+	{props  "concrete" "marble_frame" }
+	{collider "particle.big"}
+	{obstacleID "building"}
+	; {constrain ground}
+	; {lodclass "decor_small"}
+	{simulation {able 1} {disableLinked 1}}
+	; {body {permit body}}
+	; (define "armor_wound"
+		; {armor
+			; {setting "body"
+				; {threshold
+					; {pierce 
+						; {value 1}
+					; }
+				; }
+				; {volumes "*"}
+			; }
+		; }
+	; )
+	; ("armor_wound")	
+	{Volume "body"
+		{material "wound_glass"}
+		{able {window} {blockcamera 1}}
+		{Tags  "body"}		
+		{Thickness hollow 0.5}
+	}
+	{Volume "broken_00"
+		{material "wound_glass"}
+		{able {window} {blockcamera 1}}
+		{Tags  "shard"}		
+		{Thickness hollow 0.5}
+	}
+	{Volume "broken_01"
+		{material "wound_glass"}
+		{able {window} {blockcamera 1}}
+		{Tags  "shard"}		
+		{Thickness hollow 0.5}
+	}
+	{Volume "broken_02"
+		{material "wound_glass"}
+		{able {window} {blockcamera 1}}
+		{Tags  "shard"}		
+		{Thickness hollow 0.5}
+	}
+	{Volume "broken_03"
+		{material "wound_glass"}
+		{able {window} {blockcamera 1}}
+		{Tags  "shard"}		
+		{Thickness hollow 0.5}
+	}
+	{Volume "broken_04"
+		{material "wound_glass"}
+		{able {window} {blockcamera 1}}
+		{Tags  "shard"}		
+		{Thickness hollow 0.5}
+	}
+	{Volume "broken_05"
+		{material "wound_glass"}
+		{able {window} {blockcamera 1}}
+		{Tags  "shard"}		
+		{Thickness hollow 0.5}
+	}
+	{Volume "broken_06"
+		{material "wound_glass"}
+		{able {window} {blockcamera 1}}
+		{Tags  "shard"}		
+		{Thickness hollow 0.5}
+	}
+	{Volume "broken_07"
+		{material "wound_glass"}
+		{able {window} {blockcamera 1}}
+		{Tags  "shard"}		
+		{Thickness hollow 0.5}
+	}
+	{Volume "broken_08"
+		{material "wound_glass"}
+		{able {window} {blockcamera 1}}
+		{Tags  "shard"}		
+		{Thickness hollow 0.5}
+	}
+	{Volume "broken_09"
+		{material "wound_glass"}
+		{able {window} {blockcamera 1}}
+		{Tags  "shard"}		
+		{Thickness hollow 0.5}
+	}
+	{Volume "broken_10"
+		{material "wound_glass"}
+		{able {window} {blockcamera 1}}
+		{Tags  "shard"}		
+		{Thickness hollow 0.5}
+	}
+	{Volume "broken_11"
+		{material "wound_glass"}
+		{able {window} {blockcamera 1}}
+		{Tags  "shard"}		
+		{Thickness hollow 0.5}
+	}
+	{Volume "broken_12"
+		{material "wound_glass"}
+		{able {window} {blockcamera 1}}
+		{Tags  "shard"}		
+		{Thickness hollow 0.5}
+	}
+	{Volume "broken_13"
+		{material "wound_glass"}
+		{able {window} {blockcamera 1}}
+		{Tags  "shard"}		
+		{Thickness hollow 0.5}
+	}
+	{Volume "broken_14"
+		{material "wound_glass"}
+		{able {window} {blockcamera 1}}
+		{Tags  "shard"}		
+		{Thickness hollow 0.5}
+	}
+	{Volume "broken_15"
+		{material "wound_glass"}
+		{able {window} {blockcamera 1}}
+		{Tags  "shard"}		
+		{Thickness hollow 0.5}
+	}
+	{Volume "broken_16"
+		{material "wound_glass"}
+		{able {window} {blockcamera 1}}
+		{Tags  "shard"}		
+		{Thickness hollow 0.5}
+	}
+	{Volume "broken_17"
+		{material "wound_glass"}
+		{able {window} {blockcamera 1}}
+		{Tags  "shard"}		
+		{Thickness hollow 0.5}
+	}
+	{Volume "broken_18"
+		{material "wound_glass"}
+		{able {window} {blockcamera 1}}
+		{Tags  "shard"}		
+		{Thickness hollow 0.5}
+	}
+	{Volume "broken_19"
+		{material "wound_glass"}
+		{able {window} {blockcamera 1}}
+		{Tags  "shard"}		
+		{Thickness hollow 0.5}
+	}

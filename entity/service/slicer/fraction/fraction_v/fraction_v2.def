@@ -1,0 +1,8 @@
+{game_entity
+	(include "/properties/physics_generic.ext")
+	{Extension "fraction_v.mdl"}
+	{props "fraction_s"}
+	{extender "stuff"
+		{item "fraction_v"}
+	}
+}

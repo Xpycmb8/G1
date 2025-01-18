@@ -1,0 +1,8 @@
+{game_entity
+	{Extension "#5_56x45.mdl"}
+	{props "steel" "ps_dummy" "shell556" "shells_guns" "delet_t15"}
+	{collider "stuff"}
+	{lodclass "stuff_small"}
+}
+
+

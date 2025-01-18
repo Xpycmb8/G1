@@ -1,0 +1,15 @@
+;// 7.62x39mm
+
+{bullet
+	{tag "bullet sp normal stackable pierce smallarms"}
+	{inventory
+		{weight 2}
+		{block 50}
+		{size 2 1}
+		{fsm "belt"}
+	}	
+	{mass 0.008}
+	{desc "300 AAC Blackout"}
+	{entity "762x51"}
+	("trace7")
+}

@@ -1,0 +1,17 @@
+{bullet
+	{tag "ammo"}
+	{tag "no_crater"}
+	{inventory
+		{noView}
+	}
+	{mass 1}
+ 	{damage blastwave    
+		{energy 0.3}
+		{area 4 8}
+	}		
+	{damage flash
+		{radius 5 3} ; full flash radius, shorter flash radius
+		{duration 2 1} ; max duration, min duration
+	}
+	{entity "damage_impact"}
+}

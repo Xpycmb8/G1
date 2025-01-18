@@ -1,0 +1,29 @@
+;SDL
+game_entity
+{Skeleton
+	{TexMods
+		{"burned"		"burned"	}
+		{"_burned0"		"burned"	}
+		{"_burned1"		"burned2"	}
+		{"_burned2"		"broken"	}
+		{"_crushed"		"crushed"	}
+	}
+}
+
+{props "stuff" "not_touch" "physics" "local_physics"}
+
+{volume "body"
+	{able clear {visible} {bullet} {select} {contact_ground} {touch} {contact} {blast} {obstacle}}
+	{thickness 1}
+}
+{volume "select"
+	{able clear {select}}
+	{density 0}
+}
+(include "wound_def.ext")
+{collider "particle.small"}
+{obstacleID "stuff"}
+{constrain ground}
+{lodclass "decor_small"}
+{simulation {able 1}}
+{body {permit body}}

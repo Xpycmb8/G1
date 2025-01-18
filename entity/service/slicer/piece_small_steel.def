@@ -1,0 +1,17 @@
+{game_entity
+	(include "/properties/small_part_harmless.inc")
+	{extension "/properties/piece.ext"}
+	{props "dummy" "steel" "small" "nocover" "ps_dummy" "hit_small"}
+	{collider "particle.small"}
+	{simulation {able 1}}
+	{body
+		{permit body}
+	}
+	{volume "body"
+		{sphere 0.1}
+		{able clear {contact 1} {contact_ground 1}}
+		{bone "basis"}
+		{material "steel"}
+	}
+	{mass 20}
+}

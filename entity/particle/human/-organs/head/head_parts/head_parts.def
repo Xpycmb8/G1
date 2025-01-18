@@ -1,0 +1,42 @@
+{Game_entity
+	(include "/properties/small_part.inc")
+	{props "ps_dummy" "flesh" "head_blam" "blood_par" "delet_t120"}
+	{Extension "head_parts.mdl"}
+	{mass 2}
+	{Volume "part00"
+		{material "flesh"}				
+		{tags "blood_par"}
+	}
+	{Volume "part01"
+		{material "flesh"}				
+		{tags "blood_par"}
+	}
+	{Volume "part02"
+		{material "flesh"}				
+		{tags "blood_par"}
+	}
+	{Volume "part03"
+		{material "flesh"}				
+		{tags "blood_par"}
+	}
+	{Volume "part04"
+		{material "flesh"}				
+		{tags "blood_par"}
+	}
+	{Volume "part05"
+		{material "flesh"}				
+		{tags "blood_par"}
+	}
+	{Volume "part06"
+		{material "flesh"}				
+		{tags "blood_par"}
+	}
+	{Volume "part07"
+		{material "flesh"}				
+		{tags "blood_par"}
+	}
+	{Volume "part08"
+		{material "flesh"}				
+		{tags "blood_par"}
+	}
+}

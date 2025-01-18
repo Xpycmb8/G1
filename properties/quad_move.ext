@@ -1,0 +1,314 @@
+actor
+
+
+{lodclass "vehicle_big"}
+{obstacleID "human"}
+{PatherID	"scout_base"}
+
+
+
+
+
+
+
+{Collider "moto"}
+
+{able "fight" "minimap" }
+
+{targetClass "machinery"} ;; select for best ammo
+{targetSelector "baze_machinery"}
+
+
+
+
+(include "accuracy_by_motion.inc")
+
+{mass 100}
+{props "steel" "baze_machinery" "obstacle_ignore_height" }
+
+
+
+;{props "steel" "nocover"}
+{simulation {able 1}}
+{autooperatable 1}
+
+
+;{boarder}
+{extender "talk"
+	{talker "machinery"}
+}
+
+
+{placer{crew 0}}
+{brain "vehicle"
+	{state "vehicle"}
+	{const "crush/min_danger_zone_time"		1}
+	{const "crush/min_danger_zone_length"	1}
+	{const "bomb/detect_explosives" 25}		;// detect explosives inside 7 meter radius
+	{const "bomb/detect_grenades" 	15}		;// detect grenades inside 5 meter radius
+	{const "bomb/danger_zone" 		27}		;// hide if danger is more than "x" meters away, otherwise run away
+}
+   
+{hearingBias 1} 	;// reduces units ability to hear sound signals. value = meters
+
+;{brain	{control 0}}
+
+{extender "detail"
+	{random}
+}
+
+{Sensor
+	{Visor "eyes"
+		{vision "main_scaner"}
+		{bone "visor"}
+	}
+	; {Visor "peripheral"
+		; {vision "human_peripheral"}
+		; {bone "visor"}
+	; }
+	{Visor "hearing"
+		{vision "noise_detection"}
+		{bone "hips"}
+	}	
+	; {Visor "telescope"}
+	{AttackZone 90}
+	{MinRecognizeTime 0.01}
+	{RecognizeTime 0.01}
+	{InformRange 1000 1500}		;first - AI ;second - USER
+}
+
+{extender "inventory"
+	{box
+		{Size 4 4}
+		{Weight 100}
+		;{item "" 1}		
+	}
+}
+
+(define "restore_ik_time"
+	{RestoreIKTime 1}
+)
+
+{Weaponry
+	{place "mgun"
+		{RestoreIKAfterAim}	
+		{Rotate}
+		{basic} 		
+	}
+	{place "mgun_head"
+		{RestoreIKAfterAim}	
+		{Rotate}
+		{basic} 		
+	}
+	{ManualAccuracy 1.5}
+	{ManualAccuracyZoom 2}
+}
+
+(define "vision_mode"
+	{extender "vision_mode"
+		{timer_object
+			{tag			"%tag"}
+			{active_time	%time}
+			{recharge_rate	0.1}
+			{type			"recharge"}
+		}
+	}
+)
+
+(define "chassis_defaults"
+	{speed
+		{Slow	10	}	;// km/h
+		{Normal	17	}
+		{Fast	30	}
+	}
+	{FuelBag
+		{volume 200}	; liters
+		{rate	20}		; liters per kilometer
+		{remain 200}
+		{fuel "fuel"}
+	}
+)
+
+(define "Speed"
+	{Fast (* 0.8 %s)}
+	{MaxSpeed %s}
+	;{maxSpeedAtMaxTurn (* 0.3 %s)}
+)
+
+
+
+(define "movement"
+	{Chassis "human_carrier"
+		{Locomotion 
+			{Slow   %slow }   
+			{Normal %normal }
+			{Fast   %fast }
+			{maxspeed %maxspeed}
+			{maxSpeedAtMaxTurn %maxspeed_atmaxturn}
+    		{TurnStart 		%turnstart} 
+    		{TurnStop		%turnstop}
+			{TurnRadius		%turnradius}
+			{TurnTime		%turntime}			
+			{StartTime		%starttime}			
+    		{StopTime		%stoptime} 			
+    		{BrakeTime		%braketime} 
+			
+			{MaxSlope 	240}																							
+			{FallSlope 	240}			
+		}
+		{FuelBag
+			{volume %fuelbag_vol}						
+			{rate %rate}
+			{remain %remain}						
+			{fuel "%fuel"}						
+		}		
+		{ignorePatherBounds}
+		{disableBackward}
+	}
+)
+
+(define "armor_wound"
+	{armor
+		{setting "body"
+			{threshold
+				{pierce 
+					{value 1}
+				}
+				{blast
+					{koef  0.5}
+				}
+			}
+			{volumes "*"}
+		}
+	}
+)
+("armor_wound")	
+(define "part"
+	{volume %0
+		{tags %0}
+		{component %0}
+		{thickness 0.5}
+		{able {visible 0}}
+	}
+)
+
+("part" args "part")
+("part" args "part1")
+("part" args "part2")
+("part" args "part3")
+("part" args "part4")
+("part" args "propeller")
+("part" args "propeller1")
+("part" args "propeller2")
+("part" args "propeller3")
+
+
+{volume "transmission"
+	{tags "transmission"}
+	{component "transmission"}
+}
+
+{volume "body"
+	{component "body"}
+	{tags "body"}
+}
+{volume "cap"
+	{tags "cap"}
+}
+
+{volume "engine"
+	{component "engine"}
+	{tags "engine"}
+	{thickness 1}
+}
+{Volume "fuel_small"
+	{material "steel"}
+	{thickness 7}
+	{tags "fuel_small" }
+	{component "fuel_small"}
+}
+
+{perks
+	{component "body"
+		{category "car_light"}
+	}
+	{component "turret"
+		{category "turret_light"}
+	}
+	{component "head"
+		{category "car_light"}
+	}
+	{component "back_engine_organ"
+		{category "engine_light"}
+	}
+	{component "engine"
+		{category "engine_light"}
+	}
+	{component "fuel"
+		{category "engine_light"}
+	}
+	{component "fuel_small"
+		{category "engine_light"}
+	}
+	{component tag "wheel"
+		{category "wheel_light"}
+	}
+	{component tag "radiator"
+		{category "radiator"}
+	}
+	{component tag "horizontal_drive"
+		{category "horizontal_drive"}
+	}
+	{component tag "vertical_drive"
+		{category "vertical_drive"}
+	}
+	{component tag "visor_head"
+		{category "visor"}
+	}
+	{component tag "visor_body"
+		{category "visor"}
+	}
+	{blastwave_modifier 30.0}
+}
+
+
+
+(define "ems_volume"
+	{volume "%0"
+		{tags "no_burn"}
+		{able
+			{window}
+			{contact 0} {contact_ground 0}
+			{bullet 0} {throwing 0} {obstacle 0}
+			{overlap 0} {visible 0}
+			{touch 0}
+		}
+		{density 0}
+	}
+)
+("ems_volume" args visor_ems)
+("ems_volume" args fx_tail)
+
+
+{component "cpu"
+	{RepairTime 5}
+	{tags "cpu"}
+}
+
+{component "engine"
+	{RepairTime 5}
+	{tags "engine"}
+}
+
+{component "ammo"
+	{RepairTime 5}
+	{tags "ammo"}
+}
+
+{component "body"
+	{RepairTime 5}
+	{tags "body"}
+}
+
+
+{RimLight}

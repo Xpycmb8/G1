@@ -1,0 +1,19 @@
+{from "pattern bullet"
+	{tag "mgun weapon bullet to_hand"}
+	{filling "ammo slope" 1000}
+	{inventory
+		{size 1 1 }
+		{weight 100 }
+	}
+	{range 500 500}
+	{mass 1}
+	{traceFreq 1}
+	{Automatic}
+	{calibre 1}
+	{rechargeTime 10}
+	{recoveryTime 10}
+ 	{speed 25}
+	{spreading 
+		{radiusTable {1 50} {3 75} }
+	}		
+}

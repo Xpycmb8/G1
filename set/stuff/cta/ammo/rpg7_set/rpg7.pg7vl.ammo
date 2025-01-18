@@ -1,0 +1,26 @@
+{bullet
+	{tag "ammo rocketlauncher shell ap dropboxed cumulative 90mm pierce pg7vl no_ricochet"}
+;	{desc "ПГ-7ВЛ «Луч»/7П16"}
+	{entity "pg7vl_ammo"}
+	{view "pg7vl_ammo_proj"
+		{tail "rpg7_tail_fx" "tail"}
+	} 
+	{cumulative 3.0}
+	{possibleDamageRadius 3}
+	{inventory
+		{link_bone "ammo_back_right"}
+		{weight 100}
+		{size 5 1}
+	}	
+	{mass 2.6}
+	{damage blastwave
+		{ground_interaction_radius 0.0}
+		{energy 1}
+		{area 2 8}
+	}
+	{damage add blastwave
+		{ground_interaction_radius 0.0}
+		{energy 3}
+		{area 1 3}
+	}
+}

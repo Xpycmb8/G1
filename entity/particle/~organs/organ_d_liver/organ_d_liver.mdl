@@ -1,0 +1,31 @@
+;Exported by: 000
+;Date:        Wed Jun 04 01:42:38 2014
+;File:        D:\спасти все\3dsmax\scenes\АНТУРАЖ\ПЫТКИ\АНТУРАЖ органы печень.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "body"
+			{Matrix34
+				0	1	0
+				0	0	-1
+				-1	0	0
+				-0.148005	-0.14614	1.01934
+			}
+			{VolumeView "body.ply"}
+		}
+	}
+}
+{Volume "body"
+	{Box 3.40121 3.83422 2.93137}
+	{Bone "body"}
+	{Matrix34
+		1	0	0
+		0	0	1
+		0	-1	0
+		0.14614	-0.564796	-0.148005
+	}
+}

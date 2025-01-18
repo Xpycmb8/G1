@@ -1,0 +1,987 @@
+;SDL
+(include "stuff_small.ext")
+(include "stuff_parts.ext")
+{props "stuff_broken" "small_stuff" "local_physics"}
+{lodclass "stuff_weapon"}
+{collider "stuff"}
+;----------down
+;----------
+{Volume "attach_d"
+	{density 0}
+	{able clear {touch}}
+}
+;----------
+{Volume "laser_tlr2"
+	{density 0}
+	{Tags  "laser"}
+	{able clear {touch}}
+}
+{Volume "laser_d_zenitco"
+	{density 0}
+	{Tags  "laser"}
+	{able clear {touch}}
+}
+{Volume "laser_d_tactical_laser"
+	{density 0}
+	{Tags  "laser"}
+	{able clear {touch}}
+}
+{Volume "laser_d_laser5mw"
+	{density 0}
+	{Tags  "laser"}
+	{able clear {touch}}
+}
+;--------------
+{Volume "light_tlr2"
+	{density 0}
+	{Tags  "light"}
+	{able clear {touch}}
+}
+{Volume "light_sfx300"
+	{density 0}
+	{able clear {touch}}
+	{Tags  "light" }
+}
+{Volume "light_d_zenitco"
+	{density 0}
+	{able clear {touch}}
+	{Tags  "light" }
+}
+{Volume "light_d_laser5mw"
+	{density 0}
+	{able clear {touch}}
+	{Tags  "light" }
+}
+;----------
+{Volume "body_s_sfx300"
+	{thickness 2}
+}
+{Volume "body_s_tlr2"		
+	{thickness 2}
+}
+{Volume "body_s_d_zenitco"		
+	{thickness 2}
+}
+{Volume "body_s_d_tactical_laser"		
+	{thickness 2}
+}
+{Volume "body_s_d_laser5mw"		
+	{thickness 2}
+}
+;----------
+{Volume "detach_d_sfx300"
+	{density 0}
+	{able clear {touch}}
+}
+{Volume "detach_d_tlr2"
+	{density 0}
+	{able clear {touch}}
+}
+{Volume "detach_d_zenitco"
+	{density 0}
+	{able clear {touch}}
+}
+{Volume "detach_d_tactical_laser"
+	{density 0}
+	{able clear {touch}}
+}
+{Volume "detach_d_laser5mw"
+	{density 0}
+	{able clear {touch}}
+}
+
+;----------
+
+{Volume "detach_up_peq10"
+	{able clear {touch}}
+	{density 0}
+}
+{Volume "detach_up_peq15"
+	{density 0}
+	{able clear {touch}}
+}
+{Volume "detach_up_flashlight_sf"
+	{density 0}
+	{able clear {touch}}
+}
+{Volume "detach_up_peq10"
+	{able clear {touch}}
+	{density 0}
+}
+{Volume "detach_up_laser1mw"
+	{able clear {touch}}
+	{density 0}
+}
+{Volume "detach_up_laser5mw"
+	{able clear {touch}}
+	{density 0}
+}
+{Volume "detach_up_tactical_laser"
+	{able clear {touch}}
+	{density 0}
+}
+{Volume "detach_up_tactical_laser2"
+	{able clear {touch}}
+	{density 0}
+}
+{Volume "detach_up_zenitco"
+	{able clear {touch}}
+	{density 0}
+}
+{Volume "detach_up_liner"
+	{able clear {touch}}
+	{density 0}
+}
+{Volume "detach_up_lasercylinder1"
+	{able clear {touch}}
+	{density 0}
+}
+{Volume "detach_up_lasercylinder3"
+	{able clear {touch}}
+	{density 0}
+}
+{Volume "detach_up_lasercylinder4"
+	{able clear {touch}}
+	{density 0}
+}
+;----------
+{Volume "detach_l_peq10"
+	{able clear {touch}}
+	{density 0}
+}
+{Volume "detach_l_peq15"
+	{density 0}
+	{able clear {touch}}
+}
+{Volume "detach_l_flashlight_sf"
+	{density 0}
+	{able clear {touch}}
+}
+{Volume "detach_l_peq10"
+	{able clear {touch}}
+	{density 0}
+}
+{Volume "detach_l_laser1mw"
+	{able clear {touch}}
+	{density 0}
+}
+{Volume "detach_l_laser5mw"
+	{able clear {touch}}
+	{density 0}
+}
+{Volume "detach_l_tactical_laser"
+	{able clear {touch}}
+	{density 0}
+}
+{Volume "detach_l_tactical_laser2"
+	{able clear {touch}}
+	{density 0}
+}
+{Volume "detach_l_zenitco"
+	{able clear {touch}}
+	{density 0}
+}
+{Volume "detach_l_liner"
+	{able clear {touch}}
+	{density 0}
+}
+{Volume "detach_l_lasercylinder1"
+	{able clear {touch}}
+	{density 0}
+}
+{Volume "detach_l_lasercylinder3"
+	{able clear {touch}}
+	{density 0}
+}
+{Volume "detach_l_lasercylinder4"
+	{able clear {touch}}
+	{density 0}
+}
+;----------
+{Volume "detach_r_laser1mw"
+	{able clear {touch}}
+	{density 0}
+}
+{Volume "detach_r_laser5mw"
+	{able clear {touch}}
+	{density 0}
+}
+{Volume "detach_r_tactical_laser"
+	{able clear {touch}}
+	{density 0}
+}
+{Volume "detach_r_tactical_laser2"
+	{able clear {touch}}
+	{density 0}
+}
+{Volume "detach_r_zenitco"
+	{able clear {touch}}
+	{density 0}
+}
+{Volume "detach_r_liner"
+	{able clear {touch}}
+	{density 0}
+}
+{Volume "detach_r_peq15"		
+	{density 0}
+	{able clear {touch}}
+}
+{Volume "detach_r_flashlight_sf"		
+	{density 0}
+	{able clear {touch}}
+}
+{Volume "detach_r_peq10"
+	{density 0}
+	{able clear {touch}}
+}
+{Volume "detach_r_lasercylinder1"
+	{able clear {touch}}
+	{density 0}
+}
+{Volume "detach_r_lasercylinder3"
+	{able clear {touch}}
+	{density 0}
+}
+{Volume "detach_r_lasercylinder4"
+	{able clear {touch}}
+	{density 0}
+}
+;----------
+
+{Volume "laser_l_peq10"
+	{density 0}
+	{Tags  "laser_l" }
+	{able clear {touch}}
+}
+{Volume "light_l_peq10"
+	{density 0}
+	{Tags  "light_l" }
+	{able clear {touch}}
+}
+;----------
+{Volume "light_l_laser1mw"
+	{density 0}
+	{Tags  "light_l" }
+	{able clear {touch}}
+}
+{Volume "laser_l_laser1mw"
+	{density 0}
+	{Tags  "laser_l" }
+	{able clear {touch}}
+}
+
+;----------
+{Volume "light_l_laser5mw"
+	{density 0}
+	{Tags  "light_l" }
+	{able clear {touch}}
+}
+{Volume "laser_l_laser5mw"
+	{density 0}
+	{Tags  "laser_l" }
+	{able clear {touch}}
+}
+;----------
+{Volume "laser_l_tactical_laser"
+	{density 0}
+	{Tags  "laser_l" }
+	{able clear {touch}}
+}
+;----------
+{Volume "light_l_tactical_laser2"
+	{density 0}
+	{Tags  "laser_l" }
+	{able clear {touch}}
+}
+;----------
+{Volume "light_l_zenitco"
+	{density 0}
+	{Tags  "light_l" }
+	{able clear {touch}}
+}
+{Volume "laser_l_zenitco"
+	{density 0}
+	{Tags  "laser_l" }
+	{able clear {touch}}
+}
+;----------
+{Volume "laser_l_liner"
+	{density 0}
+	{Tags  "laser_l" }
+	{able clear {touch}}
+}
+;----------
+{Volume "laser_l_lasercylinder1"
+	{density 0}
+	{Tags  "laser_l" }
+	{able clear {touch}}
+}
+{Volume "laser_l_lasercylinder3"
+	{density 0}
+	{Tags  "laser_l" }
+	{able clear {touch}}
+}
+{Volume "laser_l_lasercylinder4"
+	{density 0}
+	{Tags  "laser_l" }
+	{able clear {touch}}
+}
+;----------
+{Volume "light_l_peq15"
+	{density 0}
+	{Tags  "light_l" }
+	{able clear {touch}}
+}
+{Volume "laser_l_peq15"
+	{density 0}
+	{Tags  "laser_l" }
+	{able clear {touch}}
+}
+;----------
+{Volume "light_l_flashlight_sf"
+	{density 0}
+	{Tags  "light_l" }
+	{able clear {touch}}
+}
+;--
+{Volume "light_r_flashlight_sf"
+	{density 0}
+	{Tags  "light_r" }
+	{able clear {touch}}
+}
+;----------
+{Volume "laser_r_peq10"
+	{density 0}
+	{Tags  "laser_r" }
+	{able clear {touch}}
+}
+{Volume "light_r_peq10"
+	{density 0}
+	{Tags  "light_r" }
+	{able clear {touch}}
+}
+;----------
+{Volume "light_r_peq15"
+	{density 0}
+	{Tags  "light_r" }
+	{able clear {touch}}
+}
+{Volume "laser_r_peq15"
+	{density 0}
+	{Tags  "laser_r" }
+	{able clear {touch}}
+}
+;----------
+{Volume "light_r_laser1mw"
+	{density 0}
+	{Tags  "light_r" }
+	{able clear {touch}}
+}
+{Volume "laser_r_laser1mw"
+	{density 0}
+	{Tags  "laser_r" }
+	{able clear {touch}}
+}
+;----------
+{Volume "light_r_laser5mw"
+	{density 0}
+	{Tags  "light_r" }
+	{able clear {touch}}
+}
+{Volume "laser_r_laser5mw"
+	{density 0}
+	{Tags  "laser_r" }
+	{able clear {touch}}
+}
+;----------
+{Volume "laser_r_tactical_laser"
+	{density 0}
+	{Tags  "laser_r" }
+	{able clear {touch}}
+}
+;----------
+{Volume "light_r_tactical_laser2"
+	{density 0}
+	{Tags  "laser_r" }
+	{able clear {touch}}
+}
+;----------
+{Volume "laser_r_lasercylinder1"
+	{density 0}
+	{Tags  "laser_r" }
+	{able clear {touch}}
+}
+{Volume "laser_r_lasercylinder3"
+	{density 0}
+	{Tags  "laser_r" }
+	{able clear {touch}}
+}
+{Volume "laser_r_lasercylinder4"
+	{density 0}
+	{Tags  "laser_r" }
+	{able clear {touch}}
+}
+;----------
+{Volume "light_r_zenitco"
+	{density 0}
+	{Tags  "light_r" }
+	{able clear {touch}}
+}
+{Volume "laser_r_zenitco"
+	{density 0}
+	{Tags  "laser_r" }
+	{able clear {touch}}
+}
+;----------
+{Volume "laser_r_liner"
+	{density 0}
+	{Tags  "laser_r" }
+	{able clear {touch}}
+}
+;---------------------------------------------------up
+{Volume "laser_up_liner"
+	{density 0}
+	{Tags  "laser_up" }
+	{able clear {touch}}
+}
+{Volume "light_up_zenitco"
+	{density 0}
+	{Tags  "light_up" }
+	{able clear {touch}}
+}
+{Volume "laser_up_zenitco"
+	{density 0}
+	{Tags  "laser_up" }
+	{able clear {touch}}
+}
+{Volume "laser_up_lasercylinder1"
+	{density 0}
+	{Tags  "laser_up" }
+	{able clear {touch}}
+}
+{Volume "laser_up_lasercylinder3"
+	{density 0}
+	{Tags  "laser_up" }
+	{able clear {touch}}
+}
+{Volume "laser_up_lasercylinder4"
+	{density 0}
+	{Tags  "laser_up" }
+	{able clear {touch}}
+}
+;----------
+{Volume "laser_up_tactical_laser"
+	{density 0}
+	{Tags  "laser_up" }
+	{able clear {touch}}
+}
+;----------
+{Volume "laser_up_tactical_laser2"
+	{density 0}
+	{Tags  "laser_up" }
+	{able clear {touch}}
+}
+{Volume "light_up_flashlight_sf"
+	{density 0}
+	{Tags  "light_up" }
+	{able clear {touch}}
+}
+;----------
+{Volume "laser_up_peq10"
+	{density 0}
+	{Tags  "laser_up" }
+	{able clear {touch}}
+}
+{Volume "light_up_peq10"
+	{density 0}
+	{Tags  "light_up" }
+	{able clear {touch}}
+}
+;----------
+{Volume "light_up_peq15"
+	{density 0}
+	{Tags  "light_up" }
+	{able clear {touch}}
+}
+{Volume "laser_up_peq15"
+	{density 0}
+	{Tags  "laser_up" }
+	{able clear {touch}}
+}
+;----------
+{Volume "light_up_laser1mw"
+	{density 0}
+	{Tags  "light_up" }
+	{able clear {touch}}
+}
+{Volume "laser_up_laser1mw"
+	{density 0}
+	{Tags  "laser_up" }
+	{able clear {touch}}
+}
+;----------
+{Volume "light_up_laser5mw"
+	{density 0}
+	{Tags  "light_up" }
+	{able clear {touch}}
+}
+{Volume "laser_up_laser5mw"
+	{density 0}
+	{Tags  "laser_up" }
+	{able clear {touch}}
+}
+
+
+
+
+;----------
+{Volume "attach_l"
+	{density 0}
+	{Tags  "attach_l" }
+	{able  {touch 1}}
+}
+{Volume "attach_r"
+	{density 0}
+	{Tags  "attach_r" }
+	{able {touch 1}}
+}
+{Volume "attach_up"
+	{density 0}
+	{Tags  "attach_up" }
+	{able {touch 1}}
+}
+;----------
+{Volume "body_s_r_lasercylinder1"		
+	{thickness 2}
+}
+{Volume "body_s_r_lasercylinder3"		
+	{thickness 2}
+}
+{Volume "body_s_r_lasercylinder4"		
+	{thickness 2}
+}
+{Volume "Body_s_r_peq10"		
+	{thickness 2}
+}
+{Volume "body_s_r_peq15"
+	{thickness 2}
+}
+{Volume "body_s_r_flashlight_sf"
+	{thickness 2}
+}
+{Volume "body_s_r_liner"		
+	{thickness 2}
+}
+{Volume "body_s_r_zenitco"		
+	{thickness 2}
+}
+{Volume "body_s_r_laser1mw"		
+	{thickness 2}
+}
+{Volume "body_s_r_laser5mw"		
+	{thickness 2}
+}
+{Volume "body_s_r_tactical_laser"		
+	{thickness 2}
+}
+{Volume "body_s_r_tactical_laser2"		
+	{thickness 2}
+}
+;----------
+
+{Volume "Body_s_l_peq10"		
+	{thickness 2}
+}
+{Volume "body_s_l_peq15"
+	{thickness 2}
+}
+{Volume "body_s_l_flashlight_sf"
+	{thickness 2}
+}
+{Volume "body_s_l_lasercylinder1"		
+	{thickness 2}
+}
+{Volume "body_s_l_lasercylinder3"		
+	{thickness 2}
+}
+{Volume "body_s_l_lasercylinder4"		
+	{thickness 2}
+}
+{Volume "body_s_l_liner"		
+	{thickness 2}
+}
+{Volume "body_s_l_zenitco"		
+	{thickness 2}
+}
+{Volume "body_s_l_laser1mw"		
+	{thickness 2}
+}
+{Volume "body_s_l_laser5mw"		
+	{thickness 2}
+}
+{Volume "body_s_l_tactical_laser"		
+	{thickness 2}
+}
+{Volume "body_s_l_tactical_laser2"		
+	{thickness 2}
+}
+;----------
+{Volume "body_s_up_lasercylinder1"		
+	{thickness 2}
+}
+{Volume "body_s_up_lasercylinder3"		
+	{thickness 2}
+}
+{Volume "body_s_up_lasercylinder4"		
+	{thickness 2}
+}
+{Volume "Body_s_up_peq10"		
+	{thickness 2}
+}
+{Volume "body_s_up_peq15"
+	{thickness 2}
+}
+{Volume "body_s_up_flashlight_sf"
+	{thickness 2}
+}
+{Volume "body_s_up_liner"		
+	{thickness 2}
+}
+{Volume "body_s_up_zenitco"		
+	{thickness 2}
+}
+{Volume "body_s_up_laser1mw"		
+	{thickness 2}
+}
+{Volume "body_s_up_laser5mw"		
+	{thickness 2}
+}
+{Volume "body_s_up_tactical_laser"		
+	{thickness 2}
+}
+{Volume "body_s_up_tactical_laser2"		
+	{thickness 2}
+}
+;----------
+;----------single
+{Volume "laser"
+	{density 0}
+	{Tags  "laser" }
+	{able clear {touch}}
+}
+{Volume "light"
+	{density 0}
+	{Tags  "light" }
+	{able clear {touch}}
+}
+;----------
+{Volume "body"	
+	{Tags  "mods" }
+}
+{Volume "frame"	
+	{Tags  "mods" }
+}
+{Volume "recievier"	
+	{Tags  "mods" }
+}
+{Volume "receiver_add"	
+	{Tags  "mods" }
+}
+
+
+;------------UI
+{Volume "hidden_peq10_r"
+	{density 0}
+	{able clear {touch}}
+}
+;----------
+{Volume "peq15_r_laser_on_ui"
+	{density 0}
+	{Tags  "laser_r" }
+	 {able clear {touch}} {density 0}
+}
+{Volume "peq15_r_light_on_ui"
+	{density 0}
+	{Tags  "light_r" }
+	 {able clear {touch}} {density 0}
+}
+;----------
+{Volume "peq15_up_laser_on_ui"
+	{density 0}
+	{Tags  "laser_up" }
+	 {able clear {touch}} {density 0}
+}
+{Volume "peq15_up_light_on_ui"
+	{density 0}
+	{Tags  "light_up" }
+	 {able clear {touch}} {density 0}
+}
+
+;----------
+
+{Volume "peq10_r_laser_on_ui"
+	{density 0}
+	{Tags  "laser_r" }
+	 {able clear {touch}} {density 0}
+}
+{Volume "peq10_r_light_on_ui"
+	{density 0}
+	{Tags  "light_r" }
+	{able clear {touch}} {density 0}
+}
+;----------
+;----------
+{Volume "flashlight_sf_r_light_on_ui"
+	{density 0}
+	{Tags  "light_r" }
+	 {able clear {touch}} {density 0}
+}
+;----------
+{Volume "flashlight_sf_l_light_on_ui"
+	{density 0}
+	{Tags  "light_l" }
+	 {able clear {touch}} {density 0}
+}
+;----------
+{Volume "flashlight_sf_up_light_on_ui"
+	{density 0}
+	{Tags  "light_up" }
+	{able clear {touch}} {density 0}
+}
+;----------
+{Volume "peq15_l_laser_on_ui"
+	{density 0}
+	{Tags  "laser_l" }
+	 {able clear {touch}} {density 0}
+}
+{Volume "peq15_l_light_on_ui"
+	{density 0}
+	{Tags  "light_l" }
+	 {able clear {touch}} {density 0}
+}
+;----------
+{Volume "peq15_up_laser_on_ui"
+	{density 0}
+	{Tags  "laser_up" }
+	 {able clear {touch}} {density 0}
+}
+{Volume "peq15_up_light_on_ui"
+	{density 0}
+	{Tags  "light_up" }
+	 {able clear {touch}} {density 0}
+}
+;----------
+{Volume "peq10_l_laser_on_ui"
+	{density 0}
+	{Tags  "laser_l" }
+	 {able clear {touch}} {density 0}
+}
+{Volume "peq10_l_light_on_ui"
+	{density 0}
+	{Tags  "light_l" }
+	 {able clear {touch}} {density 0}
+}
+;----------
+{Volume "peq10_up_laser_on_ui"
+	{density 0}
+	{Tags  "laser_up" }
+	 {able clear {touch}} {density 0}
+}
+{Volume "peq10_up_light_on_ui"
+	{density 0}
+	{Tags  "light_up" }
+	 {able clear {touch}} {density 0}
+}
+;----------
+{Volume "tactical_laser2_l_laser_on_ui"
+	{density 0}
+	{Tags  "laser_l" }
+	 {able clear {touch}} {density 0}
+}
+{Volume "tactical_laser2_r_laser_on_ui"
+	{density 0}
+	{Tags  "laser_r" }
+	 {able clear {touch}} {density 0}
+}
+{Volume "tactical_laser2_up_laser_on_ui"
+	{density 0}
+	{Tags  "laser_up" }
+	{able clear {touch}} {density 0}
+}
+;----------
+{Volume "tactical_laser_l_laser_on_ui"
+	{density 0}
+	{Tags  "laser_l" }
+	{able clear {touch}} {density 0}
+}
+{Volume "tactical_laser_r_laser_on_ui"
+	{density 0}
+	{Tags  "laser_r" }
+	{able clear {touch}} {density 0}
+}
+{Volume "tactical_laser_up_laser_on_ui"
+	{density 0}
+	{Tags  "laser_up" }
+	{able clear {touch}} {density 0}
+}
+;----------
+{Volume "laser1mw_l_laser_on_ui"
+	{density 0}
+	{Tags  "laser_l" }
+	{able clear {touch}} {density 0}
+}
+{Volume "laser1mw_r_laser_on_ui"
+	{density 0}
+	{Tags  "laser_r" }
+	{able clear {touch}} {density 0}
+}
+{Volume "laser1mw_up_laser_on_ui"
+	{density 0}
+	{Tags  "laser_up" }
+	{able clear {touch}} {density 0}
+}
+;----------
+{Volume "laser1mw_l_light_on_ui"
+	{density 0}
+	{Tags  "light_l" }
+	 {able clear {touch}} {density 0}
+}
+{Volume "laser1mw_r_light_on_ui"
+	{density 0}
+	{Tags  "light_r" }
+	{able clear {touch}} {density 0}
+}
+{Volume "laser1mw_up_light_on_ui"
+	{density 0}
+	{Tags  "light_up" }
+	{able clear {touch}} {density 0}
+}
+;----------
+{Volume "liner_l_laser_on_ui"
+	{density 0}
+	{Tags  "laser_l" }
+	{able clear {touch}} {density 0}
+}
+{Volume "liner_r_laser_on_ui"
+	{density 0}
+	{Tags  "laser_r" }
+	{able clear {touch}} {density 0}
+}
+{Volume "liner_up_laser_on_ui"
+	{density 0}
+	{Tags  "laser_up" }
+	{able clear {touch}} {density 0}
+}
+;----------
+{Volume "laser5mw_r_laser_on_ui"
+	{density 0}
+	{Tags  "laser_r" }
+	{able clear {touch}} {density 0}
+}
+{Volume "laser5mw_l_laser_on_ui"
+	{density 0}
+	{Tags  "laser_l" }
+	{able clear {touch}} {density 0}
+}
+{Volume "laser5mw_up_laser_on_ui"
+	{density 0}
+	{Tags  "laser_up" }
+	{able clear {touch}} {density 0}
+}
+;----------
+{Volume "laser5mw_r_light_on_ui"
+	{density 0}
+	{Tags  "light_r" }
+	{able clear {touch}} {density 0}
+}
+{Volume "laser5mw_l_light_on_ui"
+	{density 0}
+	{Tags  "light_l" }
+	{able clear {touch}} {density 0}
+}
+{Volume "laser5mw_up_light_on_ui"
+	{density 0}
+	{Tags  "light_up" }
+	{able clear {touch}} {density 0}
+}
+;----------
+{Volume "zenitco_r_laser_on_ui"
+	{density 0}
+	{Tags  "laser_r" }
+	{able clear {touch}} {density 0}
+}
+{Volume "zenitco_r_light_on_ui"
+	{density 0}
+	{Tags  "light_r" }
+	{able clear {touch}} {density 0}
+}
+;----------
+{Volume "zenitco_l_laser_on_ui"
+	{density 0}
+	{Tags  "laser_l" }
+	 {able clear {touch}} {density 0}
+}
+{Volume "zenitco_l_light_on_ui"
+	{density 0}
+	{Tags  "light_l" }
+	 {able clear {touch}} {density 0}
+}
+;----------
+{Volume "zenitco_up_laser_on_ui"
+	{density 0}
+	{Tags  "laser_up" }
+	 {able clear {touch}} {density 0}
+}
+{Volume "zenitco_up_light_on_ui"
+	{density 0}
+	{Tags  "light_up" }
+	 {able clear {touch}} {density 0}
+}
+;----------
+{Volume "lasercylinder1_l_laser_on_ui"
+	{density 0}
+	{Tags  "laser_l" }
+	 {able clear {touch}} {density 0}
+}
+{Volume "lasercylinder3_l_laser_on_ui"
+	{density 0}
+	{Tags  "laser_l" }
+	 {able clear {touch}} {density 0}
+}
+{Volume "lasercylinder4_l_laser_on_ui"
+	{density 0}
+	{Tags  "laser_l" }
+	 {able clear {touch}} {density 0}
+}
+;----------
+{Volume "lasercylinder1_r_laser_on_ui"
+	{density 0}
+	{Tags  "laser_r" }
+	 {able clear {touch}} {density 0}
+}
+{Volume "lasercylinder3_r_laser_on_ui"
+	{density 0}
+	{Tags  "laser_r" }
+	 {able clear {touch}} {density 0}
+}
+{Volume "lasercylinder4_r_laser_on_ui"
+	{density 0}
+	{Tags  "laser_r" }
+	 {able clear {touch}} {density 0}
+}
+;----------
+{Volume "lasercylinder1_up_laser_on_ui"
+	{density 0}
+	{Tags  "laser_up" }
+	 {able clear {touch}} {density 0}
+}
+{Volume "lasercylinder3_up_laser_on_ui"
+	{density 0}
+	{Tags  "laser_up" }
+	 {able clear {touch}} {density 0}
+}
+{Volume "lasercylinder4_up_laser_on_ui"
+	{density 0}
+	{Tags  "laser_up" }
+	 {able clear {touch}} {density 0}
+}

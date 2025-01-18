@@ -1,0 +1,4 @@
+{game_entity
+	{props "distant_small_grass_set"}
+	{Extension "distant_small_grass_set.mdl"}
+}

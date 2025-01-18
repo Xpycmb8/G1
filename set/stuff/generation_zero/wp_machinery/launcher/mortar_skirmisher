@@ -1,0 +1,63 @@
+{weapon_bullet
+	{tag "weapon cluster_launcher build_in gun"}
+	{entity "mortar_skirmisher"}
+	{filling "ammo m47" 6}
+	{fillingVisible "bullet"}
+	{inventory
+		{size 6 2 }
+		{weight 100 }
+	}
+
+	{fireSound	"small_arms/mk19/"}
+	{fireSoundClose	"small_arms/mk19_close/"}
+	{reloadSound "small_arms/mgun_heavy/"}	
+	{foresight "foresight3"}	
+	{calibre 40}
+	{rechargeTime 12.0}
+	{recoveryTime 1.5}
+	{parameters "cluster"
+		{recoveryTime 1.5}
+		{spreading
+			{radiusTable {0 1} {60 1.5} {120 3} {200 5}}
+		}
+		{recoveryTime 2}
+	}
+	{parameters "fg"
+		{recoveryTime 1.5}
+		{spreading
+			{radiusTable {0 2} {60 3} {120 6} {200 9}}
+		}
+		{projectileDamageTable {130 15}}
+		{projectileDamage 15}
+	}
+	{parameters "mine";	
+		{spreading
+			{radiusTable {0 1} {60 1.5} {120 3} {200 5}}
+		}
+		{recoveryTime 0.5}
+	}
+	
+	;range
+
+	{aimRange 350}
+	{minRange 25}
+	{maxRange 700}
+	{gravity 0.8}
+	{speed 800}
+	{aimtype curved}
+	{AimingTolerance 0.1}
+	
+
+	{cursor "cannon_on_fg"}
+	{cursorReloading "cannon_reload_fg"}	
+	{burst
+		;{min 3}			; min burst shots in automatic mode
+		;{noaiming}			; no aiming during burst
+		{short 2 0}			; short burst shots on long distance, rand (+-)shots
+		{long 6 4}			; long burst shots on short distance, rand (+-)shots
+		{rangeKoef 0.5}		; rangeKoef * aimRange = max long burst distance
+	}
+	{crosshair "crosshair6"}
+	{crosshairReloading "crosshair6_reload"}
+	{preloaded}
+}

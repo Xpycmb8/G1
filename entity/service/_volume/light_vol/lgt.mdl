@@ -1,0 +1,19 @@
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+	}
+}
+{Volume "light_vol"
+	{Cylinder 20 20}
+	{Bone "basis"}
+	{Matrix34
+		0.892657	0	0
+		0	0.892657	0
+		0	0	-2.092657
+		2.10879	0.807475	-34.8236
+	}
+}

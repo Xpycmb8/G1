@@ -1,0 +1,22 @@
+;Exported by: Артем
+;Date:        Mon Feb 16 10:59:26 2015
+;File:        D:\Autodesk\Low poly\freelance\DMS 2.0\Weapons\Knife\M9 Bayonet\M9 bayonet.max
+{Skeleton
+	{bone "knife"
+		{Orientation
+			0.05	0	0
+			0	-0.05	0
+			0	0	0.05
+		}
+	}
+}
+{Volume "body"
+	{Box 0.560191 0.986316 6.11688}
+	{Bone "knife"}
+	{Matrix34
+		0	0	1
+		-1	0	0
+		0	-1	0
+		0.0476254	1.58239	0.000863782
+	}
+}

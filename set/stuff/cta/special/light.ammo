@@ -1,0 +1,12 @@
+{bullet
+	{desc "Light"}
+	{tag "light"}
+	{inventory
+		{weight 1}
+		{block 1}
+		{size 1 1}
+		{fsm "belt"}
+	}	
+	{mass 0}
+	{entity "5x39"}
+}

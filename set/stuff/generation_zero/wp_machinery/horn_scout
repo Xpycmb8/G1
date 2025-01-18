@@ -1,0 +1,16 @@
+{from "pattern bullet"
+	{tag "visor"}
+	{filling "visor" 1}
+	{rechargeTime 25}
+	{inventory {noView}}
+	{foresight "visor_head"}
+	{spreading 
+		{radiusTable {10 12} {140 25} }
+	}		
+	{range 500 500}				; m
+	{gravity 0}
+	{speed 600}			; m/s
+    {AimingTolerance 3}			; degree
+	{cursor "cannon_on"}
+}
+

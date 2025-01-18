@@ -1,0 +1,6 @@
+{game_entity
+	{props "flag flesh scharka_static_weak"}
+	{Extension "raven.mdl"}
+	{Volume "body"
+	}
+}

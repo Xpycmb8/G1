@@ -1,0 +1,384 @@
+{Volume "glass_shard_door_l_01"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_door_l_02"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_door_l_03"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_door_l_04"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_door_l_05"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_door_l_06"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_door_l_07"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_door_l_08"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_door_l_09"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_door_l_10"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_door_l_11"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_door_l_12"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_door_l_13"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_door_l_14"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_door_l_15"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_door_l_16"
+	{Thickness 1}
+	{tags "shard_glass"}
+}
+{Volume "glass_shard_door_l_17"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_door_l_18"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_door_l_19"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_door_l_20"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_door_l_21"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_door_l_22"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_door_l_23"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_door_l_24"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_door_r_00"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_door_r_01"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_door_r_02"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_door_r_03"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_door_r_04"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_door_r_05"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_door_r_06"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_door_r_07"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_door_r_08"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_door_r_09"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_door_r_10"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_door_r_11"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_door_r_12"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_door_r_13"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_door_r_14"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_door_r_15"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_door_r_16"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_door_r_17"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_door_r_18"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_door_r_19"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_door_r_20"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_door_r_21"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_door_r_22"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_door_r_23"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_l_00"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_l_01"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_l_02"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_l_03"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_l_04"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_l_05"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_l_06"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_l_07"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_l_08"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_l_09"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_l_10"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_l_11"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_l_12"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_l_13"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_l_14"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_l_15"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_l_16"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_l_17"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_l_18"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_l_19"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_l_20"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_l_21"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_l_22"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_l_23"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_r_00"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_r_01"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_r_02"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_r_03"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_r_04"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_r_05"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_r_06"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_r_07"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_r_08"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_r_09"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_r_10"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_r_11"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_r_12"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_r_13"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_r_14"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_r_15"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_r_16"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_r_17"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_r_18"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_r_19"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_r_20"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_r_21"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_r_22"
+	{tags "shard_glass"}
+	{Thickness 1}
+}
+{Volume "glass_shard_r_23"
+	{tags "shard_glass"}
+	{Thickness 1}
+}

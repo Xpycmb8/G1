@@ -1,0 +1,36 @@
+{weapon_bullet
+	{tag "gun"}
+	{filling "ammo atgw_skir" 4}
+;	{fireSound "gun/tow/"}
+;	{reloadSound "tankgun_r02"}
+	{foresight "foresight_rocket"}
+	{fillingVisible "rocket"}
+	{burst
+		{min 2}			; min burst shots in automatic mode
+		{noaiming}			; no aiming during burst
+		{short 2 0}			; short burst shots on long distance, rand (+-)shots
+		{long 4 2}			; long burst shots on short distance, rand (+-)shots
+		{rangeKoef 0.3}		; rangeKoef * aimRange = max long burst distance
+	}
+
+	("heavy_artillery")
+
+	{recoveryTime 1}
+	{AimingTolerance 0.1}
+	{AccuracyByMotionK 0.1}
+	
+	{speed 75}
+	{gravity 3}
+
+	{range 160 180}
+	{rechargeTime 4}
+
+	{cursor "cannon_on_fg"}
+	{cursorReloading "cannon_reload_fg"}
+
+	{crosshair "crosshair6"}
+	{crosshairReloading "crosshair6_reload"}
+
+	{toplayerVignette "/texture/common/environment/lens_effects/zoom_vignette_vehicle_atgm_crosshair"}
+	{preloaded}
+}

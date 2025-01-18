@@ -1,0 +1,7 @@
+{game_entity
+	(include "/properties/small_part_harm.inc")
+	{extension "/properties/piece.ext"}
+	{props "dummy" "steel" "small" "nocover" "ps_dummy" "hit_small"}
+	{collider "grenade"}
+	{mass 4}
+}

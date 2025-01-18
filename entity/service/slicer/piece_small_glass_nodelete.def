@@ -1,0 +1,16 @@
+{game_entity
+	{extension "/properties/piece.ext"}
+	{simulation {able 1}}
+	{constrain none}
+	{props "dummy" "small" "part" "nocover" "delet_t30" "small_glass_no_contact" "blast_physics"}
+	{collider "particle.small"}
+	{obstacleid "nothing"}
+	{body
+		{permit body}
+	}
+	{mass 25}
+	{Volume "body"
+		{Tags  "body" "fire"}
+		{Thickness 1}
+	}
+}

@@ -1,0 +1,15 @@
+;// 9x19mm
+
+{bullet
+	{tag "bullet sp small stackable pierce"}
+	{inventory
+		{weight 1}
+		{block 40}
+		{size 1 2}
+		{fsm "belt"}
+	}
+	{mass 0.008}
+;	{desc "9x19mm Vector x30"}
+	{entity "mags30_vector"}
+	("trace9")
+}

@@ -1,0 +1,67 @@
+{Skeleton
+	{bone "electra"
+		{Orientation
+			1	0	0
+			0	1	0
+			0	0	1
+		}
+		{bone "fx_e10"
+			{Matrix34
+				1	0	0
+				0	1	0
+				0	0	-1
+				0	0	0
+			}
+			{VolumeView "pla02.ply"}
+		}
+		{bone "fx_e11"
+			{Matrix34
+				-0.1	0	0
+				0	0	-0.12
+				0	-0.1	0
+				2	4	2
+			}
+		}
+		{bone "fx_e12"
+			{Matrix34
+				-0.1	0	0
+				0	0	-0.12
+				0	-0.1	0
+				2	0	0
+			}
+		}
+		{bone "fx_e13"
+			{Matrix34
+				0	-1	0
+				1	0	0
+				0	0	1
+				-2.33355	12.4064	0
+			}
+		}
+		{bone "fx_e14"
+			{Matrix34
+				0	1	0
+				-1	0	0
+				0	0	1
+				-2.36957	-12.4855	0
+			}
+		}
+	}
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+	}
+}
+{Volume "electra15"
+	{Cylinder 30 30}
+	{Bone "fx_e10"}
+	{Matrix34
+		0.892657	0	0
+		0	0.892657	0
+		0	0	-2.092657
+		2.10879	0.807475	-34.8236
+	}
+}

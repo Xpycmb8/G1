@@ -1,0 +1,10 @@
+{game_entity
+	{Extension "civilian4.mdl"}
+	{bone "basis"
+		{bone "fps_arms"
+			{VolumeView "/entity/humanskin/fps_view/default/1stp.ply"}
+		}
+	}
+	{texmod "3"}
+	{RimLight}
+}

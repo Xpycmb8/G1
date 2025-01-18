@@ -1,0 +1,8 @@
+{game_entity
+	{Extension "#9x19.mdl"}
+        {collider "stuff"}
+        {simulation {able 1}}
+	{lodclass "stuff_small"}
+}
+
+

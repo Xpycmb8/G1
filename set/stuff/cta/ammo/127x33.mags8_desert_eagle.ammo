@@ -1,0 +1,13 @@
+{bullet
+	{tag "bullet big sp hmgun stackable pierce smallarms_heavy"}
+	{desc "12.7x33 DS"}
+	{inventory
+		{weight 3.3}
+		{block 20}
+		{size 1 2}
+		{fsm "belt"}
+	}	
+	{mass 0.11}
+	{entity "mags8_desert_eagle"}
+	("trace7")
+}

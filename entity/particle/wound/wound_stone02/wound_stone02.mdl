@@ -1,0 +1,14 @@
+;Exported by: ?????
+;Date:        Sun Nov  3 19:35:58 2019
+;File:        D:\?????\Documents\3dsMax\scenes\wound_big.max
+{Skeleton
+	{bone "casing"
+		{parameters "CommonMesh;"}
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{VolumeView "casing.ply"}
+	}
+}

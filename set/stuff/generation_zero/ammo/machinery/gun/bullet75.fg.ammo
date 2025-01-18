@@ -1,0 +1,28 @@
+{bullet
+	{tag "ammo shell shell_minimum fg itemin2hands"}
+	{detonationThickness 2}
+	{inventory
+		{size 5 1}
+		{weight 100}
+		{fsm "stuff"}
+	}
+	{damage blastwave
+		{energy 5}
+		{area 0.25 1.0}
+	}
+	; anti-apc
+	{damage add blastwave
+		{energy 1}
+		{area 1 5}
+	}
+	; anti-personel
+	{damage add blastwave
+		{energy 1.2}
+		{area 5 10}
+	}
+	{entity "shell_s-8"}
+	{mass 18.2}
+	{view "s5_rocket"
+	} 
+}
+

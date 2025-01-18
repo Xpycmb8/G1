@@ -1,0 +1,12 @@
+{bullet
+	{tag "bullet sp normal stackable pierce"}
+	{inventory
+		{weight 3.3}
+		{block 50}
+		{size 1 2}
+		{fsm "belt"}
+	}	
+	{mass 0.004}
+	{entity "ak105_mags545"}
+	("trace5")
+}

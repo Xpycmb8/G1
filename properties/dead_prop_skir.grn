@@ -1,0 +1,56 @@
+(include "physics_generic.ext")
+{props "steel" "local_physics" "stuff" "collectable"  }
+{mass 10}
+{Volume "select"
+	{box 6 6 6}
+	{able clear {select}}
+	{density 0}
+	{Bone "basis"}
+	{material "steel"}
+}
+{Extender "preview"
+	{"Stuff_primary"
+		{camera
+			{origin -1.35728	12.0069	0.771433}
+			{lookat 2.37292	-16.2901	-2.76853}
+			{fov 45}
+			{horizon -6.91148}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 30.5872	-34.6998	-3.50689}
+			}
+			{"1"
+				{type directional}
+				{direction 0.0712045	-0.466039	-0.166546}
+			}
+			{"2"
+				{type point}
+				{position -13.9444	-51.597	-11.2821}
+			}
+		}
+	}
+	{"Stuff"
+		{camera
+			{origin -4.05412	14.1478	0.388338}
+			{lookat 8.25827	-28.1873	-3.13592}
+			{fov 45}
+			{horizon -13.9369}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 33.3881	-42.0908	6.39727}
+			}
+			{"1"
+				{type directional}
+				{direction 0.111399	-0.455959	-0.172314}
+			}
+			{"2"
+				{type point}
+				{position -8.72067	-59.5454	-9.45267}
+			}
+		}
+	}
+}

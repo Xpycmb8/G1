@@ -1,0 +1,13 @@
+{bullet
+	{tag "bullet sp normal stackable pierce"}
+	{desc "762x39 RPK16 mag"}
+	{inventory
+		{weight 1}
+		{block 250}
+		{size 2 2}
+		{fsm "belt"}
+	}
+	{mass 0.004}
+	{entity "rpk16_mags"}
+	("trace7")
+}

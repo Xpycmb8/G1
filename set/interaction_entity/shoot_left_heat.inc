@@ -1,0 +1,314 @@
+{if tagged "100_heat"
+	{tags add "100_heat_stage"}
+	{tags add "101_heat"}
+	{tags remove "100_heat"}
+else tagged "99_heat"
+	{tags add "100_heat"}
+	{tags remove "99_heat"}
+else tagged "98_heat"
+	{tags add "99_heat"}
+	{tags remove "98_heat"}
+else tagged "97_heat"
+	{tags add "98_heat"}
+	{tags remove "97_heat"}
+else tagged "96_heat"
+	{tags add "97_heat"}
+	{tags remove "96_heat"}
+else tagged "95_heat"
+	{tags add "96_heat"}
+	{tags remove "95_heat"}
+else tagged "94_heat"
+	{tags add "95_heat"}
+	{tags remove "94_heat"}
+else tagged "93_heat"
+	{tags add "94_heat"}
+	{tags remove "93_heat"}
+else tagged "92_heat"
+	{tags add "93_heat"}
+	{tags remove "92_heat"}
+else tagged "91_heat"
+	{tags add "92_heat"}
+	{tags remove "91_heat"}
+else tagged "90_heat"
+	{tags add "91_heat"}
+	{tags remove "90_heat"}
+else tagged "89_heat"
+	{tags add "90_heat_stage"}
+	{tags add "90_heat"}
+	{tags remove "89_heat"}
+else tagged "88_heat"
+	{tags add "89_heat"}
+	{tags remove "88_heat"}
+else tagged "87_heat"
+	{tags add "88_heat"}
+	{tags remove "87_heat"}
+else tagged "86_heat"
+	{tags add "87_heat"}
+	{tags remove "86_heat"}
+else tagged "85_heat"
+	{tags add "86_heat"}
+	{tags remove "85_heat"}
+else tagged "84_heat"
+	{tags add "85_heat"}
+	{tags remove "84_heat"}
+else tagged "83_heat"
+	{tags add "84_heat"}
+	{tags remove "83_heat"}
+else tagged "82_heat"
+	{tags add "83_heat"}
+	{tags remove "82_heat"}
+else tagged "81_heat"
+	{tags add "82_heat"}
+	{tags remove "81_heat"}
+else tagged "80_heat"
+	{tags add "81_heat"}
+	{tags remove "80_heat"}
+else tagged "79_heat"
+	{tags add "80_heat_stage"}
+	{tags add "80_heat"}
+	{tags remove "79_heat"}
+else tagged "78_heat"
+	{tags add "79_heat"}
+	{tags remove "78_heat"}
+else tagged "77_heat"
+	{tags add "78_heat"}
+	{tags remove "77_heat"}
+else tagged "76_heat"
+	{tags add "77_heat"}
+	{tags remove "76_heat"}
+else tagged "75_heat"
+	{tags add "76_heat"}
+	{tags remove "75_heat"}
+else tagged "74_heat"
+	{tags add "75_heat"}
+	{tags remove "74_heat"}
+else tagged "73_heat"
+	{tags add "74_heat"}
+	{tags remove "73_heat"}
+else tagged "72_heat"
+	{tags add "73_heat"}
+	{tags remove "72_heat"}
+else tagged "71_heat"
+	{tags add "72_heat"}
+	{tags remove "71_heat"}
+else tagged "70_heat"
+	{tags add "70_heat_stage"}
+	{tags add "71_heat"}
+	{tags remove "70_heat"}
+else tagged "69_heat"
+	{tags add "70_heat"}
+	{tags remove "69_heat"}
+else tagged "68_heat"
+	{tags add "69_heat"}
+	{tags remove "68_heat"}
+else tagged "67_heat"
+	{tags add "68_heat"}
+	{tags remove "67_heat"}
+else tagged "66_heat"
+	{tags add "67_heat"}
+	{tags remove "66_heat"}
+else tagged "65_heat"
+	{tags add "66_heat"}
+	{tags remove "65_heat"}
+else tagged "64_heat"
+	{tags add "65_heat"}
+	{tags remove "64_heat"}
+else tagged "63_heat"
+	{tags add "64_heat"}
+	{tags remove "63_heat"}
+else tagged "62_heat"
+	{tags add "63_heat"}
+	{tags remove "62_heat"}
+else tagged "61_heat"
+	{tags add "62_heat"}
+	{tags remove "61_heat"}
+else tagged "60_heat"
+	{tags add "60_heat_stage"}
+	{tags add "61_heat"}
+	{tags remove "60_heat"}
+else tagged "59_heat"
+	{tags add "60_heat"}
+	{tags remove "59_heat"}
+else tagged "58_heat"
+	{tags add "59_heat"}
+	{tags remove "58_heat"}
+else tagged "57_heat"
+	{tags add "58_heat"}
+	{tags remove "57_heat"}
+else tagged "56_heat"
+	{tags add "57_heat"}
+	{tags remove "56_heat"}
+else tagged "55_heat"
+	{tags add "56_heat"}
+	{tags remove "55_heat"}
+else tagged "54_heat"
+	{tags add "55_heat"}
+	{tags remove "54_heat"}
+else tagged "53_heat"
+	{tags add "54_heat"}
+	{tags remove "53_heat"}
+else tagged "52_heat"
+	{tags add "53_heat"}
+	{tags remove "52_heat"}
+else tagged "51_heat"
+	{tags add "52_heat"}
+	{tags remove "51_heat"}
+else tagged "50_heat"
+	{tags add "50_heat_stage"}
+	{tags add "51_heat"}
+	{tags remove "50_heat"}
+else tagged "49_heat"
+	{tags add "50_heat"}
+	{tags remove "49_heat"}
+else tagged "48_heat"
+	{tags add "49_heat"}
+	{tags remove "48_heat"}
+else tagged "47_heat"
+	{tags add "48_heat"}
+	{tags remove "47_heat"}
+else tagged "46_heat"
+	{tags add "47_heat"}
+	{tags remove "46_heat"}
+else tagged "45_heat"
+	{tags add "46_heat"}
+	{tags remove "45_heat"}
+else tagged "44_heat"
+	{tags add "45_heat"}
+	{tags remove "44_heat"}
+else tagged "43_heat"
+	{tags add "44_heat"}
+	{tags remove "43_heat"}
+else tagged "42_heat"
+	{tags add "43_heat"}
+	{tags remove "42_heat"}
+else tagged "41_heat"
+	{tags add "42_heat"}
+	{tags remove "41_heat"}
+else tagged "40_heat"
+	{tags add "41_heat"}
+	{tags remove "40_heat"}
+else tagged "39_heat"
+	{tags add "40_heat_stage"}
+	{tags add "40_heat"}
+	{tags remove "39_heat"}
+else tagged "38_heat"
+	{tags add "39_heat"}
+	{tags remove "38_heat"}
+else tagged "37_heat"
+	{tags add "38_heat"}
+	{tags remove "37_heat"}
+else tagged "36_heat"
+	{tags add "37_heat"}
+	{tags remove "36_heat"}
+else tagged "35_heat"
+	{tags add "36_heat"}
+	{tags remove "35_heat"}
+else tagged "34_heat"
+	{tags add "35_heat"}
+	{tags remove "34_heat"}
+else tagged "33_heat"
+	{tags add "34_heat"}
+	{tags remove "33_heat"}
+else tagged "32_heat"
+	{tags add "33_heat"}
+	{tags remove "32_heat"}
+else tagged "31_heat"
+	{tags add "32_heat"}
+	{tags remove "31_heat"}
+else tagged "30_heat"
+	{tags add "30_heat_stage"}
+	{tags add "31_heat"}
+	{tags remove "30_heat"}
+else tagged "29_heat"
+	{tags add "30_heat"}
+	{tags remove "29_heat"}
+else tagged "28_heat"
+	{tags add "29_heat"}
+	{tags remove "28_heat"}
+else tagged "27_heat"
+	{tags add "28_heat"}
+	{tags remove "27_heat"}
+else tagged "26_heat"
+	{tags add "27_heat"}
+	{tags remove "26_heat"}
+else tagged "25_heat"
+	{tags add "26_heat"}
+	{tags remove "25_heat"}
+else tagged "24_heat"
+	{tags add "25_heat"}
+	{tags remove "24_heat"}
+else tagged "23_heat"
+	{tags add "24_heat"}
+	{tags remove "23_heat"}
+else tagged "22_heat"
+	{tags add "23_heat"}
+	{tags remove "22_heat"}
+else tagged "21_heat"
+	{tags add "22_heat"}
+	{tags remove "21_heat"}
+else tagged "20_heat"
+	{tags add "20_heat_stage"}
+	{tags add "21_heat"}
+	{tags remove "20_heat"}
+else tagged "19_heat"
+	{tags add "20_heat"}
+	{tags remove "19_heat"}
+else tagged "18_heat"
+	{tags add "19_heat"}
+	{tags remove "18_heat"}
+else tagged "17_heat"
+	{tags add "18_heat"}
+	{tags remove "17_heat"}
+else tagged "16_heat"
+	{tags add "17_heat"}
+	{tags remove "16_heat"}
+else tagged "15_heat"
+	{tags add "16_heat"}
+	{tags remove "15_heat"}
+else tagged "14_heat"
+	{tags add "15_heat"}
+	{tags remove "14_heat"}
+else tagged "13_heat"
+	{tags add "14_heat"}
+	{tags remove "13_heat"}
+else tagged "12_heat"
+	{tags add "13_heat"}
+	{tags remove "12_heat"}
+else tagged "11_heat"
+	{tags add "12_heat"}
+	{tags remove "11_heat"}
+else tagged "10_heat"
+	{tags add "11_heat"}
+	{tags remove "10_heat"}
+else tagged "9_heat"
+	{tags add "10_heat_stage"}
+	{tags add "10_heat"}
+	{tags remove "9_heat"}
+else tagged "8_heat"
+	{tags add "9_heat"}
+	{tags remove "8_heat"}
+else tagged "7_heat"
+	{tags add "8_heat"}
+	{tags remove "7_heat"}
+else tagged "6_heat"
+	{tags add "7_heat"}
+	{tags remove "6_heat"}
+else tagged "5_heat"
+	{tags add "6_heat"}
+	{tags remove "5_heat"}
+else tagged "4_heat"
+	{tags add "5_heat"}
+	{tags remove "4_heat"}
+else tagged "3_heat"
+	{tags add "4_heat"}
+	{tags remove "3_heat"}
+else tagged "2_heat"
+	{tags add "3_heat"}
+	{tags remove "2_heat"}
+else tagged "1_heat"
+	{tags add "2_heat"}
+	{tags remove "1_heat"}
+else tagged "0_heat"
+	{tags remove "0_heat"}
+	{tags add "1_heat"}
+}

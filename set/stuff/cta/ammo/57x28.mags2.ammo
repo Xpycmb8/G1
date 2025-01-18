@@ -1,0 +1,13 @@
+{bullet
+	{tag "bullet sp normal stackable pierce smallarms"}
+	{inventory
+		{weight 2}
+		{block 50}
+		{size 2 1}
+		{fsm "belt"}
+	}	
+	{mass 0.004}
+	{desc "5,7×28 P90"}
+	{entity "p90_mags_v2"}
+	("trace5")
+}

@@ -1,0 +1,16 @@
+;// 12.7x99mm
+
+{bullet
+	{tag "bullet big hmgun stackable pierce sp smallarms_heavy"}
+	{desc "12.7x99mm"}
+	{inventory
+		{weight 1}
+		{block 100}
+		{size 2 2}
+		{fsm "belt"}
+	}
+	{mass 0.11}
+
+	{entity "12x99"}
+	("trace12")
+}

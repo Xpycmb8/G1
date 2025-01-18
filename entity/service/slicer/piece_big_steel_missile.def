@@ -1,0 +1,18 @@
+{game_entity
+	(include "/properties/physics_generic.ext")
+	{extender "stuff"
+		{item "air_bomb_pr"}
+	}
+	{props "piece_big_steel_missile" "steel"}
+	{simulation {able 1} {state 1}}
+	{body {proper body sensible} {permit body}}
+	{collider "grenade"}
+	{mass 25}
+	{extension "/properties/piece.ext"}
+	{volume "body"
+		{sphere 0.5}
+		{able clear {contact 1} {contact_ground 1}}
+		{bone "basis"}
+		{material "steel"}
+	}
+}

@@ -1,0 +1,32 @@
+;Exported by: Xpycmb
+;Date:        Sun Oct  3 16:02:36 2021
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\trace12slug.max
+{Skeleton
+	{animation
+		{sequence "trace"
+			{speed 1}
+			{events 
+				{1 "start_small_slug"}
+			}		
+			{autostart}
+		}
+	}
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "tail"
+			{Matrix34
+				-1	0	0
+				0	1	0
+				0	0	-1
+				-2.7465	0	0
+			}
+		}
+		{bone "trace"
+			{VolumeView "trace.ply"}
+		}
+	}
+}

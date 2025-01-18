@@ -1,0 +1,6 @@
+{item
+	{tag "liquid"}
+	{desc "Tritium"}
+	{inventory {noView}}
+	{mass 0.1}
+}

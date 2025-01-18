@@ -1,0 +1,9 @@
+{game_entity
+	{extension "/properties/piece.ext"}
+	{obstacleID "nothing"}	
+	{collider "fraction"}
+	{constrain none}
+	{body {proper body } {permit body}}
+	{props "fireworks_start"}
+	{simulation {able 1} {state 1}}
+}

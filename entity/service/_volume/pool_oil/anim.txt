@@ -1,0 +1,11 @@
+-= Animation: oil, Node Sphere_oil =-
+	Frame 0 {
+		Visibility 1
+		Position	-0.0157388	0.00235137	0.0127589
+		Orientation	0 0 1 0
+	}
+	Frame 24 {
+		Visibility 1
+		Position	-0.0157388	0.00235137	0.0127589
+		Orientation	0 0 1 0
+	}

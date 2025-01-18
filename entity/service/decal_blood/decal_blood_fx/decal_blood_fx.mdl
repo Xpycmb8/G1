@@ -1,0 +1,22 @@
+;Exported by: ?????
+;Date:        Thu Jan 16 15:24:32 2020
+;File:        D:\?????\Documents\3dsMax\scenes\wound.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "decal"
+			{parameters "CommonMesh;"}
+			{Matrix34
+				0	1	0
+				-1	0	0
+				0	0	1
+				0	0	0
+			}
+			{VolumeView "decal.ply"}
+		}
+	}
+}

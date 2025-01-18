@@ -1,0 +1,27 @@
+;Exported by: User
+;Date:        Sat Dec 27 01:07:10 2014
+;File:        E:\спасти все\3dsmax\scenes\АНТУРАЖ\ПЫТКИ\АНТУРАЖ органы зубы.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			2	0	0
+			0	-2	0
+			0	0	2
+		}
+		{bone "sphere01"
+			{Position 0	0	0.198568}
+			{VolumeView "sphere01.ply"}
+		}
+	}
+}
+
+{Volume "body"
+	{Box 0.24 0.18 0.55}
+	{Bone "sphere01"}
+	{Matrix34
+		0	1	0
+		-1	0	0
+		0	0	1
+		0	0	-0.0180252
+	}
+}

@@ -1,0 +1,5 @@
+{game_entity
+	(include "/properties/open_gas.inc")
+	{props "open_gas_verylarge"} 
+	{Extension "open_gas_verylarge.mdl"}
+}

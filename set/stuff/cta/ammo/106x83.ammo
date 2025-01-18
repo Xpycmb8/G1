@@ -1,0 +1,15 @@
+;// 10.6×83
+
+{bullet
+	{tag "bullet big hmgun stackable pierce smallarms_heavy"}
+	{desc ".416 Barrett (10.6×83 mm)"}
+	{inventory
+		{weight 1}
+		{block 100}
+		{size 2 2}
+		{fsm "belt"}
+	}
+	{mass 0.14}
+	{entity "12x108"}
+	("trace103")
+}

@@ -1,0 +1,26 @@
+{bullet;ОГ-7В «Осколок» / 7П50
+	{tag "ammo rocketlauncher shell fg 40mm_fg og7v"}
+;	{desc "ОГ-7В «Осколок»/7П50"}
+	{entity "og7v_ammo"}
+	{view "og7v_ammo_proj"
+	} 
+	{detonationThickness 1}
+	{inventory
+		;{handle_bone "ammo_back_left"}	;// when weapon is shouldered (not equipped) this bone on the weapon is linked to the {link_bone} defined above
+		{link_bone "ammo_back_right"}
+		{weight 100}
+		{size 5 1}
+		{fsm "stuff"}
+	}	
+	{mass 2}
+	{damage blastwave
+		{ground_interaction_radius 0.0}
+		{energy 5}
+		{area 2 8}
+	}
+	{damage add blastwave
+		{ground_interaction_radius 0.0}
+		{energy 3}
+		{area 1 3}
+	}
+}

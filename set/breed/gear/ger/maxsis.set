@@ -1,0 +1,60 @@
+{breed
+	{behaviour soldier}
+	{skin "maxsis"}
+	{portrait "maxsis"}
+	{icon "civilian"}
+	{icon_priority 0}
+	{nationality panam}
+	{perks
+		{"health" "275%"
+		}
+		{"health_regeneration" "100%"
+		}
+		{"stamina" "100%"
+		}
+		{"stamina_regeneration" "100%"
+		}
+		{"vision" human
+		}
+		{"speed" 1
+		}
+		{"pistol" lvl_8
+		}
+		{"smg" lvl_4
+		}
+		{"mgun" lvl_2
+		}
+		{"rifle" lvl_2
+		}
+		{"rocketlauncher" lvl_1
+		}
+		{"melee" lvl_2
+		}
+		{"personage" 1}
+		{"medic"}
+	}
+	{veterancy
+		{"lvl_1" 2
+		}
+		{"lvl_2" 8
+		}
+		{"lvl_3" 24
+		}
+		{"lvl_4" 48
+		}
+		{"lvl_5" 80
+		}
+	}
+	{inventory
+		{item "famas_v3" filling "mags50_famas ammo" 25}
+		{item "grenade m67" 3}
+		{item "knife_v4"}
+		{item "m93r_v1" filling "9x19 ammo" 15}
+		{item "9x19 mag 92fs ammo" 90}
+		{item "556x45 mags50_famas" 200}
+		{item "40x46_fg" }
+		{item "40x46_thermite" }
+		{item "bandage_ger" 12}
+		{in_hands 2}
+	}
+}

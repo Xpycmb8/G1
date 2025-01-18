@@ -1,0 +1,151 @@
+;SDL
+{effects
+	(define "radius_he_2m"
+		;{blastwave c4 1 r0 8 r1 8 position}	)
+		{delay 0.2 {start_sound "detonation/explosion_small_bb/"}}
+		{blastwave c4 0.1 r0 4 r1 4 position offset 0 0 50}
+	)
+	(define "radius_he_5m"
+		;{blastwave c4 1 r0 8 r1 8 position}	)
+		{delay 0.3 {start_sound "detonation/explosion_small_bb/"}}
+		{blastwave c4 0.2 r0 12 r1 12 position offset 0 0 50}
+	)
+	(define "radius_he_10m"
+		{delay 0.2 {start_sound "detonation/explosion_med_bb/"}}
+		{blastwave c4 0.5 r0 12 r1 12 position offset 0 0 50}
+	)
+	(define "radius_he_25m"
+		{delay 0.2 {start_sound "detonation/explosion_big_bb/"}}
+		{blastwave c4 2 r0 25 r1 25 position offset 0 0 50}
+	)
+	(define "distant_small"
+		{spawn "distant_small_expl" offset 0 0 5}
+	)
+	(define "distant_big"
+		{spawn "distant_big_expl" offset 0 0 25}
+	)
+	(define "fraction_round_30m"
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+	)
+	(define "fraction_round_15m"
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+	)
+	(define "fraction_round_5m"
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+		{spawn "fraction_set" offset 0 0 10}
+	)
+	(include "effects/shoot_emit_ext_sand.inc")
+	(include "effects/shoot_emit_mtl.inc")
+	(include "effects/shoot_emit_int.inc")
+	(include "effects/shoot_emit_ext.inc")
+	(include "effects/metal.inc")
+	(include "effects/air.inc")
+	(include "effects/floor.inc")
+	(include "effects/bridge.inc")
+	(include "effects/grass.inc")
+	(include "effects/ground.inc")
+	(include "effects/road.inc")
+	(include "effects/rock.inc")
+	(include "effects/sand.inc")
+	(include "effects/water.inc")
+	(include "effects/mud.inc")
+	(include "effects/snow.inc")
+	(include "effects/ice.inc")
+}

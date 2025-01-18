@@ -1,0 +1,15 @@
+;// 9x19mm
+
+{bullet
+	{tag "bullet sp small stackable pierce smallarms"}
+	{inventory
+		{weight 3.3}
+		{block 30}
+		{size 1 2}
+		{fsm "belt"}
+	}
+	{mass 0.008}
+	{desc "11x43 Glock"}
+	{entity "glock_mags"}
+	("trace10")
+}

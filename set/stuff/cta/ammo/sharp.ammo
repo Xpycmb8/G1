@@ -1,0 +1,5 @@
+{bullet
+	{tag "sharp"}
+	{desc "Нож"}
+	{inventory {noView}}
+}

@@ -1,0 +1,15 @@
+;Exported by: ?????
+;Date:        Wed Aug  7 01:25:56 2019
+;File:        D:\?????\Documents\3dsMax\scenes\match.max
+{Skeleton
+	{bone "match"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "fx_flame"
+			{Position -0.376501	-3.26103	0}
+		}
+	}
+}

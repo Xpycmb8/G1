@@ -1,0 +1,8 @@
+(include "physics_generic.ext")
+{collider "particle.small"}
+{obstacleID "sandbag"}
+{props "misc"}
+{mass 50}
+{volume "body"
+	{thickness 2}
+}

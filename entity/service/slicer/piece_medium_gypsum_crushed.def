@@ -1,0 +1,24 @@
+{game_entity
+	{extension "/properties/piece.ext"}
+	{constrain none}
+	{props "dummy" "concrete" "medium" "part" "plastic" "small_gypsum_crushed" "delet_t120"}
+	{collider "particle.small"}
+	{obstacleid "nothing"}
+	{simulation {able 1}}
+	{body
+		{permit body}
+	}
+	{volume "body"
+		{sphere 0.01}
+		{Tags  "not_tear"}		
+		{able
+			{contact 0} {contact_ground 1}
+			{bullet 0} {throwing 0} {obstacle 0}
+			{overlap 0} {visible 0}
+			{touch 0}
+		}
+		{bone "basis"}
+		{material "gypsum"}
+	}
+	{mass 120}
+}

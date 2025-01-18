@@ -1,0 +1,12 @@
+;SDL
+(include "stuff_small.ext")
+{props "dynamite"}
+{body
+	{permit body}
+}
+{collider "grenade"}
+{volume "select"
+	{able clear {touch}}
+	{density 0}
+}
+{lodclass "stuff_weapon"}

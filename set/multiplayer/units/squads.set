@@ -1,0 +1,51 @@
+;----- Squads -----
+
+;같컂eneric같�
+
+(define "generic_vi"
+    {charge 
+		{delay %cd}
+		{interval %ci}
+	}
+	{tags "%t"}
+	{group "%g"}
+	{button "%b"}
+)
+
+
+;같캳quads define같�
+
+(define "squad_with1types"
+	{"%name(%side)"
+		{charge 
+			{delay %cd}
+			{interval %ci}
+		}
+		{content "gear/%side/%c1"}
+		{tags "%side %t"}
+		{group "%g"}
+		{button "%b"}
+		{level %level}
+		{cost %cost}
+		{research_stage %research_stage}
+		{squad_cost_factor %scf}
+	}
+)
+
+("squad_with1types" side(ger) name(squad16) cd(0) ci(0) g(b10) c1(maxsis:1) 				b(s1) t(heroes) 	level(1) research_stage(1) cost(0) scf(1))
+("squad_with1types" side(ger) name(squad18) cd(0) ci(0) g(b10) c1(civilian1:1) 				b(s1) t(heroes) 	level(1) research_stage(1) cost(0) scf(1))
+("squad_with1types" side(ger) name(squad19) cd(0) ci(0) g(b10) c1(civilian2:1) 				b(s1) t(heroes) 	level(1) research_stage(1) cost(0) scf(1))
+("squad_with1types" side(ger) name(squad20) cd(0) ci(0) g(b10) c1(civilian2_at:1) 			b(s1) t(heroes) 	level(1) research_stage(1) cost(0) scf(1))
+("squad_with1types" side(ger) name(squad21) cd(0) ci(0) g(b10) c1(civilian_female1:1) 		b(s1) t(heroes) 	level(1) research_stage(1) cost(0) scf(1))
+("squad_with1types" side(ger) name(squad22) cd(0) ci(0) g(b10) c1(civilian_female2:1) 		b(s1) t(heroes) 	level(1) research_stage(1) cost(0) scf(1))
+("squad_with1types" side(ger) name(squad23) cd(0) ci(0) g(b10) c1(civilian_female3:1) 		b(s1) t(heroes) 	level(1) research_stage(1) cost(0) scf(1))
+
+("squad_with1types" side(rus) name(squad17) cd(0) ci(0) g(b10) c1(roze:1) 					b(s1) t(heroes) 	level(1) research_stage(1) cost(0) scf(1))
+("squad_with1types" side(rus) name(squad18) cd(0) ci(0) g(b10) c1(civilian1:1) 				b(s1) t(heroes) 	level(1) research_stage(1) cost(0) scf(1))
+("squad_with1types" side(rus) name(squad19) cd(0) ci(0) g(b10) c1(civilian2:1) 				b(s1) t(heroes) 	level(1) research_stage(1) cost(0) scf(1))
+("squad_with1types" side(rus) name(squad20) cd(0) ci(0) g(b10) c1(civilian2_at:1) 			b(s1) t(heroes) 	level(1) research_stage(1) cost(0) scf(1))
+("squad_with1types" side(rus) name(squad21) cd(0) ci(0) g(b10) c1(civilian_female1:1) 		b(s1) t(heroes) 	level(1) research_stage(1) cost(0) scf(1))
+("squad_with1types" side(rus) name(squad22) cd(0) ci(0) g(b10) c1(civilian_female2:1) 		b(s1) t(heroes) 	level(1) research_stage(1) cost(0) scf(1))
+("squad_with1types" side(rus) name(squad23) cd(0) ci(0) g(b10) c1(civilian_female3:1) 		b(s1) t(heroes) 	level(1) research_stage(1) cost(0) scf(1))
+
+

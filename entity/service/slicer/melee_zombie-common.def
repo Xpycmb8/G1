@@ -1,0 +1,8 @@
+{game_entity
+	(include "/properties/contactor.ext")
+	{extension "melee_zombie-common.mdl"}
+	{props "prop_not_physics" "melee_contact" "melee_zombie-common"} 
+	{extender "stuff"
+		{item "melee_zombie-common"}
+	}
+}

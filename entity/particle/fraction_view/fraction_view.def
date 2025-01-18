@@ -1,0 +1,8 @@
+{game_entity
+	(include "/properties/small_part.inc")
+	{props "fraction_view" "ps_dummy"}
+	{Extension "floatsam2.mdl"}
+	{Volume "body1"
+		{tags "body"}
+	}
+}

@@ -1,0 +1,24 @@
+{game_entity
+;	{extension "/properties/piece.ext"}
+	{obstacleid "nothing"}
+	{props "40x46_ammo" "steel" "40x46_ammo_armed"}
+	{simulation {able 1} {state 1}}
+	{body {proper body sensible} {permit body}}
+	{collider "grenade"}
+	{mass 0.1}
+	{extension "m203_launch.mdl"}
+	{extender "stuff"
+		{item "40x46 ammo"}
+	}
+	{Volume "armed"
+		{tags "detonator"}
+		{able {obstacle 1} {contact 1}}
+		{thickness 0.5}
+	}
+	{Volume "body"
+		{tags "detonator"}
+		{able {obstacle 1} {contact 1}}
+		{thickness 0.5}
+	}
+}
+

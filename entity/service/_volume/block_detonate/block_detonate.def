@@ -1,0 +1,8 @@
+{game_entity
+	{props "block_detonate" }
+	{Extension "block_detonate.mdl"}	
+	{Volume "block_detonate"
+		{thickness 8725}
+		{material "steel"}
+	}
+}

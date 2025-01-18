@@ -1,0 +1,269 @@
+{Skeleton
+	{animation
+		{sequence "flattern" {speed 0.3}}
+	}
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "position_ctrl"
+			{Matrix34
+				0.99056	0.0668314	-0.119684
+				-0.0673778	0.997727	-0.000519906
+				0.119377	0.00857903	0.992812
+				0	0	65.7395
+			}
+			{bone "glide_ctrl"
+				{bone "raven_cntrl_main"
+					{bone "raven_cntrl_back"
+						{Position 0	4.1559	-0.328232}
+						{bone "raven_cntrl_tail"
+							{Position 0	2.65806	-0.0703354}
+						}
+					}
+					{bone "raven_cntrl_head"
+						{Position 0	-1.51221	-0.0703354}
+						{bone "raven_cntrl_lip"
+							{Position 0	-1.40482	-0.341881}
+						}
+					}
+					{bone "raven_cntrl_l_wing001"
+						{Position 1.04216	0.584787	0}
+						{bone "raven_cntrl_l_wing002"
+							{Position 2.51017	0.138179	0.480461}
+							{bone "raven_cntrl_l_wing003"
+								{Position 3.58318	-0.480332	0.129539}
+								{bone "raven_cntrl_l_wing004"
+									{Position 4.67946	0.324144	-0.316536}
+								}
+							}
+							{bone "raven_cntrl_l_glide002"
+								{Position 3.82948	-0.325226	0.2929}
+								{bone "glide_ctrl_l_002"
+								}
+							}
+						}
+						{bone "raven_cntrl_l_glide001"
+							{Position 3.50502	0.192943	0.670868}
+							{bone "glide_ctrl_l_001"
+							}
+						}
+					}
+					{bone "raven_cntrl_r_wing001"
+						{Matrix34
+							-1	0	0
+							0	1	0
+							0	0	1
+							-1.04216	0.584787	0
+						}
+						{bone "raven_cntrl_r_wing002"
+							{Position 2.51017	0.138179	0.480453}
+							{bone "raven_cntrl_r_wing003"
+								{Position 3.58318	-0.480333	0.129547}
+								{bone "raven_cntrl_r_wing004"
+									{Position 4.67947	0.324144	-0.316544}
+								}
+							}
+							{bone "raven_cntrl_r_glide002"
+								{Matrix34
+									1	0	0
+									0	-1	0
+									0	0	-1
+									3.82967	-0.332635	0.286842
+								}
+								{bone "glide_ctrl_r_002"
+									{Matrix34
+										-1	0	0
+										0	-1	0
+										0	0	-1
+										0	0	0
+									}
+								}
+							}
+						}
+						{bone "raven_cntrl_r_glide001"
+							{Matrix34
+								1	0	0
+								0	-1	0
+								0	0	-1
+								3.46597	0.190793	0.663399
+							}
+							{bone "glide_ctrl_r_001"
+								{Orientation
+									-1	0	0
+									0	-1	0
+									0	0	-1
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		{bone "raven_bone_base"
+			{Matrix34
+				0	0	1
+				0	1	0
+				-1	0	0
+				0	0	0
+			}
+			{bone "raven_bone_main"
+				{Matrix34
+					-0.0456081	-0.997049	-0.0617578
+					0.991764	-0.0377862	-0.122377
+					0.119682	-0.0668309	0.99056
+					65.7395	0	6.3478e-005
+				}
+				{bone "raven_bone_head"
+					{Matrix34
+						0.981579	-0.191059	0
+						0.191059	0.981579	0
+						0	0	1
+						1.11319	0	0
+					}
+					{bone "raven_bone_lip"
+						{Position 1.9391	0	0}
+					}
+				}
+				{bone "raven_bone_back"
+					{Matrix34
+						-0.996145	-0.0877213	0
+						0.0877213	-0.996145	0
+						0	0	1
+						-3.75714	-0.503342	0
+					}
+					{bone "raven_bone_tail"
+						{Matrix34
+							0.999682	0.0252097	0
+							-0.0252097	0.999682	0
+							0	0	1
+							2.73202	0	0
+						}
+					}
+				}
+				{bone "raven_bone_l_wing001"
+					{Orientation
+						-0.488827	-0.0227364	-0.872085
+						-0.871143	-0.0405178	0.489355
+						-0.0464612	0.99892	0
+					}
+					{bone "raven_bone_l_wing002"
+						{Matrix34
+							0.881705	-0.432849	0.187718
+							0.440684	0.897663	0
+							-0.168507	0.0827241	0.982223
+							1.19502	0	0
+						}
+						{bone "raven_bone_l_wing003"
+							{Matrix34
+								0.970974	-0.187018	-0.14911
+								0.189074	0.981963	-0.000392806
+								0.146494	-0.0278116	0.988821
+								3.57386	0	0
+							}
+							{bone "raven_bone_l_wing004"
+								{Matrix34
+									0.974323	0.196864	-0.109268
+									-0.198068	0.980188	-0.000163056
+									0.107071	0.0218013	0.994012
+									2.86184	0	0
+								}
+								{bone "raven_bone_l_wing005"
+									{Position 4.46293	0	0}
+								}
+							}
+							{bone "raven_bone_l_glide002"
+								{Matrix34
+									-0.116421	0.9932	0
+									-0.9932	-0.116421	0
+									0	0	1
+									2.86183	0	-1.52588e-005
+								}
+							}
+						}
+						{bone "raven_bone_l_glide001"
+							{Matrix34
+								0.0132576	0.995097	-0.0980178
+								-0.999902	0.0136411	0.00324781
+								0.00456882	0.0979654	0.995179
+								3.57386	0	0
+							}
+						}
+					}
+				}
+				{bone "raven_bone_r_wing001"
+					{Orientation
+						-0.488826	-0.0227361	0.872085
+						0.871143	0.0405192	0.489355
+						-0.0464622	0.99892	0
+					}
+					{bone "raven_bone_r_wing002"
+						{Matrix34
+							0.881705	0.432849	0.187717
+							-0.440683	0.897663	0
+							-0.168507	-0.0827235	0.982223
+							1.19502	0	0
+						}
+						{bone "raven_bone_r_wing003"
+							{Matrix34
+								0.970974	0.187018	-0.14911
+								-0.189074	0.981963	0.000392187
+								0.146494	0.0278119	0.988821
+								3.53404	0	0
+							}
+							{bone "raven_bone_r_wing004"
+								{Matrix34
+									0.974323	-0.196863	-0.109268
+									0.198068	0.980188	0.000162996
+									0.107071	-0.0218012	0.994012
+									2.90145	0	0
+								}
+								{bone "raven_bone_r_wing005"
+									{Position 4.4625	0	0}
+								}
+							}
+							{bone "raven_bone_r_glide002"
+								{Matrix34
+									-0.116421	-0.9932	0
+									0.9932	-0.11642	0
+									0	0	1
+									2.90144	0	0
+								}
+							}
+						}
+						{bone "raven_bone_r_glide001"
+							{Matrix34
+								0.0132569	-0.995096	-0.0980178
+								0.999902	0.0136416	-0.00324801
+								0.00456867	-0.0979654	0.995179
+								3.53405	0	1.14441e-005
+							}
+						}
+					}
+				}
+			}
+		}
+		{bone "raven"
+			{Position 0	0	0.0829468}
+			;{LODView
+			;	{VolumeView "raven.ply"}
+			;	{VolumeView "raven_lod1.ply"}
+			;}
+		}
+		{bone "path001"
+			{Position 102.381	-49.7619	65.7395}
+		}
+	}
+}
+{Volume "body"
+	{Box 24.2255 8.19212 1.96326}
+	{Bone "raven_cntrl_main"}
+	{Matrix34
+		0.999997	0.00149181	0.00188254
+		-0.00148821	0.999997	-0.00193167
+		-0.00188544	0.00192885	0.999996
+		0.0467813	2.166	-0.0591059
+	}
+}

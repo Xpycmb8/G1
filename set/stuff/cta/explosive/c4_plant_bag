@@ -1,0 +1,37 @@
+{from "pattern throwable"
+	{tag "smallitemin1hand" "grenade" "c4_explosive_planted" "c4_explosive"}
+	{desc "C4 plant bag"}
+	{throw
+		{startAngle 50}
+		{constantSpeed 15}
+		{range 9}
+		{spreading 0.5}
+	}
+	{entity "c4_plant_bag"}
+	{inventory
+		{size 2 2}
+		{weight 100}
+		{fsm "belt"}
+	}
+	{mass 3}
+	{damage fire
+		{radius 3}
+		{heating 1}
+		{time 1}
+	}
+	{damage blastwave				;main explosion
+		{energy 6}
+		{area 5 10}
+		{ground_interaction_radius 0.35}
+	}
+	{damage add blastwave			;kill tank on hit
+		{energy 15}
+		{area 2 2}
+		{ground_interaction_radius 0.0}
+	}
+	{damage add blastwave			;outer blastwave
+		{energy 1}
+		{area 1 12}
+		{ground_interaction_radius 0.0}
+	}
+}

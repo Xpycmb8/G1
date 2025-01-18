@@ -1,0 +1,8 @@
+{game_entity
+	{skeleton         
+		{bone "bullet_small"}
+	}
+	{simulation {able 1} {state 1}}
+	{constrain none}
+	{props "bullet_small"}
+}

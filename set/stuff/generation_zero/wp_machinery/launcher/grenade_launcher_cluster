@@ -1,0 +1,65 @@
+{from "pattern bullet"
+	{tag "weapon cluster_launcher build_in gun"}
+	{filling "ammo m43" 6}
+	{inventory
+		{size 6 2 }
+		{weight 100 }
+	}
+	{entity "grenade_launcher_skirmisher"}
+	{fillingVisible "bullet"}
+	{cursor "cannon_on_fg"}
+	{cursorReloading "cannon_reload_fg"}
+	{burst
+		;{min 3}			; min burst shots in automatic mode
+		;{noaiming}			; no aiming during burst
+		{short 1 0}			; short burst shots on long distance, rand (+-)shots
+		{long 2 1}			; long burst shots on short distance, rand (+-)shots
+		{rangeKoef 0.5}		; rangeKoef * aimRange = max long burst distance
+	}
+	
+	{preloaded}
+	{mass 6}
+	
+	{fireSound "small_arms/m203/"}
+	{fireSoundClose "small_arms/m203_close/"}
+	{calibre 50}
+	{parameters "gas"
+		{DisableRicochet}
+		{calibre 2}
+		("health_damage_12gauge" d(0))	
+		{projectileDamage 0}
+		{projectileDamageClip 0}
+		{projectileDamageTable {5 0} }
+		{range 90 100};F
+		{speed 140}
+		{AimingTolerance 3}
+		{gravity 3}
+	}
+
+	{DisableRicochet}
+	{foresight "Foresight3"}
+	{gravity 1.5}
+	{rechargeTime 6}
+	("recoveryTime" r(50))
+	{reloadAnimBonus 6}
+	{curve "cumulative"}
+    {projectileDamage 12}
+	{projectileDamageThreshold 1}
+	{AimingTolerance 0.5}
+	{spreading 10
+		{SpreadXYRatio	1}
+		{radiusFunction
+			0.0		0
+			1.0		1.0
+			1.5		1.5
+			2.5		2.5
+			5.0		5.0
+		}
+	}
+	{range 180 200};F
+	{speed 140}
+	("accuracy_boost")
+	("recoil_high")
+	("sway_medium")
+	
+}

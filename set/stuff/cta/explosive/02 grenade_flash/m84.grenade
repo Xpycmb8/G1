@@ -1,0 +1,5 @@
+{from "pattern grenade_flash"
+	{inventory {size 2 1}}
+	{entity "grenade_m84"}
+	{mass 0.3}
+}

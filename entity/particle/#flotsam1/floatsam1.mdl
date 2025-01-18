@@ -1,0 +1,18 @@
+;Exported by: caps
+;Date:        Tue Jan 21 16:51:26 2014
+;File:        D:\!_DMS_CalltoArms\Assets\Partikel\stone1.max
+{Skeleton
+	{bone "floatsam1"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{VolumeView "floatsam1.ply"}
+	}
+}
+{Volume "body1"
+	{Polyhedron "body1.vol"}
+	{Bone "floatsam1"}
+	{Position 0.0128895	-0.0100131	-0.227981}
+}

@@ -1,0 +1,23 @@
+;Exported by: ?????
+;Date:        Sun Jun 23 21:31:33 2019
+;File:        D:\?????\Documents\3dsMax\scenes\broken_glass_00.max
+{Skeleton
+	{bone "wood_splinter_00"
+		{parameters "CommonMesh;"}
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{VolumeView "wood_splinter_00.ply"}
+	}
+}
+{Volume "body"
+	{Box 2.40239 17.8213 1.02278}
+	{Bone "wood_splinter_00"}
+	{Orientation
+		0.557616	0	0
+		0	0.557616	0
+		0	0	0.557616
+	}
+}

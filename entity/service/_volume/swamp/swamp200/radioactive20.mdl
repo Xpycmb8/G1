@@ -1,0 +1,28 @@
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "pla02"
+			{Matrix34
+				1	0	0
+				0	1	0
+				0	0	-1
+				0	0	0
+			}
+			{VolumeView "pla02.ply"}
+		}
+	}
+}
+{Volume "swamp"
+	{box 450 450 450}
+	{Bone "pla02"}
+	{Matrix34
+		-1	0	0
+		0	0	-1
+		0	-1	0
+		0.00861867	0.175069	0.00596238
+	}
+}

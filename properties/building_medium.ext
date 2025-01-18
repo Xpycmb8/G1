@@ -1,0 +1,4 @@
+(include "building.inc")
+{props "big_build_60t" }
+
+{lodclass "decor_medium"}

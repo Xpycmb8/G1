@@ -1,0 +1,11 @@
+{game_entity
+	(include "/properties/physics_generic.ext")
+	{collider "grenade"}
+	{obstacleID "fraction"}	
+	{Extension "fraction_v.mdl"}
+	{volume "body"
+		{material "dummy"}
+		{thickness 0.1}
+	}
+	{props "wound_fire_spawn"}
+}

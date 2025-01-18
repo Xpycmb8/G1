@@ -1,0 +1,74 @@
+(define "trace9"
+	{view "trace9"
+	} 
+)
+(define "trace9ap"
+	{view "trace9"
+	} 
+)
+(define "trace9x39"
+	{view "trace939"
+	} 
+)
+(define "trace10"
+	{view "trace9"
+	} 
+)
+(define "trace5"
+	{view "trace556"
+	} 
+)
+(define "trace7"
+	{view "trace762"
+	} 
+)
+(define "trace792"
+	{view "trace792"
+	} 
+)
+(define "trace7_trace"
+	{view "trace762_trace"
+	} 
+)
+(define "trace12"
+	{view "trace127"
+	} 
+)
+(define "trace12fg"
+	{view "trace127"
+	} 
+)
+(define "trace12tracer"
+	{view "trace127_trace"
+	} 
+)
+(define "trace12ap"
+	{view "trace127"
+	} 
+)
+(define "trace127x108"
+	{view "trace103"
+	} 
+)
+(define "trace103"
+	{view "trace103"
+	} 
+)
+(define "no_trace"
+	{trace
+		{view "/texture/fx/trace/trace_tiles_n1.mtl"
+			{ScaleX 0.01}
+			{ScaleY 0.01}
+			{Light 1}
+		}
+		{length 0.01}
+	}
+	{trace "grm reb rus"
+		{view "/texture/fx/trace/trace_tiles_n2.mtl"
+			{ScaleX 0.01}
+			{ScaleY 0.01}
+			{Light 1}
+		}
+		{length 0.01}
+	}
+)

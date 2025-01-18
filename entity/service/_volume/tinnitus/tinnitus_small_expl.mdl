@@ -1,0 +1,17 @@
+;Exported by: Xpycmb
+;Date:        Mon Jun 21 19:39:23 2021
+;File:        C:\Users\Xpycmb\Documents\3dsMax\scenes\tinnitus_small_expl.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+	}
+}
+{Volume "tinnitus"
+	{Cylinder 60 30}
+	{Bone "basis"}
+	{Position 0	0	18.865}
+}

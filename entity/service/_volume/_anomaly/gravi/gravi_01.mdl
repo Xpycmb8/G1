@@ -1,0 +1,78 @@
+{Skeleton
+	{bone "basis"
+		{Orientation
+			0.5	0	0
+			0	-0.5	0
+			0	0	0.5
+		}
+		{bone "pla02"
+			{Matrix34
+				1	0	0
+				0	1	0
+				0	0	-1
+				0	0	0
+			}
+			{VolumeView "pla02.ply"}
+		}
+		{bone "fx_e10"
+			{Matrix34
+				1	0	0
+				0	1	0
+				0	0	1
+				0	12	0
+			}
+		}
+		{bone "fx_e11"
+			{Matrix34
+				1	0	0
+				0	1	0
+				0	0	1
+				0	14	0
+			}
+		}
+		{bone "fx_e12"
+			{Matrix34
+				1	0	0
+				0	1	0
+				0	0	1
+				0	4	0
+			}
+		}
+		{bone "fx_e13"
+			{Matrix34
+				1	0	0
+				0	1	0
+				0	0	1
+				0	4	0
+			}
+		}
+		{bone "fx_e14"
+			{Matrix34
+				1	0	0
+				0	1	0
+				0	0	1
+				4	4	0
+			}
+		}
+	}
+}
+{Volume "crown"
+	{Cylinder 20 20}
+	{Bone "pla02"}
+	{Matrix34
+		0.892657	0	0
+		0	0.892657	0
+		0	0	-2.092657
+		2.10879	0.807475	-34.8236
+	}
+}
+{Volume "impulse"
+	{Cylinder 20 20}
+	{Bone "pla02"}
+	{Matrix34
+		0.892657	0	0
+		0	0.892657	0
+		0	0	-2.092657
+		2.10879	0.807475	-34.8236
+	}
+}

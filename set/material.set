@@ -1,0 +1,1829 @@
+{materials
+	{"steel"
+		{ricochet
+			{chance
+				{0	1}
+				{15	1}
+				{30	0.8}
+				{45 0.6}
+				{60 0.2}
+				{75 0.0}
+				{90 0.0}
+			}
+			{angle
+				{1	1}
+				{10	3}
+				{30	5}
+				{45	15}
+				{90	90}
+			}
+			{velocityDumping 0.75}
+			{gravityScale 1.1}
+		}
+		{physics
+			{friction  1.0}
+			{restitution 0.4}
+		}
+		{steelEquivalent 0.1}
+		{durability
+			{pierce 6}
+			{blast 1}
+		}
+		{damage
+			{radius 0.5}
+			{scale 0}
+			{stage "/texture/wound/impact_concrete2.mtl" 0.6}
+			;{stage "/texture/wound/impact_concrete3.mtl" 0.8}
+			;{stage "/texture/wound/metal_dmg03.mtl" 1}
+		}
+		{wound
+			{range 0 6}
+			{scale 0.8}
+			{calibre 6}
+			{stage "/texture/wound/armor/metal_small00.mtl" 0}
+			{stage "/texture/wound/armor/metal_small01.mtl" 0.001}
+			{stage "/texture/wound/metal_ricochet.mtl" 0.002}
+			{stage "/texture/wound/armor/metal_small03.mtl" 0.003}
+			{stage "/texture/wound/metal_small01.mtl" 0.5}
+			{stage "/texture/wound/metal_small02.mtl" 0.6}
+			{stage "/texture/wound/metal_small03.mtl" 0.7}
+			{stage "/texture/wound/metal_small04.mtl" 0.8}
+			{stage "/texture/wound/metal_small05.mtl" 0.9}
+			{stage "/texture/wound/metal_small06.mtl" {"/texture/wound/metal03_add.mtl" 1} 0.96}
+			{stage "/texture/wound/metal_small07.mtl" {"/texture/wound/metal02_add.mtl" 2} 0.97}
+			{stage "/texture/wound/metal_small08.mtl" {"/texture/wound/metal03_add.mtl" 3} 0.98}
+			{stage "/texture/wound/metal_small09.mtl" {"/texture/wound/metal02_add.mtl" 3} 1}
+		}
+		{wound
+			{range 6 9}
+			{scale 1}
+			{calibre 9}
+			{stage "/texture/wound/armor/metal_small00.mtl" 0}
+			{stage "/texture/wound/armor/metal_small01.mtl" 0.001}
+			{stage "/texture/wound/metal_ricochet.mtl" 0.002}
+			{stage "/texture/wound/armor/metal_small03.mtl" 0.003}
+			{stage "/texture/wound/metal_small01.mtl" 0.5}
+			{stage "/texture/wound/metal_small02.mtl" 0.6}
+			{stage "/texture/wound/metal_small03.mtl" 0.7}
+			{stage "/texture/wound/metal_small04.mtl" 0.8}
+			{stage "/texture/wound/metal_small05.mtl" 0.9}
+			{stage "/texture/wound/metal_small06.mtl" {"/texture/wound/metal03_add.mtl" 1} 0.96}
+			{stage "/texture/wound/metal_small07.mtl" {"/texture/wound/metal02_add.mtl" 2} 0.97}
+			{stage "/texture/wound/metal_small08.mtl" {"/texture/wound/metal03_add.mtl" 3} 0.98}
+			{stage "/texture/wound/metal_small09.mtl" {"/texture/wound/metal02_add.mtl" 3} 1}
+		}
+		{wound
+			{range 9 9.19}
+			{scale 0.8}
+			{calibre 9.19}
+			{stage "/texture/wound/armor/metal_small00.mtl" 0}
+			{stage "/texture/wound/armor/metal_small01.mtl" 0.001}
+			{stage "/texture/wound/metal_ricochet.mtl" 0.002}
+			{stage "/texture/wound/armor/metal_small03.mtl" 0.003}
+			{stage "/texture/wound/metal_small01.mtl" 0.5}
+			{stage "/texture/wound/metal_small02.mtl" 0.6}
+			{stage "/texture/wound/metal_small03.mtl" 0.7}
+			{stage "/texture/wound/metal_small04.mtl" 0.8}
+			{stage "/texture/wound/metal_small05.mtl" 0.9}
+			{stage "/texture/wound/metal_small06.mtl" {"/texture/wound/metal03_add.mtl" 1} 0.96}
+			{stage "/texture/wound/metal_small07.mtl" {"/texture/wound/metal02_add.mtl" 2} 0.97}
+			{stage "/texture/wound/metal_small08.mtl" {"/texture/wound/metal03_add.mtl" 3} 0.98}
+			{stage "/texture/wound/metal_small09.mtl" {"/texture/wound/metal02_add.mtl" 3} 1}
+		}
+		{wound
+			{range 9.19 9.39}
+			{scale 1.3}
+			{calibre 9.39}
+			{stage "/texture/wound/armor/metal_small00.mtl" 0}
+			{stage "/texture/wound/armor/metal_small01.mtl" 0.001}
+			{stage "/texture/wound/metal_ricochet.mtl" 0.002}
+			{stage "/texture/wound/armor/metal_small03.mtl" 0.003}
+			{stage "/texture/wound/metal_small01.mtl" 0.5}
+			{stage "/texture/wound/metal_small02.mtl" 0.6}
+			{stage "/texture/wound/metal_small03.mtl" 0.7}
+			{stage "/texture/wound/metal_small04.mtl" 0.8}
+			{stage "/texture/wound/metal_small05.mtl" 0.9}
+			{stage "/texture/wound/metal_small06.mtl" {"/texture/wound/metal03_add.mtl" 1} 0.96}
+			{stage "/texture/wound/metal_small07.mtl" {"/texture/wound/metal02_add.mtl" 2} 0.97}
+			{stage "/texture/wound/metal_small08.mtl" {"/texture/wound/metal03_add.mtl" 3} 0.98}
+			{stage "/texture/wound/metal_small09.mtl" {"/texture/wound/metal02_add.mtl" 3} 1}
+		}
+		{wound
+			{range 10 12}
+			{scale 1.9}
+			{calibre 12}
+			{stage "/texture/wound/armor/metal_small00.mtl" 0}
+			{stage "/texture/wound/armor/metal_small01.mtl" 0.001}
+			{stage "/texture/wound/metal_ricochet.mtl" 0.002}
+			{stage "/texture/wound/armor/metal_small03.mtl" 0.003}
+			{stage "/texture/wound/metal_small01.mtl" 0.5}
+			{stage "/texture/wound/metal_small02.mtl" 0.6}
+			{stage "/texture/wound/metal_small03.mtl" 0.7}
+			{stage "/texture/wound/metal_small04.mtl" 0.8}
+			{stage "/texture/wound/metal_small05.mtl" 0.9}
+			{stage "/texture/wound/metal_small06.mtl" {"/texture/wound/metal03_add.mtl" 1} 0.96}
+			{stage "/texture/wound/metal_small07.mtl" {"/texture/wound/metal02_add.mtl" 2} 0.97}
+			{stage "/texture/wound/metal_small08.mtl" {"/texture/wound/metal03_add.mtl" 3} 0.98}
+			{stage "/texture/wound/metal_small09.mtl" {"/texture/wound/metal02_add.mtl" 3} 1}
+		}
+		{wound
+			{range 12.3 13}
+			{scale 1.9}
+			{calibre 13}
+			{stage "/texture/wound/armor/metal_small00.mtl" 0}
+			{stage "/texture/wound/armor/metal_small01.mtl" 0.001}
+			{stage "/texture/wound/metal_ricochet.mtl" 0.002}
+			{stage "/texture/wound/armor/metal_small03.mtl" 0.003}
+			{stage "/texture/wound/metal_small01.mtl" 0.5}
+			{stage "/texture/wound/metal_small02.mtl" 0.6}
+			{stage "/texture/wound/metal_small03.mtl" 0.7}
+			{stage "/texture/wound/metal_small04.mtl" 0.8}
+			{stage "/texture/wound/metal_small05.mtl" 0.9}
+			{stage "/texture/wound/metal_small06.mtl" {"/texture/wound/metal03_add.mtl" 1} 0.96}
+			{stage "/texture/wound/metal_small07.mtl" {"/texture/wound/metal02_add.mtl" 2} 0.97}
+			{stage "/texture/wound/metal_small08.mtl" {"/texture/wound/metal03_add.mtl" 3} 0.98}
+			{stage "/texture/wound/metal_small09.mtl" {"/texture/wound/metal02_add.mtl" 3} 1}
+		}
+		{wound
+			{range 13 13.1}
+			{scale 6}
+			{calibre 13}
+			{stage "/texture/wound/shotgun/impact_shotgun_close_1.mtl" 0.1}
+			{stage "/texture/wound/shotgun/impact_shotgun_close_2.mtl" 0.4}
+			{stage "/texture/wound/shotgun/impact_shotgun_close_3.mtl" 0.5}
+			{stage "/texture/wound/shotgun/impact_shotgun_close_4.mtl" 0.7}
+			{stage "/texture/wound/shotgun/impact_shotgun_close_5.mtl" 0.9}
+		}
+		{wound
+			{range 13.2 20}
+			{scale 3}
+			{calibre 20}
+			{stage "/texture/wound/metal_small01.mtl" 0}
+			{stage "/texture/wound/metal_small02.mtl" 0.1}
+			{stage "/texture/wound/metal_small03.mtl" 0.1}
+			{stage "/texture/wound/metal_small05.mtl" {"/texture/wound/metal03_add.mtl" 2} 0.7}
+			{stage "/texture/wound/metal_small06.mtl" {"/texture/wound/metal03_add.mtl" 2} 0.8}
+			{stage "/texture/wound/metal_small07.mtl" {"/texture/wound/metal03_add.mtl" 3} 0.9}
+			{stage "/texture/wound/metal_small08.mtl" {"/texture/wound/metal03_add.mtl" 4} 0.95}
+			{stage "/texture/wound/metal_small09.mtl" {"/texture/wound/metal02_add.mtl" 5} 0.99}
+		}
+		{wound
+			{range 21 25}
+			{scale 2.5}
+			{calibre 25}
+			{stage "/texture/wound/metal01.mtl" 0}
+			{stage "/texture/wound/metal02.mtl" 0.6}
+			{stage "/texture/wound/metal03.mtl" {"/texture/wound/metal03_add.mtl" 30} 0.97}
+		}
+		{wound
+			{range 26 45}
+			{scale 3}
+			{calibre 45}
+			{stage "/texture/wound/wound_big/wound_big08.mtl" 0.2}
+			{stage "/texture/wound/wound_big/wound_big07.mtl" 0.3}
+			{stage "/texture/wound/wound_big/wound_big01.mtl" 0.6}
+			{stage "/texture/wound/wound_big/wound_big02.mtl" 0.8}
+			{stage "/texture/wound/wound_big/wound_big03.mtl" {"/texture/wound/metal03_add.mtl" 1} 0.96}
+			{stage "/texture/wound/wound_big/wound_big04.mtl" {"/texture/wound/metal02_add.mtl" 2} 0.97}
+			{stage "/texture/wound/wound_big/wound_big05.mtl" {"/texture/wound/metal03_add.mtl" 3} 0.98}
+			{stage "/texture/wound/wound_big/wound_big06.mtl" {"/texture/wound/metal02_add.mtl" 3} 1}
+		}
+		{wound
+			{range 46 57}
+			{scale 5}
+			{calibre 57}
+			{stage "/texture/wound/metal01.mtl" 0}
+			{stage "/texture/wound/metal02.mtl" 0.6}
+			{stage "/texture/wound/metal03.mtl" {"/texture/wound/metal03_add.mtl" 30} 0.97}
+		}
+		{wound
+			{range 57 75}
+			{scale 6.5}
+			{calibre 75}
+			{stage "/texture/wound/metal01.mtl" 0}
+			{stage "/texture/wound/metal02.mtl" 0.6}
+			{stage "/texture/wound/metal03.mtl" {"/texture/wound/metal03_add.mtl" 30} 0.97}
+		}
+		{wound
+			{range 75 120}
+			{scale 8}
+			{calibre 120}
+			{stage "/texture/wound/metal01.mtl" 0}
+			{stage "/texture/wound/metal02.mtl" 0.6}
+			{stage "/texture/wound/metal03.mtl" {"/texture/wound/metal03_add.mtl" 30} 0.97}
+		}
+		{wound
+			{range 120 210}
+			{scale 10}
+			{calibre 210}
+			{stage "/texture/wound/metal01.mtl" 0}
+			{stage "/texture/wound/metal02.mtl" 0.6}
+			{stage "/texture/wound/metal03.mtl" {"/texture/wound/metal03_add.mtl" 30} 0.97}
+;			{stage "/texture/wound/wound_big/wound_big01.mtl" 0.6}
+;			{stage "/texture/wound/wound_big/wound_big02.mtl" 0.8}
+;			{stage "/texture/wound/wound_big/wound_big03.mtl" {"/texture/wound/metal03_add.mtl" 1} 0.96}
+;			{stage "/texture/wound/wound_big/wound_big04.mtl" {"/texture/wound/metal02_add.mtl" 2} 0.97}
+;			{stage "/texture/wound/wound_big/wound_big05.mtl" {"/texture/wound/metal03_add.mtl" 3} 0.98}
+;			{stage "/texture/wound/wound_big/wound_big06.mtl" {"/texture/wound/metal02_add.mtl" 3} 1}
+		}
+	}
+	{"concrete"
+		{ricochet
+			{chance
+				{0	1}
+				{15	0.8}
+				{30	0.5}
+				{45 0.2}
+				{60 0.0}
+				{75 0.0}
+				{90 0.0}
+			}
+			{velocityDumping 0.8}
+			{gravityScale 2}
+		}
+		{physics
+			{friction  2.0}
+			{restitution 0.4}
+		}
+		{steelEquivalent 0.1}
+		{durability
+			{pierce 0}
+			{blast 1}
+		}
+		{damage
+			{radius 0.5}
+			{scale 0.4}
+			{stage "/texture/wound/concrete_wound/concrete_wound00.mtl" 0.01}
+			{stage "/texture/wound/impact_concrete2.mtl" 0.05}
+			{stage "/texture/wound/impact_concrete3.mtl" 0.1}
+			{stage "/texture/wound/concrete_blast01.mtl" 0.15}
+			{stage "/texture/wound/concrete_blast02.mtl" 0.4}
+		}
+		{wound
+			{range 0 6}
+			{scale 1.2}
+			{calibre 6}
+			{stage "/texture/wound/concrete_wound/concrete_wound00.mtl" 0}
+			{stage "/texture/wound/concrete_wound/concrete_wound01.mtl" 0.01}
+			{stage "/texture/wound/concrete_wound/concrete_wound02.mtl" 0.02}
+			{stage "/texture/wound/concrete_wound/concrete_wound03.mtl" 0.04}
+			{stage "/texture/wound/concrete_wound/concrete_wound04.mtl" 0.1}
+			{stage "/texture/wound/concrete_wound/concrete_wound05.mtl" 0.2}
+		}
+		{wound
+			{range 7 9}
+			{scale 1.5}
+			{calibre 9}
+			{stage "/texture/wound/concrete_wound/concrete_wound00.mtl" 0}
+			{stage "/texture/wound/concrete_wound/concrete_wound01.mtl" 0.01}
+			{stage "/texture/wound/concrete_wound/concrete_wound02.mtl" 0.02}
+			{stage "/texture/wound/concrete_wound/concrete_wound03.mtl" 0.04}
+			{stage "/texture/wound/concrete_wound/concrete_wound04.mtl" 0.1}
+			{stage "/texture/wound/concrete_wound/concrete_wound05.mtl" 0.2}
+		}
+		{wound
+			{range 9 9.19}
+			{scale 0.8}
+			{calibre 9.19}
+			{stage "/texture/wound/concrete_wound/concrete_wound00.mtl" 0}
+			{stage "/texture/wound/concrete_wound/concrete_wound01.mtl" 0.01}
+			{stage "/texture/wound/concrete_wound/concrete_wound02.mtl" 0.02}
+			{stage "/texture/wound/concrete_wound/concrete_wound03.mtl" 0.04}
+			{stage "/texture/wound/concrete_wound/concrete_wound04.mtl" 0.1}
+			{stage "/texture/wound/concrete_wound/concrete_wound05.mtl" 0.2}
+		}
+		{wound
+			{range 9.19 9.39}
+			{scale 1.4}
+			{calibre 9.39}
+			{stage "/texture/wound/concrete_wound/concrete_wound00.mtl" 0}
+			{stage "/texture/wound/concrete_wound/concrete_wound01.mtl" 0.01}
+			{stage "/texture/wound/concrete_wound/concrete_wound02.mtl" 0.02}
+			{stage "/texture/wound/concrete_wound/concrete_wound03.mtl" 0.04}
+			{stage "/texture/wound/concrete_wound/concrete_wound04.mtl" 0.1}
+			{stage "/texture/wound/concrete_wound/concrete_wound05.mtl" 0.2}
+		}
+		{wound
+			{range 10 12}
+			{scale 2.4}
+			{calibre 12}
+			{stage "/texture/wound/concrete_wound/concrete_wound00.mtl" 0}
+			{stage "/texture/wound/concrete_wound/concrete_wound01.mtl" 0.01}
+			{stage "/texture/wound/concrete_wound/concrete_wound02.mtl" 0.02}
+			{stage "/texture/wound/concrete_wound/concrete_wound03.mtl" 0.04}
+			{stage "/texture/wound/concrete_wound/concrete_wound04.mtl" 0.1}
+			{stage "/texture/wound/concrete_wound/concrete_wound05.mtl" 0.2}
+		}
+		{wound
+			{range 12.1 12.2}
+			{scale 2.4}
+			{calibre 12.2}
+			{stage "/texture/wound/shotgun/impact_shotgun_close_1.mtl" {"/texture/wound/concrete_wound/concrete_wound00.mtl" } 0.2}
+			{stage "/texture/wound/shotgun/impact_shotgun_close_2.mtl" {"/texture/wound/concrete_wound/concrete_wound01.mtl" } 0.4}
+			{stage "/texture/wound/shotgun/impact_shotgun_close_3.mtl" {"/texture/wound/concrete_wound/concrete_wound02.mtl" } 0.5}
+			{stage "/texture/wound/shotgun/impact_shotgun_close_4.mtl" {"/texture/wound/concrete_wound/concrete_wound03.mtl" } 0.7}
+			{stage "/texture/wound/shotgun/impact_shotgun_close_5.mtl" {"/texture/wound/concrete_wound/concrete_wound04.mtl" } 0.9}
+		}
+		{wound
+			{range 12.3 14}
+			{scale 3}
+			{calibre 14}
+			{stage "/texture/wound/concrete_wound/concrete_wound01.mtl" 0.2}
+			{stage "/texture/wound/concrete_wound/concrete_wound02.mtl" 0.2}
+			{stage "/texture/wound/concrete_wound/concrete_wound03.mtl" 0.2}
+			{stage "/texture/wound/concrete_wound/concrete_wound04.mtl" 0.2}
+			{stage "/texture/wound/concrete_wound/concrete_wound05.mtl" 0.3}
+		}
+		{wound
+			{range 14 20}
+			{scale 5}
+			{calibre 20}
+			{stage "/texture/wound/concrete_wound/concrete_wound01.mtl" 0}
+			{stage "/texture/wound/concrete_wound/concrete_wound02.mtl" 0.3}
+			{stage "/texture/wound/concrete_wound/concrete_wound03.mtl" 0.3}
+			{stage "/texture/wound/concrete_wound/concrete_wound04.mtl" 0.4}
+			{stage "/texture/wound/concrete_wound/concrete_wound05.mtl" 0.5}
+		}
+		{wound
+			{range 21 25}
+			{scale 6}
+			{calibre 25}
+			{stage "/texture/wound/concrete_wound/concrete_wound01.mtl" 0}
+			{stage "/texture/wound/concrete_wound/concrete_wound02.mtl" 0.3}
+			{stage "/texture/wound/concrete_wound/concrete_wound03.mtl" 0.3}
+			{stage "/texture/wound/concrete_wound/concrete_wound04.mtl" 0.4}
+			{stage "/texture/wound/concrete_wound/concrete_wound05.mtl" 0.5}
+		}
+		{wound
+			{range 26 50}
+			{scale 8}
+			{calibre 45}
+			{stage "/texture/wound/concrete01.mtl" 0}
+			{stage "/texture/wound/concrete02.mtl" 0.5}
+		}
+		{wound
+			{range 51 210}
+			{scale 21}
+			{calibre 122}
+			{stage "/texture/wound/concrete01.mtl" 0}
+			{stage "/texture/wound/concrete02.mtl" 0.4}
+			{stage "/texture/wound/concrete03.mtl" 0.75}
+		}
+	}	
+	{"wood"
+		{ricochet
+			{chance
+				{0  0.3}
+				{40 0.1}
+				{50 0.0}
+				{90 0}
+			}
+			{velocityDumping 0.7}
+			{gravityScale 2}
+		}
+		{physics
+			{friction 1.5}
+			{restitution 0.1}
+		}
+		{steelEquivalent 0.02}
+		; {durability
+			; {pierce 10}
+			; {blast 1}
+		; }
+		{damage
+			{radius 0.5}
+			{scale 0.3}
+			{stage "/texture/wound/impact_concrete2.mtl" 0.05}
+			{stage "/texture/wound/wood02.mtl" 0.12}
+			{stage "/texture/wound/impact_concrete3.mtl" 0.4}
+		}
+		{wound
+			{range 0 6}
+			{scale 0.8}
+			{calibre 6}
+			{stage "/texture/wound/wood_impact/wood_decal1.mtl" 0}
+			{stage "/texture/wound/wood_impact/wood_decal2.mtl" 0.3}
+			{stage "/texture/wound/wood_impact/wood_decal3.mtl" 0.4}
+			{stage "/texture/wound/wood_impact/wood_decal4.mtl" 0.6}
+			{stage "/texture/wound/wood_impact/wood_decal5.mtl" 0.8}
+		}
+		{wound
+			{range 7 9}
+			{scale 1.2}
+			{calibre 8}
+			{stage "/texture/wound/wood_impact/wood_decal1.mtl" 0}
+			{stage "/texture/wound/wood_impact/wood_decal2.mtl" 0.3}
+			{stage "/texture/wound/wood_impact/wood_decal3.mtl" 0.4}
+			{stage "/texture/wound/wood_impact/wood_decal4.mtl" 0.6}
+			{stage "/texture/wound/wood_impact/wood_decal5.mtl" 0.8}
+		}
+		{wound
+			{range 9 9.19}
+			{scale 0.8}
+			{calibre 9.19}
+			{stage "/texture/wound/wood_impact/wood_decal1.mtl" 0}
+			{stage "/texture/wound/wood_impact/wood_decal2.mtl" 0.3}
+			{stage "/texture/wound/wood_impact/wood_decal3.mtl" 0.4}
+			{stage "/texture/wound/wood_impact/wood_decal4.mtl" 0.6}
+			{stage "/texture/wound/wood_impact/wood_decal5.mtl" 0.8}
+		}
+		{wound
+			{range 9.19 9.39}
+			{scale 1.4}
+			{calibre 9.39}
+			{stage "/texture/wound/wood_impact/wood_decal1.mtl" 0}
+			{stage "/texture/wound/wood_impact/wood_decal2.mtl" 0.3}
+			{stage "/texture/wound/wood_impact/wood_decal3.mtl" 0.4}
+			{stage "/texture/wound/wood_impact/wood_decal4.mtl" 0.6}
+			{stage "/texture/wound/wood_impact/wood_decal5.mtl" 0.8}
+		}
+		{wound
+			{range 10 11.9}
+			{scale 2.3}
+			{calibre 12}
+			{stage "/texture/wound/wood_impact/wood_decal1.mtl" 0}
+			{stage "/texture/wound/wood_impact/wood_decal2.mtl" 0.3}
+			{stage "/texture/wound/wood_impact/wood_decal3.mtl" 0.4}
+			{stage "/texture/wound/wood_impact/wood_decal4.mtl" 0.6}
+			{stage "/texture/wound/wood_impact/wood_decal5.mtl" 0.8}
+		}
+		{wound
+			{range 12 12.2}
+			{scale 0.4}
+			{calibre 12}
+			{stage "/texture/wound/shotgun/impact_shotgun_close_1.mtl" 0.1}
+			{stage "/texture/wound/shotgun/impact_shotgun_close_2.mtl" 0.4}
+			{stage "/texture/wound/shotgun/impact_shotgun_close_3.mtl" 0.5}
+			{stage "/texture/wound/shotgun/impact_shotgun_close_4.mtl" 0.7}
+			{stage "/texture/wound/shotgun/impact_shotgun_close_5.mtl" 0.9}
+		}
+		{wound
+			{range 12.3 15}
+			{scale 4}
+			{calibre 15}
+			{stage "/texture/wound/wood_impact/wood_decal1.mtl" 0}
+			{stage "/texture/wound/wood_impact/wood_decal2.mtl" 0.3}
+			{stage "/texture/wound/wood_impact/wood_decal3.mtl" 0.4}
+			{stage "/texture/wound/wood_impact/wood_decal4.mtl" 0.6}
+			{stage "/texture/wound/wood_impact/wood_decal5.mtl" 0.8}
+		}
+		{wound
+			{range 16 25}
+			{scale 4}
+			{calibre 25}
+			{stage "/texture/wound/wood_impact/wood_decal1.mtl" 0}
+			{stage "/texture/wound/wood_impact/wood_decal2.mtl" 0.3}
+			{stage "/texture/wound/wood_impact/wood_decal3.mtl" 0.4}
+			{stage "/texture/wound/wood_impact/wood_decal4.mtl" 0.6}
+			{stage "/texture/wound/wood_impact/wood_decal5.mtl" 0.8}
+		}
+		{wound
+			{range 26 50}
+			{scale 7}
+			{calibre 45}
+			{stage "/texture/wound/impact_concrete2.mtl" 0}
+			{stage "/texture/wound/impact_metal_01.mtl" 0.8}
+		}
+		{wound
+			{range 51 210}
+			{scale 35}
+			{calibre 122}
+			{stage "/texture/wound/impact_concrete2.mtl" 0}
+			{stage "/texture/wound/impact_metal_01.mtl" 0.8}
+		}
+	}
+
+	{"straw"
+		{ricochet
+			{chance
+				{0	0}
+				{90 0}
+			}
+			{velocityDumping 0.5}
+			{gravityScale 1.1}
+		}
+		{physics
+			{friction  2.0}
+			{restitution 0.2}
+		}
+		{steelEquivalent 0.001}
+		{durability
+			{pierce 20}
+			{blast 1}
+		}
+	}
+	
+	{"flesh"
+		{physics
+			{friction 1.0}
+			{restitution 0.1}
+		}
+		{durability
+			{pierce 1}
+			{blast 1}
+		}
+		{wound
+			{range 7 9}
+			{scale 1.2}
+			{calibre 8}
+			{stage "/texture/wound/flesh/blood1.mtl" 0.2}
+			{stage "/texture/wound/flesh/blood2.mtl" 0.6}
+			{stage "/texture/wound/flesh/blood3.mtl" 0.9}
+		}
+		{wound
+			{range 9 9.19}
+			{scale 0.8}
+			{calibre 9.19}
+			{stage "/texture/wound/flesh/blood1.mtl" 0.2}
+			{stage "/texture/wound/flesh/blood2.mtl" 0.6}
+			{stage "/texture/wound/flesh/blood3.mtl" 0.9}
+		}
+		{wound
+			{range 9.19 9.39}
+			{scale 1.4}
+			{calibre 9.39}
+			{stage "/texture/wound/flesh/blood1.mtl" 0.2}
+			{stage "/texture/wound/flesh/blood2.mtl" 0.6}
+			{stage "/texture/wound/flesh/blood3.mtl" 0.9}
+		}
+		{wound
+			{range 10 12}
+			{scale 2.3}
+			{calibre 12}
+			{stage "/texture/wound/flesh/blood1.mtl" 0.2}
+			{stage "/texture/wound/flesh/blood2.mtl" 0.6}
+			{stage "/texture/wound/flesh/blood3.mtl" 0.9}
+		}
+		{wound
+			{range 12.1 12.2}
+			{scale 0.4}
+			{calibre 12.2}
+			{stage "/texture/wound/flesh/blood1.mtl" 0.2}
+			{stage "/texture/wound/flesh/blood2.mtl" 0.6}
+			{stage "/texture/wound/flesh/blood3.mtl" 0.9}
+		}
+		{wound
+			{range 12 15}
+			{scale 2.6}
+			{calibre 15}
+			{stage "/texture/wound/flesh/blood1.mtl" 0.2}
+			{stage "/texture/wound/flesh/blood2.mtl" 0.6}
+			{stage "/texture/wound/flesh/blood3.mtl" 0.9}
+		}
+		{wound
+			{range 16 25}
+			{scale 4}
+			{calibre 25}
+			{stage "/texture/wound/flesh/blood1.mtl" 0.2}
+			{stage "/texture/wound/flesh/blood2.mtl" 0.6}
+			{stage "/texture/wound/flesh/blood3.mtl" 0.9}
+		}
+		{wound
+			{range 26 50}
+			{scale 7}
+			{calibre 45}
+			{stage "/texture/wound/flesh/blood1.mtl" 0.2}
+			{stage "/texture/wound/flesh/blood2.mtl" 0.6}
+			{stage "/texture/wound/flesh/blood3.mtl" 0.9}
+		}
+		{wound
+			{range 51 210}
+			{scale 35}
+			{calibre 122}
+			{stage "/texture/wound/flesh/blood1.mtl" 0.2}
+			{stage "/texture/wound/flesh/blood2.mtl" 0.6}
+			{stage "/texture/wound/flesh/blood3.mtl" 0.9}
+		}
+		{damage
+			{radius 1.5}
+			{scale 2}
+			{stage "/texture/wound/flesh/blood_damage.mtl" 0.2}
+		}
+	}
+	{"kevlar_human"
+		{physics
+			{friction 1.0}
+			{restitution 0.1}
+		}
+		{durability
+			{pierce 1}
+			{blast 1}
+		}
+		{wound
+			{range 0 6}
+			{scale 1.5}
+			{calibre 6}
+			{stage "/texture/wound/kevlar/wound_kevlar_00.mtl" 0.3}
+			{stage "/texture/wound/kevlar/wound_kevlar_01.mtl" 0.5}
+			{stage "/texture/wound/kevlar/wound_kevlar_02.mtl" 0.9}
+		}
+		{wound
+			{range 6 9}
+			{scale 1.4}
+			{calibre 9}
+			{stage "/texture/wound/kevlar/wound_kevlar_00.mtl" 0.3}
+			{stage "/texture/wound/kevlar/wound_kevlar_01.mtl" 0.5}
+			{stage "/texture/wound/kevlar/wound_kevlar_02.mtl" 0.9}
+		}
+		{wound
+			{range 9 9.19}
+			{scale 1}
+			{calibre 9.19}
+			{stage "/texture/wound/kevlar/wound_kevlar_00.mtl" 0.3}
+			{stage "/texture/wound/kevlar/wound_kevlar_01.mtl" 0.5}
+			{stage "/texture/wound/kevlar/wound_kevlar_02.mtl" 0.9}
+		}
+		{wound
+			{range 9.19 9.39}
+			{scale 1.6}
+			{calibre 9.39}
+			{stage "/texture/wound/kevlar/wound_kevlar_00.mtl" 0.3}
+			{stage "/texture/wound/kevlar/wound_kevlar_01.mtl" 0.5}
+			{stage "/texture/wound/kevlar/wound_kevlar_02.mtl" 0.9}
+		}
+		{wound
+			{range 10 12}
+			{scale 3}
+			{calibre 12}
+			{stage "/texture/wound/kevlar/wound_kevlar_00.mtl" 0.3}
+			{stage "/texture/wound/kevlar/wound_kevlar_01.mtl" 0.5}
+			{stage "/texture/wound/kevlar/wound_kevlar_02.mtl" 0.9}
+		}
+		{wound
+			{range 13 20}
+			{scale 5}
+			{calibre 20}
+			{stage "/texture/wound/kevlar/wound_kevlar_00.mtl" 0.3}
+			{stage "/texture/wound/kevlar/wound_kevlar_01.mtl" 0.5}
+			{stage "/texture/wound/kevlar/wound_kevlar_02.mtl" 0.9}
+		}
+	}
+	
+	{"sand"			
+		{ricochet
+			{chance
+				{0	0.75}
+				{15	0.5}
+				{30	0.25}
+				{45 0.125}
+				{60 0.0}
+				{75 0.0}
+				{90 0.0}
+			}
+			{velocityDumping 0.375}
+			{gravityScale 1}
+		}
+		{physics
+			{friction  1.0}
+			{restitution 0.8}
+		}
+		{steelEquivalent 0.01}
+		{durability
+			{pierce 10}
+			{blast 1}
+		}
+		{damage
+			{radius 1.5}
+			{scale 2.7}
+			{stage "/texture/wound/concrete_blast01.mtl" 0.12}
+			{stage "/texture/wound/concrete_blast02.mtl" 0.4}
+		}
+		{wound
+			{range 0 12}
+			{scale 10}
+			{calibre 12}
+			{stage "/texture/wound/concrete_small01.mtl" 0}
+		}
+		{wound
+			{range 13 20}
+			{scale 15}
+			{calibre 20}
+			{stage "/texture/wound/concrete_small01.mtl" 0}
+		}
+		{wound
+			{range 21 50}
+			{scale 8}
+			{calibre 45}
+			{stage "/texture/wound/concrete01.mtl" 0}
+			{stage "/texture/wound/concrete02.mtl" 0.5}
+		}
+		{wound
+			{range 51 210}
+			{scale 21}
+			{calibre 122}
+			{stage "/texture/wound/concrete01.mtl" 0}
+			{stage "/texture/wound/concrete02.mtl" 0.4}
+			{stage "/texture/wound/concrete03.mtl" 0.75}
+		}
+	}
+	{"fabric"
+		{physics 
+			{friction 1.0}
+			{restitution 0.1}
+		}
+		{steelEquivalent 0.001}
+		{wound
+			{range 0 9}
+			{scale 8}
+			{calibre 8}
+			{stage "/texture/wound/metal_small01.mtl" 1}
+		}
+		{wound
+			{range 10 25}
+			{scale 12}
+			{calibre 12}
+			{stage "/texture/wound/metal_small01.mtl" 1}
+		}
+		{wound
+			{range 26 40}
+			{scale 20}
+			{calibre 37}
+			{stage "/texture/wound/metal_small01.mtl" 1}
+		}
+		{wound
+			{range 41 73}
+			{scale 30}
+			{calibre 45}
+			{stage "/texture/wound/metal_small01.mtl" 1}
+		}
+		{wound
+			{range 74 120}
+			{scale 50}
+			{calibre 88}
+			{stage "/texture/wound/metal_small01.mtl" 1}
+		}
+		{wound
+			{range 121 300}
+			{scale 65}
+			{calibre 122}
+			{stage "/texture/wound/metal_small01.mtl" 1}
+		}
+	}
+	
+	{"wound_glass"
+		{ricochet
+			{chance
+				{0	0}
+				{90 0}
+			}
+			{velocityDumping 0.8}
+			{gravityScale 2}
+		}
+		{physics 
+			{friction 1.0}
+			{restitution 0.3}
+		}
+		{steelEquivalent 0.02}
+		{durability
+			{pierce 1}
+			{blast 1}
+		}
+		{damage
+			{radius 0.1}
+			{scale 0.7}
+			{stage "/texture/wound/glass/glass_impact.mtl" 0.2}
+		}
+		{wound
+			{range 0 6}
+			{scale 1.5}
+			{calibre 6}
+			{stage "/texture/wound/glass/glass_impact_00.mtl" 0}
+			{stage "/texture/wound/glass/glass_impact_01.mtl" 0.3}
+			{stage "/texture/wound/glass/glass_impact_02.mtl" 0.4}
+			{stage "/texture/wound/glass/glass_impact_03.mtl" 0.75}
+		}
+		{wound
+			{range 6 9}
+			{scale 1.4}
+			{calibre 9}
+			{stage "/texture/wound/glass/glass_impact_00.mtl" 0}
+			{stage "/texture/wound/glass/glass_impact_01.mtl" 0.3}
+			{stage "/texture/wound/glass/glass_impact_02.mtl" 0.4}
+			{stage "/texture/wound/glass/glass_impact_03.mtl" 0.75}
+		}
+		{wound
+			{range 9 9.19}
+			{scale 1}
+			{calibre 9.19}
+			{stage "/texture/wound/glass/glass_impact_00.mtl" 0}
+			{stage "/texture/wound/glass/glass_impact_01.mtl" 0.3}
+			{stage "/texture/wound/glass/glass_impact_02.mtl" 0.4}
+			{stage "/texture/wound/glass/glass_impact_03.mtl" 0.75}
+		}
+		{wound
+			{range 9.19 9.39}
+			{scale 1.6}
+			{calibre 9.39}
+			{stage "/texture/wound/glass/glass_impact_00.mtl" 0}
+			{stage "/texture/wound/glass/glass_impact_01.mtl" 0.3}
+			{stage "/texture/wound/glass/glass_impact_02.mtl" 0.4}
+			{stage "/texture/wound/glass/glass_impact_03.mtl" 0.75}
+		}
+		{wound
+			{range 10 12}
+			{scale 3}
+			{calibre 12}
+			{stage "/texture/wound/glass/glass_impact_00.mtl" 0}
+			{stage "/texture/wound/glass/glass_impact_01.mtl" 0.3}
+			{stage "/texture/wound/glass/glass_impact_02.mtl" 0.4}
+			{stage "/texture/wound/glass/glass_impact_03.mtl" 0.75}
+		}
+		{wound
+			{range 13 20}
+			{scale 5}
+			{calibre 20}
+			{stage "/texture/wound/glass/glass_impact_00.mtl" 0}
+			{stage "/texture/wound/glass/glass_impact_01.mtl" 0.3}
+			{stage "/texture/wound/glass/glass_impact_02.mtl" 0.4}
+			{stage "/texture/wound/glass/glass_impact_03.mtl" 0.75}
+		}
+		{wound
+			{range 21 28}
+			{scale 9}
+			{calibre 25}
+			{stage "/texture/wound/glass/glass_impact_00.mtl" 0}
+			{stage "/texture/wound/glass/glass_impact_01.mtl" 0.3}
+			{stage "/texture/wound/glass/glass_impact_02.mtl" 0.4}
+			{stage "/texture/wound/glass/glass_impact_03.mtl" 0.75}
+		}
+	}
+	{"glass" ;goh
+		{ricochet
+			{chance
+				{0	0}
+				{90 0}
+			}
+			{velocityDumping 0.8}
+			{gravityScale 2}
+		}
+		{physics 
+			{friction 1.0}
+			{restitution 0.3}
+		}
+		{steelEquivalent 0.02}
+		{durability
+			{pierce 1}
+			{blast 1}
+		}
+		{damage
+			{radius 0.1}
+			{scale 0.7}
+			{stage "/texture/wound/glass/glass_impact.mtl" 0.2}
+		}
+		{wound
+			{range 0 6}
+			{scale 1.5}
+			{calibre 6}
+			{stage "/texture/wound/glass/glass_impact_00.mtl" 0}
+			{stage "/texture/wound/glass/glass_impact_01.mtl" 0.3}
+			{stage "/texture/wound/glass/glass_impact_02.mtl" 0.4}
+			{stage "/texture/wound/glass/glass_impact_03.mtl" 0.75}
+		}
+		{wound
+			{range 6 9}
+			{scale 1.4}
+			{calibre 9}
+			{stage "/texture/wound/glass/glass_impact_00.mtl" 0}
+			{stage "/texture/wound/glass/glass_impact_01.mtl" 0.3}
+			{stage "/texture/wound/glass/glass_impact_02.mtl" 0.4}
+			{stage "/texture/wound/glass/glass_impact_03.mtl" 0.75}
+		}
+		{wound
+			{range 9 9.19}
+			{scale 1}
+			{calibre 9.19}
+			{stage "/texture/wound/glass/glass_impact_00.mtl" 0}
+			{stage "/texture/wound/glass/glass_impact_01.mtl" 0.3}
+			{stage "/texture/wound/glass/glass_impact_02.mtl" 0.4}
+			{stage "/texture/wound/glass/glass_impact_03.mtl" 0.75}
+		}
+		{wound
+			{range 9.19 9.39}
+			{scale 1.6}
+			{calibre 9.39}
+			{stage "/texture/wound/glass/glass_impact_00.mtl" 0}
+			{stage "/texture/wound/glass/glass_impact_01.mtl" 0.3}
+			{stage "/texture/wound/glass/glass_impact_02.mtl" 0.4}
+			{stage "/texture/wound/glass/glass_impact_03.mtl" 0.75}
+		}
+		{wound
+			{range 10 12}
+			{scale 3}
+			{calibre 12}
+			{stage "/texture/wound/glass/glass_impact_00.mtl" 0}
+			{stage "/texture/wound/glass/glass_impact_01.mtl" 0.3}
+			{stage "/texture/wound/glass/glass_impact_02.mtl" 0.4}
+			{stage "/texture/wound/glass/glass_impact_03.mtl" 0.75}
+		}
+		{wound
+			{range 13 20}
+			{scale 5}
+			{calibre 20}
+			{stage "/texture/wound/glass/glass_impact_00.mtl" 0}
+			{stage "/texture/wound/glass/glass_impact_01.mtl" 0.3}
+			{stage "/texture/wound/glass/glass_impact_02.mtl" 0.4}
+			{stage "/texture/wound/glass/glass_impact_03.mtl" 0.75}
+		}
+		{wound
+			{range 21 28}
+			{scale 9}
+			{calibre 25}
+			{stage "/texture/wound/glass/glass_impact_00.mtl" 0}
+			{stage "/texture/wound/glass/glass_impact_01.mtl" 0.3}
+			{stage "/texture/wound/glass/glass_impact_02.mtl" 0.4}
+			{stage "/texture/wound/glass/glass_impact_03.mtl" 0.75}
+		}
+	}
+	{"wound_glass_small"
+		{ricochet
+			{chance
+				{0	0}
+				{90 0}
+			}
+			{velocityDumping 0.8}
+			{gravityScale 2}
+		}
+		{physics 
+			{friction 1.0}
+			{restitution 0.3}
+		}
+		{steelEquivalent 0.02}
+		{durability
+			{pierce 1}
+			{blast 1}
+		}
+		{durability
+			{pierce 1}
+			{blast 1}
+		}
+		{damage
+			{radius 0.1}
+			{scale 0.7}
+			{stage "/texture/wound/glass/glass_impact.mtl" 0.2}
+		}
+		{wound
+			{range 0 6}
+			{scale 1.5}
+			{calibre 6}
+			{stage "/texture/wound/glass/glass_impact_00.mtl" 0}
+			{stage "/texture/wound/glass/glass_impact_01.mtl" 0.3}
+			{stage "/texture/wound/glass/glass_impact_02.mtl" 0.4}
+			{stage "/texture/wound/glass/glass_impact_03.mtl" 0.75}
+		}
+		{wound
+			{range 6 9}
+			{scale 1.4}
+			{calibre 9}
+			{stage "/texture/wound/glass/glass_impact_00.mtl" 0}
+			{stage "/texture/wound/glass/glass_impact_01.mtl" 0.3}
+			{stage "/texture/wound/glass/glass_impact_02.mtl" 0.4}
+			{stage "/texture/wound/glass/glass_impact_03.mtl" 0.75}
+		}
+		{wound
+			{range 9 9.19}
+			{scale 1}
+			{calibre 9.19}
+			{stage "/texture/wound/glass/glass_impact_00.mtl" 0}
+			{stage "/texture/wound/glass/glass_impact_01.mtl" 0.3}
+			{stage "/texture/wound/glass/glass_impact_02.mtl" 0.4}
+			{stage "/texture/wound/glass/glass_impact_03.mtl" 0.75}
+		}
+		{wound
+			{range 9.19 9.39}
+			{scale 1.6}
+			{calibre 9.39}
+			{stage "/texture/wound/glass/glass_impact_00.mtl" 0}
+			{stage "/texture/wound/glass/glass_impact_01.mtl" 0.3}
+			{stage "/texture/wound/glass/glass_impact_02.mtl" 0.4}
+			{stage "/texture/wound/glass/glass_impact_03.mtl" 0.75}
+		}
+		{wound
+			{range 10 12}
+			{scale 3}
+			{calibre 12}
+			{stage "/texture/wound/glass/glass_impact_00.mtl" 0}
+			{stage "/texture/wound/glass/glass_impact_01.mtl" 0.3}
+			{stage "/texture/wound/glass/glass_impact_02.mtl" 0.4}
+			{stage "/texture/wound/glass/glass_impact_03.mtl" 0.75}
+		}
+		{wound
+			{range 13 20}
+			{scale 5}
+			{calibre 20}
+			{stage "/texture/wound/glass/glass_impact_00.mtl" 0}
+			{stage "/texture/wound/glass/glass_impact_01.mtl" 0.3}
+			{stage "/texture/wound/glass/glass_impact_02.mtl" 0.4}
+			{stage "/texture/wound/glass/glass_impact_03.mtl" 0.75}
+		}
+		{wound
+			{range 21 28}
+			{scale 9}
+			{calibre 25}
+			{stage "/texture/wound/glass/glass_impact_00.mtl" 0}
+			{stage "/texture/wound/glass/glass_impact_01.mtl" 0.3}
+			{stage "/texture/wound/glass/glass_impact_02.mtl" 0.4}
+			{stage "/texture/wound/glass/glass_impact_03.mtl" 0.75}
+		}
+	}
+	{"wound_lamp"
+		{ricochet
+			{chance
+				{0	0}
+				{90 0}
+			}
+			{velocityDumping 0.8}
+			{gravityScale 2}
+		}
+		{physics 
+			{friction 1.0}
+			{restitution 0.3}
+		}
+		{steelEquivalent 0.02}
+		{durability
+			{pierce 1}
+			{blast 1}
+		}
+		{damage
+			{radius 0.1}
+			{scale 1.2}
+			{stage "/texture/wound/solid_glass/solid_glass.mtl" 0.2}
+		}
+		{wound
+			{range 0 6}
+			{scale 1.5}
+			{calibre 6}
+			{stage "/texture/wound/solid_glass/solid_glass_00.mtl" 0.6}
+			{stage "/texture/wound/solid_glass/solid_glass_01.mtl" 0.7}
+			{stage "/texture/wound/solid_glass/solid_glass_02.mtl" 0.9}
+		}
+		{wound
+			{range 6 9}
+			{scale 1.4}
+			{calibre 9}
+			{stage "/texture/wound/solid_glass/solid_glass_00.mtl" 0.6}
+			{stage "/texture/wound/solid_glass/solid_glass_01.mtl" 0.7}
+			{stage "/texture/wound/solid_glass/solid_glass_02.mtl" 0.9}
+		}
+		{wound
+			{range 9 9.19}
+			{scale 1}
+			{calibre 9.19}
+			{stage "/texture/wound/solid_glass/solid_glass_00.mtl" 0.6}
+			{stage "/texture/wound/solid_glass/solid_glass_01.mtl" 0.7}
+			{stage "/texture/wound/solid_glass/solid_glass_02.mtl" 0.9}
+		}
+		{wound
+			{range 9.19 9.39}
+			{scale 1.6}
+			{calibre 9.39}
+			{stage "/texture/wound/solid_glass/solid_glass_00.mtl" 0.6}
+			{stage "/texture/wound/solid_glass/solid_glass_01.mtl" 0.7}
+			{stage "/texture/wound/solid_glass/solid_glass_02.mtl" 0.9}
+		}
+		{wound
+			{range 10 12}
+			{scale 3}
+			{calibre 12}
+			{stage "/texture/wound/solid_glass/solid_glass_00.mtl" 0.6}
+			{stage "/texture/wound/solid_glass/solid_glass_01.mtl" 0.7}
+			{stage "/texture/wound/solid_glass/solid_glass_02.mtl" 0.9}
+		}
+		{wound
+			{range 13 20}
+			{scale 5}
+			{calibre 20}
+			{stage "/texture/wound/solid_glass/solid_glass_00.mtl" 0.6}
+			{stage "/texture/wound/solid_glass/solid_glass_01.mtl" 0.7}
+			{stage "/texture/wound/solid_glass/solid_glass_02.mtl" 0.9}
+		}
+		{wound
+			{range 21 25}
+			{scale 8}
+			{calibre 25}
+			{stage "/texture/wound/solid_glass/solid_glass_00.mtl" 0.6}
+			{stage "/texture/wound/solid_glass/solid_glass_01.mtl" 0.7}
+			{stage "/texture/wound/solid_glass/solid_glass_02.mtl" 0.9}
+		}
+	}
+	{"kevlar"
+		{ricochet
+			{chance
+				{0	0}
+				{15	0}
+				{30	0}
+				{45 0}
+				{60 0}
+				{75 0}
+				{90 0}
+			}
+			{velocityDumping 0.5}
+			{gravityScale 1}
+		}
+		{durability
+			{pierce 1}
+			{blast 1}
+		}
+		{damage
+			{radius 0.5}
+			{scale 0.2}
+			{stage "/texture/wound/impact_concrete2.mtl" 0.6}
+			{stage "/texture/wound/impact_concrete3.mtl" 0.8}
+			;{stage "/texture/wound/metal_dmg03.mtl" 1}
+		}
+		{wound
+			{range 0 6}
+			{scale 1.5}
+			{calibre 6}
+			{stage "/texture/wound/kevlar/wound_kevlar_00.mtl" 0.3}
+			{stage "/texture/wound/kevlar/wound_kevlar_01.mtl" 0.5}
+			{stage "/texture/wound/kevlar/wound_kevlar_02.mtl" 0.9}
+		}
+		{wound
+			{range 6 9}
+			{scale 1.4}
+			{calibre 9}
+			{stage "/texture/wound/kevlar/wound_kevlar_00.mtl" 0.3}
+			{stage "/texture/wound/kevlar/wound_kevlar_01.mtl" 0.5}
+			{stage "/texture/wound/kevlar/wound_kevlar_02.mtl" 0.9}
+		}
+		{wound
+			{range 9 9.19}
+			{scale 1}
+			{calibre 9.19}
+			{stage "/texture/wound/kevlar/wound_kevlar_00.mtl" 0.3}
+			{stage "/texture/wound/kevlar/wound_kevlar_01.mtl" 0.5}
+			{stage "/texture/wound/kevlar/wound_kevlar_02.mtl" 0.9}
+		}
+		{wound
+			{range 9.19 9.39}
+			{scale 1.6}
+			{calibre 9.39}
+			{stage "/texture/wound/kevlar/wound_kevlar_00.mtl" 0.3}
+			{stage "/texture/wound/kevlar/wound_kevlar_01.mtl" 0.5}
+			{stage "/texture/wound/kevlar/wound_kevlar_02.mtl" 0.9}
+		}
+		{wound
+			{range 10 12}
+			{scale 3}
+			{calibre 12}
+			{stage "/texture/wound/kevlar/wound_kevlar_00.mtl" 0.3}
+			{stage "/texture/wound/kevlar/wound_kevlar_01.mtl" 0.5}
+			{stage "/texture/wound/kevlar/wound_kevlar_02.mtl" 0.9}
+		}
+		{wound
+			{range 13 20}
+			{scale 5}
+			{calibre 20}
+			{stage "/texture/wound/kevlar/wound_kevlar_00.mtl" 0.3}
+			{stage "/texture/wound/kevlar/wound_kevlar_01.mtl" 0.5}
+			{stage "/texture/wound/kevlar/wound_kevlar_02.mtl" 0.9}
+		}
+	}
+
+	{"ice"
+		{ricochet
+			{chance
+				{0	1}
+				{15	0.75}
+				{30	0.5}
+				{45 0.25}
+				{60 0.125}
+				{75 0.0}
+				{90 0.0}
+			}
+			{velocityDumping 0.5}
+			{gravityScale 1}
+		}
+		{physics
+			{friction  1.0}
+			{restitution 0.4}
+		}
+		{steelEquivalent 0.01}
+		{durability
+			{pierce 6}
+			{blast 1}
+		}
+		{damage
+			{radius 0.1}
+			{scale 0.7}
+			{stage "/texture/wound/glass/glass_impact.mtl" 0}
+		}
+		{wound
+			{range 0 6}
+			{scale 1.2}
+			{calibre 6}
+			{stage "/texture/wound/glass/glass_impact_00.mtl" 0}
+			{stage "/texture/wound/glass/glass_impact_01.mtl" 0.3}
+			{stage "/texture/wound/glass/glass_impact_02.mtl" 0.4}
+			{stage "/texture/wound/glass/glass_impact_03.mtl" 0.75}
+		}
+		{wound
+			{range 6 9}
+			{scale 1}
+			{calibre 9}
+			{stage "/texture/wound/glass/glass_impact_00.mtl" 0}
+			{stage "/texture/wound/glass/glass_impact_01.mtl" 0.3}
+			{stage "/texture/wound/glass/glass_impact_02.mtl" 0.4}
+			{stage "/texture/wound/glass/glass_impact_03.mtl" 0.75}
+		}
+		{wound
+			{range 9 9.19}
+			{scale 0.8}
+			{calibre 9.19}
+			{stage "/texture/wound/glass/glass_impact_00.mtl" 0}
+			{stage "/texture/wound/glass/glass_impact_01.mtl" 0.3}
+			{stage "/texture/wound/glass/glass_impact_02.mtl" 0.4}
+			{stage "/texture/wound/glass/glass_impact_03.mtl" 0.75}
+		}
+		{wound
+			{range 9.19 9.39}
+			{scale 1.4}
+			{calibre 9.39}
+			{stage "/texture/wound/glass/glass_impact_00.mtl" 0}
+			{stage "/texture/wound/glass/glass_impact_01.mtl" 0.3}
+			{stage "/texture/wound/glass/glass_impact_02.mtl" 0.4}
+			{stage "/texture/wound/glass/glass_impact_03.mtl" 0.75}
+		}
+		{wound
+			{range 10 12}
+			{scale 5}
+			{calibre 12}
+			{stage "/texture/wound/glass/glass_impact_00.mtl" 0}
+			{stage "/texture/wound/glass/glass_impact_01.mtl" 0.3}
+			{stage "/texture/wound/glass/glass_impact_02.mtl" 0.4}
+			{stage "/texture/wound/glass/glass_impact_03.mtl" 0.75}
+		}
+		{wound
+			{range 13 20}
+			{scale 12}
+			{calibre 20}
+			{stage "/texture/wound/glass/glass_impact_00.mtl" 0}
+			{stage "/texture/wound/glass/glass_impact_01.mtl" 0.3}
+			{stage "/texture/wound/glass/glass_impact_02.mtl" 0.4}
+			{stage "/texture/wound/glass/glass_impact_03.mtl" 0.75}
+		}
+	}
+
+	{"rock"
+		{ricochet
+			{chance
+				{0	1}
+				{15	0.75}
+				{30	0.5}
+				{45 0.25}
+				{60 0.125}
+				{75 0.0}
+				{90 0.0}
+			}
+			{velocityDumping 0.5}
+			{gravityScale 1}
+		}
+		{physics
+			{friction  1.0}
+			{restitution 0.8}
+		}
+		{steelEquivalent 0.01}
+		{durability
+			{pierce 10}
+			{blast 1}
+		}
+		{damage
+			{radius 1.5}
+		}
+	}
+	
+	{"ground"
+		{ricochet
+			{chance
+				{0	0.1}
+				{15	0.1}
+				{30	0.1}
+				{45 0.0}
+				{60 0.0}
+				{75 0.0}
+				{90 0.0}
+			}
+			{velocityDumping 0.375}
+			{gravityScale 1}
+		}
+		{physics
+			{friction  1.0}
+			{restitution 0.2}
+		}
+		{steelEquivalent 0.01}
+		{durability
+			{pierce 10}
+			{blast 1}
+		}
+		{damage
+			{radius 1.5}
+		}
+	}
+	
+	{"water"        
+		{physics 
+			{friction 9.0} 
+			{restitution 0.0}
+		}
+	}
+	
+	{"underwater"
+		{physics
+			{friction 9.0}
+			{restitution 0.0}
+		}
+	}
+
+	{"steelball"
+		{ricochet
+			{chance
+				{0	1}
+				{45 0.8}
+				{85 0.6}
+				{90 0.1}
+			}
+			{velocityDumping 0.97}
+			{gravityScale 1.1}
+		}
+		{physics {friction 0.5} {restitution 3.0}}
+		{durability
+			{pierce 1}
+			{blast 1}
+		}
+		{damage
+			{radius 0.5}
+			{scale 0.8}
+			{stage "/texture/wound/metal_dmg01.mtl" 0.2}
+			{stage "/texture/wound/metal_dmg02.mtl" 0.6}
+			{stage "/texture/wound/metal_dmg03.mtl" 0.7}
+		}
+		{wound
+			{range 0 9}
+			{scale 2}
+			{calibre 9}
+			{stage "/texture/wound/metal_small01.mtl" 0}
+			{stage "/texture/wound/metal_small02.mtl" 0.1}
+			{stage "/texture/wound/metal_small03.mtl" 0.15}
+			{stage "/texture/wound/metal_small04.mtl" 0.2}
+			{stage "/texture/wound/metal_small05.mtl" 0.3}
+			{stage "/texture/wound/metal_small06.mtl" 0.4}
+			{stage "/texture/wound/metal_small07.mtl" 0.5}
+			{stage "/texture/wound/metal_small08.mtl" 0.6}
+			{stage "/texture/wound/metal_small09.mtl" 0.8}
+		}
+		{wound
+			{range 9 12}
+			{scale 15}
+			{calibre 12}
+			{stage "/texture/wound/metal_small01.mtl" 0}
+			{stage "/texture/wound/metal_small02.mtl" 0.1}
+			{stage "/texture/wound/metal_small03.mtl" 0.15}
+			{stage "/texture/wound/metal_small04.mtl" 0.2}
+			{stage "/texture/wound/metal_small05.mtl" 0.3}
+			{stage "/texture/wound/metal_small06.mtl" 0.4}
+			{stage "/texture/wound/metal_small07.mtl" 0.5}
+			{stage "/texture/wound/metal_small08.mtl" 0.6}
+			{stage "/texture/wound/metal_small09.mtl" 0.8}
+		}
+		{wound
+			{range 13 20}
+			{scale 20}
+			{calibre 20}
+			{stage "/texture/wound/metal_small01.mtl" 0}
+			{stage "/texture/wound/metal_small02.mtl" 0.1}
+			{stage "/texture/wound/metal_small03.mtl" 0.1}
+			{stage "/texture/wound/metal_small04.mtl" 0.7}
+		}
+		{wound
+			{range 21 50}
+			{scale 12}
+			{calibre 45}
+			{stage "/texture/wound/metal01.mtl" 0}
+			{stage "/texture/wound/metal02.mtl" 0.6}
+			{stage "/texture/wound/metal03.mtl" "/texture/wound/metal03_add.mtl" 0.97}
+		}
+		{wound
+			{range 51 210}
+			{scale 25}
+			{calibre 122}
+			{stage "/texture/wound/metal01.mtl" 0}
+			{stage "/texture/wound/metal02.mtl" 0.6}
+			{stage "/texture/wound/metal02.mtl" "/texture/wound/metal02_add.mtl" 0.75}
+			{stage "/texture/wound/metal03.mtl" "/texture/wound/metal03_add.mtl" 0.97}
+		}
+	}
+	
+	{"misc"
+		{ricochet
+			{chance
+				{0	0.5}
+				{15	0.25}
+				{30	0.125}
+				{45 0.0}
+				{60 0.0}
+				{75 0.0}
+				{90 0.0}
+			}
+			{velocityDumping 0.375}
+			{gravityScale 1.2}
+		}
+		{physics
+			{friction  1.0}
+			{restitution 0.4}
+		}
+		{steelEquivalent 0.01}
+		{durability
+			{pierce 1}
+			{blast 1}
+		}
+		{damage
+			{radius 0.8}
+			{scale 0.3}
+			{stage "/texture/wound/impact_concrete2.mtl" 0.12}
+			{stage "/texture/wound/impact_concrete3.mtl" 0.4}
+		}
+		{wound
+			{range 0 6}
+			{scale 0.6}
+			{calibre 6}
+			{stage "/texture/wound/rubber/rubber_impact_00.mtl" 0.3}
+			{stage "/texture/wound/rubber/rubber_impact_01.mtl" 0.5}
+			{stage "/texture/wound/rubber/rubber_impact_02.mtl" 0.5}
+		}
+		{wound
+			{range 6 9}
+			{scale 1}
+			{calibre 9}
+			{stage "/texture/wound/rubber/rubber_impact_00.mtl" 0.3}
+			{stage "/texture/wound/rubber/rubber_impact_01.mtl" 0.5}
+			{stage "/texture/wound/rubber/rubber_impact_02.mtl" 0.5}
+		}
+		{wound
+			{range 9 9.19}
+			{scale 0.6}
+			{calibre 9.19}
+			{stage "/texture/wound/rubber/rubber_impact_00.mtl" 0.3}
+			{stage "/texture/wound/rubber/rubber_impact_01.mtl" 0.5}
+			{stage "/texture/wound/rubber/rubber_impact_02.mtl" 0.5}
+		}
+		{wound
+			{range 9.19 9.39}
+			{scale 1.1}
+			{calibre 9.39}
+			{stage "/texture/wound/rubber/rubber_impact_00.mtl" 0.3}
+			{stage "/texture/wound/rubber/rubber_impact_01.mtl" 0.5}
+			{stage "/texture/wound/rubber/rubber_impact_02.mtl" 0.5}
+		}
+		{wound
+			{range 9.39 10}
+			{scale 1.4}
+			{calibre 9}
+			{stage "/texture/wound/rubber/rubber_impact_00.mtl" 0.3}
+			{stage "/texture/wound/rubber/rubber_impact_01.mtl" 0.5}
+			{stage "/texture/wound/rubber/rubber_impact_02.mtl" 0.5}
+		}
+		{wound
+			{range 10 12}
+			{scale 1.4}
+			{calibre 12}
+			{stage "/texture/wound/rubber/rubber_impact_00.mtl" 0.3}
+			{stage "/texture/wound/rubber/rubber_impact_01.mtl" 0.5}
+			{stage "/texture/wound/rubber/rubber_impact_02.mtl" 0.5}
+		}
+		{wound
+			{range 13 20}
+			{scale 2}
+			{calibre 20}
+			{stage "/texture/wound/concrete_small01.mtl" 0}
+		}
+		{wound
+			{range 21 25}
+			{scale 3}
+			{calibre 25}
+			{stage "/texture/wound/rubber/rubber_impact_00.mtl" 0.3}
+			{stage "/texture/wound/rubber/rubber_impact_01.mtl" 0.5}
+			{stage "/texture/wound/rubber/rubber_impact_02.mtl" 0.5}
+		}
+		{wound
+			{range 26 50}
+			{scale 15}
+			{calibre 45}
+			{stage "/texture/wound/wood01.mtl" 0}
+			{stage "/texture/wound/wood02.mtl" 0.5}
+		}
+		{wound
+			{range 51 210}
+			{scale 35}
+			{calibre 122}
+			{stage "/texture/wound/wood01.mtl" 0}
+			{stage "/texture/wound/wood02.mtl" 0.5}
+		}
+	}
+	{"armor"
+		{ricochet
+			{chance
+				{0	1}
+				{15	1}
+				{30	0.75}
+				{45 0.4}
+				{60 0.15}
+				{75 0.0}
+				{90 0.0}
+			}
+			{angle
+				{1	1}
+				{10	3}
+				{30	5}
+				{45	15}
+				{90	90}
+			}
+			{velocityDumping 0.75}
+			{gravityScale 1.1}
+		}
+		{physics
+			{friction  1.0}
+			{restitution 0.4}
+		}
+		{steelEquivalent 1}
+		{durability
+			{pierce 12}
+			{blast 1}
+		}
+		{damage
+			{radius 0.5}
+			{scale 0.2}
+			{stage "/texture/wound/impact_armor1.mtl" 0.2}
+			{stage "/texture/wound/impact_armor2.mtl" 0.5}
+			{stage "/texture/wound/impact_armor3.mtl" 0.9}
+			;{stage "/texture/wound/metal_dmg03.mtl" 1}
+		}
+		{wound
+			{range 0 6}
+			{scale 1.2}
+			{calibre 6}
+			{stage "/texture/wound/armor/metal_small00.mtl" 0}
+			{stage "/texture/wound/armor/metal_small01.mtl" 0.1}
+			{stage "/texture/wound/armor/metal_small02.mtl" 0.2}
+			{stage "/texture/wound/armor/metal_small03.mtl" 0.35}
+			{stage "/texture/wound/metal_small04.mtl" 0.6}
+			{stage "/texture/wound/metal_small05.mtl" 0.7}
+			{stage "/texture/wound/metal_small06.mtl" 0.8}
+			{stage "/texture/wound/metal_small07.mtl" 0.9}
+			{stage "/texture/wound/metal_small08.mtl" 0.9}
+			{stage "/texture/wound/metal_small09.mtl" 0.95}
+		}
+		{wound
+			{range 6 9}
+			{scale 2}
+			{calibre 9}
+			{stage "/texture/wound/armor/metal_small00.mtl" 0}
+			{stage "/texture/wound/armor/metal_small01.mtl" 0.1}
+			{stage "/texture/wound/armor/metal_small02.mtl" 0.2}
+			{stage "/texture/wound/armor/metal_small03.mtl" 0.35}
+			{stage "/texture/wound/metal_small04.mtl" 0.6}
+			{stage "/texture/wound/metal_small05.mtl" 0.7}
+			{stage "/texture/wound/metal_small06.mtl" 0.8}
+			{stage "/texture/wound/metal_small07.mtl" 0.9}
+			{stage "/texture/wound/metal_small08.mtl" 0.9}
+			{stage "/texture/wound/metal_small09.mtl" 0.95}
+		}
+		{wound
+			{range 9 9.19}
+			{scale 1.8}
+			{calibre 9.19}
+			{stage "/texture/wound/armor/metal_small00.mtl" 0}
+			{stage "/texture/wound/armor/metal_small01.mtl" 0.1}
+			{stage "/texture/wound/armor/metal_small02.mtl" 0.2}
+			{stage "/texture/wound/armor/metal_small03.mtl" 0.35}
+			{stage "/texture/wound/metal_small04.mtl" 0.6}
+			{stage "/texture/wound/metal_small05.mtl" 0.7}
+			{stage "/texture/wound/metal_small06.mtl" 0.8}
+			{stage "/texture/wound/metal_small07.mtl" 0.9}
+			{stage "/texture/wound/metal_small08.mtl" 0.9}
+			{stage "/texture/wound/metal_small09.mtl" 0.95}
+		}
+		{wound
+			{range 9.19 9.39}
+			{scale 2.3}
+			{calibre 9.39}
+			{stage "/texture/wound/armor/metal_small00.mtl" 0}
+			{stage "/texture/wound/armor/metal_small01.mtl" 0.1}
+			{stage "/texture/wound/armor/metal_small02.mtl" 0.2}
+			{stage "/texture/wound/armor/metal_small03.mtl" 0.35}
+			{stage "/texture/wound/metal_small04.mtl" 0.6}
+			{stage "/texture/wound/metal_small05.mtl" 0.7}
+			{stage "/texture/wound/metal_small06.mtl" 0.8}
+			{stage "/texture/wound/metal_small07.mtl" 0.9}
+			{stage "/texture/wound/metal_small08.mtl" 0.9}
+			{stage "/texture/wound/metal_small09.mtl" 0.95}
+		}
+		{wound
+			{range 10 12}
+			{scale 2.6}
+			{calibre 12}
+			{stage "/texture/wound/armor/metal_small00.mtl" 0}
+			{stage "/texture/wound/armor/metal_small01.mtl" 0.1}
+			{stage "/texture/wound/armor/metal_small02.mtl" 0.2}
+			{stage "/texture/wound/armor/metal_small03.mtl" 0.35}
+			{stage "/texture/wound/metal_small04.mtl" 0.6}
+			{stage "/texture/wound/metal_small05.mtl" 0.7}
+			{stage "/texture/wound/metal_small06.mtl" 0.8}
+			{stage "/texture/wound/metal_small07.mtl" 0.9}
+			{stage "/texture/wound/metal_small08.mtl" 0.9}
+			{stage "/texture/wound/metal_small09.mtl" 0.95}
+		}
+		{wound
+			{range 12.1 13}
+			{scale 2.5}
+			{calibre 13}
+			{stage "/texture/wound/armor/metal_small00.mtl" {"/texture/wound/shotgun/impact_shotgun_close_1.mtl"} 0}
+			{stage "/texture/wound/armor/metal_small01.mtl" {"/texture/wound/shotgun/impact_shotgun_close_2.mtl"} 0.1}
+			{stage "/texture/wound/armor/metal_small02.mtl" {"/texture/wound/shotgun/impact_shotgun_close_3.mtl"} 0.2}
+			{stage "/texture/wound/armor/metal_small03.mtl" {"/texture/wound/shotgun/impact_shotgun_close_4.mtl"} 0.35}
+			{stage "/texture/wound/metal_small04.mtl" {"/texture/wound/shotgun/impact_shotgun_close_4.mtl"} 0.6}
+			{stage "/texture/wound/metal_small05.mtl" {"/texture/wound/shotgun/impact_shotgun_close_1.mtl"} 0.7}
+			{stage "/texture/wound/metal_small06.mtl" {"/texture/wound/shotgun/impact_shotgun_close_2.mtl"} 0.8}
+			{stage "/texture/wound/metal_small07.mtl" {"/texture/wound/shotgun/impact_shotgun_close_3.mtl"} 0.9}
+			{stage "/texture/wound/metal_small08.mtl" {"/texture/wound/shotgun/impact_shotgun_close_4.mtl"} 0.9}
+			{stage "/texture/wound/metal_small09.mtl" {"/texture/wound/shotgun/impact_shotgun_close_5.mtl"} 0.98}
+		}
+		{wound
+			{range 13.1 20}
+			{scale 3}
+			{calibre 20}
+			{stage "/texture/wound/armor/metal_small00.mtl" 0}
+			{stage "/texture/wound/armor/metal_small01.mtl" 0.1}
+			{stage "/texture/wound/armor/metal_small02.mtl" 0.2}
+			{stage "/texture/wound/armor/metal_small03.mtl" 0.35}
+			{stage "/texture/wound/metal_small04.mtl" 0.6}
+			{stage "/texture/wound/metal_small05.mtl" 0.7}
+			{stage "/texture/wound/metal_small06.mtl" 0.8}
+			{stage "/texture/wound/metal_small07.mtl" 0.9}
+			{stage "/texture/wound/metal_small08.mtl" 0.9}
+			{stage "/texture/wound/metal_small09.mtl" 0.95}
+		}
+		{wound
+			{range 21 25}
+			{scale 5}
+			{calibre 25}
+			{stage "/texture/wound/armor/metal_small00.mtl" {"/texture/wound/shotgun/impact_shotgun_close_1.mtl"} 0}
+			{stage "/texture/wound/armor/metal_small01.mtl" {"/texture/wound/shotgun/impact_shotgun_close_2.mtl"} 0.1}
+			{stage "/texture/wound/armor/metal_small02.mtl" {"/texture/wound/shotgun/impact_shotgun_close_3.mtl"} 0.2}
+			{stage "/texture/wound/armor/metal_small03.mtl" {"/texture/wound/shotgun/impact_shotgun_close_4.mtl"} 0.35}
+			{stage "/texture/wound/metal_small04.mtl" {"/texture/wound/shotgun/impact_shotgun_close_4.mtl"} 0.6}
+			{stage "/texture/wound/metal_small05.mtl" {"/texture/wound/shotgun/impact_shotgun_close_1.mtl"} 0.7}
+			{stage "/texture/wound/metal_small06.mtl" {"/texture/wound/shotgun/impact_shotgun_close_2.mtl"} 0.8}
+			{stage "/texture/wound/metal_small07.mtl" {"/texture/wound/shotgun/impact_shotgun_close_3.mtl"} 0.9}
+			{stage "/texture/wound/metal_small08.mtl" {"/texture/wound/shotgun/impact_shotgun_close_4.mtl"} 0.9}
+			{stage "/texture/wound/metal_small09.mtl" {"/texture/wound/shotgun/impact_shotgun_close_5.mtl"} 0.98}
+		}
+		{wound
+			{range 26 50}
+			{scale 12}
+			{calibre 45}
+			{stage "/texture/wound/armor/metal_small00.mtl" 0}
+			{stage "/texture/wound/armor/metal_small01.mtl" 0.1}
+			{stage "/texture/wound/armor/metal_small02.mtl" 0.2}
+			{stage "/texture/wound/armor/metal_small03.mtl" 0.35}
+			{stage "/texture/wound/metal_small04.mtl" 0.6}
+			{stage "/texture/wound/metal_small05.mtl" 0.7}
+			{stage "/texture/wound/metal_small06.mtl" 0.8}
+			{stage "/texture/wound/metal_small07.mtl" 0.9}
+			{stage "/texture/wound/metal_small08.mtl" 0.9}
+			{stage "/texture/wound/metal_small09.mtl" 0.95}
+		}
+		{wound
+			{range 51 210}
+			{scale 25}
+			{calibre 122}
+			{stage "/texture/wound/armor/metal_small00.mtl" 0}
+			{stage "/texture/wound/armor/metal_small01.mtl" 0.1}
+			{stage "/texture/wound/armor/metal_small02.mtl" 0.2}
+			{stage "/texture/wound/armor/metal_small03.mtl" 0.35}
+			{stage "/texture/wound/metal_small04.mtl" 0.6}
+			{stage "/texture/wound/metal_small05.mtl" 0.7}
+			{stage "/texture/wound/metal_small06.mtl" 0.8}
+			{stage "/texture/wound/metal_small07.mtl" 0.9}
+			{stage "/texture/wound/metal_small08.mtl" 0.9}
+			{stage "/texture/wound/metal_small09.mtl" 0.95}
+		}
+	}
+	{"gypsum"
+		{ricochet
+			{chance
+				{0	0.5}
+				{15	0.25}
+				{30	0.125}
+				{45 0.0}
+				{60 0.0}
+				{75 0.0}
+				{90 0.0}
+			}
+			{velocityDumping 0.375}
+			{gravityScale 1.2}
+		}
+		{physics
+			{friction  1.0}
+			{restitution 0.3}
+		}
+		{steelEquivalent 0.01}
+		{durability
+			{pierce 10}
+			{blast 1}
+		}
+		{damage
+			{radius 0.3}
+			{scale 0.3}
+			{stage "/texture/wound/drywall/imp_dirt00.mtl" 0.2}
+			{stage "/texture/wound/drywall/imp_dirt01.mtl" 0.7}
+		}
+		{wound
+			{range 0 6}
+			{scale 0.8}
+			{calibre 6}
+			{stage "/texture/wound/drywall/drywall_wound00.mtl" 0}
+			{stage "/texture/wound/drywall/drywall_wound01.mtl" 0.3}
+			{stage "/texture/wound/drywall/drywall_wound02.mtl" 0.4}
+			{stage "/texture/wound/drywall/drywall_wound03.mtl" 0.6}
+		}
+		{wound
+			{range 7 9}
+			{scale 1.2}
+			{calibre 8}
+			{stage "/texture/wound/drywall/drywall_wound00.mtl" 0}
+			{stage "/texture/wound/drywall/drywall_wound01.mtl" 0.3}
+			{stage "/texture/wound/drywall/drywall_wound02.mtl" 0.4}
+			{stage "/texture/wound/drywall/drywall_wound03.mtl" 0.6}
+		}
+		{wound
+			{range 9 9.19}
+			{scale 0.8}
+			{calibre 9.19}
+			{stage "/texture/wound/drywall/drywall_wound00.mtl" 0}
+			{stage "/texture/wound/drywall/drywall_wound01.mtl" 0.3}
+			{stage "/texture/wound/drywall/drywall_wound02.mtl" 0.4}
+			{stage "/texture/wound/drywall/drywall_wound03.mtl" 0.6}
+		}
+		{wound
+			{range 9.19 9.39}
+			{scale 1.4}
+			{calibre 9.39}
+			{stage "/texture/wound/drywall/drywall_wound00.mtl" 0}
+			{stage "/texture/wound/drywall/drywall_wound01.mtl" 0.3}
+			{stage "/texture/wound/drywall/drywall_wound02.mtl" 0.4}
+			{stage "/texture/wound/drywall/drywall_wound03.mtl" 0.6}
+		}
+		{wound
+			{range 10 12}
+			{scale 2.3}
+			{calibre 12}
+			{stage "/texture/wound/drywall/drywall_wound00.mtl" 0}
+			{stage "/texture/wound/drywall/drywall_wound01.mtl" 0.3}
+			{stage "/texture/wound/drywall/drywall_wound02.mtl" 0.4}
+			{stage "/texture/wound/drywall/drywall_wound03.mtl" 0.6}
+		}
+		{wound
+			{range 12.1 12.2}
+			{scale 0.4}
+			{calibre 12.2}
+			{stage "/texture/wound/drywall/drywall_wound00.mtl" 0}
+			{stage "/texture/wound/drywall/drywall_wound01.mtl" 0.3}
+			{stage "/texture/wound/drywall/drywall_wound02.mtl" 0.4}
+			{stage "/texture/wound/drywall/drywall_wound03.mtl" 0.6}
+		}
+		{wound
+			{range 12 15}
+			{scale 2.6}
+			{calibre 15}
+			{stage "/texture/wound/drywall/drywall_wound00.mtl" 0}
+			{stage "/texture/wound/drywall/drywall_wound01.mtl" 0.3}
+			{stage "/texture/wound/drywall/drywall_wound02.mtl" 0.4}
+			{stage "/texture/wound/drywall/drywall_wound03.mtl" 0.6}
+		}
+		{wound
+			{range 16 25}
+			{scale 4}
+			{calibre 25}
+			{stage "/texture/wound/drywall/drywall_wound00.mtl" 0}
+			{stage "/texture/wound/drywall/drywall_wound01.mtl" 0.3}
+			{stage "/texture/wound/drywall/drywall_wound02.mtl" 0.4}
+			{stage "/texture/wound/drywall/drywall_wound03.mtl" 0.6}
+		}
+		{wound
+			{range 26 50}
+			{scale 7}
+			{calibre 45}
+			{stage "/texture/wound/impact_concrete2.mtl" 0}
+			{stage "/texture/wound/impact_metal_01.mtl" 0.8}
+		}
+		{wound
+			{range 51 210}
+			{scale 35}
+			{calibre 122}
+			{stage "/texture/wound/impact_concrete2.mtl" 0}
+			{stage "/texture/wound/impact_metal_01.mtl" 0.8}
+		}
+	}
+	
+	{"dummy"}
+}

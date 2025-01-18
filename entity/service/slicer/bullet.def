@@ -1,0 +1,25 @@
+{game_entity    
+	{props "bullet" }
+	{skeleton         
+;		{bone "basis"}
+;		{bone "tail"}
+;		{bone "reactive"}
+;		{bone "reactive_big"}
+;		{bone "bullet_small"}
+;		{bone "01"}
+	}
+	{body
+		{proper body sensible} 
+		{permit body}
+	}
+	{simulation {able 1} {state 1}}
+	{simulatorid "grenade"}
+	{volume "detonate"
+		{material "steel"}
+		{Able {contact 1} {bullet 0} {throwing 0} {obstacle 0} {touch 0} {overlap 1}}
+	}
+	{Volume "body"
+		{material "steel"}
+	}
+;	{constrain none}
+}

@@ -1,0 +1,10 @@
+{bullet
+	{tag "grenade mine"}
+	{inventory
+		{weight 20}
+		{size 2 1}
+	}
+	{view "m47_mine_proj"
+	}
+	{entity "m47_mine_ammo"}
+}

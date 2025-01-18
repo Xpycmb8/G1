@@ -1,0 +1,1941 @@
+(include "\set\ballistics\accuracy_distance.inc")
+(include "\set\ballistics\burst.inc")
+(include "\set\ballistics\health_damage.inc")
+(include "\set\ballistics\other.inc")
+(include "\set\ballistics\projectiledamage.inc")
+(include "\set\ballistics\spreading_distance.inc")
+(include "\set\ballistics\sway.inc")
+
+(define "zoom_psg9"
+	{thirdpersonparams inherit "human default"
+		{level 2
+			{camera "human_zoom1.5"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_psg9"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_01_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_psg9"}
+			{vignette_gloss 15}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+		}
+	}
+)
+
+
+
+(define "zoom_holo_cg"
+	{thirdpersonparams inherit "human default"
+		{level 2
+			{camera "human_zoom4"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_m84"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_m84_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_m84"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_m84_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+			{vignette_gloss 10}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+			{blur_strength 4}
+		}
+	}
+)
+
+
+
+
+
+(define "zoom_bekas-12m"
+	{thirdpersonparams inherit "human default"
+		{level 2
+			{camera "human_zoom1.5"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_bekas-12m"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_01_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_bekas-12m"}
+			{vignette_gloss 15}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+		}
+	}
+)
+
+(define "zoom_aks-74u"
+	{thirdpersonparams inherit "human default"
+		{level 2
+			{camera "human_zoom1.5"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_aks-74u"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_01_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_aks-74u"}
+			{vignette_gloss 15}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+		}
+	}
+)
+
+(define "zoom_m240"
+	{thirdpersonparams inherit "human default"
+		{level 2
+			{camera "human_zoom1.5"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_m240"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_01_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_m240"}
+			{vignette_gloss 15}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+		}
+	}
+)
+
+(define "zoom_mg3"
+	{thirdpersonparams inherit "human default"
+		{level 2
+			{camera "human_zoom1.5"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_mg3"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_01_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_mg3"}
+			{vignette_gloss 5}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+		}
+	}
+)
+
+
+(define "zoom_g36a3"
+	{thirdpersonparams inherit "human default"
+		{level 2
+			{camera "human_zoom1.5"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_g36a3"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_01_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_g36a3"}
+			{vignette_gloss 5}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+		}
+	}
+)
+
+(define "zoom_m77"
+	{thirdpersonparams inherit "human default"
+		{level 2
+			{camera "human_zoom1.5"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_ak47"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_01_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_ak47"}
+			{vignette_gloss 10}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+		}
+	}
+)
+
+
+(define "zoom_ak47"
+	{thirdpersonparams inherit "human default"
+		{level 2
+			{camera "human_zoom1.5"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_ak47"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_01_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_ak47"}
+			{vignette_gloss 15}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+		}
+	}
+)
+(define "zoom_m4"
+	{thirdpersonparams inherit "human default"
+		{level 2
+			{camera "human_zoom1.5"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_m4"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_01_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_m4"}
+			{vignette_gloss 10}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+		}
+	}
+)
+
+(define "zoom_m60"
+	{thirdpersonparams inherit "human default"
+		{level 2
+			{camera "human_zoom1.5"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_m60"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_01_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_m60"}
+			{vignette_gloss 10}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+		}
+	}
+)
+
+(define "zoom_fal"
+	{thirdpersonparams inherit "human default"
+		{level 2
+			{camera "human_zoom1.5"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_fal"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_01_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_fal"}
+			{vignette_gloss 10}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+		}
+	}
+)
+(define "zoom_rpk"	
+	{thirdpersonparams inherit "human default"
+		{level 2
+			{camera "human_zoom1.5"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_rpk"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_01_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_rpk"}
+			{vignette_gloss 10}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+		}
+	}
+)
+(define "zoom_pkm"
+	{thirdpersonparams inherit "human default"
+		{level 2
+			{camera "human_zoom1.5"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_pkm"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_01_mask"}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+		}
+	}
+)
+(define "zoom_m249"
+	{thirdpersonparams inherit "human default"
+		{level 2
+			{camera "human_zoom1.5"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_m249"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_01_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_m249"}
+			{vignette_gloss 10}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+		}
+	}
+)
+(define "zoom_m1014"
+	{thirdpersonparams inherit "human default"
+		{level 2
+			{camera "human_zoom1.5"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_m1014"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_01_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_m1014"}
+			{vignette_gloss 10}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+		}
+	}
+)
+(define "zoom_saiga"
+	{thirdpersonparams inherit "human default"
+		{level 2
+			{camera "human_zoom1.5"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_s12k"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_01_mask"}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+		}
+	}
+)
+(define "zoom_mp5"
+	{thirdpersonparams inherit "human default"
+		{level 2
+			{camera "human_zoom1.5"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_mp5"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_01_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_mp5"}
+			{vignette_gloss 10}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+		}
+	}
+)
+(define "zoom_skorpion"
+	{thirdpersonparams inherit "human default"
+		{level 2
+			{camera "human_zoom1.5"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_skorpion"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_01_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_skorpion"}
+			{vignette_gloss 10}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+		}
+	}
+)
+(define "zoom_enfield"
+	{thirdpersonparams inherit "human default"
+		{level 2
+			{camera "human_zoom1.5"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_enfield"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_01_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_enfield"}
+			{vignette_gloss 10}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+			{drop_zoom_after_shot}
+		}
+	}
+)
+(define "zoom_pistol"
+	{thirdpersonparams inherit "human default"
+		{level 2
+			{camera "human_zoom1.5"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_pistol"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_01_mask"}
+			{offset		2.75 2.25 0.45	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+		}
+	}
+)
+(define "zoom_holographic"
+	{thirdpersonparams inherit "human default"
+		{level 2
+			{camera "human_zoom2"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_02"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_02_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_02"}
+			{vignette_gloss 10}
+			{offset		3.0 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+		}
+	}
+)
+(define "zoom_holographic2"
+	{thirdpersonparams inherit "human default"
+		{level 2
+			{camera "human_zoom3"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_02"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_02_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_02"}
+			{vignette_gloss 10}
+			{offset		3.0 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+		}
+	}
+)
+(define "zoom_holographic3"
+	{thirdpersonparams inherit "human default"
+		{level 2
+			{camera "human_zoom2"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_02"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_02_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_02"}
+			{vignette_gloss 20}
+			{offset		3.0 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+		}
+	}
+)
+
+(define "zoom_ar70"
+	{thirdpersonparams inherit "human default"
+		{level 2
+			{camera "human_zoom1.5"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_ar70"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_01_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_ar70"}
+			{vignette_gloss 5}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+		}
+	}
+)
+
+(define "zoom_set"
+	{thirdpersonparams inherit "human default"
+		{level 2
+			{camera "human_zoom1.5"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_xrkm4"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_xrkm4_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_xrkm4"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_xrkm4_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+			{vignette_gloss 10}
+			{offset		2.5 2.15 0.95	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+			{blur_strength 4}
+		}
+	}
+)
+
+
+
+(define "zoom_ksj"
+	{thirdpersonparams inherit "human default"
+		{level 2
+			{camera "human_zoom1.5"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_ksj"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_ksj_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_ksj"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_ksj_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+			{vignette_gloss 10}
+			{offset		2.5 2.15 0.95	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+			{blur_strength 4}
+		}
+	}
+)
+
+
+
+(define "zoom_east"
+	{thirdpersonparams inherit "human default"
+		{level 2
+			{camera "human_zoom1.5"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_east"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_east_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_east"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_east_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+			{vignette_gloss 10}
+			{offset		2.5 2.15 0.95	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+			{blur_strength 4}
+		}
+	}
+)
+
+(define "zoom_okp"
+	{thirdpersonparams inherit "human default"
+		{level 2
+			{camera "human_zoom1.5"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_okp"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_02_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_okp"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_05_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+			{vignette_gloss 10}
+			{offset		2.5 2.15 0.95	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+			{blur_strength 4}
+		}
+	}
+)
+(define "zoom_bravo"
+	{thirdpersonparams inherit "human default"
+		{level 2
+			{camera "human_zoom4"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_scope_08"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_08_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_08"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_02_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+			{vignette_gloss 10}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+			{blur_strength 4}
+		}
+	}
+)
+
+
+(define "zoom_pso"
+	{thirdpersonparams inherit "human scope_light"
+		{level 2
+			{camera "human_zoom4"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_scope_pso"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_08_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_08"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_02_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+			{vignette_gloss 10}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+			{blur_strength 4}
+		}
+		{level 3
+			{camera "human_zoom4.2"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_scope_pso"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_08_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_08"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_02_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+			{vignette_gloss 10}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+			{blur_strength 4}
+		}
+		{level 4
+			{camera "human_zoom4.5"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_scope_pso"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_08_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_08"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_02_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+			{vignette_gloss 10}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+			{blur_strength 4}
+		}
+		{level 5
+			{camera "human_zoom4.7"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_scope_pso"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_08_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_08"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_02_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+			{vignette_gloss 10}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+			{blur_strength 4}
+		}
+		{level 6
+			{camera "human_zoom5f"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_scope_pso"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_08_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_08"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_02_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+			{vignette_gloss 10}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+			{blur_strength 4}
+		}
+	}
+)
+
+
+(define "zoom_pgo"
+	{thirdpersonparams inherit "human scope_light"
+		{level 2
+			{camera "human_zoom2"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_pgo"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_pgo_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_pgo"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_pgo_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+			{vignette_gloss 10}
+			{offset		0 0 0	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+			{blur_strength 4}
+		}
+		{level 3
+			{camera "human_zoom2.2"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_pgo"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_pgo_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_pgo"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_pgo_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+			{vignette_gloss 10}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+			{blur_strength 4}
+		}
+		{level 4
+			{camera "human_zoom2.4"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_pgo"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_pgo_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_pgo"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_pgo_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+			{vignette_gloss 10}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+			{blur_strength 4}
+		}
+		{level 5
+			{camera "human_zoom2.6"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_pgo"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_pgo_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_pgo"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_pgo_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+			{vignette_gloss 10}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+			{blur_strength 4}
+		}
+		{level 6
+			{camera "human_zoom2.8"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_pgo"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_pgo_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_pgo"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_pgo_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+			{vignette_gloss 10}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+			{blur_strength 4}
+		}
+	}
+)
+
+(define "zoom_bos14"
+	{thirdpersonparams inherit "human default"
+		{level 2
+			{camera "human_zoom1.5"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_bos14"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_02_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_bos14"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_05_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+			{vignette_gloss 10}
+			{offset		2.5 2.15 0.95	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+			{blur_strength 4}
+		}
+	}
+)
+
+
+(define "zoom_1p87"
+	{thirdpersonparams inherit "human default"
+		{level 2
+			{camera "human_zoom2"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_1p87"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_02_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_1p87"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_04_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+			{vignette_gloss 10}
+			{offset		2.5 2.15 0.95	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+			{blur_strength 4}
+		}
+	}
+)
+
+
+(define "zoom_sweeper"
+	{thirdpersonparams inherit "human default"
+		{level 2
+			{camera "human_zoom1.5"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_s12k"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_01_mask"}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+		}
+	}
+)
+
+
+(define "zoom_holowest"
+	{thirdpersonparams inherit "human default"
+		{level 2
+			{camera "human_zoom2"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_holowest"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_holowest_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_holowest"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_holowest_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+			{vignette_gloss 10}
+			{offset		2.5 2.25 0.75	}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_weapon 1}
+			{hide_crosshair}
+			{weapon_sway_active}
+			{blur_strength 4}
+		}
+	}
+)
+
+
+(define "zoom_pk"
+	{thirdpersonparams inherit "human default"
+		{level 2
+			{camera "human_zoom2"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_pk"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_02_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_pk"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_07_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+			{vignette_gloss 10}
+			{offset		2.5 2.25 0.75	}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_weapon 1}
+			{hide_crosshair}
+			{weapon_sway_active}
+			{blur_strength 4}
+		}
+	}
+)
+
+
+
+(define "zoom_acog_pk"
+	{thirdpersonparams inherit "human binocular_2stage"
+		{level 2
+			{camera "human_zoom2"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_pk"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_02_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_pk"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_07_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+			{vignette_gloss 10}
+			{offset		2.5 2.25 0.75	}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_weapon 1}
+			{hide_crosshair}
+			{weapon_sway_active}
+			{blur_strength 4}
+		}
+		{level 3
+			{camera "human_zoom4"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_scope_02"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_02_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_02"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_02_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+			{vignette_gloss 10}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{hide_crosshair}
+			{weapon_sway_active}
+			{blur_strength 4}
+		}
+	}
+)
+
+
+
+(define "zoom_two_stage"
+	{thirdpersonparams inherit "human binocular_2stage"
+		{level 2
+			{camera "human_zoom1.5"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_xrkm4"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_xrkm4_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_xrkm4"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_xrkm4_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+			{vignette_gloss 10}
+			{offset		2.5 2.15 0.95	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+			{blur_strength 4}
+		}
+		{level 3
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{camera "human_zoom4"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_scope_02"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_02_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_02"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_02_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+			{vignette_gloss 10}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{hide_crosshair}
+			{weapon_sway_active}
+			{blur_strength 4}
+		}
+	}
+)
+
+(define "zoom_acog"
+	{thirdpersonparams inherit "human default"
+		{level 2
+			{camera "human_zoom4"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_scope_02"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_02_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_02"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_02_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+			{vignette_gloss 10}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+			{blur_strength 4}
+		}
+	}
+)
+(define "zoom_srs"
+	{thirdpersonparams inherit "human default"
+		{level 2
+			{camera "human_zoom4"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_srs"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_srs_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_srs"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+			{vignette_gloss 10}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+			{blur_strength 4}
+		}
+	}
+)
+(define "zoom_srs2"
+	{thirdpersonparams inherit "human default"
+		{level 2
+			{camera "human_zoom4"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_srs2"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_srs2_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_srs2"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_srs2_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+			{vignette_gloss 10}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+			{blur_strength 4}
+		}
+	}
+)
+
+(define "zoom_acog_x2"
+	{thirdpersonparams inherit "human default"
+		{level 2
+			{camera "human_zoom8"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_scope_04"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_02_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_02"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_02_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+			{vignette_gloss 10}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+			{blur_strength 4}
+		}
+	}
+)
+
+(define "zoom_scope"
+	{thirdpersonparams inherit "human default"
+		{level 2
+			{zoom}
+			{camera "human_zoom4"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_scope_01"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+			{vignette_gloss 10}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+			{blur_strength 4}
+		}
+	}
+)
+
+(define "zoom_scope_ops"
+	{thirdpersonparams inherit "human default"
+		{level 2
+			{zoom}
+			{vision_modes_active	}
+			{camera "human_zoom4"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+			{vignette_gloss 10}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+			{blur_strength 4}
+		}
+	}
+)
+
+(define "zoom_scope_ops_6"
+	{thirdpersonparams inherit "human default"
+		{level 2
+			{zoom}
+			{vision_modes_active	}
+			{camera "human_zoom6"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+			{vignette_gloss 10}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+			{blur_strength 4}
+		}
+	}
+)
+
+
+(define "zoom_scope_west"
+	{thirdpersonparams inherit "human default"
+		{level 2
+			{zoom}
+			{camera "human_zoom4"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_west"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_west"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+			{vignette_gloss 10}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+			{blur_strength 4}
+		}
+	}
+)
+
+
+(define "zoom_scope_sniper"
+	{thirdpersonparams inherit "human default"
+		{level 0
+			{aimer_type "weapon_bullet"}
+		}
+		{level 1
+			{aimer_type "weapon_bullet"}
+		}
+		{level 2
+			{zoom}
+			{camera "human_zoom4"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_scope_01"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+			{vignette_gloss 10}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+			{blur_strength 4}
+			{aimer_type "sniper"}
+		}
+	}
+)
+(define "zoom_scope_sniper2"
+	{thirdpersonparams inherit "human default"
+		{level 0
+			{aimer_type "weapon_bullet"}
+		}
+		{level 1
+			{aimer_type "weapon_bullet"}
+		}
+		{level 2
+			{zoom}
+			{camera "human_zoom4"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_scope_black"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_scope_black_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_scope_black"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_scope_black_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+			{vignette_gloss 10}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+			{blur_strength 4}
+			{aimer_type "sniper"}
+		}
+	}
+)
+
+(define "zoom_scope_sniper3"
+	{thirdpersonparams inherit "human default"
+		{level 0
+			{aimer_type "weapon_bullet"}
+		}
+		{level 1
+			{aimer_type "weapon_bullet"}
+		}
+		{level 2
+			{zoom}
+			{camera "human_zoom6"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_scope_black"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_scope_black_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_scope_black"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_scope_black_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+			{vignette_gloss 10}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+			{blur_strength 4}
+			{aimer_type "sniper"}
+		}
+	}
+)
+
+(define "zoom_sniper"
+	{thirdpersonparams inherit "human default"
+		{level 0
+			{aimer_type "weapon_bullet"}
+		}
+		{level 1
+			{aimer_type "weapon_bullet"}
+		}
+		{level 2
+			{zoom}
+			{camera "human_zoom8"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_scope_01"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+			{vignette_gloss 10}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+			{blur_strength 8}
+			;{enable_special} ; enable aimed shot
+			{aimer_type "sniper"}
+			{drop_zoom_after_shot}
+		}
+	}
+)
+(define "zoom_sniper_int"
+	{thirdpersonparams inherit "human default"
+		{level 0
+			{aimer_type "weapon_bullet"}
+		}
+		{level 1
+			{aimer_type "weapon_bullet"}
+		}
+		{level 2
+			{zoom}
+			{camera "human_zoom8"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_scope_09"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_09_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_09"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_09_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+			{vignette_gloss 10}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+			{blur_strength 8}
+			;{enable_special} ; enable aimed shot
+			{aimer_type "sniper"}
+			{drop_zoom_after_shot}
+		}
+	}
+)
+
+(define "zoom_sniper_no_drop"
+	{thirdpersonparams inherit "human default"
+		{level 0
+			{aimer_type "weapon_bullet"}
+		}
+		{level 1
+			{aimer_type "weapon_bullet"}
+		}
+		{level 2
+			{zoom}
+			{camera "human_zoom8"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_scope_01"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+			{vignette_gloss 10}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+			{blur_strength 8}
+			;{enable_special} ; enable aimed shot
+			{aimer_type "sniper"}
+		}
+	}
+)
+(define "zoom_sniper2"
+	{thirdpersonparams inherit "human default"
+		{level 0
+			{aimer_type "weapon_bullet"}
+		}
+		{level 1
+			{aimer_type "weapon_bullet"}
+		}
+		{level 2
+			{zoom}
+			{camera "human_zoom10"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_scope_01"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+			{blur_strength 8}
+			;{enable_special} ; enable aimed shot
+			{aimer_type "sniper"}
+			{drop_zoom_after_shot}
+		}
+	}
+)
+(define "zoom_sniper3"
+	{thirdpersonparams inherit "human default"
+		{level 0
+			{aimer_type "weapon_bullet"}
+		}
+		{level 1
+			{aimer_type "weapon_bullet"}
+		}
+		{level 2
+			{zoom}
+			{camera "human_zoom14"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_scope_01"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+			{blur_strength 8}
+			;{enable_special} ; enable aimed shot
+			{aimer_type "sniper"}
+			{drop_zoom_after_shot}
+		}
+	}
+)
+(define "zoom_sniper4"
+	{thirdpersonparams inherit "human default"
+		{level 0
+			{aimer_type "weapon_bullet"}
+		}
+		{level 1
+			{aimer_type "weapon_bullet"}
+		}
+		{level 2
+			{zoom}
+			{camera "human_zoom18"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_scope_01"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+			{blur_strength 8}
+			{enable_special} ; enable aimed shot
+			{aimer_type "sniper"}
+			;{drop_zoom_after_shot}
+		}
+	}
+)
+(define "zoom_sniper_avto2"
+	{thirdpersonparams inherit "human binocular"
+		{level 0
+			{linkBone	"basis"	}
+			{faroffset  0 12 15 }
+			{nearoffset	0 12 10	}
+			{delta		20		}		; distance delta
+			{camera "human_zoom0"}
+			(mod "hardcore"
+				{hide_crosshair 1}
+				{hide_hitmarker 1}
+			)
+			{blur_strength 2}
+			; {forceGrass 1}
+			{disable_fow}
+			{with_weapon
+				{viewoff	"fx_light"	}
+			}
+			{no_grain}
+			{no_rim_light}
+		}
+		{level 1
+			{distanceset 		1			}
+			{distance			20			}	; activation distance
+			{delta 				0			}
+			{offset				-1.75 0.25 1.5	}
+			{linkBone			"head"		}
+			{nearspace_views 	"fps_arms"	}
+			{nearspace_weapon	1	}
+			{camera				"human_zoom1"}
+			{with_owner
+				{viewoff 	"skin head"	}
+				{boneon 	"fps_arms"	}
+			}
+		}
+		{level 2
+			{zoom}
+			{vision_modes_active	}
+			{camera "human_zoom1.25"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+			{blur_strength 8}
+			{enable_special} ; enable aimed shot
+			{aimer_type "sniper"}
+			;{drop_zoom_after_shot}
+		}
+		{level 3
+			{vision_modes_active	}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+		}
+		{level 4
+			{vision_modes_active	}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+		}
+		{level 5
+			{vision_modes_active	}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+		}
+		{level 6
+			{vision_modes_active	}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+		}
+		{level 7
+			{vision_modes_active	}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+		}
+		{level 8
+			{vision_modes_active	}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+		}
+		{level 9
+			{vision_modes_active	}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+		}
+		{level 10
+			{vision_modes_active	}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+		}
+		{level 11
+			{vision_modes_active	}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+		}
+		{level 12
+			{vision_modes_active	}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+		}
+		{level 13
+			{vision_modes_active	}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_infantry_west_visor_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+		}
+	}
+)
+
+(define "zoom_sniper_avto"
+	{thirdpersonparams inherit "human binocular"
+		{level 0
+			{linkBone	"basis"	}
+			{faroffset  0 12 15 }
+			{nearoffset	0 12 10	}
+			{delta		20		}		; distance delta
+			{camera "human_zoom0"}
+			(mod "hardcore"
+				{hide_crosshair 1}
+				{hide_hitmarker 1}
+			)
+			{blur_strength 2}
+			; {forceGrass 1}
+			{disable_fow}
+			{with_weapon
+				{viewoff	"fx_light"	}
+			}
+			{no_grain}
+			{no_rim_light}
+		}
+		{level 1
+			{distanceset 		1			}
+			{distance			20			}	; activation distance
+			{delta 				0			}
+			{offset				-1.75 0.25 1.5	}
+			{linkBone			"head"		}
+			{nearspace_views 	"fps_arms"	}
+			{nearspace_weapon	1	}
+			{camera				"human_zoom1"}
+			{with_owner
+				{viewoff 	"skin head"	}
+				{boneon 	"fps_arms"	}
+			}
+		}
+		{level 2
+			{zoom}
+			{camera "human_zoom1.25"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_scope_01"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair}
+			{weapon_sway_active}
+			{blur_strength 8}
+			;{enable_special} ; enable aimed shot
+			{aimer_type "sniper"}
+			;{drop_zoom_after_shot}
+		}
+		{level 3
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_scope_01"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+		}
+		{level 4
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_scope_01"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+		}
+		{level 5
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_scope_01"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+		}
+		{level 6
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_scope_01"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+		}
+		{level 7
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_scope_01"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+		}
+		{level 8
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_scope_01"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+		}
+		{level 9
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_scope_01"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+		}
+		{level 10
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_scope_01"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+		}
+		{level 11
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_scope_01"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+		}
+		{level 12
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_scope_01"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+		}
+		{level 13
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_scope_01"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_01_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+		}
+	}
+)
+(define "zoom_at"
+	{thirdpersonparams inherit "human default"
+		{level 1
+			{hide_crosshair 1}
+		}
+		{level 2
+			{camera "human_zoom1.25"}
+			{vignette	"/texture/common/environment/lens_effects/zoom_vignette_infantry_01"}
+			{blur_mask	"/texture/common/environment/lens_effects/zoom_vignette_infantry_01_mask"}
+			{vignette_gloss 10}
+			{offset		3.0 2.25 0.75	}
+			{hide_crosshair}
+			{weapon_sway_active}
+			{hide_crosshair 0}
+		}
+	}
+	{toplayerVignette "/texture/common/environment/lens_effects/zoom_vignette_vehicle_mg_heavy_crosshair"} 
+)
+(define "zoom_at_scope"
+	{thirdpersonparams inherit "human default"
+		{level 1
+			{hide_crosshair 1}
+		}
+		{level 2
+			{camera "human_zoom4"}
+			{scope_vignette "/texture/common/environment/lens_effects/zoom_vignette_scope_02"}
+			{blur_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_02_mask"}
+			{bump_spec_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_02"}
+			{refraction_mask "/texture/common/environment/lens_effects/zoom_vignette_scope_02_bp"}
+			{lens_dirt_mask "/texture/common/environment/lens_effects/dirty_lens_scope_01"}
+			{vignette_gloss 10}
+			{offset		2.5 2.25 0.75	}
+			{hide_weapon 1}
+			{with_owner
+				{viewoff 	"fps_arms"	}
+			}
+			{with_weapon
+				{viewon		"foresight3"}
+			}
+			{hide_crosshair 1}
+			{weapon_sway_active}
+			{blur_strength 4}
+		}
+	}
+	{toplayerVignette "/texture/common/environment/lens_effects/zoom_vignette_vehicle_mg_heavy_crosshair"} 
+)

@@ -1,0 +1,53 @@
+{from "pattern bullet"
+	{tag "mgun hmgun_set weapon bullet mgun_set"}
+	{entity "mgun_skir_762"}
+	{fireSound	"small_arms/50cal/"}
+	{fireSoundClose	"small_arms/50cal_close/"}
+	{reloadSound "small_arms/mgun_heavy/"}
+	{filling "ammo 127x99" 200}
+	{inventory
+		{size 6 2 }
+		{weight 100 }
+	}
+	{mass 34}
+	{traceFreq 4}
+	{Automatic}	
+	{rechargeTime 5.0}
+	{reloadAnimBonus 3}
+	("recoveryTime" r(635))
+	("speed" s(890))
+	("burst_mg")
+	("spreading_high_mgun")
+	("accuracy_mg_long_sp_127")
+;	("accuracy_boost")
+	("recoil_high")
+	("sway_medium")
+	{parameters "sp"
+		("burst_x3")
+		("accuracy_mg_long_sp_127")
+		("health_damage_127x99" d(884))	
+		{range 250 270} 
+		("speed" s(750))	
+		{projectileDamage 15}
+		{projectileDamageTable {25 30} {50 25} {75 15} {100 5}}
+		{projectileDamageThreshold 1.1}	
+	}
+	{parameters "ap"
+		("burst_x1")
+		("accuracy_mg_long_ap_127")
+		("health_damage_127x99" d(950))
+		{projectileDamage 15}
+		{projectileDamageTable {25 45} {50 35} {75 25} {100 8}}
+		{projectileDamageThreshold 1.1}	
+		{range 320 360}
+		("speed" s(1114))
+	}
+	{aimingTolerance 1}	
+	{cursor "zenite_on"}
+	{cursorReloading "zenite_reload"}
+	
+	{crosshair "crosshair_mgun2"}
+	{crosshairReloading "crosshair_mgun2_reload"}
+	
+	{toplayerVignette "/texture/common/environment/lens_effects/zoom_vignette_vehicle_mg_heavy_crosshair"} 
+}

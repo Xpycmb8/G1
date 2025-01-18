@@ -1,0 +1,27 @@
+{game_entity
+	{skeleton
+		{bone "basis"
+			{matrix34
+				1  0  0
+				0 -1  0
+				0  0  1
+				0  0  0
+			}
+		}
+	}
+	{volume "gas_vol"
+		{sphere 60}
+		{Able {contact 1} {contact_ground 0} {bullet 0} {throwing 0} {obstacle 0} {touch 0} {overlap 1}}
+		{bone "basis"}
+		{material "dummy"}
+	}
+	{simulation {able 1}}
+	{body {permit body}}
+	{collider "bush"}
+	{obstacleid "nothing"}
+	{mass 0.1}
+	{volume defaultmaterial "wood"}
+	{lodclass "decor_small"}
+	{NoGroupMesh 1}
+	{props "posion_gas" "obstacle"} 
+}

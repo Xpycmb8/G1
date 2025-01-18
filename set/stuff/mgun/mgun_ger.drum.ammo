@@ -1,0 +1,13 @@
+{bullet 
+	{tag "bullet small_arms stackable pierce"}
+	{tag "bullet_fx size2"}
+	{inventory
+		{weight 2.0}
+		{block 50}
+		{size 1 1}
+		{fsm "belt"}
+	}
+	{entity "mg34_ammo"}
+	{mass 0.03}
+	("trace792")
+}

@@ -1,0 +1,10 @@
+{bullet
+	{tag "detect no_hit"}
+	{desc "Gas"}
+	{inventory
+		{size 1 2}
+		{weight 4}
+		{block 25}
+	}
+	{entity "gas_ammo"}
+}

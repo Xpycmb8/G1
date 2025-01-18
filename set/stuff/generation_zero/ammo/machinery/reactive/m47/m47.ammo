@@ -1,0 +1,25 @@
+{bullet
+	{tag "bullet ammo grenade fg dropboxed fx_40 40mm_grenade smallarms"}	
+	{entity "m47_fg_ammo"}
+	{inventory
+		{weight 20}
+		{size 2 1}
+	}
+	{damage blastwave
+		{ground_interaction_radius 0.3}
+		{energy 2.5}
+		{area 1.5 3.0}
+	}
+	{damage add blastwave
+		{ground_interaction_radius 0.3}
+		{energy 0.8}
+		{area 2.5 3.0}
+	}
+  	{mass 0.023}
+
+	{detonationThickness 0.1}
+	
+	{view "m47_fg_ammo"
+		{tail "grenade_tail" "tail"}
+	}
+}

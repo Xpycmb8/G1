@@ -1,0 +1,189 @@
+game_entity
+	{props "construction" "fnix_ems"}
+	{collider "construction"}
+	{obstacleID "small_building"}
+	{lodclass "decor_big"}
+	{mass 500}
+	{ZClipVisibility 0}
+	{Extender "land_patch"
+		{TerrainType "shoot_emit_mtl" "shoot_emit_mtl"}
+	}	
+	(define "fx_group"
+		{volume "%0"
+			{tags "no_burn"}
+			{able
+				{window}
+				{contact 0} {contact_ground 0}
+				{bullet 0} {throwing 0} {obstacle 0}
+				{overlap 0} {visible 0}
+				{touch 0}
+			}
+			{density 0}
+		}
+	)
+	("fx_group" args fx_l)
+	("fx_group" args fx_r)
+	(define "armor_wound"
+		{armor
+			{setting "body"
+				{threshold
+					{pierce 
+						{value 1}
+					}
+				}
+				{volumes "*"}
+			}
+		}
+	)
+	("armor_wound")	
+	(define "armor_construction"
+		{armor
+			{setting "armor_main_50"
+				{ray_cast_thickness 0}
+				{threshold 
+					{pierce 
+						{value 1}
+					}
+				}
+				{volumes "armor_main_50*"}
+			}
+			{setting "armor_main_20"
+				{ray_cast_thickness 0}
+				{threshold 
+					{pierce 
+						{value 0.5}
+					}
+				}
+				{volumes "armor_main_20*"}
+			}
+		}
+	)
+	(define "blast_protection"
+		{armor
+			{setting "armor_main_50"
+				{threshold {blast {value %dmg}}}
+			}
+			{setting "armor_main_20"
+				{threshold {blast {value %dmg}}}
+			}
+		}
+	)
+	(define "frag_grenade_protection"
+		("blast_protection" dmg(6))
+	)
+	(define "armor_medium"
+		("armor_construction" calibre(12))	; at rifles+
+		{armor
+			{setting "armor_main_50"
+				{threshold  
+					{blast {value 10}}	; 57mm fg protection
+				}
+				{durability 
+					{blast {value 50}}	; will broke down after 2-3 hits by 75mm fg
+					{pierce {value 350}}			
+				}
+			}		
+			{setting "armor_main_20"
+				{threshold  
+					{blast {value 5}}	; 57mm fg protection
+				}
+				{durability 
+					{blast {value 25}}	; will broke down after 2-3 hits by 75mm fg
+					{pierce {value 170}}			
+				}
+			}		
+		}
+	)
+	(define "armor_set"	
+		{volume "armor_main_50_%0"
+			{material "armor"}
+			{tags "armor"}
+			{thickness	50
+				{front 50}
+				{top 120}		; Glacis
+				{rear 50}
+				{bottom 120}
+			}
+		}
+		{volume "armor_main_35_%0"
+			{material "armor"}
+			{tags "armor"}
+			{thickness	35
+				{front 35}
+				{top 35}		; Glacis
+				{rear 35}
+				{bottom 35}
+			}
+		}
+		{volume "armor_main_30_%0"
+			{material "armor"}
+			{tags "armor"}
+			{thickness	30
+				{front 30}
+				{top 30}		; Glacis
+				{rear 30}
+				{bottom 30}
+			}
+		}
+		{volume "armor_main_20_%0"
+			{material "armor"}
+			{tags "armor"}
+			{thickness	20
+				{front 20}
+				{top 15}		; Glacis
+				{rear 20}
+				{bottom 12}
+			}
+		}
+		{volume "armor_main_10_%0"
+			{material "armor"}
+			{tags "armor"}
+			{thickness	10
+				{front 10}
+				{top 7}		; Glacis
+				{rear 8}
+				{bottom 7}
+			}
+		}
+		{volume "armor_main_15_%0"
+			{material "armor"}
+			{tags "armor"}
+			{thickness	15
+				{front 15}
+				{top 7}		; Glacis
+				{rear 8}
+				{bottom 15}
+			}
+		}
+	)
+	("armor_set" args 00)
+	("armor_set" args 01)
+	("armor_set" args 02)
+	("armor_set" args 04)
+	("armor_set" args 05)
+	("armor_set" args 06)
+	("armor_set" args 07)
+	(define "ems_white"	
+		{volume "ems_white_%0"
+			{tags "no_burn"}
+			{able
+				{window}
+				{contact 0} {contact_ground 0}
+				{bullet 0} {throwing 0} {obstacle 0}
+				{overlap 0} {visible 0}
+				{touch 0}
+			}
+			{density 0}
+		}
+	)
+	("armor_set" args 00)
+	("armor_set" args 01)
+	("armor_set" args 02)
+	("armor_set" args 04)
+	("armor_set" args 05)
+	("armor_set" args 06)
+	("armor_set" args 07)
+	("armor_set" args 08)
+	("armor_set" args 09)
+	("armor_set" args 10)
+	

@@ -1,0 +1,16 @@
+{from "pattern throwable"
+	{tag "handgrenade" "fg"}
+	{special
+		{PrepareTime 7}
+		{PrepareCursor "grenade"}
+		{mode detonate}
+	}
+	{throw
+		;{constantSpeed 12}
+		{range 20.7} ;in-game 22m
+		{startAngle 45}
+		{spreading 0.3
+			{SpreadPower 2}
+		}
+	}
+}

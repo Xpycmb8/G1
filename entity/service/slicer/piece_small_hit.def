@@ -1,0 +1,12 @@
+{game_entity
+	{extension "/properties/piece.ext"}
+	{simulation {able 1} {state 1}}
+	{constrain none}
+	{volume "body"
+		{sphere 0.1}
+		{able clear {contact_ground 1}}
+		{bone "basis"}
+		{material "dummy"}
+	}
+	{props "dummy" "hit_vol"}
+}

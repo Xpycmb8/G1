@@ -1,0 +1,13 @@
+{bullet
+	{tag "bullet sp small stackable pierce smallarms"}
+	{desc "6x35-mm"}
+	{inventory
+		{weight 3.3}
+		{block 33}
+		{size 1 2}
+		{fsm "belt"}
+	}	
+	{mass 0.002}
+	{entity "mags_pdw"}
+	("trace9")
+}

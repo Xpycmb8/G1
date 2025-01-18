@@ -1,0 +1,13 @@
+{bullet
+	{tag "bullet stackable smallarms non_lethal"}
+	{desc "7.62x51 Non lethal"}
+	{inventory
+		{weight 3.3}
+		{block 30}
+		{size 1 1}
+		{fsm "belt"}
+	}	
+	{mass 0.006}
+	{entity "mags_rem700"}
+	("no_trace")
+}

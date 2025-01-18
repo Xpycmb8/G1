@@ -1,0 +1,15 @@
+;SDL
+(include "stuff.ext")
+{props "nocover" "metal_small" "armor_place" "armor"}
+{simulation {able 1} {disableLinked 1}}
+{body {proper body sensible} {permit body}}
+{obstacleID "construction"}
+{collider "particle.big"}
+{Volume "body"
+	{Tags  "armor"}
+	{able {visible 1}}
+	{thickness hollow 15}
+	{material "armor"}		
+}
+{lodclass "stuff_small"}
+{RimLight}

@@ -1,0 +1,24 @@
+;Exported by: ?????
+;Date:        Sun Nov  3 13:17:23 2019
+;File:        D:\?????\Documents\3dsMax\scenes\wound.max
+{Skeleton
+	{bone "basis"
+		{parameters "CommonMesh;"}
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{VolumeView "basis.ply"}
+		{bone "reticle"
+			{parameters "CommonMesh;"}
+			{Matrix34
+				0	1	0
+				-1	0	0
+				0	0	1
+				0.0104375	0	0
+			}
+			{VolumeView "reticle.ply"}
+		}
+	}
+}

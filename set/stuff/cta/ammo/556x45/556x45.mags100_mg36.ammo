@@ -1,0 +1,15 @@
+;// 5.56x45mm
+
+{bullet
+	{tag "bullet sp normal stackable pierce"}
+	{desc "5.56x45 mag mg36"}
+	{inventory
+		{weight 1}
+		{block 100}
+		{size 2 1}
+		{fsm "belt"}
+	}
+	{mass 0.004}
+	{entity "mg36_mags"}
+	("trace5")
+}

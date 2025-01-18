@@ -1,0 +1,24 @@
+;SDL
+(include "stuff_small.ext")
+{props "grenade" "steel" "throwing" "local_physics"}
+{volume "body" 
+	{thickness 3}
+}
+{volume "clutch"
+	{thickness 1}
+	{Tags  "throw"}
+}
+{volume "pin"
+	{thickness 1}
+	{Tags  "throw"}
+}
+{volume "ring"
+	{thickness 1}
+	{Tags  "throw"}
+}
+{obstacleID "stuff"}
+{simulation {able 1} }
+{collider "grenade"}
+{lodclass "stuff_small"}
+{body {proper body sensible} {permit body}}
+

@@ -1,0 +1,14 @@
+{game_entity
+	(include "/properties/small_part_harmless.inc")
+	{extension "/properties/piece.ext"}
+	{props "dummy" "steel" "small" "nocover" "ps_dummy" "shell556" "shells_guns" "delet_t15"}
+	{collider "fraction"}
+	{lodclass "shells"}
+	{constrain none}
+	{body {proper body } {permit body}}
+	{simulation {able 1} {state 1}}
+	{volume "shell_drop"
+		{thickness 0.2}
+	}
+	{mass 0.2}
+}

@@ -1,0 +1,11 @@
+{item
+	{tag "smallitemin1hand" "remote_tablet" }
+	{desc "Пульт"}
+	{entity "remote_tablet"}
+	{inventory
+		{size 2 1}
+		{weight 100}
+		{fsm "belt"}
+	}
+	{mass 1}
+}

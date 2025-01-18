@@ -1,0 +1,13 @@
+{bullet
+	{tag "bullet normal stackable pierce ap"}
+	{desc "7.62x51 mag Fal AP"}
+	{inventory
+		{weight 3.3}
+		{block 30}
+		{size 1 2}
+		{fsm "belt"}
+	}	
+	{mass 0.010}
+	{entity "fn_fal_mag_ap"}
+	("trace7")
+}

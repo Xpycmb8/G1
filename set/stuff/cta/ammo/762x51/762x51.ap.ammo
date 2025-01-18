@@ -1,0 +1,15 @@
+;// 7.62x51mm
+
+{bullet
+	{tag "bullet normal 7x51 stackable pierce ap"}
+	{desc "7.62x51мм M61"}
+	{inventory
+		{weight 2}
+		{block 50}
+		{size 2 1}
+		{fsm "belt"}
+	}	
+	{mass 0.010}
+	{entity "7x51ap"}
+	("trace7")
+}

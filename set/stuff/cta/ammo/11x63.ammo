@@ -1,0 +1,13 @@
+{bullet
+	{tag "bullet sp big stackable pierce smallarms"}
+	{desc ".458 SOCOM"}
+	{inventory
+		{weight 2}
+		{block 50}
+		{size 1 1}
+		{fsm "belt"}
+	}	
+	{mass 0.004}
+	{entity "5x45"}
+	("trace10")
+}

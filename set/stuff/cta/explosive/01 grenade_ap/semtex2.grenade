@@ -1,0 +1,33 @@
+{from "pattern grenade_ap"
+	{tag "ap big" "semtex"}
+	{desc "Semtex"}
+	{special
+		{PrepareTime 4}
+		{PrepareCursor "grenade"}
+		{mode detonate}
+	}
+	{throw
+		{startAngle 70}
+		{constantSpeed 20}
+		{range 20}
+		{spreading 0.3}
+	}
+	{damage blastwave
+		{energy 14.0}
+		{area 0.6 0.8}
+		{ground_interaction_radius 0.1}
+	}
+	{damage add blastwave
+		{energy 2.0}
+		{area 2 3}
+		{ground_interaction_radius 0.0}
+	}
+	{damage add blastwave
+		{energy 1}
+		{area 2 12}
+		{ground_interaction_radius 0.0}
+	}
+	{inventory {size 1 1}}
+	{entity "semtex_grenade2"}
+	
+}

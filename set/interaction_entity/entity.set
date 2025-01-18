@@ -1,0 +1,97 @@
+{entities
+	(define "disable_contact_0" {volumes disable contact}{delay 0.1{volumes enable contact}})
+	(define "disable_contact_1" {volumes disable contact contact_ground}{delay 1 {volumes enable contact contact_ground}})
+	(define "disable_contact_blast_0" {volumes disable bullet contact blast }{delay 0.1{volumes enable bullet contact blast}})
+	(define "volume"
+		{volumes %0 disable all}
+		{volumes %1 enable contact_ground contact blast bullet}
+	)
+	(include "debug.inc")
+	(include "generic.inc")
+	(include "contact_fx_generic.inc");gear
+	(include "dummy.inc")
+	(include "glass_frame.inc");gear
+;	(include "deform_engine.inc");gear
+	(include "delay_hide.inc") ;gear
+	(include "weight_table.inc") ;gear
+	(include "cut_parts.inc") ;gear
+;	(include "compressor.inc") ;gear
+	(include "open_doors.inc") ;gear
+	(include "parts.inc") ;gear
+	(include "rex_emitters.inc") ;gear
+	(include "stuff_physics.inc") ;gear
+	(include "sky.inc");gear
+	(include "wound.inc");gear
+	(include "delay_hide.inc");gear
+	(include "bullet.inc");gear
+	(include "fraction.inc");gear
+	(include "pipes_load.inc");gear
+	(include "shells.inc");gear
+	(include "crusher.inc");gear
+	(include "props.inc");gear;gear
+	(include "open_volume.inc");gear
+	(include "thermite_burn.inc")	;gear
+	(include "distant_set.inc");gear
+	(include "upgrade.inc");gear
+	(include "anomaly.inc");gear
+	(include "material.inc");gear
+	(include "blast_physics.inc");gear
+	(include "ground_zero/pest_base.inc") ;ground_zero
+	(include "ground_zero/skirmisher_base.inc");ground_zero
+	(include "ground_zero/dreadnought_base.inc");ground_zero
+	(include "ground_zero/harvester_base.inc");ground_zero
+	(include "ground_zero/hunter_base.inc");ground_zero
+	(include "ground_zero/lynx_wolf_base.inc");ground_zero
+	(include "ground_zero/scout_base.inc");ground_zero
+	(include "ground_zero/base_building.inc");ground_zero
+	(include "ground_zero/props.inc");ground_zero
+	(include "ground_zero/turret.inc");ground_zero
+	(include "ground_zero/weapon_workbench.inc");ground_zero
+	(include "ground_zero/weapon_machinery.inc");ground_zero
+	;---------------------------------
+	(include "explosive.inc")
+	(include "grenade.inc")
+	(include "flora.inc")
+	(include "fauna.inc")
+	(include "human.inc")
+
+	(include "weapons-defines.inc")
+
+	(include "icon.inc")
+
+	(include "vehicle/animation-defines.inc")
+	(include "tank/sound-defines.inc")
+	(include "vehicle/vehicle-main.inc")
+	(include "vehicle/car-main.inc")
+	(include "vehicle/moto.inc")
+	(include "tank/tank-main.inc")
+	(include "tank/tank-specifics.inc")
+
+	(include "cannon.inc")
+	(include "airborne.inc")
+	(include "marine.inc")
+	(include "railway.inc")
+	(include "dogs.inc")
+	(include "skirmish.inc")
+	(include "stuff.inc")
+	(include "multiplayer.inc")
+	(include "muzzle.inc")
+	(include "shell.inc")
+
+	(include "construction/post.inc")
+	(include "construction/fence.inc")
+	(include "construction/target.inc")
+	(include "construction/shed.inc")
+	(include "construction/dummy.inc")
+	(include "construction/generic.inc")
+	(include "construction/windows.inc")
+	(include "construction/parts.inc")
+	(include "construction/foxhole.inc")
+	(include "construction/sandbag.inc")
+	(include "construction/staged.inc")
+	(include "construction/special.inc")
+	(include "construction/building.inc")
+	(include "construction/burning.inc")
+	(include "construction/bridge.inc")
+	(include "construction/placement.inc")
+}

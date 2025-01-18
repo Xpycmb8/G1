@@ -1,0 +1,60 @@
+{weapon_bullet
+	{tag "weapon cluster_launcher build_in gun"}
+	{filling "type90" 9}
+	{fillingVisible "rocket_l"}
+	{foresight "Foresight_rocket_l"}
+	{fireSound "reactive/mortar"}
+	{reloadSound "tankgun_r02"}
+	{inventory 
+		{noView}
+	}
+	{spreading
+		{SpreadRadius 20}
+		{SpreadPower 1}
+		{radiusFunction
+			0.0		0.1
+			0.2		0.3
+			0.5		0.8
+			0.8		1.3
+			1.00	1
+		}
+	}
+	{calibre 70}
+	{rechargeTime 20.0}
+	{recoveryTime 0.5}
+	
+	;range
+	{parameters "cluster"
+		{speed 650}
+		{recoveryTime 2}
+	}
+	{parameters "fg"
+		{projectileDamageTable {130 15}}
+		{projectileDamage 15}
+	}
+	{parameters "pg7vs";	кумулятивная	400	120	500
+		{calibre 50}
+		{projectileDamageThreshold 1}
+		{projectileDamage 400}
+		{speed 650}	; 10m 115ms, 30m 295ms
+	}
+	{aimRange 350}
+	{minRange 50}
+	{maxRange 700}
+	{gravity 0.5}
+	{speed 800}
+	{aimtype curved}
+	{AimingTolerance 0.1}
+	{cursor "cannon_on_fg"}
+	{cursorReloading "cannon_reload_fg"}	
+	{burst
+		{short 2 0}			; short burst shots on long distance, rand (+-)shots
+		{long 6 4}			; long burst shots on short distance, rand (+-)shots
+		{rangeKoef 0.5}		; rangeKoef * aimRange = max long burst distance
+	}
+	{crosshair "crosshair6"}
+	{crosshairReloading "crosshair6_reload"}
+	{preloaded}
+}
+
+

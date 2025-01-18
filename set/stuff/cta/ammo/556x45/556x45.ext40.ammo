@@ -1,0 +1,13 @@
+{bullet
+	{tag "bullet normal stackable pierce sp"}
+	{desc "556x45 SR556x40"}
+	{inventory
+		{weight 1.66}
+		{block 60}
+		{size 1 2}
+		{fsm "belt"}
+	}	
+	{mass 0.016}
+	{entity "mags_ru556_40"}
+	("trace5")
+}

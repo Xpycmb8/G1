@@ -1,0 +1,15 @@
+;// 7.62x39mm
+
+{bullet
+	{tag "bullet normal stackable pierce sp"}
+	{inventory
+		{weight 2}
+		{block 50}
+		{size 2 1}
+		{fsm "belt"}
+	}	
+	{mass 0.008}
+	{desc "7.62x39mm trace"}
+	{entity "7x39"}
+	("trace7_trace")
+}

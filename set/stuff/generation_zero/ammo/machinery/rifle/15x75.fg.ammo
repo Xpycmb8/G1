@@ -1,0 +1,26 @@
+{bullet
+	{tag "ammo bullet stackable zenite fg smallarms_heavy"}
+	{desc "15x75 HEDP"}
+	{view "xm53_proj"
+	}
+	{inventory
+		{weight 3.3}
+		{block 30}
+		{size 1 1}
+		{fsm "belt"}
+	}
+	{mass 0.34}
+	{entity "xm109_mags_fg"}
+	{damage blastwave
+		{ground_interaction_radius 0.0}
+		{energy 4}
+		{area 0.6 0.7}
+	}	
+	{detonationThickness 0}
+	{possibleDamageRadius 0.1}
+	{damage add blastwave
+		{ground_interaction_radius 0.0}
+		{energy 0.3}
+		{area 1 1.2}
+	}
+}

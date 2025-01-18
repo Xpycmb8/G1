@@ -1,0 +1,27 @@
+;Exported by: Gustavo Doria
+;Date:        Tue Feb 23 03:33:36 2021
+;File:        C:\Users\gusta\Desktop\halo\- Weapons\Halo Reach\Covenant\Type-33-flak\example_weapon.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "reference"
+			{Position
+				8	0	8
+			}
+	 	}
+	}
+}
+{Volume "body"
+	{box 16 12 16} 	
+	{Bone "reference"}
+	{Matrix34
+		1	0	0
+		0	1	0
+		0	0	1
+		-1	2	0 			; -2	0	-2
+	}
+}

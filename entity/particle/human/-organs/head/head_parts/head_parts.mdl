@@ -1,0 +1,147 @@
+;Exported by: Xpycmb
+;Date:        Wed Mar 16 19:02:33 2022
+;File:        C:\Users\Xpycmb\Documents\3dsMax\scenes\abraxo.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "part00"
+			{parameters "ID=Body;"}
+			{Position -0.470154	0.0229797	-0.34259}
+			{VolumeView "part00.ply"}
+		}
+		{bone "part01"
+			{parameters "ID=Body;"}
+			{Position -0.47015	-0.187981	0.4897}
+			{VolumeView "part01.ply"}
+		}
+		{bone "part02"
+			{parameters "ID=Body;"}
+			{Position -0.638729	-0.0788727	0.151108}
+			{VolumeView "part02.ply"}
+		}
+		{bone "part03"
+			{parameters "ID=Body;"}
+			{Position -0.47015	0.188026	0.084938}
+			{VolumeView "part03.ply"}
+		}
+		{bone "part04"
+			{parameters "ID=Body;"}
+			{Position -0.47015	-0.278893	0.406029}
+			{VolumeView "part04.ply"}
+		}
+		{bone "part05"
+			{parameters "ID=Body;"}
+			{Position -0.470152	0.6847	-2.32571}
+			{VolumeView "part05.ply"}
+		}
+		{bone "part06"
+			{parameters "ID=Body;"}
+			{Position -0.47015	-0.216637	0.084938}
+			{VolumeView "part06.ply"}
+		}
+		{bone "part07"
+			{parameters "ID=Body;"}
+			{Position -0.47015	0.125771	0.427345}
+			{VolumeView "part07.ply"}
+		}
+		{bone "part08"
+			{parameters "ID=Body;"}
+			{Position -0.47015	0.0946426	0.271706}
+			{VolumeView "part08.ply"}
+		}
+	}
+}
+{Volume "part00"
+	{Box 3.97631 3.96333 4.352}
+	{Bone "part00"}
+	{Matrix34
+		0.45	0	0
+		0	0.45	0
+		0	0	0.45
+		0.703606	-0.436378	1.17075
+	}
+}
+{Volume "part01"
+	{Box 3.61472 4.19922 3.45501}
+	{Bone "part01"}
+	{Matrix34
+		0.45	0	0
+		0	0.45	0
+		0	0	0.45
+		0.889305	-0.394306	3.57252
+	}
+}
+{Volume "part02"
+	{Box 5.86741 5.66406 4.08971}
+	{Bone "part02"}
+	{Matrix34
+		0.45	0	0
+		0	0.45	0
+		0	0	0.45
+		0	0.477871	3.63068
+	}
+}
+{Volume "part03"
+	{Box 5.12799 3.73828 5.34334}
+	{Bone "part03"}
+	{Matrix34
+		0.45	0	0
+		0	0.45	0
+		0	0	0.45
+		0.824005	-0.77832	2.25612
+	}
+}
+{Volume "part04"
+	{Box 7.4684 4.19922 6.19923}
+	{Bone "part04"}
+	{Matrix34
+		0.45	0	0
+		0	0.45	0
+		0	0	0.45
+		0.458733	0.653641	2.23115
+	}
+}
+{Volume "part05"
+	{Box 4.69951 3.51172 8.30348}
+	{Bone "part05"}
+	{Matrix34
+		0.45	0	0
+		0	0.45	0
+		0	0	0.45
+		-0.945404	-1.05402	3.14936
+	}
+}
+{Volume "part06"
+	{Box 3.10858 3.63672 6.70645}
+	{Bone "part06"}
+	{Matrix34
+		0.45	0	0
+		0	0.45	0
+		0	0	0.45
+		-1.38552	0.429546	2.03842
+	}
+}
+{Volume "part07"
+	{Box 3.3452 2.08315 1.574}
+	{Bone "part07"}
+	{Matrix34
+		0.45	0	0
+		0	0.45	0
+		0	0	0.45
+		1.21761	0.377586	2.06987
+	}
+}
+{Volume "part08"
+	{Box 3.48908 1.85883 1.53582}
+	{Bone "part08"}
+	{Matrix34
+		0.45	0	0
+		0	0.45	0
+		0	0	0.45
+		1.19914	-0.686897	2.17357
+	}
+}

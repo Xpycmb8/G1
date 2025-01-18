@@ -1,0 +1,21 @@
+{bullet
+	{tag "bullet big sp hmgun stackable pierce smallarms_heavy"}
+	{inventory
+		{weight 3.3}
+		{block 30}
+		{size 2 2}
+		{fsm "belt"}
+	}
+	{damage blastwave
+		{energy 1.8}
+		{area 0.2 0.3}
+	}	
+	{detonationThickness 4}
+	{damage add blastwave
+		{energy 0.1}
+		{area 1 1.2}
+	}
+	{mass 0.34}
+	("trace20-25")
+	{entity "mags_dread"}
+}

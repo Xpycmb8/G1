@@ -1,0 +1,22 @@
+;Exported by: ?????
+;Date:        Wed Jan 29 01:36:52 2020
+;File:        D:\?????\Documents\3dsMax\scenes\wound_big_50.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "wound"
+			{parameters "CommonMesh;"}
+			{Matrix34
+				-1	0	0
+				0	1	0
+				0	0	-1
+				0.016115	0	0
+			}
+			{VolumeView "wound.ply"}
+		}
+	}
+}

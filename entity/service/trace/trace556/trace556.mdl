@@ -1,0 +1,47 @@
+;Exported by: Xpycmb
+;Date:        Fri Dec 29 00:20:37 2023
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\trace556.max
+{Skeleton
+	{animation
+		{sequence "tail"
+			{autostart}
+			{resume}
+		}
+		{sequence "trace"
+			{speed 0.5}
+			{events 
+				{1 "start_small"}
+			}		
+			{autostart}
+		}
+		{sequence "start"
+			{speed 2}
+		}
+	}
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "placement"
+		}
+		{bone "tail"
+			{Matrix34
+				-1	0	0
+				0	-1	0
+				0	0	1
+				-0.28866	0	0
+			}
+		}
+		{bone "trace"
+			{parameters "CommonMesh;"}
+			{Orientation
+				1	0	0
+				0	-1	0
+				0	0	-1
+			}
+			{VolumeView "trace.ply"}
+		}
+	}
+}

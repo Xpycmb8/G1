@@ -1,0 +1,27 @@
+{breed
+	{behaviour soldier}
+	{skin "civilian2"}
+	{portrait "civilian_male"}
+	{icon "civilian"}
+	{icon_priority 0}
+	{nationality rus}
+	{perks
+		(include "ability.inc")
+		("rifle_skill_rank_2")("tier2_standard")
+		("engineer")
+	}
+	{veterancy
+		(include "ability.inc")
+		("veterancy_lvl_0")
+	}
+	{inventory
+		{item "g8a1_v2" filled}
+		{item "556x45 mags30_galil ammo" 120}
+		{item "m67 grenade" 2.25 0.5}
+		{item "m61 grenade" 2.25 0.5}
+		{item "thermite grenade" 1.25 0.5}
+		{item "semtex grenade" 1.25 0.5}
+		{item "bandage_rus" 5.5 0.5}
+		{in_hands 0}
+	}
+}

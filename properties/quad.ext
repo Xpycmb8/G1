@@ -1,0 +1,247 @@
+;SDL
+actor
+
+(include "vehicle.ext")
+{lodclass "vehicle_big"}
+
+{Collider "moto"}
+{obstacleID "human"}
+{PatherID	"human"}
+
+{TargetClass "human"}
+{TargetSelector "human"}
+
+{Props "drone_scout" "vision_lev00"}
+
+{Brain "vehicle" {state "airborne"}}
+
+{SimulatorId "airborne"}
+
+{Extender "inventory"
+	{box
+		{Size 4 4}
+		{weight 1000}
+	}
+}
+(define "part"
+	{volume %0
+		{tags %0}
+		{component %0}
+		{thickness 0.5}
+		{able {visible 0}}
+	}
+)
+
+(define "helicopter_volume"
+	{volume %0
+		{tags %1}
+		{component %1}
+		{thickness %2}
+	}
+)
+
+(define "glass"
+	{volume %0
+		{thickness %1}
+		{tags "glass"}
+		{component %0}
+		{able {NoWoundDecal}}
+	}
+	{component %0
+		{tags "glass"}
+	}
+)
+
+{Volume "body"
+	{tags "body"}
+	{thickness 8}
+}
+{Volume "engine"
+	{tags "body" "inflammable"}
+	{thickness 20}
+}
+{Volume "cabin"
+	{tags "body"}
+	{thickness hollow 10}
+	{able {visible 0}}
+}
+
+{Component "body"
+	{RepairTime 25}
+}
+{Component "engine"
+	{RepairTime 25}
+}
+
+;main rotor components
+{Component "rotor"
+	{RepairTime 10}
+}
+
+;back rotor components
+
+{perks
+	{component "body"
+		{category "tank_light"}
+	}
+	{component "engine"
+		{category "engine_medium"}
+	}
+	{component tag "rotor"
+		{category "wheel_medium"}
+	}
+	{component tag "rotor_b"
+		{category "wheel_medium"}
+	}
+	{component tag "glass"
+		{category "glass_light"}
+	}
+}
+
+
+{Chassis "wheel"
+	("chassis_defaults")
+	{Locomotion
+		("Speed" s(10))			; max speed, km/h
+		{StartTime		9	}	; acceleration time from 0 to max. speed, seconds
+		{BrakeTime		5	}	; deceleration time from max. speed to 0, seconds
+		{StopTime		3	}	; stop time after turning off the engine, seconds
+	}
+	{DontUseSlope}
+}
+{Chassis "helicopter"
+	{FrontSlopeSpeed		10	} ; degree/s
+	{MaxFrontSlope			15	} ; degree
+	{SideSlopeSpeed			15	} ; degree/s
+	{MaxSideSlope			15	} ; degree
+	{MaxElevationSpeed		6	} ; m/s
+	{ElevationAcceleration	2	} ; m/s^2
+	{MaxAltitude			60	} ; m
+	{TravelAltitude			4	} ; m
+	{EngineStartupTime		1.6 } ; seconds
+	{DontUseSlope}
+	{Airborne}
+	{IgnorePatherBoundsAI}		; AI ignores pather bounds, USER is constrained by pather bounds
+	{FuelBag
+		{volume 50}
+		("rate" r(0.1))		; * 20 liter/km
+		{remain 50}
+		{fuel "fuel"}
+	}
+}
+{ChassisManager
+	{Current "helicopter"}
+}
+
+(define "locomotion_transport"
+	{StartTime		3	}	; acceleration time from 0 to max. speed, seconds
+	{BrakeTime		3	}	; deceleration time from max. speed, seconds
+	{StopTime		4	}	; stop time after turning off the engine from max. speed to 0, seconds
+	{SplineRadius	5	}	; limit turning radius on the splines, meters
+	{Slow			30	}	; km/h
+	{Normal			60	}
+	{Fast			90	}
+	{MaxSpeed		90	}	; max speed, km/h
+	{TurnRadius		15	}	; turn radius, m
+)
+
+(define "locomotion_attack"
+	{StartTime		2	} ; acceleration time from 0 to max. speed, seconds
+	{BrakeTime		2	} ; deceleration time from max. speed, seconds
+	{StopTime		3	} ; stop time after turning off the engine from max. speed to 0, seconds
+	{SplineRadius	5	} ; limit turning radius on the splines, meters
+	{Slow			50	} ; km/h
+	{Normal			70	}
+	{Fast			100	}
+	{MaxSpeed		100	} ; max speed, km/h
+	{TurnRadius		15	} ; turn radius, m
+)
+
+
+
+
+
+
+
+
+(define "window_volume"
+	{volume "%name"
+		{thickness %thickness}
+		{able {window}}
+	}
+)
+
+(define "locomotion"
+	{StartTime		9	} ; acceleration time from 0 to max. speed, seconds
+	{BrakeTime		4	} ; deceleration time from max. speed, seconds
+	{StopTime		4	} ; stop time after turning off the engine from max. speed to 0, seconds
+	{SteerOn		15	} ; wheel rotation speed, degree/s
+	{SteerOff		15	} ; the speed of wheels returning to reference state, degree/s
+	{SplineRadius	5	} ; limit turning radius on the splines, meters
+)
+
+
+
+(define "wind"
+	{volume %0
+		{tags %0}
+		{component %0}
+		{thickness 0.5}
+		{able {visible 0}}
+	}
+)
+
+
+(define "part"
+	{volume %0
+		{tags %0}
+		{component %0}
+		{thickness 0.5}
+		{able {visible 0}}
+	}
+)
+
+(define "armor_helicopter"
+	{armor
+		{setting "body"
+			{volumes "body*"}
+			{threshold
+				{blast 	{value 4}}
+				{pierce {value 4}}
+			}
+			{durability
+				{blast 	{value %dbb}}	; durability blast body 	- medium:10
+				{pierce {value %dpb}}	; durability pierce body 	- medium:1500
+			}
+		}
+		{setting "engine"
+			{volumes "engine*"}
+			{whole_wound}
+			{threshold
+				{blast 	{value 4}}
+				{pierce {value 4}}
+			}
+			{durability
+				{blast 	{value %dbe}}	; durability blast engine 	- medium:10
+				{pierce	{value %dpe}}	; durability pierce engine 	- medium:500
+			}
+		}
+		{setting "wheel"
+			{volumes "wheel*"}
+			{thickness 5}
+			{whole_wound}
+			{threshold
+				{blast 	{value 4}}
+				{pierce {value 4}}
+			}
+			{durability
+				{blast 	{value 6}}
+				{pierce {value 10}}
+			}
+		}
+	}
+)
+
+(define "armor_medium"
+	("armor_helicopter" dbb(10) dpb(50) dbe(10) dpe(20))
+)

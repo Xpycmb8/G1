@@ -1,0 +1,14 @@
+{game_entity    
+	{Skeleton
+		{bone "basis"}
+		{bone "reactive"}
+	}
+	{body
+		{proper body sensible} 
+		{permit body}
+	}
+	{simulation {able 1} {state 1}}
+	{simulatorid "grenade"}
+	{props "projectile_bullet"}
+	{constrain none}
+}

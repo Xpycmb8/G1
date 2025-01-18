@@ -1,0 +1,8 @@
+{game_entity
+	(include "/properties/traper.inc")
+	{Extension "radioactive10.mdl"}
+	{props "radiation" "rad10"} 
+	{volume "crown"
+		{Able {contact 1} {bullet 0} {obstacle 0} {touch 1} {overlap 0} {visible 0}}
+	}
+}

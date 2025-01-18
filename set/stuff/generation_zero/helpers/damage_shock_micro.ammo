@@ -1,0 +1,13 @@
+{bullet
+	{tag "ammo" "damage_shock"}
+	{tag "no_crater"}
+	{inventory
+		{noView}
+	}
+	{mass 1}
+ 	{damage flash
+		{radius 1 1} ; full flash radius, shorter flash radius
+		{duration 0.5 0.3} ; max duration, min duration
+	}
+	{entity "damage_shock_micro"}
+}

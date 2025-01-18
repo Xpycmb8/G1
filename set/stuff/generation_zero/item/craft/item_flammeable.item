@@ -1,0 +1,12 @@
+{item
+	{entity "item_flammeable"}
+	{tag "powder" "crafting"}
+	{desc "Gun powder(craft)"}
+	{mass 0.0011} ;Powder
+	{inventory
+		{weight 5}
+		{block 1}
+		{size 1 1}
+		{fsm "belt"}
+	}	
+}

@@ -1,0 +1,22 @@
+;Exported by: ?????
+;Date:        Sat Nov  2 00:32:30 2019
+;File:        D:\?????\Documents\3dsMax\scenes\volume_interior.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+	}
+}
+{Volume "crown"
+	{Cylinder 5 5}
+	{Bone "basis"}
+	{Matrix34
+		6	0	0
+		0	6	0
+		0	0	6
+		0	0	15
+	}
+}

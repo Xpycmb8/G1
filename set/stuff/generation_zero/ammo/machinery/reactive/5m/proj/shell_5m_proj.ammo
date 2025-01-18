@@ -1,0 +1,22 @@
+{bullet ;
+	{tag "ammo rocketlauncher no_ricochet shell_minimum 40mm_fg dropboxed fg fx_ap_20_35"}
+	{entity "shell_5m_fg"}
+	{view "shell_5m_fg_proj"
+	} 
+	{detonationThickness 1}
+	{inventory
+		{weight 100}
+		{size 5 1}
+	}	
+	{mass 4.5}
+	{damage blastwave
+		{ground_interaction_radius 0.0}
+		{energy 4.8}
+		{area 1.5 3}
+	}
+	{damage add blastwave
+		{ground_interaction_radius 0.0}
+		{energy 0.8}
+		{area 3 6}
+	}
+}

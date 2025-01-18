@@ -1,0 +1,15 @@
+;// 12.7x99mm
+
+{bullet
+	{tag "bullet big hmgun sniper stackable pierce sp smallarms_heavy"}
+	{desc "127x99 mm sniper"}
+	{inventory
+		{weight 3.3}
+		{block 30}
+		{size 1 2}
+		{fsm "belt"}
+	}
+	{mass 0.11}
+	{entity "m107_mag"}
+	("trace12")
+}

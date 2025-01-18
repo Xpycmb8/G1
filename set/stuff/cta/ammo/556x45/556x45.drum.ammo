@@ -1,0 +1,15 @@
+;// 5.56x45mm
+
+{bullet
+	{tag "bullet sp normal stackable pierce"}
+	{desc "5.56x45 SR566x100"}
+	{inventory
+		{weight 1}
+		{block 35}
+		{size 2 2}
+		{fsm "belt"}
+	}
+	{mass 0.004}
+	{entity "drum_mags_ru556"}
+	("trace5")
+}

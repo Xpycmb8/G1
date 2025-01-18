@@ -1,0 +1,67 @@
+{from "pattern bullet"
+	{tag "rifle weapon bullet -shoot_walking -shoot_walking_ai shoot_walking_manual to_hand flash_single_side_rifle_grade1 5_bullet sniper_series riflehand bolt_action rifle270_metal_drop rifle270_stock"}
+	{entity "rifle270_stock_grade1_scope_1_4x_24mm"}
+	{desc "rifle270 Grade1 scope 1 4x 32mm"}
+	{fireSound	"small_arms/K98k/"}
+	{fireSoundClose	"small_arms/K98k_close/"}
+	{reloadSound "small_arms/startreload"}	
+	("clickSound_rifle")	
+	{cursor "carbine_on"}
+	{cursorReloading "carbine_reload"}
+	{calibre 7.62}
+	{filling "ammo 7x64" 5 0}
+	{inventory
+		{size 6 2 }
+		{link_bone "gun_back"}
+		{weight 100 }
+	}
+	{burst
+		{short 1 0}
+		{long 1 0}
+		{rangeKoef 0.3}
+	}
+	{speed 950}
+	{parameters "sp"
+		("distance_long_barrel_rifle" r1(0.7))
+		("health_damage_762x51" d(850))	
+		("projectileDamage_762x51_sp")
+		{range 200 250};F	
+		("speed" s(840))
+	}
+	{parameters "ap"
+		("distance_long_barrel_rifle" r1(0.6))
+		("health_damage_762x51" d(937))	
+		("projectileDamage_762x51_ap")
+		{range 230 240};F	
+		("speed" s(937))
+	}
+	{parameters "os"
+		("distance_long_barrel_rifle" r1(1.1))
+		("health_damage_762x51" d(650))	
+		("projectileDamage_762x51_fg")
+		{range 180 200};F	
+		("speed" s(650))
+	}
+	{mass 4.06};;0.55= 4,06
+	{traceFreq 1}
+	{rechargeTime 4.5}
+	("recoveryTime" r(30))
+	("spreading_low")
+	("recoil_medium")
+	("sway_medium")
+	{minimumDamageModifier 3}
+	(mod "hardcore"
+		{autoreload 0}
+		{minimumDamageModifier 4}
+	)
+	{cursor "carbine_on"}
+	{cursorReloading "carbine_reload"}	
+	("zoom_scope_1_4x")
+}
+
+
+
+
+
+
+

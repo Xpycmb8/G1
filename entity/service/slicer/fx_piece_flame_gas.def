@@ -1,0 +1,36 @@
+{game_entity
+	{skeleton
+		{bone "basis"
+			{orientation
+				1 	 0 	 0
+				0 	 -1 	 0
+				0 	 0 	 1
+			}
+		}
+	}
+	{volume "body"
+		{cylinder 2.5 14}
+		{bone "basis"}
+		{matrix34
+			0 	 0 	 -1
+			0 	 1 	 0
+			1 	 0 	 0
+			-0.0022 	 0 	 0
+		}
+	}
+	{simulation {able 1} {state 1}}
+	{props "fx_piece_flame_gas"}
+	{constrain none}
+	{obstacleID "nothing"}
+	{collider "particle.fire"}
+	{mass 1}
+	{lodclass "decor_medium"}
+
+	{volume "body"
+		{able clear {contact 1} {contact_ground 1}}
+		{material "dummy"}
+	}
+	{body
+		{permit body}
+	}
+}

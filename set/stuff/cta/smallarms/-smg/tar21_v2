@@ -1,0 +1,41 @@
+{from "pattern bullet"
+	{tag "smg assaultrifle weapon bullet to_hand shoot_walking_manual -shoot_walking flash_single_sided_rifle g36_series 50_bullet rifle_set heat_small ar_metal_magazine"}
+	{entity "tar21_v2"}
+	("clickSound_smg")	
+	{filling "ammo 556x45" 50}
+	{inventory
+		{size 5 2 }
+		{link_bone "gun_back"}
+		{weight 100 }
+	}
+	{mass 3.79}
+	{traceFreq 0}
+	{Automatic}
+	{rechargeTime 3.2}
+	("recoveryTime" r(750))
+	("recoil_low_boost")
+	("sway_medium_long")
+	{calibre 5.56}
+	{speed 920}
+	{parameters "sp"
+		("accuracy_ar_long_sp_556")
+		("accuracy_boost")
+		("health_damage_556x45" d(975))	
+		{projectileDamage 5}
+		{projectileDamageClip 5}
+		{projectileDamageTable {50 5} {250 0}}
+		{range 240 260};F
+		("speed" s(956))
+	}
+	{parameters "ap"
+		("accuracy_ar_long_ap_556")
+		("accuracy_boost")
+		("health_damage_556x45" d(1090))	
+		{projectileDamage 7}
+		{projectileDamageClip 7}
+		{projectileDamageTable {50 7} {250 0}}
+		{range 270 290};F
+		("speed" s(1190))
+	}
+	("zoom_acog")
+}

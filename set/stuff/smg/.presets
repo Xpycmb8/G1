@@ -1,0 +1,125 @@
+(include "\set\small_firearms_accuracy.inc")
+(define "trace9"
+	{view "trace9"
+	} 
+)
+(define "trace9ap"
+	{view "trace9"
+	} 
+)
+(define "trace9x39"
+	{view "trace939"
+	} 
+)
+(define "trace10"
+	{view "trace9"
+	} 
+)
+(define "trace5"
+	{view "trace556"
+	} 
+)
+(define "trace7"
+	{view "trace762"
+	} 
+)
+(define "trace792"
+	{view "trace792"
+	} 
+)
+(define "trace12"
+	{view "trace127"
+	} 
+)
+(define "trace12fg"
+	{view "trace127"
+	} 
+)
+(define "trace12tracer"
+	{view "trace127_trace"
+	} 
+)
+(define "trace12ap"
+	{view "trace127"
+	} 
+)
+(define "trace127x108"
+	{view "trace103"
+	} 
+)
+(define "trace103"
+	{view "trace103"
+	} 
+)
+(define "no_trace"
+	{trace
+		{view "/texture/fx/trace/trace_tiles_n1.mtl"
+			{ScaleX 0.01}
+			{ScaleY 0.01}
+			{Light 1}
+		}
+		{length 0.01}
+	}
+	{trace "grm reb rus"
+		{view "/texture/fx/trace/trace_tiles_n2.mtl"
+			{ScaleX 0.01}
+			{ScaleY 0.01}
+			{Light 1}
+		}
+		{length 0.01}
+	}
+)
+
+(define "burst_short"
+	{burst
+		{short 2 1}
+		{long 12 2}
+		{rangeKoef 0.4}
+	}
+)
+
+(define "burst_long"
+	{burst
+		{short 3 1}
+		{long 15 2}
+		{rangeKoef 0.4}
+	}
+)
+
+(define "stick_reload"
+	("reload time" seconds(3.25))
+)
+
+(define "spreading_mounted"
+	{spreading
+		{BurstAccuracy 100 95 90 85 80 75}
+	}
+)
+(define "spreading_low"
+	{spreading
+		{BurstAccuracy 100 95 90 85 80 75 70}
+	}
+)
+(define "spreading_medium"
+	{spreading 
+		{BurstAccuracy 100 93 86 79 72 66 60 55}
+	}
+)
+(define "spreading_high"
+	{spreading 
+		{BurstAccuracy 100 92 84 76 69 62 56 50 45}
+	}
+)
+(define "spreading_max"
+	{spreading 
+		{BurstAccuracy 100 91 82 73 65 57 51 45	40}
+	}
+)
+
+(define "penetration"
+	{projectileDamageTable 	{25 %0} {100 0}}
+)
+
+(define "armor health"
+	{minimumDamageModifier (* 1.0 %damage)}
+)

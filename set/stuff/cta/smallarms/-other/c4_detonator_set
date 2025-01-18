@@ -1,0 +1,66 @@
+{weapon_bullet
+	{tag "weapon bullet sharp_edge hand smallitemin1hand grenade shoot_walking shoot_walking_ai no_ricochet knife_armed c4_clutch"}
+	{desc "Детонатор С4"}
+	{foresight "aim_knife"}
+	{entity "c4_clutch"}
+	{states
+		{reload		"reload"}
+		{unload		"unload"}
+		{fire		"fire"	}
+		{aim 		"aim"	}
+		{can_aim	"can-aim"}
+	}
+	{filling "ammo c4_active" 70}
+	{Spreading
+		{BurstRecoveryTime 0.01}
+		{BurstAccuracy 0.1}
+		{SpreadRadius 0.01}
+	}
+	{inventory
+		{size 1 2}
+		{weight 100}
+		{fsm "smg"}
+	}	
+	{thirdpersonparams inherit "human default"
+		{clip
+			{distanceMin	1		}
+			{distanceMax	250		}
+		}
+		{level 0
+			{faroffset	0 30 65	}
+			{nearoffset	0 30 10	}
+			{delta		25		}
+		}
+		{level 1
+			{distance	115			}	; activation distance
+			{distanceset 1			}
+			{delta 0}
+			{offset		0 0 1.25	}
+			{linkBone	"head"		}
+			{nearspace_views "fps_arms"	}
+			{nearspace_weapon	1	}
+			{camera		"human_zoom1"}		; fov 60, z_near 2.5
+			{aimer_type "weapon_bullet"}
+			{with_owner
+				{viewoff 	"skin head"	}
+				{boneon 	"fps_arms"	}
+			}
+		}
+		{maxlevel 1}
+	}
+	{preloaded}
+	{curve "bullet"}
+	{cursor "smg_on"}
+	{cursorReloading "smg_reload"}
+	{crosshair "crosshair_mgun"}
+	{crosshairReloading "crosshair_mgun_reload"}
+	{reloadSound "set"}
+	{clickSound "set"}
+	{mass 0.3}
+	{calibre 1}
+	{rechargeTime 1}
+	{recoveryTime 0.5}
+	{healthDamage 600}
+	{range 25 25};F
+	{speed 12}
+}

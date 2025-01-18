@@ -1,0 +1,13 @@
+{bullet
+	{tag "bullet small_arms small stackable pierce"}
+	{tag "bullet_fx size1"}
+	{inventory
+		{weight 1.4}
+		{block 71}
+		{size 2 2}
+		{fsm "belt"}
+	}
+	{entity "ppsh41_drum_ammo"}
+	{mass 0.025}
+	("trace5")
+}

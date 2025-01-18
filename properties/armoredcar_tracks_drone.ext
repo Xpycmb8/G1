@@ -1,0 +1,52 @@
+;SDL
+(include "armoredcar_drone.ext")
+{Chassis "track"
+	{FuelBag
+		{volume	250}	; liters
+		{rate	50}		; liters per kilometer
+		{remain	250}
+		{fuel "battery"}
+	}
+}
+("tracks")
+
+(define "locomotion"
+	{Slow       15}                     ; km/h
+	{Normal     30}
+	{Fast       50}
+	{MaxSpeed	60}						; max speed, km/h
+	{maxSpeedAtMaxTurn 20}				; max speed at max turn, km/h
+	{StartTime	25}						; acceleration time from 0 to max speed, seconds
+	{BrakeTime	1.5}					; forced deceleration time from max speed to 0, seconds
+	{StopTime	10}						; stop time after turning off the engine (no breaking), seconds
+	{TurnRadius	2}						; minimum turn radius for AI, meters
+	{TurnTime	10}						; 360 degree turn time at max turn speed, seconds
+	{TurnStart	0.5}					; time to go from minimum turn speed to maximum, seconds
+	{TurnStop	0.25}					; time to go from maximum turn speed to zero, seconds
+	{Gears		0.1 0.3 0.5 0.7 1.0}	; forward gear ratios
+	{RearGears	0.2 0.5}				; backward gear ratios
+	{GearSwitchDelay 0.5}				; time to switch from forward gear to rear one, sec
+	{MaxSlope 	75}						; maximum slope to drive up hill
+	{FallSlope 	75}						; maximum slope before physics kick in
+)
+
+
+(define "locomotion_small"
+	{Slow       15}                     ; km/h
+	{Normal     30}
+	{Fast       50}
+	{MaxSpeed	60}						; max speed, km/h
+	{maxSpeedAtMaxTurn 20}				; max speed at max turn, km/h
+	{StartTime	2}						; acceleration time from 0 to max speed, seconds
+	{BrakeTime	1.5}					; forced deceleration time from max speed to 0, seconds
+	{StopTime	1}						; stop time after turning off the engine (no breaking), seconds
+	{TurnRadius	1}						; minimum turn radius for AI, meters
+	{TurnTime	1}						; 360 degree turn time at max turn speed, seconds
+	{TurnStart	0.5}					; time to go from minimum turn speed to maximum, seconds
+	{TurnStop	0.25}					; time to go from maximum turn speed to zero, seconds
+	{Gears		0.1 0.3 0.5 0.7 1.0}	; forward gear ratios
+	{RearGears	0.2 0.5}				; backward gear ratios
+	{GearSwitchDelay 0.5}				; time to switch from forward gear to rear one, sec
+	{MaxSlope 	75}						; maximum slope to drive up hill
+	{FallSlope 	75}						; maximum slope before physics kick in
+)

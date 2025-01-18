@@ -1,0 +1,13 @@
+{bullet
+	{tag "bullet big sp hmgun stackable pierce smallarms_heavy"}
+	{inventory
+		{weight 3.3}
+		{block 30}
+		{size 1 2}
+		{fsm "belt"}
+	}
+	{mass 0.11}
+	{desc "12,7×55 мм СЦ-130"}
+	{entity "12x99"}
+	("trace12")
+}

@@ -1,0 +1,68 @@
+-= Animation: roll, Node body =-
+	Frame 0 {
+		Visibility 1
+		Position	0	0	2.09043
+		Orientation	0.5 0.5 -0.5 0.5
+	}
+	Frame 1 {
+		Position	0	0	2.19113
+	}
+	Frame 2 {
+		Position	0	0	2.43124
+	}
+	Frame 3 {
+		Position	0	0	2.71782
+	}
+	Frame 4 {
+		Position	0	0	2.95793
+	}
+	Frame 5 {
+		Position	0	0	3.05862
+	}
+	Frame 6 {
+		Position	0	0	2.90565
+	}
+	Frame 7 {
+		Position	0	0	2.54088
+	}
+	Frame 8 {
+		Position	0	0	2.1055
+	}
+	Frame 9 {
+		Position	0	0	1.74072
+	}
+	Frame 10 {
+		Position	0	0	1.58775
+	}
+	Frame 11 {
+		Position	0	0	1.70621
+	}
+	Frame 12 {
+		Position	0	0	1.98868
+	}
+	Frame 13 {
+		Position	0	0	2.32582
+	}
+	Frame 14 {
+		Position	0	0	2.60829
+	}
+	Frame 15 {
+		Position	0	0	2.72674
+	}
+	Frame 16 {
+		Position	0	0	2.66057
+	}
+	Frame 17 {
+		Position	0	0	2.50276
+	}
+	Frame 18 {
+		Position	0	0	2.31441
+	}
+	Frame 19 {
+		Position	0	0	2.15661
+	}
+	Frame 20 {
+		Visibility 1
+		Position	0	0	2.09043
+		Orientation	0.5 0.5 -0.5 0.5
+	}

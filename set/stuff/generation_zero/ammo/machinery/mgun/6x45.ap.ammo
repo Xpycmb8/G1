@@ -1,0 +1,13 @@
+{bullet
+	{tag "bullet normal stackable pierce ap smallarms"}
+	{desc "6,8х45 AP"}
+	{inventory
+		{weight 1}
+		{block 100}
+		{size 2 1}
+		{fsm "belt"}
+	}
+	{mass 0.004}
+	{entity "ammo_6x45_ap"}
+	("trace5")
+}

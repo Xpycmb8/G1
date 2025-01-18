@@ -1,0 +1,7 @@
+{from "pattern grenade_smoke"
+	{tag "-missile" "handgrenade" "gas"}
+	{desc "Газовая граната"}
+	{inventory {size 2 1}}
+	{entity "grenade_teargas"}
+	{mass 0.3}
+}

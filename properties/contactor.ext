@@ -1,0 +1,12 @@
+
+	(include "/properties/stuff_small.ext")
+	;{collider "grenade"}
+	{collider "fraction"}
+	{obstacleID "nothing"}
+
+	{volume "body"
+		;{able {contact} {bullet 0} {blast 0}}
+		{able clear {contact 1}}
+   	}
+   	;{props "physics_damping" "knife" "-grenade"}
+   	{props "physics_damping"}

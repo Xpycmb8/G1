@@ -1,0 +1,45 @@
+;Exported by: ?????
+;Date:        Fri Mar 13 21:52:58 2020
+;File:        D:\?????\Documents\3dsMax\scenes\shell12gauge.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "12_gauge"
+			{parameters "CommonMesh;"}
+			{Orientation
+				-0.5	0	0.866025
+				0	-1	0
+				0.866025	0	0.5
+			}
+			{LODView
+				{VolumeView "12_gauge.ply"}
+				{VolumeView "12_gauge_lod1.ply"}
+				{VolumeView "12_gauge_lod2.ply"}
+				{VolumeView "12_gauge_lod3.ply"}
+			}
+			{bone "fxsmoke"
+				{parameters "Voxels=0;"}
+				{Matrix34
+					0	-1	0
+					0.5	0	-0.866025
+					0.866025	0	0.5
+					0	-0.650879	0
+				}
+			}
+		}
+	}
+}
+{Volume "body"
+	{Cylinder 0.290954 1.25}
+	{Bone "basis"}
+	{Matrix34
+		1	0	0
+		0	0	-1
+		0	1	0
+		0	-0.0401611	0
+	}
+}

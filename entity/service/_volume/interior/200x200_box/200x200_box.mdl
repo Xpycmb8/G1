@@ -1,0 +1,22 @@
+;Exported by: ?????
+;Date:        Sat Nov  2 00:32:31 2019
+;File:        D:\?????\Documents\3dsMax\scenes\volume_interior.max
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+	}
+}
+{Volume "crown"
+	{Box 300 300 60}
+	{Bone "basis"}
+	{Matrix34
+		6	0	0
+		0	6	0
+		0	0	6
+		-1.45974	-0.357063	6.80859
+	}
+}

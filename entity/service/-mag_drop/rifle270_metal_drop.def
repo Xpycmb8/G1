@@ -1,0 +1,11 @@
+{game_entity
+	(include "/properties/small_part_harmless.inc")
+	{extension "/properties/piece.ext"}
+	{props "dummy" "stuff" "collectable"  "steel" "-small" "nocover" "ps_dummy" "magazine" "rifle270_metal_drop"}
+	{extender "stuff"
+		{item "magazine_rifle_empty"}
+	}
+	{collider "ammo"}
+	{simulation {able 1}}
+	{mass 0.5}
+}

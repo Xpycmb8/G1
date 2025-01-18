@@ -1,0 +1,24 @@
+{bullet
+	{tag "ammo bullet pierce stackable zenite cs heavy_zenite smallarms_heavy"}
+	{desc "XM1049 CS (25x59)"}
+	{damage blastwave
+		{energy 1.8}
+		{area 0.2 0.3}
+	}	
+	{detonationThickness 25}
+	{damage add blastwave
+		{energy 0.3}
+		{area 1 1.2}
+	}
+	{inventory
+		{weight 3.3}
+		{block 30}
+		{size 1 1}
+		{fsm "belt"}
+	}
+	{mass 0.34}
+	{view "xm109_proj"
+		{tail "grenade_tail" "tail"}
+	}
+	{entity "xm109_mags_ap"}
+}

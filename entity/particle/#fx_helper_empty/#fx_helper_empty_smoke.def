@@ -1,0 +1,10 @@
+{game_entity
+	(include "/properties/small_part.inc")
+	{Extension "fx_helper_empty_smoke.mdl"}
+	{props "steel" "ps_dummy" "fx_blast_smoke"}
+	{Volume "smoke1" {able clear} {density 0} {depend_on_wind}}
+	{Volume "smoke2" {able clear} {density 0} {depend_on_wind}}
+	{Volume "body1"
+		{tags "body"}
+	}
+}

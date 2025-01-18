@@ -1,0 +1,9 @@
+{game_entity
+	{Extension "al_qt_fem_1_1.mdl"}
+	{bone "basis"
+		{bone "fps_arms"
+			{VolumeView "/entity/humanskin/fps_view/al_qt_fem_1_1/1stp.ply"}
+		}
+	}
+	{RimLight}
+}

@@ -1,0 +1,7 @@
+{from "pattern grenade_smoke"
+	{tag "-missile" "smoke"}
+	{desc "Smoke grenade"}
+	{inventory {size 2 1}}
+	{entity "m18s"}
+	{mass 0.3}
+}

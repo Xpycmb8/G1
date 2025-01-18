@@ -1,0 +1,13 @@
+{bullet
+	{tag "bullet stackable pierce hmgun"}
+	{tag "bullet_fx size3"}
+	{inventory
+		{weight 1}
+		{block 100}
+		{size 3 2}
+		{fsm "belt"}
+	}
+	{entity "hmgun_usa"}
+	{mass 0.2}
+	("trace12")
+}

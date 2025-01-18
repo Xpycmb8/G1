@@ -1,0 +1,33 @@
+;// 12.7x108mm
+
+{bullet
+	{tag "ammo bullet stackable zenite th smallarms_heavy"}
+	{desc "15x75 TH"}
+	{view "xm53_proj"
+		{tail "grenade_tail" "tail"}
+	}
+	{inventory
+		{weight 3.3}
+		{block 30}
+		{size 1 1}
+		{fsm "belt"}
+	}
+	{mass 0.34}
+	{entity "xm109_mags_th"}
+	{damage fire
+		{radius 0.4}
+		{heating 1}
+		{time 0.5}
+	}
+	{damage blastwave
+		{ground_interaction_radius 0.0}
+		{energy 1.8}
+		{area 0.2 0.3}
+	}	
+	{detonationThickness 0.1}
+	{damage add blastwave
+		{ground_interaction_radius 0.0}
+		{energy 0.3}
+		{area 1 1.2}
+	}
+}

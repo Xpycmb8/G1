@@ -1,0 +1,13 @@
+{bullet
+	{tag "bullet normal stackable pierce ap smallarms"}
+	{desc ".458 SOCOM x10 AP"}
+	{inventory
+		{weight 3.3}
+		{block 30}
+		{size 1 2}
+		{fsm "belt"}
+	}	
+	{mass 0.016}
+	{entity "mags10_m4a1_socom_ap"}
+	("trace10")
+}

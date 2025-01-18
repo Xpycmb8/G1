@@ -1,0 +1,24 @@
+;Exported by: ?????
+;Date:        Sun Nov  3 13:34:03 2019
+;File:        D:\?????\Documents\3dsMax\scenes\wound_big2.max
+{Skeleton
+	{bone "wound"
+		{parameters "CommonMesh;"}
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{VolumeView "wound.ply"}
+		{bone "sled"
+			{parameters "CommonMesh;"}
+			{Matrix34
+				0	1	0
+				-1	0	0
+				0	0	1
+				-0.00336452	-0.000355838	-0.00799447
+			}
+			{VolumeView "sled.ply"}
+		}
+	}
+}

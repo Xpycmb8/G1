@@ -1,0 +1,29 @@
+{Skeleton
+	{bone "#12_7x108"
+		{Orientation
+			1.4	0	0
+			0	-1.3	0
+			0	0	1.3
+		}
+		{VolumeView "#12_7x108.ply"}
+		{bone "fx_shellsmoke"
+			{Matrix34
+				-0.1	0	0
+				0	0	-0.12
+				0	-0.1	0
+				-2.71823	-0.00884324	0.00883722
+			}
+		}
+	}
+	
+}
+{Volume "body"
+	{Cylinder 0.185042 1}
+	{Bone "#12_7x108"}
+	{Matrix34
+		0	-1	0
+		0	0	1
+		-1	0	0
+		0.987104	-1.37974e-005	0
+	}
+}

@@ -1,0 +1,9 @@
+(include "physics_generic.ext")
+
+{props "steel" "touched" "big_props"}
+{mass 25}
+
+{volume "body"
+	{thickness 1}
+}
+{body {permit body}}

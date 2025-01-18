@@ -1,0 +1,8 @@
+{game_entity
+	{extension "/properties/piece.ext"}
+	{simulation {able 1}}
+	{constrain none}
+	{props "tail_rpg7_small" }
+	{obstacleid "nothing"}
+	{mass 0.1}
+}

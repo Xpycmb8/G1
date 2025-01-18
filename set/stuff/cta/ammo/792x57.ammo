@@ -1,0 +1,13 @@
+{bullet
+	{tag "bullet sp normal stackable pierce smallarms"}
+	{inventory
+		{weight 0.5}
+		{block 100}
+		{size 1 1}
+		{fsm "belt"}
+	}	
+	{mass 0.001}
+	{desc "7.92x57 Mauser"}
+	{entity "792x57_single"}
+	("trace792")
+}

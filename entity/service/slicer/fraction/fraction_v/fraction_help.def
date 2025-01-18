@@ -1,0 +1,4 @@
+{game_entity
+	{Extension "fraction_v.mdl"}
+	{props "helpers_expl"}
+}

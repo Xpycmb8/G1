@@ -1,0 +1,8 @@
+{game_entity
+	(include "/properties/knife.ext")
+	{props "slicer"}
+	{Extension "#slicer.mdl"}
+	{extender "stuff"
+		{item "tactical_knife"}
+	}
+}

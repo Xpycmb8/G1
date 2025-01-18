@@ -1,0 +1,9 @@
+;SDL
+(include "barrel.ext")
+
+{volume "body"
+	{thickness 10}
+}
+
+{props "-steel" "wood"}
+{lodclass "decor_medium"}

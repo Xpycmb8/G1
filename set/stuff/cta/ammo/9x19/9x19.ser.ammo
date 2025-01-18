@@ -1,0 +1,36 @@
+{bullet
+	{tag "ammo rocketlauncher shell fg 40mm_fg og7v"}
+	{desc "Servise"}
+	{inventory
+		{weight 3.3}
+		{block 50}
+		{size 1 1}
+		{fsm "belt"}
+	}
+	{detonationThickness 0.2}
+	{mass 0.1}
+	{entity "9x19"}
+	; {damage fire
+		; {radius 0.4}
+		; {heating 5}
+		; {time 20}
+	; }
+	; {damage flash
+		; {radius 15.0 30.0} ; full flash radius, shorter flash radius
+		; {duration 2.0 1.0} ; max duration, min duration
+	; }
+	{damage blastwave
+		{ground_interaction_radius 0.0}
+		{energy 2}
+		{area 1 4}
+	}
+	{damage add blastwave
+		{ground_interaction_radius 0.0}
+		{energy 5}
+		{area 1 3}
+	}
+	{possibleDamageRadius 1}
+	{view "xm109_proj"
+		{tail "grenade_tail" "tail"}
+	}
+}

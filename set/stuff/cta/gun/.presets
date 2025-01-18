@@ -1,0 +1,351 @@
+{curve "gun_std"}
+
+(define "speed"
+	{speed (* 1.0 %s)}
+)
+
+(define "speed2"
+	{speed (* 0.75 %s)}
+	(mod "hardcore"
+		{speed (* 0.75 %s)}
+	)
+)
+
+(define "recoveryTime"
+	{recoveryTime (/ 60 %r)}
+)
+
+(define "healthDamage"
+	{healthDamage (* 3.0 %h)}
+	(mod "hardcore"
+		{healthDamage (* 4.5 %h)}
+	)
+)
+
+(define "minimumDamageModifier"
+	{minimumDamageModifier (* 0.5 %m)}
+	(mod "hardcore"
+		{minimumDamageModifier (* 1.0 %m)}
+	)
+)
+(define "minimumDamageModifier_gun"
+	{minimumDamageModifier (* 1.5 %m)}
+	(mod "hardcore"
+		{minimumDamageModifier (* 3.0 %m)}
+	)
+)
+(define "minimumDamageModifier_heat"
+	{minimumDamageModifier (* 1.25 %m)}
+	(mod "hardcore"
+		{minimumDamageModifier (* 2.5 %m)}
+	)
+)
+(define "minimumDamageModifier_atgm"
+	{minimumDamageModifier (* 1.0 %m)}
+	(mod "hardcore"
+		{minimumDamageModifier (* 2.0 %m)}
+	)
+)
+
+
+(define "damage"
+	{projectileDamageTable {10 %a} {50 %b} {100 %c} {150 %d} {200 %e} {1000 0}}
+	; 100m - 500m - 1000m - 1500m - 2000m
+)
+(define "damage_autocannon"
+	{projectileDamageTable {50 (* 1.00 %a)} {250 (* 0.75 %a)} {300 (* 0.65 %a)} {500 (* 0.50 %a)} {900 (* 0.30 %a)} {1500 0}}
+	; 100m - 500m - 1000m - 1500m - 2000m
+)
+(define "damage_2a42"
+	{projectileDamageTable {50 (* 1.00 %a)} {200 (* 0.85 %a)} {300 (* 0.8 %a)} {400 (* 0.70 %a)} {700 (* 0.60 %a)} {1000 (* 0.60 %a)} {2000 (* 0.30 %a)}}
+)
+(define "damage_gun"
+	{projectileDamageTable {10 (* 1.00 %a)} {250 (* 0.85 %a)} {500 (* 0.75 %a)} {1000 (* 0.60 %a)} {1500 (* 0.40 %a)} {2000 (* 0.20 %a)}}
+	; 100m - 500m - 1000m - 1500m - 2000m
+)
+(define "damage_cumulative"
+	{projectileDamageTable {10 %a}}
+	; 100m - 500m - 1000m - 1500m - 2000m
+)
+(define "damage_cumulative_heat"
+	{projectileDamageTable {10 (* 0.80 %a)}}
+	; 100m - 500m - 1000m - 1500m - 2000m
+)
+(define "damage_cumulative_atgm"
+	{projectileDamageTable {10 (* 0.85 %a)}}
+	; 100m - 500m - 1000m - 1500m - 2000m
+)
+
+
+(define "accuracy_curve_1"
+	{Spreading
+		{radiusTable {10 0} {80 (* 0.50 %r1)} {200 (* 1.00 %r1)} {350 (* 1.50 %r1)} {600 (* 2.00 %r1)} {800 (* 2.50 %r1)}}
+	}
+	{parameters "heat"
+		{Spreading
+			{radiusTable {50 0} {150 (* 0.75 %r1)} {300 (* 1.25 %r1)} {500 (* 1.75 %r1)} {700 (* 2.25 %r1)} {900 (* 2.75 %r1)}}
+		}
+	}
+	{parameters "fg"
+		{Spreading
+			{radiusTable {50 0} {150 (* 1.00 %r1)} {300 (* 1.50 %r1)} {500 (* 2.00 %r1)} {700 (* 2.50 %r1)} {1000 (* 3.00 %r1)}}
+		}
+	}
+)
+
+(define "accuracy_curve_3"
+	{Spreading
+		{radiusTable {50 0} {150 (* 1.00 %r1)} {300 (* 1.50 %r1)} {500 (* 2.00 %r1)} {900 (* 2.50 %r1)}}	
+	}
+)
+
+
+(define "accuracy_zenite_low"
+	("accuracy_curve_1" r1(1.50))
+)
+(define "accuracy_zenite_medium"
+	("accuracy_curve_1" r1(1.35))
+)
+(define "accuracy_zenite_high"
+	("accuracy_curve_1" r1(1.20))
+)
+(define "accuracy_zenite_high_mount"
+	("accuracy_curve_1" r1(2.50))
+)
+(define "accuracy_zenite_high_apt"
+	("accuracy_curve_1" r1(1.1))
+)
+(define "accuracy_zenite_high_m929"
+	("accuracy_curve_1" r1(0.95))
+)
+(define "accuracy_zenite_high_fg"
+	("accuracy_curve_1" r1(1.70))
+)
+(define "accuracy_low" 
+	("accuracy_curve_1" r1(1.20))
+)
+(define "accuracy_medium" 
+	("accuracy_curve_1" r1(1.10))
+)
+(define "accuracy_high" 
+	("accuracy_curve_1" r1(1.00))
+)
+(define "accuracy_howitzer"
+	("accuracy_curve_3" r1(12.00))
+)
+(define "accuracy_curve_ub32_ground"
+	{Spreading
+		{radiusTable {50 0} {100 (* 1.00 %r1)} {200 (* 1.50 %r1)} {300 (* 2.00 %r1)} {450 (* 2.50 %r1)}}	
+	}
+)
+(define "accuracy_curve_ub32_air"
+	{Spreading
+		{radiusTable {50 0} {150 (* 1.00 %r1)} {250 (* 1.50 %r1)} {500 (* 2.00 %r1)} {700 (* 4 %r1)}}	
+	}
+)
+(define "accuracy_ub32_ground" 
+	("accuracy_curve_ub32_ground" r1(15))
+)
+
+(define "accuracy_ub32_air" 
+	("accuracy_curve_ub32_air" r1(25))
+)
+
+(define "caliber_zenite"
+	{projectileDamageThreshold 1.10}
+)
+(define "caliber_small"
+	{projectileDamageThreshold 1.15}
+)
+(define "caliber_medium"
+	{projectileDamageThreshold 1.20}
+)
+(define "caliber_large"
+	{projectileDamageThreshold 1.25}
+)
+(define "caliber_howitzer"
+	{projectileDamageThreshold 1.30}
+)
+
+
+(define "range_zenite_short"
+	("accuracy_zenite_low")
+	{Spreading 1
+		{SpreadPower 1}
+		{BurstRecoveryTime 0.2}
+		{BurstAccuracy 100 95 90 85 80 70 65 60 55 50 45 40}
+	}
+	{SpreadTolerance 0.6}
+
+	{range 1200 1200}
+	{cursor "zenite_on"}
+	{cursorReloading "zenite_reload"}
+	
+	{RelaxationTime 0.2}
+	{gravity 1.5}
+	
+	{burst
+		{short 5 1}
+		{long 8 1}
+	}	
+)
+
+(define "range_zenite_long"
+	("accuracy_zenite_medium")
+	{Spreading 1
+		{SpreadPower 1}
+		{BurstRecoveryTime 0.2}
+		{BurstAccuracy 100 95 90 85 80 70 65 60 55 50 45 40}
+	}
+	{SpreadTolerance 0.6}
+
+	{range 1500 1500}
+	{cursor "zenite_on"}
+	{cursorReloading "zenite_reload"}
+	
+	{RelaxationTime 0.2}
+	{gravity 1.5}
+	
+	{burst
+		{short 5 1}
+		{long 8 1}
+	}	
+)
+
+(define "range_zenite_long_ap"
+	("accuracy_zenite_medium")
+	{Spreading 1
+		{SpreadPower 1}
+		{BurstRecoveryTime 0.1}
+		{BurstAccuracy 100 95 90 85 80 70 65 60 55 50 45 40}
+	}
+	{SpreadTolerance 0.6}
+
+	{range 2500 2500}
+	{cursor "zenite_on"}
+	{cursorReloading "zenite_reload"}
+	
+	{RelaxationTime 0.2}
+	{gravity 1.5}
+	
+	{burst
+		{short 5 1}
+		{long 8 1}
+	}	
+)
+
+(define "range_zenite_long_apt"
+	{Spreading 1
+		{SpreadPower 1}
+		{BurstRecoveryTime 0.1}
+		{BurstAccuracy 100 95 90 85 80 70 65 60 55 50 45 40}
+	}
+	{SpreadTolerance 0.3}
+
+	{range 2900 2900}
+	{cursor "zenite_on"}
+	{cursorReloading "zenite_reload"}
+	
+	{RelaxationTime 0.2}
+	{gravity 1}
+	
+	{burst
+		{short 3 1}
+		{long 4 1}
+	}	
+)
+
+
+(define "range_zenite_long_fg"
+	("accuracy_zenite_medium")
+	{Spreading 1
+		{SpreadPower 1}
+		{BurstRecoveryTime 0.2}
+		{BurstAccuracy 100 90 80 70 60 50 40 30 20 10}
+	}
+	{SpreadTolerance 1}
+
+	{range 1800 1800}
+	{cursor "zenite_on"}
+	{cursorReloading "zenite_reload"}
+	
+	{RelaxationTime 0.2}
+	{gravity 2.1}
+	
+	{burst
+		{short 9 3}
+		{long 13 4}
+	}	
+)
+
+
+(define "range_zenite_helicopter"
+	("accuracy_zenite_high")
+	{Spreading 1
+		{SpreadPower 1}
+		{BurstRecoveryTime 0.2}
+		{BurstAccuracy 100 90 80 70 60 50 40 30 20 10}
+	}
+	{SpreadTolerance 0.6}
+
+	{range 900 950}
+	{cursor "zenite_on"}
+	{cursorReloading "zenite_reload"}
+	
+	{RelaxationTime 0.2}
+	{gravity 1.5}
+	
+	{burst
+		{short 5 1}
+		{long 8 1}
+	}	
+)
+
+(define "range_short"
+	{curve "gun_medium"}
+	{Spreading 1
+		{SpreadPower 1}
+	}
+	{SpreadTolerance 0.4}
+	{range 1200 1200}
+	{ZeroingAccuracy 0.75 0.5}
+	{RelaxationTime 0.4}
+	{gravity 1.5}
+)
+
+(define "range_medium"
+	{curve "gun_heavy"}
+	{Spreading 1 
+		{SpreadPower 1}
+	}
+	{SpreadTolerance 0.4}
+	{range 4000 4000}
+	{ZeroingAccuracy 0.75 0.5}
+	{RelaxationTime 0.4}
+	{gravity 1.5}
+)
+
+(define "range_long"
+	{curve "gun_heavy"}
+	{Spreading 1
+		{SpreadPower 1}
+	}
+	{SpreadTolerance 0.4}
+	{range 6000 6000}
+	{ZeroingAccuracy 0.75 0.5}
+	{RelaxationTime 0.4}
+	{gravity 1.5}
+)
+
+(define "range_howitzer"
+	{Spreading 1
+		{SpreadPower 1}
+		;{SpreadYadjust 0.5}
+	}
+	{SpreadTolerance 0.4}
+	{range 9500 9500}
+	{ZeroingAccuracy 0.75 0.5}
+	{RelaxationTime 0.4}
+	{speed 450}
+	{gravity 1}
+)

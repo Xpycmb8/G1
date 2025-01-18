@@ -1,0 +1,15 @@
+game_entity
+	{collider "knife"}
+	{props "steel" "local_physics"}
+	{mass 2}
+	{volume "body"
+		{able clear {visible} {bullet} {select} {contact_ground} {touch} {contact} {blast} {obstacle}}
+		{thickness 1}
+	}
+	{volume "select"
+		{able clear {select}}
+		{density 0}
+	}
+	{obstacleID "construction"}
+	{constrain ground}
+	{lodclass "decor_small"}

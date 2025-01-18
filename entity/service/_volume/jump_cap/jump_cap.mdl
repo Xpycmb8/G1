@@ -1,0 +1,19 @@
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+	}
+}
+{Volume "crown"
+	{Box 5 5 2.5}
+	{Bone "basis"}
+	{Matrix34
+		6	0	0
+		0	6	0
+		0	0	6
+		-1.45974	-0.357063	6.80859
+	}
+}

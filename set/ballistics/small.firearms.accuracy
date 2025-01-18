@@ -1,0 +1,821 @@
+;SDL
+
+;new_recoil_angle
+
+(define "recoil_verylow"
+	{recoil
+		{shoot {0.45 0.37} {0 0.75}}		; pitch / +- random and yaw / +- random, per shot, degree
+		{maxAngle 7 7}						; max recoil angle (pitch/yaw), degree
+		{restoreTime 0.15 0.005}			; recoil restore time, first -> minimum time, second -> additional time per shot, sec
+		{restoreDelay 9999}					; delay before restore, sec
+	}
+)
+
+(define "recoil_short_boost"
+	{recoil
+		{shoot {0.47 0.41} {0 0.6}}		; pitch / +- random and yaw / +- random, per shot, degree
+		{maxAngle 7.5 7.5}						; max recoil angle (pitch/yaw), degree
+		{restoreTime 0.15 0.005}			; recoil restore time, first -> minimum time, second -> additional time per shot, sec
+		{restoreDelay 9999}					; delay before restore, sec
+	}
+)
+
+(define "recoil_low"
+	{recoil
+		{shoot {0.55 0.40} {0 0.9}}			; pitch / +- random and yaw / +- random, per shot, degree
+		{maxAngle 9 9}						; max recoil angle (pitch/yaw), degree
+		{restoreTime 0.25 0.005}			; recoil restore time, first -> minimum time, second -> additional time per shot, sec
+		{restoreDelay 9999}					; delay before restore, sec
+	}
+)
+
+(define "recoil_low_boost"
+	{recoil
+		{shoot {0.5 0.35} {0 0.6}}			; pitch / +- random and yaw / +- random, per shot, degree
+		{maxAngle 8.5 8.5}					; max recoil angle (pitch/yaw), degree
+		{restoreTime 0.25 0.005}			; recoil restore time, first -> minimum time, second -> additional time per shot, sec
+		{restoreDelay 9999}					; delay before restore, sec
+	}
+)
+
+(define "recoil_medium"
+	{recoil
+		{shoot {0.7 0.45} {0 0.15}}
+		{maxAngle 10 10}
+		{restoreTime 0.25 0.005}
+		{restoreDelay 9999}
+	}
+)
+(define "recoil_medium_boost"
+	{recoil
+		{shoot {0.6 0.3} {0 0.1}}
+		{maxAngle 9.5 9.5}					; max recoil angle (pitch/yaw), degree
+		{restoreTime 0.25 0.005}
+		{restoreDelay 9999}
+	}
+)
+
+(define "recoil_high"
+	{recoil
+		{shoot {1 0.5} {0 0.4}}
+		{maxAngle 12 12}
+		{restoreTime 0.25 0.005}
+		{restoreDelay 9999}
+	}
+)
+(define "recoil_high_boost"
+	{recoil
+		{shoot {0.85 0.35} {0 0.2}}
+		{maxAngle 1 1}
+		{restoreTime 0.25 0.005}
+		{restoreDelay 9999}
+	}
+)
+(define "recoil_ash_short"
+	{recoil
+		{shoot {0.7 0.4} {0 0.8}}
+		{maxAngle 10 10}
+		{restoreTime 0.25 0.005}
+		{restoreDelay 9999}
+	}
+)
+
+(define "recoil_ash_long"
+	{recoil
+		{shoot {0.9 0.5} {0 0.6}}
+		{maxAngle 9 9}
+		{restoreTime 0.25 0.005}
+		{restoreDelay 9999}
+	}
+)
+
+
+(define "recoil_high_d" ;de_2v
+	{recoil
+		{shoot {3 2.25} {1 3}}				; качка / +- Рандом и отклонение / +- Рандом, За выстрел, В градусах
+		{maxAngle 20 25 }					; Макс угол выстрела (качка/yaw), В градусах
+		{restoreTime 0.25 0.005}			; Время востеновления, Первый -> Мин время, Второй -> Добавление за выстрел
+		{restoreDelay 999}					; Время востановления в секундах
+	}
+)
+
+
+(define "recoil_long_at_rifle"
+	{recoil
+		{shoot {1.2 0.35} {0 0.9}}
+		{maxAngle 8 8}
+		{restoreTime 0.25 0.012}
+		{restoreDelay 9999}
+	}
+)
+
+(define "recoil_long_at_rifle_sup"
+	{recoil
+		{shoot {0.9 0.27} {0 0.6}}
+		{maxAngle 8 8}
+		{restoreTime 0.25 0.012}
+		{restoreDelay 9999}
+	}
+)
+
+
+(define "recoil_long_rifle"
+	{recoil
+		{shoot {0.7 0.32} {0 0.65}}
+		{maxAngle 8 8}
+		{restoreTime 0.25 0.005}
+		{restoreDelay 9999}
+	}
+)
+
+(define "recoil_short_pistol"
+	{recoil
+		{shoot {0.3 0.15} {0 0.5}}			; pitch / +- random and yaw / +- random, per shot, degree
+		{maxAngle 7 7}						; max recoil angle (pitch/yaw), degree
+		{restoreTime 0.15 0.005}			; recoil restore time, first -> minimum time, second -> additional time per shot, sec
+		{restoreDelay 9999}					; delay before restore, sec
+	}
+)
+
+(define "recoil_short_auto_pistol"
+	{recoil
+		{shoot {0.25 0.12} {0 0.3}}			; pitch / +- random and yaw / +- random, per shot, degree
+		{maxAngle 4 4}						; max recoil angle (pitch/yaw), degree
+		{restoreTime 0.15 0.005}			; recoil restore time, first -> minimum time, second -> additional time per shot, sec
+		{restoreDelay 9999}					; delay before restore, sec
+	}
+)
+
+(define "recoil_long_pistol"
+	{recoil
+		{shoot {0.475 0.25} {0 0.535}}
+		{maxAngle 8 8}
+		{restoreTime 0.25 0.005}
+		{restoreDelay 9999}
+	}
+)
+
+;------------------------
+
+;-------------------------health_damage/
+(define "health_damage_4x30"		; 4.6x30mm
+	{healthDamage (* 0.120 %d)}
+)
+
+(define "health_damage_545x39"		; 5.45x39mm
+	{healthDamage (* 0.1245 %d)}
+)
+
+(define "health_damage_556x45"		; 5.56x45mm
+	{healthDamage (* 0.125 %d)}
+)
+
+(define "health_damage_762x39"		; 7.62x39mm
+	{healthDamage (* 0.250 %d)}
+)
+
+(define "health_damage_762x51"		; 7.62x51mm
+	{healthDamage (* 0.270 %d)}
+)
+
+(define "health_damage_762x54"		; 7.62x54mm
+	{healthDamage (* 0.250 %d)}
+)
+
+(define "health_damage_762x67"		; 7.62x67mm
+	{healthDamage (* 0.240 %d)}
+)
+
+(define "health_damage_9x18"		; 9x18mm
+	{healthDamage (* 0.090 %d)}
+)
+
+(define "health_damage_9x19"		; 9x19mm
+	{healthDamage (* 0.095 %d)}
+)
+
+(define "health_damage_9x39"		; 9x39mm	
+	{healthDamage (* 0.210 %d)}
+)
+
+(define "health_damage_11x23"		; 11.43x23mm
+	{healthDamage (* 0.190 %d)}
+)
+
+(define "health_damage_127x99"		; 12.7x99mm
+	{healthDamage (* 0.400 %d)}
+)
+
+(define "health_damage_127x108"		; 12.7x108mm
+	{healthDamage (* 0.500 %d)}
+)
+
+(define "health_damage_12gauge"		; 12-gauge
+	{healthDamage (* 0.250 %d)}
+)
+
+(define "health_damage_9x64"		; 9.3x64mm
+	{healthDamage (* 0.210 %d)}
+)
+
+(define "health_damage_127x55"		; 12.7x55mm
+	{healthDamage (* 0.210 %d)}
+)
+;-------------------------------
+
+(define "distance_1" 
+	{spreading 
+		{radiusTable {10 0.01} {50 %r1} {80 %r2} {120 %r3} {150 %r4} {500 (* 5.00 %r4)}}
+	}		
+)
+
+
+(define "distance_2" 
+	{spreading 
+		{radiusTable {10 0.01} {25 %r1} {50 %r2} {120 %r3} {160 %r4} {800 (* 2.50 %r4)}}
+	}		
+)
+(define "distance_3" 
+	{spreading 
+		{radiusTable {10 0.01} {25 %r1} {50 %r2} {120 %r3} {160 %r4} {800 (* 2.25 %r4)}}
+	}		
+)
+(define "distance_4" 
+	{spreading 
+		{radiusTable {10 0.01} {25 %r1} {50 %r2} {120 %r3} {160 %r4} {800 (* 2.00 %r4)}}
+	}		
+)
+(define "distance_5" 
+	{spreading 
+		{radiusTable {10 0.01} {100 %r1} {250 %r2} {450 %r3} {700 %r4} {900 (* 2.50 %r4)}}
+	}		
+)
+
+
+;----------------------------pm
+(define "distance_pistol" 
+	{spreading 
+		{radiusTable {10 0.01} {25 %r1} {50 %r2} {75 %r3} {100 %r4} {150 %r5}}
+	}		
+)
+(define "distance_pistol_heavy" 
+	{spreading 
+		{radiusTable {10 0.01} {50 %r1} {90 %r2} {120 %r3} {160 %r4} {200 %r5}}
+	}		
+)
+(define "accuracy_pistol_short_sp_9x19"
+	;                  25		60		90	120
+	("distance_pistol" r1(1) r2(3) r3(5) r4(7) r5(12))
+)
+
+(define "accuracy_pistol_short_ap_9x19"
+	("distance_pistol" r1(0.8) r2(2.5) r3(4) r4(6) r5(10))
+)
+(define "accuracy_pistol_med_sp_9x19"
+	;                  25		60		90	120
+	("distance_pistol" r1(0.6) r2(1.5) r3(3) r4(5) r5(8))
+)
+
+(define "accuracy_pistol_med_ap_9x19"
+	;                  25		60		90	120
+	("distance_pistol" r1(0.5) r2(1.2) r3(2.5) r4(4) r5(7))
+)
+(define "accuracy_pistol_long_sp_9x19"
+	;                  25		60		90	120
+	("distance_pistol" r1(0.7) r2(1.2) r3(1.5) r4(3) r5(8))
+)
+
+(define "accuracy_pistol_long_ap_9x19"
+	;                  25		60		90	120
+	("distance_pistol" r1(0.5) r2(0.9) r3(1.6) r4(2) r5(8))
+)
+
+(define "accuracy_pistol_med_sp_127x33"
+	;                  25		60		90	120
+	("distance_pistol_heavy" r1(0.1) r2(0.4) r3(0.8) r4(2) r5(8))
+)
+
+(define "accuracy_pistol_med_ap_127x33"
+	("distance_pistol_heavy" r1(0.1) r2(0.4) r3(0.8) r4(2) r5(8))
+)
+
+(define "accuracy_pistol_long_sp_127x33"
+	("distance_pistol_heavy" r1(0.1) r2(0.25) r3(0.5) r4(1.5) r5(8))
+)
+
+(define "accuracy_pistol_long_ap_127x33"
+	("distance_pistol_heavy" r1(0.1) r2(0.25) r3(0.5) r4(1.5) r5(8))
+)
+
+(define "accuracy_pistol_short_sp_11x23"
+	;                  25		60		90	120
+	("distance_pistol" r1(2) r2(5) r3(7) r4(12) r5(25))
+)
+
+(define "accuracy_pistol_short_ap_11x23"
+	;                  25		60		90	120
+	("distance_pistol" r1(1.4) r2(3) r3(5) r4(12) r5(25))
+)
+
+(define "accuracy_pistol_med_sp_11x23"
+	;                  25		60		90	120
+	("distance_pistol" r1(2) r2(5) r3(7) r4(12) r5(25))
+)
+
+(define "accuracy_pistol_med_ap_11x23"
+	;                  25		60		90	120
+	("distance_pistol" r1(1.4) r2(3) r3(5) r4(12) r5(25))
+)
+
+(define "accuracy_pistol_long_sp_11x23"
+	;                  25		60		90	120
+	("distance_pistol" r1(1.2) r2(3.2) r3(4.5) r4(8) r5(12))
+)
+
+(define "accuracy_pistol_long_ap_11x23"
+	;                  25		60		90	120
+	("distance_pistol" r1(1) r2(2.6) r3(4.5) r4(8) r5(12))
+)
+
+
+
+
+;------------MG
+(define "distance_short_barrel_mg" 
+	{spreading 
+		{radiusTable {10 0.01} {50 %r1} {75 %r2} {100 %r3} {150 %r4} {200 %r5} {350 %r6} {500 (* 2.00 %r6)}}
+	}		
+)
+(define "distance_med_barrel_mg" 
+	{spreading 
+		{radiusTable {20 0.01} {75 %r1} {100 %r2} {150 %r3} {200 %r4} {275 %r5} {450 %r6} {800 (* 2.00 %r6)}}
+	}		
+)
+(define "distance_long_barrel_mg" 
+	{spreading 
+		{radiusTable {20 0.01} {100 %r1} {150 %r2} {200 %r3} {250 %r4} {350 %r5} {500 %r6} {1000 (* 2.00 %r6)}}
+	}		
+)
+;---
+;------short_barrel
+(define "accuracy_mg_short_sp_556"
+	;							50	     75       100 		150			200		350
+	("distance_short_barrel_mg" r1(0.40) r2(1.40) r3(2.75) r4(5.25) r5(5.25) 	r6(5.25))
+)
+(define "accuracy_mg_short_ap_556"
+	;							50	     75       100 		150			200		350
+	("distance_short_barrel_mg" r1(0.40) r2(1.40) r3(2.75) r4(5.25))
+)
+
+(define "accuracy_mg_short_sp_762"
+	;							50	     75       100 		150			200		350
+	("distance_short_barrel_mg" r1(0.40) r2(1.40) r3(2.75) r4(5.25))
+)
+(define "accuracy_mg_short_ap_762"
+	;							50	     75       100 		150			200		350
+	("distance_short_barrel_mg" r1(0.40) r2(1.40) r3(2.75) r4(5.25))
+)
+
+(define "accuracy_mg_short_sp_127"
+	;							50	     75       100 		150			200		350
+	("distance_short_barrel_mg" r1(0.40) r2(1.40) r3(2.75) r4(5.25))
+)
+(define "accuracy_mg_short_ap_127"
+	;							50	     75       100 		150			200		350
+	("distance_short_barrel_mg" r1(0.40) r2(1.40) r3(2.75) r4(5.25))
+)
+
+;------med_barrel
+(define "accuracy_mg_med_sp_556"
+	;							50	     75       100 		150			200		350
+	("distance_med_barrel_mg" r1(0.40) r2(1.40) r3(2.75) r4(5.25) r5(5.25) 	r6(5.25))
+)
+(define "accuracy_mg_med_ap_556"
+	;							50	     75       100 		150			200		350
+	("distance_med_barrel_mg" r1(0.40) r2(1.40) r3(2.75) r4(5.25))
+)
+(define "accuracy_mg_med_sp_762"
+	;							50	     75       100 		150			200		350
+	("distance_med_barrel_mg" r1(0.40) r2(1.40) r3(2.75) r4(5.25))
+)
+(define "accuracy_mg_med_ap_762"
+	;							50	     75       100 		150			200		350
+	("distance_med_barrel_mg" r1(0.40) r2(1.40) r3(2.75) r4(5.25))
+)
+(define "accuracy_mg_med_sp_127"
+	;							50	     75       100 		150			200		350
+	("distance_med_barrel_mg" r1(0.40) r2(1.40) r3(2.75) r4(5.25))
+)
+(define "accuracy_mg_med_ap_127"
+	;							50	     75       100 		150			200		350
+	("distance_med_barrel_mg" r1(0.40) r2(1.40) r3(2.75) r4(5.25))
+)
+
+;--------------------------------------------
+;------long_barrel
+(define "accuracy_mg_long_sp_556"
+	;							50	     75       100 		150			200		350
+	("distance_long_barrel_mg" r1(0.40) r2(1.40) r3(2.75) r4(5.25) r5(5.25) 	r6(5.25))
+)
+(define "accuracy_mg_long_ap_556"
+	;							50	     75       100 		150			200		350
+	("distance_long_barrel_mg" r1(0.40) r2(1.40) r3(2.75) r4(5.25))
+)
+(define "accuracy_mg_long_sp_762"
+	;							50	     75       100 		150			200		350
+	("distance_long_barrel_mg" r1(0.40) r2(1.40) r3(2.75) r4(5.25))
+)
+(define "accuracy_mg_long_ap_762"
+	;							50	     75       100 		150			200		350
+	("distance_long_barrel_mg" r1(0.40) r2(1.40) r3(2.75) r4(5.25))
+)
+(define "accuracy_mg_long_sp_127"
+	;							50	     75       100 		150			200		350
+	("distance_long_barrel_mg" r1(0.40) r2(1.40) r3(2.75) r4(5.25))
+)
+(define "accuracy_mg_long_ap_127"
+	;							50	     75       100 		150			200		350
+	("distance_long_barrel_mg" r1(0.40) r2(1.40) r3(2.75) r4(5.25))
+)
+
+
+
+
+
+;--------------------------------
+
+
+(define "accuracy_assault"
+	("distance_2" r1(0.70) r2(1.90) r3(3.25) r4(4.25))
+)
+
+(define "accuracy_assault_boost"
+	("distance_2" r1(0.55) r2(1.80) r3(3.00) r4(3.50))
+)
+
+(define "accuracy_assault_boost2"
+	("distance_2" r1(0.425) r2(1.55) r3(2.725) r4(3.95))
+)
+
+
+
+(define "accuracy_smg"
+	("distance_1" r1(0.85) r2(1.95) r3(2.10) r4(3.90))
+)
+(define "accuracy_smg_short"
+	("distance_1" r1(1.25) r2(2.35) r3(2.70) r4(5.90))
+)
+
+(define "accuracy_smg_short_muzzle"
+	("distance_1" r1(1.25) r2(2.1) r3(2.2) r4(5.2))
+)
+
+(define "accuracy_smg_boost"
+	("distance_1" r1(0.70) r2(1.75) r3(2.95) r4(3.60))
+)
+(define "accuracy_smg_boost_short"
+	("distance_1" r1(1.20) r2(2.5) r3(3.2) r4(5))
+)
+
+(define "accuracy_smg_boost_sd"
+	("distance_1" r1(0.70) r2(1.6) r3(2.5) r4(3.20))
+)
+(define "accuracy_smg_lower"
+	("distance_1" r1(0.95) r2(2.25) r3(3.95) r4(4.60))
+)
+
+(define "accuracy_smg_boost_long_barrel"
+	("distance_1" r1(0.45) r2(1.25) r3(2.25) r4(3))
+)
+
+(define "accuracy_smg_boost_ap"
+	("distance_1" r1(0.52) r2(1.50) r3(2.25) r4(2.70))
+)
+
+(define "accuracy_smg_boost2"
+	("distance_1" r1(0.575) r2(1.50) r3(2.675) r4(3.10))
+)
+
+(define "accuracy_smg_boost3"
+	("distance_1" r1(0.475) r2(1.20) r3(2.1) r4(2.70))
+)
+
+(define "accuracy_grenade_launcher"
+	("distance_3" r1(0.90) r2(1.90) r3(3.15) r4(7.50))
+)
+
+(define "accuracy_grenade_launcher_boost"
+	("distance_3" r1(0.85) r2(1.80) r3(3.00) r4(7.30))
+)
+
+
+(define "accuracy_sniper_rifle"
+	("distance_5" r1(4) r2(6) r3(9) r4(15))
+)
+(define "accuracy_sniper_rifle_long"
+	("distance_5" r1(2) r2(4) r3(6) r4(10))
+)
+(define "accuracy_mg_long"
+	("distance_4" r1(0.75) r2(1.70) r3(2.90) r4(3.35))
+)
+
+(define "accuracy_shotgun_lb"
+	("distance_1" r1(0.25) r2(0.75) r3(1.75) r4(2.2))
+)
+
+(define "accuracy_shotgun_mb"
+	("distance_1" r1(0.45) r2(1.25) r3(2.25) r4(3))
+)
+
+
+
+(define "distance_flaer"
+	{spreading
+		{radiusTable {0 0} {20 %r1} {40 %r2} {80 %r3} {120 %r4}}
+	}
+)
+(define "distance_bonic_callin"
+	{spreading
+		{radiusTable {0 0} {1000 0}}
+	}
+)
+(define "distance_rifle"
+	{spreading
+		{radiusTable {0 0} {15 %r1} {35 %r2} {70 %r3} {100 %r4}}
+	}
+)
+(define "distance_rifle_scope"
+	{spreading
+		{radiusTable {0 0} {15 %r1} {35 %r2} {70 %r3} {100 %r4} {140 %r5}}
+	}
+)
+(define "distance_at"
+	{spreading
+		{radiusTable {0 0} {20 %r1} {40 %r2} {80 %r3} {120 %r4}}
+	}
+)
+
+(define "accuracy_smg_low"
+	("distance_1" r1(0.385) r2(1.925) r3(4.40)) 		;old r1(0.35) r2(1.75) r3(4.00)
+)
+(define "accuracy_smg_high"
+	("distance_1" r1(0.275) r2(1.375) r3(3.575)) 		;old r1(0.25) r2(1.25) r3(3.25)
+)
+
+(define "accuracy_scoped"
+	("distance_rifle_scope" r1(0.45) r2(0.65) r3(1.30) r4(1.70) r5(2.00))
+)
+
+(define "accuracy_rifle"
+	("distance_rifle" r1(0.385) r2(0.66) r3(1.43) r4(1.98))		;old r1(0.35) r2(0.60) r3(1.30) r4(1.80)
+)
+
+(define "accuracy_automatic_rifle"
+	("distance_rifle" r1(0.40) r2(0.70) r3(1.50) r4(2.05))		;old r1(0.40) r2(0.65) r3(1.40) r4(2.00)
+)
+
+(define "accuracy_carabine"
+	("distance_rifle" r1(0.45) r2(1.00) r3(1.50) r4(2.50))	;old r1(0.45) r2(0.95) r3(1.80) r4(2.75)
+)
+
+(define "accuracy_assault_rifle"
+	("distance_rifle" r1(0.6) r2(0.8) r3(0.89) r4(1.02))		;old r1(0.75) r2(1.00) r3(2.10) r4(3.50)
+)
+
+(define "accuracy_assault_rifle_scoped"
+	("distance_rifle" r1(0.43) r2(0.55) r3(0.61) r4(0.81))		;old r1(0.70) r2(0.95) r3(1.80) r4(2.90)
+)
+
+
+(define "accuracy_mgun_r"
+	("distance_mg" r1(0.60) r2(0.96) r3(1.80) r4(2.88) r5(3.5))	;old r1(0.50) r2(0.80) r3(1.50) r4(2.40) r5(2.75)
+)
+
+(define "accuracy_ptr"
+	("distance_at" r1(0.50) r2(1.00) r3(1.70) r4(2.50))
+)
+(define "accuracy_ptr_bolt"
+	("distance_at" r1(0.25) r2(0.75) r3(1.25) r4(2.00))
+)
+
+(define "accuracy_dshk"
+	("distance_mg" r1(0.60) r2(0.90) r3(1.74) r4(2.76) r5(3.12))	;old r1(0.50) r2(0.75) r3(1.45) r4(2.30) r5(2.60)
+)
+;=================
+(define "accuracy_detect"
+	("distance_4" r1(25) r2(32) r3(40) r4(55))
+)
+
+
+
+
+(define "burst_assault"
+	{burst
+		;{min 1}			; min burst shots in automatic mode
+		;{noaiming}			; no aiming during burst
+		{short 1 0}			; short burst shots on long distance, rand (+-)shots
+		{long 5 2}			; long burst shots on short distance, rand (+-)shots
+		{rangeKoef 0.3}		; rangeKoef * aimRange = max long burst distance
+	}
+)
+
+(define "burst_assault_short"
+	{burst
+		{short 1 0}
+		{long 3 0}
+		{rangeKoef 0.3}
+	}
+)
+
+(define "burst_assault_x2"
+	{burst
+		{min 2}
+		{short 2 0}
+		{long 2 0}
+		{rangeKoef 0.3}
+	}
+)
+
+(define "burst_assault_x3"
+	{burst
+		{min 3}
+		{short 3 0}
+		{long 3 0}
+		{rangeKoef 0.3}
+	}
+)
+
+(define "burst_rifle"
+	{burst
+		{short 1 0}
+		{long 1 0}
+		{rangeKoef 0.3}
+	}
+)
+
+(define "burst_pistol"
+	{burst
+		{short 1 0}
+		{long 3 1}
+		{rangeKoef 0.3}
+	}
+)
+
+(define "burst_smg"
+	{burst
+		{short 5 1}
+		{long 8 3}
+		{rangeKoef 0.3}
+	}
+)
+
+(define "burst_grenade"
+	{burst
+		{short 3 0}
+		{long 5 1}
+		{rangeKoef 0.20}
+	}
+)
+
+(define "burst_mg"
+	{burst
+		{short 5 1}
+		{long 12 3}
+		{rangeKoef 0.25}
+	}
+	{FiringTimeout 0.8 0.2}	
+)
+
+(define "burst_x1"
+	{burst
+		{short 1 0}
+		{long 1 0}
+		{rangeKoef 0.3}
+	}
+)
+
+(define "burst_x3"
+	{burst
+		{short 3 0}
+		{long 3 0}
+		{rangeKoef 0.3}
+	}
+)
+
+(define "burst_x6"
+	{burst
+		{short 6 9}
+		{long 6 9}
+		{rangeKoef 0.6}
+	}
+)
+
+;spreading
+(define "spreading_low"
+	{spreading 1
+		{SpreadPower	1}
+		{BurstRecoveryTime 0.5}
+		{BurstAccuracy 100 99.0 95.0 90.0 85.0 80.0 75.0 70.0}
+	}
+)
+(define "spreading_low_boost"
+	{spreading 1
+		{SpreadPower	1}
+		{BurstRecoveryTime 0.25}
+		{BurstAccuracy 100 99.0 95.0 90.0 85.0 80.0}
+	}
+)
+(define "spreading_low_boost_ap"
+	{spreading 1
+		{SpreadPower	1}
+		{BurstRecoveryTime 0.15}
+		{BurstAccuracy 100 99.0 97.0 94.0 88.0 86.0}
+	}
+)
+(define "spreading_medium"
+	{spreading 1
+		{SpreadPower	1}
+		{BurstRecoveryTime 0.5}
+		{BurstAccuracy 100 95.0 90.0 85.0 80.0 75.0 70.0 65.0}
+	}
+)
+(define "spreading_medium_boost"
+	{spreading 1
+		{SpreadPower	1}
+		{BurstRecoveryTime 0.25}
+		{BurstAccuracy 100 95.0 90.0 85.0 80.0 75.0}
+	}
+)
+(define "spreading_high"
+	{spreading 1
+		{SpreadPower	1}
+		{BurstRecoveryTime 0.5}
+		{BurstAccuracy 100 90.0 85.0 80.0 75.0 70.0 65.0 60.0}
+	}
+)
+(define "spreading_high_boost"
+	{spreading 1
+		{SpreadPower	1}
+		{BurstRecoveryTime 0.25}
+		{BurstAccuracy 100 90.0 85.0 80.0 75.0 70.0}
+	}
+)
+(define "spreading_medium_mgun"
+	{spreading 1
+		{SpreadPower	1}
+		{BurstRecoveryTime 0.5}
+		{BurstAccuracy 100 90.0 85.0 80.0 75.0 70.0 65.0 60.0 55.0 50.0}
+	}
+)
+(define "spreading_high_mgun"
+	{spreading 1
+		{SpreadPower	1}
+		{BurstRecoveryTime 0.5}
+		{BurstAccuracy 100 85.0 80.0 75.0 70.0 65.0 60.0 55.0 50.0 45.0}
+	}
+)
+(define "spreading_short_barrel"
+	{spreading 1
+		{SpreadPower	1}
+		{BurstRecoveryTime 0.7}
+		{BurstAccuracy 100 85.0 80.0 75.0 70.0 65.0 60.0 55.0 50.0 45.0}
+	}
+)
+
+;-------------------sway
+(define "sway_high"
+	{swayparams
+		{bounds -0.4 0.25 -0.4 0.4}		; x -> negativeYaw, y -> positiveYaw, z -> negativePitch, w -> positive Pitch (in degree)
+		{speed 0.4}						; sway speed coef
+	}
+)
+(define "sway_very_high"
+	{swayparams
+		{bounds -0.7 0.35 -0.5 0.5}		; x -> negativeYaw, y -> positiveYaw, z -> negativePitch, w -> positive Pitch (in degree)
+		{speed 0.2}						; sway speed coef
+	}
+)
+(define "sway_medium_long"
+	{swayparams
+		{bounds -0.4 0.25 -0.45 0.3}		; x -> negativeYaw, y -> positiveYaw, z -> negativePitch, w -> positive Pitch (in degree)
+		{speed 0.35}						; sway speed coef
+	}
+)
+(define "sway_medium"
+	{swayparams
+		{bounds -0.3 0.2 -0.4 0.3}		; x -> negativeYaw, y -> positiveYaw, z -> negativePitch, w -> positive Pitch (in degree)
+		{speed 0.4}						; sway speed coef
+	}
+)
+(define "sway_low"
+	{swayparams
+		{bounds -0.17 0.1 -0.2 0.17}		; x -> negativeYaw, y -> positiveYaw, z -> negativePitch, w -> positive Pitch (in degree)
+		{speed 0.2}						; sway speed coef
+	}
+)
+(define "sway_low_2"
+	{swayparams
+		{bounds -0.15 0.08 -0.18 0.15}		; x -> negativeYaw, y -> positiveYaw, z -> negativePitch, w -> positive Pitch (in degree)
+		{speed 0.14}						; sway speed coef
+	}
+)

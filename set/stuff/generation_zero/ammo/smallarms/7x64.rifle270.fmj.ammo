@@ -1,0 +1,13 @@
+{bullet
+	{tag "bullet normal stackable pierce sp"}
+	{desc ".270 FMJ"}
+	{inventory
+		{weight 2}
+		{block 10}
+		{size 1 1}
+		{fsm "belt"}
+	}	
+	{mass 0.0411}
+	{entity "magazine_rifle_270_with_fmj"}
+	("trace7")
+}

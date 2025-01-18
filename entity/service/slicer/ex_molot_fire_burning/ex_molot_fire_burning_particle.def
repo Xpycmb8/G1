@@ -1,0 +1,5 @@
+{game_entity
+	{Extension "ex_molot_fire_burning.mdl"}
+	{constrain none}
+	{props "ex_molot_fire_burning" "delet_t5"}
+}

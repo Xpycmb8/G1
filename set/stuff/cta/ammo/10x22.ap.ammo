@@ -1,0 +1,14 @@
+;// 11.43x23mm
+
+{bullet
+	{tag "bullet ap small stackable pierce smallarms"}
+	{inventory
+		{weight 2}
+		{block 50}
+		{size 1 1}
+		{fsm "belt"}
+	}
+	{mass 0.015}
+	{entity "11x23"}
+	("trace10")
+}

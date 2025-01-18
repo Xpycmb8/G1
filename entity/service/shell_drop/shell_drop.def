@@ -1,0 +1,21 @@
+{game_entity
+	(include "/properties/small_part_harmless.inc")
+	{extension "/properties/piece.ext"}
+	{props "dummy" "steel" "small" "nocover" "ps_dummy" "shells_127x99" "shells_guns" "delet_t15_hide"}
+	{lodclass "shells"}
+	{obstacleID "nothing"}
+	{collider "nohuman"}
+	{constrain none}
+	{body {proper body } {permit body}}
+	{simulation {able 1} {state 1}}
+	{volume "shell_drop"
+		{able
+			{window}
+			{obstacle 0}
+			{visible 0}
+		}
+		{thickness 0.1}
+	}
+	{NoVisibilityPatch}
+	{mass 0.1}
+}

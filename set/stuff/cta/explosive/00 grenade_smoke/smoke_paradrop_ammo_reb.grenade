@@ -1,0 +1,9 @@
+{from "pattern grenade_smoke"
+	{tag "-missile"}
+	{desc "Дроп Ребел"}
+	{inventory 
+		{size 2 1}
+	}
+	{entity "smoke_paradrop_ammo_reb"}
+	{mass 0.2}
+}

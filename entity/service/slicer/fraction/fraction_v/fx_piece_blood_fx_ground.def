@@ -1,0 +1,21 @@
+{game_entity
+	{extension "/properties/piece.ext"}
+	{props "wound_blood" "blood_part_fx_ground" "fx_blood" }
+	{collider "fraction"}
+	{obstacleid "nothing"}
+	{constrain none}
+	{body {proper body } {permit body}}
+	{simulation {able 1} {state 1}}
+	{mass 0.1}
+	{volume "body"
+		{able
+			{contact 1} {contact_ground 1}
+			{bullet 0} {throwing 0} {obstacle 1}
+			{overlap 1} {visible 1}
+			{touch 0}
+		}
+		{material "dummy"}		
+		{sphere 1}
+		{bone "basis"}
+	}
+}

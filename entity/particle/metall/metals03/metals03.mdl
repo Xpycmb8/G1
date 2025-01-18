@@ -1,0 +1,24 @@
+;Exported by: ?????
+;Date:        Tue Mar 26 22:33:45 2019
+;File:        D:\?????\Documents\3dsMax\scenes\particles.max
+{Skeleton
+	{bone "metals03"
+		{parameters "CommonMesh;"}
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{VolumeView "metals03.ply"}
+	}
+}
+{Volume "body"
+	{Box 1.9375 1.67969 0.566742}
+	{Bone "metals03"}
+	{Matrix34
+		0.45	0	0
+		0	0.45	0
+		0	0	0.45
+		0	0	0
+	}
+}

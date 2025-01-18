@@ -1,0 +1,11 @@
+{item
+	{tag "smallitemin1hand" "light_weapon" "laser_weapon" "upgrade_set"}
+	{desc "PEQ 15"}
+	{entity "peq15"}
+	{inventory
+		{size 1 1}
+		{weight 100}
+		{fsm "belt"}
+	}
+	{mass 1}
+}

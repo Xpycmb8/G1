@@ -1,0 +1,27 @@
+{weapon_bullet
+	{tag "weapon bullet"}
+	{filling "camera" 0}
+	{entity "binocular"}
+	{inventory
+		{size 2 1 }
+		{link_bone "gun_back"}
+		{weight 100 }
+	}
+	{range 300 300}
+	{reloadAnimBonus 0}
+	{foresight "camera1"}
+	{speed 120}
+	{calibre 0}
+	{AimingTolerance 1}
+	{cursor "smg_on"}
+	{cursorReloading "smg_reload"}
+	{crosshair "crosshair_mgun"}
+	{crosshairReloading "crosshair_mgun_reload"}
+	{curve "bullet"}	
+	{toplayerVignette "/texture/common/environment/lens_effects/zoom_vignette_vehicle_t80_crosshair"} 
+	{thirdpersonparams inherit "human binocular"			
+	}	
+	{unlimitedRangeTPC 1}
+	{FiringTimeout 0.3 0.2}	; delay between bursts
+	{preloaded}	
+}

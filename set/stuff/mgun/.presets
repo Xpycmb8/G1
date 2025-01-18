@@ -1,0 +1,217 @@
+(define "trace9"
+	{view "trace9"
+	} 
+)
+(define "trace9ap"
+	{view "trace9"
+	} 
+)
+(define "trace9x39"
+	{view "trace939"
+	} 
+)
+(define "trace10"
+	{view "trace9"
+	} 
+)
+(define "trace5"
+	{view "trace556"
+	} 
+)
+(define "trace7"
+	{view "trace762"
+	} 
+)
+(define "trace792"
+	{view "trace792"
+	} 
+)
+(define "trace12"
+	{view "trace127"
+	} 
+)
+(define "trace127"
+	{view "trace127"
+	} 
+)
+(define "trace12fg"
+	{view "trace127"
+	} 
+)
+(define "trace12tracer"
+	{view "trace127_trace"
+	} 
+)
+(define "trace12ap"
+	{view "trace127"
+	} 
+)
+(define "trace127x108"
+	{view "trace103"
+	} 
+)
+(define "trace103"
+	{view "trace103"
+	} 
+)
+(define "no_trace"
+	{trace
+		{view "/texture/fx/trace/trace_tiles_n1.mtl"
+			{ScaleX 0.01}
+			{ScaleY 0.01}
+			{Light 1}
+		}
+		{length 0.01}
+	}
+	{trace "grm reb rus"
+		{view "/texture/fx/trace/trace_tiles_n2.mtl"
+			{ScaleX 0.01}
+			{ScaleY 0.01}
+			{Light 1}
+		}
+		{length 0.01}
+	}
+)
+(include "\set\small_firearms_accuracy.inc")
+
+;/*=========================*/
+
+(define "burst_short"
+	{burst
+		{short 3 1}			;// short burst shots on long distance, rand (+-)shots
+		{long 8 2}				;// long burst shots on short distance, rand (+-)shots
+		{rangeKoef 0.5}			;// rangeKoef * aimRange = max long burst distance
+	}
+)
+
+(define "burst_medium"
+	{burst
+		{short 4 1}
+		{long 10 3}
+		{rangeKoef 0.5}
+	}
+)
+
+(define "burst_long"
+	{burst
+		{short 5 1}
+		{long 12 3}
+		{rangeKoef 0.5}
+	}
+)
+
+(define "burst_stand"
+	{burst
+		{short 10 3}
+		{long 20 3}
+		{rangeKoef 0.75}
+	}
+)
+
+(define "burst_aa"
+	{burst
+		{short 12 0}
+		{long 25 3}
+		{rangeKoef 0.5}
+	}
+)
+
+(define "burst_aa_quad"
+	{burst
+		{short 30 0}
+		{long 150 3}
+		{rangeKoef 0.5}
+	}
+)
+
+;/*=========================*/
+
+(define "spreading_mounted_low"
+	{spreading
+		{BurstAccuracy 100 98 95 93 90 88 85 83 80}
+	}
+)
+
+(define "spreading_mounted"
+	{spreading
+		{BurstAccuracy 100 98 95 91 86 81 76 70}
+	}
+)
+
+(define "spreading_low"
+	{spreading
+		{BurstAccuracy 100 98 94 88 83 76 72 67 61 56 50 45 40 35 30}
+	}
+)
+
+(define "spreading_medium"
+	{spreading 
+		{BurstAccuracy 100 95 90 84 78 70 64 60 55 50 45 40 35 30}
+	}
+)
+
+(define "spreading_high"
+	{spreading 
+		{BurstAccuracy 100 90 80 70 60 55 50 45 40 35 30}
+	}
+)
+
+;/*=========================*/
+
+(define "reload_belt"
+	("reload time" seconds(8.5))
+)
+
+(define "penetration"
+	{projectileDamageTable {20 %0} {100 %1} {155 %2} {250 %3} {400 %4}}
+)
+
+(define "armor health"
+	{minimumDamageModifier (* 1.0 %damage)}
+)
+
+(define "ger_ap_bullets"
+	("penetration" args 11.5 5.5 3 2 0) ;// SmK L'spur / ball belts
+
+	{parameters "ap"
+		("penetration" args 18 8.8 5.3 2 0) ;// SmK
+		("armor health" damage(5))
+		{cursorReloading "gun_ap"}
+	}
+	{parameters "ap2"
+		("penetration" args 25.9 12.7 7.7 3 0) ;// SmK(H)
+		("armor health" damage(5))
+		{cursorReloading "gun_ap"}
+	}
+)
+
+(define "rus_ap_bullets"
+	{parameters "ap"
+		("penetration" args 17.8 8.6 4.2 2 0) ;// B-30
+		("armor health" damage(5))
+		{cursorReloading "gun_ap"}
+	}
+	{parameters "api"
+		("penetration" args 17.8 8.6 4.2 2 0) ;// B-32
+		("armor health" damage(6))
+		{cursorReloading "gun_api"}
+		("human health" damage(100))
+	}
+)
+
+(define "airborne_mg"
+	{range 140 140}
+	(mod not "mp"
+		{range 300 500}
+	)
+
+	{spreading
+		{SpreadPower 1.5}
+		{BurstRecoveryTime 0.5}
+		{BurstAccuracy 100 95 90 85 80}
+		{SpreadXYRatio	1}
+	}
+	{AimingTolerance 20}
+
+	("accuracy_mg_plane")
+)

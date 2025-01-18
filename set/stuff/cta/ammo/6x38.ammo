@@ -1,0 +1,13 @@
+{bullet
+	{tag "bullet normal stackable pierce sp smallarms"}
+	{desc "6,8х30 ГТ"}
+	{inventory
+		{weight 1}
+		{block 100}
+		{size 2 1}
+		{fsm "belt"}
+	}
+	{mass 0.004}
+	{entity "stoner75_mags"}
+	("trace5")
+}

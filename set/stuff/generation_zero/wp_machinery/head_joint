@@ -1,0 +1,18 @@
+{from "pattern bullet"
+	{tag "visor"}
+	{desc "Head"}
+	{filling "visor" 0}
+	{rechargeTime 5}
+	{inventory {noView}}
+	{foresight "visor_head_bone"}
+	{spreading 
+		{radiusTable {1 25} {25 25} }
+	}		
+	{preloaded}
+	{range 200 200}				; m
+	{gravity 0}
+	{speed 150}			; m/s
+    {AimingTolerance 3}			; degree
+	{cursor "cannon_on"}
+}
+

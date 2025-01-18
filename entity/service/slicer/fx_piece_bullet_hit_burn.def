@@ -1,0 +1,28 @@
+{game_entity
+	(include "/properties/physics_generic.ext")
+	{collider "particle.small"}
+	{obstacleID "fraction"}	
+	{Skeleton
+		{bone "base"
+			{Orientation
+				1	0	0
+				0	-1	0
+				0	0	1
+			}
+		}
+	}
+	{Volume "body"
+		{Sphere 0.1}
+		{Bone "base"}
+		{Matrix34
+			0.0676547	0	0
+			0	0.0676547	0
+			0	0	0.0676547
+			0	0.000126392	0
+		}
+	}
+	{volume "body"
+		{thickness 0.1}
+	}
+	{props "-stuff" "steel" "bullet_hit_sparks_burn"}
+}

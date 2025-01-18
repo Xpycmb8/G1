@@ -1,0 +1,11 @@
+{item
+	{tag "smallitemin1hand armor_l6 distributable armor_granite_l6 armor_place"}
+	{mass 1.0}
+	{inventory
+		{link_bone "armor_l6"}
+		{fsm "belt"}
+		{size 1 1}
+		{weight 100}
+	}
+	{entity "armor_granite_l6"}
+}

@@ -1,0 +1,15 @@
+;// 12.7x55mm
+
+{bullet
+	{tag "bullet big hmgun stackable pierce sp slug smallarms_heavy"}
+	{inventory
+		{weight 3.3}
+		{block 30}
+		{size 1 2}
+		{fsm "belt"}
+	}
+	{mass 0.11}
+	{desc "12x76"}
+	{entity "12gauge"}
+	("trace12")
+}

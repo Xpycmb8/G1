@@ -1,0 +1,19 @@
+;Exported by: ?????
+;Date:        Sun Dec  1 21:01:32 2019
+;File:        D:\?????\Documents\3dsMax\scenes\truck_mk23_comp.max
+{Skeleton
+	{bone "piece"
+		{parameters "CommonMesh;"}
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{VolumeView "piece.ply"}
+	}
+}
+{Volume "body"
+	{Box 1.93647 7.67302 8.17577}
+	{Bone "piece"}
+	{Position 0.544277	-0.00657272	-0.0316701}
+}

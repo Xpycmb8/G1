@@ -1,0 +1,15 @@
+;// 9x39mm
+
+{bullet
+	{desc "9x39 СП-5 Магазин 60"}
+	{tag "bullet sp5 small stackable pierce"}
+	{inventory
+		{weight 2}
+		{block 30}
+		{size 1 2}
+		{fsm "belt"}
+	}	
+	{mass 0.026}
+	{entity "mags60_groza"}
+	("trace9x39")
+}

@@ -1,0 +1,13 @@
+;Exported by: ?????
+;Date:        Mon Mar 15 11:46:54 2021
+;File:        D:\?????\Documents\3ds Max 2020\scenes\trace120_fg.max
+{Skeleton
+	{bone "trace"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{VolumeView "trace.ply"}
+	}
+}

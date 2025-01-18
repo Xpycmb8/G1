@@ -1,0 +1,31 @@
+;// 12.7x108mm
+
+{bullet
+	{tag "ammo bullet stackable zenite th smallarms_heavy"}
+	{desc "XM1049 TH (25x59)"}
+	{view "xm109_proj"
+		{tail "grenade_tail" "tail"}
+	}
+	{inventory
+		{weight 3.3}
+		{block 30}
+		{size 1 1}
+		{fsm "belt"}
+	}
+	{mass 0.34}
+	{entity "xm109_mags_th"}
+	{damage fire
+		{radius 0.1}
+		{heating 1}
+		{time 0.3}
+	}
+	{damage blastwave
+		{energy 1.8}
+		{area 0.2 0.3}
+	}	
+	{detonationThickness 0.1}
+	{damage add blastwave
+		{energy 0.3}
+		{area 1 1.2}
+	}
+}

@@ -1,0 +1,8 @@
+(include "\set\ballistics\accuracy_distance.inc")
+(include "\set\ballistics\burst.inc")
+(include "\set\ballistics\health_damage.inc")
+(include "\set\ballistics\other.inc")
+(include "\set\ballistics\spreading_distance.inc")
+(include "\set\ballistics\sway.inc")
+(include "\set\ballistics\projectiledamage.inc")
+(include "\set\ballistics\zoom.inc")

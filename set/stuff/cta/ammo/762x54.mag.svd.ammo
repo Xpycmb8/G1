@@ -1,0 +1,15 @@
+;// 7.62x54mm
+
+{bullet
+	{tag "bullet sp normal stackable pierce smallarms"}
+	{inventory
+		{weight 3.3}
+		{block 30}
+		{size 1 1}
+		{fsm "belt"}
+	}	
+	{desc "7.62x54 mag SVD"}
+	{mass 0.011}
+	{entity "svd_mag"}
+	("trace7")
+}

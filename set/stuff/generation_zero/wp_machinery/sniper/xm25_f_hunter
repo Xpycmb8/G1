@@ -1,0 +1,74 @@
+{from "pattern bullet"
+	{tag "rifle weapon bullet at_rifle silenced_xm109 1_bullet heavy sniper at_rifle_set"}
+	{desc "XM 53"}
+	{fireSound	"small_arms/xm109/"}
+	{fireSoundClose	"small_arms/xm109_close/"}
+	{reloadSound "//"}	
+	{cursor "smg_on"}
+	{cursorReloading "smg_reload"}
+	{minRange 5}
+	{DisableRicochet}
+	{special
+		{mode aim}
+		{PrepareTime 4.0}
+		{PrepareCursor "aimed_shot"}
+		{PrepareCursorScene "aimed_shot_scene"}
+		{accuracy 12}
+		{damage 10.0}
+		{sway 0.03}
+		{throw_off_always}
+	}
+	{filling "ammo 15x75" 1}
+	{inventory
+		{size 8 2 }
+		{weight 100 }
+	}
+	{speed 1200}
+	("health_damage_127x99" d(800))
+	{parameters "fg"
+		("health_damage_127x99" d(2560))
+		{projectileDamage 25}
+		{projectileDamageClip 15}
+		{projectileDamageTable {22.5 15} {900 9} {1500 0} }
+		{range 600 600}
+		("speed" s(750))
+	}
+	{parameters "th"
+		("health_damage_127x99" d(2560))
+		{projectileDamage 25}
+		{projectileDamageClip 20}
+		{projectileDamageTable {22.5 20} {800 8}  {1200 0}}
+		{range 600 600}
+		("speed" s(750))
+	}
+	{parameters "cs"
+		{range 600 600}
+		("health_damage_127x99" d(2560))
+		{projectileDamage 54}
+		{projectileDamageClip 39}
+		{projectileDamageTable {22.5 48} {800 32} {2000 0}}
+		("speed" s(1200))
+	}
+	{RelaxationTime 0.1}						; время ожидания после изменения цели прицеливания
+	{FiringTimeout 0.35 0.15}					; delay between bursts
+	{preloaded}
+	{calibre 25}
+	{mass 8}
+	{traceFreq 0}
+	{rechargeTime 4}
+	{burst
+		{short 1 0}
+		{long 1 0}
+		{rangeKoef 1}
+	}
+	("accuracy_sniper_rifle_long_skir")
+	{ZeroingAccuracy 0.75 0.5}
+	("recoil_long_at_rifle_sup")
+	{minimumDamageModifier 30}
+	(mod "hardcore"
+		{autoreload 0}
+		{minimumDamageModifier 50}
+	)
+	{cursor "carbine_on"}
+	{cursorReloading "carbine_reload"}	
+}

@@ -1,0 +1,11 @@
+{item
+	{tag "smallitemin1hand" "tools" "wrench"}
+	{desc "Монтировка"}
+	{entity "crowbar_v2"}
+	{inventory
+		{size 2 1}
+		{weight 5}
+		{fsm "belt"}
+	}
+	{mass 1}
+}

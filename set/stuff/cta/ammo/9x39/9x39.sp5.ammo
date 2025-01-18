@@ -1,0 +1,15 @@
+;// 9x39mm
+
+{bullet
+	{desc "9x39 СП-5"}
+	{tag "bullet sp5 exp small stackable pierce"}
+	{inventory
+		{weight 3.3}
+		{block 60}
+		{size 1 1}
+		{fsm "belt"}
+	}	
+	{mass 0.017}
+	{entity "9x39sp5"}
+	("trace9x39")
+}

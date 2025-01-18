@@ -1,0 +1,24 @@
+;Exported by: ?????
+;Date:        Sat Jul 13 00:49:12 2019
+;File:        D:\?????\Documents\3dsMax\scenes\tape_unfold.max
+{Skeleton
+	{bone "tape_s4"
+		{parameters "CommonMesh;"}
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{VolumeView "tape_s4.ply"}
+	}
+}
+{Volume "body"
+	{Box 0.207422 0.0843758 0.133594}
+	{Bone "tape_s4"}
+	{Matrix34
+		1.1	0	0
+		0	1.1	0
+		0	0	1.1
+		0.000642776	0.0468359	0.0184792
+	}
+}

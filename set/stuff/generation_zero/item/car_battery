@@ -1,0 +1,12 @@
+{item
+	{tag "itemin1hand"}
+	{entity "car_battery"}
+	{filling "energy" 100}
+	{inventory
+		{size 2 2}
+		{weight 10}
+		{fsm "belt"}
+		;{fsm "hand-only"}
+	}
+	{mass 10}
+}

@@ -1,0 +1,12 @@
+{bullet
+	{desc "12.7x55 gauge pack"}
+	{tag "bullet noview buckshot stackable smallarms"}
+	{inventory
+		{size 2 2}
+		{weight 2}
+		{block 25}
+	}
+	{mass 0.038}
+	("no_trace")
+	{entity "ammo_shotgun_pack"}
+}

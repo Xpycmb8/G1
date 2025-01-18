@@ -1,0 +1,41 @@
+{weapon_bullet
+	{tag "weapon bullet rocketlauncher cumulative"}
+	{mass 250}
+	{reloadAnimBonus 0}
+	{filling "ammo r75" 1}
+	{preloaded}
+	{speed 125}
+	{AimingTolerance 0.1}
+	{autoreload 0}
+	{calibre 84}
+	{minrange 10}
+	{range 400 410}
+	{DisableRicochet}
+	{fillingVisible "rocket"}
+	{parameters "ap"
+		{projectileDamageThreshold 10}
+		{projectileDamageTable {10 250} {30 230} {45 185} {60 160} {80 138} {200 75} {500 20}}
+		{Spreading
+			{radiusTable {10 0} {25 1.25} {40 2.30} {60 4} {80 6} {100 9}}
+		}
+		("speed2" s(150))	
+	}
+	{parameters "fg"
+		{projectileDamageThreshold 0}
+		{projectileDamageTable {10 20} {30 20} {45 18} {60 16} {80 12} {120 8}}
+		{Spreading
+			{radiusTable {10 0} {25 1.25} {40 2.30} {60 4} {80 6} {100 9}}
+		}
+		("speed2" s(125))	
+	}
+	{foresight "foresight_gun"}
+	{reactive}
+	{gravity 0.1}
+	{recoveryTime 5}
+	{rechargeTime 12}
+	{curve "cumulative"}
+	{cursor "cannon_on"}
+	{crosshair "crosshair6"}
+	{crosshairReloading "crosshair6_reload"}
+	{FiringTimeout 6 4}	; min delay between ai shots (note: will be affected by "grenade_timeout" modifier)
+}

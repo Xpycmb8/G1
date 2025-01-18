@@ -1,0 +1,12 @@
+{game_entity
+	{collider "bush"}
+	{obstacleID "nothing"}
+	{volume defaultmaterial "wood"}
+	{lodclass "decor_small"}
+	{Extension "electra15.mdl"}
+	{props "electra5"} 
+	{NoVisibilityPatch 0}
+	{volume "crown"	
+		{Able {window} {contact 1} {bullet 0} {obstacle 0} {touch 0} {overlap 0} {visible 0}}
+	}
+}

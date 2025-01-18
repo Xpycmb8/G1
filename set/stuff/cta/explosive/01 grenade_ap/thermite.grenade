@@ -1,0 +1,23 @@
+{from "pattern throwable"
+	{tag "knife sharp_edge hand thermite"}
+	{desc "Thermite"}
+	{inventory
+		{size 2 1}
+		{weight 100}
+	}	
+	{mass 1.3}
+	{entity "grenade_thermite"}
+	{throw
+		{startAngle 70}
+		{constantSpeed 20}
+		{range 20}
+		{spreading 0.3}
+	}
+	
+	{thirdpersonparams inherit "human default"
+		{level 0
+			{offset	-150 0 250}
+		}
+		{maxlevel 0}
+	}
+}

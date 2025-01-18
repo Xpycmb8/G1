@@ -1,0 +1,81 @@
+(include "building.inc")
+{props "construction" "steel" "emitters_steel_pipes" "tubes_100m_80r" "tubes_pressure"}	
+{Volume "inner"
+	{able
+		{window}
+		{contact 1} {contact_ground 0}
+		{bullet 0} {throwing 0} {obstacle 0}
+		{overlap 1} {visible 0}
+		{touch 0}
+	}
+	{density 0}
+	{Tags  "inner"}
+}
+{Volume "inner2"
+	{able
+		{window}
+		{contact 1} {contact_ground 0}
+		{bullet 0} {throwing 0} {obstacle 0}
+		{overlap 1} {visible 0}
+		{touch 0}
+	}
+	{density 0}
+	{Tags  "inner"}
+}
+{Volume "inside"
+	{able
+		{window}
+		{contact 1} {contact_ground 0}
+		{bullet 0} {throwing 0} {obstacle 0}
+		{overlap 1} {visible 0}
+		{touch 0}
+	}
+	{density 0}
+	{Tags "inside"}
+}
+{Volume "outer"
+	{able
+		{window}
+		{contact 1} {contact_ground 0}
+		{bullet 0} {throwing 0} {obstacle 0}
+		{overlap 1} {visible 0}
+		{touch 0}
+	}
+	{density 0}
+	{Tags  "outer"}
+}
+{Volume "outer2"
+	{able
+		{window}
+		{contact 1} {contact_ground 0}
+		{bullet 0} {throwing 0} {obstacle 0}
+		{overlap 1} {visible 0}
+		{touch 0}
+	}
+	{density 0}
+	{Tags  "outer"}
+}
+{Volume "body"
+	{Tags  "body"}
+	{Thickness 20}
+}
+{placer
+	{place "preview_inner"
+		{entity "preview_inner"}
+		{Linkbone "inner"}
+	}
+	{place "preview_inner2"
+		{entity "preview_inner"}
+		{Linkbone "inner2"}
+	}
+	{place "preview_outer"
+		{entity "preview_outer"}
+		{Linkbone "outer"}
+	}
+	{place "preview_outer2"
+		{entity "preview_outer"}
+		{Linkbone "outer2"}
+	}
+}
+
+{lodclass "decor_medium"}

@@ -1,0 +1,11 @@
+{item
+	{tag "smallitemin1hand" }
+	{desc "Rifle scope 4-8x 42mm"}
+	{entity "rifle_scope_4_8x_42mm"}
+	{inventory
+		{size 3 1}
+		{weight 100}
+		{fsm "belt"}
+	}
+	{mass 0.59}
+}

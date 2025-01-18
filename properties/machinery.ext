@@ -1,0 +1,3418 @@
+actor
+
+
+{lodclass "vehicle_big"}
+{PatherID  "cannon.small"}
+{obstacleID "tank"}
+{collider "car"}
+{able "fight" "minimap" }
+{targetClass "machinery"} ;; select for best ammo
+{targetSelector "baze_machinery"}
+(include "accuracy_by_motion.inc")
+
+{mass 100}
+{props "steel" "baze_machinery" "obstacle_ignore_height" "detect_spg"}
+
+;{props "steel" "nocover"}
+{simulation {able 1}}
+{body {permit body}}
+
+{autooperatable 1}
+
+
+;{boarder}
+{extender "talk"
+	{talker "machinery"}
+}
+{placer
+	{crew 0}
+}
+
+{brain "vehicle"
+	{state "vehicle"}
+	{const "crush/min_danger_zone_time"		1}
+	{const "crush/min_danger_zone_length"	1}
+	{const "bomb/detect_explosives" 25}		;// detect explosives inside 7 meter radius
+	{const "bomb/detect_grenades" 	15}		;// detect grenades inside 5 meter radius
+	{const "bomb/danger_zone" 		27}		;// hide if danger is more than "x" meters away, otherwise run away
+}
+   
+{hearingBias 2.0}  	;// reduces units ability to hear sound signals. value = meters
+
+;{brain	{control 0}}
+
+{extender "detail"
+	{random}
+}
+{extender "enumerator"}
+
+{Sensor
+	{Visor "eyes"
+		{vision "main_scaner"}
+		{bone "visor"}
+	}
+	{Visor "peripheral"
+		{vision "human_peripheral"}
+		{bone "visor_head_bone"}
+	}
+	{Visor "hearing"
+		{vision "noise_detection"}
+		{bone "hips"}
+	}	
+	; {Visor "telescope"}
+	{AttackZone 90}
+	{MinRecognizeTime 0.01}
+	{RecognizeTime 0.01}
+	{InformRange 1000 1500}		;first - AI ;second - USER
+}
+
+{extender "inventory"
+	{box
+		{Size 6 8}
+		{Weight 100}
+		;{item "" 1}		
+	}
+}
+
+(define "restore_ik_time"
+	{RestoreIKTime 1}
+)
+
+{Weaponry
+	{place "mgun"
+;		{RestoreIKAfterAim}	
+		{Rotate}
+		{basic} 		
+	}
+	{place "alarm_signal"    ;mgun_alarm
+;		{RestoreIKAfterAim}	
+		{Rotate}
+		{basic} 		
+	}
+	{place "alarm_signal_fire"    ;mgun_alarm_rocket_classd
+;		{RestoreIKAfterAim}	
+		{Rotate}
+		{basic} 		
+	}
+	{place "head_joint" ;head_joint
+		{RestoreIKAfterAim}	
+		;{Rotate}
+		{basic} 		
+	}
+	{place "attack_concussion" ;concusion
+;		{RestoreIKAfterAim}	
+		;{Rotate}
+		{basic} 		
+	}
+	{place "attack_pestdrop" ;pestdrop
+;		{RestoreIKAfterAim}	
+		;{Rotate}
+		{basic} 		
+	}
+	{place "attack_gas" ;gasdrop
+;		{RestoreIKAfterAim}	
+		;{Rotate}
+		{basic} 		
+	}
+	{place "attack_melee_charge" ;mgun_melee
+;		{RestoreIKAfterAim}	
+		;{Rotate}
+		{basic} 		
+	}
+	{place "attack_melee_charge_close" ;mgun_melee_close
+;		{RestoreIKAfterAim}	
+		;{Rotate}
+		{basic} 		
+	}
+	{place "attack_melee_r_stamp" ;mgun_melee_r
+;		{RestoreIKAfterAim}	
+		;{Rotate}
+		{basic} 		
+	}
+	{place "attack_melee_l_stamp" ;mgun_melee_l
+;		{RestoreIKAfterAim}	
+		;{Rotate}
+		{basic} 		
+	}
+	{place "attack_melee_swipe_fwd"   ;melee_front
+;		{RestoreIKAfterAim}	
+		;{Rotate}
+		{basic} 		
+	}
+	{place "attack_melee_swipe_bwd"   ;melee_back
+;		{RestoreIKAfterAim}	
+		;{Rotate}
+		{basic} 		
+	}
+	{place "slope_move"   ;slope_scout
+;		{RestoreIKAfterAim}	
+		{Rotate}
+		{basic} 		
+	}
+	{place "gun"
+;		{RestoreIKAfterAim}	
+		{Rotate}
+		{basic} 		
+	}
+	{place "gun_r"
+;		{RestoreIKAfterAim}	
+		{Rotate}
+		{basic} 		
+	}
+	{place "gun_l"
+;		{RestoreIKAfterAim}	
+		{Rotate}
+		{basic} 		
+	}
+	{ManualAccuracy 1.5}
+	{ManualAccuracyZoom 2}
+}
+
+(define "vision_mode"
+	{extender "vision_mode"
+		{timer_object
+			{tag			"%tag"}
+			{active_time	%time}
+			{recharge_rate	0.1}
+			{type			"recharge"}
+		}
+	}
+)
+
+(define "chassis_defaults"
+	{speed
+		{Stop	0	}	;// km/h
+		{Slow	0.5	}	;// km/h
+		{Normal	17	}
+		{Fast	30	}
+	}
+	{FuelBag
+		{volume 200}	; liters
+		{rate	20}		; liters per kilometer
+		{remain 200}
+		{fuel "fuel"}
+	}
+)
+
+(define "Speed"
+	{Fast (* 0.8 %s)}
+	{MaxSpeed %s}
+	;{maxSpeedAtMaxTurn (* 0.3 %s)}
+)
+(define "movement_skirmisher"
+	{Chassis "human_carrier"
+		{Locomotion 
+			{Slow   			0 }   
+			{Normal 			9 } ;+
+			{Fast   			45 }
+			{maxspeed 			45}
+			{maxSpeedAtMaxTurn 5}
+    		{TurnStart 		10} 
+    		{TurnStop		0.5}
+			{TurnRadius		5}
+			{TurnTime		1.5}			
+			{StartTime		5}			
+    		{StopTime		5} 			
+    		{BrakeTime		2.5} 
+
+			{Gears 0.1 1	}														;// Forward gear ratios
+			{RearGears 0.05 				}					;// Reverse max speed.
+			{GearSwitchDelay 3			}																;// Time to switch between forward and reverse.
+			
+			{MaxSlope 	240}																							
+			{FallSlope 	240}			
+		}
+		{FuelBag
+			{volume 200}						
+			{rate 0.5}
+			{remain 190}						
+			{fuel "tritium"}						
+		}		
+		{ignorePatherBounds}
+		{disableBackward}
+	}
+)		
+(define "movement"
+	{Chassis "human_carrier"
+		{Locomotion 
+			{Slow   %slow }   
+			{Normal %normal }
+			{Fast   %fast }
+			{maxspeed %maxspeed}
+			{maxSpeedAtMaxTurn %maxspeed_atmaxturn}
+    		{TurnStart 		%turnstart} 
+    		{TurnStop		%turnstop}
+			{TurnRadius		%turnradius}
+			{TurnTime		%turntime}			
+			{StartTime		%starttime}			
+    		{StopTime		%stoptime} 			
+    		{BrakeTime		%braketime} 
+			
+			{MaxSlope 	240}																							
+			{FallSlope 	240}			
+		}
+		{FuelBag
+			{volume %fuelbag_vol}						
+			{rate %rate}
+			{remain %remain}						
+			{fuel "%fuel"}						
+		}		
+		{ignorePatherBounds}
+		{disableBackward}
+	}
+)
+
+(define "movement_wheel"
+	{Chassis "track"
+		{Locomotion 
+			{Slow   %slow }   
+			{Normal %normal }
+			{Fast   %fast }
+			{maxspeed %maxspeed}
+			{maxSpeedAtMaxTurn %maxspeed_atmaxturn}; max speed at max turn, km/h
+    		{TurnStart 		%turnstart} 
+    		{TurnStop		%turnstop}; time to go from maximum turn speed to zero, seconds
+			{TurnRadius		%turnradius}; minimum turn radius for AI, meters
+			{TurnTime		%turntime}	; 360 degree turn time at max turn speed, seconds		
+			{StartTime		%starttime}		; acceleration time from 0 to max speed, seconds	
+    		{StopTime		%stoptime} 	; stop time after turning off the engine (no breaking), seconds		
+    		{BrakeTime		%braketime} ; forced deceleration time from max speed to 0, seconds
+			{Gears		0.1 0.3 0.5 0.7 1.0}	; forward gear ratios
+			{RearGears	0.2 0.5}				; backward gear ratios
+			{GearSwitchDelay 1}				; time to switch from forward gear to rear one, sec
+			
+			{MaxSlope 	240}																							
+			{FallSlope 	240}			
+		}
+		{FuelBag
+			{volume %fuelbag_vol}						
+			{rate %rate}
+			{remain %remain}						
+			{fuel "%fuel"}						
+		}		
+		{ignorePatherBounds}
+		{disableBackward}
+	}
+)
+	
+	
+(define "movement_heavy"
+	{Chassis "track"
+		{Locomotion 
+			{Slow   %slow }   
+			{Normal %normal }
+			{Fast   %fast }
+			{maxspeed %maxspeed}
+			{maxSpeedAtMaxTurn %maxspeed_atmaxturn}
+    		{TurnStart 		%turnstart} 
+    		{TurnStop		%turnstop}
+			{TurnRadius		%turnradius}
+			{TurnTime		%turntime}			
+			{StartTime		%starttime}			
+    		{StopTime		%stoptime} 			
+    		{BrakeTime		%braketime} 
+			{Gears 0.1 1}											;// Gearing affects acceleration curve.
+			{GearSwitchDelay 1}									;// Time to switch between forward and reverse.
+			
+			{MaxSlope 	240}																							
+			{FallSlope 	240}			
+		}
+		{FuelBag
+			{volume %fuelbag_vol}						
+			{rate %rate}
+			{remain %remain}						
+			{fuel "%fuel"}						
+		}		
+		{ignorePatherBounds}
+		{disableBackward}
+	}
+)
+(define "movement_heavy_harvest"
+	{Chassis "track"
+		{Locomotion 
+			{Slow   %slow }   
+			{Normal %normal }
+			{Fast   %fast }
+			{maxspeed %maxspeed}
+			{maxSpeedAtMaxTurn %maxspeed_atmaxturn}; max speed at max turn, km/h
+    		{TurnStart 		%turnstart} 
+    		{TurnStop		%turnstop}; time to go from maximum turn speed to zero, seconds
+			{TurnRadius		%turnradius}; minimum turn radius for AI, meters
+			{TurnTime		%turntime}	; 360 degree turn time at max turn speed, seconds		
+			{StartTime		%starttime}		; acceleration time from 0 to max speed, seconds	
+    		{StopTime		%stoptime} 	; stop time after turning off the engine (no breaking), seconds		
+    		{BrakeTime		%braketime} ; forced deceleration time from max speed to 0, seconds
+			{Gears		0.1 0.3 0.5 0.7 1.0}	; forward gear ratios
+			{RearGears	0.2 0.5}				; backward gear ratios
+			{GearSwitchDelay 1}				; time to switch from forward gear to rear one, sec
+			
+			{MaxSlope 	240}																							
+			{FallSlope 	240}			
+		}
+		{FuelBag
+			{volume %fuelbag_vol}						
+			{rate %rate}
+			{remain %remain}						
+			{fuel "%fuel"}						
+		}		
+		{ignorePatherBounds}
+		{disableBackward}
+	}
+)
+
+(define "movement_light_track_test"
+	{Chassis "human_carrier"
+		{Locomotion 
+			{Slow   			0 }   
+			{Normal 			15 } ;+
+			{Fast   			17 }
+			{maxspeed 			17}
+			{maxSpeedAtMaxTurn 5}
+    		{TurnStart 		2} 
+    		{TurnStop		2}
+			{TurnRadius		2}
+			{TurnTime		0.5}			
+			{StartTime		1}			
+    		{StopTime		2} 			
+    		{BrakeTime		1} 
+
+			{Gears 0.1 1	}														;// Forward gear ratios
+			{RearGears 0.05 				}					;// Reverse max speed.
+			{GearSwitchDelay 3			}																;// Time to switch between forward and reverse.
+			
+			{MaxSlope 	240}																							
+			{FallSlope 	240}			
+		}
+		{FuelBag
+			{volume 100}						
+			{rate 0.2}
+			{remain 90}						
+			{fuel "diesel"}						
+		}		
+		{ignorePatherBounds}
+		;{disableBackward}
+	}
+)		
+
+
+(define "movement_light_track"
+	{Chassis "track"
+		{Locomotion 
+			{Slow   %slow }   
+			{Normal %normal }
+			{Fast   %fast }
+			{maxspeed %maxspeed}
+			{maxSpeedAtMaxTurn %maxspeed_atmaxturn}; max speed at max turn, km/h
+    		{TurnStart 		%turnstart} 
+    		{TurnStop		%turnstop}; time to go from maximum turn speed to zero, seconds
+			{TurnRadius		%turnradius}; minimum turn radius for AI, meters
+			{TurnTime		%turntime}	; 360 degree turn time at max turn speed, seconds		
+			{StartTime		%starttime}		; acceleration time from 0 to max speed, seconds	
+    		{StopTime		%stoptime} 	; stop time after turning off the engine (no breaking), seconds		
+    		{BrakeTime		%braketime} ; forced deceleration time from max speed to 0, seconds
+			{Gears		0.1 0.3 0.5 0.7 1.0}	; forward gear ratios
+			{RearGears	0.2 0.5}				; backward gear ratios
+			{GearSwitchDelay 1}				; time to switch from forward gear to rear one, sec
+			
+			{MaxSlope 	240}																							
+			{FallSlope 	240}			
+		}
+		{FuelBag
+			{volume %fuelbag_vol}						
+			{rate %rate}
+			{remain %remain}						
+			{fuel "%fuel"}						
+		}		
+		{ignorePatherBounds}
+		;{disableBackward}
+		; {Track "left"
+			; {Tracer
+				; {View "step_lynx"} ; "tracks"
+				; {Bone "FXtraceL1"}
+				; {Step 0.05}			; 0.7 meters
+			; }
+			; {TextureScroller
+				; {Bone "TrackL"}
+				; {Length 0.05}			; 0.6 meters per animation
+			; }
+		; }
+		; {Track "right"
+			; {Tracer 
+				; {View "step_lynx"}
+				; {Bone "FXtraceR1"}
+				; {Step 0.05}			; in meters
+			; }
+			; {TextureScroller
+				; {Bone "TrackR"}
+				; {Length 0.05}			; meters per animation
+			; }
+		; }
+	}
+)
+
+(define "set_armor" 				
+	{setting "%0"
+		{threshold
+			{blast	{koef %1}}		
+			{pierce 
+				{value 1}
+				{koef %2}
+			}
+		}
+		{volumes "%0"}
+	}
+)
+(define "basic_armor"
+	{armor
+		("set_armor" args body 							0.5 0.8)
+		("set_armor" args pestcontainer 				0.5 0.8)
+		("set_armor" args Drill 						0.5 0.8)
+		("set_armor" args Drillmount 					0.5 0.8)	
+		("set_armor" args drill_hatch_l 				0.5 0.8)
+		("set_armor" args drill_hatch_r 			 	0.5 0.8)
+		("set_armor" args front_hatch 					0.5 0.8)
+		("set_armor" args front_hatch_r 				0.5 0.8)
+		("set_armor" args front_hatch_l 				0.5 0.8)
+		("set_armor" args back_hatch_r  				0.5 0.8)
+		("set_armor" args back_hatch_l  				0.5 0.8)
+		("set_armor" args structure_plate_left 			0.5 0.8)
+		("set_armor" args structure_plate_right 		0.5 0.8)
+		("set_armor" args front_core_panel 				0.5 0.8)
+		("set_armor" args frontlegs_mount				0.5 0.8)
+		("set_armor" args backlegs_mount 				0.5 0.8)
+		("set_armor" args transmission 					0.5 0.8)
+		("set_armor" args cooling_systems 				0.5 0.8)
+		("set_armor" args Concussion_Pulse_r 			0.5 0.8)
+		("set_armor" args Concussion_Pulse_l 			0.5 0.8)
+		("set_armor" args fueltank						0.5 0.8)
+		("set_armor" args fueltank_r						0.5 0.8)
+		("set_armor" args fueltank_l						0.5 0.8)
+		("set_armor" args fueltank_c						0.5 0.8)
+		("set_armor" args fuel 							0.5 0.8)
+		("set_armor" args fuel_l 						0.5 0.8)
+		("set_armor" args fuel_r 						0.5 0.8)
+		("set_armor" args tank_l 						0.5 0.8)
+		("set_armor" args tank_r 						0.5 0.8)
+		("set_armor" args fuel_small  					0.5 0.8)
+		("set_armor" args visor_head  					1 	1)
+		("set_armor" args visor_body  					1 	1)
+		("set_armor" args head_organ  					0.5 0.8)
+		("set_armor" args body_organ 					0.8 0.8)
+		("set_armor" args back_engine_organ 			0.8 0.8)
+		("set_armor" args organs_engine_drive_left 		0.8 1)
+		("set_armor" args organs_engine_drive_right 	0.8 1)
+		("set_armor" args leg_motor_right 		0.8 1)
+		("set_armor" args leg_motor_left 		0.8 1)
+		("set_armor" args leg_regulator_large_left 		0.8 1)
+		("set_armor" args leg_regulator_large_right 	0.8 1)
+		("set_armor" args engine_move 					0.5 0.8)
+		("set_armor" args head 							0.5 0.8)
+		("set_armor" args backfan_03 0.5 0.8)
+		("set_armor" args backfan_02 0.5 0.8)
+		("set_armor" args backfan_01 0.5 0.8)
+		("set_armor" args shoulder_plate_right 0.5 0.8)
+		("set_armor" args shoulder_plate_left 0.5 0.8)
+		("set_armor" args sideplate_left 0.5 0.8)
+		("set_armor" args sideplate_right 0.5 0.8)
+		("set_armor" args armor_body_upper_r 0.5 0.8)
+		("set_armor" args armor_body_upper_l 0.5 0.8)
+		("set_armor" args frame_body 0.5 0.8)		
+		("set_armor" args head_sideplate_front_r 0.5 0.8)
+		("set_armor" args head_sideplate_front_l 0.5 0.8)
+		("set_armor" args head_sideplate_back_r 0.5 0.8)
+		("set_armor" args head_sideplate_back_l 0.5 0.8)
+		("set_armor" args organs_hip_right 0.5 0.8)
+		("set_armor" args organs_hip_left 0.5 0.8)
+		("set_armor" args nanotech_unit_l 0.5 0.8) ;wolf
+		("set_armor" args nanotech_unit_r 0.5 0.8)	;wolf				
+		("set_armor" args RightArm_support 0.5 0.8) ;wolf
+		("set_armor" args LeftArm_support 0.5 0.8)	;wolf		
+		("set_armor" args eyes 0.5 0.8)
+		("set_armor" args hydraulic 0.5 0.8)
+		("set_armor" args hydraulic_knee_right 0.5 0.8)
+		("set_armor" args hydraulic_knee_left 0.5 0.8)
+		("set_armor" args organs_leg_right 0.5 0.8)
+		("set_armor" args organs_leg_left 0.5 0.8)	
+		("set_armor" args organs_waist_01 0.5 0.8)
+		("set_armor" args organs_waist_02 0.5 0.8)
+		("set_armor" args organs_waist_03 0.5 0.8)
+		("set_armor" args cpu 0.5 0.8)
+		("set_armor" args engine 0.5 0.8)
+		("set_armor" args left_engine 0.5 0.8)
+		("set_armor" args right_engine 0.5 0.8)
+		("set_armor" args left_engine2 0.5 0.8)
+		("set_armor" args right_engine2 0.5 0.8)
+		("set_armor" args head_arm 0.5 0.8)
+		("set_armor" args battery 0.5 0.8)
+		("set_armor" args head_joint 0.5 0.8)
+		("set_armor" args wire 0.5 0.8)
+		("set_armor" args head_wire 0.5 0.8)
+		("set_armor" args wire_small 0.5 0.8)
+		("set_armor" args mgun 0.5 0.8)
+		("set_armor" args visor_sniper 0.5 0.8)
+		("set_armor" args magazine_sniper 0.5 0.8)
+		("set_armor" args sniper 0.5 0.8)
+		("set_armor" args shotgun 0.5 0.8)
+		("set_armor" args flamethrower 0.5 0.8)		
+		("set_armor" args fuel_rods_r 0.5 0.8)
+		("set_armor" args fuel_rods_l 0.5 0.8)
+		("set_armor" args canister_right_01 0.5 0.8)
+		("set_armor" args canister_right_02 0.5 0.8)
+		("set_armor" args canister_left_01 0.5 0.8)
+		("set_armor" args canister_left_02 0.5 0.8)
+		("set_armor" args barrel_shotgun 0.5 0.8)
+		("set_armor" args rail_shotgun 0.5 0.8)
+		("set_armor" args ammo 0.5 0.8)
+		("set_armor" args missile_r 0.5 0.8)
+		("set_armor" args missile_l 0.5 0.8)
+		("set_armor" args missile 0.5 0.8)
+		("set_armor" args missilelauncher 0.5 0.8)
+		("set_armor" args rocket 0.5 0.8)
+		("set_armor" args rocket_cluster 0.5 0.8)		
+		("set_armor" args frontplate 0.5 0.8)
+		("set_armor" args neck 0.5 0.8)
+		("set_armor" args neck1 0.5 0.8)
+		("set_armor" args bridge 0.5 0.8)
+		("set_armor" args bridge_container 0.5 0.8)	
+		("set_armor" args RightWeaponAttach 0.5 0.8)
+		("set_armor" args LeftWeaponAttach 0.5 0.8)
+		("set_armor" args Right_leg 0.5 0.8)
+		("set_armor" args Left_leg 0.5 0.8)
+		("set_armor" args gasdrop 0.5 0.8)
+		("set_armor" args gasdrop_r 0.5 0.8)
+		("set_armor" args gasdrop_l 0.5 0.8)
+		("set_armor" args light_small 0.5 0.8)
+		("set_armor" args jetengine_r 0.5 0.8)
+		("set_armor" args jetengine_l 0.5 0.8)
+		("set_armor" args horn 0.5 0.8)
+		("set_armor" args railing_b_armor 0.5 0.8)
+		
+;all detail comp
+		("set_armor" args RightArm 0.5 0.8)
+		("set_armor" args armour_shoulder_right 0.5 0.8)
+		("set_armor" args RightForeArm 0.5 0.8)
+		("set_armor" args RightHand 0.5 0.8)
+		("set_armor" args RightHandToe 0.5 0.8)
+		("set_armor" args RightUpLeg 0.5 0.8)
+		("set_armor" args RightUpLeg1 0.5 0.8)
+		("set_armor" args armour_knee_right 0.5 0.8)
+		("set_armor" args RightUpLeg_knee 0.5 0.8)
+		("set_armor" args RightLeg 0.5 0.8)
+		("set_armor" args RightFoot 0.5 0.8)
+		("set_armor" args righttoebase 0.5 0.8)
+		("set_armor" args righttoe 0.5 0.8)
+		("set_armor" args righttoe1 0.5 0.8)
+		("set_armor" args righttoe2 0.5 0.8)
+		("set_armor" args righttoe3 0.5 0.8)
+		("set_armor" args righttoe4 0.5 0.8)
+		("set_armor" args RightFingerBase 0.5 0.8)
+		("set_armor" args LeftFingerBase 0.5 0.8)
+		("set_armor" args lefttoe 0.5 0.8)
+		("set_armor" args lefttoe1 0.5 0.8)
+		("set_armor" args lefttoe2 0.5 0.8)
+		("set_armor" args lefttoe3 0.5 0.8)
+		("set_armor" args lefttoe4 0.5 0.8)
+		("set_armor" args RightShoulder 0.5 0.8)
+		("set_armor" args leftArm 0.5 0.8)
+		("set_armor" args armour_shoulder_left 0.5 0.8)
+		("set_armor" args leftForeArm 0.5 0.8)
+		("set_armor" args leftHand 0.5 0.8)
+		("set_armor" args leftHandToe 0.5 0.8)
+		("set_armor" args leftUpLeg 0.5 0.8)
+		("set_armor" args leftUpLeg1 0.5 0.8)
+		("set_armor" args armour_knee_left 0.5 0.8)
+		("set_armor" args leftUpLeg_knee 0.5 0.8)
+		("set_armor" args leftLeg 0.5 0.8)
+		("set_armor" args leftFoot 0.5 0.8)
+		("set_armor" args lefttoebase 0.5 0.8)
+		("set_armor" args leftShoulder 0.5 0.8)		
+		("set_armor" args kneepad_l 0.5 0.8)
+		("set_armor" args kneepad_r 0.5 0.8)
+		("set_armor" args hips 0.5 0.8)
+		("set_armor" args armor 0.5 0.8)
+		("set_armor" args front_armor 0.5 0.8)
+		("set_armor" args down_armor 0.5 0.8)
+		("set_armor" args armour_head 0.5 0.8)
+		("set_armor" args armour_head_lower 0.5 0.8)
+		("set_armor" args armour_prot_right 0.5 0.8)
+		("set_armor" args armour_prot_left 0.5 0.8)
+		("set_armor" args armour_head_upper 0.5 0.8)
+		("set_armor" args upper_armor_raid 0.5 0.8)
+		("set_armor" args front_armor_raid 0.5 0.8)
+		("set_armor" args armor_head_wire 0.5 0.8)
+		("set_armor" args back_armor 0.5 0.8)
+		("set_armor" args front_plate_l 0.5 0.8)
+		("set_armor" args front_plate_r 0.5 0.8)
+		("set_armor" args cyl_prot_plate_right 0.5 0.8)
+		("set_armor" args cyl_prot_plate_left 0.5 0.8)
+		("set_armor" args knee_plate_l 0.5 0.8)
+		("set_armor" args knee_plate_r 0.5 0.8)		
+		("set_armor" args CentralUpperLeg 0.5 0.8)
+		("set_armor" args CentralLeg 0.5 0.8)
+		("set_armor" args CentralFoot 0.5 0.8)
+		("set_armor" args CentralToeBase 0.5 0.8)	
+		("set_armor" args RightUpLeg_cylplate_01 		0.5 0.8)
+		("set_armor" args RightUpLeg_cylplate_02 		0.5 0.8)		
+		("set_armor" args RightUpLeg1_cylplate_01 		0.5 0.8)
+		("set_armor" args RightUpLeg1_cylplate_02 		0.5 0.8)
+		("set_armor" args RightFoot_cylplate_01 		0.5 0.8)
+		("set_armor" args RightFoot_cylplate_02 		0.5 0.8)
+		("set_armor" args LeftUpLeg_cylplate_01 		0.5 0.8)
+		("set_armor" args LeftUpLeg_cylplate_02 		0.5 0.8)		
+		("set_armor" args LeftUpLeg1_cylplate_01 		0.5 0.8)
+		("set_armor" args LeftUpLeg1_cylplate_02 		0.5 0.8)
+		("set_armor" args LeftFoot_cylplate_01 		0.5 0.8)
+		("set_armor" args LeftFoot_cylplate_02 		0.5 0.8)
+				
+		("set_armor" args front_left_leg_hatch 		0.5 0.8)
+		("set_armor" args front_right_leg_hatch 		0.5 0.8)
+		("set_armor" args back_left_leg_hatch 		0.5 0.8)
+		("set_armor" args back_right_leg_hatch 		0.5 0.8)
+
+		("set_armor" args armor_ballistic_left_hand 0.5 0.8)
+		("set_armor" args armor_ballistic_left_fore_arm 0.5 0.8)
+		("set_armor" args armor_ballistic_left_arm 0.5 0.8)
+		("set_armor" args armor_ballistic_left_up_leg 0.5 0.8)
+		("set_armor" args armor_ballistic_left_leg 0.5 0.8)
+		("set_armor" args armor_ballistic_left_foot_01 0.5 0.8)
+		("set_armor" args armor_ballistic_left_foot_02 0.5 0.8)
+		("set_armor" args armor_ballistic_right_hand 0.5 0.8)
+		("set_armor" args armor_ballistic_right_fore_arm 0.5 0.8)
+		("set_armor" args armor_ballistic_right_leg 0.5 0.8)
+		("set_armor" args armor_ballistic_right_foot_01 0.5 0.8)
+		("set_armor" args armor_ballistic_right_foot_02 0.5 0.8)
+		("set_armor" args armor_fire_retardant_knee_right_leg 0.5 0.8)
+		("set_armor" args armor_fire_retardant_knee_left_leg 0.5 0.8)
+		("set_armor" args Armor_Concussive_front 0.5 0.8)
+		("set_armor" args armor_right_engine_wire 0.5 0.8) ;hunter
+		("set_armor" args armor_left_engine_wire 0.5 0.8) ;hunter
+		("set_armor" args armor_cpu_wire 0.5 0.8) ;hunter
+		("set_armor" args Armor_Concussive 0.5 0.8)
+		("set_armor" args armor_ballistic_right_up_leg 0.5 0.8)
+		("set_armor" args armor_ballistic_right_arm 0.5 0.8)	
+		("set_armor" args armor_knee_f_r 			0.5 0.8)	
+		("set_armor" args armor_knee_f_l 			0.5 0.8)	
+		("set_armor" args armor_knee_f_l_03 		0.5 0.8)	
+		("set_armor" args armor_knee_f_r_03 		0.5 0.8)	
+		("set_armor" args armor_knee_f_r_02 		0.5 0.8)	
+		("set_armor" args armor_knee_f_l_02 		0.5 0.8)	
+		("set_armor" args armor_knee_r_r_03 		0.5 0.8)	
+		("set_armor" args armor_knee_r_l_03 		0.5 0.8)	
+		("set_armor" args armor_knee_r_r_02 		0.5 0.8)	
+		("set_armor" args armor_knee_r_l_02 		0.5 0.8)	
+		("set_armor" args armor_knee_r_r 			0.5 0.8)	
+		("set_armor" args armor_knee_r_l 			0.5 0.8)	
+		("set_armor" args armor_foot_f_l_03 		0.5 0.8)	
+		("set_armor" args armor_foot_f_l_03 		0.5 0.8)	
+		("set_armor" args armor_foot_f_r_02 		0.5 0.8)	
+		("set_armor" args armor_foot_f_l_02 		0.5 0.8)	
+		("set_armor" args armor_foot_r_l_03 		0.5 0.8)	
+		("set_armor" args armor_foot_r_l_03 		0.5 0.8)	
+		("set_armor" args armor_foot_r_r_02 		0.5 0.8)	
+		("set_armor" args armor_foot_r_l_02 		0.5 0.8)	
+		("set_armor" args armor_foot_f_r_02_grill_inner 		0.5 0.8)	
+		("set_armor" args armor_foot_f_r_02_grill_outer 		0.5 0.8)	
+		("set_armor" args armor_foot_f_l_02_grill_inner 		0.5 0.8)	
+		("set_armor" args armor_foot_f_l_02_grill_outer 		0.5 0.8)	
+		("set_armor" args armor_foot_r_r_02_grill_inner 		0.5 0.8)	
+		("set_armor" args armor_foot_r_r_02_grill_outer 		0.5 0.8)	
+		("set_armor" args armor_foot_r_l_02_grill_inner 		0.5 0.8)	
+		("set_armor" args armor_foot_r_l_02_grill_outer 		0.5 0.8)	
+
+		("set_armor" args trackLeft 							0.5 0.8) ;lynx
+		("set_armor" args trackRight 							0.5 0.8);lynx
+
+	}
+)
+("basic_armor")	
+
+(define "volume_body"
+	{volume %0
+		{tags %1}
+		{component %1}
+		{thickness %2}
+		{material "%3"}	
+	}
+)	
+;									all	front top rear bottom ; material steel armor
+("volume_body" args "body" 		"main_body"    10  steel )
+("volume_body" args "body_c" 	"main_body"    10  steel )
+("volume_body" args "body_r" 	"main_body"    10  steel )
+("volume_body" args "body_l" 	"main_body"    10  steel )
+("volume_body" args "body_d" 	"main_body"    10  steel )
+
+(define "volume_glass_reinforced"
+	{volume %0
+		;{tags %1}
+		{component "light_small"}
+		{thickness %1}
+		{material "wound_lamp"}	
+ 	}
+)	
+("volume_glass_reinforced" args "head_light_small_00" 2 )
+("volume_glass_reinforced" args "head_light_small_01" 2 )
+("volume_glass_reinforced" args "head_light_small_02" 2 )
+
+
+(define "volume_component"
+	{volume %0
+		{tags %1}
+		{component %0}
+		{thickness %2}
+		{material "%3"}	
+	}
+)	
+;	("volume_component" args "RightToeBase" 		"limbs"    3  steel )
+
+(define "volume_kevlar"
+	{volume %0
+		;{tags %1}
+		{component %1}
+		{thickness %2}
+		{material "kevlar"}	
+ 	}
+)	
+
+
+(define "make_component"
+	{volume %0
+		{component %1}
+		{tags %1}
+	}
+)
+
+(define "body"
+	("make_component" args "body" "main_body")
+	("make_component" args "body1" "main_body")
+	("make_component" args "body2" "main_body")
+	("make_component" args "body3" "main_body")
+	("make_component" args "body4" "main_body")
+	("make_component" args "body5" "main_body")
+	("make_component" args "body6" "main_body")
+	("make_component" args "body7" "main_body")
+	("make_component" args "body8" "main_body")
+
+	{component "main_body"
+		{RepairTime %repair}
+		{RepairOrder 0}
+	}
+)
+
+
+(define "armor_set"	
+	{volume "armor_main_50_%0"
+		{material "armor"}
+		{tags "armor"}
+		{thickness	50
+			{front 50}
+			{top 120}		; Glacis
+			{rear 50}
+			{bottom 120}
+		}
+	}
+	{volume "armor_main_25_%0"
+		{material "armor"}
+		{tags "armor"}
+		{thickness	20
+			{front 20}
+			{top 15}		; Glacis
+			{rear 20}
+			{bottom 12}
+		}
+	}
+	{volume "armor_main_20_%0"
+		{material "armor"}
+		{tags "armor"}
+		{thickness	20
+			{front 20}
+			{top 15}		; Glacis
+			{rear 20}
+			{bottom 12}
+		}
+	}
+	{volume "armor_main_10_%0"
+		{material "armor"}
+		{tags "armor"}
+		{thickness	10
+			{front 10}
+			{top 7}		; Glacis
+			{rear 8}
+			{bottom 7}
+		}
+	}
+	{volume "armor_main_15_%0"
+		{material "armor"}
+		{tags "armor"}
+		{thickness	15
+			{front 15}
+			{top 7}		; Glacis
+			{rear 8}
+			{bottom 15}
+		}
+	}
+)
+("armor_set" args 00)
+("armor_set" args 01)
+("armor_set" args 02)
+("armor_set" args 03)
+("armor_set" args 04)
+
+
+(define "composite_back_right"	
+	{volume "%0"
+		{tags "armor_composite_back_right"}
+	}
+)
+(define "composite_front_right"	
+	{volume "%0"
+		{tags "armor_composite_front_right"}
+	}
+)
+(define "composite_back_left"	
+	{volume "%0"
+		{tags "armor_composite_back_left"}
+	}
+)
+(define "composite_front_left"	
+	{volume "%0"
+		{tags "armor_composite_front_left"}
+	}
+)
+
+(define "composite"	
+	{volume "%0"
+		{component "%0"}
+		{material "armor"}
+		{tags "armor_composite_rus"}
+		{thickness	10}
+	}
+	{component "%0"
+		{RepairTime 5}
+		{tags "%0"}
+	}
+
+)
+("composite" args sidearmor_00_rus_r)
+("composite" args sidearmor_01_rus_r)
+("composite" args sidearmor_02_rus_r)
+("composite" args sidearmor_03_rus_r)
+("composite" args sidearmor_00_rus_l)
+("composite" args sidearmor_01_rus_l)
+("composite" args sidearmor_02_rus_l)
+("composite" args sidearmor_03_rus_l)
+
+
+(define "composite"	
+	{volume "%0"
+		{component "%0"}
+		{material "armor"}
+		{tags "armor_composite"}
+		{thickness	30}
+	}
+	{component "%0"
+		{RepairTime 5}
+		{tags "%0"}
+	}
+
+)
+("composite" args sidearmor_00_r)
+("composite" args sidearmor_01_r)
+("composite" args sidearmor_02_r)
+("composite" args sidearmor_03_r)
+("composite" args sidearmor_04_r)
+("composite" args sidearmor_05_r)
+("composite" args sidearmor_06_r)
+("composite" args sidearmor_07_r)
+("composite" args sidearmor_08_r)
+("composite" args sidearmor_09_r)
+("composite" args sidearmor_10_r)
+("composite" args sidearmor_11_r)
+("composite" args sidearmor_12_r)
+("composite" args sidearmor_13_r)
+("composite" args sidearmor_14_r)
+("composite" args sidearmor_15_r)
+("composite" args sidearmor_16_r)
+("composite" args sidearmor_17_r)
+("composite" args sidearmor_18_r)
+("composite" args sidearmor_19_r)
+("composite" args sidearmor_20_r)
+("composite" args sidearmor_21_r)
+("composite" args sidearmor_22_r)
+("composite" args sidearmor_23_r)
+("composite" args sidearmor_24_r)
+("composite" args sidearmor_25_r)
+("composite" args sidearmor_26_r)
+("composite" args sidearmor_27_r)
+("composite" args sidearmor_28_r)
+("composite" args sidearmor_29_r)
+("composite" args sidearmor_31_r)
+("composite" args sidearmor_32_r)
+("composite" args sidearmor_33_r)
+("composite" args sidearmor_34_r)
+("composite" args sidearmor_35_r)
+("composite" args sidearmor_36_r)
+("composite" args sidearmor_37_r)
+("composite" args sidearmor_38_r)
+("composite" args sidearmor_39_r)
+("composite" args sidearmor_00_l)
+("composite" args sidearmor_01_l)
+("composite" args sidearmor_02_l)
+("composite" args sidearmor_03_l)
+("composite" args sidearmor_04_l)
+("composite" args sidearmor_05_l)
+("composite" args sidearmor_06_l)
+("composite" args sidearmor_07_l)
+("composite" args sidearmor_08_l)
+("composite" args sidearmor_09_l)
+("composite" args sidearmor_10_l)
+("composite" args sidearmor_11_l)
+("composite" args sidearmor_12_l)
+("composite" args sidearmor_13_l)
+("composite" args sidearmor_14_l)
+("composite" args sidearmor_15_l)
+("composite" args sidearmor_16_l)
+("composite" args sidearmor_17_l)
+("composite" args sidearmor_18_l)
+("composite" args sidearmor_19_l)
+("composite" args sidearmor_20_l)
+("composite" args sidearmor_21_l)
+("composite" args sidearmor_22_l)
+("composite" args sidearmor_23_l)
+("composite" args sidearmor_24_l)
+("composite" args sidearmor_25_l)
+("composite" args sidearmor_26_l)
+("composite" args sidearmor_27_l)
+("composite" args sidearmor_28_l)
+("composite" args sidearmor_29_l)
+("composite" args sidearmor_31_l)
+("composite" args sidearmor_32_l)
+("composite" args sidearmor_33_l)
+("composite" args sidearmor_34_l)
+("composite" args sidearmor_35_l)
+("composite" args sidearmor_36_l)
+("composite" args sidearmor_37_l)
+("composite" args sidearmor_38_l)
+("composite" args sidearmor_39_l)
+
+("composite" args reactive_armor_r_class_b)
+("composite" args reactive_armor_r2_class_b)
+("composite" args reactive_armor_l_class_b)
+("composite" args reactive_armor_l2_class_b)
+
+(define "cylplate"	
+	{volume "%0"
+		{component "%0"}
+		{material "steel"}
+		{tags "plate_leg"}
+		{thickness	15}
+	}
+	{component "%0"
+		{RepairTime 5}
+		{tags "%0"}
+	}
+
+)
+("cylplate" args RightUpLeg_cylplate_01)
+("cylplate" args RightUpLeg_cylplate_02)
+("cylplate" args RightUpLeg1_cylplate_01)
+("cylplate" args RightUpLeg1_cylplate_02)
+("cylplate" args RightFoot_cylplate_01)
+("cylplate" args RightFoot_cylplate_02)
+("cylplate" args LeftUpLeg_cylplate_01)
+("cylplate" args LeftUpLeg_cylplate_02)
+("cylplate" args LeftUpLeg1_cylplate_01)
+("cylplate" args LeftUpLeg1_cylplate_02)
+("cylplate" args LeftFoot_cylplate_01)
+("cylplate" args LeftFoot_cylplate_02)
+
+
+{volume "head"
+	{component "head"}
+	{tags "head" "damaged_component" }
+}
+
+{volume "leg_motor_right"
+		{material "steel"}
+		{thickness 4}
+		{component "leg_motor_right"}
+		{tags "leg_motor_right" "damaged_component" }
+}
+{volume "leg_motor_left"
+		{material "steel"}
+		{thickness 4}
+		{component "leg_motor_left"}
+		{tags "leg_motor_left" "damaged_component" }
+}
+
+{volume "leg_regulator_large_right"
+		{material "steel"}
+		{thickness 4}
+		{component "leg_regulator_large_right"}
+		{tags "leg_regulator_large_right" "damaged_component" }
+}
+{volume "leg_regulator_large_left"
+		{material "steel"}
+		{thickness 4}
+		{component "leg_regulator_large_left"}
+		{tags "leg_regulator_large_left" "damaged_component" }
+}
+
+{volume "cooling_systems"
+		{material "steel"}
+		{thickness 6}
+		{component "cooling_systems"}
+		{tags "cooling_systems" }
+}
+
+
+{volume "battery_r"
+		{material "misc"}
+		{thickness 3}
+		{component "battery_r"}
+		{tags "battery_r"  "damaged_component" "main_organ"}
+}
+{volume "battery_l"
+		{material "misc"}
+		{thickness 3}
+		{component "battery_r"}
+		{tags "battery_r"  "damaged_component" "main_organ"}
+}
+
+{volume "transmission"
+	{tags "transmission" "main_organ"}
+	{component "transmission"}
+}
+
+{volume "body"
+	{component "main_body"}
+	{tags "body"}
+}
+
+{volume "engine"
+	{component "engine"}
+	{tags "engine"}
+	{thickness 1}
+}
+
+{volume "visor_head"
+	{material "misc"}
+	{tags "visor_round_mesh" "visor_target" "visor" "damaged_component" }
+	{component "visor_head"}
+}
+{Volume "fueltank"
+	{material "steel"}
+	{thickness 15}
+	{tags "fueltank" }
+	{component "fueltank"}
+}
+
+(define "fans_set"
+	{volume %0
+		{material "steel"}
+		{thickness 5}
+		{tags "fan"}
+		{component %0}
+	}
+	{component %0
+		{RepairTime 2}
+		{tags "fan"}
+	}
+)
+("fans_set" args "backfan_01")
+("fans_set" args "backfan_02")
+("fans_set" args "backfan_03")
+
+
+
+
+{Volume "fuel"
+	{material "steel"}
+	{thickness 7}
+	{tags "fuel" }
+	{component "fuel"}
+}
+{Volume "fuel_small"
+	{material "steel"}
+	{thickness 7}
+	{tags "fuel_small" }
+	{component "fuel_small"}
+}
+
+{Volume "fuel_r"
+	{material "steel"}
+	{thickness 7}
+	{tags "fuel_r" }
+	{component "fuel_r"}
+}
+
+{Volume "fuel_l"
+	{material "steel"}
+	{thickness 7}
+	{tags "fuel_l" }
+	{component "fuel_l"}
+}
+
+{volume "wire"
+	{component "wire"}
+	{tags "wire" "damaged_component" }
+	{thickness hollow 1}
+}
+
+{volume "wire_small"
+	{component "wire_small"}
+	{tags "wire_small"}
+	{thickness hollow 1}
+}
+
+
+{Volume "pestcontainer_hatch_bot"
+	{material "steel"}
+	{thickness 4}
+}
+{Volume "pestcontainer_hatch_front"
+	{material "steel"}
+	{thickness 4}
+}
+
+
+{Volume "Concussion_Pulse_r"
+	{material "steel"}
+	{thickness 5}
+	{component "Concussion_Pulse_r"}
+	{tags "Concussion_Pulse_r"  "damaged_component" }
+}
+{Volume "Concussion_Pulse_l"
+	{material "steel"}
+	{thickness 5}
+	{component "Concussion_Pulse_l"}
+	{tags "Concussion_Pulse_l"  "damaged_component" }
+}
+
+{Volume "gasdrop_l"
+	{material "steel"}
+	{thickness 5}
+	{component "gasdrop_l"}
+	{tags "gasdrop"  "damaged_component" }
+}
+
+{Volume "gasdrop_r"
+	{material "steel"}
+	{thickness 5}
+	{component "gasdrop_r"}
+	{tags "gasdrop"  "damaged_component" }
+}
+
+{volume "blade_l"
+	{component "blade"}
+	{tags "blade"}
+	{thickness 3}
+}
+{volume "blade"
+	{component "blade"}
+	{tags "blade"}
+	{thickness 3}
+}
+
+{volume "ground"
+	{tags "no_burn" }
+	{able
+		{window}
+		{contact 0} {contact_ground 1}
+		{bullet 0} {throwing 0} {obstacle 0}
+		{overlap 0} {visible 0}
+		{touch 0}
+	}
+	{density 0}
+}
+
+{volume "sawblade"
+	{tags "no_burn" "backup_melee"}
+	{able
+		{window}
+		{contact 1} {contact_ground 1}
+		{bullet 1} {throwing 0} {obstacle 0}
+		{overlap 1} {visible 0}
+		{touch 0}
+	}
+	{density 0}
+}
+
+{volume "blade_overlap"
+	{tags "no_burn"}
+	{able
+		{window}
+		{contact 0} {contact_ground 0}
+		{bullet 0} {throwing 0} {obstacle 0}
+		{overlap 1} {visible 0}
+		{touch 0}
+	}
+	{density 0}
+}
+
+{volume "fx_frontplate_00"
+	{tags "no_burn"}
+	{able
+		{window}
+		{contact 0} {contact_ground 0}
+		{bullet 0} {throwing 0} {obstacle 0}
+		{overlap 0} {visible 0}
+		{touch 0}
+	}
+	{density 0}
+}
+{volume "fx_frontplate_01"
+	{tags "no_burn"}
+	{able
+		{window}
+		{contact 0} {contact_ground 0}
+		{bullet 0} {throwing 0} {obstacle 0}
+		{overlap 0} {visible 0}
+		{touch 0}
+	}
+	{density 0}
+}
+{volume "fx_frontplate_02"
+	{tags "no_burn"}
+	{able
+		{window}
+		{contact 0} {contact_ground 0}
+		{bullet 0} {throwing 0} {obstacle 0}
+		{overlap 0} {visible 0}
+		{touch 0}
+	}
+	{density 0}
+}
+
+{volume "back_melee"
+	{tags "no_burn"}
+	{able
+		{window}
+		{contact 0} {contact_ground 0}
+		{bullet 0} {throwing 0} {obstacle 0}
+		{overlap 1} {visible 0}
+		{touch 0}
+	}
+	{density 0}
+}
+
+
+
+{volume "barrel_heat_l"
+	{tags "no_burn"}
+	{able
+		{window}
+		{contact 0} {contact_ground 0}
+		{bullet 0} {throwing 0} {obstacle 0}
+		{overlap 0} {visible 0}
+		{touch 0}
+	}
+	{density 0}
+}
+{volume "barrel_heat_r"
+	{tags "no_burn"}
+	{able
+		{window}
+		{contact 0} {contact_ground 0}
+		{bullet 0} {throwing 0} {obstacle 0}
+		{overlap 0} {visible 0}
+		{touch 0}
+	}
+	{density 0}
+}
+{volume "rocket00_fx"
+	{tags "no_burn"}
+	{able
+		{window}
+		{contact 0} {contact_ground 0}
+		{bullet 0} {throwing 0} {obstacle 0}
+		{overlap 0} {visible 0}
+		{touch 0}
+	}
+	{density 0}
+}
+{volume "rocket01_fx"
+	{tags "no_burn"}
+	{able
+		{window}
+		{contact 0} {contact_ground 0}
+		{bullet 0} {throwing 0} {obstacle 0}
+		{overlap 0} {visible 0}
+		{touch 0}
+	}
+	{density 0}
+}
+
+	
+{perks
+	{component "main_body"
+		{category "main_body"}
+		{armor_damage_modifier 1} ;// multiplier adjusts ratio of which part of penetration does damage to component. (shell penetration - armor thickness) verses minimumDamageModifier. values < 1 = less damage done by over penetration.
+	}
+	{component "engine"
+		{category "engine_machinery"}
+		{armor_damage_modifier 1} ;// multiplier adjusts ratio of which part of penetration does damage to component. (shell penetration - armor thickness) verses minimumDamageModifier. values < 1 = less damage done by over penetration.
+	}
+	{component "pestcontainer"
+		{category "engine_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "Drill"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "Drillmount"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "drill_hatch_l"
+		{category "component_machinery_hatch"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "drill_hatch_r"
+		{category "component_machinery_hatch"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "front_hatch"
+		{category "component_machinery_hatch"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "front_hatch_r"
+		{category "component_machinery_hatch"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "front_hatch_l"
+		{category "component_machinery_hatch"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "back_hatch_r"
+		{category "component_machinery_hatch"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "back_hatch_l"
+		{category "component_machinery_hatch"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "structure_plate_left"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "structure_plate_right"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "front_core_panel"
+		{category "component_machinery_hatch"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "Concussion_Pulse_l"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "Concussion_Pulse_r"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "cooling_systems"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "transmission"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "backlegs_mount"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "frontlegs_mount"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "fueltank"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "fueltank_l"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "fueltank_r"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "fueltank_c"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "fuel"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "fuel_l"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "fuel_r"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "tank_l"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "tank_r"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "fuel_small"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "visor_head"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "visor_body"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "head_organ"
+		{category "component_machinery_organ"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "body_organ"
+		{category "component_machinery_organ"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "back_engine_organ"
+		{category "component_machinery_organ"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "organs_engine_drive_left"
+		{category "component_machinery_organ"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "organs_engine_drive_right"
+		{category "component_machinery_organ"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "leg_motor_right"
+		{category "component_machinery_organ"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "leg_motor_left"
+		{category "component_machinery_organ"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "leg_regulator_large_left"
+		{category "component_machinery_organ"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "leg_regulator_large_right"
+		{category "component_machinery_organ"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "engine_move"
+		{category "component_machinery_organ"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "head"
+		{category "component_machinery_organ"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "legplate_right"
+		{category "component_machinery_hatch"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "legplate_left"
+		{category "component_machinery_hatch"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "sideplate_right"
+		{category "component_machinery_hatch"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "sideplate_left"
+		{category "component_machinery_hatch"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "backfan_01"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "backfan_02"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "backfan_03"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "head_sideplate_front_r"
+		{category "component_machinery_hatch"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "head_sideplate_front_l"
+		{category "component_machinery_hatch"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "head_sideplate_back_r"
+		{category "component_machinery_hatch"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "head_sideplate_back_l"
+		{category "component_machinery_hatch"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "organs_hip_right"
+		{category "component_machinery_organ"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "organs_hip_left"
+		{category "component_machinery_organ"}
+		;{armor_damage_modifier 0.1} 
+	}		
+	{component "nanotech_unit_r" ;wolf
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "nanotech_unit_l" ;wolf
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "RightArm_support" ;wolf
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "LeftArm_support" ;wolf
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+
+	{component "eyes" ;wolf
+		{category "component_machinery_organ"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "hydraulic" ;wolf
+		{category "component_machinery_organ"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "hydraulic_knee_right"  
+		{category "component_machinery_organ"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "hydraulic_knee_left"
+		{category "component_machinery_organ"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "organs_leg_right"
+		{category "component_machinery_organ"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "organs_leg_left"
+		{category "component_machinery_organ"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "organs_waist_01"
+		{category "component_machinery_organ"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "organs_waist_02"
+		{category "component_machinery_organ"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "organs_waist_03"
+		{category "component_machinery_organ"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "right_engine"
+		{category "component_machinery_organ"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "left_engine"
+		{category "component_machinery_organ"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "right_engine2"
+		{category "component_machinery_organ"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "left_engine2"
+		{category "component_machinery_organ"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "engine"
+		{category "component_machinery_organ"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "cpu"
+		{category "component_machinery_organ"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "wire"
+		{category "component_machinery_organ"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "head_joint"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "battery"
+		{category "component_machinery_organ"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "head_arm"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	
+	{component "missile"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "rocket"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "rocket_cluster"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}	
+	{component "missile_l"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "missile_r"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "missilelauncher"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "ammo"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "mgun"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "sniper"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "flamethrower"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "fuel_rods_r" ;hunter flame
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "fuel_rods_l";hunter flame
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "canister_right_01";hunter can
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "canister_right_02";hunter can
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "canister_left_01";hunter can
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "canister_left_02";hunter can
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "shotgun"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "wire_small"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "head_wire"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "gasdrop_l"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "gasdrop_r"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "gasdrop"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "Left_leg"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "Right_leg"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "LeftWeaponAttach"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "RightWeaponAttach"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "neck"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "neck1"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "bridge"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "bridge_container"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}	
+	{component "frontplate"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "horn"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "jetengine_l"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "jetengine_r"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "light_small"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "RightUpperLeg"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+
+	{component "LeftUpperLeg"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "CentralUpperLeg"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "CentralLeg"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "CentralFoot"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "CentralToeBase"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "RightArm"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "armour_shoulder_right"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "RightForeArm"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "RightHand"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "RightHandToe"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "RightUpLeg"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "RightUpLeg1"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "armour_knee_right"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "RightUpLeg_knee"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "RightLeg"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "RightFoot"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "righttoebase"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "righttoe"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "righttoe1"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "righttoe2"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "righttoe3"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "righttoe4"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "RightFingerBase"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "LeftFingerBase"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "lefttoe"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "lefttoe1"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "lefttoe2"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "lefttoe3"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "lefttoe4"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "RightShoulder"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "leftArm"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "armour_shoulder_left"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "leftForeArm"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "leftHand"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "leftHandToe"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "leftUpLeg"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "leftUpLeg1"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "armour_knee_left"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "leftUpLeg_knee"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "leftLeg"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "leftFoot"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "lefttoebase"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "leftShoulder"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "armour_head"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "down_armor"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "front_armor"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "armor"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "hips"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "kneepad_r"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "kneepad_l"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "cyl_prot_plate_right"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "cyl_prot_plate_left"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "knee_plate_l"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "knee_plate_r"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "front_armor_raid"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "upper_armor_raid"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "armour_head_upper"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "armour_prot_left"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "armour_prot_right"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "armour_head_lower"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "front_plate_r"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "front_plate_l"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "back_armor"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "armor_head_wire"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+
+	{component "right_armplate"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "left_armplate"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	
+	{component "armorplate_front_left"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "armorplate_front_right"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "armorplate_back_left"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "armorplate_back_right"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	
+	{component "RightUpLeg_cylplate_01"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "RightUpLeg_cylplate_02"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "RightUpLeg1_cylplate_01"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "RightUpLeg1_cylplate_02"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "RightFoot_cylplate_01"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "RightFoot_cylplate_02"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "LeftUpLeg_cylplate_01"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "LeftUpLeg_cylplate_02"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "LeftUpLeg1_cylplate_01"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "LeftUpLeg1_cylplate_02"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "LeftFoot_cylplate_01"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "LeftFoot_cylplate_02"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	
+	{component "front_left_leg_hatch"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "back_left_leg_hatch"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "front_right_leg_hatch"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "back_right_leg_hatch"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "railing_b_armor"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "armor_ballistic_left_hand"
+		{category "component_machinery"}
+	}
+	{component "armor_ballistic_left_fore_arm"
+		{category "component_machinery"}
+	}
+	{component "armor_ballistic_left_arm"
+		{category "component_machinery"}
+	}
+	{component "armor_ballistic_left_up_leg"
+		{category "component_machinery"}
+	}
+	{component "armor_ballistic_left_leg"
+		{category "component_machinery"}
+	}
+	{component "armor_ballistic_left_foot_01"
+		{category "component_machinery"}
+	}
+	{component "armor_ballistic_left_foot_02"
+		{category "component_machinery"}
+	}
+	{component "armor_ballistic_right_hand"
+		{category "component_machinery"}
+	}
+	{component "armor_ballistic_right_fore_arm"
+		{category "component_machinery"}
+	}
+	{component "armor_ballistic_right_leg"
+		{category "component_machinery"}
+	}
+	{component "armor_ballistic_right_foot_01"
+		{category "component_machinery"}
+	}
+	{component "armor_ballistic_right_foot_02"
+		{category "component_machinery"}
+	}
+	{component "armor_fire_retardant_knee_right_leg"
+		{category "component_machinery"}
+	}
+	{component "armor_fire_retardant_knee_left_leg"
+		{category "component_machinery"}
+	}
+	{component "armor_knee_f_r"
+		{category "component_machinery"}
+	}
+	{component "armor_knee_f_l"
+		{category "component_machinery"}
+	}
+	{component "armor_knee_f_l_02"
+		{category "component_machinery"}
+	}
+	{component "armor_knee_f_r_02"
+		{category "component_machinery"}
+	}
+	{component "armor_knee_f_l_03"
+		{category "component_machinery"}
+	}
+	{component "armor_knee_f_r_03"
+		{category "component_machinery"}
+	}
+	{component "armor_knee_r_r"
+		{category "component_machinery"}
+	}
+	{component "armor_knee_r_l"
+		{category "component_machinery"}
+	}
+	{component "armor_knee_r_l_02"
+		{category "component_machinery"}
+	}
+	{component "armor_knee_r_r_02"
+		{category "component_machinery"}
+	}
+	{component "armor_knee_r_l_03"
+		{category "component_machinery"}
+	}
+	{component "armor_knee_r_r_03"
+		{category "component_machinery"}
+	}
+	{component "trackLeft"
+		{category "component_machinery"}
+	}
+	{component "trackRight"
+		{category "component_machinery"}
+	}
+	{blastwave_modifier 30.0}
+}
+(define "orientation_gun"
+	{volume "%0"
+		{tags "no_target" "no_burn"}
+		{able
+			{nolook 1}
+			{window}
+			{contact 0} {contact_ground 0}
+			{bullet 0} {throwing 0} {obstacle 0}
+			{overlap 0} {visible 0}
+			{touch 0}
+		}
+		{density 0}
+	}
+)
+("orientation_gun" args front_hit)
+("orientation_gun" args back_hit)
+("orientation_gun" args left_hit)
+("orientation_gun" args right_hit)
+("orientation_gun" args front_left_hit)
+("orientation_gun" args front_right_hit)
+("orientation_gun" args back_left_hit)
+("orientation_gun" args back_right_hit)
+
+
+
+{volume "check_limits"
+	{Tags  "no_burn" "check_limits"}
+	{able
+		{window}
+		{contact 0} {contact_ground 0}
+		{bullet 0} {throwing 0} {obstacle 0}
+		{overlap 0} {visible 0}
+		{touch 0}
+	}
+	{density 0}
+}
+{volume "check_limits_restore_r"
+	{Tags  "no_burn" "check_limits_restore"}
+	{able
+		{window}
+		{contact 0} {contact_ground 0}
+		{bullet 0} {throwing 0} {obstacle 0}
+		{overlap 0} {visible 0}
+		{touch 0}
+	}
+	{density 0}
+}
+{volume "check_limits_restore_l"
+	{Tags  "no_burn" "check_limits_restore"}
+	{able
+		{window}
+		{contact 0} {contact_ground 0}
+		{bullet 0} {throwing 0} {obstacle 0}
+		{overlap 0} {visible 0}
+		{touch 0}
+	}
+	{density 0}
+}
+{volume "check_limits_restore_up"
+	{Tags  "no_burn" "check_limits_restore"}
+	{able
+		{window}
+		{contact 0} {contact_ground 0}
+		{bullet 0} {throwing 0} {obstacle 0}
+		{overlap 0} {visible 0}
+		{touch 0}
+	}
+	{density 0}
+}
+{volume "inside_blast"
+	{Tags  "no_burn" "inside_blast"}
+	{able
+		{window}
+		{contact 0} {contact_ground 0}
+		{bullet 0} {throwing 0} {obstacle 0}
+		{overlap 0} {visible 0}
+		{touch 0}
+	}
+	{density 0}
+}
+
+
+(define "ems_volume"
+	{volume "%0"
+		{tags "no_burn"}
+		{able
+			{window}
+			{contact 0} {contact_ground 0}
+			{bullet 0} {throwing 0} {obstacle 0}
+			{overlap 0} {visible 0}
+			{touch 0}
+		}
+		{density 0}
+	}
+)
+("ems_volume" args visor_ems)
+("ems_volume" args fx_tail)
+
+{component "barrel"
+	{RepairTime 10}
+	{tags "barrel"}
+}
+
+{component "turret"
+	{RepairTime 10}
+	{tags "turret"}
+}
+
+{component "joint"
+	{RepairTime 10}
+	{tags "joint"}
+}
+
+{component "magazine"
+	{RepairTime 10}
+	{tags "magazine"}
+}
+
+{component "pestcontainer"
+	{RepairTime 10}
+	{tags "pestcontainer"}
+}
+
+
+{component "Drill"
+	{RepairTime 10}
+	{tags "Drill"}
+}
+{component "drill_hatch_l"
+	{RepairTime 3}
+	{tags "drill_hatch_l"}
+}
+{component "drill_hatch_r"
+	{RepairTime 3}
+	{tags "drill_hatch_r"}
+}
+{component "front_hatch_r"
+	{RepairTime 3}
+	{tags "front_hatch_r"}
+}
+{component "front_hatch_l"
+	{RepairTime 3}
+	{tags "front_hatch_l"}
+}
+{component "front_hatch"
+	{RepairTime 3}
+	{tags "front_hatch"}
+}
+{component "back_hatch_r"
+	{RepairTime 3}
+	{tags "back_hatch_r"}
+}
+{component "back_hatch_l"
+	{RepairTime 3}
+	{tags "back_hatch_l"}
+}
+{component "structure_plate_left"
+	{RepairTime 5}
+	{tags "structure_plate"}
+}
+{component "structure_plate_right"
+	{RepairTime 5}
+	{tags "structure_plate"}
+}
+{component "front_core_panel"
+	{RepairTime 5}
+	{tags "front_core_panel"}
+}
+{component "frontlegs_mount"
+	{RepairTime 25}
+	{tags "frontlegs_mount"}
+}
+{component "backlegs_mount"
+	{RepairTime 25}
+	{tags "backlegs_mount"}
+}
+{component "Drillmount"
+	{RepairTime 10}
+	{tags "Drill"}
+}
+
+{component "transmission"
+	{RepairTime 10}
+	{tags "transmission"}
+}
+
+{component "cooling_systems"
+	{RepairTime 10}
+	{tags "cooling_systems"}
+}
+{component "Concussion_Pulse_r"
+	{RepairTime 10}
+	{tags "Concussion_Pulse_r"}
+}
+{component "Concussion_Pulse_l"
+	{RepairTime 10}
+	{tags "Concussion_Pulse_l"}
+}
+
+{component "fueltank"
+	{RepairTime 10}
+	{tags "fuel"}
+}
+
+{component "fueltank_l"
+	{RepairTime 10}
+	{tags "fuel"}
+}
+{component "fueltank_r"
+	{RepairTime 10}
+	{tags "fuel"}
+}
+{component "fueltank_c"
+	{RepairTime 10}
+	{tags "fuel"}
+}
+{component "tank_l"
+	{RepairTime 10}
+	{tags "compressor"}
+}
+{component "tank_r"
+	{RepairTime 10}
+	{tags "compressor"}
+}
+
+{component "fuel"
+	{RepairTime 10}
+	{tags "fuel" "main_organ"}
+}
+
+{component "fuel_r"
+	{RepairTime 10}
+	{tags "fuel_r" "main_organ"}
+}
+{component "fuel_l"
+	{RepairTime 10}
+	{tags "fuel_l" "main_organ"}
+}
+
+
+{component "fuel_small"
+	{RepairTime 10}
+	{tags "fuel_small" "main_organ"}
+}
+
+{component "visor_head"
+	{RepairTime 5}
+	{tags "visor_head" "main_organ"}
+}
+{component "visor_body"
+	{RepairTime 5}
+	{tags "visor_body" "main_organ"}
+}
+
+{component "head_organ"
+	{RepairTime 5}
+	{tags "head_organ" "main_organ"}
+}
+
+{component "body_organ"
+	{RepairTime 5}
+	{tags "body_organ" "main_organ"}
+}
+
+{component "back_engine_organ"
+	{RepairTime 5}
+	{tags "back_engine_organ" "main_organ"}
+}
+
+
+{component "organs_engine_drive_left"
+	{RepairTime 5}
+	{tags "organs_engine_drive_left" "main_organ"}
+}
+
+{component "organs_engine_drive_right"
+	{RepairTime 5}
+	{tags "organs_engine_drive_right" "main_organ"}
+}
+{component "leg_motor_right"
+	{RepairTime 5}
+	{tags "leg_motor_right" "main_organ"}
+}
+
+{component "leg_motor_left"
+	{RepairTime 5}
+	{tags "leg_motor_left" "main_organ"}
+}
+
+{component "leg_regulator_large_left"
+	{RepairTime 5}
+	{tags "leg_regulator_large_left" "main_organ"}
+}
+
+{component "leg_regulator_large_right"
+	{RepairTime 5}
+	{tags "leg_regulator_large_right" "main_organ"}
+}
+
+{component "railing_b_armor"
+	{RepairTime 5}
+	{tags "railing_b_armor"}
+}
+
+{component "engine_move"
+	{RepairTime 5}
+	{tags "engine_move"}
+}
+
+
+{component "head"
+	{RepairTime 10}
+	{tags "head"}
+}
+
+{component "shoulder_plate_right"; Двигатели впереди в люках dread
+	{RepairTime 2}
+	{tags "shoulder_plate_right" "main_organ"}
+}
+ 
+ {component "shoulder_plate_left"; Двигатели впереди в люках dread
+	{RepairTime 2}
+	{tags "shoulder_plate_left" "main_organ"}
+}
+
+{component "sideplate_left"; крышки под навесами
+	{RepairTime 2}
+	;{tags "fan"}
+}
+
+{component "sideplate_right"; крышки под навесами
+	{RepairTime 2}
+	;{tags "fan"}
+}
+{component "legplate_right"; люки на ногах мелкие
+	{RepairTime 2}
+	;{tags "fan"}
+}
+
+{component "legplate_left"; люки на ногах мелкие
+	{RepairTime 2}
+	;{tags "fan"}
+}
+
+{component "LeftPiston_UpperLegToShoulder"
+	{RepairTime 2}
+	{tags "leg_piston"}
+}
+
+{component "RightPiston_UpperLegToShoulder"
+	{RepairTime 2}
+	{tags "leg_piston"}
+}
+
+
+{component "head_sideplate_front_r"
+	{RepairTime 2}
+	;{tags "fan"}
+}
+
+{component "head_sideplate_front_l"
+	{RepairTime 2}
+	;{tags "fan"}
+}
+{component "head_sideplate_back_r"
+	{RepairTime 2}
+	;{tags "fan"}
+}
+
+{component "head_sideplate_back_l"
+	{RepairTime 2}
+	;{tags "fan"}
+}
+
+{component "organs_hip_right" ; элемент главной ноги
+	{RepairTime 5}
+	{tags "hydraulic" "main_organ"}
+}
+{component "organs_hip_left" ; элемент главной ноги
+	{RepairTime 5}
+	{tags "hydraulic" "main_organ"}
+}
+
+{component "nanotech_unit_l"; Wolf
+	{RepairTime 5}
+;	{tags "main_organ"}
+}
+{component "nanotech_unit_r"; Wolf
+	{RepairTime 5}
+;	{tags "main_organ"}
+}
+{component "eyes"; Wolf
+	{RepairTime 5}
+	{tags "main_organ"}
+}
+{component "hydraulic"; Wolf
+	{RepairTime 5}
+	{tags "hydraulic" "main_organ"}
+}
+{component "hydraulic_knee_right"; внутри колена привод
+	{RepairTime 5}
+	{tags "hydraulic" "main_organ"}
+}
+
+{component "RightArm_support"; Wolf 
+	{RepairTime 5}
+	{tags "hydraulic"}
+}
+{component "LeftArm_support"; Wolf
+	{RepairTime 5}
+	{tags "hydraulic"}
+}
+
+{component "armor_knee_f_r"; Wolf
+	{RepairTime 12}
+	{tags "armor_crushed"}
+}
+
+{component "armor_knee_f_l"; Wolf
+	{RepairTime 12}
+	{tags "armor_crushed"}
+}
+
+{component "armor_knee_f_l_03"; Wolf
+	{RepairTime 12}
+	{tags "armor_crushed"}
+}
+
+{component "armor_knee_f_r_03"; Wolf
+	{RepairTime 12}
+	{tags "armor_crushed"}
+}
+
+{component "armor_knee_f_r_02"; Wolf
+	{RepairTime 12}
+	{tags "armor_crushed"}
+}
+
+{component "armor_knee_f_l_02"; Wolf
+	{RepairTime 12}
+	{tags "armor_crushed"}
+}
+
+{component "armor_knee_r_r_03"; Wolf
+	{RepairTime 12}
+	{tags "armor_crushed"}
+}
+
+{component "armor_knee_r_l_03"; Wolf
+	{RepairTime 12}
+	{tags "armor_crushed"}
+}
+
+{component "armor_knee_r_r_02"; Wolf
+	{RepairTime 12}
+	{tags "armor_crushed"}
+}
+
+{component "armor_knee_r_l_02"; Wolf
+	{RepairTime 12}
+	{tags "armor_crushed"}
+}
+
+{component "armor_knee_r_r"; Wolf
+	{RepairTime 12}
+	{tags "armor_crushed"}
+}
+
+{component "armor_knee_r_l"; Wolf
+	{RepairTime 12}
+	{tags "armor_crushed"}
+}
+
+{component "hydraulic_knee_left"; внутри колена привод
+	{RepairTime 5}
+	{tags "hydraulic" "main_organ"}
+}
+{component "organs_leg_right"; верхняя нога
+	{RepairTime 5}
+	{tags "hydraulic" "main_organ"}
+}
+{component "organs_leg_left"; верхняя нога
+	{RepairTime 5}
+	{tags "hydraulic" "main_organ"}
+}
+
+{component "organs_waist_01";  hunter 
+	{RepairTime 5}
+	{tags "hydraulic" "main_organ"}
+}
+
+{component "organs_waist_02";  hunter 
+	{RepairTime 5}
+	{tags "hydraulic" "main_organ"}
+}
+
+{component "organs_waist_03";  hunter 
+	{RepairTime 5}
+	{tags "hydraulic" "main_organ"}
+}
+
+
+
+
+
+{component "cpu"
+	{RepairTime 5}
+	{tags "cpu" "main_organ"}
+}
+
+{component "engine"
+	{RepairTime 5}
+	{tags "engine" "main_organ"}
+}
+
+{component "left_engine"
+	{RepairTime 5}
+	{tags "left_engine" "main_organ"}
+}
+{component "right_engine"
+	{RepairTime 5}
+	{tags "right_engine" "main_organ"}
+}
+{component "left_engine2"
+	{RepairTime 5}
+	{tags "left_engine2" "main_organ"}
+}
+{component "right_engine2"
+	{RepairTime 5}
+	{tags "right_engine2" "main_organ"}
+}
+
+
+
+
+{component "head_arm"
+	{RepairTime 5}
+	{tags "head_arm" "main_organ"}
+}
+
+{component "battery"
+	{RepairTime 5}
+	{tags "battery" "main_organ"}
+}
+{component "head_joint"
+	{RepairTime 5}
+	{tags "head_joint"}
+}
+
+{component "wire"
+	{RepairTime 5}
+	{tags "wire" "main_organ"}
+}
+{component "head_wire"
+	{RepairTime 2}
+	{tags "wire" "main_organ"}
+}
+
+{component "wire_small"
+	{RepairTime 5}
+	{tags "wire" "main_organ"}
+}
+
+{component "mgun"
+	{RepairTime 5}
+	{tags "mgun"}
+}
+{component "missile"
+	{RepairTime 5}
+	{tags "missile"}
+}
+{component "Area_Missile"
+	{RepairTime 5}
+	{tags "Area_Missile"}
+}
+
+{component "missile_r"
+	{RepairTime 5}
+	{tags "missile_r"}
+}
+{component "missile_l"
+	{RepairTime 5}
+	{tags "missile_l"}
+}
+{component "missilelauncher"
+	{RepairTime 5}
+	{tags "missilelauncher"}
+}
+{component "rocket"
+	{RepairTime 5}
+	{tags "rocket"}
+}
+{component "rocket_cluster" ;hunter classD
+	{RepairTime 5}
+	{tags "rocket_cluster"}
+}
+{component "flamethrower";hunter classD
+	{RepairTime 5}
+	{tags "flamethrower"}
+}
+
+{component "fuel_rods_r";hunter classD
+	{RepairTime 5}
+	{tags "flamethrower"}
+}
+
+{component "fuel_rods_l";hunter classD
+	{RepairTime 5}
+	{tags "flamethrower"}
+}
+
+{component "canister_right_01";hunter canclassD
+	{RepairTime 5}
+	{tags "canister_fuel"}
+}
+{component "canister_right_02";hunter canclassD
+	{RepairTime 5}
+	{tags "canister_fuel"}
+}
+{component "canister_left_01";hunter canclassD
+	{RepairTime 5}
+	{tags "canister_fuel"}
+}
+{component "canister_left_02";hunter canclassD
+	{RepairTime 5}
+	{tags "canister_fuel"}
+}
+
+{component "sniper"
+	{RepairTime 5}
+	{tags "sniper"}
+}
+
+{component "shotgun"
+	{RepairTime 5}
+	{tags "shotgun"}
+}
+
+{component "ammo"
+	{RepairTime 5}
+	{tags "ammo"}
+}
+
+{component "main_body"
+	{RepairTime 5}
+	{tags "main_body" "main_organ"}
+}
+{component "frontplate"
+	{RepairTime 5}
+	{tags "frontplate"}
+}
+{component "neck"
+	{RepairTime 5}
+	{tags "neck" "main_organ"}
+}
+{component "neck1"
+	{RepairTime 5}
+	{tags "neck1" "main_organ"}
+}
+{component "bridge"
+	{RepairTime 5}
+	{tags "bridge" "main_organ"}
+}
+{component "bridge_container"
+	{RepairTime 5}
+	{tags "bridge"}
+}
+{component "RightWeaponAttach"
+	{RepairTime 5}
+	{tags "RightWeaponAttach"}
+}
+{component "LeftWeaponAttach"
+	{RepairTime 5}
+	{tags "LeftWeaponAttach"}
+}
+{component "Right_leg"
+	{RepairTime 5}
+	{tags "Right_leg"}
+}
+{component "Left_leg"
+	{RepairTime 5}
+	{tags "Left_leg"}
+}
+{component "gasdrop"
+	{RepairTime 5}
+	{tags "gasdrop"}
+}
+{component "gasdrop_r"
+	{RepairTime 5}
+	{tags "gasdrop" "gasdrop_r"}
+}
+{component "gasdrop_l"
+	{RepairTime 5}
+	{tags "gasdrop" "gasdrop_l"}
+}
+
+{component "light_small"
+	{RepairTime 1}
+	{tags "light_small"}
+}
+
+{component "jetengine_r"
+	{RepairTime 5}
+	{tags "jetengine"}
+}
+
+{component "jetengine_l"
+	{RepairTime 5}
+	{tags "jetengine"}
+}
+
+{component "horn"
+	{RepairTime 5}
+	{tags "horn"}
+}
+
+
+;all detail comp
+
+{component "RightUpperLeg"
+	{RepairTime 2}
+	{tags "upper_arm"}
+}
+
+{component "LeftUpperLeg"
+	{RepairTime 2}
+	{tags "upper_arm"}
+}
+{component "CentralUpperLeg"
+	{RepairTime 2}
+	{tags "upper_arm"}
+}
+{component "CentralLeg"
+	{RepairTime 2}
+	{tags "upper_arm"}
+}
+{component "CentralFoot"
+	{RepairTime 2}
+	{tags "upper_arm"}
+}
+{component "CentralToeBase"
+	{RepairTime 2}
+	{tags "upper_arm"}
+}
+
+{component "RightArm"
+	{RepairTime 2}
+	{tags "upper_arm"}
+}
+{component "armour_shoulder_right"
+	{RepairTime 2}
+;	{tags "upper_arm"}
+}
+{component "RightForeArm"
+	{RepairTime 2}
+	{tags "upper_arm"}
+}
+{component "RightHand"
+	{RepairTime 2}
+	{tags "upper_arm"}
+}
+{component "RightHandToe"
+	{RepairTime 2}
+	{tags "upper_arm"}
+}
+;-
+{component "RightUpLeg"
+	{RepairTime 2}
+	{tags "lower_arm"}
+}
+{component "RightUpLeg1"
+	{RepairTime 2}
+	{tags "lower_arm"}
+}
+{component "armour_knee_right"
+	{RepairTime 2}
+;	{tags "lower_arm"}
+}
+{component "RightUpLeg_knee"
+	{RepairTime 2}
+	{tags "lower_arm"}
+}
+{component "RightLeg"
+	{RepairTime 2}
+	{tags "lower_arm"}
+}
+{component "RightFoot"
+	{RepairTime 2}
+	{tags "lower_arm"}
+}
+{component "righttoebase"
+	{RepairTime 2}
+	{tags "lower_arm"}
+}
+{component "RightToe"
+	{RepairTime 2}
+	{tags "lower_arm"}
+}
+{component "RightToe1"
+	{RepairTime 2}
+	{tags "lower_arm"}
+}
+{component "RightToe2"
+	{RepairTime 2}
+	{tags "lower_arm"}
+}
+{component "RightToe3"
+	{RepairTime 2}
+	{tags "lower_arm"}
+}
+{component "RightToe4"
+	{RepairTime 2}
+	{tags "lower_arm"}
+}
+{component "rightShoulder"
+	{RepairTime 2}
+	{tags "lower_arm"}
+}
+{component "RightFingerBase"
+	{RepairTime 2}
+	{tags "lower_arm"}
+}
+{component "leftFingerBase"
+	{RepairTime 2}
+	{tags "lower_arm"}
+}
+{component "leftToe"
+	{RepairTime 2}
+	{tags "lower_arm"}
+}
+
+{component "leftToe1"
+	{RepairTime 2}
+	{tags "lower_arm"}
+}
+{component "leftToe2"
+	{RepairTime 2}
+	{tags "lower_arm"}
+}
+{component "leftToe3"
+	{RepairTime 2}
+	{tags "lower_arm"}
+}
+{component "leftToe4"
+	{RepairTime 2}
+	{tags "lower_arm"}
+}
+
+{component "leftArm"
+	{RepairTime 2}
+	{tags "upper_arm"}
+}
+{component "armour_shoulder_left"
+	{RepairTime 2}
+;	{tags "upper_arm"}
+}
+{component "leftForeArm"
+	{RepairTime 2}
+	{tags "upper_arm"}
+}
+{component "leftHand"
+	{RepairTime 2}
+	{tags "upper_arm"}
+}
+{component "leftHandToe"
+	{RepairTime 2}
+	{tags "upper_arm"}
+}
+;-
+{component "leftUpLeg"
+	{RepairTime 2}
+	{tags "lower_arm"}
+}
+{component "leftUpLeg1"
+	{RepairTime 2}
+	{tags "lower_arm"}
+}
+{component "armour_knee_left"
+	{RepairTime 2}
+;	{tags "lower_arm"}
+}
+{component "leftUpLeg_knee"
+	{RepairTime 2}
+	{tags "lower_arm"}
+}
+{component "leftLeg"
+	{RepairTime 2}
+	{tags "lower_arm"}
+}
+{component "leftFoot"
+	{RepairTime 2}
+	{tags "lower_arm"}
+}
+{component "lefttoebase"
+	{RepairTime 2}
+	{tags "lower_arm"}
+}
+{component "LeftShoulder"
+	{RepairTime 2}
+	{tags "lower_arm"}
+}
+
+{component "kneepad_l"
+	{RepairTime 5}
+	{tags "kneepad_l"}
+}
+
+{component "kneepad_r"
+	{RepairTime 5}
+	{tags "kneepad_"}
+}
+
+{component "armor"
+	{RepairTime 5}
+	{tags "armor"}
+}
+
+
+{component "hips"
+	{RepairTime 5}
+	{tags "hips"}
+}
+
+{component "front_armor"
+	{RepairTime 2}
+	{tags "front_armor"}
+}
+{component "down_armor"
+	{RepairTime 2}
+	{tags "down_armor"}
+}
+{component "armour_head"
+	{RepairTime 2}
+	{tags "armour_head"}
+}
+
+{component "armour_head_lower"
+	{RepairTime 2}
+	{tags "armour_head_lower"}
+}
+
+{component "armour_prot_right"
+	{RepairTime 2}
+	{tags "lower_arm"}
+}
+{component "armour_prot_left"
+	{RepairTime 2}
+	{tags "lower_arm"}
+}
+
+
+{component "armour_head_upper"
+	{RepairTime 2}
+	{tags "armour_head_upper"}
+}
+{component "upper_armor_raid"
+	{RepairTime 2}
+	{tags "upper_armor_raid"}
+}
+
+{component "front_armor_raid"
+	{RepairTime 2}
+	{tags "front_armor_raid"}
+}
+{component "armor_head_wire"
+	{RepairTime 2}
+	{tags "armor_head_wire"}
+}
+{component "back_armor"
+	{RepairTime 2}
+	{tags "back_armor"}
+}
+
+{component "front_plate_l"
+	{RepairTime 5}
+	{tags "front_plate_l"}
+}
+{component "front_plate_r"
+	{RepairTime 5}
+	{tags "front_plate_r"}
+}
+
+
+{component "right_armplate"
+	{RepairTime 5}
+	{tags "armor_crushed"}
+}
+{component "left_armplate"
+	{RepairTime 5}
+	{tags "armor_crushed"}
+}
+
+
+{component "armorplate_front_left"
+	{RepairTime 5}
+	{tags "armor_crushed"}
+}
+{component "armorplate_front_right"
+	{RepairTime 5}
+	{tags "armor_crushed"}
+}
+{component "armorplate_back_left"
+	{RepairTime 5}
+	{tags "armor_crushed"}
+}
+{component "armorplate_back_right"
+	{RepairTime 5}
+	{tags "armor_crushed"}
+}
+
+
+{component "cyl_prot_plate_right"
+	{RepairTime 5}
+	{tags "cyl_prot_plate_right"}
+}
+
+{component "cyl_prot_plate_left"
+	{RepairTime 5}
+	{tags "cyl_prot_plate_left"}
+}
+
+
+
+{component "knee_plate_l"
+	{RepairTime 5}
+	{tags "knee_plate_l"}
+}
+{component "knee_plate_r"
+	{RepairTime 5}
+	{tags "knee_plate_r"}
+}
+
+{component "armor_ballistic_left_hand"
+	{RepairTime 5}
+	{tags "armor_ballistic_crush"}
+}
+{component "armor_ballistic_left_fore_arm"
+	{RepairTime 5}
+	{tags "armor_ballistic_crush"}
+}
+{component "armor_ballistic_left_arm"
+	{RepairTime 5}
+	{tags "armor_ballistic_crush"}
+}
+{component "armor_ballistic_left_up_leg"
+	{RepairTime 5}
+	{tags "armor_ballistic_crush"}
+}
+{component "armor_ballistic_left_leg"
+	{RepairTime 5}
+	{tags "armor_ballistic_crush"}
+}
+{component "armor_ballistic_left_foot_01"
+	{RepairTime 5}
+	{tags "armor_ballistic_crush"}
+}
+{component "armor_ballistic_left_foot_02"
+	{RepairTime 5}
+	{tags "armor_ballistic_crush"}
+}
+
+{component "armor_ballistic_right_hand"
+	{RepairTime 5}
+	{tags "armor_ballistic_crush"}
+}
+{component "armor_ballistic_right_fore_arm"
+	{RepairTime 5}
+	{tags "armor_ballistic_crush"}
+}
+{component "armor_ballistic_right_arm"
+	{RepairTime 5}
+	{tags "armor_ballistic_crush"}
+}
+{component "armor_ballistic_right_up_leg"
+	{RepairTime 5}
+	{tags "armor_ballistic_crush"}
+}
+{component "armor_ballistic_right_leg"
+	{RepairTime 5}
+	{tags "armor_ballistic_crush"}
+}
+{component "armor_ballistic_right_foot_01"
+	{RepairTime 5}
+	{tags "armor_ballistic_crush"}
+}
+{component "armor_ballistic_right_foot_02"
+	{RepairTime 5}
+	{tags "armor_ballistic_crush"}
+}
+
+{component "armor_fire_retardant_knee_right_leg"
+	{RepairTime 5}
+	{tags "fire_retardant"}
+}
+{component "armor_fire_retardant_knee_left_leg"
+	{RepairTime 5}
+	{tags "fire_retardant"}
+}
+
+{component "front_left_leg_hatch"
+	{RepairTime 5}
+	{tags "front_left_leg_hatch"}
+}
+{component "front_right_leg_hatch"
+	{RepairTime 5}
+	{tags "front_right_leg_hatch"}
+}
+{component "back_left_leg_hatch"
+	{RepairTime 5}
+	{tags "back_left_leg_hatch"}
+}
+{component "back_right_leg_hatch"
+	{RepairTime 5}
+	{tags "back_right_leg_hatch"}
+}
+
+{component "Armor_Concussive"
+	{RepairTime 5}
+	{tags "armor_grid"}
+}
+
+{component "Armor_Concussive_front"
+	{RepairTime 5}
+	{tags "armor_grid"}
+}
+
+{component "armor_right_engine_wire"
+	{RepairTime 5}
+	{tags "armor_grid"}
+}
+
+{component "armor_left_engine_wire"
+	{RepairTime 5}
+	{tags "armor_grid"}
+}
+
+{component "armor_cpu_wire"
+	{RepairTime 5}
+	{tags "armor_grid"}
+}
+
+{component "trackLeft"
+	{RepairTime 5}
+	{tags "trackLeft"}
+}
+
+{component "trackRight"
+	{RepairTime 5}
+	{tags "trackRight"}
+}
+
+; {component ""
+	; {RepairTime 2}
+	; {tags ""}
+; }
+; {component ""
+	; {RepairTime 2}
+	; {tags ""}
+; }
+; {component ""
+	; {RepairTime 2}
+	; {tags ""}
+; }
+
+
+{RimLight}
+

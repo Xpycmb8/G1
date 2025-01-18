@@ -1,0 +1,24 @@
+;Exported by: ?????
+;Date:        Wed Jun 26 20:17:30 2019
+;File:        D:\?????\Documents\3dsMax\scenes\broken_glass_00.max
+{Skeleton
+	{bone "glass_shard_11"
+		{parameters "CommonMesh;"}
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{VolumeView "glass_shard_11.ply"}
+	}
+}
+{Volume "body"
+	{Box 1.9178 0.0910458 1.2491}
+	{Bone "glass_shard_11"}
+	{Matrix34
+		0.849298	0	0.527913
+		0	1	0
+		-0.256074	0	0.411968
+		-0.236598	0	0
+	}
+}

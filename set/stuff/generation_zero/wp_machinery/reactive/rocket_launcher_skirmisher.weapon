@@ -1,0 +1,29 @@
+{weapon_bullet
+	{tag "weapon rocket_skirmisher bullet to_hand"}
+	{filling "ammo shell_5m" 1}
+	{desc "Rocket"}
+	{inventory
+		{size 4 2}
+		{weight 1000}
+	}
+	{FiringTimeout 0.8 0.2}
+	{foresight "foresight"}
+	{fillingVisible "rocket"}
+	{entity "rocket_launcher_skirmisher"}
+	{minRange 10}
+	{range 200 200}
+	{rechargeTime 8}
+	{recoveryTime 1}
+	{fireSound	"small_arms/rpg_bolt"}
+	{fireSoundClose	"small_arms/rpg_bolt"}
+	{clickSound "LauncherMissile_click_01"}
+	{gravity 0}
+	{speed 120}
+	{AimingTolerance 0.2}
+	{cursor "zenite_on"}
+	{cursorReloading "zenite_reload"}	
+	{crosshair "crosshair9"}
+	{crosshairReloading "crosshair9_reload"}
+	{Automatic}
+	{preloaded}
+}

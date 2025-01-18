@@ -1,0 +1,50 @@
+;//	RPG-29 Vampir standard
+
+{weapon_bullet
+	{tag "rocketlauncher to_hand ap cannot_lie cumulative open 9k38"}
+	{entity "9k38"}
+	{preloaded}
+	{foresight "Foresight3"}
+	{fireSound	"reactive/9k38/start/"}	
+	{filling "ammo 9m39_rocket" 1}
+;	{fillingVisible "rocket"}
+	{inventory
+		{size 8 2}
+		{link_bone "gun_back_left"}
+		{weight 100}
+		{fsm "bazooka"}
+	}
+	{mass 12.1}			;kg unloaded
+
+	{states
+		{reload	"reload-bazooka"}
+		{unload	"unload-bazooka"}
+		{fire	"fire-bazooka"	}
+		{aim 	"aim-bazooka"	}
+		{can_aim  "can-aim-bazooka"	}
+	}
+	{reloadAnimBonus 0}
+	{autoreload 0}
+	{reactive}
+	{gravity 0}
+	{curve "cumulative"}
+	{DisableRicochet}
+	{rechargeTime 5}
+	("speed2" s(280))
+	{calibre 50}
+	{AccuracyByMotionK 0.1}
+	("accuracy_grenade_launcher_boost")
+	{ZeroingAccuracy 0.75 0.5}
+	("recoil_high")
+;	("sway_medium")
+	("minimumDamageModifier" m(600))	
+	{projectileDamageThreshold 1}
+    {projectileDamage 750}
+	{range 3200 3500};F
+	{AimingTolerance 1}
+	{FiringTimeout 11 3}	; min delay between ai shots (note: will be affected by "grenade_timeout" modifier)
+	{cursor "cannon_on"}
+	{crosshair "crosshair6"}
+	{crosshairReloading "crosshair6_reload"}
+	("zoom_at_scope")
+}

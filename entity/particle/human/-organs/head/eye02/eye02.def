@@ -1,0 +1,8 @@
+{game_entity
+	(include "/properties/small_part.inc")
+	{props "ps_dummy" "flesh" "delet_t120"}
+	{Extension "eye02.mdl"}
+	{Volume "eye01"
+		{tags "body"}
+	}
+}

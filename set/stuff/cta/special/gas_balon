@@ -1,0 +1,10 @@
+{item
+	{desc "Gas Balon"}
+	{tag "itemin1hand keepEntity"}
+	{entity "gas_balon"}
+	{inventory
+		{size 20 20}
+		{fsm "stuff"}
+	}
+	{mass 1000}
+}

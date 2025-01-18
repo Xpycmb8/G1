@@ -1,0 +1,32 @@
+;Exported by: ?????
+;Date:        Tue Jun 16 00:40:46 2020
+;File:        D:\?????\Documents\3dsMax\scenes\m203_launch.max
+{Skeleton
+	{bone "m203_40mm"
+		{parameters "ID=body;"}
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{VolumeView "m203_40mm.ply"}
+		{bone "fxfire"
+			{Matrix34
+				-1	0	0
+				0	-1	0
+				0	0	1
+				-1.08901	-0.0129047	-0.000270909
+			}
+		}
+	}
+}
+{Volume "armed"
+	{Box 12 5 5}
+	{Bone "m203_40mm"}
+	{Matrix34
+		0.416354	0	0
+		0	0.416354	0
+		0	0	0.416354
+		-0.0940266	0.00930837	-0.0247796
+	}
+}

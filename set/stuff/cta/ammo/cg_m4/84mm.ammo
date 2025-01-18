@@ -1,0 +1,23 @@
+{bullet ;
+	{tag "ammo rocketlauncher shell no_ricochet 40mm_fg dropboxed fg pierce hedp4410"}
+	{desc "84 мм HE 4410"}
+	{entity "84mm_hedp502"}
+	{view "88mm_he_proj"
+	} 
+	{detonationThickness 2}
+	{inventory
+		{weight 100}
+		{size 5 1}
+	}	
+	{mass 4.5}
+	{damage blastwave
+		{ground_interaction_radius 0.0}
+		{energy 0.4}
+		{area 5 8}
+	}
+	{damage add blastwave
+		{ground_interaction_radius 0.0}
+		{energy 2}
+		{area 1 3}
+	}
+}

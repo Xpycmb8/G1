@@ -1,0 +1,19 @@
+{game_entity
+	{extension "/properties/piece.ext"}
+	{simulation {able 1}}
+	{constrain none}
+	{props "dummy" "ps_dummy" "check_ik" }
+	{collider "bush"}
+	{volume "body"
+		{tags "overlap"}
+		{sphere 8}
+		{Able {contact 0} {bullet 0} {throwing 0} {obstacle 0} {touch 0} {overlap 1}}
+		{bone "basis"}
+		{material "dummy"}
+	}
+	{body
+		{proper body}
+		{permit body}
+	}
+	{mass 1}
+}

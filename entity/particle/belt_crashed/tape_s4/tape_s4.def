@@ -1,0 +1,6 @@
+{game_entity
+	(include "/properties/small_part.inc")
+	{props "steel" "ps_dummy" "delet_t15"}
+	{Extension "tape_s4.mdl"}
+	{collider "particle.small"}
+}

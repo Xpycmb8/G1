@@ -1,0 +1,11 @@
+{game_entity
+	(include "/properties/traper.inc")
+	{Extension "gravi_01.mdl"}
+	{props "gravi_01"} 
+	{volume "crown"
+		{Able {contact 1} {bullet 0} {obstacle 0} {touch 0} {overlap 1}}
+	}
+	{volume "impulse"
+		{Able {contact 1} {bullet 0}}
+	}
+}

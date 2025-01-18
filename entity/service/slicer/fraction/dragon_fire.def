@@ -1,0 +1,20 @@
+{game_entity
+	{extension "/properties/piece.ext"}
+	{props "dragon_fire" "fraction_small" "wound_shotgun" "wound_piece" "steel"}
+	{collider "fraction"}
+	{constrain none}
+	{body {proper body } {permit body}}
+	{simulation {able 1} {state 1}}
+	{mass 0.3}
+	{volume "body"
+		{able
+			{contact 1} {contact_ground 1}
+			{bullet 0} {throwing 0} {obstacle 1}
+			{overlap 1} {visible 1}
+			{touch 0}
+		}
+		{material "steel"}		
+		{sphere 2}
+		{bone "basis"}
+	}
+}

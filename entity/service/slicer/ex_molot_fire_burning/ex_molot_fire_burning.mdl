@@ -1,0 +1,23 @@
+;Exported by: Xpycmb
+;Date:        Sat Jan 29 23:50:32 2022
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\ex_molot_fire_burning.max
+{Skeleton
+	{animation
+		{sequence "burning"
+			{speed 0.4}
+			{events 
+				{2 "burning"}
+			}		
+			{autostart}
+		}
+	}
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "burning"
+		}
+	}
+}

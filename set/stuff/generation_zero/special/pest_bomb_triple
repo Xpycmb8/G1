@@ -1,0 +1,26 @@
+{item
+	{tag "c4_explosive"}
+	{desc "Pest x3 bomb"}
+	{entity "pest_bomb_x3_link"}
+	{inventory
+		{size 2 2}
+		{weight 100}
+		{fsm "belt"}
+	}
+	{mass 2}
+	{damage fire
+		{radius 3}
+		{heating 2}
+		{time 1}
+	}
+	{damage blastwave
+		{ground_interaction_radius 0.0}
+		{energy 8}
+		{area 3 8}
+	}
+	{damage add blastwave
+		{ground_interaction_radius 0.0}
+		{energy 0.9}
+		{area 6 10}
+	}
+}

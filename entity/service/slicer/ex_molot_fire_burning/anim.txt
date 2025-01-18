@@ -1,0 +1,35 @@
+-= Animation: burning, Node burning =-
+	Frame 0 {
+		Visibility 1
+		Position	0	0	0
+		Orientation	0 0 0 1
+	}
+	Frame 1 {
+		Orientation	0 0 -0.34202 0.939693
+	}
+	Frame 2 {
+		Orientation	0 0 -0.642788 0.766044
+	}
+	Frame 3 {
+		Orientation	0 0 0.866025 -0.5
+	}
+	Frame 4 {
+		Orientation	0 0 0.984808 -0.173648
+	}
+	Frame 5 {
+		Orientation	0 0 0.984808 0.173648
+	}
+	Frame 6 {
+		Orientation	0 0 0.866025 0.5
+	}
+	Frame 7 {
+		Orientation	0 0 0.642788 0.766044
+	}
+	Frame 8 {
+		Orientation	0 0 0.34202 0.939693
+	}
+	Frame 9 {
+		Visibility 1
+		Position	0	0	0
+		Orientation	0 0 0 1
+	}

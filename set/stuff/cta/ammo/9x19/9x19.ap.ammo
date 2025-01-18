@@ -1,0 +1,17 @@
+;// 9x19mm
+
+{bullet
+	{tag "bullet ap small stackable pierce"}
+;	{desc "9х19 ПБП гж"}
+	{inventory
+		{weight 3.3}
+		{block 50}
+		{size 1 1}
+		{fsm "belt"}
+	}
+	{mass 0.008}
+	{entity "mags10_9x19_2"}
+	{view "trace9"
+		{tail "bullet_tail" "trace"}
+	} 
+}

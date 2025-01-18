@@ -1,0 +1,8 @@
+{game_entity
+	(include "/properties/small_part_harmless.inc")
+	{Extension "#25x137.mdl"}
+    {collider "stuff"}
+    {simulation {able 1}}
+	{lodclass "stuff_small"}
+	{props "steel" "shells_guns"}	
+}

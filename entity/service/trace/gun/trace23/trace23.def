@@ -1,0 +1,4 @@
+{game_entity
+	{props "trace30" }
+	{Extension "trace23.mdl"}
+}

@@ -1,0 +1,41 @@
+{from "pattern bullet"
+	{tag "weapon bullet gasdrop"}
+	{fireSound	"/0/"}
+	{fireSoundClose	"/0/"}
+	{reloadSound "/0/"}
+	{filling "ammo jump" 1}
+;	{ammoLocked}
+	{preloaded}
+	{desc "dread_melee"}
+	{foresight "visor_head"}
+	{entity "tactical_laser"}
+	{inventory
+		{size 1 1 }
+		{weight 100 }
+	}
+	{mass 0}
+	{traceFreq 4}
+	{Automatic}
+	{rechargeTime 10}
+	{reloadAnimBonus 3}
+	("recoveryTime" r(5))
+	("speed" s(700))
+	("burst_mg")
+	("spreading_low_boost")
+	{spreading 
+		{radiusTable {10 1} {140 8} }
+	}		
+	("recoil_high")
+	("sway_medium")
+	("health_damage_127x108" d(0))
+	{projectileDamage 0}
+	{projectileDamageTable {5 0}}
+	{projectileDamageThreshold 1.1}
+	{range 5 5};F
+	{aimingTolerance 1}	
+	{cursor "zenite_on"}
+	{cursorReloading "zenite_reload"}	
+	{crosshair "crosshair6"}
+	{crosshairReloading "crosshair6_reload"}
+	{toplayerVignette "/texture/common/environment/lens_effects/zoom_vignette_vehicle_mg_heavy_crosshair"} 
+}

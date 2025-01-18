@@ -1,0 +1,6 @@
+{game_entity
+	{obstacleID "fraction"}	
+	{props "wound_fire_spawn" }
+	{extension "/properties/piece.ext"}
+	{constrain none}
+}
