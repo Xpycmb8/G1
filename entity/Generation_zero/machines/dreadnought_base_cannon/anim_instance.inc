@@ -251,6 +251,7 @@
 		}
 		{sequence "recoil_gun" {resume}}		
 		{sequence "attack_melee_l_stamp"
+			{movement}	
 			{events 
 				{1 "block_all_dread_call"}
 				{12 "joint_big"}
@@ -279,6 +280,7 @@
 			{resume}
 		}
 		{sequence "attack_melee_r_stamp"
+			{movement}	
 			{events 
 				{1 "block_all_dread_call"}
 				{12 "joint_big"}
