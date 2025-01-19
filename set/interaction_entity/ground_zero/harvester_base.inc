@@ -2059,15 +2059,14 @@
 	}
 	{on "attack_concussion"
 		{call "weapon_melee_disable"}
-		{delay 10
-			{call "weapon_melee_enable"}
-		}
 		{tags add "attack_concussion"}
 		{delay 0.5
 			{tags remove "attack_concussion"}
 		}
-		{call "attack_concussion"}
 		{ani_play "attack_concussion" 1}
+		{delay 10
+			{call "weapon_melee_enable"}
+		}
 	}
 
 	{on "drop_pest"
