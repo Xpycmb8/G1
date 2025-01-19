@@ -15,8 +15,8 @@
 		("veterancy_lvl_0")
 	}
 	{inventory
-		{item "b725" filling "12x76 ammo" 2}
-		{item "12x76 ammo" 45}
+		{item "sg552_v1" filling "556x45 mags30_sg552 ammo" 30}
+		{item "556x45 mags30_sg552 ammo" 120}
 		{item "m67 grenade" 2.25 0.5}
 		{item "m61 grenade" 2.25 0.5}
 		{item "thermite grenade" 1.25 0.5}

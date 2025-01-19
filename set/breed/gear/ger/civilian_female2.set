@@ -15,8 +15,8 @@
 		("veterancy_lvl_0")
 	}
 	{inventory
-		{item "wa2000_v1" filled}
-		{item "762x51 rem700 ammo" 150 }
+		{item "ar57_v1" filling "57x28 mags ammo" 30}
+		{item "57x28 mags ammo" 120}
 		{item "m67 grenade" 2.25 0.5}
 		{item "m61 grenade" 2.25 0.5}
 		{item "thermite grenade" 1.25 0.5}
@@ -25,4 +25,3 @@
 		{in_hands 0}
 	}
 }
-
