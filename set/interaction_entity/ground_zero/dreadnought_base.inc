@@ -1704,6 +1704,7 @@
 	}
 
 	{on turn on ; dread		
+		{call "weapon_melee_disable"}
 		{call "weapon_disable"}
 		{set "blocked" 1}
 		{kill_delay "move_stop"}

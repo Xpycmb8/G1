@@ -1,0 +1,36 @@
+{from "pattern bullet"
+	{tag "smg smg2 weapon bullet to_hand shoot_walking_manual -shoot_walking flash_single_sided_smg p90_series 50_bullet smg_set smg_poly_magazine"}
+	{entity "fn_p90_v2"}
+	{desc "FN P90 Integral Sight"}
+	("clickSound_smg")	
+	
+	{filling "ammo 57x28" 50} ;	5,7×28 мм (SS190)
+	{inventory
+		{size 5 2 }
+		{link_bone "gun_back"}
+		{weight 100 }
+	}
+	{mass 3}
+	{traceFreq 0}
+	{Automatic}
+	{rechargeTime 2.5}
+	("recoveryTime" r(1000))
+ 	("speed" s(470))
+	{burst
+		{short 6 3}
+		{long 12 6}
+		{rangeKoef 0.3}
+	}
+	("spreading_medium_boost")
+	("accuracy_smg_boost2")
+;	("accuracy_boost")
+	("recoil_low_boost")
+	("sway_medium")
+	{calibre 5.45}
+	("health_damage_11x23" d(385))	
+	{projectileDamage 4}
+	{projectileDamageClip 4}
+	{projectileDamageTable {50 4} {250 0}}
+	{range 150 160};F	
+	("zoom_holographic")
+}

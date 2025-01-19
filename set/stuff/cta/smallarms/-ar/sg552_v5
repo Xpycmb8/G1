@@ -1,0 +1,40 @@
+{from "pattern bullet"
+	{tag "smg shortsmg weapon bullet to_hand shoot_walking shoot_walking_ai flash_six_sided_rifle g36_series 30_bullet smg_set heat50 ar_poly_magazine"}
+	{entity "sg552_v5"}
+	{desc "SG 552 Short"}
+	("clickSound_ar")
+	{filling "ammo 556x45" 30}
+	{inventory
+		{size 4 2 }
+		{link_bone "gun_back"}
+		{weight 100 }
+	}
+	{mass 2.2}
+	{traceFreq 0}
+	{Automatic}
+	{rechargeTime 2.1}
+	("recoveryTime" r(730))
+ 	{speed 710}
+	{parameters "sp"
+		("health_damage_556x45" d(850))	
+		{projectileDamage 5}
+		{projectileDamageClip 5}
+		{projectileDamageTable {50 5} {250 0}}
+		{range 150 160};F	
+		("speed" s(710))
+	}
+	{parameters "ap"
+		("health_damage_556x45" d(910))	
+		{projectileDamage 7}
+		{projectileDamageClip 7}
+		{projectileDamageTable {50 7} {250 2}}
+		{range 170 190};F	
+		("speed" s(950))
+	}
+	("burst_assault")
+	("spreading_short_barrel")
+	("accuracy_smg_boost_short")
+	("recoil_low_boost")
+	("sway_low")	
+	("zoom_holowest")
+}

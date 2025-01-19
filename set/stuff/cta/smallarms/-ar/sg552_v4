@@ -1,0 +1,41 @@
+{from "pattern bullet"
+	{tag "smg silenced_small assaultrifle weapon bullet to_hand shoot_walking shoot_walking_ai g36_series 60_bullet autoshot smg_set heat50 ar_poly_magazine"}
+	{entity "sg552_v4"}
+	{desc "SG 552 ACOG"}
+	("clickSound_ar")
+	{filling "ammo 556x45" 60}
+	{inventory
+		{size 6 2 }
+		{link_bone "gun_back"}
+		{weight 100 }
+	}
+	{mass 4}
+	{traceFreq 0}
+	{Automatic}
+	{rechargeTime 3.7}
+	("recoveryTime" r(730))
+ 	{speed 917}
+	{parameters "sp"
+		("health_damage_556x45" d(850))	
+		{projectileDamage 5}
+		{projectileDamageClip 5}
+		{projectileDamageTable {50 5} {250 0}}
+		{range 150 160};F	
+		("speed" s(850))
+	}
+	{parameters "ap"
+		("health_damage_556x45" d(910))	
+		{projectileDamage 7}
+		{projectileDamageClip 7}
+		{projectileDamageTable {50 7} {250 2}}
+		{range 170 190};F	
+		("speed" s(917))
+	}
+	("burst_assault")
+	("spreading_medium")
+	("accuracy_smg_boost_long_barrel")
+;	("accuracy_boost")
+	("recoil_low_boost")
+	("sway_medium")	
+	("zoom_acog")
+}
