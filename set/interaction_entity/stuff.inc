@@ -3510,8 +3510,16 @@
 	}
 	{on "unlink"
 		{tags remove "link"}
+		{kill_delay "weapon_warning"}
+	}
+	{on "weapon_warning" overload
+		{spawn "rpg_detect" "foresight3" x}
+		{delay_effect 1
+			"weapon_warning"
+		}
 	}
 	{on "link"
+		{call "weapon_warning"}
 		{tags add "link"}
 		(define "ammo_set"
 			{if stuff_filled "%0" 

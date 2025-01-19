@@ -540,6 +540,11 @@
 			; {basic}
 			; ;{rotate}
 		; }
+		{place "adaptive"
+			{weapon 	"adaptive_check" filled}
+			{foresight 	"adaptive"}
+			{basic}
+		}
 		{place "attack_concussion"
 			{StationaryFiring}
 			{weapon 	"harvest_melee" filled}

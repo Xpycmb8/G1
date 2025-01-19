@@ -1,0 +1,10 @@
+{bullet
+	{tag "bullet at_search no_hit"}
+	{inventory
+		{size 1 1}
+		{weight 4}
+		{block 25}
+	}
+	{mass 0.038}
+	("no_trace")
+}

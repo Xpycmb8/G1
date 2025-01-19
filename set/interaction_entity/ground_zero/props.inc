@@ -847,6 +847,22 @@
 	}
 }
 
+{"rpg_detect"
+	{on spawn
+		{gravity 0}
+		{impulse forward 400 com  }		
+		{delay 1 {delete}}
+	}
+	{on contact
+		;{if effector "baze_machinery"
+			{with_effector
+				{call "rpg_detect"}
+			}
+			{delete}
+		;}		
+	}
+}
+
 ;		{spawn "ex_air_norm"}
 
 {"scout_horn"

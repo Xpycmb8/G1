@@ -1,0 +1,17 @@
+{from "pattern bullet"
+	{tag "mgun weapon bullet to_hand"}
+	{filling "ammo adapt" 250}
+	{inventory
+		{size 6 2 }
+		{weight 100 }
+	}
+	{minRange 5}
+	{maxRange 800}
+	{mass 1}
+	{traceFreq 1}
+	{Automatic}
+	{calibre 1}
+	{rechargeTime 5}
+	{recoveryTime 5}
+ 	{speed 500}
+}

@@ -127,7 +127,6 @@
 		{tags add "hold"}
 		{tags add "machine"}
 		{tags add "harvester_base"}
-		{call "leds_update"}
 		{call "led_ems_connect"}
 		{call "led_light_connect"}
 		{call "radio_connect"}
@@ -141,8 +140,6 @@
 			{tags add "idle_enter"}
 			{call "idle-enter"}
 		}		
-		{ik_enable "head_ik_h_damage" 0}
-		{ik_enable "head_ik_v_damage" 0}
 	}
 	{on "fire_connect"
 		(define "burn_fx_component"
@@ -174,22 +171,8 @@
 			{view hide	"ems_global_search"}
 			{view pause	"ems_global_search"}
 		)
-		("leds_ems_global_small"  vis(RightUpLeg_ems) )
-		("leds_ems_global_small"  vis(LeftUpLeg_ems)  )
 		("leds_ems_global_small"  vis(body_ems_00)  )
-		("leds_ems_global_small"  vis(head_ems_00)  )
-		("leds_ems_global_small"  vis(head_ems_01)  )
-		("leds_ems_global_small"  vis(head_ems_02) )
-		("leds_ems_global_small"  vis(head_ems_03) )
-		("leds_ems_global_small"  vis(head_ems_04) )
-		("leds_ems_global_small"  vis(head_ems_05) )
-		("leds_ems_global_small"  vis(head_ems_06) )
-		("leds_ems_global_small"  vis(visor_led_01) )
-		("leds_ems_global_small"  vis(visor_led_02) )
-		("leds_ems_global_small"  vis(visor_led_03) )
 		("leds_ems_global_small"  vis(head_light_ems_00) )
-		("leds_ems_global_small"  vis(head_light_ems_01) )
-		("leds_ems_global_small"  vis(head_light_ems_02) )
 	}
 	{on "sound_connect"
 		{link_sound "stop_gas" "generation_zero/characters/gas_drop/smoke_hiss_end"}
@@ -222,155 +205,157 @@
 		("leds_ems_global"  vis(body_ems_00) )
 		
 	}
-	{on "combat_call"
-		{if not tagged "combat_call"
-			{tags add "combat_call"}
-			{if rand 0.2
-				{start_sound "generation_zero/characters/harvest/curl/dread_lingo_2ch_01_2ch"}	
-				{start_sound "generation_zero/characters/harvest/curl_bb/dread_lingo_2ch_01_2ch_bb"}	
-			else rand 0.2
-				{start_sound "generation_zero/characters/harvest/curl/dread_lingo_2ch_04_2ch"}	
-				{start_sound "generation_zero/characters/harvest/curl_bb/dread_lingo_2ch_04_2ch_bb"}	
-			else rand 0.2
-				{start_sound "generation_zero/characters/harvest/curl/dread_lingo_2ch_06_2ch"}	
-				{start_sound "generation_zero/characters/harvest/curl_bb/dread_lingo_2ch_06_2ch_bb"}	
-			else rand 0.2
-				{start_sound "generation_zero/characters/harvest/curl/dread_lingo_2ch_07_2ch"}	
-				{start_sound "generation_zero/characters/harvest/curl_bb/dread_lingo_2ch_07_2ch_bb"}	
-			else 
-				{start_sound "generation_zero/characters/harvest/curl/dread_lingo_2ch_24_2ch"}	
-				{start_sound "generation_zero/characters/harvest/curl_bb/dread_lingo_2ch_24_2ch_bb"}	
-			}
-		}
-		{delay 2 {tags remove "combat_call"}}
-	}
-	{on "leds_update" 
-		{kill_delay "hold_led"}		
-		{delay 0.1
-			(define "leds_ems"
-				{if not tagged "die_battery"
-					{if tagged "hold"
-						{burn volume "visor_ems" fx "hold_burn" fake}
-						{view start	"ems_global_hold"}
-						{view show	"ems_global_hold"}
-						{view hide	"ems_global_alarm"}
-						{view pause	"ems_global_alarm"}
-						{view hide	"ems_global_search"}
-						{view pause	"ems_global_search"}
-						{bone show "%vis_hold"}
-						{bone hide "%vis_alarm"}
-						{bone hide "%vis_search"}
-					else tagged "search"
-						{burn volume "visor_ems" fx "yellow_burn" fake}
-						{view hide	"ems_global_alarm"}
-						{view pause	"ems_global_alarm"}
-						{view start	"ems_global_search"}
-						{view show	"ems_global_search"}
-						{view hide	"ems_global_hold"}
-						{view pause	"ems_global_hold"}
-						{bone hide "%vis_hold"}
-						{bone hide "%vis_alarm"}
-						{bone show "%vis_search"}
-					else tagged "alarm"
-						{burn volume "visor_ems" fx "red_burn" fake}
-						{view start	"ems_global_alarm"}
-						{view show	"ems_global_alarm"}
-						{view hide	"ems_global_search"}
-						{view pause	"ems_global_search"}
-						{view hide	"ems_global_hold"}
-						{view pause	"ems_global_hold"}
-						{bone hide "%vis_hold"}
-						{bone show "%vis_alarm"}
-						{bone hide "%vis_search"}
-					else tagged "off"
-						{view hide	"ems_global_alarm"}
-						{view pause	"ems_global_alarm"}
-						{view hide	"ems_global_search"}
-						{view pause	"ems_global_search"}
-						{view hide	"ems_global_hold"}
-						{view pause	"ems_global_hold"}
-						{bone hide "%vis_hold"}
-						{bone hide "%vis_alarm"}
-						{bone hide "%vis_search"}
-					}
-					{delay 3
-						{tags remove "off"}	
-						{tags remove "hold"}	
-						{tags remove "search"}	
-						{tags remove "alarm"}	
-					}
-					{if tagged "alarm"
-						{delay 12 "hold_led"
-							{if not able "exploded"
-								{tags add "search"}	
-								{tags remove "alarm"}	
-								{view hide	"ems_global_alarm"}
-								{view pause	"ems_global_alarm"}
-								{view start	"ems_global_search"}
-								{view show	"ems_global_search"}
-								{view hide	"ems_global_hold"}
-								{view pause	"ems_global_hold"}
-								{bone hide "%vis_alarm"}
-								{bone show "%vis_search"}
-							}
-						}
-						{delay 20 "hold_led"
-							{if not able "exploded"
-								{tags add "hold"}	
-								{tags remove "search"}	
-								{view start	"ems_global_hold"}
-								{view show	"ems_global_hold"}
-								{view hide	"ems_global_alarm"}
-								{view pause	"ems_global_alarm"}
-								{view hide	"ems_global_search"}
-								{view pause	"ems_global_search"}
-								{bone show "%vis_hold"}
-								{bone hide "%vis_alarm"}
-								{bone hide "%vis_search"}
-							}
-						}
+	{on "ai_talk_signal" 
+		{delay 0.2
+			{if tagged "alarm"
+				{tags remove "search"}
+				{tags remove "hold"}
+				{if not tagged "alarm_call"
+					{tags add "alarm_call"}
+					{if rand 0.5
+						{spawn "dread_combat_ver2" "head"}
+					else 
+						{spawn "dread_combat_ver1" "head"}
 					}
 				}
-			)
-			("leds_ems"  vis(body_ems_00) )
-			("leds_ems"  vis(head_ems_00)  )
-			("leds_ems"  vis(head_ems_01)  )
-			("leds_ems"  vis(head_ems_02) )
-			("leds_ems"  vis(head_ems_03) )
-			("leds_ems"  vis(visor_led_01) )
-			("leds_ems"  vis(visor_led_02) )
-			("leds_ems"  vis(visor_led_03) )
-			("leds_ems"  vis(head_light_ems_00) )
-			("leds_ems"  vis(head_light_ems_01) )
-			("leds_ems"  vis(head_light_ems_02) )
+				{delay 5 {tags remove "alarm_call"}}
+				;{burn volume "visor_ems" fx "red_burn" fake}
+				{call "show_alarm"}
+			else tagged "search"
+				{tags remove "alarm"}
+				{tags remove "hold"}
+				{if not tagged "search_call"
+					{tags add "search_call"}
+					{if rand 0.3
+						{spawn "dread_search_ver7" "head"}
+					else rand 0.3
+						{spawn "dread_search_ver6" "head"}
+					else rand 0.3
+						{spawn "dread_search_ver5" "head"}
+					else rand 0.3
+						{spawn "dread_search_ver4" "head"}
+					else rand 0.3
+						{spawn "dread_search_ver3" "head"}
+					else rand 0.3
+						{spawn "dread_search_ver2" "head"}
+					else 
+						{spawn "dread_search_ver1" "head"}
+					}
+				}
+				{delay 2 {tags remove "search_call"}}
+				;{burn volume "visor_ems" fx "yellow_burn" fake}
+				{call "show_search"}
+			else tagged "off"
+				{tags remove "search"}
+				{tags remove "hold"}
+				{tags remove "alarm"}
+				{call "show_off"}
+			else tagged "hold"
+				{call "show_hold"}
+			}
+			{delay 10 
+				{if tagged "alarm"
+					{if not able "exploded"
+						{tags add "search"}	
+						{tags remove "alarm"}	
+						{call "show_search"}
+					}
+				}
+				{delay 15 
+					{if not able "exploded"
+						{tags add "hold"}	
+						{tags remove "search"}	
+						{call "show_hold"}
+					}
+				}
+			}
 		}
 	}
-	{on "stop_all" 
+	{on ik begin "h_signal"
+		{tags remove "hold"}	
+		{tags remove "alarm"}	
+		{tags add "search"}
+		{if not tagged "search_call_signal"
+			{tags add "search_call_signal"}
+			{call "ai_talk_signal"}
+		}
+		{delay 2 {tags remove "search_call_signal"}}
+	}
+	(define "leds_ems_connect"
+		("leds_ems"  vis(body_ems_00)	)
+		("leds_ems"  vis(head_light_ems_00)	)
+	)
+	{on "show_off" 
+		{view hide	"ems_global_hold"}
+		{view pause	"ems_global_hold"}
+		{view hide	"ems_global_alarm"}
+		{view pause	"ems_global_alarm"}
+		{view hide	"ems_global_search"}
+		{view pause	"ems_global_search"}
 		(define "leds_ems"
-			{view hide	"ems_global_alarm"}
-			{view pause	"ems_global_alarm"}
-			{view hide	"ems_global_search"}
-			{view pause	"ems_global_search"}
-			{view hide	"ems_global_hold"}
-			{view pause	"ems_global_hold"}
 			{bone hide "%vis_hold"}
 			{bone hide "%vis_alarm"}
 			{bone hide "%vis_search"}
-			{bone hide	"light_ems"}
 		)
-		("leds_ems"  vis(head_ems_00)  )
-		("leds_ems"  vis(head_ems_01)  )
-		("leds_ems"  vis(head_ems_02) )
-		("leds_ems"  vis(head_ems_03) )
-		("leds_ems"  vis(head_ems_04) )
-		("leds_ems"  vis(head_ems_05) )
-		("leds_ems"  vis(head_ems_06) )
-		("leds_ems"  vis(visor_led_01) )
-		("leds_ems"  vis(visor_led_02) )
-		("leds_ems"  vis(visor_led_03) )
-		("leds_ems"  vis(head_light_ems_00) )
-		("leds_ems"  vis(head_light_ems_01) )
-		("leds_ems"  vis(head_light_ems_02) )
+		("leds_ems_connect")
+	}
+	{on "show_hold" 
+		{view start	"ems_global_hold"}
+		{view show	"ems_global_hold"}
+		{view hide	"ems_global_alarm"}
+		{view pause	"ems_global_alarm"}
+		{view hide	"ems_global_search"}
+		{view pause	"ems_global_search"}
+		(define "leds_ems"
+			{bone show "%vis_hold"}
+			{bone hide "%vis_alarm"}
+			{bone hide "%vis_search"}
+		)
+		("leds_ems_connect")
+	}
+	{on "show_search" 
+		{view hide	"ems_global_alarm"}
+		{view pause	"ems_global_alarm"}
+		{view start	"ems_global_search"}
+		{view show	"ems_global_search"}
+		{view hide	"ems_global_hold"}
+		{view pause	"ems_global_hold"}
+		(define "leds_ems"
+			{bone hide "%vis_hold"}
+			{bone hide "%vis_alarm"}
+			{bone show "%vis_search"}
+		)
+		("leds_ems_connect")
+	}
+	{on "show_alarm" 
+		{view start	"ems_global_alarm"}
+		{view show	"ems_global_alarm"}
+		{view hide	"ems_global_search"}
+		{view pause	"ems_global_search"}
+		{view hide	"ems_global_hold"}
+		{view pause	"ems_global_hold"}
+		(define "leds_ems"
+			{bone hide "%vis_hold"}
+			{bone show "%vis_alarm"}
+			{bone hide "%vis_search"}
+		)
+		("leds_ems_connect")
+	}
+	{on "stop_all" 
+		{ani_stop "power_up"}
+		{ani_stop "power_drop"}
+		{view hide	"ems_global_alarm"}
+		{view pause	"ems_global_alarm"}
+		{view hide	"ems_global_search"}
+		{view pause	"ems_global_search"}
+		{view hide	"ems_global_hold"}
+		{view pause	"ems_global_hold"}
+		(define "leds_ems"
+			{bone hide "%vis_hold"}
+			{bone hide "%vis_alarm"}
+			{bone hide "%vis_search"}
+		)
+		("leds_ems_connect")
 	}	
 	{on "check_work_gun"
 		{if not tagged "damage_missile_r"
@@ -410,7 +395,10 @@
 			{ani_stop "health"}
 		}
 	}
-	{on fire "alarm_signal"   ;harvest
+	{on fire "alarm_signal"   
+		;{signal shot 5000}
+		{tags add "mgun_alarm_base"}
+		{tags add "call_allies"}
 		{if rand 0.1
 			{if not tagged "turn"
 				{if not tagged "move"
@@ -422,22 +410,19 @@
 				}
 			}
 		}
-		{if rand 0.2
-			{start_sound "generation_zero/characters/harvest/curl/dread_lingo_2ch_01_2ch"}	
-			{start_sound "generation_zero/characters/harvest/curl_bb/dread_lingo_2ch_01_2ch_bb"}	
-		else rand 0.2
-			{start_sound "generation_zero/characters/harvest/curl/dread_lingo_2ch_04_2ch"}	
-			{start_sound "generation_zero/characters/harvest/curl_bb/dread_lingo_2ch_04_2ch_bb"}	
-		else rand 0.2
-			{start_sound "generation_zero/characters/harvest/curl/dread_lingo_2ch_06_2ch"}	
-			{start_sound "generation_zero/characters/harvest/curl_bb/dread_lingo_2ch_06_2ch_bb"}	
-		else rand 0.2
-			{start_sound "generation_zero/characters/harvest/curl/dread_lingo_2ch_07_2ch"}	
-			{start_sound "generation_zero/characters/harvest/curl_bb/dread_lingo_2ch_07_2ch_bb"}	
-		else 
-			{start_sound "generation_zero/characters/harvest/curl/dread_lingo_2ch_24_2ch"}	
-			{start_sound "generation_zero/characters/harvest/curl_bb/dread_lingo_2ch_24_2ch_bb"}	
+		{delay 5
+			{tags remove "mgun_alarm_base"}
+			{tags remove "call_allies"}
 		}
+		{if tagged "search"
+			{tags remove "search"}
+			{tags add "alarm"}
+		else tagged "hold"
+			{tags remove "hold"}
+			{tags add "search"}
+		}
+		{call "ai_talk_signal"}
+		{delay 1 {tags remove "combat_call"}}
 	}
 	{on "power_up" ; harvest
 		{if not able "exploded"
@@ -446,58 +431,14 @@
 			{view show	"ems"}
 			{view start	"ems"}		
 			{tags add "hold"}
-			{call "leds_update"}
-			{call "led_loop"}
-		}
-	}
-	{on "led_loop"
-		{if work "main_body"
-			{if tagged "hold"
-				{bone show "visor_led_00_hold"}
-				{delay 0.5 "led_loop"
-					{bone show "visor_led_01_hold"}
-					{delay 0.5 "led_loop"
-						{bone show "visor_led_02_hold"}
-						{delay 1 "led_loop"
-							{bone hide "visor_led_00_hold"}
-							{bone hide "visor_led_01_hold"}
-							{bone hide "visor_led_02_hold"}
-						}
-					}
-				}
-			else tagged "search"
-				{bone show "visor_led_00_search"}
-				{delay 0.5 "led_loop"
-					{bone show "visor_led_01_search"}
-					{delay 0.5 "led_loop"
-						{bone show "visor_led_02_search"}
-						{delay 1 "led_loop"
-							{bone hide "visor_led_00_search"}
-							{bone hide "visor_led_01_search"}
-							{bone hide "visor_led_02_search"}
-						}
-					}
-				}
-			else tagged "alarm"
-				{bone show "visor_led_00_alarm"}
-				{delay 0.5 "led_loop"
-					{bone show "visor_led_01_alarm"}
-					{delay 0.5 "led_loop"
-						{bone show "visor_led_02_alarm"}
-						{delay 1 "led_loop"
-							{bone hide "visor_led_00_alarm"}
-							{bone hide "visor_led_01_alarm"}
-							{bone hide "visor_led_02_alarm"}
-						}
-					}
-				}
-			else tagged "off"
-				{bone hide "visor_led_00_bone"}
-				{bone hide "visor_led_01_bone"}
-				{bone hide "visor_led_02_bone"}
+			{tags remove "alarm"}	
+			{tags remove "search"}
+			{if not tagged "search_call_signal"
+				{tags add "search_call_signal"}
+				{call "ai_talk_signal"}
 			}
+			{delay 2 {tags remove "search_call_signal"}}
 		}
-		{delay_effect 0.5 "led_loop"}
 	}
 	
 	{on "stop_idle"
@@ -542,12 +483,12 @@
 			{view pause	"ems_global"}
 			{call "stop_idle"}
 			{tags add "power_drop"}
-			{tags add "off"}
-			{tags add "wire_burn"}
-			{tags remove "hold"}
-			{tags remove "alarm"}
+			{tags remove "hold"}	
+			{tags remove "alarm"}	
 			{tags remove "search"}
-			{call "leds_update"}
+			{tags add "off"}
+			{call "ai_talk_signal"}
+			{tags add "wire_burn"}
 			{call "sparks_loop"}
 			{burn volume "cpu" fx "smoke_preheat" time 5 fake even_law}	
 			{ani_play "power_down"}
@@ -575,7 +516,7 @@
 					{tags remove "hold"}
 					{tags remove "alarm"}
 					{tags remove "search"}
-					{call "leds_update"}
+					{call "ai_talk_signal"}
 					{burn volume "cpu" fx "smoke_preheat" time 5 fake even_law}	
 					{ani_play "power_down"}
 					{call "gun_block"}
@@ -1972,7 +1913,7 @@
 		{components "Missile_r" destroy}		
 	}
 	
-	{on "reload" overload ;harvest
+	{on "reload"  ;harvest
 		{if tagged "fire_gun_r"
 			{if work "gun_r"
 				{tags add "gun_r"}
@@ -2011,17 +1952,6 @@
 					}
 				}
 			}		
-		else tagged "fire_mgun_melee"
-			{if work "mgun_melee"
-				{tags add "mgun_melee_r"}
-				{weapon_work "attack_melee_charge" 0}
-				{delay 8
-					{if work "mgun_melee"
-						{tags remove "mgun_melee_r"}
-						{weapon_work "attack_melee_charge" 1}
-					}
-				}
-			}
 		else tagged "fire_gasdrop"
 			{if work "gasdrop"
 				{tags add "gasdrop_r"}
@@ -2033,29 +1963,11 @@
 					}
 				}
 			}
-		else tagged "fire_mgun_r"
-			{if work "mgun_r"
-				{tags add "mgun_r"}
-				{weapon_work "mgun_r" 0}
-				{delay 1
-					{if work "mgun_r"
-						{tags remove "gasdrop_r"}
-						{ani_play "rocket_ready_r" -1}
-					}
-				}
-			}
-		else tagged "fire_mgun_l"
-			{if work "mgun_l"
-				{tags add "mgun_l"}
-				{weapon_work "mgun_l" 0}
-				{delay 1
-					{if work "mgun_l"
-						{tags remove "gasdrop_l"}
-						{ani_play "rocket_ready_l" -1}
-					}
-				}
-			}
 		}
+	}
+	
+	{on "rpg_detect"
+		
 	}
 	{on "attack_concussion"
 		{call "weapon_melee_disable"}
@@ -2452,8 +2364,14 @@
 	}
 	{on animation_event "play_idle" ;skir scout harv
 		{tags add "play_idle"}
-		{tags add "hold"}
-		{call "leds_update"}
+		{tags add "hold"}	
+		{tags remove "alarm"}	
+		{tags remove "search"}
+		{if not tagged "search_call_signal"
+			{tags add "search_call_signal"}
+			{call "ai_talk_signal"}
+		}
+		{delay 2 {tags remove "search_call_signal"}}
 	}
 	{on animation_event "leave_idle" ;skir scout harv
 		{tags remove "play_idle"}
