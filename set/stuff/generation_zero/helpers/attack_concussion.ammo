@@ -1,0 +1,13 @@
+{bullet
+	{tag "check_side" "attack_concussion"}
+	{tag "no_crater"}
+	{inventory
+		{noView}
+	}
+	{mass 1}
+	{damage blastwave				
+		{energy 0.5}
+		{area 1 1}
+	}
+	{entity "attack_concussion"}
+}

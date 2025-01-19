@@ -175,25 +175,25 @@
 		}
 		{sequence "attack_concussion"
 			{events 	
-				{1 "drop_speed_event_start"}	
+				{1 "fire_script_begin"}	
 				{2 "idle_exit"}	
 				{15 "concussion_riser"}
 				{20 "joint_big"}
 				{35 "attack_concussion"}
-				{70 "drop_speed_event_exit"}
+				{70 "fire_script_end"}
 			}
 		}
 		{sequence "attack_gas"
 			{events 	
-				{1 "drop_speed_event_start"}	
+				{1 "fire_script_begin"}	
 				{2 "idle_exit"}	
-				{120 "drop_speed_event_exit"}
+				{120 "fire_script_end"}
 			}
 			{resume}
 		}
 		{sequence "attack_l"
 			{events 	
-				{1 "idle_exit"}	
+				{1 "fire_script_begin"}	
 				{2 "block_hit"}
 				{7 "joint_big"}
 				{8 "close_attack_enter"}
@@ -201,24 +201,45 @@
 				{56 "joint_big"}
 				{71 "foot_harvest_fl"}
 				{70 "unblock_hit"}
+				{95 "fire_script_end"}
 				{96 "close_attack_leave"}
 			}
 			{resume}
 		}
 		{sequence "attack_l_bwd"
+			{events 	
+				{1 "fire_script_begin"}	
+				{2 "block_hit"}
+				{15 "joint_big"}
+				{30 "foot_harvest_fl"}
+				{40 "foot_harvest_br"}
+				{43 "close_attack_enter"}
+				{47 "restart_clunk_harvester"}
+				{53 "foot_harvest_fl"}
+				{54 "close_attack_leave"}
+				{56 "joint_big"}
+				{60 "foot_harvest_melee_r"}
+				{75 "restart_clunk_harvester"}
+				{95 "joint_big"}
+				{109 "foot_harvest_fr"}
+				{113 "foot_harvest_bl"}
+				{128 "unblock_hit"}			
+				{129 "fire_script_end"}
+			}
 			{movement}	
 			{resume}
 		}
 		{sequence "attack_r"
 			{events 	
-				{1 "idle_exit"}	
+				{1 "fire_script_begin"}	
 				{2 "block_hit"}
 				{7 "joint_big"}
 				{8 "close_attack_enter"}
 				{23 "foot_harvest_melee_r"}
 				{56 "joint_big"}
 				{71 "foot_harvest_fr"}
-				{70 "unblock_hit"}
+				{70 "unblock_hit"}			
+				{95 "fire_script_end"}
 				{96 "close_attack_leave"}
 			}
 			{resume}
@@ -226,6 +247,21 @@
 		{sequence "attack_r_bwd" 
 			{movement}	
 			{resume}
+			{events 	
+				{1 "fire_script_begin"}	
+				{2 "block_hit"}
+				{18 "joint_big"}
+				{25 "foot_harvest_fr"}
+				{45 "close_attack_enter"}
+				{47 "joint_big"}
+				{50 "foot_harvest_bl"}
+				{53 "foot_harvest_fr"}
+				{61 "foot_harvest_melee_l"}
+				{94 "joint_big"}
+				{95 "close_attack_leave"}
+				{109 "foot_harvest_fl"}
+				{129 "fire_script_end"}
+			}
 		}
 		{sequence "death_l_fwd"	
 			{resume}

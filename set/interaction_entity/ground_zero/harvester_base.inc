@@ -1699,7 +1699,7 @@
 			{ani_play "curl_to_idle" 0.8}	
 		}
 	}		
-	{on fire "attack_concussion" ; concusion
+	{on "attack_concussion" ; concusion
 		{call "weapon_melee_off"}
 		{delay 2
 			{call "weapon_melee_on"}
@@ -2237,7 +2237,6 @@
 			}
 		}
 	}
-	;evs
 	{on "fire_script_begin"
 		{auto_operatable 0}
 		{drop_orders}
