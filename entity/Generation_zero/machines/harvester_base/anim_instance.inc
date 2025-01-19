@@ -224,7 +224,7 @@
 				{109 "foot_harvest_fr"}
 				{113 "foot_harvest_bl"}
 				{128 "unblock_hit"}			
-				{129 "fire_script_end"}
+				{120 "fire_script_end"}
 			}
 			{movement}	
 			{resume}
@@ -260,7 +260,7 @@
 				{94 "joint_big"}
 				{95 "close_attack_leave"}
 				{109 "foot_harvest_fl"}
-				{129 "fire_script_end"}
+				{120 "fire_script_end"}
 			}
 		}
 		{sequence "death_l_fwd"	

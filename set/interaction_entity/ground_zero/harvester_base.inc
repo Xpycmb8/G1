@@ -1694,7 +1694,7 @@
 	}
 	{on fire "attack_pestdrop" 
 		{call "fire_script_begin"}
-		{call "weapon_melee_off"}
+		{call "weapon_melee_disable"}
 		{tags add "fire_pestcontainer_drop"}
 		;{tags add "curl_stand"}		
 		{delay 0.3
@@ -1705,7 +1705,7 @@
 			{start_sound "generation_zero/characters/harvest/curl_bb/"}	
 		}
 		{delay 2 1
-			;{call "weapon_melee_on"}
+			;{call "weapon_melee_enable"}
 			{ani_play "idle_to_curl" 0.6}	
 		}
 		{delay 8 "curl"
@@ -1719,47 +1719,47 @@
 		}
 	}		
 	{on "attack_l"
-		{call "weapon_melee_off"}
+		{call "weapon_melee_disable"}
 		{ani_play "attack_l" 1}		
 		{tags add "attack_l"}
 		{delay 0.5
 			{tags remove "attack_l"}
 		}
-		{delay 20
-			{call "weapon_melee_on"}
+		{delay 2
+			{call "weapon_melee_enable"}
 		}
 	}		
 	{on "attack_r"
-		{call "weapon_melee_off"}
+		{call "weapon_melee_disable"}
 		{ani_play "attack_r" 1}		
 		{tags add "attack_r"}
 		{delay 0.5
 			{tags remove "attack_r"}
 		}
-		{delay 20
-			{call "weapon_melee_on"}
+		{delay 2
+			{call "weapon_melee_enable"}
 		}
 	}		
 	{on "attack_l_bwd"
-		{call "weapon_melee_off"}
+		{call "weapon_melee_disable"}
 		{ani_play "attack_l_bwd" 1}		
 		{tags add "attack_l_bwd"}
 		{delay 0.5
 			{tags remove "attack_l_bwd"}
 		}
-		{delay 20
-			{call "weapon_melee_on"}
+		{delay 2
+			{call "weapon_melee_enable"}
 		}
 	}		
 	{on "attack_r_bwd"
-		{call "weapon_melee_off"}
+		{call "weapon_melee_disable"}
 		{ani_play "attack_r_bwd" 1}		
 		{tags add "attack_r_bwd"}
 		{delay 0.5
 			{tags remove "attack_r_bwd"}
 		}
-		{delay 20
-			{call "weapon_melee_on"}
+		{delay 2
+			{call "weapon_melee_enable"}
 		}
 	}		
 	{on fire "mgun_r"
@@ -1816,7 +1816,7 @@
 	}		
 	{on fire "attack_gas"
 		{tags add "fire_gasdrop"}
-		{call "weapon_melee_off"}
+		{call "weapon_melee_disable"}
 		{movement_limit slow}
 		{call "drop_speed"}
 		{chassis_work 0}
@@ -1825,7 +1825,7 @@
 				{chassis_work 1}
 				{movement_limit fast}
 			}
-			{call "weapon_melee_on"}
+			{call "weapon_melee_enable"}
 		}
 		{delay 0.3
 			{tags remove "fire_gasdrop"}
@@ -2058,9 +2058,9 @@
 		}
 	}
 	{on "attack_concussion"
-		{call "weapon_melee_off"}
+		{call "weapon_melee_disable"}
 		{delay 10
-			{call "weapon_melee_on"}
+			{call "weapon_melee_enable"}
 		}
 		{tags add "attack_concussion"}
 		{delay 0.5

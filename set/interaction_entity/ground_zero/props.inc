@@ -196,7 +196,7 @@
 	}
 	{on overlap begin	
 		{if effector "human"
-			{spawn "attack_l_bwd_hv" "spawn" x}
+			{spawn "attack_r_bwd_hv" "spawn" x}
 			{volumes disable overlap}
 		}		
 	}
@@ -214,7 +214,7 @@
 	}
 	{on overlap begin	
 		{if effector "human"
-			{spawn "attack_r_bwd_hv" "spawn" x}
+			{spawn "attack_l_bwd_hv" "spawn" x}
 			{volumes disable overlap}
 		}		
 	}

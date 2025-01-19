@@ -1,24 +1,24 @@
 {game_entity
-	{Skeleton
-		{bone "basis"
-			{Orientation
-				1	0	0
+{Skeleton
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "attack_r_bwd_hv"
+			{Matrix34
 				0	-1	0
+				1	0	0
 				0	0	1
-			}
-			{bone "attack_r_bwd_hv"
-				{Matrix34
-					0	-1	0
-					1	0	0
-					0	0	1
-					-59.4697	-147.169	-1.97255
-				}
-			}
-			{bone "spawn"
-				{Position -26.5021	0	67.1815}
+				-40.8617	112.175	-4.86477
 			}
 		}
+		{bone "spawn"
+			{Position -26.5021	0	67.1815}
+		}
 	}
+}
 	{volume "attack_r_bwd_hv"
 		{Position 0	0	15}
 		{Box 60 60 30} ;длина растояние высота
