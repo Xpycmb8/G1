@@ -256,6 +256,26 @@
 	}
 }
 
+{"attack_concussion_place"
+	{on spawn
+		{volumes enable overlap}
+	}
+	{on "close"
+		{volumes disable overlap}
+	}
+	{on "open"
+		{volumes enable overlap}
+	}
+	{on overlap begin	
+		{if effector "human"
+			{spawn "attack_concussion" "spawn" x}
+			{volumes disable overlap}
+		}		
+	}
+}
+
+
+
 {"check_side"
 	{on spawn
 		{stuff_detonate}
