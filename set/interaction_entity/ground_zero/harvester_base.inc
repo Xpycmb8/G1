@@ -688,7 +688,9 @@
 	("terrain_fx" args "rock"  						"ground" )
 	("terrain_fx" args "sand"  						"ground" )
 	("terrain_fx" args "grass"  					"grass")
-	{on move on ;harvest
+
+
+	{on move on ;
 		{kill_delay "move_stop"}
 		{call "stop_idle"}
 		{tags add "move"}	
@@ -700,17 +702,9 @@
 			{call "walkstart_f"}
 			;{ani_play "walkstart_f"  }
 		}
-		{call "weapon_gas_off"}
-		{call "weapon_melee_off"}
-	}
-	{on animation_event "walkstart_f_start" 
-		;{chassis_work 0}
-		{tags add "walkstart_f"}
-		{tags add "walk"}
-	}
-	{on animation_event "walkstart_f_end" 
-		{tags remove "walkstart_f"}
-		{tags remove "walk"}
+		{call "weapon_disable"}
+		{call "weapon_gas_disable"}
+		{call "weapon_melee_disable"}
 	}
 	{on "walkstart_f"
 		{if not tagged "walkstart_f"		
@@ -718,109 +712,77 @@
 			{ani_play "walkstart_f"  }
 		}	
 	}	
-	{on animation_event "walkstart_f" ;  вызов после старта шага
+	{on animation_event "walkstart_f_start" ;еэг в начале хода
+		{tags add "walkstart_f"}
+		{tags add "walk"}
+	}
+	{on animation_event "walkstart_f_end" ;выход из аним старта
+		{tags remove "walkstart_f"}
 		{if not tagged "turn"
 			{if tagged "move"
 				{call "move_update_walk"}
-			else
-				{call "walkstop_f"} ;сли не пошёл
 			}
 		}	
-	}	
-	{on "move_update_walk"  ;dread цикл ходки
-		{if tagged "break_cooling_systems"
-			{call "overheat_cooling_systems"}
-		}
-		{if tagged "move"		
-			{if not tagged "walkstop_f"		
-				{ani_play "walkloop_f" }
-			}
-		else ;выполнение остановки если дали тэг
-			{call "walkstop_f"}
-		}	
-	}	
-	{on animation_event "walkstop_f_start" 
-		{tags add "walk"}
-		{tags add "walkstop_f"}
-	}
-	{on animation_event "walkstop_f_exit" 
-		{chassis_work 1}
-		{tags remove "walk"}
-		{tags remove "walkstop_f"}
-	}
-	{on animation_event "walkloop_f_start" 
-		{tags add "walk"}
-	}
-	{on animation_event "walkloop_f_exit" 
-		{tags remove "walk"}
 	}
 	{on "walkstop_f"; вызов стопа после старта
-		{if not tagged "step_l_045"		
-			{if not tagged "step_r_045"		
+		{if not tagged "Turn_Left"		
+			{if not tagged "Turn_right"		
 				{if not tagged "turn"		
 					{if not tagged "walkstop_f"		
 						{tags add "walkstop_f"}
-						{ani_play "walkstop_f"  }
+						;{ani_stop "walkloop_f"  }
+						;{ani_play "walkstop_f"  }
 					}	
 				}	
 			}	
 		}	
 	}	
-	{on animation_event "walkloop_f" ;dread цикл ходки проверка скорости
-		{if not tagged "jump"
-			{call "move_update_walk"}
-			; {if velocity 6	;начало бега
-				; {ani_stop "walkloop_fwd"}
-				; {ani_play "run_pass_to_walk" }
-			; else velocity 4
-				; {call "move_update_walk"}
-				; {ani_stop "run_pass_to_walk" }
-			; else 	
-				; {call "move_update_walk"}
-			; }
-		}
-	}
-	{on move off ; harvest
-		{if not tagged "turn"		
-			{call "walkstop_f"}
-		}
-		;{ani_stop "walkloop_f" }
-		; {if not tagged "turn"		
-			; {if velocity 1
-				; {ani_play "walkstop_f" 1}
-			; }
-		; }
-		{if work "mgun_melee_close"
-			{weapon_work "attack_melee_charge_close" 1}
-		}
+	{on move off ; all
+		{call "walkstop_f"}
 		{call "stop_idle"}
-		; {delay 0.5
-			; {if not tagged "move"
-				; {if not tagged "turn"
-					; {call "stop_all_ani"}
-				; }
-			; }
-		; }
-		;{call "idle_start"}
-		;{kill_delay "move_stop"}
 		{tags remove "move_forward"}	
-		{tags remove "move_backward"}	
 		{tags remove "move"}	
-		;{tags remove "turn"}
-		{tags remove "run"}
-		{delay 0.5 "move_stop"
-			{call "weapon_on"}
-			{call "weapon_gas_on"}
-		}
-		{delay 2 "move_stop"
-			{call "weapon_melee_on"}
+		{tags remove "turn"}
+		{tags remove "walk"}
+		{delay 1
+			{call "weapon_enable"}
+			{call "weapon_gas_enable"}
+			{call "weapon_melee_enable"}
 		}
 		{set "blocked" 0}
 	}
-
-
-	{on turn on overload; harvest
-		{call "weapon_melee_off"}
+	{on "move_update_walk"  ; цикл ходки 
+		{if tagged "move"		
+			{if not tagged "walkstop_f"		
+				{ani_play "walkloop_f" }
+			}
+		}	
+	}	
+	{on animation_event "walkloop_f_start" 
+		{tags add "walk"}
+		{tags add "walkloop_f"}
+	}
+	{on animation_event "walkloop_f_exit" 
+		{if tagged "walkstop_f"		
+			{tags remove "walkloop_f"}
+			{ani_play "walkstop_f"  }
+		else
+			{call "move_update_walk"}		
+		}
+	}
+	{on animation_event "walkstop_f_start"
+		;{chassis_work 0}
+		{tags add "walk"}
+	}
+	{on animation_event "walkstop_f_exit" 
+		;{if work "fuel" {chassis_work 1}}		
+		{call "weapon_enable"}
+		{tags remove "walk"}
+		{tags remove "walkstop_f"}
+	}
+	{on turn on ; 		
+		{call "weapon_melee_disable"}
+		{call "weapon_disable"}
 		{set "blocked" 1}
 		{kill_delay "move_stop"}
 		{call "stop_idle"}
@@ -833,12 +795,100 @@
 			{call "update_turn_right_movement"}
 		}
 	}
-	{on animation_event "update_turn_left_movement"; обновление пооврота убрано;dread harv
+	{on animation_event "update_turn_left_movement"; обновление пооврота убрано; harv
 		{call "update_turn_left_movement"}
 	}
-	{on animation_event "update_turn_right_movement"; обновление пооврота убрано;dread harv
+	{on animation_event "update_turn_right_movement"; обновление пооврота убрано; harv
 		{call "update_turn_right_movement"}
 	}
+	{on animation_event "step_l_045_start"
+		{tags add "left"}	
+		{tags add "step_l_045"}	
+		; {if not tagged "move"		
+			; {movement_limit slow}		
+		; }
+	}
+	{on animation_event "step_l_045_exit"
+		{if tagged "Turn_Left"
+			{call "update_turn_left_movement"}
+		else
+			{ani_stop "step_l_045"}	
+			{delay 0.1
+				{tags remove "step_l_045_exit"}	
+			}
+			{tags remove "left"}	
+			{tags remove "step_l_045"}	
+		}
+	}
+	{on "update_turn_left_movement" 
+		{if tagged "Turn_Left"
+			{delay 0.1
+				{if not tagged "step_l_045"
+					{if tagged "curl_stand"
+						{ani_play "curl_step_l_045"}
+					else
+						{ani_play "step_l_045"}
+					}
+				}
+			}
+		}
+	}
+	{on animation_event "step_r_045_start"
+		{tags add "step_r_045"}	
+		{tags add "right"}	
+		;{movement_limit slow}		
+	}
+	{on animation_event "step_r_045_exit"
+		{if tagged "Turn_Right"
+			{call "update_turn_right_movement"}
+		else
+			{ani_stop "step_r_045"}	
+			{delay 0.1
+				;{movement_limit fast}		
+				{tags remove "step_r_045_exit"}	
+			}
+			{tags remove "right"}	
+			{tags remove "step_r_045"}	
+		}
+	}
+	{on "update_turn_right_movement" 
+		{if tagged "Turn_right"
+			{delay 0.1
+				{if not tagged "step_r_045"
+					{if tagged "curl_stand"
+						{ani_play "curl_step_r_045"}
+					else
+						{ani_play "step_r_045"}
+					}
+				}
+			}
+		}
+	}
+	{on turn off ; dread
+		{set "blocked" 0}
+		{kill_delay "long_turn"}
+		{delay 0.5 "move_stop"
+			{tags remove "turn"}
+			{tags remove "long_turn"}
+		}
+		{tags remove "Turn_Left"}	
+		{tags remove "Turn_Right"}	
+		{call "weapon_enable"}
+		{call "weapon_gas_enable"}
+		{call "weapon_melee_enable"}
+		(define "turn_off"	
+			{if tagged "%turn_off"
+				{tags add "%turn_off_exit" }
+				{tags remove "%turn_off"}	
+			}
+		)
+		("turn_off" turn_off(step_r_090) turn_off_exit(step_r_090_exit) )	
+		("turn_off" turn_off(step_r_045) turn_off_exit(step_r_045_exit) )	
+		("turn_off" turn_off(step_l_090) turn_off_exit(step_l_090_exit) )	
+		("turn_off" turn_off(step_l_045) turn_off_exit(step_l_045_exit) )	
+	}
+
+
 	{on animation_event "curl_step_l_045_start"
 		{movement_limit slow}
 		{tags add "left"}	
@@ -866,78 +916,6 @@
 			{tags remove "right"}	
 			{tags remove "step_r_045"}
 		}
-	}
-
-	{on animation_event "step_l_045_start"
-		{tags add "left"}	
-		{tags add "step_l_045"}	
-	}
-	{on animation_event "step_l_045_exit"
-		{if tagged "Turn_Left"
-			{call "update_turn_left_movement"}
-		else
-			{tags remove "left"}	
-			{tags remove "step_l_045"}
-		}
-	}
-	{on "update_turn_left_harv" 
-		{if tagged "Turn_Left"
-			;{if not tagged "step_l_045"
-			;	{tags add "step_l_045"}	
-				{delay 0.1
-					{if not tagged "step_r_045"
-						{if tagged "curl_stand"
-							{ani_play "curl_step_l_045"}
-						else
-							{ani_play "step_l_045"}
-						}
-					}
-				}
-			;}
-		}
-	}
-	{on animation_event "step_r_045_start"
-		{tags add "step_r_045"}	
-		{tags add "right"}	
-	}
-	{on animation_event "step_r_045_exit"
-		{if tagged "Turn_Right"
-			{call "update_turn_right_movement"}
-		else
-			{tags remove "right"}	
-			{tags remove "step_r_045"}	
-		}
-	}
-	{on "update_turn_right_harv" 
-		{if tagged "Turn_right"
-			;{if not tagged "step_r_045"
-			;	{tags add "step_r_045"}	
-				{delay 0.1
-					{if not tagged "step_l_045"
-						{if tagged "curl_stand"
-							{ani_play "curl_step_r_045"}
-						else
-							{ani_play "step_r_045"}
-						}
-					}
-				}
-			;}
-		}
-	}
-	{on turn off overload ; 
-		{set "blocked" 0}
-		{kill_delay "long_turn"}
-		{delay 0.5 "move_stop"
-			{tags remove "turn"}
-			{tags remove "long_turn"}
-			{call "weapon_on"}
-			{call "weapon_gas_on"}
-		}
-		{delay 1 "move_stop"
-			{call "weapon_melee_on"}
-		}
-		{tags remove "Turn_Left"}	
-		{tags remove "Turn_Right"}	
 	}
 	{on accelerate on
 		{tags add "accelerate_on"}
@@ -2269,6 +2247,33 @@
 		}
 	}
 	;evs
+	{on "fire_script_begin"
+		{auto_operatable 0}
+		{drop_orders}
+		{movement_limit slow}
+		{delay 1
+			{chassis_work 0}
+		}
+	}
+	;evs
+	{on animation_event "fire_script_begin"
+		{auto_operatable 0}
+		{drop_orders}
+		{movement_limit slow}
+		{delay 1
+			{chassis_work 0}
+		}
+	}
+	{on animation_event "fire_script_end"
+		{if not able "exploded"
+			{if work "fuel"
+				{auto_operatable 1}
+				{chassis_work 1}
+				{drop_orders}
+				{movement_limit fast}
+			}
+		}
+	}
 	{on animation_event "drop_speed_event_start" ;harv
 		{movement_limit slow}
 		

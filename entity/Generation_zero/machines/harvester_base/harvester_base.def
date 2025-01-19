@@ -460,6 +460,26 @@
 			{Linkbone "gasdrop_l"}
 			{obstacle disable}
 		}
+		{place "attack_l_bwd_hv_place"
+			{entity "attack_l_bwd_hv_place"}
+			{Linkbone "basis"}
+			{obstacle disable}
+		}
+		{place "attack_l_hv_place"
+			{entity "attack_l_hv_place"}
+			{Linkbone "basis"}
+			{obstacle disable}
+		}
+		{place "attack_r_bwd_hv_place"
+			{entity "attack_r_bwd_hv_place"}
+			{Linkbone "basis"}
+			{obstacle disable}
+		}
+		{place "attack_r_hv_place"
+			{entity "attack_r_hv_place"}
+			{Linkbone "basis"}
+			{obstacle disable}
+		}
 	}
 	{Weaponry
 		("restore_ik_time")
@@ -509,20 +529,20 @@
 			;{rotate}
 		}
 		
-		{place "attack_melee_r_stamp" ;melee_r
-			{StationaryFiring}
-			{weapon 	"harvest_melee" filled}
-			{foresight 	"attack_melee_foresight_r"}
-			{basic}
-			;{rotate}
-		}
-		{place "attack_melee_l_stamp" ;melee_l
-			{StationaryFiring}
-			{weapon 	"harvest_melee" filled}
-			{foresight 	"attack_melee_foresight_l"}
-			{basic}
-			;{rotate}
-		}
+		; {place "attack_melee_r_stamp" ;melee_r
+			; {StationaryFiring}
+			; {weapon 	"harvest_melee" filled}
+			; {foresight 	"attack_melee_foresight_r"}
+			; {basic}
+			; ;{rotate}
+		; }
+		; {place "attack_melee_l_stamp" ;melee_l
+			; {StationaryFiring}
+			; {weapon 	"harvest_melee" filled}
+			; {foresight 	"attack_melee_foresight_l"}
+			; {basic}
+			; ;{rotate}
+		; }
 		{place "attack_melee_charge" ;mgun_melee
 			{StationaryFiring}
 			{weapon 	"harvest_melee" filled}

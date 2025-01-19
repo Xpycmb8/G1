@@ -22,12 +22,11 @@
 				{44 "foot_harvest_fr"}
 				{55 "joint_big"}
 				{92 "foot_harvest_fl"}
-				;{109 "walkloop_f_end"}
-				{100 "walkloop_f"}
+				{100 "walkloop_f_exit"}
 			}
 		}
 		{sequence "walkstop_f"
-			;{movement}	
+			{movement}	
 			{events 	
 				{1 "walkstop_f_start"}
 				{20 "joint_big"}
