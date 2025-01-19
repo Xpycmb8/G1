@@ -1703,58 +1703,6 @@
 			{call "weapon_melee_enable"}
 		}
 	}		
-	{on fire "mgun_r"
-		{call "drop_speed_move"}
-		{start_sound "weapon/shoot_loud/far/rpg"}	
-		{start_sound "weapon/shoot_loud/close/rpg"}	
-		{spawn "fx_shoot_hit_sparks" "foresight_missilelauncher_r" x {impulse dir 4 2 rnd_dir 0.1} {gravity 0} }
-		{spawn "fx_shoot_hit_sparks" "foresight_missilelauncher_r" x {impulse dir 4 2 rnd_dir 0.1} {gravity 0} }
-		{spawn "fx_shoot_hit_sparks" "foresight_missilelauncher_r" x {impulse dir 4 2 rnd_dir 0.1} {gravity 0} }
-		{spawn "fx_shoot_hit_sparks" "foresight_missilelauncher_r" x {impulse dir 4 2 rnd_dir 0.1} {gravity 0} }
-		{spawn "fx_shoot_hit_sparks" "foresight_missilelauncher_r" x {impulse dir 4 2 rnd_dir 0.1} {gravity 0} }
-		{spawn "fx_shoot_hit_sparks" "foresight_missilelauncher_r" x {impulse dir 4 2 rnd_dir 0.1} {gravity 0} }
-		{spawn "fx_shoot_hit_sparks" "foresight_missilelauncher_r" x {impulse dir 4 2 rnd_dir 0.1} {gravity 0} }
-		{spawn "fx_shoot_hit_sparks" "foresight_missilelauncher_r" x {impulse dir 4 2 rnd_dir 0.1} {gravity 0} }
-		{spawn "fx_shoot_hit_sparks" "fx_shoot_missilelauncher_l" x {impulse dir 4 2 rnd_dir 0.1} {gravity 0} }
-		{spawn "fx_shoot_hit_sparks" "fx_shoot_missilelauncher_l" x {impulse dir 4 2 rnd_dir 0.1} {gravity 0} }
-		{spawn "fx_shoot_hit_sparks" "fx_shoot_missilelauncher_l" x {impulse dir 4 2 rnd_dir 0.1} {gravity 0} }
-		{spawn "fx_shoot_hit_sparks" "fx_shoot_missilelauncher_l" x {impulse dir 4 2 rnd_dir 0.1} {gravity 0} }
-		{spawn "distant_small" "foresight_missilelauncher_r" }
-		{view start "fx_muzzle_rpg_r"}
-		{delay 1 "fire"
-			{view pause	"fx_muzzle_rpg_r"}
-		}
-		{tags add "fire_mgun_r"}
-		{delay 0.5
-			{tags remove "fire_mgun_r"}
-		}
-	}		
-	{on fire "mgun_l"
-		{call "drop_speed_move"}
-		{start_sound "weapon/shoot_loud/far/rpg"}	
-		{start_sound "weapon/shoot_loud/close/rpg"}	
-		{spawn "fx_shoot_hit_sparks" "foresight_missilelauncher_l" x {impulse dir 4 2 rnd_dir 0.1} {gravity 0} }
-		{spawn "fx_shoot_hit_sparks" "foresight_missilelauncher_l" x {impulse dir 4 2 rnd_dir 0.1} {gravity 0} }
-		{spawn "fx_shoot_hit_sparks" "foresight_missilelauncher_l" x {impulse dir 4 2 rnd_dir 0.1} {gravity 0} }
-		{spawn "fx_shoot_hit_sparks" "foresight_missilelauncher_l" x {impulse dir 4 2 rnd_dir 0.1} {gravity 0} }
-		{spawn "fx_shoot_hit_sparks" "foresight_missilelauncher_l" x {impulse dir 4 2 rnd_dir 0.1} {gravity 0} }
-		{spawn "fx_shoot_hit_sparks" "foresight_missilelauncher_l" x {impulse dir 4 2 rnd_dir 0.1} {gravity 0} }
-		{spawn "fx_shoot_hit_sparks" "foresight_missilelauncher_l" x {impulse dir 4 2 rnd_dir 0.1} {gravity 0} }
-		{spawn "fx_shoot_hit_sparks" "foresight_missilelauncher_l" x {impulse dir 4 2 rnd_dir 0.1} {gravity 0} }
-		{spawn "fx_shoot_hit_sparks" "fx_shoot_missilelauncher_l" x {impulse dir 4 2 rnd_dir 0.1} {gravity 0} }
-		{spawn "fx_shoot_hit_sparks" "fx_shoot_missilelauncher_l" x {impulse dir 4 2 rnd_dir 0.1} {gravity 0} }
-		{spawn "fx_shoot_hit_sparks" "fx_shoot_missilelauncher_l" x {impulse dir 4 2 rnd_dir 0.1} {gravity 0} }
-		{spawn "fx_shoot_hit_sparks" "fx_shoot_missilelauncher_l" x {impulse dir 4 2 rnd_dir 0.1} {gravity 0} }
-		{spawn "distant_small" "foresight_missilelauncher_l" }
-		{view start "fx_muzzle_rpg_l"}
-		{delay 1 "fire"
-			{view pause	"fx_muzzle_rpg_l"}
-		}
-		{tags add "fire_mgun_l"}
-		{delay 0.5
-			{tags remove "fire_mgun_l"}
-		}
-	}		
 	{on fire "attack_gas"
 		{tags add "fire_gasdrop"}
 		{call "weapon_melee_disable"}
@@ -2092,6 +2040,10 @@
 	; }
 	{on "explosion_harv" 
 		{if not able "exploded"			
+			{view start "front_hatch_r_destroy"}
+			{view show "front_hatch_r_destroy"}
+			{view start "front_hatch_l_destroy"}
+			{view show "front_hatch_l_destroy"}			
 			{set "exploded" 1}		
 			{able "exploded" 1}
 			{stop_sound "engine" }
@@ -2119,6 +2071,22 @@
 			{able select 0}
 			{able repaired 0}
 			{clear_inventory}
+			{with_linked_entity "attack_l_bwd_hv"
+				{delete}
+			}			
+			{with_linked_entity "attack_r_bwd_hv"
+				{delete}
+			}			
+			{with_linked_entity "attack_l_hv"
+				{delete}
+			}			
+			{with_linked_entity "attack_l_hv"
+				{delete}
+			}			
+			{with_linked_entity "attack_concussion"
+				{delete}
+			}			
+			{call "tear_parts_explode"}
 		}
 	}
 	{on "tear_parts_explode"
@@ -2133,8 +2101,12 @@
 		("blast_harvest" args "front_plate_l" 				0.4)
 		("blast_harvest" args "knee_plate_r" 				0.4)
 		("blast_harvest" args "knee_plate_l" 				0.6)
-		("blast_harvest" args "Concussion_Pulse_l" 			0.6)
-		("blast_harvest" args "Concussion_Pulse_r" 			0.6)
+		("blast_harvest" args "Concussion_Pulse_l" 			0.2)
+		("blast_harvest" args "Concussion_Pulse_r" 			0.2)
+		("blast_harvest" args "visor_body" 			0.4)
+		("blast_harvest" args "container" 			0.4)
+		("blast_harvest" args "Missile_l" 			0.2)
+		("blast_harvest" args "Missile_r" 			0.2)
 	}
 	{on "move_hit" 
 		{if not "blocked"
