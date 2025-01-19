@@ -184,6 +184,78 @@
 	}
 }
 
+{"attack_l_bwd_hv_place"
+	{on spawn
+		{volumes enable overlap}
+	}
+	{on "close"
+		{volumes disable overlap}
+	}
+	{on "open"
+		{volumes enable overlap}
+	}
+	{on overlap begin	
+		{if effector "human"
+			{spawn "attack_l_bwd_hv" "spawn" x}
+			{volumes disable overlap}
+		}		
+	}
+}
+
+{"attack_r_bwd_hv_place"
+	{on spawn
+		{volumes enable overlap}
+	}
+	{on "close"
+		{volumes disable overlap}
+	}
+	{on "open"
+		{volumes enable overlap}
+	}
+	{on overlap begin	
+		{if effector "human"
+			{spawn "attack_r_bwd_hv" "spawn" x}
+			{volumes disable overlap}
+		}		
+	}
+}
+
+{"attack_l_hv_place"
+	{on spawn
+		{volumes enable overlap}
+	}
+	{on "close"
+		{volumes disable overlap}
+	}
+	{on "open"
+		{volumes enable overlap}
+	}
+	{on overlap begin	
+		{if effector "human"
+			{spawn "attack_l_hv" "spawn" x}
+			{volumes disable overlap}
+		}		
+	}
+}
+
+{"attack_r_hv_place"
+	{on spawn
+		{volumes enable overlap}
+	}
+	{on "close"
+		{volumes disable overlap}
+	}
+	{on "open"
+		{volumes enable overlap}
+	}
+	{on overlap begin	
+		{if effector "human"
+			{spawn "attack_r_hv" "spawn" x}
+			{volumes disable overlap}
+		}		
+	}
+}
+
 {"check_side"
 	{on spawn
 		{stuff_detonate}
