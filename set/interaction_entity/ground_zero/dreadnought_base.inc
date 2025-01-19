@@ -2494,6 +2494,14 @@
 		}
 	}
 	;evs
+	{on animation_event "fire_script_begin"
+		{auto_operatable 0}
+		{drop_orders}
+		{movement_limit slow}
+		{delay 1
+			{chassis_work 0}
+		}
+	}
 	{on animation_event "fire_script_end"
 		{if not able "exploded"
 			{if work "fuel"
@@ -2800,23 +2808,6 @@
 			{start_sound "generation_zero/characters/restart_clunk/large/"}			
 		}
 	}
-	{on animation_event "unblock_all_dread_call" ;dread
-		{if work "fuel"
-			{chassis_work 1}
-		}
-		{if work "mgun"
-			{weapon_work "mgun" 1}
-		}
-		{if work "attack_gas"
-			{weapon_work "attack_gas" 1};gasdrop
-		}
-		;{if work "attack_melee_charge"
-			{weapon_work "attack_melee_charge" 1} ;mgun_melee
-		;}
-		{if work "gun"
-			{weapon_work "gun" 1}
-		}
-	}
 	;-----------------------------------------------------------------------------------------------------------------------------------
 	{on animation_event "idle_enter" ;skir  harv dread hunter
 		{tags add "idle_enter"}
@@ -2844,6 +2835,23 @@
 		{weapon_work "attack_gas" 0}
 		{weapon_work "attack_melee_charge" 0}
 		{weapon_work "gun" 0}		
+	}
+	{on animation_event "unblock_all_dread_call" ;dread
+		{if work "fuel"
+			{chassis_work 1}
+		}
+		{if work "mgun"
+			{weapon_work "mgun" 1}
+		}
+		{if work "attack_gas"
+			{weapon_work "attack_gas" 1};gasdrop
+		}
+		;{if work "attack_melee_charge"
+			{weapon_work "attack_melee_charge" 1} ;mgun_melee
+		;}
+		{if work "gun"
+			{weapon_work "gun" 1}
+		}
 	}
 	;----------------------------------------------------------------death dread
 	{on animation_event "death_start_dread"

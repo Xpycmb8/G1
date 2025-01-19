@@ -253,20 +253,20 @@
 		{sequence "attack_melee_l_stamp"
 			{movement}	
 			{events 
-				{1 "block_all_dread_call"}
+				{1 "fire_script_begin"}
 				{12 "joint_big"}
 				{15 "close_attack_enter"}				
 				{21 "melee_l_stamp"}
 				{45 "joint_big"}
 				{55 "close_attack_leave"}				
-				{68 "unblock_all_dread_call"}
+				{68 "fire_script_end"}
 			}				
 			{resume}
 		}
 		{sequence "attack_melee_l_stamp_bwd"
 			{movement}	
 			{events 
-				{1 "block_all_dread_call"}
+				{1 "fire_script_begin"}
 				{12 "joint_big"}
 				{25 "foot_dreadnought_l"}
 				{40 "close_attack_enter"}	
@@ -275,27 +275,27 @@
 				{43 "melee_l_stamp"}
 				{70 "joint_big"}
 				{80 "close_attack_leave"}				
-				{110 "unblock_all_dread_call"}
+				{110 "fire_script_end"}
 			}				
 			{resume}
 		}
 		{sequence "attack_melee_r_stamp"
 			{movement}	
 			{events 
-				{1 "block_all_dread_call"}
+				{1 "fire_script_begin"}
 				{12 "joint_big"}
 				{15 "close_attack_enter"}				
 				{21 "melee_r_stamp"}
 				{45 "joint_big"}
 				{55 "close_attack_leave"}				
-				{68 "unblock_all_dread_call"}
+				{68 "fire_script_end"}
 			}				
 			{resume}
 		}
 		{sequence "attack_melee_r_stamp_bwd"
 			{movement}	
 			{events 
-				{1 "block_all_dread_call"}
+				{1 "fire_script_begin"}
 				{12 "joint_big"}
 				{25 "foot_dreadnought_r"}
 				{40 "close_attack_enter"}	
@@ -304,7 +304,7 @@
 				{43 "melee_r_stamp"}
 				{70 "joint_big"}
 				{80 "close_attack_leave"}				
-				{110 "unblock_all_dread_call"}
+				{110 "fire_script_end"}
 			}				
 			{resume}
 		}
