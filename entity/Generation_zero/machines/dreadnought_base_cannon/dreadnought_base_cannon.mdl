@@ -3478,14 +3478,6 @@
 		}
 	}
 }
-{Obstacle "obs1"
-	{Obb2
-		{Center -11.8733 -0}
-		{Extent 100 100}
-		{Axis 1 0}
-	}
-	{Rotate}
-}
 {Volume "ammo"
 	{Box 10.5787 12.9614 15.3229}
 	{Bone "ammo"}

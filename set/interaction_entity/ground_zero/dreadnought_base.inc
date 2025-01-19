@@ -2061,10 +2061,10 @@
 		{with_linked_entity "attack_melee_l_stamp"
 			{call "close"}
 		}
-		{with_linked_entity "attack_melee_r_stamp_bwd"
+		{with_linked_entity "attack_melee_r_bwd_stamp"
 			{call "close"}
 		}
-		{with_linked_entity "attack_melee_l_stamp_bwd"
+		{with_linked_entity "attack_melee_l_bwd_stamp"
 			{call "close"}
 		}
 	}
@@ -2075,10 +2075,10 @@
 		{with_linked_entity "attack_melee_l_stamp"
 			{call "open"}
 		}
-		{with_linked_entity "attack_melee_r_stamp_bwd"
+		{with_linked_entity "attack_melee_r_bwd_stamp"
 			{call "open"}
 		}
-		{with_linked_entity "attack_melee_l_stamp_bwd"
+		{with_linked_entity "attack_melee_l_bwd_stamp"
 			{call "open"}
 		}
 	}
@@ -2448,7 +2448,7 @@
 	{on "attack_melee_r_stamp" 
 		{call "weapon_melee_disable"}
 		{call "fire_script_begin"}
-		{delay 10
+		{delay 5
 			{call "weapon_melee_enable"}
 		}
 		{delay 0.1
@@ -2458,7 +2458,7 @@
 	{on "attack_melee_l_stamp" 
 		{call "weapon_melee_disable"}
 		{call "fire_script_begin"}
-		{delay 10
+		{delay 5
 			{call "weapon_melee_enable"}
 		}
 		{delay 0.1
@@ -2468,7 +2468,7 @@
 	{on "attack_melee_r_stamp_bwd" 
 		{call "weapon_melee_disable"}
 		{call "fire_script_begin"}
-		{delay 10
+		{delay 5
 			{call "weapon_melee_enable"}
 		}
 		{delay 0.1
@@ -2478,7 +2478,7 @@
 	{on "attack_melee_l_stamp_bwd" 
 		{call "weapon_melee_disable"}
 		{call "fire_script_begin"}
-		{delay 10
+		{delay 5
 			{call "weapon_melee_enable"}
 		}
 		{delay 0.1

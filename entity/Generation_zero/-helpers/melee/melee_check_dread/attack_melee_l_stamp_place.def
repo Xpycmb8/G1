@@ -34,13 +34,8 @@
 		{bone "attack_melee_l_stamp"}
 		{material "dummy"}
 	}
-	{simulation {able 1}}
-	{body {permit body}}
 	{collider "bush"}
 	{obstacleid "nothing"}
 	{mass 0.1}
-	{volume defaultmaterial "wood"}
-	{lodclass "decor_small"}
-	{NoGroupMesh 1}
 	{props "attack_melee_l_stamp_place" } 
 }

@@ -126,9 +126,6 @@
 		{if effector "human"
 			{spawn "attack_melee_l_stamp" "spawn" x}
 			{volumes disable overlap}
-			{delay 3
-				{volumes enable overlap}
-			}
 		}		
 	}
 }
@@ -165,9 +162,6 @@
 		{if effector "human"
 			{spawn "attack_melee_l_stamp_bwd" "spawn" x}
 			{volumes disable overlap}
-			{delay 3
-				{volumes enable overlap}
-			}
 		}		
 	}
 }

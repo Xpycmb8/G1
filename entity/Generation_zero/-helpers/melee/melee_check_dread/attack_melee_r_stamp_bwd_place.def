@@ -37,7 +37,5 @@
 	{collider "bush"}
 	{obstacleid "nothing"}
 	{mass 0.1}
-	{volume defaultmaterial "wood"}
-	{NoGroupMesh 1}
 	{props "attack_melee_r_stamp_bwd_place" } 
 }
