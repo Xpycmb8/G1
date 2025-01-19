@@ -679,13 +679,13 @@
 			{basic}
 			;{rotate}
 		}
-		; {place "attack_concussion" ;attack_concussion
-			; {weapon 	"dread_melee" filled}
-			; {foresight 	"attack_melee_foresight"}
-			; {basic}
-			; ;{rotate}
-			; {StationaryFiring}
-		; }
+		{place "attack_concussion" ;mgun_melee
+			{StationaryFiring}
+			{weapon 	"dread_melee" filled}
+			{foresight 	"attack_melee_foresight"}
+			{basic}
+			;{rotate}
+		}
 		
 		; {place "attack_melee_r_stamp" ;melee_r
 			; {StationaryFiring}

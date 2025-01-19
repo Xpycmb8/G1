@@ -6,7 +6,6 @@
 	{preloaded}
 	{speed 125}
 	{AimingTolerance 0.1}
-	{autoreload 0}
 	{calibre 84}
 	{minrange 10}
 	{range 400 410}

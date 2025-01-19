@@ -174,11 +174,13 @@
 		{sequence "step_ready_r_090" {resume}}
 		{sequence "attack_gas" 
 			{events 	
-				{1 "idle_exit"}	
+				{1 "idle_exit"}					
+				{2 "fire_script_begin"}
 				{20 "joint_big"}
 				{40 "foot_dreadnought_l"}
 				{175 "joint_big"}
 				{187 "foot_dreadnought_l"}
+				{188 "fire_script_end"}
 			}
 			{resume}
 		}
@@ -186,6 +188,7 @@
 			{movement}	
 			{events 	
 				{1 "idle_exit"}	
+				{2 "fire_script_begin"}
 				{5 "concussion_riser"}
 				{10 "joint_big"}
 				{22 "foot_dreadnought_r"}
@@ -193,6 +196,7 @@
 				{90 "attack_concussion"}
 				{130 "joint_big"}
 				{144 "foot_dreadnought_r"}
+				{145 "fire_script_end"}
 			}
 			{resume}	
 		}

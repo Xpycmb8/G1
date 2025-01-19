@@ -1289,6 +1289,9 @@
 		}
 	)
 	{on blast ;dread
+		{if min_energy 1
+			{call "drop_speed_move"}
+		}
 		{if stuff "attack_melee_l_stamp"
 			{call "attack_melee_l_stamp"}
 		}
@@ -1895,6 +1898,18 @@
 			{clear_inventory}
 			{spawn "destroy_med_robot" "neck"}
 			{spawn "burn_flare" "head_sm"}
+			{with_linked_entity "attack_melee_r_bwd_stamp"
+				{delete}
+			}			
+			{with_linked_entity "attack_melee_l_bwd_stamp"
+				{delete}
+			}			
+			{with_linked_entity "attack_melee_r_stamp"
+				{delete}
+			}			
+			{with_linked_entity "attack_melee_l_stamp"
+				{delete}
+			}			
 		}
 	}
 	{on "tear_parts_explode"
@@ -2373,7 +2388,9 @@
 			{tags add "alarm_call_signal"}
 			{call "ai_talk_signal"}
 		}
-		{delay 4 {tags remove "alarm_call_signal"}}
+		{delay 4
+			{tags remove "alarm_call_signal"}
+		}
 		{delay 10
 			{call "weapon_melee_enable"}
 		}
@@ -2430,14 +2447,16 @@
 		{tags remove "hold"}	
 		{tags remove "search"}	
 		{tags add "alarm"}
+		{call "weapon_melee_disable"}
+		{call "fire_script_begin"}
 		{if not tagged "alarm_call_signal"
 			{tags add "alarm_call_signal"}
 			{call "ai_talk_signal"}
 		}
-		{delay 4 {tags remove "alarm_call_signal"}}
-		{weapon_work "attack_gas" 0}
-		{delay 5
-			{weapon_work "attack_gas" 1}
+		{delay 4 
+			{call "weapon_melee_enable"}
+			{call "fire_script_end"}
+			{tags remove "alarm_call_signal"}
 		}
 		{tags add "attack_concussion"}
 		{delay 0.5
