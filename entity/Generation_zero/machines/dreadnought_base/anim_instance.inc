@@ -251,6 +251,7 @@
 		}
 		{sequence "recoil_gun" {resume}}		
 		{sequence "attack_melee_l_stamp"
+			{movement}	
 			{events 
 				{1 "block_all_dread_call"}
 				{12 "joint_big"}
@@ -262,8 +263,24 @@
 			}				
 			{resume}
 		}
-		{sequence "attack_melee_l_stamp_bwd" {resume}}
+		{sequence "attack_melee_l_stamp_bwd"
+			{movement}	
+			{events 
+				{1 "block_all_dread_call"}
+				{12 "joint_big"}
+				{25 "foot_dreadnought_l"}
+				{40 "close_attack_enter"}	
+				{30 "joint_big"}
+				{40 "joint_big"}
+				{43 "melee_l_stamp"}
+				{70 "joint_big"}
+				{80 "close_attack_leave"}				
+				{110 "unblock_all_dread_call"}
+			}				
+			{resume}
+		}
 		{sequence "attack_melee_r_stamp"
+			{movement}	
 			{events 
 				{1 "block_all_dread_call"}
 				{12 "joint_big"}
