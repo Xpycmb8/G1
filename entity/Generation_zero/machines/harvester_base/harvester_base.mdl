@@ -5,7 +5,7 @@
 	(include "anim_instance.inc")	
 	{bone revolute "basis"
 		{limits 0 -0}
-		{speed 0.2}
+		{speed 0.02}
 		{Orientation
 			1	0	0
 			0	-1	0

@@ -1753,7 +1753,7 @@
 				{delay 0.1
 					{if not tagged "step_r_045"
 						;{if not tagged "walk"
-							{ani_play "step_l_045"}	
+							{ani_play "step_l_045" 1.5}	
 						;}
 					}
 				}
@@ -1785,7 +1785,7 @@
 				{delay 0.1
 					{if not tagged "step_l_045"
 						;{if not tagged "walk"
-							{ani_play "step_r_045"}	
+							{ani_play "step_r_045" 1.5}	
 						;}
 					}
 				}
@@ -1817,6 +1817,22 @@
 	}
 	{on accelerate on
 		{tags add "accelerate_on"}
+		{if tagged "turn"
+			{tags remove "turn"}
+			(define "turn_off"	
+				{if tagged "%turn_off"
+					{tags remove "%turn_off"}	
+				}
+			)
+			("turn_off" turn_off(step_r_090) )	
+			("turn_off" turn_off(step_r_045) )	
+			("turn_off" turn_off(step_l_090) )	
+			("turn_off" turn_off(step_l_045) )	
+			{tags remove "Turn_Left"}	
+			{tags remove "Turn_Right"}	
+			{tags add "move_forward"}
+			{ani_play "walkloop_f" }
+		}
 	}
 	{on accelerate off
 		{tags remove "accelerate_on"}

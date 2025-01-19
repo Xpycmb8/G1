@@ -813,23 +813,16 @@
 			{call "update_turn_left_movement"}
 		else
 			{ani_stop "step_l_045"}	
-			{delay 0.1
-				{tags remove "step_l_045_exit"}	
-			}
 			{tags remove "left"}	
 			{tags remove "step_l_045"}	
 		}
 	}
 	{on "update_turn_left_movement" 
-		{if tagged "Turn_Left"
-			{delay 0.1
-				{if not tagged "step_l_045"
-					{if tagged "curl_stand"
-						{ani_play "curl_step_l_045"}
-					else
-						{ani_play "step_l_045"}
-					}
-				}
+		{if not tagged "step_l_045"
+			{if tagged "curl_stand"
+				{ani_play "curl_step_l_045"}
+			else
+				{ani_play "step_l_045"}
 			}
 		}
 	}
@@ -843,28 +836,20 @@
 			{call "update_turn_right_movement"}
 		else
 			{ani_stop "step_r_045"}	
-			{delay 0.1
-				;{movement_limit fast}		
-				{tags remove "step_r_045_exit"}	
-			}
 			{tags remove "right"}	
 			{tags remove "step_r_045"}	
 		}
 	}
 	{on "update_turn_right_movement" 
-		{if tagged "Turn_right"
-			{delay 0.1
-				{if not tagged "step_r_045"
-					{if tagged "curl_stand"
-						{ani_play "curl_step_r_045"}
-					else
-						{ani_play "step_r_045"}
-					}
-				}
+		{if not tagged "step_r_045"
+			{if tagged "curl_stand"
+				{ani_play "curl_step_r_045"}
+			else
+				{ani_play "step_r_045"}
 			}
 		}
 	}
-	{on turn off ; dread
+	{on turn off ; 
 		{set "blocked" 0}
 		{kill_delay "long_turn"}
 		{delay 0.5 "move_stop"
@@ -876,16 +861,10 @@
 		{call "weapon_enable"}
 		{call "weapon_gas_enable"}
 		{call "weapon_melee_enable"}
-		(define "turn_off"	
-			{if tagged "%turn_off"
-				{tags add "%turn_off_exit" }
-				{tags remove "%turn_off"}	
-			}
-		)
-		("turn_off" turn_off(step_r_090) turn_off_exit(step_r_090_exit) )	
-		("turn_off" turn_off(step_r_045) turn_off_exit(step_r_045_exit) )	
-		("turn_off" turn_off(step_l_090) turn_off_exit(step_l_090_exit) )	
-		("turn_off" turn_off(step_l_045) turn_off_exit(step_l_045_exit) )	
+		{tags remove "step_r_090"}	
+		{tags remove "step_r_045"}	
+		{tags remove "step_l_090"}	
+		{tags remove "step_l_045"}	
 	}
 
 
