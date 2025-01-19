@@ -1,0 +1,7 @@
+{game_entity
+	{Skeleton}
+	{props "attack_l_bwd_hv"}
+	{extender "stuff"
+		{item "attack_l_bwd_hv"}
+	}
+}
