@@ -518,42 +518,27 @@
 		{place "attack_gas"
 			{StationaryFiring}
 			{weapon 	"gasdrop" filled}
-			{foresight 	"gas_drop_foresight"}
+			{foresight 	"attack_gas"}
 			{basic}
 			;{rotate}
 		}
 		{place "attack_pestdrop"
 			{weapon 	"container_harv" filled}
-			{foresight 	"pestcontainer_drop_foresight"}
+			{foresight 	"attack_pestdrop"}
 			{basic}
 			;{rotate}
 		}
-		
-		; {place "attack_melee_r_stamp" ;melee_r
+		; {place "attack_melee_charge" ;mgun_melee
 			; {StationaryFiring}
 			; {weapon 	"harvest_melee" filled}
-			; {foresight 	"attack_melee_foresight_r"}
+			; {foresight 	"attack_melee_foresight"}
 			; {basic}
 			; ;{rotate}
 		; }
-		; {place "attack_melee_l_stamp" ;melee_l
-			; {StationaryFiring}
-			; {weapon 	"harvest_melee" filled}
-			; {foresight 	"attack_melee_foresight_l"}
-			; {basic}
-			; ;{rotate}
-		; }
-		{place "attack_melee_charge" ;mgun_melee
-			{StationaryFiring}
-			{weapon 	"harvest_melee" filled}
-			{foresight 	"attack_melee_foresight"}
-			{basic}
-			;{rotate}
-		}
 		{place "attack_concussion"
 			{StationaryFiring}
 			{weapon 	"harvest_melee" filled}
-			{foresight 	"attack_melee_foresight"}
+			{foresight 	"attack_concussion"}
 			{basic}
 			;{rotate}
 		}
@@ -561,10 +546,10 @@
 	{mass 85000}
 	("movement_heavy" 
 		slow(0) 
-		normal(10)
-		fast(10)
-		maxspeed(10)
-		maxspeed_atmaxturn(8)
+		normal(8)
+		fast(8)
+		maxspeed(8)
+		maxspeed_atmaxturn(5)
 		turnstart(8)
 		turnstop(1)
 		turnradius(25)
