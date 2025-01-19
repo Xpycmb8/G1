@@ -1359,7 +1359,7 @@
 													21.9208	-9.15527e-05	0.000232697
 												}
 												{bone revolute "roller_01_joint"
-													{limits -1 1}
+													{limits -25 25}
 													{Matrix34
 														1	0	0
 														0	1	0
@@ -1377,7 +1377,7 @@
 														{VolumeView "lefttoe1_sm.ply"}
 													}
 													{bone revolute "wheell"
-														{parameters "ID=wheelleft;Radius=35;"}
+														{parameters "ID=wheelleft;Radius=1;"}
 														{Matrix34
 															0.993344	-0.0112933	0.114629
 															0.00674388	0.999178	0.0399805
