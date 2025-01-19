@@ -460,22 +460,22 @@
 			{Linkbone "gasdrop_l"}
 			{obstacle disable}
 		}
-		{place "attack_l_bwd_hv_place"
+		{place "attack_l_bwd_hv"
 			{entity "attack_l_bwd_hv_place"}
 			{Linkbone "basis"}
 			{obstacle disable}
 		}
-		{place "attack_l_hv_place"
+		{place "attack_l_hv"
 			{entity "attack_l_hv_place"}
 			{Linkbone "basis"}
 			{obstacle disable}
 		}
-		{place "attack_r_bwd_hv_place"
+		{place "attack_r_bwd_hv"
 			{entity "attack_r_bwd_hv_place"}
 			{Linkbone "basis"}
 			{obstacle disable}
 		}
-		{place "attack_r_hv_place"
+		{place "attack_r_hv"
 			{entity "attack_r_hv_place"}
 			{Linkbone "basis"}
 			{obstacle disable}

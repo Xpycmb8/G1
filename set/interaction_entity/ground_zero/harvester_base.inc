@@ -1591,6 +1591,21 @@
 		}
 	)
 	{on blast ;harvest
+		{if stuff "attack_concussion"
+			{call "attack_concussion"}
+		}
+		{if stuff "attack_l_bwd_hv"
+			{call "attack_l_bwd"}
+		}
+		{if stuff "attack_r_bwd_hv"
+			{call "attack_r_bwd"}
+		}
+		{if stuff "attack_l_hv"
+			{call "attack_l"}
+		}
+		{if stuff "attack_r_hv"
+			{call "attack_r"}
+		}
 		(include "blast_all.inc")
 		(define "health"
 			{if volume "main_organ"
@@ -1643,36 +1658,42 @@
 			}
 		}
 	}
-	{on "weapon_melee_on"
-		(define "weapon_active"	
-			;{if work "body"
-				{if work "%weapon"
-					{weapon_work "%weapon" 1}
-				}
-			;}
-		)
-		("weapon_active" weapon(mgun_concussion) 	)	
-		("weapon_active" weapon(mgun_melee)  		)	
-		("weapon_active" weapon(mgun_melee)  		)	
-		("weapon_active" weapon(mgun_melee_r)  		)	
-		("weapon_active" weapon(mgun_melee_l)  		)	
-		("weapon_active" weapon(gasdrop)  			)	
-		;("weapon_active" weapon(gun_l)  			)	
-		;("weapon_active" weapon(gun_r)  			)	
+	{on "weapon_melee_disable"
+		{with_linked_entity "attack_l_bwd_hv"
+			{call "close"}
+		}
+		{with_linked_entity "attack_r_bwd_hv"
+			{call "close"}
+		}
+		{with_linked_entity "attack_l_hv"
+			{call "close"}
+		}
+		{with_linked_entity "attack_r_hv"
+			{call "close"}
+		}
+		{with_linked_entity "attack_concussion"
+			{call "close"}
+		}
 	}
-	{on "weapon_melee_off"
-		{weapon_work "mgun_concussion" 0}
-		{weapon_work "attack_melee_charge" 0}
-		{weapon_work "attack_melee_r_stamp" 0}
-		{weapon_work "attack_melee_l_stamp" 0}
-		{weapon_work "attack_gas" 0}
-		;{weapon_work "gun_l" 0}
-		;{weapon_work "gun_r" 0}
+	{on "weapon_melee_enable" ;with link -close
+		{with_linked_entity "attack_l_bwd_hv"
+			{call "open"}
+		}
+		{with_linked_entity "attack_r_bwd_hv"
+			{call "open"}
+		}
+		{with_linked_entity "attack_l_hv"
+			{call "open"}
+		}
+		{with_linked_entity "attack_r_hv"
+			{call "open"}
+		}
+		{with_linked_entity "attack_concussion"
+			{call "open"}
+		}
 	}
-	
 	{on fire "attack_pestdrop" 
-		{chassis_work 0}
-		{call "drop_speed"}
+		{call "fire_script_begin"}
 		{call "weapon_melee_off"}
 		{tags add "fire_pestcontainer_drop"}
 		;{tags add "curl_stand"}		
@@ -1684,7 +1705,7 @@
 			{start_sound "generation_zero/characters/harvest/curl_bb/"}	
 		}
 		{delay 2 1
-			{call "weapon_melee_on"}
+			;{call "weapon_melee_on"}
 			{ani_play "idle_to_curl" 0.6}	
 		}
 		{delay 8 "curl"
@@ -1693,87 +1714,54 @@
 			{spawn "skirmisher_egg" "spawn_right"		{call "unlink_harvest"}}		
 		}			
 		{delay 30 
-			{if work "fuel"
-				{chassis_work 1}
-			}
 			{ani_play "curl_to_idle" 0.8}	
+			{call "fire_script_end"}
 		}
 	}		
-	{on "attack_concussion" ; concusion
+	{on "attack_l"
 		{call "weapon_melee_off"}
-		{delay 2
-			{call "weapon_melee_on"}
-		}
-		{tags add "mgun_concussion"}
+		{ani_play "attack_l" 1}		
+		{tags add "attack_l"}
 		{delay 0.5
-			{tags remove "mgun_concussion"}
+			{tags remove "attack_l"}
 		}
-		{call "attack_concussion"}
-		;{ani_play "attack_concussion" 1}		
-	}		
-	{on fire "attack_melee_charge"
-		{call "weapon_melee_off"}
-		{delay 5
+		{delay 20
 			{call "weapon_melee_on"}
 		}
-		{tags add "mgun_melee"}
+	}		
+	{on "attack_r"
+		{call "weapon_melee_off"}
+		{ani_play "attack_r" 1}		
+		{tags add "attack_r"}
 		{delay 0.5
-			{tags remove "mgun_melee"}
+			{tags remove "attack_r"}
 		}
-		{if rand 0.5
-			{ani_play "attack_r" 1}		
-		else
-			{ani_play "attack_l" 1}		
-		}
-		{delay 4
-			{weapon_work "attack_melee_l_stamp" 1}
-			{weapon_work "attack_melee_r_stamp" 1}
-		}
-	}		
-	{on fire "attack_melee_r_stamp"
-		{call "weapon_melee_off"}
-		{delay 6
+		{delay 20
 			{call "weapon_melee_on"}
 		}
-		{ani_play "attack_r_bwd" 1}		
-		{tags add "mgun_melee_r"}
-		{delay 0.5
-			{tags remove "mgun_melee_r"}
-		}
 	}		
-	{on fire "attack_melee_l_stamp"
+	{on "attack_l_bwd"
 		{call "weapon_melee_off"}
-		{delay 6
-			{call "weapon_melee_on"}
-		}
 		{ani_play "attack_l_bwd" 1}		
-		{tags add "mgun_melee_l"}
+		{tags add "attack_l_bwd"}
 		{delay 0.5
-			{tags remove "mgun_melee_l"}
+			{tags remove "attack_l_bwd"}
+		}
+		{delay 20
+			{call "weapon_melee_on"}
 		}
 	}		
-	{on ik begin "rocket_drive_h_R"
-		{if tagged "load_mortar_r"
-			{call "combat_call"}
-			{view start "fx_laser_point_missilelauncher_r"}
-			{view show "fx_laser_point_missilelauncher_r"}
-			{delay 1 "laser_point"
-				{view hide	"fx_laser_point_missilelauncher_r"}
-				{view pause	"fx_laser_point_missilelauncher_r"}
-			}
-		}		
-	}
-	{on ik begin "rocket_drive_h_l"
-		{if tagged "load_mortar_l"
-			{call "combat_call"}
-			{view start "fx_laser_point_missilelauncher_l"}
-			{view show "fx_laser_point_missilelauncher_l"}
-			{delay 1 "laser_point"
-				{view hide	"fx_laser_point_missilelauncher_l"}
-				{view pause	"fx_laser_point_missilelauncher_l"}
-			}
-		}		
-	}
+	{on "attack_r_bwd"
+		{call "weapon_melee_off"}
+		{ani_play "attack_r_bwd" 1}		
+		{tags add "attack_r_bwd"}
+		{delay 0.5
+			{tags remove "attack_r_bwd"}
+		}
+		{delay 20
+			{call "weapon_melee_on"}
+		}
+	}		
 	{on fire "mgun_r"
 		{call "drop_speed_move"}
 		{start_sound "weapon/shoot_loud/far/rpg"}	
@@ -2070,6 +2058,15 @@
 		}
 	}
 	{on "attack_concussion"
+		{call "weapon_melee_off"}
+		{delay 10
+			{call "weapon_melee_on"}
+		}
+		{tags add "attack_concussion"}
+		{delay 0.5
+			{tags remove "attack_concussion"}
+		}
+		{call "attack_concussion"}
 		{ani_play "attack_concussion" 1}
 	}
 
@@ -2243,6 +2240,16 @@
 		{movement_limit slow}
 		{delay 1
 			{chassis_work 0}
+		}
+	}
+	{on "fire_script_end"
+		{if not able "exploded"
+			{if work "fuel"
+				{auto_operatable 1}
+				{chassis_work 1}
+				{drop_orders}
+				{movement_limit fast}
+			}
 		}
 	}
 	;evs
