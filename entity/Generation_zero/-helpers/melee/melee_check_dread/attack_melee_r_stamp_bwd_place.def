@@ -9,17 +9,17 @@
 			{bone "spawn"
 				{Position 2.18435	0.0149734	104.413}
 			}
-			{bone "attack_melee_l_stamp_bwd"
+			{bone "attack_melee_r_stamp_bwd"
 				{Matrix34
-					-0.487117	-0.873337	0
-					0.873337	-0.487117	0
+					0	1	0
+					-1	0	0
 					0	0	1
-					85.7499	57.144	-0.475142
+					53.7876	-38.8026	-0.127714
 				}
 			}
 		}
 	}
-	{Volume "attack_melee_l_stamp_bwd"
+	{Volume "attack_melee_r_stamp_bwd"
 		{Position 0	0	15}
 		{Box 60 60 30} ;длина растояние высота
 		{tags "no_burn"}
@@ -31,7 +31,7 @@
 			{touch 0}
 		}
 		{density 0}
-		{bone "attack_melee_l_stamp_bwd"}
+		{bone "attack_melee_r_stamp_bwd"}
 		{material "dummy"}
 	}
 	{simulation {able 1}}
@@ -42,5 +42,5 @@
 	{volume defaultmaterial "wood"}
 	{lodclass "decor_small"}
 	{NoGroupMesh 1}
-	{props "attack_melee_l_stamp_bwd_place" } 
+	{props "attack_melee_r_stamp_bwd_place" } 
 }

@@ -591,6 +591,16 @@
 		}
 	}
 	{placer
+		{place "attack_melee_r_bwd_stamp"
+			{entity "attack_melee_r_stamp_bwd_place"}
+			{Linkbone "basis"}
+			{obstacle disable}
+		}
+		{place "attack_melee_l_bwd_stamp"
+			{entity "attack_melee_l_stamp_bwd_place"}
+			{Linkbone "basis"}
+			{obstacle disable}
+		}
 		{place "attack_melee_r_stamp"
 			{entity "attack_melee_r_stamp_place"}
 			{Linkbone "basis"}
