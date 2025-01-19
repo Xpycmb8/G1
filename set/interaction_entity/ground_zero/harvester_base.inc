@@ -795,6 +795,13 @@
 			{call "update_turn_right_movement"}
 		}
 	}
+	{on "update_turn_left_movement" 
+		{if tagged "curl_stand"
+			{ani_play "curl_step_l_045"}
+		else
+			{ani_play "step_l_045"}
+		}
+	}
 	{on animation_event "update_turn_left_movement"; обновление пооврота убрано; harv
 		{call "update_turn_left_movement"}
 	}
@@ -817,15 +824,6 @@
 			{tags remove "step_l_045"}	
 		}
 	}
-	{on "update_turn_left_movement" 
-		{if not tagged "step_l_045"
-			{if tagged "curl_stand"
-				{ani_play "curl_step_l_045"}
-			else
-				{ani_play "step_l_045"}
-			}
-		}
-	}
 	{on animation_event "step_r_045_start"
 		{tags add "step_r_045"}	
 		{tags add "right"}	
@@ -841,12 +839,10 @@
 		}
 	}
 	{on "update_turn_right_movement" 
-		{if not tagged "step_r_045"
-			{if tagged "curl_stand"
-				{ani_play "curl_step_r_045"}
-			else
-				{ani_play "step_r_045"}
-			}
+		{if tagged "curl_stand"
+			{ani_play "curl_step_r_045"}
+		else
+			{ani_play "step_r_045"}
 		}
 	}
 	{on turn off ; 
@@ -898,6 +894,22 @@
 	}
 	{on accelerate on
 		{tags add "accelerate_on"}
+		{if tagged "turn"
+			{tags remove "turn"}
+			(define "turn_off"	
+				{if tagged "%turn_off"
+					{tags remove "%turn_off"}	
+				}
+			)
+			("turn_off" turn_off(step_r_090) )	
+			("turn_off" turn_off(step_r_045) )	
+			("turn_off" turn_off(step_l_090) )	
+			("turn_off" turn_off(step_l_045) )	
+			{tags remove "Turn_Left"}	
+			{tags remove "Turn_Right"}	
+			{tags add "move_forward"}
+			{ani_play "walkloop_f" }
+		}
 	}
 	{on accelerate off
 		{tags remove "accelerate_on"}
