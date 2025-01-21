@@ -1,5 +1,5 @@
 {weapon_bullet
-	{tag "weapon build_in gun 20mm"}
+	{tag "weapon build_in gun"}
 	{desc "Rocket"}
 	{inventory
 		{size 4 2}
@@ -7,21 +7,21 @@
 	}
 	{mass 200}
 	{Automatic}
-	{filling "ammo shell_5m" 10}
+	{filling "ammo shell_7m" 10}
 	{fillingVisible "rocket"}
 	{foresight "missile_sight"}					
 	{fireSound	"small_arms/rpg_bolt"}
 	{fireSoundClose	"small_arms/rpg_bolt"}
 	{clickSound "LauncherMissile_click_01"}
-	{minRange 4}
-	("recoveryTime" r(250))
-	{rechargeTime 25}
+	{minRange 10}
+	("recoveryTime" r(180))
+	{rechargeTime 12}
 	{RelaxationTime 0.1}
 	{DisableRicochet}
 	{reactive}
 	{curve "cumulative"}
 	{gravity 0}	
-	{speed 120}
+	{speed 200}
 	{calibre 45}
 	{AimingTolerance 0.1}
 	{range 200 350}
@@ -55,16 +55,6 @@
 		{projectileDamage 50}
 		{minimumDamageModifier 20}
 		{projectileDamageTable {50 50} {100 40} {200 20} {350 16} {400 11} {600 1}}
-	}
-	{parameters "atgm"
-		{healthDamage 500}
-		{projectileDamageThreshold 4}
-		{Spreading
-			{radiusTable {10 0} {40 0.2} {65 1.2} {100 2.5} {140 3} {200 5}}
-		}
-		{projectileDamage 50}
-		{minimumDamageModifier 20}
-		{projectileDamageTable {50 75} {100 75} {200 75} {350 50} {400 35} {600 25}}
 	}
 	{preloaded}
 	{cursor "zenite_on"}

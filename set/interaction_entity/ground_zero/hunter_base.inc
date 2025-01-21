@@ -599,13 +599,14 @@
 		{drop_orders}
 		{movement_limit slow}
 		{delay 1
+			{auto_operatable 1}
 			{chassis_work 0}
 		}
 	}
 	{on "fire_script_end"
 		{if not able "exploded"
 			{if work "fuel"
-				{auto_operatable 1}
+				;{auto_operatable 1}
 				{chassis_work 1}
 				{drop_orders}
 				{movement_limit fast}
@@ -2095,6 +2096,12 @@
 					}
 				}
 			}		
+		else tagged "fire_missile"
+			{kill_delay "if_reload"}
+			{weapon_work "missile" 0}
+			{ani_play "close_attack" 0.3}
+			{spawn "small_mech_servo" "v_drive_carrier"}
+			{call "fire_script_end"}
 		else tagged "fire_pestcontainer_drop"
 			{if work "pestcontainer_drop"
 				{tags add "pestcontainer_drop_r"}
@@ -3003,6 +3010,7 @@
 		{view pause "flame"}
 		{view start "flame_fx"}
 		{view show "flame_fx"}
+		{weapon_work "missile" 0}
 	}
 	{on "ai_talk_signal" overload
 		{delay 0.2
@@ -3099,26 +3107,68 @@
 		{delay 1
 			{ani_play "open_attack" 0.4}
 			{spawn "small_mech_servo" "v_drive_carrier"}
-			{ik_enable "v_drive_carrier_mount" 0}
-			{ik_enable "v_drive_carrier" 0}
-			{ik_enable "h_drive_carrier" 0}
+			; {ik_enable "v_drive_carrier_mount" 0}
+			; {ik_enable "v_drive_carrier" 0}
+			; {ik_enable "h_drive_carrier" 0}
 		}
 		{delay 2
 			{tags remove "combat_call"}
 			{if work "rocket"
-				{call "gun_fire" }
+				{weapon_work "missile" 1}
 			}
 		}
-		{delay 5
+		{delay 5 "if_reload"
 			{tags remove "alarm_signal_fire"}
 		}
-		{delay 12
+		{delay 11 "if_reload"
+			{weapon_work "missile" 0}
+		}
+		{delay 12 "if_reload"
 			{ani_play "close_attack" 0.3}
 			{spawn "small_mech_servo" "v_drive_carrier"}
-			{ik_enable "v_drive_carrier_mount" 1}
-			{ik_enable "v_drive_carrier" 1}
-			{ik_enable "h_drive_carrier" 1}
+			; {ik_enable "v_drive_carrier_mount" 1}
+			; {ik_enable "v_drive_carrier" 1}
+			; {ik_enable "h_drive_carrier" 1}
 			{call "fire_script_end"}
+		}
+	}
+	{on fire "missile" ;hunter
+		{call "weapon_melee_off"}
+		{tags remove "hold"}	
+		{tags add "alarm"}	
+		{tags remove "search"}
+		{call "ai_talk_signal"}
+		{tags add "fire_missile"}
+		{delay 1
+			{tags remove "fire_missile"}
+		}	
+		{tags remove "idle_enter"}
+		(define "fire_barrel"
+			name "%0"
+				{ani_play "recoil_rocket" 1}
+				;{spawn "shell_5m_fg_loader_auto" "shooter_%0" x {call "check_side"}}		
+				{spawn "rpg_shot_small" "shooter_fx%0" x}			
+		)
+		{if   
+			("fire_barrel" args 00)
+		else 
+			("fire_barrel" args 01)
+		else
+			("fire_barrel" args 02)
+		else 
+			("fire_barrel" args 03)
+		else 
+			("fire_barrel" args 04)
+		else 
+			("fire_barrel" args 05)
+		else 
+			("fire_barrel" args 06)
+		else 
+			("fire_barrel" args 07)
+		else 
+			("fire_barrel" args 08)
+		else 
+			("fire_barrel" args 09)
 		}
 	}
 	{on "gun_fire" ;hunter		

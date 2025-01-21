@@ -11,7 +11,7 @@
 	{minRange 50}
 	{range 150 150}
 	{recoveryTime 0.1}
-	{rechargeTime 360}
+	{rechargeTime 120}
 	{gravity 0}
 	{speed 30}
 	{AimingTolerance 0.2}

@@ -43,24 +43,25 @@
 			{Size 8 8}
 			{Weight 5000}
 			{item "ammo gasfuel"		500}
-			{item "ammo visor"	10}
-			{item "ammo jump"	10}
-			{item "ammo melee"	10}
-			{item "ammo shell_5m"	1}
+			{item "ammo slope"			10}
+			{item "ammo visor"			10}
+			{item "ammo jump"			10}
+			{item "ammo melee"			10}
+			{item "ammo shell_7m"		12}
 		}
 	}
 	{Weaponry
 		("restore_ik_time")
-		; {place "gun" ;
-			; {weapon			"rocket_launcher_x10" filled}
-			; {StationaryFiring}
-			; {RestoreIKAfterAim}
-			; ;{rotate}
-			; {Barrels    10}
-			; {foresight	"missile_sight"}
-			; {shooter	"shooter"}
-			; {basic}
-		; }
+		{place "missile" ;
+			{weapon			"rocket_launcher_x10" filled}
+			{StationaryFiring}
+			{RestoreIKAfterAim}
+			;{rotate}
+			{Barrels    10}
+			{foresight	"missile_sight"}
+			{shooter	"shooter"}
+			{basic}
+		}
 		{place "mgun"
 			{weapon 	"hunter_handflame" filled}
 			{foresight "foresight_main"}
