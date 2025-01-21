@@ -267,6 +267,10 @@
 		{volumes enable overlap}
 	}
 	{on overlap begin	
+		{if effector "lynx_base"
+			{spawn "attack_concussion" "spawn" x}
+			{volumes disable overlap}
+		}
 		{if effector "human"
 			{spawn "attack_concussion" "spawn" x}
 			{volumes disable overlap}
