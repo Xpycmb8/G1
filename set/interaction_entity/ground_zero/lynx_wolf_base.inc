@@ -62,11 +62,9 @@
 		{add_view 	"heat_stage2_small" 			"stage2" 				"fx_main"};mg_not use
 		{add_view 	"smoke_sil" 					"fx_fire_hot" 			"fx_main"};mg
 
-
-		{add_view 	"40mm_start" 			"fx_muzzle_ags" 	"fx_main"};ags
+		{add_view 	"muzzle_gun30_auto" 			"fx_muzzle_ags" 	"fx_main"};ags
 
 		{add_view 	"blade_pull_loop_fx" 					"blade_fx" 			"blade_fx"};mg
-
 
 		{view hide	"scanline_light"}
 		{view pause	"scanline_light"}
@@ -1843,6 +1841,7 @@
 		{spawn "fx_shoot_hit_sparks" "fx_main" x {impulse dir 4 2 rnd_dir 0.1} {gravity 0} }
 		{spawn "fx_shoot_hit_sparks" "fx_main" x {impulse dir 4 2 rnd_dir 0.1} {gravity 0} }
 		{spawn "distant_small" "fx_main" }
+		{spawn "shoot_gun_ags_lynx" "fx_main" }	
 		{tags add "alarm"}
 		{tags remove "hold"}
 		{tags remove "search"}
