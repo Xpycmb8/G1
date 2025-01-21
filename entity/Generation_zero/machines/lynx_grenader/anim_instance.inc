@@ -56,15 +56,6 @@
 		}
 	}
 	{sequence
-		"recoil_mgun"
-		{speed 1.6}
-		{events 
-			{2 "open_bolt_lmg"}
-			{4 "bullet_drop_view"}
-			{5 "clear_casing_762"}
-		}
-	}
-	{sequence
 		"jump"
 		{speed 1}
 		{events 

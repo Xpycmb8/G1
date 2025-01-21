@@ -1,0 +1,51 @@
+{weapon_bullet
+	{tag "weapon build_in gun 20mm"}
+	{desc "AGS"}
+	{inventory
+		{size 2 2}
+		{weight 1000}
+	}
+	{mass 200}
+	{Automatic}
+	{filling "ammo ags30" 12}
+	{fillingVisible "shell"}
+	{foresight "Foresight"}					
+	{minRange 10}
+	("recoveryTime" r(250))
+	{rechargeTime 7.5}
+	{RelaxationTime 0.1}
+	{DisableRicochet}
+	{reactive}
+	{curve "cumulative"}
+	{gravity 0}	
+	{speed 120}
+	{calibre 45}
+	{AimingTolerance 0.1}
+	{range 120 150}
+	{healthDamage 450}
+	{projectileDamageThreshold 2}
+	{ZeroingAccuracy 0.75 0.5}
+	{parameters "fg" 
+		{aimRange 210}
+		{Spreading
+			{radiusTable {10 0} {40 0.2} {65 1.2} {100 2.5} {140 3} {200 5}}
+		}
+		{projectileDamage 5}
+		{minimumDamageModifier 5}
+		{projectileDamageTable {50 5} {100 3} {200 2} {350 1} {400 1} {500 0}}
+	}
+	{parameters "th" 
+		{projectileDamageThreshold 1}
+		{Spreading
+			{radiusTable {10 0} {40 0.2} {65 1.2} {100 2.5} {140 3} {200 5}}
+		}
+		{projectileDamage 2}
+		{minimumDamageModifier 2}
+		{projectileDamageTable {50 2} {100 2} {200 2} {350 1} {400 1} {600 0}}
+	}
+	{preloaded}
+	{cursor "zenite_on"}
+	{cursorReloading "zenite_reload"}	
+	{crosshair "crosshair9"}
+	{crosshairReloading "crosshair9_reload"}
+}

@@ -1,0 +1,20 @@
+{bullet
+	{tag "bullet ammo grenade fg dropboxed fx_40 40mm_grenade"}	
+	{entity "grenade_ags"}
+	
+	{inventory
+		{weight 20}
+		{size 2 1}
+	}
+	{damage blastwave
+		{energy 1.0}
+		{area 1.0 2.0}
+	}
+	{mass 0.46}	
+	
+	{possibleDamageRadius 4}
+
+	{view "grenade_ags"
+		{tail "grenade_tail" "tail"}
+	}
+}
