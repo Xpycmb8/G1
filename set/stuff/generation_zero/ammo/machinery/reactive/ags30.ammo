@@ -7,7 +7,7 @@
 		{size 2 1}
 	}
 	{damage blastwave
-		{energy 2}
+		{energy 4}
 		{area 0.3 0.6}
 		{ground_interaction_radius 0.2}
 	}
@@ -18,7 +18,7 @@
 	}
 	{mass 0.46}	
 	{detonationThickness 0.5}
-	{possibleDamageRadius 0.1}
+	{possibleDamageRadius 1}
 	{view "grenade_ags"
 		{tail "grenade_tail" "tail"}
 	}

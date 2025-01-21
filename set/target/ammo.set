@@ -800,6 +800,7 @@
 		{"shell heat_low"}									; cannon HEAT ammo (penetration < 100mm)
 		{"shell hv_ap"}										; cannon high velocity AP ammo types (APCR, HVAP, APDS) (ONLY IF ALREADY LOADED)
 		{"shell heat_high"}									; cannon HEAT ammo (penetration > 150mm)
+		{"40mm_grenade"}
 		{"flame" }
 		{"molotov_coctail" {ground}}
 		{"handgrenade" {ground}}
@@ -811,7 +812,6 @@
 		{"shell pierce" }
 		{"shell pierce 90mm" }
 		{"shell 40mm_fg" }
-		{"40mm_grenade fg" {ground}}
 		{"shell 105_th" }
 		{"shell_fire" }		
 		{"shell atgm" {volume "body"}}

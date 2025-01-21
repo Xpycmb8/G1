@@ -1,6 +1,5 @@
 {weapon_bullet
 	{tag "weapon build_in gun 20mm"}
-	{desc "AGS"}
 	{inventory
 		{size 2 2}
 		{weight 1000}

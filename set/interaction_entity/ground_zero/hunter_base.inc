@@ -2785,7 +2785,19 @@
 		{delay 0.3
 			{tags remove "fire_pestcontainer_drop"}
 		}	
-	}		
+	}	
+	{on ik begin "turret_ik_h"
+		{if not tagged "move"
+			{chassis_work 0}
+		}	
+	}	
+	{on ik end "turret_ik_h"
+		{delay 1
+			{if work "fuel"
+				{chassis_work 1}
+			}
+		}
+	}	
 }
 {"hunter_shotgun_sniper"
 	{on fire "mgun" overload  ;hunter
