@@ -62,6 +62,9 @@
 		{add_view 	"heat_stage2_small" 			"stage2" 				"fx_main"};mg_not use
 		{add_view 	"smoke_sil" 					"fx_fire_hot" 			"fx_main"};mg
 
+
+		{add_view 	"40mm_start" 			"fx_muzzle_ags" 	"fx_main"};ags
+
 		{add_view 	"blade_pull_loop_fx" 					"blade_fx" 			"blade_fx"};mg
 
 
@@ -1565,65 +1568,6 @@
 			; {weapon_work "attack_melee_charge 0}
 		; }
 	; }
-	{on fire "mgun"  ; lynx
-		{call "drop_speed"}
-		{play_sound "mid_mg"}
-		{play_sound "close_mg"}
-		{play_sound "far_mg"}
-		{if tagged "damage_mgun" {if rand 0.1 {call "jammed_gun"}}}
-		{view start "fx_muzzle_heat"}
-		{view show "fx_muzzle_heat"}
-		{delay 0.1 "fire"
-			{view show	"fx_fire_hot"}
-			{view start	"fx_fire_hot"}
-			{view hide	"fx_muzzle_heat"}
-			{view pause	"fx_muzzle_heat"}
-		}
-		{delay 1 0.5 "fire_hot"
-			{view hide	"fx_fire_hot"}
-			{view pause	"fx_fire_hot"}
-		}
-		{tags add "firing"}
-		{tags add "firing_smg"}
-		{delay 3 "firing"
-			{tags remove "firing"}
-			{tags remove "firing_smg"}
-		}
-		{ani_play "recoil_mgun" }		
-		{spawn "trace_linear" "fx_main" x }
-		{spawn "trace_linear" "fx_main" x }
-		{spawn "fx_shoot_hit_sparks" "fx_main" x {impulse dir 4 2 rnd_dir 0.1} {gravity 0} }
-		{spawn "fx_shoot_hit_sparks" "fx_main" x {impulse dir 4 2 rnd_dir 0.1} {gravity 0} }
-		{spawn "fx_shoot_hit_sparks" "fx_main" x {impulse dir 4 2 rnd_dir 0.1} {gravity 0} }
-		{spawn "fx_shoot_hit_sparks" "fx_main" x {impulse dir 4 2 rnd_dir 0.1} {gravity 0} }
-		{spawn "distant_small" "fx_main" }
-		; {if not tagged "fire_move"				
-			; {tags add "fire_move"}
-			; {ani_play "wpn_recoil" -0.1 resume}				
-		; }
-		; {delay 0.1 "fire_hold"
-			; {ani_play "wpn_recoil" +0.1 resume}				
-		; }
-		{tags add "alarm"}
-		{tags remove "hold"}
-		{tags remove "search"}
-		;{call "stop_all_ani"}
-		{call "ai_talk_signal"}
-		{call "stop_idle"}
-		;{chassis_work 0}
-		{tags remove "idle_enter"}
-	}
-	{on "reload" overload 
-		{if tagged "firing_smg"
-			{if work "mgun"
-				{tags add "mgun_r"}
-				{delay 1
-					{ani_play "wpn_reload" 0.5}	
-					{tags remove "mgun_r"}
-				}
-			}
-		}
-	}
 	{on "check_ground"
 		{if tagged "check_ground"
 			{impulse up -0.1}
@@ -1809,3 +1753,113 @@
 		; }
 	}
 }
+
+
+{"lynx_mg"
+	{on fire "mgun"  ; lynx
+		{call "drop_speed"}
+		{play_sound "mid_mg"}
+		{play_sound "close_mg"}
+		{play_sound "far_mg"}
+		{if tagged "damage_mgun" {if rand 0.1 {call "jammed_gun"}}}
+		{view start "fx_muzzle_heat"}
+		{view show "fx_muzzle_heat"}
+		{delay 0.1 "fire"
+			{view show	"fx_fire_hot"}
+			{view start	"fx_fire_hot"}
+			{view hide	"fx_muzzle_heat"}
+			{view pause	"fx_muzzle_heat"}
+		}
+		{delay 1 0.5 "fire_hot"
+			{view hide	"fx_fire_hot"}
+			{view pause	"fx_fire_hot"}
+		}
+		{tags add "firing"}
+		{tags add "firing_smg"}
+		{delay 3 "firing"
+			{tags remove "firing"}
+			{tags remove "firing_smg"}
+		}
+		{ani_play "recoil_mgun" }		
+		{spawn "trace_linear" "fx_main" x }
+		{spawn "trace_linear" "fx_main" x }
+		{spawn "fx_shoot_hit_sparks" "fx_main" x {impulse dir 4 2 rnd_dir 0.1} {gravity 0} }
+		{spawn "fx_shoot_hit_sparks" "fx_main" x {impulse dir 4 2 rnd_dir 0.1} {gravity 0} }
+		{spawn "fx_shoot_hit_sparks" "fx_main" x {impulse dir 4 2 rnd_dir 0.1} {gravity 0} }
+		{spawn "fx_shoot_hit_sparks" "fx_main" x {impulse dir 4 2 rnd_dir 0.1} {gravity 0} }
+		{spawn "distant_small" "fx_main" }
+		; {if not tagged "fire_move"				
+			; {tags add "fire_move"}
+			; {ani_play "wpn_recoil" -0.1 resume}				
+		; }
+		; {delay 0.1 "fire_hold"
+			; {ani_play "wpn_recoil" +0.1 resume}				
+		; }
+		{tags add "alarm"}
+		{tags remove "hold"}
+		{tags remove "search"}
+		;{call "stop_all_ani"}
+		{call "ai_talk_signal"}
+		{call "stop_idle"}
+		;{chassis_work 0}
+		{tags remove "idle_enter"}
+	}
+	{on "reload" overload 
+		{if tagged "firing_smg"
+			{if work "mgun"
+				{tags add "mgun_r"}
+				{delay 1
+					{ani_play "wpn_reload" 0.5}	
+					{tags remove "mgun_r"}
+				}
+			}
+		}
+	}
+}
+{"lynx_ags"
+	{on fire "mgun"  ; lynx
+		{call "drop_speed"}
+		{view start "fx_muzzle_ags"}
+		{view show "fx_muzzle_ags"}
+		{delay 0.1 "fire"
+			{view show	"fx_smoke"}
+			{view start	"fx_smoke"}
+			{view hide	"fx_muzzle_ags"}
+			{view pause	"fx_muzzle_ags"}
+		}
+		{delay 2 0.5 "fire_hot"
+			{view hide	"fx_smoke"}
+			{view pause	"fx_smoke"}
+		}
+		{tags add "firing"}
+		{tags add "firing_ags"}
+		{delay 3 "firing"
+			{tags remove "firing"}
+			{tags remove "firing_ags"}
+		}
+		{ani_play "recoil" }		
+		{spawn "fx_shoot_hit_sparks" "fx_main" x {impulse dir 4 2 rnd_dir 0.1} {gravity 0} }
+		{spawn "fx_shoot_hit_sparks" "fx_main" x {impulse dir 4 2 rnd_dir 0.1} {gravity 0} }
+		{spawn "fx_shoot_hit_sparks" "fx_main" x {impulse dir 4 2 rnd_dir 0.1} {gravity 0} }
+		{spawn "fx_shoot_hit_sparks" "fx_main" x {impulse dir 4 2 rnd_dir 0.1} {gravity 0} }
+		{spawn "distant_small" "fx_main" }
+		{tags add "alarm"}
+		{tags remove "hold"}
+		{tags remove "search"}
+		{call "ai_talk_signal"}
+		{call "stop_idle"}
+		{tags remove "idle_enter"}
+	}
+	{on "reload" overload 
+		{if tagged "firing_ags"
+			{if work "mgun"
+				{tags add "mgun_r"}
+				{delay 1
+					;{ani_play "wpn_reload" 0.5}	
+					{tags remove "mgun_r"}
+				}
+			}
+		}
+	}
+}
+
