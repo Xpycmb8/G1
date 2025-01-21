@@ -32,12 +32,6 @@
 		{projectileDamageTable {130 15}}
 		{projectileDamage 15}
 	}
-	{parameters "pg7vs";	кумулятивная	400	120	500
-		{calibre 50}
-		{projectileDamageThreshold 1}
-		{projectileDamage 400}
-		{speed 650}	; 10m 115ms, 30m 295ms
-	}
 	{aimRange 350}
 	{minRange 50}
 	{maxRange 700}

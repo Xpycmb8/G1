@@ -1,5 +1,6 @@
 {from "pattern fg"
-	{tag "ammo shell_minimum fg"}
+	{tag "shell size2 75to76 no_throw"}
+;	{tag "ammo shell_minimum fg"}
 	{inventory
 		{size 5 1}
 	}

@@ -1,5 +1,5 @@
 {bullet ;
-	{tag "ammo rocketlauncher no_ricochet shell_minimum 40mm_fg dropboxed fg fx_ap_20_35"}
+	{tag "ammo rocketlauncher no_ricochet shell 40mm_fg dropboxed fg"}
 	{entity "shell_5m_fg"}
 	{view "shell_5m_fg_proj"
 	} 
