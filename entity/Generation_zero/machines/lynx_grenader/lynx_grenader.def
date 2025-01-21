@@ -151,7 +151,7 @@
 		{box
 			{Size 4 4}
 			{Weight 500}
-			{item "ammo " 100}
+			{item "ammo ags30" 25}
 			{item "ammo visor"	10}
 			{item "ammo jump"	10}
 		}
