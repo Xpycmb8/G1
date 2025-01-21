@@ -6,11 +6,6 @@
 		{size 2 2}
 		{fsm "smg"}
 	}
-	{burst
-		{short 10 1}		; burst shots on long distance, rand (+-)shots
-		{long 5 1}			; burst shots on short distance, rand (+-)shots
-		{rangeKoef 0.5}		; rangeKoef * aimRange = max long burst distance
-	}
 
 	{FiringTimeout 0.8 0.2}
 	{foresight "Foresight_sniper"}
@@ -18,10 +13,34 @@
 	{minRange 25}
 	{range 200 200}
 	{rechargeTime 8}
-	{recoveryTime 1}
+	{recoveryTime 2}
+	{parameters "fg"
+		{healthDamage 800}
+		{projectileDamage 4}
+		{projectileDamageClip 4}
+		{projectileDamageTable {22.5 4} {120 2} {500 0} }
+		{range 350 370}
+		("speed" s(120))
+	}
+	{parameters "th"
+		{healthDamage 250}
+		{projectileDamage 2}
+		{projectileDamageClip 2}
+		{projectileDamageTable {22.5 2} {120 1} {140 0} }
+		{range 210 250}
+		("speed" s(170))
+	}
+	{parameters "ap"
+		{healthDamage 800}
+		{projectileDamage 75}
+		{projectileDamageClip 75}
+		{projectileDamageTable {25 75} {50 62} {210 34} {380 2} {420 0}}
+		{range 350 370}
+		("speed" s(150))
+	}
 	{fireSound	"small_arms/rpg_bolt"}
 	{gravity 0}
-	{speed 120}
+	{speed 100}
 	{AimingTolerance 0.2}
 	{cursor "cannon_on"}
 	{Automatic}

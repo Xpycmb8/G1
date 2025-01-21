@@ -1,9 +1,22 @@
-{bullet
-	{tag "bullet ap_proj noview"}
+{bullet ;
+	{tag "ammo shell ap dropboxed cumulative pierce 90mm no_ricochet heat751 shell_big atgm cs"}
 	{entity "shell_5m_fg"}
+	{view "shell_5m_fg_proj"
+	} 
+	{detonationThickness 35}
 	{inventory
 		{weight 100}
 		{size 5 1}
 	}	
-	{mass 0.038}
+	{mass 4.5}
+	{damage blastwave
+		{ground_interaction_radius 0.0}
+		{energy 2}
+		{area 0.2 0.3}
+	}
+	{damage add blastwave
+		{ground_interaction_radius 0.0}
+		{energy 0.8}
+		{area 3 6}
+	}
 }

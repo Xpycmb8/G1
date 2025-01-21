@@ -1,6 +1,5 @@
 {bullet ;
 	{tag "ammo rocketlauncher no_ricochet shell_minimum 40mm_fg dropboxed fg fx_ap_20_35"}
-	{desc "5M R"}
 	{entity "shell_5m_fg"}
 	{detonationThickness 1}
 	{inventory

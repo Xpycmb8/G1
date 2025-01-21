@@ -2886,7 +2886,7 @@
 		{tags remove "idle_enter"}
 		(define "fire_barrel"
 			name "%0"
-				{spawn "shell_5m_fg_loader_auto" "shooter_%0" x {call "check_side"}}		
+				;{spawn "shell_5m_fg_loader_auto" "shooter_%0" x {call "check_side"}}		
 				{spawn "rpg_shot_small" "shooter_%0fx" x}			
 		)
 		{if   

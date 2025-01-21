@@ -42,13 +42,13 @@
 		}
 		{if stuff_filled "ap_proj" 
 			{tags add "ap_proj" }
-			{spawn "shell_5m_ap_loader_auto" "foresight" x {call "check_side"}}
+			;{spawn "shell_5m_ap_loader_auto" "foresight" x {call "check_side"}}
 		else stuff_filled "fg_proj" 
 			{tags add "fg_proj" }
-			{spawn "shell_5m_fg_loader_auto" "foresight" x {call "check_side"}}
+			;{spawn "shell_5m_fg_loader_auto" "foresight" x {call "check_side"}}
 		else stuff_filled "th_proj" 
 			{tags add "th_proj" }
-			{spawn "shell_5m_th_loader_auto" "foresight" x {call "check_side"}}
+			;{spawn "shell_5m_th_loader_auto" "foresight" x {call "check_side"}}
 		}		
 	}
 	{on "reload"

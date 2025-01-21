@@ -1,9 +1,27 @@
-{bullet
-	{tag "bullet th_proj noview"}
+{bullet ;
+	{tag "ammo rocketlauncher shell 45_th dropboxed cumulative pierce tbg7v th atgm"}
 	{entity "shell_5m_fg"}
+	{view "shell_5m_fg_proj"
+	} 
+	{detonationThickness 1}
 	{inventory
 		{weight 100}
 		{size 5 1}
 	}	
-	{mass 0.038}
+	{mass 4.5}
+	{damage fire
+		{radius 0.3}
+		{heating 5}
+		{time 3}
+	}
+	{damage blastwave
+		{ground_interaction_radius 0.0}
+		{energy 0.4}
+		{area 2 8}
+	}
+	{damage add blastwave
+		{ground_interaction_radius 0.0}
+		{energy 1}
+		{area 1 3}
+	}
 }
