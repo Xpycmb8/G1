@@ -854,6 +854,7 @@
 			{burn volume fx "electric_spark_hit_pierce" time 0.8 fake}			
 		}
 		{if component "fuel" ;all
+			{damage_report "placement" "component/fuel_break_gen"}
 			{call "lose_health"}
 			{start_sound "detonation/fireextinguisher/FX_Explosion_FireExtinguisherVapor_02"}	
 			;{burn volume "fuel" fx "smoke_gas_trit_burn" time 7 fake}	
@@ -900,6 +901,7 @@
 			{burn volume "body_organ" fx "electric_spark_hit" time 0.4 fake}	
 		}
 		{if component "cpu" ;all
+			{damage_report "placement" "component/cpu_break_gen"}
 			{call "lose_health"}
 			{tags add "broken_cpu"}
 			{call "power_drop"}
@@ -960,6 +962,7 @@
 			{call "power_drop"}
 		}
 		{if component "head_organ";all
+			{damage_report "placement" "component/head_organ_break_gen"}
 			{call "lose_health"}
 			{burn volume "head_organ" fx "smoke_heat" time 60 fake}
 			{spawn "electric_spark_break" "head_organ"}
@@ -970,11 +973,13 @@
 			{burn volume fx "electric_spark_break" time 2 fake}
 		}
 		{if component "visor_body";all
+			{damage_report "placement" "component/visor_body_break_gen"}
 			{bone cut "visor_body_bone"}
 			{bone cut "head_light_small_00_fx"}		
 			{spawn "electric_spark_break" "visor_body_bone"}
 		}
 		{if component "visor_head";all
+			{damage_report "placement" "component/visor_head_break_gen"}
 			{bone cut "visor_head_bone"}
 			{spawn "glass_hit_lamp" "visor_head_bone"}					
 		}
@@ -1223,6 +1228,7 @@
 			}
 			{delay 2 1 {ani_play "wpn_combat_to_idle" }}
 		else component "battery"
+			{damage_report "placement" "component/battery_destroy_gen"}
 			{call "lose_health"}
 			{tags add "die_battery"}
 			{view hide "ems_global"}
@@ -1231,6 +1237,7 @@
 			{call "power_drop_permanent"}
 			{burn volume "battery" fx "component_break_fx" time 5 fake}	
 		else component "battery_r"
+			{damage_report "placement" "component/battery_r_destroy_gen"}
 			{call "lose_health"}
 			{view hide "ems_global"}
 			{view stop "ems_global"}
@@ -1239,6 +1246,7 @@
 			{call "power_drop_permanent"}
 			{burn volume "battery_r" fx "component_break_fx" time 5 fake}	
 		else component "battery_l"
+			{damage_report "placement" "component/battery_l_destroy_gen"}
 			{call "lose_health"}
 			{view hide "ems_global"}
 			{view stop "ems_global"}
@@ -1247,12 +1255,14 @@
 			{call "power_drop_permanent"}
 			{burn volume "battery_l" fx "component_break_fx" time 5 fake}	
 		else component "cooling_systems"
+			{damage_report "placement" "component/cooling_systems_break_gen"}
 			{call "lose_health"}
 			{burn volume "cooling_systems" fx "smoke_heat" time 8 fake}
 			{delay 20 
 				{tags add "break_cooling_systems"}
 			}
 		else component "leg_regulator_large_right"
+			{damage_report "placement" "component/leg_regulator_large_right_destroy_gen"}
 			{call "lose_health"}
 			{spawn "destroy_component" "leg_regulator_large_right" } ;destroy_component
 			{view start "leg_regulator_large_right_burn"}
@@ -1262,6 +1272,7 @@
 			}
 			{spawn "electric_spark_break" "leg_regulator_large_right"}
 		else component "leg_regulator_large_left"
+			{damage_report "placement" "component/leg_regulator_large_left_destroy_gen"}
 			{call "lose_health"}
 			{spawn "destroy_component" "leg_regulator_large_left" } ;destroy_component
 			{view start "leg_regulator_large_left_burn"}
@@ -1271,6 +1282,7 @@
 			}
 			{spawn "electric_spark_break" "leg_regulator_large_left"}	
 		else component "organs_leg_motor_left"
+			{damage_report "placement" "component/organs_leg_motor_left_destroy_gen"}
 			{call "lose_health"}
 			{view start "organs_leg_motor_left_burn"}
 			{delay 25 
@@ -1280,6 +1292,7 @@
 			{spawn "destroy_component" "organs_leg_motor_left" } ;destroy_component
 			{spawn "electric_spark_break" "organs_leg_motor_left"}
 		else component "organs_leg_motor_right"
+			{damage_report "placement" "component/organs_leg_motor_right_destroy_gen"}
 			{call "lose_health"}
 			{view start "organs_leg_motor_right_burn"}
 			{delay 25 
@@ -1289,6 +1302,7 @@
 			{spawn "destroy_component" "organs_leg_motor_right" } ;destroy_component
 			{spawn "electric_spark_break" "organs_leg_motor_right"}
 		else component "organs_engine_drive_left"
+			{damage_report "placement" "component/organs_engine_drive_left_destroy_gen"}
 			{call "lose_health"}
 			{view start "organs_engine_drive_left_burn"}
 			{delay 25 
@@ -1298,38 +1312,47 @@
 			{spawn "destroy_component" "organs_engine_drive_left" } ;destroy_component
 			{spawn "electric_spark_break" "organs_engine_drive_left"}
 		else component "organs_engine_drive_right"
+			{damage_report "placement" "component/organs_engine_drive_right_destroy_gen"}
 			{call "lose_health"}
 			{burn volume "organs_engine_drive_right" fx "smoke_heat" time 60 fake}
 			{spawn "electric_spark_break" "organs_engine_drive_right"}
 		else component "organs_hip_right"
+			{damage_report "placement" "component/organs_hip_right_destroy_gen"}
 			{call "lose_health"}
 			{burn volume "organs_hip_right" fx "smoke_heat" time 60 fake}
 			{spawn "electric_spark_break" "organs_hip_right"}
 		else component "organs_hip_left"
+			{damage_report "placement" "component/organs_hip_left_destroy_gen"}
 			{call "lose_health"}
 			{burn volume "organs_hip_left" fx "smoke_heat" time 60 fake}
 			{spawn "electric_spark_break" "organs_hip_left"}
 		else component "hydraulic_knee_right"
+			{damage_report "placement" "component/hydraulic_knee_right_destroy_gen"}
 			{call "lose_health"}
 			{burn volume "hydraulic_knee_right" fx "smoke_heat" time 60 fake}
 			{spawn "electric_spark_break" "hydraulic_knee_right"}
 		else component "hydraulic_knee_left"
+			{damage_report "placement" "component/hydraulic_knee_left_destroy_gen"}
 			{call "lose_health"}
 			{burn volume "hydraulic_knee_left" fx "smoke_heat" time 60 fake}
 			{spawn "electric_spark_break" "hydraulic_knee_left"}
 		else component "organs_leg_right"
+			{damage_report "placement" "component/organs_leg_right_destroy_gen"}
 			{call "lose_health"}
 			{burn volume "organs_leg_right" fx "smoke_heat" time 60 fake}
 			{spawn "electric_spark_break" "organs_leg_right"}
 		else component "organs_leg_left"
+			{damage_report "placement" "component/organs_leg_left_destroy_gen"}
 			{call "lose_health"}
 			{burn volume "organs_leg_left" fx "smoke_heat" time 60 fake}
 			{spawn "electric_spark_break" "organs_leg_left"}
 		else component "right_engine"
+			{damage_report "placement" "component/right_engine_destroy_gen"}
 			{call "lose_health"}
 			{burn volume "right_engine" fx "smoke_heat" time 60 fake}
 			{spawn "electric_spark_break" "right_engine"}
 		else component "left_engine"
+			{damage_report "placement" "component/left_engine_destroy_gen"}
 			{call "lose_health"}
 			{burn volume "left_engine" fx "smoke_heat" time 60 fake}
 			{spawn "electric_spark_break" "left_engine"}
@@ -1372,11 +1395,13 @@
 				{view pause "back_hatch_l_destroy"}
 			}	
 		else component "body_organ"
+			{damage_report "placement" "component/body_organ_destroy_gen"}
 			{call "lose_health"}
 			{burn volume "body_organ" fx "smoke_heat" time 60 fake}
 			{spawn "electric_spark_break" "body_organ"}
 			{call "power_drop"}
 		else component "head_organ"
+			{damage_report "placement" "component/head_organ_destroy_gen"}
 			{call "lose_health"}
 			{if prop "defence_tower_base"
 				{call "destroy_turret"}
@@ -1388,6 +1413,7 @@
 			{call "power_drop"}
 			{burn volume fx "electric_spark_break" time 2 fake}
 		else component "fuel"
+			{damage_report "placement" "component/fuel_destroy_gen"}
 			{call "lose_health"}
 			{spawn "break_small_body_robot" "fuel"}	;break fx
 			{if rand 0.2
@@ -1396,13 +1422,16 @@
 			{burn volume "fuel" fx "smoke_heat" time 10 fake}
 			{burn volume "fuel" fx "burn_component_break_small" time 3 fake}
 		else component "visor_body"
+			{damage_report "placement" "component/visor_body_destroy_gen"}
 			{bone cut "visor_body_support_bone"}
 			{spawn "electric_spark_break" "visor_body"}
 		else component "visor_head"
+			{damage_report "placement" "component/visor_head_destroy_gen"}
 			{tags add "destroy_visor"}
 			{bone cut "visor_head_support_bone"}
 			{spawn "glass_hit_lamp" "scanner"}					
 		else component "cpu" 
+			{damage_report "placement" "component/cpu_destroy_gen"}
 			{call "lose_health"}
 			{tags add "destroy_cpu"}
 			{tags add "broken_cpu"}
