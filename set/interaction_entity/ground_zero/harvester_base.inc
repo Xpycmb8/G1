@@ -1520,11 +1520,11 @@
 				{if rand %rand
 					{if volume "%vol"
 						{if not tagged "power_drop"
-							;{if not tagged "move"
+							{if not tagged "curl_stand"
 								{if not tagged "replace_position"
 									{ani_play "%ani_play" %speed }
 								}					
-							;}
+							}
 						}
 					}
 				}
@@ -1532,6 +1532,11 @@
 		}
 	)
 	{on blast ;harvest
+		{if stuff "rocketlauncher"
+			{if rand 0.5
+				{call "rpg_detect"}
+			}
+		}
 		{if stuff "attack_concussion"
 			{call "attack_concussion"}
 		}
@@ -1929,11 +1934,14 @@
 					{drop_orders}
 					{movement_limit slow}
 				}
-				{delay 10 
+				{delay 25 
 					{ani_play "curl_to_idle" 1}	
 					{drop_orders}
 					{movement_limit fast}
 					{call "weapon_melee_enable"}
+				}
+				{delay 35 
+					{tags remove "rpg_detect"}
 				}
 			}		
 		}		
@@ -1944,7 +1952,11 @@
 		{delay 0.5
 			{tags remove "attack_concussion"}
 		}
-		{ani_play "attack_concussion" 1}
+		{if tagged "curl_stand"
+			{ani_play "curl_attack_concussion" 1}
+		else
+			{ani_play "attack_concussion" 1}
+		}
 		{delay 10
 			{call "weapon_melee_enable"}
 		}
@@ -2158,10 +2170,10 @@
 	}
 	;evs
 	{on animation_event "curl_start"
-		{tags remove "curl_stand"}		
+		{tags add "curl_stand"}		
 	}
 	{on animation_event "curl_end"
-		{tags add "curl_stand"}		
+		{tags remove "curl_stand"}		
 	}
 	{on animation_event "fire_script_begin"
 		{auto_operatable 0}

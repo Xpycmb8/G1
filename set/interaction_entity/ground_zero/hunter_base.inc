@@ -629,6 +629,20 @@
 		}
 		{delay_effect 0.4 "electric_spark_small_loop"}		
 	}
+	{on "electric_spark_small_loop_health" 	
+		{if tagged "electric_spark_small_loop_health"
+			{if rand 0.2
+				{spawn "break_small_body_robot" "neck1"}
+			else rand 0.2
+				{spawn "break_small_body_robot" "cpu"}
+			else rand 0.2
+				{spawn "break_small_body_robot" "front_hatch_r"}
+			else rand 0.2
+				{spawn "break_small_body_robot" "front_hatch_l"}
+			}	
+		}	
+		{delay_effect 2 0.6 "electric_spark_small_loop_health"}		
+	}	
 	{on "sparks_loop" 
 		{if tagged "wire_burn"
 			{delay 0.5
@@ -2385,6 +2399,7 @@
 		{burn volume "bridge" fx "smoke_heat" time 7 fake}	
 	}
 	{on animation_event "70heal"  ;all
+		{call "electric_spark_small_loop_health"}
 		{if rand 0.3
 			{spawn "component_break_fx" "RightCableHips_00_clunk"}
 		}			
@@ -2763,7 +2778,8 @@
 			{view start "front_hatch_r_destroy"}
 			{view show "front_hatch_r_destroy"}
 			{view start "front_hatch_l_destroy"}
-			{view show "front_hatch_l_destroy"}			
+			{view show "front_hatch_l_destroy"}				
+			{kill_delay "electric_spark_small_loop_health"}
 			{kill_delay "idle"}
 			{drop_orders}
 			{delay 0.5

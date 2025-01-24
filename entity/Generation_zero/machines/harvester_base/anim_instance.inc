@@ -117,8 +117,6 @@
 				{95 "curl_step_r_045_exit"}
 			}
 		}
-		{sequence "curl_attack_concussion" {resume}}
-		{sequence "curl_to_idle" {resume}}
 		{sequence "power_up_spawn"
 			{file "power_up.anm"}
 			{resume}
@@ -353,11 +351,29 @@
 			}
 			{resume}
 		}
+		{sequence "curl_attack_concussion"
+			{events 	
+				{1 "fire_script_begin"}	
+				{2 "idle_exit"}	
+				{15 "concussion_riser"}
+				{20 "joint_big"}
+				{35 "attack_concussion"}
+				{70 "fire_script_end"}
+			}
+			{resume}
+		}
+		{sequence "curl_to_idle" 
+			{events 
+				{1 "fire_script_begin"}	
+				{87 "curl_end"}	
+				{90 "fire_script_end"}
+			}
+			{resume}
+		}
 		{sequence "idle_to_curl"
 			{events 
 				{1 "fire_script_begin"}	
 				{2 "curl_start"}	
-				{85 "curl_end"}	
 				{90 "fire_script_end"}
 			}
 			{resume}
