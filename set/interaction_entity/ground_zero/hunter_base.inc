@@ -639,9 +639,21 @@
 				{spawn "break_small_body_robot" "front_hatch_r"}
 			else rand 0.2
 				{spawn "break_small_body_robot" "front_hatch_l"}
+			else rand 0.2
+				{spawn "component_break_fx" "cpu"}
+			else rand 0.2
+				{spawn "component_break_fx" "front_hatch_r"}
+			else rand 0.2
+				{spawn "component_break_fx" "front_hatch_l"}
+			else rand 0.2
+				{spawn "component_break_fx" "back_hatch_r"}
+			else rand 0.2
+				{spawn "component_break_fx" "back_hatch_l"}
+			else rand 0.2
+				{spawn "component_break_fx" "visor_body"}
 			}	
 		}	
-		{delay_effect 2 0.6 "electric_spark_small_loop_health"}		
+		{delay_effect 4 1 "electric_spark_small_loop_health"}		
 	}	
 	{on "sparks_loop" 
 		{if tagged "wire_burn"
@@ -2400,6 +2412,7 @@
 	}
 	{on animation_event "70heal"  ;all
 		{call "electric_spark_small_loop_health"}
+		{tags add "electric_spark_small_loop_health"}
 		{if rand 0.3
 			{spawn "component_break_fx" "RightCableHips_00_clunk"}
 		}			

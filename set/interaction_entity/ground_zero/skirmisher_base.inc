@@ -663,6 +663,7 @@
 	}
 	{on "explosion_skir_big" 
 		{if not able "exploded"	
+			{kill_delay "electric_spark_small_loop_health"}
 			{mtl_enable_skin 0}
 			{able "exploded" 1}
 			{able select 0}
@@ -2065,6 +2066,29 @@
 		}
 		{ani_play "attack_melee_close" 0.8}		
 	}
+	{on "electric_spark_small_loop_health" 	
+		{if tagged "electric_spark_small_loop_health"
+			{if rand 0.2
+				{spawn "break_small_body_robot" "engine_hatch"}
+				{if rand 0.1
+					{fire volume "cpu" radius 0.1 heating 1  time 3 follow}					
+				}
+			else rand 0.2
+				{spawn "break_small_body_robot" "body_organ"}
+			else rand 0.2
+				{spawn "break_small_body_robot" "head_organ"}
+			else rand 0.2
+				{spawn "component_break_fx" "engine_hatch"}
+			else rand 0.2
+				{spawn "component_break_fx" "body_organ"}
+			else rand 0.2
+				{spawn "component_break_fx" "head_organ"}
+			else rand 0.2
+				{spawn "component_break_fx" "head_arm"}
+			}	
+		}	
+		{delay_effect 4 1 "electric_spark_small_loop_health"}		
+	}	
 ;evs	
 	{on animation_event "bullet_drop_view" ;hunter lynx skir skir_shotg_w 
 		{view show "shell"}	
@@ -2170,6 +2194,8 @@
 		{burn volume "bridge" fx "smoke_heat" time 7 fake}	
 	}
 	{on animation_event "70heal"  ;all
+		{call "electric_spark_small_loop_health"}
+		{tags add "electric_spark_small_loop_health"}
 		{tags add "70heal"}
 		{burn volume "cpu" fx "fx_fire_engine_gen" time 2 fake even_law}					
 		{burn volume "body_organ" fx "smoke_heat" time 5 fake even_law}					

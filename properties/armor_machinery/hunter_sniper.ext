@@ -343,13 +343,13 @@
 		{thickness 20}
 	}
 	{Volume "rightfoot"
-		{component "RightFoot"}		
+		{component "rightfoot"}		
 		{tags "limbs" }
 		{material "steel"}
 		{thickness 8}
 	}
 	{Volume "rightfoot_2"
-		{component "RightFoot"}		
+		{component "rightfoot"}		
 		{tags "limbs" }
 		{material "steel"}
 		{thickness 8}
@@ -376,13 +376,13 @@
 		{thickness 20}
 	}
 	{Volume "leftfoot"
-		{component "leftFoot"}		
+		{component "leftfoot"}		
 		{tags "limbs" }
 		{material "steel"}
 		{thickness 8}
 	}
 	{Volume "leftfoot_2"
-		{component "leftFoot"}		
+		{component "leftfoot"}		
 		{tags "limbs" }
 		{material "steel"}
 		{thickness 8}
