@@ -1656,7 +1656,7 @@
 		}			
 		{delay 30 
 			{ani_play "curl_to_idle" 0.8}	
-			{call "fire_script_end"}
+			{call "weapon_melee_enable"}
 		}
 	}		
 	{on "attack_l"
@@ -1915,7 +1915,28 @@
 	}
 	
 	{on "rpg_detect"
-		
+		{if not tagged "move"
+			{if not tagged "rpg_detect"
+				{tags add "rpg_detect"}
+				{call "fire_script_begin"}
+				{call "weapon_melee_disable"}
+				{delay 1
+					{spawn "curl_move" "basis"}
+				}
+				{delay 2
+					{ani_play "idle_to_curl" 1}	
+					{call "fire_script_end"}
+					{drop_orders}
+					{movement_limit slow}
+				}
+				{delay 10 
+					{ani_play "curl_to_idle" 1}	
+					{drop_orders}
+					{movement_limit fast}
+					{call "weapon_melee_enable"}
+				}
+			}		
+		}		
 	}
 	{on "attack_concussion"
 		{call "weapon_melee_disable"}
@@ -2136,6 +2157,12 @@
 		}
 	}
 	;evs
+	{on animation_event "curl_start"
+		{tags remove "curl_stand"}		
+	}
+	{on animation_event "curl_end"
+		{tags add "curl_stand"}		
+	}
 	{on animation_event "fire_script_begin"
 		{auto_operatable 0}
 		{drop_orders}
@@ -2415,22 +2442,6 @@
 		{if rand 0.4
 			{start_sound "generation_zero/characters/restart_clunk/large/"}			
 		}
-	}
-	{on animation_event "block_curl" ;harv
-		{if work "fuel"
-			{movement_limit slow}
-		}
-		{weapon_work "mgun" 0}
-		{weapon_work "attack_melee_r_stamp" 0} 	;mgun_melee__r
-		{weapon_work "attack_melee_l_stamp" 0}	;mgun_melee__l
-		{weapon_work "attack_melee_charge" 0}
-	}
-	{on animation_event "unblock_curl" ;harv
-		{movement_limit fast}
-		{weapon_work "mgun" 0}
-		{weapon_work "attack_melee_r_stamp" 0}
-		{weapon_work "attack_melee_l_stamp" 0}
-		{weapon_work "attack_melee_charge" 0}
 	}
 	;-----------------------------------------------------------------------------------------------------------------------------------
 	{on animation_event "idle_enter" ;skir  harv dread hunter

@@ -355,8 +355,10 @@
 		}
 		{sequence "idle_to_curl"
 			{events 
-				{1 "block_curl"}			
-				{90 "unblock_curl"}
+				{1 "fire_script_begin"}	
+				{2 "curl_start"}	
+				{85 "curl_end"}	
+				{90 "fire_script_end"}
 			}
 			{resume}
 		}
