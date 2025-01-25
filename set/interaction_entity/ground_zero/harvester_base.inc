@@ -859,276 +859,254 @@
 	}
 	{on engine off
 	}
-{on break ; all
-	{call "check_work_organ"}
-	{if component "missile_r" ;harv
-		{view start "smoke_missile_r"}
-		{delay 10 5
-			{view pause "smoke_missile_r"}
+	{on break ; all
+		{call "check_work_organ"}
+		{if component "missile_r" ;harv
+			{view start "smoke_missile_r"}
+			{delay 10 5
+				{view pause "smoke_missile_r"}
+			}
+			{burn volume "missile_r" fx "smoke_heat" time 7 3 fake}	
+			{tags add "damage_missile_r"}
+			{spawn "break_small_body_robot" "Missile_r"}				
 		}
-		{burn volume "missile_r" fx "smoke_heat" time 7 3 fake}	
-		{tags add "damage_missile_r"}
-		{spawn "break_small_body_robot" "Missile_r"}				
-	}
-	{if component "missile_l" ;harv
-		{view start "smoke_missile_l"}
-		{delay 10 5
-			{view pause "smoke_missile_l"}
+		{if component "missile_l" ;harv
+			{view start "smoke_missile_l"}
+			{delay 10 5
+				{view pause "smoke_missile_l"}
+			}
+			{burn volume "missile_l" fx "smoke_heat" time 7 3 fake}	
+			{tags add "damage_missile_l"}
+			{spawn "break_small_body_robot" "Missile_l"}				
 		}
-		{burn volume "missile_l" fx "smoke_heat" time 7 3 fake}	
-		{tags add "damage_missile_l"}
-		{spawn "break_small_body_robot" "Missile_l"}				
-	}
-	{if component "pestcontainer" ;dread harv hunter
-		{tags add "damage_pestcontainer"}
-		{weapon_work "attack_pestdrop" 0}
-		{tear "piece_small_steel" bone "pestcontainer_hatch_front"
-			{impulse forward 2 0.5 cx 4 1 cy 4 1 }
+		{if component "pestcontainer" ;dread harv hunter
+			{tags add "damage_pestcontainer"}
+			{weapon_work "attack_pestdrop" 0}
+			{tear "piece_small_steel" bone "pestcontainer_hatch_front"
+				{impulse forward 2 0.5 cx 4 1 cy 4 1 }
+			}
+			{tear "piece_small_steel" bone "pestcontainer_hatch_bot"
+				{impulse forward 2 0.5 cx 4 1 cy 4 1 }
+			}
+			{spawn "break_small_body_robot" "hatch_botttom_bone"}				
 		}
-		{tear "piece_small_steel" bone "pestcontainer_hatch_bot"
-			{impulse forward 2 0.5 cx 4 1 cy 4 1 }
+		{if component "lower_arm" ;all tag leg
+			{burn volume fx "electric_spark_hit_pierce" time 0.8 fake}			
+			{burn volume fx "smoke_destroy" time 0.3 fake}			
 		}
-		{spawn "break_small_body_robot" "hatch_botttom_bone"}				
-	}
-	{if component "lower_arm" ;all tag leg
-		{burn volume fx "electric_spark_hit_pierce" time 0.8 fake}			
-		{burn volume fx "smoke_destroy" time 0.3 fake}			
-	}
-	{if component "upper_arm";all tag leg
-		{burn volume fx "smoke_destroy" time 0.3 fake}			
-		{burn volume fx "electric_spark_hit_pierce" time 0.8 fake}			
-	}
-	{if component "gasdrop_r" ;dread harv
-		{kill_delay "drop_r_loop"}		
-		{with_linked_entity "gas_sound_r"
-			{call "close"}
-		}			
-		{with_linked_entity "gasdrop_r"
-			{call "empty_fast"}
-		}			
-	}
-	{if component "gasdrop_l";dread harv
-		{kill_delay "drop_l_loop"}		
-		{with_linked_entity "gas_sound_l"
-			{call "close"}
-		}			
-		{with_linked_entity "gasdrop_l"
-			{call "empty_fast"}
-		}			
-	}
-	{if component "fuel" ;all
-		{call "lose_health"}
-		{start_sound "detonation/fireextinguisher/FX_Explosion_FireExtinguisherVapor_02"}	
-		;{burn volume "fuel" fx "smoke_gas_trit_burn" time 7 fake}	
-		{stop_sound "engine" }
-		{delay 8
-			{movement_limit normal}
+		{if component "upper_arm";all tag leg
+			{burn volume fx "smoke_destroy" time 0.3 fake}			
+			{burn volume fx "electric_spark_hit_pierce" time 0.8 fake}			
 		}
-		{delay 13
-			{call "drop_speed"}
-		}	
-		{delay 15
-			{movement_limit slow}
+		{if component "gasdrop_r" ;dread harv
+			{kill_delay "drop_r_loop"}		
+			{with_linked_entity "gas_sound_r"
+				{call "close"}
+			}			
+			{with_linked_entity "gasdrop_r"
+				{call "empty_fast"}
+			}			
 		}
-		;{spawn "tritium_blast" "fuel"}			
-		{spawn "open_tritium" "fuel"}			
-		{spawn "open_tritium" "fuel"}			
-		{spawn "open_tritium" "fuel"}			
-		{spawn "open_tritium" "fuel"}			
-		{spawn "open_tritium" "fuel"}			
-		{spawn "open_tritium" "fuel"}			
-	}
-	{if component "head" ;all
-		{call "lose_health"}
-		{start_sound "generation_zero/electric_spark/"}	
-		{burn volume "head_organ" fx "electric_spark_hit" time 0.4 fake}	
-	}
-	{if component "main_body" ;all
-		{call "lose_health"}
-		{start_sound "generation_zero/electric_spark/"}	
-		{burn volume "body_organ" fx "electric_spark_hit" time 0.4 fake}	
-	}
-	{if component "back_engine_organ" ;dread harv skir
-		{call "lose_health"}
-		{spawn "car_destroy_engine_small" "back_engine_organ"}			
-		{call "drop_speed"}			
-		{start_sound "generation_zero/electric_spark/"}	
-		{burn volume "back_engine_organ" fx "electric_spark_hit" time 0.1 fake}	
-		{ani_play "break_engine"}
-		{delay 2 1
+		{if component "gasdrop_l";dread harv
+			{kill_delay "drop_l_loop"}		
+			{with_linked_entity "gas_sound_l"
+				{call "close"}
+			}			
+			{with_linked_entity "gasdrop_l"
+				{call "empty_fast"}
+			}			
+		}
+		{if component "fuel" ;all
+			{call "lose_health"}
+			{start_sound "detonation/fireextinguisher/FX_Explosion_FireExtinguisherVapor_02"}	
+			;{burn volume "fuel" fx "smoke_gas_trit_burn" time 7 fake}	
+			{stop_sound "engine" }
+			{delay 8
+				{movement_limit normal}
+			}
+			{delay 13
+				{call "drop_speed"}
+			}	
+			{delay 15
+				{movement_limit slow}
+			}
+			;{spawn "tritium_blast" "fuel"}			
+			{spawn "open_tritium" "fuel"}			
+			{spawn "open_tritium" "fuel"}			
+			{spawn "open_tritium" "fuel"}			
+			{spawn "open_tritium" "fuel"}			
+			{spawn "open_tritium" "fuel"}			
+			{spawn "open_tritium" "fuel"}			
+		}
+		{if component "head" ;all
+			{call "lose_health"}
 			{start_sound "generation_zero/electric_spark/"}	
+			{burn volume "head_organ" fx "electric_spark_hit" time 0.4 fake}	
 		}
-	}
-	{if component "cpu" ;all
-		{call "lose_health"}
-		{tags add "broken_cpu"}
-		{call "power_drop"}
-		{movement_limit slow}	
-		{ani_play "break_engine"}
-		{burn volume "cpu" fx "component_break_fx" time 2 fake}	
-		{burn volume "cpu" fx "smoke_heat" time 7 fake}	
-		{fire volume "cpu" radius 0.1 heating 0.4  time 5 follow}
-		{spawn "electric_spark_hit_pierce" }
-		{view start "cpu_smoke"}
-		{delay 20 5
-			{view pause "cpu_smoke"}
+		{if component "main_body" ;all
+			{call "lose_health"}
+			{start_sound "generation_zero/electric_spark/"}	
+			{burn volume "body_organ" fx "electric_spark_hit" time 0.4 fake}	
 		}
-		{delay 5 2
+		{if component "back_engine_organ" ;dread harv skir
+			{call "lose_health"}
+			{spawn "car_destroy_engine_small" "back_engine_organ"}			
+			{call "drop_speed"}			
+			{start_sound "generation_zero/electric_spark/"}	
+			{burn volume "back_engine_organ" fx "electric_spark_hit" time 0.1 fake}	
+			{ani_play "break_engine"}
+			{delay 2 1
+				{start_sound "generation_zero/electric_spark/"}	
+			}
+		}
+		{if component "cpu" ;all
+			{call "lose_health"}
+			{tags add "broken_cpu"}
+			{call "power_drop"}
+			{movement_limit slow}	
+			{ani_play "break_engine"}
+			{burn volume "cpu" fx "component_break_fx" time 2 fake}	
+			{burn volume "cpu" fx "smoke_heat" time 7 fake}	
+			{fire volume "cpu" radius 0.1 heating 0.4  time 5 follow}
+			{spawn "electric_spark_hit_pierce" }
+			{view start "cpu_smoke"}
+			{delay 20 5
+				{view pause "cpu_smoke"}
+			}
+			{delay 5 2
+				{start_sound "generation_zero/electric_spark/"}
+				{call "sparks_loop_cpu"}
+			}
+		}
+		{if component "scanner" ;all
+			{spawn "electric_spark_hit_pierce" "scanner"}
+			{bone cut "visor_ems"}
+			{bone cut "visor_head_bone"}
+			{burn volume "scanner" fx "smoke_heat" time 2 1 fake}	
+		}
+		{if component "head_arm" ;all
+			{view start "smoke_hips_h"}
 			{start_sound "generation_zero/electric_spark/"}
-			{call "sparks_loop_cpu"}
+			{ik_enable "Head_ik_h" 0}
+			{ik_enable "Head_ik_v" 0}
+			{ik_enable "head_ik_v_damage" 1}
+			{ik_enable "head_ik_h_damage" 1}
 		}
-	}
-	{if component "scanner" ;all
-		{spawn "electric_spark_hit_pierce" "scanner"}
-		{bone cut "visor_ems"}
-		{bone cut "visor_head_bone"}
-		{burn volume "scanner" fx "smoke_heat" time 2 1 fake}	
-	}
-	{if component "head_arm" ;all
-		{view start "smoke_hips_h"}
-		{start_sound "generation_zero/electric_spark/"}
-		{ik_enable "Head_ik_h" 0}
-		{ik_enable "Head_ik_v" 0}
-		{ik_enable "head_ik_v_damage" 1}
-		{ik_enable "head_ik_h_damage" 1}
-	}
-	{if component "head_joint" ;all
-		{start_sound "generation_zero/electric_spark/"}
-		{ik_enable "Head_ik_h" 0}
-		{ik_enable "Head_ik_v" 0}
-		{ik_enable "head_ik_v_damage" 1}
-		{ik_enable "head_ik_h_damage" 1}
-	}
-	{if component "cooling_systems" ;not use
-		{call "lose_health"}
-		{burn volume "cooling_systems" fx "smoke_heat" time 8 fake}
-		{delay 20 
-			{tags add "break_cooling_systems"}
+		{if component "head_joint" ;all
+			{start_sound "generation_zero/electric_spark/"}
+			{ik_enable "Head_ik_h" 0}
+			{ik_enable "Head_ik_v" 0}
+			{ik_enable "head_ik_v_damage" 1}
+			{ik_enable "head_ik_h_damage" 1}
 		}
-	}
-	{if component "leg_regulator_large_right" ;harv
-		{call "lose_health"}
-		{burn volume "leg_regulator_large_right" fx "smoke_heat" time 60 fake}
-		{spawn "electric_spark_break" "leg_regulator_large_right"}
-	}
-	{if component "leg_regulator_large_left";harv
-		{call "lose_health"}
-		{burn volume "leg_regulator_large_left" fx "smoke_heat" time 60 fake}
-		{spawn "electric_spark_break" "leg_regulator_large_left"}	
-	}
-	{if component "leg_motor_left";harv
-		{call "lose_health"}
-		{burn volume "leg_motor_left" fx "smoke_heat" time 60 fake}
-		{spawn "electric_spark_break" "leg_motor_left"}
-	}
-	{if component "leg_motor_right";harv
-		{call "lose_health"}
-		{burn volume "leg_motor_right" fx "smoke_heat" time 60 fake}
-		{spawn "electric_spark_break" "leg_motor_right"}			
-	}
-	{if component "body_organ" ;all
-		{call "lose_health"}
-		{burn volume "body_organ" fx "smoke_heat" time 60 fake}
-		{spawn "electric_spark_break" "body_organ"}
-		{call "power_drop"}
-	}
-	{if component "head_organ";all
-		{call "lose_health"}
-		{burn volume "head_organ" fx "smoke_heat" time 60 fake}
-		{spawn "electric_spark_break" "head_organ"}
-		{call "power_drop"}
-	}
-	{if component "head_wire";all
-		{call "power_drop"}
-		{burn volume fx "electric_spark_break" time 2 fake}
-	}
-	{if component "visor_body";all
-		{bone cut "visor_body_bone"}
-		{bone hide	"light_ems"}
-		{spawn "electric_spark_break" "visor_body_bone"}
-	}
-	{if component "visor_head";all
-		{bone cut "visor_head_bone"}
-		{spawn "glass_hit_lamp" "visor_head_bone"}					
-	}
-	(define "mesh_break_armor" ;armor all
-		{if component "%component" 
-			{burn volume "%component" fx "smoke_preheat" time 2 1 fake}	
+		{if component "cooling_systems" ;not use
+			{call "lose_health"}
+			{burn volume "cooling_systems" fx "smoke_heat" time 8 fake}
+			{delay 20 
+				{tags add "break_cooling_systems"}
+			}
 		}
-	)
-	;all armor
-	("mesh_break_armor" component(front_plate_r)			)
-	("mesh_break_armor" component(front_plate_l)			)
-	("mesh_break_armor" component(knee_plate_r)				)
-	("mesh_break_armor" component(knee_plate_l)				)
-	("mesh_break_armor" component(armour_head_upper)		)
-	("mesh_break_armor" component(armour_head)				)
-	(define "mesh_break" ;
-		{if component "%component" 
-			{burn volume "%component" fx "electric_spark_micro_hit" time 2 1 fake}	
-			{burn volume "%component" fx "smoke_preheat" time 4 3 fake}	
+		{if component "leg_regulator_large_right" ;harv
+			{call "lose_health"}
+			{burn volume "leg_regulator_large_right" fx "smoke_heat" time 60 fake}
+			{spawn "electric_spark_break" "leg_regulator_large_right"}
 		}
-	)
-	("mesh_break" component(hips)  				)
-	;all leg
-	("mesh_break" component(leftupleg_knee)  		)
-	("mesh_break" component(leftarm)  				)
-	("mesh_break" component(leftfoot)  				)
-	("mesh_break" component(leftforearm)  			)
-	("mesh_break" component(lefthand)  				)
-	("mesh_break" component(lefthandtoe)  			)
-	("mesh_break" component(leftleg)  				)
-	("mesh_break" component(lefttoebase)  			)
-	("mesh_break" component(leftupleg)  			)
-	("mesh_break" component(leftShoulder)  			)
-	("mesh_break" component(leftUpLeg_spring)  		)
-	("mesh_break" component(leftUpLeg1)  			)
-	("mesh_break" component(leftArmorPlate_Knee)  	)
-	("mesh_break" component(leftToe1)  				)
-	("mesh_break" component(leftToe2)  				)
-	("mesh_break" component(leftToe3)  				)
-	("mesh_break" component(leftToe4)  				)
-	("mesh_break" component(rightupleg_knee)  		)
-	("mesh_break" component(rightarm)  				)
-	("mesh_break" component(rightfoot)  			)
-	("mesh_break" component(rightforearm)  			)
-	("mesh_break" component(righthand)  			)
-	("mesh_break" component(righthandtoe)  			)
-	("mesh_break" component(rightleg)  				)
-	("mesh_break" component(righttoebase)  			)
-	("mesh_break" component(rightupleg)  			)
-	("mesh_break" component(rightShoulder)  		)
-	("mesh_break" component(rightUpLeg_spring)  	)
-	("mesh_break" component(rightUpLeg1)  			)
-	("mesh_break" component(rightArmorPlate_Knee)  	)
-	("mesh_break" component(rightToe1)  			)
-	("mesh_break" component(rightToe2)  			)
-	("mesh_break" component(rightToe3)  			)
-	("mesh_break" component(rightToe4)  		    )
-	(define "mesh_break_cylplate" ;dread harv
-		{if component "%component" 
-			{spawn "break_small_body_robot" "%component"}
-			{burn volume "%component" fx "smoke_preheat" time 2 1 fake}	
+		{if component "leg_regulator_large_left";harv
+			{call "lose_health"}
+			{burn volume "leg_regulator_large_left" fx "smoke_heat" time 60 fake}
+			{spawn "electric_spark_break" "leg_regulator_large_left"}	
 		}
-	)
-	("mesh_break_cylplate" component(RightUpLeg_cylplate_01))
-	("mesh_break_cylplate" component(RightUpLeg_cylplate_02))
-	("mesh_break_cylplate" component(RightUpLeg1_cylplate_01))
-	("mesh_break_cylplate" component(RightUpLeg1_cylplate_02))
-	("mesh_break_cylplate" component(RightFoot_cylplate_01))
-	("mesh_break_cylplate" component(RightFoot_cylplate_02))
-	("mesh_break_cylplate" component(LeftUpLeg_cylplate_01))
-	("mesh_break_cylplate" component(LeftUpLeg_cylplate_02))
-	("mesh_break_cylplate" component(LeftUpLeg1_cylplate_01))
-	("mesh_break_cylplate" component(LeftUpLeg1_cylplate_02))
-	("mesh_break_cylplate" component(LeftFoot_cylplate_01))
-	("mesh_break_cylplate" component(LeftFoot_cylplate_02))
-}
+		{if component "leg_motor_left";harv
+			{call "lose_health"}
+			{burn volume "leg_motor_left" fx "smoke_heat" time 60 fake}
+			{spawn "electric_spark_break" "leg_motor_left"}
+		}
+		{if component "leg_motor_right";harv
+			{call "lose_health"}
+			{burn volume "leg_motor_right" fx "smoke_heat" time 60 fake}
+			{spawn "electric_spark_break" "leg_motor_right"}			
+		}
+		{if component "body_organ" ;all
+			{call "lose_health"}
+			{burn volume "body_organ" fx "smoke_heat" time 60 fake}
+			{spawn "electric_spark_break" "body_organ"}
+			{call "power_drop"}
+		}
+		{if component "head_organ";all
+			{call "lose_health"}
+			{burn volume "head_organ" fx "smoke_heat" time 60 fake}
+			{spawn "electric_spark_break" "head_organ"}
+			{call "power_drop"}
+		}
+		{if component "head_wire";all
+			{call "power_drop"}
+			{burn volume fx "electric_spark_break" time 2 fake}
+		}
+		{if component "visor_body";all
+			{bone cut "visor_body_bone"}
+			{bone hide	"light_ems"}
+			{spawn "electric_spark_break" "visor_body_bone"}
+		}
+		{if component "visor_head";all
+			{bone cut "visor_head_bone"}
+			{spawn "glass_hit_lamp" "visor_head_bone"}					
+		}
+		(define "mesh_break_armor" ;armor all
+			{if component "%component" 
+				{burn volume "%component" fx "smoke_preheat" time 2 1 fake}	
+			}
+		)
+		;all armor
+		("mesh_break_armor" component(front_plate_r)			)
+		("mesh_break_armor" component(front_plate_l)			)
+		("mesh_break_armor" component(knee_plate_r)				)
+		("mesh_break_armor" component(knee_plate_l)				)
+		("mesh_break_armor" component(armour_head_upper)		)
+		("mesh_break_armor" component(armour_head)				)
+		(define "mesh_break" ;
+			{if component "%component" 
+				{burn volume "%component" fx "electric_spark_micro_hit" time 2 1 fake}	
+				{burn volume "%component" fx "smoke_preheat" time 4 3 fake}	
+			}
+		)
+		("mesh_break" component(main_body)			)
+		("mesh_break" component(Drill)			)
+		("mesh_break" component(Drillmount)			)
+		("mesh_break" component(backlegs_mount)		)
+		("mesh_break" component(frontlegs_mount)	)
+		;all leg
+		("mesh_break" component(RightHand)			)
+		("mesh_break" component(RightForeArm)		)
+		("mesh_break" component(RightArm)			)
+		("mesh_break" component(RightShoulder)		)
+		("mesh_break" component(RightUpLeg)			)
+		("mesh_break" component(RightLeg)			)
+		("mesh_break" component(RightFoot)			)
+		("mesh_break" component(RightToe)  			)
+		("mesh_break" component(leftHand)			)
+		("mesh_break" component(leftForeArm)		)
+		("mesh_break" component(leftArm)			)
+		("mesh_break" component(leftShoulder)		)
+		("mesh_break" component(leftUpLeg)			)
+		("mesh_break" component(leftLeg)			)
+		("mesh_break" component(leftFoot)			)
+		("mesh_break" component(leftToe)  			)
+		
+		
+
+		(define "mesh_break_cylplate" ;dread harv
+			{if component "%component" 
+				{spawn "break_small_body_robot" "%component"}
+				{burn volume "%component" fx "smoke_preheat" time 2 1 fake}	
+			}
+		)
+		("mesh_break_cylplate" component(RightUpLeg_cylplate_01))
+	}
 	{on destroy ; all
-		{if component "main_body"
-			{bone hide	"orange_ems"}
-			{bone hide	"red_ems"}
-		}
+		; {if component "main_body"
+			; {bone hide	"orange_ems"}
+			; {bone hide	"red_ems"}
+		; }
 		(define "mesh_break_armor" ;armor
 			{if component "%component" 
 				{tear "piece_small_steel_forward" bone "%component"
@@ -1139,10 +1117,12 @@
 			}
 		)
 		;all armor
-		("mesh_break_armor" component(kneepad_r)  				)
-		("mesh_break_armor" component(kneepad_l)  				)
-		("mesh_break_armor" component(head_top)  				)
-		("mesh_break_armor" component(back_armor)  				)
+		("mesh_break_armor" component(front_plate_r)			)
+		("mesh_break_armor" component(front_plate_l)			)
+		("mesh_break_armor" component(knee_plate_r)				)
+		("mesh_break_armor" component(knee_plate_l)				)
+		("mesh_break_armor" component(armour_head_upper)		)
+		("mesh_break_armor" component(armour_head)				)
 		{if component "missile_r"
 			{view start "burn_missile_r"}
 			{weapon_work "gun_r" 0}
@@ -1375,6 +1355,9 @@
 		("mesh_break" component(cpu)  				 				stuff_destroy(0.5)    )
 		("mesh_break" component(engine)  			 				stuff_destroy(0.3)    )
 			
+		("mesh_break" component(back_cooling_prot_plate)			stuff_destroy(0.3)    ) ;задняя часть крышка
+		("mesh_break" component(shoulder_plating_left)				stuff_destroy(0.3)    ) ;повреждаемые боковые части на ноге
+		("mesh_break" component(shoulder_plating_right)				stuff_destroy(0.3)    ) ;повреждаемые боковые части на ноге
 		("mesh_break" component(gasdrop_l)  						 stuff_destroy(0.3)    )
 		("mesh_break" component(gasdrop_r)  						 stuff_destroy(0.3)    )
 		("mesh_break" component(Concussion_Pulse_r)  				 stuff_destroy(0.2)    )
