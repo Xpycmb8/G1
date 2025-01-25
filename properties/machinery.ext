@@ -1021,6 +1021,12 @@ actor
 ("cylplate" args RightUpLeg1_cylplate_02)
 ("cylplate" args RightFoot_cylplate_01)
 ("cylplate" args RightFoot_cylplate_02)
+("cylplate" args rightArm_cylplate_01)
+("cylplate" args rightArm_cylplate_02)
+("cylplate" args rightArm_cylplate_03)
+("cylplate" args rightArm_cylplate_04)
+("cylplate" args rightShoulder_cylplate_01)
+("cylplate" args rightUpLeg_cylplate_03)
 ("cylplate" args LeftUpLeg_cylplate_01)
 ("cylplate" args LeftUpLeg_cylplate_02)
 ("cylplate" args LeftUpLeg1_cylplate_01)
@@ -1033,12 +1039,6 @@ actor
 ("cylplate" args LeftArm_cylplate_04)
 ("cylplate" args LeftShoulder_cylplate_01)
 ("cylplate" args LeftUpLeg_cylplate_03)
-("cylplate" args rightArm_cylplate_01)
-("cylplate" args rightArm_cylplate_02)
-("cylplate" args rightArm_cylplate_03)
-("cylplate" args rightArm_cylplate_04)
-("cylplate" args rightShoulder_cylplate_01)
-("cylplate" args rightUpLeg_cylplate_03)
 
 {volume "head"
 	{component "head"}

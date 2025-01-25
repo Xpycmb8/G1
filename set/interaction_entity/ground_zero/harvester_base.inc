@@ -1101,6 +1101,30 @@
 			}
 		)
 		("mesh_break_cylplate" component(RightUpLeg_cylplate_01))
+		("mesh_break_cylplate" component(RightUpLeg_cylplate_02))
+		("mesh_break_cylplate" component(rightUpLeg_cylplate_03))
+		("mesh_break_cylplate" component(RightUpLeg1_cylplate_01))
+		("mesh_break_cylplate" component(RightUpLeg1_cylplate_02))
+		("mesh_break_cylplate" component(RightFoot_cylplate_01))
+		("mesh_break_cylplate" component(RightFoot_cylplate_02))
+		("mesh_break_cylplate" component(rightArm_cylplate_01))
+		("mesh_break_cylplate" component(rightArm_cylplate_02))
+		("mesh_break_cylplate" component(rightArm_cylplate_03))
+		("mesh_break_cylplate" component(rightArm_cylplate_04))
+		("mesh_break_cylplate" component(rightShoulder_cylplate_01))
+		("mesh_break_cylplate" component(leftUpLeg_cylplate_01))
+		("mesh_break_cylplate" component(leftUpLeg_cylplate_02))
+		("mesh_break_cylplate" component(leftUpLeg_cylplate_03))
+		("mesh_break_cylplate" component(leftUpLeg1_cylplate_01))
+		("mesh_break_cylplate" component(leftUpLeg1_cylplate_02))
+		("mesh_break_cylplate" component(leftFoot_cylplate_01))
+		("mesh_break_cylplate" component(leftFoot_cylplate_02))
+		("mesh_break_cylplate" component(leftArm_cylplate_01))
+		("mesh_break_cylplate" component(leftArm_cylplate_02))
+		("mesh_break_cylplate" component(leftArm_cylplate_03))
+		("mesh_break_cylplate" component(leftArm_cylplate_04))
+		("mesh_break_cylplate" component(leftShoulder_cylplate_01))
+
 	}
 	{on destroy ; all
 		; {if component "main_body"

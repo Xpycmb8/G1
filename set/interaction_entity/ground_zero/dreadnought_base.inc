@@ -594,7 +594,7 @@
 		}
 		{if component "organs_leg_right" ;орган верхней ноги дреда
 			{call "lose_health"}
-			{burn volume "RightUpLeg_cylplate_02" fx "smoke_heat" time 8 fake}
+			{burn volume "RightUpLeg_cylplate_01" fx "smoke_heat" time 8 fake}
 			{burn volume "RightUpLeg_cylplate_02" fx "smoke_heat" time 8 fake}
 		}
 		{if component "LeftPiston_UpperLegToShoulder" ;поршни дреда
