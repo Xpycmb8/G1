@@ -1057,18 +1057,12 @@
 		}
 	)
 	;all armor
-	("mesh_break_armor" component(front_armor)  				)
-	("mesh_break_armor" component(down_armor)  				)
-	("mesh_break_armor" component(armour_head)  				)
-	("mesh_break_armor" component(armour_head_upper)  			 )
-	("mesh_break_armor" component(armour_knee_left)  			)
-	("mesh_break_armor" component(armour_knee_right)  		 )
-	("mesh_break_armor" component(armour_shoulder_left)  		   )
-	("mesh_break_armor" component(armour_shoulder_right)  	    )
-	("mesh_break_armor" component(kneepad_r)  			   )
-	("mesh_break_armor" component(kneepad_l)  			   )
-	("mesh_break_armor" component(head_top)  				   )
-	("mesh_break_armor" component(back_armor)  			  )
+	("mesh_break_armor" component(front_plate_r)			)
+	("mesh_break_armor" component(front_plate_l)			)
+	("mesh_break_armor" component(knee_plate_r)				)
+	("mesh_break_armor" component(knee_plate_l)				)
+	("mesh_break_armor" component(armour_head_upper)		)
+	("mesh_break_armor" component(armour_head)				)
 	(define "mesh_break" ;
 		{if component "%component" 
 			{burn volume "%component" fx "electric_spark_micro_hit" time 2 1 fake}	

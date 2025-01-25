@@ -722,6 +722,12 @@
 			{tags add "off"}
 			{tags add "dead"}
 			{call "stop_all"}
+			{auto_operatable 0}
+			{able select 0}
+			{able repaired 0}
+			{clear_inventory}
+			{spawn "destroy_med_robot" "hips"}
+			{spawn "burn_flare" "head"}
 			{delay_ex 0.1
 				{set_skeleton "_x" sync}
 				{call "tear_parts"}
@@ -734,12 +740,6 @@
 			; {delay 0.5
 				; {components destroy}
 			; }
-			{auto_operatable 0}
-			{able select 0}
-			{able repaired 0}
-			{clear_inventory}
-			{spawn "destroy_med_robot" "hips"}
-			{spawn "burn_flare" "head"}
 		}
 	}
 	{on "tear_parts_explode"

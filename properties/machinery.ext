@@ -467,7 +467,10 @@ actor
 		("set_armor" args body 							0.5 0.8)
 		("set_armor" args pestcontainer 				0.5 0.8)
 		("set_armor" args Drill 						0.5 0.8)
-		("set_armor" args Drillmount 					0.5 0.8)	
+		("set_armor" args Drillmount 					0.5 0.8)		
+		("set_armor" args back_cooling_prot_plate 		0.5 0.8)
+		("set_armor" args shoulder_plating_left 		0.5 0.8);повреждаемые боковые части на ноге
+		("set_armor" args shoulder_plating_right 		0.5 0.8);повреждаемые боковые части на ноге
 		("set_armor" args drill_hatch_l 				0.5 0.8)
 		("set_armor" args drill_hatch_r 			 	0.5 0.8)
 		("set_armor" args front_hatch 					0.5 0.8)
@@ -1372,6 +1375,18 @@ actor
 		{category "component_machinery_hatch"}
 		;{armor_damage_modifier 0.1} 
 	}
+	{component "back_cooling_prot_plate"
+		{category "component_machinery_hatch"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "shoulder_plating_left";повреждаемые боковые части на ноге
+		{category "component_machinery_hatch"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "shoulder_plating_right";повреждаемые боковые части на ноге
+		{category "component_machinery_hatch"}
+		;{armor_damage_modifier 0.1} 
+	}	
 	{component "front_hatch"
 		{category "component_machinery_hatch"}
 		;{armor_damage_modifier 0.1} 
@@ -2385,6 +2400,19 @@ actor
 	{RepairTime 3}
 	{tags "drill_hatch_r"}
 }
+{component "back_cooling_prot_plate"
+	{RepairTime 10}
+	{tags "back_cooling_prot_plate"}
+}
+{component "shoulder_plating_left";повреждаемые боковые части на ноге
+	{RepairTime 10}
+	{tags "shoulder_plating_left"}
+}
+{component "shoulder_plating_right";повреждаемые боковые части на ноге
+	{RepairTime 10}
+	{tags "shoulder_plating_right"}
+}
+
 {component "front_hatch_r"
 	{RepairTime 3}
 	{tags "front_hatch_r"}
