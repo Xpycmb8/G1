@@ -1395,70 +1395,37 @@
 
 
 
-		;all armor
-		("mesh_break" component(front_armor)  			 			stuff_destroy(0.2))
-		("mesh_break" component(down_armor)  			 			stuff_destroy(0.2))
+		;harvest
+		("mesh_break" component(front_plate_r)  			 		stuff_destroy(0.2))
+		("mesh_break" component(front_plate_l)  			 		stuff_destroy(0.2))
+		("mesh_break" component(knee_plate_r)  			 			stuff_destroy(0.2))
+		("mesh_break" component(knee_plate_l)  			 			stuff_destroy(0.2))
 		("mesh_break" component(armour_head)  			 			stuff_destroy(0.2))
-		("mesh_break" component(armour_head_upper)  	 			stuff_destroy(0.2))
-		("mesh_break" component(armour_knee_left)  		 			stuff_destroy(0.2))
-		("mesh_break" component(armour_knee_right)  	 			stuff_destroy(0.2))
-		("mesh_break" component(armour_shoulder_left)  	 			stuff_destroy(0.2))
-		("mesh_break" component(armour_shoulder_right)   			stuff_destroy(0.2))
-		("mesh_break" component(kneepad_r)  			 			stuff_destroy(0.2))
-		("mesh_break" component(kneepad_l)  						stuff_destroy(0.2))
-		("mesh_break" component(head_top)  				 			stuff_destroy(0.2))
-		("mesh_break" component(back_armor)  			 			stuff_destroy(0.2))
-		("mesh_break" component(upper_armor_raid)  		 			stuff_destroy(0.2))
-		("mesh_break" component(front_armor_raid)  		 			stuff_destroy(0.2))
-		("mesh_break" component(armor_head_wire)  		 			stuff_destroy(0.2))
+		("mesh_break" component(armour_head_upper)  				stuff_destroy(0.2))
+
 
 		("mesh_break" component(armor)  		 					stuff_destroy(0.1))
-	
-
-		;harvest
-		("mesh_break" component(knee_plate_l)  		 				stuff_destroy(0.1))
-		("mesh_break" component(knee_plate_r)  		 				stuff_destroy(0.1))
-		("mesh_break" component(front_plate_r)  		 			stuff_destroy(0.1))
-		("mesh_break" component(front_plate_l)  		 			stuff_destroy(0.1))
-
 
 ;------------------
 		
 		;all leg
-		("mesh_break" component(leftupleg_knee)  	 				stuff_destroy(0.3))
-		("mesh_break" component(leftarm)  			 				stuff_destroy(0.3))
-		("mesh_break" component(leftfoot)  			 				stuff_destroy(0.3))
-		("mesh_break" component(leftforearm)  		 				stuff_destroy(0.3))
-		("mesh_break" component(lefthand)  			 				stuff_destroy(0.3))
-		("mesh_break" component(lefthandtoe)  		 				stuff_destroy(0.3))
-		("mesh_break" component(leftleg)  			 				stuff_destroy(0.3))
-		("mesh_break" component(lefttoebase)  		 				stuff_destroy(0.3))
-		("mesh_break" component(leftupleg)  		 				stuff_destroy(0.3))
+
+		("mesh_break" component(RightHand)  	 					stuff_destroy(0.3))
+		("mesh_break" component(RightForeArm)  			 			stuff_destroy(0.3))
+		("mesh_break" component(RightArm)  			 				stuff_destroy(0.3))
+		("mesh_break" component(RightShoulder)  		 			stuff_destroy(0.3))
+		("mesh_break" component(RightUpLeg)  			 			stuff_destroy(0.3))
+		("mesh_break" component(RightLeg)  		 					stuff_destroy(0.3))
+		("mesh_break" component(RightFoot)  			 			stuff_destroy(0.3))
+		("mesh_break" component(RightToe)  		 					stuff_destroy(0.3))
+		("mesh_break" component(leftHand)  	 						stuff_destroy(0.3))
+		("mesh_break" component(leftForeArm)  			 			stuff_destroy(0.3))
+		("mesh_break" component(leftArm)  			 				stuff_destroy(0.3))
 		("mesh_break" component(leftShoulder)  		 				stuff_destroy(0.3))
-		("mesh_break" component(leftUpLeg_spring)  	 				stuff_destroy(0.3))
-		("mesh_break" component(leftUpLeg1)  		 				stuff_destroy(0.3))
-		("mesh_break" component(leftArmorPlate_Knee)   				stuff_destroy(0.3))
-		("mesh_break" component(leftToe1)  			 				stuff_destroy(0.3))
-		("mesh_break" component(leftToe2)  			 				stuff_destroy(0.3))
-		("mesh_break" component(leftToe3)  			 				stuff_destroy(0.3))
-		("mesh_break" component(leftToe4)  			 				stuff_destroy(0.3))
-		("mesh_break" component(rightupleg_knee)  	 				stuff_destroy(0.3))
-		("mesh_break" component(rightarm)  			 				stuff_destroy(0.3))
-		("mesh_break" component(rightfoot)  		 				stuff_destroy(0.3))
-		("mesh_break" component(rightforearm)  		 				stuff_destroy(0.3))
-		("mesh_break" component(righthand)  		 				stuff_destroy(0.3))
-		("mesh_break" component(righthandtoe)  		 				stuff_destroy(0.3))
-		("mesh_break" component(rightleg)  			 				stuff_destroy(0.3))
-		("mesh_break" component(righttoebase)  		 				stuff_destroy(0.3))
-		("mesh_break" component(rightupleg)  		 				stuff_destroy(0.3))
-		("mesh_break" component(rightShoulder)  	 				stuff_destroy(0.3))
-		("mesh_break" component(rightUpLeg_spring)   				stuff_destroy(0.3))
-		("mesh_break" component(rightUpLeg1)  		 				stuff_destroy(0.3))
-		("mesh_break" component(rightArmorPlate_Knee)   			stuff_destroy(0.3))
-		("mesh_break" component(rightToe1)  		 				stuff_destroy(0.3))
-		("mesh_break" component(rightToe2)  		 				stuff_destroy(0.3))
-		("mesh_break" component(rightToe3)  		 				stuff_destroy(0.3))
-		("mesh_break" component(rightToe4)  		 				stuff_destroy(0.3))
+		("mesh_break" component(leftUpLeg)  			 			stuff_destroy(0.3))
+		("mesh_break" component(leftLeg)  		 					stuff_destroy(0.3))
+		("mesh_break" component(leftFoot)  			 				stuff_destroy(0.3))
+		("mesh_break" component(leftToe)  		 					stuff_destroy(0.3))
 	(include "pierce_all.inc")
 	}
 	{on bullet_hit

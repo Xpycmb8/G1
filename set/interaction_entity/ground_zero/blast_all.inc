@@ -96,15 +96,19 @@
 						}
 					}
 				)
+				("mesh_break" component(back_cooling_prot_plate)  				rand(0.3) d_rand(0.3)      ) ;задняя часть крышка harv
+				("mesh_break" component(shoulder_plating_left)  				rand(0.3) d_rand(0.3)      );повреждаемые боковые части на ноге harv
+				("mesh_break" component(shoulder_plating_right)  				rand(0.3) d_rand(0.3)      );повреждаемые боковые части на ноге harv
+
 				("mesh_break" component(bridge)  								rand(0.3) d_rand(0.3)      )
 				("mesh_break" component(hips)  									rand(0.3) d_rand(0.3)      )
 				("mesh_break" component(gasdrop_l)  							rand(0.3) d_rand(0.3)    )
 				("mesh_break" component(gasdrop_r)  							rand(0.3) d_rand(0.3)    )
 				("mesh_break" component(Concussion_Pulse_r)  					rand(0.3) d_rand(0.5)    )
 				("mesh_break" component(Concussion_Pulse_l)  					rand(0.3) d_rand(0.5)    )
-				("mesh_break" component(Drillmount)  							rand(0.3) d_rand(0.5)    )
-				("mesh_break" component(backlegs_mount)  						rand(0.3) d_rand(0.5)    )
-				("mesh_break" component(frontlegs_mount)  						rand(0.3) d_rand(0.5)    )
+				("mesh_break" component(Drillmount)  							rand(0.3) d_rand(0.5)    );harv 
+				("mesh_break" component(backlegs_mount)  						rand(0.3) d_rand(0.5)    ) ;harv legs mount
+				("mesh_break" component(frontlegs_mount)  						rand(0.3) d_rand(0.5)    );harv legs mount
 				("mesh_break" component(front_core_panel)  						rand(0.3) d_rand(0.5)    )
 				("mesh_break" component(structure_plate_right)  				rand(0.3) d_rand(0.5)    )
 				("mesh_break" component(structure_plate_left)  					rand(0.3) d_rand(0.5)    )
@@ -113,9 +117,9 @@
 				("mesh_break" component(front_hatch)  							rand(0.3) d_rand(0.5)    ) ;lynx
 				("mesh_break" component(front_hatch_l)  						rand(0.3) d_rand(0.5)    )
 				("mesh_break" component(front_hatch_r)  						rand(0.3) d_rand(0.5)    )
-				("mesh_break" component(drill_hatch_r)  						rand(0.3) d_rand(0.5)    )
-				("mesh_break" component(drill_hatch_l)  						rand(0.3) d_rand(0.5)    )
-				("mesh_break" component(Drill)  								rand(0.3) d_rand(0.5)    )
+				("mesh_break" component(drill_hatch_r)  						rand(0.3) d_rand(0.5)    );harv 
+				("mesh_break" component(drill_hatch_l)  						rand(0.3) d_rand(0.5)    );harv 
+				("mesh_break" component(Drill)  								rand(0.3) d_rand(0.5)    );harv 
 				("mesh_break" component(pestcontainer)  						rand(0.3) d_rand(0.5)    )
 				("mesh_break" component(engine_move)  							rand(0.3) d_rand(0.5)    )
 				("mesh_break" component(backfan_01)  							rand(0.3) d_rand(0.5)    )

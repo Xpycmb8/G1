@@ -118,7 +118,18 @@
 		{thickness 5}
 		{component "drill_hatch_r"}
 	}
-
+	{Volume "back_cooling_prot_plate"  ;задняя часть крышка
+		{thickness 15}
+		{component "back_cooling_prot_plate"};повреждаемые нижняя панель снизу
+	}
+	{Volume "shoulder_plating_left"  ;повреждаемые боковые части на ноге
+		{thickness 15}
+		{component "shoulder_plating_left"};повреждаемые нижняя панель снизу
+	}
+	{Volume "shoulder_plating_right"  ;повреждаемые боковые части на ноге
+		{thickness 15}
+		{component "shoulder_plating_right"};повреждаемые нижняя панель снизу
+	}
 
 ;-----------------organ
 	{Volume "head_organ"
@@ -176,6 +187,9 @@
 	{Volume "hatch_m_r"  
 		{thickness 3}
 	}
+	
+	
+	
 
 ;---------------head
 	{Volume "armour_head"
