@@ -275,8 +275,8 @@
 				("organ_break" volume(fuel)								component(fuel) 						rand(0.2) rand_destroy(0.2)  )
 				("organ_break" volume(legplate_right)					component(legplate_right) 				rand(0.3) rand_destroy(0.2)  )
 				("organ_break" volume(legplate_left)					component(legplate_left)  				rand(0.3) rand_destroy(0.2)  )
-				("organ_break" volume(shoulder_plate_left)				component(shoulder_plate_left) 			rand(0.3) rand_destroy(0.2)  )
-				("organ_break" volume(shoulder_plate_right)				component(shoulder_plate_right)  		rand(0.3) rand_destroy(0.2)  )
+				("organ_break" volume(shoulder_plate_left)				component(shoulder_plate_left) 			rand(0.3) rand_destroy(0.2)  );dreadnought_base
+				("organ_break" volume(shoulder_plate_right)				component(shoulder_plate_right)  		rand(0.3) rand_destroy(0.2)  );dreadnought_base
 				("organ_break" volume(missile_l)						component(missile_l) 					rand(0.2) rand_destroy(0.2)  )
 				("organ_break" volume(missile_r)						component(missile_r) 					rand(0.2) rand_destroy(0.2)  )
 				("organ_break" volume(guided_missile)					component(missilelauncher) 				rand(0.2) rand_destroy(0.2)  )
