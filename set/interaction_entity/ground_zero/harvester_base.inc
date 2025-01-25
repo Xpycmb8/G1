@@ -1092,12 +1092,10 @@
 		("mesh_break" component(leftFoot)			)
 		("mesh_break" component(leftToe)  			)
 		
-		
-
 		(define "mesh_break_cylplate" ;dread harv
 			{if component "%component" 
 				{spawn "break_small_body_robot" "%component"}
-				{burn volume "%component" fx "smoke_preheat" time 2 1 fake}	
+				{burn volume "%component" fx "burn_component_break_tiny" time 12 fake}					
 			}
 		)
 		("mesh_break_cylplate" component(RightUpLeg_cylplate_01))
@@ -1392,33 +1390,15 @@
 		("mesh_break" component(front_core_panel)  					 stuff_destroy(0.2)    )
 		("mesh_break" component(structure_plate_right)  			 stuff_destroy(0.2)    )
 		("mesh_break" component(structure_plate_left)  				 stuff_destroy(0.2)    )
-		("mesh_break" component(back_hatch_l)  						 stuff_destroy(0.2)    )
-		("mesh_break" component(back_hatch_r)  						 stuff_destroy(0.2)    )
 		("mesh_break" component(front_hatch_l)  					 stuff_destroy(0.2)    )
 		("mesh_break" component(front_hatch_r)  					 stuff_destroy(0.2)    )
 		("mesh_break" component(drill_hatch_r)  					 stuff_destroy(0.2)    )
 		("mesh_break" component(drill_hatch_l)  					 stuff_destroy(0.2)    )
 		("mesh_break" component(Drill)  							 stuff_destroy(0.2)    )
 		("mesh_break" component(pestcontainer)  					 stuff_destroy(0.2)    )
-		("mesh_break" component(engine_move)  						 stuff_destroy(0.2)    )
-		("mesh_break" component(backfan_01)  						 stuff_destroy(0.2)    )
-		("mesh_break" component(backfan_02)  						 stuff_destroy(0.2)    )
-		("mesh_break" component(backfan_03)  						 stuff_destroy(0.2)    )
 		("mesh_break" component(sideplate_left)  					 stuff_destroy(0.2)    )
 		("mesh_break" component(sideplate_right)  					 stuff_destroy(0.2)    )
-		("mesh_break" component(head_sideplate_front_r)  			 stuff_destroy(0.2)    )
-		("mesh_break" component(head_sideplate_front_l)  			 stuff_destroy(0.2)    )
-		("mesh_break" component(head_sideplate_back_r)  			 stuff_destroy(0.2)    )
-		("mesh_break" component(head_sideplate_back_l)  			 stuff_destroy(0.2)    )
-		
-		("mesh_break" component(legplate_right)  			 		stuff_destroy(0.2)    )
-		("mesh_break" component(legplate_left)  			 		stuff_destroy(0.2)    )
-
-		("mesh_break" component(shoulder_plate_left)  			 	stuff_destroy(0.2)    )
-		("mesh_break" component(shoulder_plate_right)  			 	stuff_destroy(0.2)    )
-
-
-
+	
 		;harvest
 		("mesh_break" component(front_plate_r)  			 		stuff_destroy(0.2))
 		("mesh_break" component(front_plate_l)  			 		stuff_destroy(0.2))

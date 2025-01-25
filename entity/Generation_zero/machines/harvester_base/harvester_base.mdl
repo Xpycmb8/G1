@@ -1,11 +1,12 @@
 ;Exported by: Xpycmb
-;Date:        Sun Jan 26 01:54:30 2025
+;Date:        Sun Jan 26 02:21:17 2025
 ;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\harvester.max
 {Skeleton
 	(include "anim_instance.inc")	
 	{bone revolute "basis"
 		{limits 0 -0}
 		{speed 0.2}
+		{terminator}
 		{Orientation
 			1	0	0
 			0	-1	0
@@ -4497,6 +4498,19 @@
 	{Polyhedron "rightupleg.vol"}
 	{Bone "rightupleg_sm"}
 	{Position 0	-1.14441e-05	-1.52588e-05}
+}
+{Volume "shoulder_plating_left"
+	{Polyhedron "shoulder_plating_left.vol"}
+	{Bone "shoulder_plating_left"}
+}
+{Volume "shoulder_plating_right"
+	{Polyhedron "shoulder_plating_right.vol"}
+	{Bone "shoulder_plating_right"}
+	{Orientation
+		1	0	0
+		0	1	0
+		0	0	1
+	}
 }
 {Volume "sidearmor_01_l"
 	{Box 3 10 8}
