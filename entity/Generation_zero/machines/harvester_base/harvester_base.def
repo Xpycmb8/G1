@@ -94,6 +94,14 @@
 		{thickness 12}
 		{component "front_core_panel"}
 	}
+	{Volume "large_leg_left_plating"  ;LeftShoulder caps
+		{thickness 7}
+		{component "large_leg_left_plating"}
+	}
+	{Volume "large_leg_right_plating"  ;rightShoulder caps
+		{thickness 7}
+		{component "large_leg_left_plating"}
+	}
 	{Volume "structure_plate_right"  ;повреждаемые передние элементы
 		{thickness 12}
 		{component "structure_plate_right"}
