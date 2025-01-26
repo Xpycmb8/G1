@@ -3,10 +3,7 @@
 ;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\harvester.max
 {Skeleton
 	(include "anim_instance.inc")	
-	{bone revolute "basis"
-		{limits 0 -0}
-		{speed 0.2}
-		{terminator}
+	{bone "basis"
 		{Orientation
 			1	0	0
 			0	-1	0

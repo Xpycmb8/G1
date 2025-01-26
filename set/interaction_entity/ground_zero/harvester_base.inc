@@ -145,7 +145,7 @@
 		{call "radio_connect"}
 		{call "sound_connect"}
 		{call "fire_connect"}
-		
+		{call "weapon_enable"}
 		
 		{set "engine_started" 0}
 		{set "stop" 1}
@@ -2215,21 +2215,21 @@
 		{tags remove "weapon_enable_missile_l"}
 		{tags remove "weapon_enable_missile_r"}
 		{if work "gun_r"
-			{ani_play "rocket_reload_r"}
+			;{ani_play "rocket_reload_r"}
 		}
 		{if work "gun_l"
-			{ani_play "rocket_reload_l"}
+			;{ani_play "rocket_reload_l"}
 		}
 	}	
 	{on "weapon_enable"
 		{delay 1 "main_gun"
 			{if work "gun_r"
-				{ani_play "rocket_ready_r"}
+				;{ani_play "rocket_ready_r"}
 				{tags add "weapon_enable_missile_r"}
 				{weapon_work "gun_r" 1}
 			}
 			{if work "gun_l"
-				{ani_play "rocket_ready_l"}
+				;{ani_play "rocket_ready_l"}
 				{tags add "weapon_enable_missile_l"}
 				{weapon_work "gun_l" 1}
 			}
