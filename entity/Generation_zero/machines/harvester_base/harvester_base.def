@@ -567,13 +567,13 @@
 			{foresight 	"adaptive"}
 			{basic}
 		}
-		{place "attack_concussion"
-			{StationaryFiring}
-			{weapon 	"harvest_melee" filled}
-			{foresight 	"attack_concussion"}
-			{basic}
-			;{rotate}
-		}
+		; {place "attack_concussion"
+			; {StationaryFiring}
+			; {weapon 	"harvest_melee" filled}
+			; {foresight 	"attack_concussion"}
+			; {basic}
+			; ;{rotate}
+		; }
 	}
 	{mass 85000}
 	("movement_heavy" 

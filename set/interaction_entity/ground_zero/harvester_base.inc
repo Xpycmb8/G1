@@ -896,13 +896,6 @@
 		{if component "pestcontainer" ;dread harv hunter
 			{tags add "damage_pestcontainer"}
 			{weapon_work "attack_pestdrop" 0}
-			{tear "piece_small_steel" bone "pestcontainer_hatch_front"
-				{impulse forward 2 0.5 cx 4 1 cy 4 1 }
-			}
-			{tear "piece_small_steel" bone "pestcontainer_hatch_bot"
-				{impulse forward 2 0.5 cx 4 1 cy 4 1 }
-			}
-			{spawn "break_small_body_robot" "hatch_botttom_bone"}				
 		}
 		{if component "lower_arm" ;all tag leg
 			{burn volume fx "electric_spark_hit_pierce" time 0.8 fake}			
@@ -1653,6 +1646,7 @@
 		}			
 		{delay 30 
 			{ani_play "curl_to_idle" 0.8}	
+			{call "fire_script_end"}
 			{call "weapon_melee_enable"}
 		}
 	}		
@@ -1926,8 +1920,8 @@
 					{drop_orders}
 					{movement_limit slow}
 				}
-				{delay 8
-					;{if rand 0.8
+				{delay 4
+					{if rand 0.8
 						{if work "gasdrop_l"
 							{spawn "wpn_prepare_mortar" "gasdrop_l"}
 							{delay 0.5
@@ -1956,7 +1950,7 @@
 								{view pause "smoke_drop_r"}
 							}
 						}
-					;}
+					}
 				}
 				{delay 25 
 					{ani_play "curl_to_idle" 1}	
