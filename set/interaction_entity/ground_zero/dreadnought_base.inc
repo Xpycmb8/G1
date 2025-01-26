@@ -674,7 +674,11 @@
 		}
 		{if component "visor_body";all
 			{bone cut "visor_body_bone"}
+			{bone cut "head_light_00_fx"}
 			{bone hide	"light_ems"}
+			{bone hide "body_ems_00_hold"}
+			{bone hide "body_ems_00_alarm"}
+			{bone hide "body_ems_00_search"}
 			{spawn "electric_spark_break" "visor_body_bone"}
 		}
 		{if component "visor_head";all
@@ -1047,6 +1051,11 @@
 		else component "visor_body"
 			{bone cut "visor_body_support_bone"}
 			{spawn "electric_spark_break" "visor_body"}
+			{bone hide	"light_ems"}
+			{bone cut "head_light_00_fx"}
+			{bone hide "body_ems_00_hold"}
+			{bone hide "body_ems_00_alarm"}
+			{bone hide "body_ems_00_search"}
 		else component "visor_head"
 			{tags add "destroy_visor"}
 			{bone cut "visor_head_support_bone"}
