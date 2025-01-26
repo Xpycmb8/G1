@@ -1,8 +1,9 @@
 ;Exported by: Xpycmb
-;Date:        Sun Jan 26 19:32:48 2025
+;Date:        Sun Jan 26 20:16:55 2025
 ;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\harvester_x.max
 {Skeleton
-	{bone "basis"
+	{bone revolute "basis"
+		{terminator}
 		{Orientation
 			1	0	0
 			0	-1	0
@@ -129,13 +130,17 @@
 						0	0	-1
 						-49.5984	-9.63281	11.0718
 					}
-					{bone "eyes_ik"
+					{bone revolute "eyes_ik"
+						{limits -15 20}
+						{speed 0.04}
 						{Orientation
 							0.889523	0.456836	0.00707376
 							-0.456763	0.889535	-0.00978217
 							-0.0107637	0.00547159	0.999927
 						}
-						{bone "eyes_ik_h"
+						{bone revolute "eyes_ik_h"
+							{limits -35 35}
+							{speed 0.02}
 							{Matrix34
 								0.999462	-0.0319231	-0.00755754
 								-0.00713757	0.0131628	-0.999888
@@ -373,14 +378,17 @@
 									{Position -15.8396	-3.8147e-05	0}
 								}
 							}
-							{bone "suspension_r1"
+							{bone prizmatic "suspension_r1"
+								{limits -0.02 0.14}
+								{speed2 6}
 								{Matrix34
 									-0.00402559	-0.0149343	0.99988
 									-0.260266	-0.965413	-0.0154677
 									0.965529	-0.260297	0
 									-26.1638	-0.94453	-7.46418
 								}
-								{bone "wheelr1"
+								{bone revolute "wheelr1"
+									{parameters "ID=wheelleft1;Radius=0.35;"}
 									{Orientation
 										0	0	-1
 										0	1	0
@@ -763,14 +771,17 @@
 									{Position 15.8395	0	1.90735e-05}
 								}
 							}
-							{bone "suspension_l1"
+							{bone prizmatic "suspension_l1"
+								{limits -0.02 0.14}
+								{speed2 6}
 								{Matrix34
 									-0.00402495	-0.0149343	0.99988
 									0.260266	0.965413	0.0154668
 									-0.965529	0.260298	0
 									26.1638	0.944469	7.46405
 								}
-								{bone "wheell1"
+								{bone revolute "wheell1"
+									{parameters "ID=wheelleft1;Radius=0.35;"}
 									{Orientation
 										0	0	-1
 										0	1	0
@@ -1084,7 +1095,9 @@
 						{VolumeView "piston_drill_bottom_link.ply"}
 					}
 				}
-				{bone "rightweaponattach"
+				{bone revolute "rightweaponattach"
+					{limits -8 8}
+					{speed 0.02}
 					{Matrix34
 						0	0	-1
 						-0.26596	0.963984	0
@@ -1111,7 +1124,9 @@
 								{parameters "ID=Missile_l;"}
 								{Position 0.136545	-2.64651	-2.30118}
 								{VolumeView "missile_joint_r.ply"}
-								{bone "missile_joint_r_bone"
+								{bone revolute "missile_joint_r_bone"
+									{limits -13 28}
+									{speed 0.02}
 									{Matrix34
 										0	-0.93959	0.342304
 										0	-0.342304	-0.939589
@@ -1375,7 +1390,9 @@
 						}
 					}
 				}
-				{bone "leftweaponattach"
+				{bone revolute "leftweaponattach"
+					{limits -8 8}
+					{speed 0.02}
 					{Matrix34
 						0	0	-1
 						-0.26596	0.963984	0
@@ -1402,7 +1419,9 @@
 								{parameters "ID=Missile_l;"}
 								{Position 0.136547	-2.64651	-2.30118}
 								{VolumeView "missile_joint_l.ply"}
-								{bone "missile_joint_l_bone"
+								{bone revolute "missile_joint_l_bone"
+									{limits -13 28}
+									{speed 0.02}
 									{Matrix34
 										0	-0.93959	0.342304
 										0	-0.342304	-0.939589
@@ -2003,7 +2022,9 @@
 						-35.9655	-0.984173	1.70464e-05
 					}
 				}
-				{bone "steer_l3"
+				{bone revolute "steer_l3"
+					{limits -3 3}
+					{speed 0.01}
 					{Matrix34
 						0	0	1
 						-0.995537	0.0943739	0
@@ -2235,7 +2256,9 @@
 								-0.228535	6.23148	-12.1862
 							}
 						}
-						{bone "steer_l2"
+						{bone revolute "steer_l2"
+							{limits -8 8}
+							{speed 0.002}
 							{Matrix34
 								0.137481	-0.0345705	-0.989901
 								0.960013	-0.241412	0.141762
@@ -2561,7 +2584,8 @@
 												-0.649518	0.760347	0
 												0	1.14441e-05	0
 											}
-											{bone "wheell"
+											{bone revolute "wheell"
+												{parameters "ID=wheelleft;Radius=0.35;"}
 												{Matrix34
 													0	0	-1
 													0	1	0
@@ -2569,7 +2593,9 @@
 													0	0	0
 												}
 											}
-											{bone "steer_l1"
+											{bone revolute "steer_l1"
+												{limits -5 5}
+												{speed 0.01}
 												{Matrix34
 													0.998129	-0.0477489	0.0382023
 													0.0382483	1.88625e-05	-0.999268
@@ -2700,7 +2726,9 @@
 						}
 					}
 				}
-				{bone "steer_r3"
+				{bone revolute "steer_r3"
+					{limits -3 3}
+					{speed 0.01}
 					{Matrix34
 						0	0	1
 						-0.995541	0.0943333	0
@@ -2968,7 +2996,9 @@
 								}
 							}
 						}
-						{bone "steer_r2"
+						{bone revolute "steer_r2"
+							{limits -8 8}
+							{speed 0.002}
 							{Matrix34
 								0.137483	-0.0345705	-0.989901
 								-0.960003	0.241448	-0.141762
@@ -3061,7 +3091,8 @@
 												0.649519	-0.760345	0
 												0	0	0
 											}
-											{bone "wheelr"
+											{bone revolute "wheelr"
+												{parameters "ID=wheelleft;Radius=0.35;"}
 												{Orientation
 													0	0	-1
 													0	1	0
@@ -3112,7 +3143,9 @@
 													0.114155	13.1846	-8.63576
 												}
 											}
-											{bone "steer_r1"
+											{bone revolute "steer_r1"
+												{limits -5 5}
+												{speed 0.01}
 												{Matrix34
 													0.998483	0.0251231	-0.0489998
 													-0.0490188	0.000135286	-0.998798
@@ -3411,14 +3444,18 @@
 				}
 				{VolumeView "body_sm.ply"}
 			}
-			{bone "attack_melee_v_r"
+			{bone revolute "attack_melee_v_r"
+				{limits -50 50}
+				{speed 1}
 				{Matrix34
 					0	1	-1.07661e-05
 					0.965927	0	0.258814
 					0.258816	-1.01167e-05	-0.965927
 					41.5875	23.6238	49.6308
 				}
-				{bone "attack_melee_h_r"
+				{bone revolute "attack_melee_h_r"
+					{limits -10 10}
+					{speed 1}
 					{Matrix34
 						-0.00571541	-0.00233002	-0.999981
 						-0.108675	0.994075	-0.00169564
@@ -3436,14 +3473,18 @@
 					}
 				}
 			}
-			{bone "attack_melee_v_l"
+			{bone revolute "attack_melee_v_l"
+				{limits -50 50}
+				{speed 1}
 				{Matrix34
 					0	1	-1.06469e-05
 					-0.866023	0	0.500005
 					0.500003	0	0.866024
 					-40.5023	23.6237	49.6308
 				}
-				{bone "attack_melee_h_l"
+				{bone revolute "attack_melee_h_l"
+					{limits -10 10}
+					{speed 1}
 					{Matrix34
 						-0.00571569	-0.00233227	-0.999981
 						-0.108684	0.994076	-0.00169348
@@ -3502,5 +3543,96 @@
 				0	0	1
 			}
 		}
+		{bone revolute "h_signal"
+			{limits -120 120}
+			{speed 1}
+			{Position 4.23251	0	36.7981}
+			{bone revolute "v_signal"
+				{limits -25 25}
+				{speed 1}
+				{Orientation
+					1	0	0
+					0	0	1
+					0	-1	0
+				}
+				{bone "signal"
+					{Position 0	0	0}
+				}
+				{bone "visor_all"
+					{Position 0	2.70197	0}
+				}
+			}
+		}
+		{bone revolute "h_signal_gas"
+			{limits -120 120}
+			{speed 1}
+			{Position 4.23251	0	36.7981}
+			{bone revolute "v_signal_gas"
+				{limits -25 25}
+				{speed 1}
+				{Orientation
+					1	0	0
+					0	0	1
+					0	-1	0
+				}
+				{bone "attack_gas"
+					{Position 0	0	0}
+				}
+			}
+		}
+		{bone revolute "h_signal_pestdrop"
+			{limits -120 120}
+			{speed 1}
+			{Position 4.23251	0	36.7981}
+			{bone revolute "v_signal_pestdrop"
+				{limits -25 25}
+				{speed 1}
+				{Orientation
+					1	0	0
+					0	0	1
+					0	-1	0
+				}
+				{bone "attack_pestdrop"
+					{Position 0	0	0}
+				}
+			}
+		}
+		{bone revolute "h_signal_adaptive"
+			{limits -120 120}
+			{speed 1}
+			{Position 51.9485	0	99.0473}
+			{bone revolute "v_signal_adaptive"
+				{limits -25 25}
+				{speed 1}
+				{Orientation
+					1	0	0
+					0	0	1
+					0	-1	0
+				}
+				{bone "adaptive"
+					{Position 0	0	0}
+				}
+			}
+		}
+	}
+}
+{Volume "hatch_m_l"
+	{Box 9.56059 4.38836 0.5}
+	{Bone "hatch_m_l"}
+	{Matrix34
+		0.935192	0.000799706	-0.354142
+		-0.000798643	1	0.00014581
+		0.354142	0.00014594	0.935192
+		0.107797	0.138732	-0.024579
+	}
+}
+{Volume "hatch_m_r"
+	{Box 9.56059 4.38836 0.5}
+	{Bone "hatch_m_r"}
+	{Matrix34
+		0.935192	0.000799361	-0.354141
+		-0.000798436	1	0.000146419
+		0.354141	0.00014554	0.935192
+		-0.0741733	-0.10847	-0.0935716
 	}
 }
