@@ -1926,11 +1926,10 @@
 					{drop_orders}
 					{movement_limit slow}
 				}
-				{delay 6
-					{if rand 0.4
+				{delay 8
+					;{if rand 0.8
 						{if work "gasdrop_l"
 							{spawn "wpn_prepare_mortar" "gasdrop_l"}
-							{call "check_gasdrop_anim"}
 							{delay 0.5
 								{call "drop_l_loop_smoke"}
 								{view start "smoke_drop_l"}
@@ -1939,24 +1938,25 @@
 								}
 							}				
 							{delay 8 ;gas_timer
+								{kill_delay "drop_l_loop_smoke"}		
 								{view pause "smoke_drop_l"}
 							}
 						}
-						{if work "gasdrop_l"
-							{spawn "wpn_prepare_mortar" "gasdrop_l"}
-							{call "check_gasdrop_anim"}
+						{if work "gasdrop_r"
+							{spawn "wpn_prepare_mortar" "gasdrop_r"}
 							{delay 0.5
-								{call "drop_l_loop_smoke"}
-								{view start "smoke_drop_l"}
-								{with_linked_entity "gas_sound_l" ;; if broken, kill_sound
+								{call "drop_r_loop_smoke"}
+								{view start "smoke_drop_r"}
+								{with_linked_entity "gas_sound_r" ;; if broken, kill_sound
 									{call "open"}
 								}
 							}				
 							{delay 8 ;gas_timer
-								{view pause "smoke_drop_l"}
+								{kill_delay "drop_r_loop_smoke"}		
+								{view pause "smoke_drop_r"}
 							}
 						}
-					}
+					;}
 				}
 				{delay 25 
 					{ani_play "curl_to_idle" 1}	

@@ -365,6 +365,10 @@
 		{sequence "curl_to_idle" 
 			{events 
 				{1 "fire_script_begin"}	
+				{12 "joint_big"}
+				{25 "joint_big"}
+				{27 "restart_clunk_harvester"}
+				{50 "joint_big"}
 				{87 "curl_end"}	
 				{90 "fire_script_end"}
 			}
@@ -374,6 +378,10 @@
 			{events 
 				{1 "fire_script_begin"}	
 				{2 "curl_start"}	
+				{12 "joint_big"}
+				{25 "joint_big"}
+				{27 "restart_clunk_harvester"}
+				{50 "joint_big"}
 				{90 "fire_script_end"}
 			}
 			{resume}
