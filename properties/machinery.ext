@@ -1506,11 +1506,11 @@ actor
 		;{armor_damage_modifier 0.1} 
 	}
 	{component "visor_head"
-		{category "component_machinery"}
+		{category "component_machinery_small"}
 		;{armor_damage_modifier 0.1} 
 	}
 	{component "visor_body"
-		{category "component_machinery"}
+		{category "component_machinery_small"}
 		;{armor_damage_modifier 0.1} 
 	}
 	{component "head_organ"
@@ -2228,19 +2228,19 @@ actor
 		;{armor_damage_modifier 0.1} 
 	}
 	{component "front_left_leg_hatch"
-		{category "component_machinery"}
+		{category "component_machinery_hatch"}
 		;{armor_damage_modifier 0.1} 
 	}
 	{component "back_left_leg_hatch"
-		{category "component_machinery"}
+		{category "component_machinery_hatch"}
 		;{armor_damage_modifier 0.1} 
 	}
 	{component "front_right_leg_hatch"
-		{category "component_machinery"}
+		{category "component_machinery_hatch"}
 		;{armor_damage_modifier 0.1} 
 	}
 	{component "back_right_leg_hatch"
-		{category "component_machinery"}
+		{category "component_machinery_hatch"}
 		;{armor_damage_modifier 0.1} 
 	}
 	{component "railing_b_armor"

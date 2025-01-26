@@ -1076,6 +1076,7 @@
 		}
 	}
 	{on pierce sync;dread
+		{vehicle_health_damage_pierce}
 		(define "health"
 			{if volume "main_organ"
 				{if stuff "%stuff"

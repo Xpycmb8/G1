@@ -1527,6 +1527,7 @@
 		}
 	)
 	{on blast ;harvest
+		{vehicle_health_damage_blast}
 		{if stuff "rocketlauncher"
 			{if rand 0.5
 				{call "rpg_detect"}

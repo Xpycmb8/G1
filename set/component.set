@@ -289,16 +289,20 @@
         {hp_broken 0}
     }
     {category "component_machinery"
-        {hp 100}
-        {hp_broken 0}
+ 		{hp 100}
+		{hp_broken 100}
     }
    {category "component_machinery_hatch"
         {hp 35}
-        {hp_broken 0}
+        {hp_broken 35}
     }
+   {category "component_machinery_small"
+  		{hp 50}
+		{hp_broken 50}
+   }
    {category "component_machinery_organ"
-        {hp 300}
-        {hp_broken 0}
+ 		{hp 100}
+		{hp_broken 100}
     }
     {category "component_machinery_cylplate"
  		{hp 150}
@@ -306,6 +310,6 @@
    }
    {category "main_body"
         {hp 300}
-        {hp_broken 0}
+        {hp_broken 300}
     }		
 }
