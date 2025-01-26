@@ -534,7 +534,9 @@
 			{tags add "wire_burn"}
 			{call "sparks_loop"}
 			{burn volume "cpu" fx "smoke_preheat" time 5 fake even_law}	
-			{ani_play "power_down"}
+			{if not tagged "rpg_detect"
+				{ani_play "power_down"}
+			}
 			{call "gun_block"}
 			{delay 15
 				{tags remove "wire_burn"}				
@@ -561,12 +563,16 @@
 					{tags remove "search"}
 					{call "ai_talk_signal"}
 					{burn volume "cpu" fx "smoke_preheat" time 5 fake even_law}	
-					{ani_play "power_down"}
+					{if not tagged "rpg_detect"
+						{ani_play "power_down"}
+					}
 					{call "gun_block"}
 					{delay 12 6 "power_drop"
 						{if not able "exploded"
 							{tags remove "power_drop"}
-							{ani_play "power_up"}
+							{if not tagged "rpg_detect"
+								{ani_play "power_up"}
+							}							
 						}							
 					}
 				}
@@ -1932,7 +1938,7 @@
 					{movement_limit slow}
 				}
 				{delay 4
-					{if rand 0.8
+					{if rand 0.3
 						{if work "gasdrop_l"
 							{spawn "wpn_prepare_mortar" "gasdrop_l"}
 							{delay 0.5
