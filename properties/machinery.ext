@@ -654,23 +654,34 @@ actor
 		("set_armor" args CentralLeg 0.5 0.8)
 		("set_armor" args CentralFoot 0.5 0.8)
 		("set_armor" args CentralToeBase 0.5 0.8)	
-		("set_armor" args RightUpLeg_cylplate_01 		0.5 0.8)
-		("set_armor" args RightUpLeg_cylplate_02 		0.5 0.8)		
+		("set_armor" args RightUpLeg_cylplate_01		0.5 0.8)
+		("set_armor" args RightUpLeg_cylplate_02 		0.5 0.8)
 		("set_armor" args RightUpLeg1_cylplate_01 		0.5 0.8)
 		("set_armor" args RightUpLeg1_cylplate_02 		0.5 0.8)
 		("set_armor" args RightFoot_cylplate_01 		0.5 0.8)
 		("set_armor" args RightFoot_cylplate_02 		0.5 0.8)
-		("set_armor" args LeftUpLeg_cylplate_01 		0.5 0.8)
-		("set_armor" args LeftUpLeg_cylplate_02 		0.5 0.8)		
-		("set_armor" args LeftUpLeg1_cylplate_01 		0.5 0.8)
-		("set_armor" args LeftUpLeg1_cylplate_02 		0.5 0.8)
-		("set_armor" args LeftFoot_cylplate_01 		0.5 0.8)
-		("set_armor" args LeftFoot_cylplate_02 		0.5 0.8)
-				
-		("set_armor" args front_left_leg_hatch 		0.5 0.8)
+		("set_armor" args rightArm_cylplate_01 			0.5 0.8)
+		("set_armor" args rightArm_cylplate_02 			0.5 0.8)
+		("set_armor" args rightArm_cylplate_03 			0.5 0.8)
+		("set_armor" args rightArm_cylplate_04 			0.5 0.8)
+		("set_armor" args rightShoulder_cylplate_01 	0.5 0.8)
+		("set_armor" args rightUpLeg_cylplate_03 		0.5 0.8)
+		("set_armor" args leftUpLeg_cylplate_01			0.5 0.8)
+		("set_armor" args leftUpLeg_cylplate_02 		0.5 0.8)
+		("set_armor" args leftUpLeg1_cylplate_01 		0.5 0.8)
+		("set_armor" args leftUpLeg1_cylplate_02 		0.5 0.8)
+		("set_armor" args leftFoot_cylplate_01 			0.5 0.8)
+		("set_armor" args leftFoot_cylplate_02 			0.5 0.8)
+		("set_armor" args leftArm_cylplate_01 			0.5 0.8)
+		("set_armor" args leftArm_cylplate_02 			0.5 0.8)
+		("set_armor" args leftArm_cylplate_03 			0.5 0.8)
+		("set_armor" args leftArm_cylplate_04 			0.5 0.8)
+		("set_armor" args leftShoulder_cylplate_01 		0.5 0.8)
+		("set_armor" args leftUpLeg_cylplate_03 		0.5 0.8)
+		("set_armor" args front_left_leg_hatch 			0.5 0.8)
 		("set_armor" args front_right_leg_hatch 		0.5 0.8)
-		("set_armor" args back_left_leg_hatch 		0.5 0.8)
-		("set_armor" args back_right_leg_hatch 		0.5 0.8)
+		("set_armor" args back_left_leg_hatch 			0.5 0.8)
+		("set_armor" args back_right_leg_hatch 			0.5 0.8)
 
 		("set_armor" args armor_ballistic_left_hand 0.5 0.8)
 		("set_armor" args armor_ballistic_left_fore_arm 0.5 0.8)
@@ -1007,7 +1018,7 @@ actor
 		{component "%0"}
 		{material "steel"}
 		{tags "plate_leg"}
-		{thickness	15}
+		{thickness	6}
 	}
 	{component "%0"
 		{RepairTime 5}
@@ -2119,7 +2130,7 @@ actor
 		{category "component_machinery"}
 		;{armor_damage_modifier 0.1} 
 	}
-	
+
 	{component "RightUpLeg_cylplate_01"
 		{category "component_machinery"}
 		;{armor_damage_modifier 0.1} 
@@ -2144,31 +2155,78 @@ actor
 		{category "component_machinery"}
 		;{armor_damage_modifier 0.1} 
 	}
-	{component "LeftUpLeg_cylplate_01"
+	{component "rightArm_cylplate_01"
 		{category "component_machinery"}
 		;{armor_damage_modifier 0.1} 
 	}
-	{component "LeftUpLeg_cylplate_02"
+	{component "rightArm_cylplate_02"
 		{category "component_machinery"}
 		;{armor_damage_modifier 0.1} 
 	}
-	{component "LeftUpLeg1_cylplate_01"
+	{component "rightArm_cylplate_03"
 		{category "component_machinery"}
 		;{armor_damage_modifier 0.1} 
 	}
-	{component "LeftUpLeg1_cylplate_02"
+	{component "rightArm_cylplate_04"
 		{category "component_machinery"}
 		;{armor_damage_modifier 0.1} 
 	}
-	{component "LeftFoot_cylplate_01"
+	{component "rightShoulder_cylplate_01"
 		{category "component_machinery"}
 		;{armor_damage_modifier 0.1} 
 	}
-	{component "LeftFoot_cylplate_02"
+	{component "rightUpLeg_cylplate_03"
 		{category "component_machinery"}
 		;{armor_damage_modifier 0.1} 
 	}
-	
+	{component "leftUpLeg_cylplate_01"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "leftUpLeg_cylplate_02"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "leftUpLeg1_cylplate_01"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "leftUpLeg1_cylplate_02"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "leftFoot_cylplate_01"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "leftFoot_cylplate_02"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "leftArm_cylplate_01"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "leftArm_cylplate_02"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "leftArm_cylplate_03"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "leftArm_cylplate_04"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "leftShoulder_cylplate_01"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
+	{component "leftUpLeg_cylplate_03"
+		{category "component_machinery"}
+		;{armor_damage_modifier 0.1} 
+	}
 	{component "front_left_leg_hatch"
 		{category "component_machinery"}
 		;{armor_damage_modifier 0.1} 

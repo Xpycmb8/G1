@@ -1045,7 +1045,12 @@
 		}
 		{if component "visor_body";all
 			{bone cut "visor_body_bone"}
-			{bone hide	"light_ems"}
+			{bone hide	"body_ems_00_hold"}
+			{bone hide	"body_ems_00_alarm"}
+			{bone hide	"body_ems_00_search"}
+			{bone hide	"visor_body_hold"}
+			{bone hide	"visor_body_search"}
+			{bone hide	"visor_body_alarm"}
 			{spawn "electric_spark_break" "visor_body_bone"}
 		}
 		{if component "visor_head";all
@@ -1316,6 +1321,7 @@
 		}
 	}
 	{on pierce ;harvest
+		{vehicle_health_damage_pierce}
 		(define "health"
 			{if volume "main_organ"
 				{if stuff "%stuff"
