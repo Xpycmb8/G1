@@ -451,6 +451,29 @@
 	}
 }
 
+{"open_smoke_scale"
+	;{inflammation_time 0}
+	{on spawn
+		{volumes disable contact}
+		{delay 2
+			{volumes enable contact}
+		}
+		{scale from 1 to 4 time 7}
+		{burn volume "body" fx "smoke_drop_burn" time 20 fake}	
+		{delay 20
+			{delete}
+		}
+	}
+	{on "burn" overload
+	}
+	{on blast_hit overload
+	}	
+	{on bullet_hit overload
+	}
+	{on overlap begin overload
+	}
+}
+
 
 {"open_fuel_s"
 	{inflammation_time 0.1}
