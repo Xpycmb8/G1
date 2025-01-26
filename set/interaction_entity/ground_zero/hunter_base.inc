@@ -300,6 +300,24 @@
 			}
 		}
 	}
+	{on ik begin "LeftArm_v"
+		{spawn "small_mech_servo" "LeftArm_v"}
+		{chassis_work 0}
+	}
+	{on ik begin "LeftArm_h"
+		{spawn "small_mech_servo" "LeftArm_h"}
+		{chassis_work 0}
+	}
+	{on ik end "LeftArm_v"
+		{if work "fuel"
+			{chassis_work 1}
+		}
+	}
+	{on ik end "LeftArm_h"
+		{if work "fuel"
+			{chassis_work 1}
+		}
+	}	
 	{on ik begin "h_signal"
 		{tags remove "hold"}	
 		{tags remove "alarm"}	

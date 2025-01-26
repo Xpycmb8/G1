@@ -512,7 +512,6 @@
 		("restore_ik_time")
 		{place "gun_l"
 			{weapon			"75mm_grad_l" filled}
-			{StationaryFiring}
 			{RestoreIKAfterAim}
 			{rotate}
 			{Barrels    9}
@@ -522,7 +521,6 @@
 		}
 		{place "gun_r"
 			{weapon			"75mm_grad_r" filled}
-			{StationaryFiring}
 			{RestoreIKAfterAim}
 			{rotate}
 			{Barrels    9}
@@ -595,4 +593,28 @@
 		fuel(tritium)
 	)	
 	{Extension "harvester_base.mdl"}
+	{bone "body_ems_00_hold"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.5 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
+	{bone "body_ems_00_search"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.5 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
+	{bone "body_ems_00_alarm"
+		{animation
+			{uv "run"
+				{shiftV 0 1 0.5 }
+				{shiftU 0 1 0.005 }	;min max delta [pingpong]
+			}
+		}
+	}
 }

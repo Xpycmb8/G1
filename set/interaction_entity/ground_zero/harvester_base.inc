@@ -442,17 +442,6 @@
 		;{signal shot 5000}
 		{tags add "mgun_alarm_base"}
 		{tags add "call_allies"}
-		{if rand 0.1
-			{if not tagged "turn"
-				{if not tagged "move"
-					{if rand 0.5
-						{ani_play "hit_reel_135cw" 1}
-					else
-						{ani_play "hit_reel_135ccw" 1}
-					}
-				}
-			}
-		}
 		{delay 5
 			{tags remove "mgun_alarm_base"}
 			{tags remove "call_allies"}
@@ -1085,14 +1074,9 @@
 			{burn volume fx "electric_spark_break" time 2 fake}
 		}
 		{if component "visor_body";all
+			{bone show "visor_body_bone"}
 			{bone cut "visor_body_bone"}
 			{bone cut "head_light_00_fx"}
-			{bone hide	"body_ems_00_hold"}
-			{bone hide	"body_ems_00_alarm"}
-			{bone hide	"body_ems_00_search"}
-			{bone hide	"visor_body_hold"}
-			{bone hide	"visor_body_search"}
-			{bone hide	"visor_body_alarm"}			
 			{spawn "glass_hit5" "visor_body"}
 			{spawn "electric_spark_break" "visor_body"}
 		}
@@ -1868,7 +1852,6 @@
 		{spawn "break_small_body_robot" "Missile_r"}				
 		{components "Missile_r" destroy}		
 	}
-	
 	{on "reload"  ;harvest
 		{if tagged "fire_gun_r"
 			{if work "gun_r"
@@ -1877,7 +1860,8 @@
 				{delay 11
 					{if work "gun_r"
 						{delay 0.5
-							{tags remove "gun_r"}
+							{tags remove "gun_r"}							
+							{spawn "wpn_alarm_missiles" "missile_r"}				
 							{weapon_work "gun_r" 1}
 						}
 					}
@@ -1892,6 +1876,7 @@
 						{delay 0.5
 							{tags remove "gun_l"}
 							{weapon_work "gun_l" 1}
+							{spawn "wpn_alarm_missiles" "missile_l"}				
 						}
 					}
 				}

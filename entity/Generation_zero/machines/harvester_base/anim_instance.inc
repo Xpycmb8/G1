@@ -398,20 +398,10 @@
 		{sequence "leds_global_hold" {resume}}
 		{sequence "leds_global_search" {resume}}
 		{sequence "leds_global_alarm" {resume}}		
-		{sequence "rocket_ready_r"
-			; {events 
-				; {1 "block_curl"}			
-				; {90 "unblock_curl"}
-			; }
-			{resume}
-		}
-		{sequence "rocket_ready_l"
-			; {events 
-				; {1 "block_curl"}			
-				; {90 "unblock_curl"}
-			; }
-			{resume}
-		}
+		{sequence "rocket_ready_l" {resume}}
+		{sequence "rocket_reload_l" {resume}}
+		{sequence "rocket_ready_r" {resume}}
+		{sequence "rocket_reload_r" {resume}}
 		{sequence "health"
 			{resume}
 			{events 	
