@@ -2208,6 +2208,33 @@
 			}
 		}
 	}
+	{on "weapon_disable"
+		{kill_delay "main_gun"}
+		{weapon_work "gun_r" 0}
+		{weapon_work "gun_l" 0}
+		{tags remove "weapon_enable_missile_l"}
+		{tags remove "weapon_enable_missile_r"}
+		{if work "gun_r"
+			{ani_play "rocket_reload_r"}
+		}
+		{if work "gun_l"
+			{ani_play "rocket_reload_l"}
+		}
+	}	
+	{on "weapon_enable"
+		{delay 1 "main_gun"
+			{if work "gun_r"
+				{ani_play "rocket_ready_r"}
+				{tags add "weapon_enable_missile_r"}
+				{weapon_work "gun_r" 1}
+			}
+			{if work "gun_l"
+				{ani_play "rocket_ready_l"}
+				{tags add "weapon_enable_missile_l"}
+				{weapon_work "gun_l" 1}
+			}
+		}
+	}
 	;evs
 	{on animation_event "curl_start"
 		{tags add "curl_stand"}		
