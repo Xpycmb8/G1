@@ -52,6 +52,19 @@
 		{add_view 	"smoke_gas_drop_drop" 		"gas_drop_r" 	"gasdrop_socket_r_03"}
 		{add_view 	"smoke_gas_drop_drop" 		"gas_drop_r" 	"gasdrop_socket_r_04"}
 
+		{add_view 	"smoke_drop_hv" 		"smoke_drop_l" 	"gasdrop_socket_l_00"}
+		{add_view 	"smoke_drop_hv" 		"smoke_drop_l" 	"gasdrop_socket_l_01"}
+		{add_view 	"smoke_drop_hv" 		"smoke_drop_l" 	"gasdrop_socket_l_02"}
+		{add_view 	"smoke_drop_hv" 		"smoke_drop_l" 	"gasdrop_socket_l_03"}
+		{add_view 	"smoke_drop_hv" 		"smoke_drop_l" 	"gasdrop_socket_l_04"}
+		
+		
+		{add_view 	"smoke_drop_hv" 		"smoke_drop_r" 	"gasdrop_socket_r_00"}
+		{add_view 	"smoke_drop_hv" 		"smoke_drop_r" 	"gasdrop_socket_r_01"}
+		{add_view 	"smoke_drop_hv" 		"smoke_drop_r" 	"gasdrop_socket_r_02"}
+		{add_view 	"smoke_drop_hv" 		"smoke_drop_r" 	"gasdrop_socket_r_03"}
+		{add_view 	"smoke_drop_hv" 		"smoke_drop_r" 	"gasdrop_socket_r_04"}
+
 		{add_view 	"rpg_shot_small" 										"fx_muzzle_rpg_l" "fx_shoot_missilelauncher_l"} ;harvest
 		{add_view 	"rpg_shot_small" 										"fx_muzzle_rpg_r" "fx_shoot_missilelauncher_r"} ;harvest
 		{add_view 	"laser_sight_add_guided_rocket" 						"laser_point_l" "fx_laser_point_missilelauncher_l"} ;harvest
@@ -1913,6 +1926,38 @@
 					{drop_orders}
 					{movement_limit slow}
 				}
+				{delay 6
+					{if rand 0.4
+						{if work "gasdrop_l"
+							{spawn "wpn_prepare_mortar" "gasdrop_l"}
+							{call "check_gasdrop_anim"}
+							{delay 0.5
+								{call "drop_l_loop_smoke"}
+								{view start "smoke_drop_l"}
+								{with_linked_entity "gas_sound_l" ;; if broken, kill_sound
+									{call "open"}
+								}
+							}				
+							{delay 8 ;gas_timer
+								{view pause "smoke_drop_l"}
+							}
+						}
+						{if work "gasdrop_l"
+							{spawn "wpn_prepare_mortar" "gasdrop_l"}
+							{call "check_gasdrop_anim"}
+							{delay 0.5
+								{call "drop_l_loop_smoke"}
+								{view start "smoke_drop_l"}
+								{with_linked_entity "gas_sound_l" ;; if broken, kill_sound
+									{call "open"}
+								}
+							}				
+							{delay 8 ;gas_timer
+								{view pause "smoke_drop_l"}
+							}
+						}
+					}
+				}
 				{delay 25 
 					{ani_play "curl_to_idle" 1}	
 					{drop_orders}
@@ -2040,6 +2085,26 @@
 		{delay_effect 1 "drop_r_loop"}
 	}
 
+	{on "drop_l_loop_smoke"
+		{if work "gasdrop_l"
+			{spawn "open_smoke_scale" "gasdrop_socket_l_00" x {impulse forward 12 6}  }
+			{spawn "open_smoke_scale" "gasdrop_socket_l_01" x {impulse forward 12 6}  }
+			{spawn "open_smoke_scale" "gasdrop_socket_l_02" x {impulse forward 12 6}  }
+			{spawn "open_smoke_scale" "gasdrop_socket_l_03" x {impulse forward 12 6}  }
+			{spawn "open_smoke_scale" "gasdrop_socket_l_04" x {impulse forward 12 6}  }
+		}
+		{delay_effect 1 "drop_l_loop_smoke"}
+	}
+	{on "drop_r_loop_smoke"
+		{if work "gasdrop_r"
+			{spawn "open_smoke_scale" "gasdrop_socket_r_00" x {impulse forward 12 6}  }
+			{spawn "open_smoke_scale" "gasdrop_socket_r_01" x {impulse forward 12 6}  }
+			{spawn "open_smoke_scale" "gasdrop_socket_r_02" x {impulse forward 12 6}  }
+			{spawn "open_smoke_scale" "gasdrop_socket_r_03" x {impulse forward 12 6}  }
+			{spawn "open_smoke_scale" "gasdrop_socket_r_04" x {impulse forward 12 6}  }
+		}
+		{delay_effect 1 "drop_r_loop_smoke"}
+	}
 
 
 	; {on animation_end "gas_fuel"
