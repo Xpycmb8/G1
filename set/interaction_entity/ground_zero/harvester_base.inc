@@ -173,6 +173,7 @@
 		)
 		("leds_ems_global_small"  vis(body_ems_00)  )
 		("leds_ems_global_small"  vis(head_light_ems_00) )
+		("leds_ems_global_small"  vis(visor_body) )
 	}
 	{on "sound_connect"
 		{link_sound "stop_gas" "generation_zero/characters/gas_drop/smoke_hiss_end"}

@@ -1,5 +1,5 @@
 ;Exported by: Xpycmb
-;Date:        Sun Jan 26 02:21:17 2025
+;Date:        Sun Jan 26 11:48:48 2025
 ;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\harvester.max
 {Skeleton
 	(include "anim_instance.inc")	
@@ -1842,6 +1842,23 @@
 							{Position 1.54532	-0.265144	0.384159}
 							{visibility 0}
 							{VolumeView "body_ems_00_search.ply"}
+						}
+						{bone "visor_body_hold"
+							{parameters "ID=visor_body;"}
+							{Position 1.79257	-1.71491	0.843136}
+							{VolumeView "visor_body_hold.ply"}
+						}
+						{bone "visor_body_search"
+							{parameters "ID=visor_body;"}
+							{Position 1.79257	-1.71491	0.843136}
+							{visibility 0}
+							{VolumeView "visor_body_search.ply"}
+						}
+						{bone "visor_body_alarm"
+							{parameters "ID=visor_body;"}
+							{Position 1.79257	-1.71491	0.843136}
+							{visibility 0}
+							{VolumeView "visor_body_alarm.ply"}
 						}
 					}
 					{bone "front_hatch_r"
