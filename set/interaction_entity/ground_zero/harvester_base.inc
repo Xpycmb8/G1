@@ -155,6 +155,35 @@
 		}		
 	}
 	{on "fire_connect"
+		(define "burn_fx_component_cylplate" ;dread harv
+			{add_view 	"burn_component_break_small" "%component_burn" 	"%component"}
+			{view hide	"%component_burn"}
+			{view pause	"%component_burn"}
+		)
+		("burn_fx_component_cylplate" component(RightUpLeg_cylplate_01))
+		("burn_fx_component_cylplate" component(RightUpLeg_cylplate_02))
+		("burn_fx_component_cylplate" component(rightUpLeg_cylplate_03))
+		("burn_fx_component_cylplate" component(RightUpLeg1_cylplate_01))
+		("burn_fx_component_cylplate" component(RightUpLeg1_cylplate_02))
+		("burn_fx_component_cylplate" component(RightFoot_cylplate_01))
+		("burn_fx_component_cylplate" component(RightFoot_cylplate_02))
+		("burn_fx_component_cylplate" component(rightArm_cylplate_01))
+		("burn_fx_component_cylplate" component(rightArm_cylplate_02))
+		("burn_fx_component_cylplate" component(rightArm_cylplate_03))
+		("burn_fx_component_cylplate" component(rightArm_cylplate_04))
+		("burn_fx_component_cylplate" component(rightShoulder_cylplate_01))
+		("burn_fx_component_cylplate" component(leftUpLeg_cylplate_01))
+		("burn_fx_component_cylplate" component(leftUpLeg_cylplate_02))
+		("burn_fx_component_cylplate" component(leftUpLeg_cylplate_03))
+		("burn_fx_component_cylplate" component(leftUpLeg1_cylplate_01))
+		("burn_fx_component_cylplate" component(leftUpLeg1_cylplate_02))
+		("burn_fx_component_cylplate" component(leftFoot_cylplate_01))
+		("burn_fx_component_cylplate" component(leftFoot_cylplate_02))
+		("burn_fx_component_cylplate" component(leftArm_cylplate_01))
+		("burn_fx_component_cylplate" component(leftArm_cylplate_02))
+		("burn_fx_component_cylplate" component(leftArm_cylplate_03))
+		("burn_fx_component_cylplate" component(leftArm_cylplate_04))
+		("burn_fx_component_cylplate" component(leftShoulder_cylplate_01))
 		(define "burn_fx_component"
 			{add_view 	"burn_component_break_small" "%comp_burn" 	"%comp"}
 			{view hide	"%comp_burn"}
@@ -1051,13 +1080,15 @@
 		}
 		{if component "visor_body";all
 			{bone cut "visor_body_bone"}
+			{bone cut "head_light_00_fx"}
 			{bone hide	"body_ems_00_hold"}
 			{bone hide	"body_ems_00_alarm"}
 			{bone hide	"body_ems_00_search"}
 			{bone hide	"visor_body_hold"}
 			{bone hide	"visor_body_search"}
-			{bone hide	"visor_body_alarm"}
-			{spawn "electric_spark_break" "visor_body_bone"}
+			{bone hide	"visor_body_alarm"}			
+			{spawn "glass_hit5" "visor_body"}
+			{spawn "electric_spark_break" "visor_body"}
 		}
 		{if component "visor_head";all
 			{bone cut "visor_head_bone"}
@@ -1107,7 +1138,10 @@
 		(define "mesh_break_cylplate" ;dread harv
 			{if component "%component" 
 				{spawn "break_small_body_robot" "%component"}
-				{burn volume "%component" fx "burn_component_break_tiny" time 12 fake}					
+				{view start "%component_burn"}
+				{delay 10 5
+					{view stop "%component_burn"}
+				}
 			}
 		)
 		("mesh_break_cylplate" component(RightUpLeg_cylplate_01))
@@ -1443,30 +1477,6 @@
 		("mesh_break" component(leftLeg)  		 					stuff_destroy(0.3))
 		("mesh_break" component(leftFoot)  			 				stuff_destroy(0.3))
 		("mesh_break" component(leftToe)  		 					stuff_destroy(0.3))
-		("mesh_break" component(RightUpLeg_cylplate_01)  		 	stuff_destroy(0.4))
-		("mesh_break" component(RightUpLeg_cylplate_02)  		 	stuff_destroy(0.4))
-		("mesh_break" component(rightUpLeg_cylplate_03)  		 	stuff_destroy(0.4))
-		("mesh_break" component(RightUpLeg1_cylplate_01)  		 	stuff_destroy(0.4))
-		("mesh_break" component(RightUpLeg1_cylplate_02)  		 	stuff_destroy(0.4))
-		("mesh_break" component(RightFoot_cylplate_01)  		 	stuff_destroy(0.4))
-		("mesh_break" component(RightFoot_cylplate_02)  		 	stuff_destroy(0.4))
-		("mesh_break" component(rightArm_cylplate_01)  		 		stuff_destroy(0.4))
-		("mesh_break" component(rightArm_cylplate_02)  		 		stuff_destroy(0.4))
-		("mesh_break" component(rightArm_cylplate_03)  		 		stuff_destroy(0.4))
-		("mesh_break" component(rightArm_cylplate_04)  		 		stuff_destroy(0.4))
-		("mesh_break" component(rightShoulder_cylplate_01)  		 stuff_destroy(0.4))
-		("mesh_break" component(leftUpLeg_cylplate_01)  		 	stuff_destroy(0.4))
-		("mesh_break" component(leftUpLeg_cylplate_02)  		 	stuff_destroy(0.4))
-		("mesh_break" component(leftUpLeg_cylplate_03)  		 	stuff_destroy(0.4))
-		("mesh_break" component(leftUpLeg1_cylplate_01)  		 	stuff_destroy(0.4))
-		("mesh_break" component(leftUpLeg1_cylplate_02)  		 	stuff_destroy(0.4))
-		("mesh_break" component(leftFoot_cylplate_01)  		 		stuff_destroy(0.4))
-		("mesh_break" component(leftFoot_cylplate_02)  		 		stuff_destroy(0.4))
-		("mesh_break" component(leftArm_cylplate_01)  		 		stuff_destroy(0.4))
-		("mesh_break" component(leftArm_cylplate_02)  		 		stuff_destroy(0.4))
-		("mesh_break" component(leftArm_cylplate_03)  		 		stuff_destroy(0.4))
-		("mesh_break" component(leftArm_cylplate_04)  		 		stuff_destroy(0.4))
-		("mesh_break" component(leftShoulder_cylplate_01)  		 	stuff_destroy(0.4))
 	(include "pierce_all.inc")
 	}
 	{on bullet_hit

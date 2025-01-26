@@ -300,6 +300,10 @@
         {hp 300}
         {hp_broken 0}
     }
+    {category "component_machinery_cylplate"
+ 		{hp 150}
+		{hp_broken 150}
+   }
    {category "main_body"
         {hp 300}
         {hp_broken 0}

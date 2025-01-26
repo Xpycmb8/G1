@@ -2132,99 +2132,99 @@ actor
 	}
 
 	{component "RightUpLeg_cylplate_01"
-		{category "component_machinery"}
+		{category "component_machinery_cylplate"}
 		;{armor_damage_modifier 0.1} 
 	}
 	{component "RightUpLeg_cylplate_02"
-		{category "component_machinery"}
+		{category "component_machinery_cylplate"}
 		;{armor_damage_modifier 0.1} 
 	}
 	{component "RightUpLeg1_cylplate_01"
-		{category "component_machinery"}
+		{category "component_machinery_cylplate"}
 		;{armor_damage_modifier 0.1} 
 	}
 	{component "RightUpLeg1_cylplate_02"
-		{category "component_machinery"}
+		{category "component_machinery_cylplate"}
 		;{armor_damage_modifier 0.1} 
 	}
 	{component "RightFoot_cylplate_01"
-		{category "component_machinery"}
+		{category "component_machinery_cylplate"}
 		;{armor_damage_modifier 0.1} 
 	}
 	{component "RightFoot_cylplate_02"
-		{category "component_machinery"}
+		{category "component_machinery_cylplate"}
 		;{armor_damage_modifier 0.1} 
 	}
 	{component "rightArm_cylplate_01"
-		{category "component_machinery"}
+		{category "component_machinery_cylplate"}
 		;{armor_damage_modifier 0.1} 
 	}
 	{component "rightArm_cylplate_02"
-		{category "component_machinery"}
+		{category "component_machinery_cylplate"}
 		;{armor_damage_modifier 0.1} 
 	}
 	{component "rightArm_cylplate_03"
-		{category "component_machinery"}
+		{category "component_machinery_cylplate"}
 		;{armor_damage_modifier 0.1} 
 	}
 	{component "rightArm_cylplate_04"
-		{category "component_machinery"}
+		{category "component_machinery_cylplate"}
 		;{armor_damage_modifier 0.1} 
 	}
 	{component "rightShoulder_cylplate_01"
-		{category "component_machinery"}
+		{category "component_machinery_cylplate"}
 		;{armor_damage_modifier 0.1} 
 	}
 	{component "rightUpLeg_cylplate_03"
-		{category "component_machinery"}
+		{category "component_machinery_cylplate"}
 		;{armor_damage_modifier 0.1} 
 	}
 	{component "leftUpLeg_cylplate_01"
-		{category "component_machinery"}
+		{category "component_machinery_cylplate"}
 		;{armor_damage_modifier 0.1} 
 	}
 	{component "leftUpLeg_cylplate_02"
-		{category "component_machinery"}
+		{category "component_machinery_cylplate"}
 		;{armor_damage_modifier 0.1} 
 	}
 	{component "leftUpLeg1_cylplate_01"
-		{category "component_machinery"}
+		{category "component_machinery_cylplate"}
 		;{armor_damage_modifier 0.1} 
 	}
 	{component "leftUpLeg1_cylplate_02"
-		{category "component_machinery"}
+		{category "component_machinery_cylplate"}
 		;{armor_damage_modifier 0.1} 
 	}
 	{component "leftFoot_cylplate_01"
-		{category "component_machinery"}
+		{category "component_machinery_cylplate"}
 		;{armor_damage_modifier 0.1} 
 	}
 	{component "leftFoot_cylplate_02"
-		{category "component_machinery"}
+		{category "component_machinery_cylplate"}
 		;{armor_damage_modifier 0.1} 
 	}
 	{component "leftArm_cylplate_01"
-		{category "component_machinery"}
+		{category "component_machinery_cylplate"}
 		;{armor_damage_modifier 0.1} 
 	}
 	{component "leftArm_cylplate_02"
-		{category "component_machinery"}
+		{category "component_machinery_cylplate"}
 		;{armor_damage_modifier 0.1} 
 	}
 	{component "leftArm_cylplate_03"
-		{category "component_machinery"}
+		{category "component_machinery_cylplate"}
 		;{armor_damage_modifier 0.1} 
 	}
 	{component "leftArm_cylplate_04"
-		{category "component_machinery"}
+		{category "component_machinery_cylplate"}
 		;{armor_damage_modifier 0.1} 
 	}
 	{component "leftShoulder_cylplate_01"
-		{category "component_machinery"}
+		{category "component_machinery_cylplate"}
 		;{armor_damage_modifier 0.1} 
 	}
 	{component "leftUpLeg_cylplate_03"
-		{category "component_machinery"}
+		{category "component_machinery_cylplate"}
 		;{armor_damage_modifier 0.1} 
 	}
 	{component "front_left_leg_hatch"
