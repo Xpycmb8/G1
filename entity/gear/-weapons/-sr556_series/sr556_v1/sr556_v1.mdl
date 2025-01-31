@@ -1,5 +1,5 @@
 ;Exported by: Xpycmb
-;Date:        Fri Jan 31 22:03:28 2025
+;Date:        Fri Jan 31 22:57:35 2025
 ;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\ruger_sr556.max
 {Skeleton
 	{animation
@@ -151,7 +151,7 @@
 					0.00657266	-0.999638	0.0261015
 					0.970297	6.30403e-05	-0.241918
 					0.241828	0.0269162	0.969946
-					2.3859	0	0
+					2.3859	-0.063963	0
 				}
 				{bone "magazine"
 					{parameters "ID=Body;"}
