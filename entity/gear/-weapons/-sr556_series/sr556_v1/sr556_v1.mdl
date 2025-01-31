@@ -8,7 +8,7 @@
 			{speed 1}
 			{events 
 				{1 "bullet_drop_view"}
-				{2 "open_bolt_lmg"}
+				{2 "open_bolt_ag"}
 				{3 "clear_casing_556_45"}
 			}
 		}
@@ -371,15 +371,15 @@
 {Extender "preview"
 	{"Stuff"
 		{camera
-			{origin 1.32696	-1.25047	15.4963}
-			{lookat 1.29796	2.10549	-31.3267}
+			{origin 1.32696	-1.25047	20.1046}
+			{lookat 1.29796	2.10549	-26.7184}
 			{fov 45}
 			{horizon -175.346}
 		}
 		{lights
 			{"0"
 				{type point}
-				{position 21.0972	-17.64	-53.5502}
+				{position 21.0972	-17.64	-48.9419}
 			}
 			{"1"
 				{type directional}
@@ -387,21 +387,21 @@
 			}
 			{"2"
 				{type point}
-				{position -17.8925	15.3024	-57.8131}
+				{position -17.8925	15.3024	-53.2048}
 			}
 		}
 	}
 	{"Stuff_primary"
 		{camera
-			{origin 1.88319	-0.971493	16.0051}
-			{lookat 1.853	2.51864	-32.6908}
+			{origin 1.88319	-0.971493	20.6134}
+			{lookat 1.853	2.51864	-28.0825}
 			{fov 45}
 			{horizon 179.512}
 		}
 		{lights
 			{"0"
 				{type point}
-				{position 22.4693	-20.0123	-55.1144}
+				{position 22.4693	-20.0123	-50.5061}
 			}
 			{"1"
 				{type directional}
@@ -409,7 +409,7 @@
 			}
 			{"2"
 				{type point}
-				{position -16.5203	12.9301	-59.3773}
+				{position -16.5203	12.9301	-54.7691}
 			}
 		}
 	}

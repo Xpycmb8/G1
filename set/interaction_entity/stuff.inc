@@ -806,6 +806,12 @@
 	{on animation_event "open_bolt_lmg"
 		{start_sound "weapon/bolt_move/med/lmg"}	
 	}		
+	{on animation_event "open_bolt_ag"
+		{start_sound "weapon/bolt_move/med/ag"}	
+	}		
+	{on animation_event "open_bolt_smg"
+		{start_sound "weapon/bolt_move/med/smg"}	
+	}		
 	{on animation_event "bullet_drop_hide"
 		{view hide "shell_drop"}	
 		{view hide "shell"}	
