@@ -1,5 +1,5 @@
 ;Exported by: Xpycmb
-;Date:        Fri Jan 31 22:57:35 2025
+;Date:        Fri Jan 31 23:15:56 2025
 ;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\ruger_sr556.max
 {Skeleton
 	{animation
@@ -60,43 +60,85 @@
 				0	1	0
 				0	0	-0.075061
 			}
-			{VolumeView "receiver.ply"}
+			{LODView
+				{VolumeView "receiver.ply"}
+				{VolumeView "receiver_lod1.ply"}
+				{VolumeView "receiver_lod2.ply"}
+				{VolumeView "receiver_lod3.ply"}
+				{VolumeView "receiver_lod4.ply"}
+			}
 			{bone "part2"
 				{parameters "ID=Body;"}
 				{Position -0.128373	-0.0573365	1.9626}
-				{VolumeView "part2.ply"}
+				{LODView
+					{VolumeView "part2.ply"}
+					{VolumeView "part2_lod1.ply"}
+					{VolumeView "part2_lod2.ply"}
+					{VolumeView "part2_lod3.ply"}
+				}
 			}
 			{bone "handguard"
 				{parameters "ID=Body;"}
 				{Position 5.41836	-0.0754633	1.22999}
-				{VolumeView "handguard.ply"}
+				{LODView
+					{VolumeView "handguard.ply"}
+					{VolumeView "handguard_lod1.ply"}
+					{VolumeView "handguard_lod2.ply"}
+					{VolumeView "handguard_lod3.ply"}
+				}
 				{bone "part1"
 					{parameters "ID=Body;"}
 					{Position 1.22676	0.0181279	0.688573}
-					{VolumeView "part1.ply"}
+					{LODView
+						{VolumeView "part1.ply"}
+						{VolumeView "part1_lod1.ply"}
+						{VolumeView "part1_lod2.ply"}
+						{VolumeView "part1_lod3.ply"}
+					}
 				}
 			}
 			{bone "barrel"
 				{parameters "ID=Body;"}
 				{Position 5.558	-0.0697565	1.22973}
-				{VolumeView "barrel.ply"}
+				{LODView
+					{VolumeView "barrel.ply"}
+					{VolumeView "barrel_lod1.ply"}
+					{VolumeView "barrel_lod2.ply"}
+					{VolumeView "barrel_lod3.ply"}
+				}
 				{bone "muzzle"
 					{parameters "ID=Body;"}
 					{Position 2.85389	0.00376725	0.00255322}
-					{VolumeView "muzzle.ply"}
+					{LODView
+						{VolumeView "muzzle.ply"}
+						{VolumeView "muzzle_lod1.ply"}
+						{VolumeView "muzzle_lod2.ply"}
+						{VolumeView "muzzle_lod3.ply"}
+					}
 				}
 			}
 			{bone "grip"
 				{parameters "ID=Body;"}
 				{Position -0.472254	-0.075061	-0.67622}
-				{VolumeView "grip.ply"}
+				{LODView
+					{VolumeView "grip.ply"}
+					{VolumeView "grip_lod1.ply"}
+					{VolumeView "grip_lod2.ply"}
+					{VolumeView "grip_lod3.ply"}
+				}
 			}
 			{bone "link_sight"
 				{parameters "Voxels=0;"}
 				{Position 1.51038	0	1.74266}
 				{bone "sight"
 					{parameters "ID=Body;"}
-					{VolumeView "sight.ply"}
+					{LODView
+						{VolumeView "sight.ply"}
+						{VolumeView "sight_lod1.ply"}
+						{VolumeView "sight_lod2.ply"}
+						{VolumeView "sight_lod3.ply"}
+						{VolumeView "sight_lod4.ply"}
+					}
 				}
 			}
 			{bone "stock_bone"
@@ -114,7 +156,13 @@
 						0	0	1
 						0	-2.45709	-0.927917
 					}
-					{VolumeView "stock.ply"}
+					{LODView
+						{VolumeView "stock.ply"}
+						{VolumeView "stock_lod1.ply"}
+						{VolumeView "stock_lod2.ply"}
+						{VolumeView "stock_lod3.ply"}
+						{VolumeView "stock_lod4.ply"}
+					}
 				}
 			}
 			{bone "trigger_bone"
@@ -122,7 +170,12 @@
 				{bone "trigger"
 					{parameters "ID=Body;"}
 					{Position -0.0707855	0	-0.296349}
-					{VolumeView "trigger.ply"}
+					{LODView
+						{VolumeView "trigger.ply"}
+						{VolumeView "trigger_lod1.ply"}
+						{VolumeView "trigger_lod2.ply"}
+						{VolumeView "trigger_lod3.ply"}
+					}
 				}
 			}
 			{bone "recoil_bone"
@@ -134,7 +187,12 @@
 						1	0	0
 						0	0	1
 					}
-					{VolumeView "recoil.ply"}
+					{LODView
+						{VolumeView "recoil.ply"}
+						{VolumeView "recoil_lod1.ply"}
+						{VolumeView "recoil_lod2.ply"}
+						{VolumeView "recoil_lod3.ply"}
+					}
 				}
 				{bone "shell_drop"
 					{Matrix34
@@ -143,7 +201,12 @@
 						0	0.173648	0.984808
 						1.6951	-0.0702692	0.00782394
 					}
-					{VolumeView "shell_drop.ply"}
+					{LODView
+						{VolumeView "shell_drop.ply"}
+						{VolumeView "shell_drop_lod1.ply"}
+						{VolumeView "shell_drop_lod2.ply"}
+						{VolumeView "shell_drop_lod3.ply"}
+					}
 				}
 			}
 			{bone "clip_magazine"
@@ -160,11 +223,19 @@
 						-0.999638	6.29181e-05	0.0269163
 						0.0261016	-0.241918	0.969946
 					}
-					{VolumeView "magazine.ply"}
+					{LODView
+						{VolumeView "magazine.ply"}
+						{VolumeView "magazine_lod1.ply"}
+						{VolumeView "magazine_lod2.ply"}
+						{VolumeView "magazine_lod3.ply"}
+					}
 					{bone "bullet"
 						{parameters "ID=Body;"}
 						{Position -0.0330362	-0.015035	0.889182}
-						{VolumeView "bullet.ply"}
+						{LODView
+							{VolumeView "bullet.ply"}
+							{VolumeView "bullet_lod1.ply"}
+						}
 					}
 				}
 			}
@@ -182,7 +253,12 @@
 						-1	0	0
 						0	0	1
 					}
-					{VolumeView "armed.ply"}
+					{LODView
+						{VolumeView "armed.ply"}
+						{VolumeView "armed_lod1.ply"}
+						{VolumeView "armed_lod2.ply"}
+						{VolumeView "armed_lod3.ply"}
+					}
 				}
 			}
 			{bone "part3"
@@ -193,7 +269,12 @@
 					0	0	1
 					0.322853	0.163214	0.504749
 				}
-				{VolumeView "part3.ply"}
+				{LODView
+					{VolumeView "part3.ply"}
+					{VolumeView "part3_lod1.ply"}
+					{VolumeView "part3_lod2.ply"}
+					{VolumeView "part3_lod3.ply"}
+				}
 			}
 		}
 	}
