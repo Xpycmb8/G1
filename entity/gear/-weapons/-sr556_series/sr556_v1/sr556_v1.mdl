@@ -1,0 +1,335 @@
+;Exported by: Xpycmb
+;Date:        Fri Jan 31 22:03:28 2025
+;File:        C:\Users\Xpycmb\Documents\3ds Max 2020\scenes\ruger_sr556.max
+{Skeleton
+	{animation
+		{sequence
+			"recoil"
+			{speed 1}
+			{events 
+				{1 "bullet_drop_view"}
+				{2 "open_bolt_lmg"}
+				{3 "clear_casing_556_45"}
+			}
+		}
+		{sequence "armed"}
+		{sequence "clip_magazine_out" {speed 0.6}}
+		{sequence "stage1" {speed 0.1} {resume}}
+		{sequence "stage2" {speed 0.1} {resume}}
+	}
+	{bone "basis"
+		{Orientation
+			1	0	0
+			0	-1	0
+			0	0	1
+		}
+		{bone "foresight3"
+			{parameters "Voxels=0;"}
+			{Matrix34
+				1	0	0
+				0	0	-1
+				0	1	0
+				9.01308	1.23416	-0.00471848
+			}
+		}
+		{bone "fx_main"
+			{parameters "Voxels=0;"}
+			{Position 9.01308	1.23416	-0.00471848}
+		}
+		{bone "heat2"
+			{Matrix34
+				-1	0	0
+				0	1	0
+				0	0	-1
+				17.5463	5.67735	0
+			}
+		}
+		{bone "heat"
+			{Matrix34
+				-1	0	0
+				0	1	0
+				0	0	-1
+				16.6785	5.67735	0
+			}
+		}
+		{bone "receiver"
+			{parameters "ID=Body;"}
+			{Matrix34
+				1	0	0
+				0	0	-1
+				0	1	0
+				0	0	-0.075061
+			}
+			{VolumeView "receiver.ply"}
+			{bone "part2"
+				{parameters "ID=Body;"}
+				{Position -0.128373	-0.0573365	1.9626}
+				{VolumeView "part2.ply"}
+			}
+			{bone "handguard"
+				{parameters "ID=Body;"}
+				{Position 5.41836	-0.0754633	1.22999}
+				{VolumeView "handguard.ply"}
+				{bone "part1"
+					{parameters "ID=Body;"}
+					{Position 1.22676	0.0181279	0.688573}
+					{VolumeView "part1.ply"}
+				}
+			}
+			{bone "barrel"
+				{parameters "ID=Body;"}
+				{Position 5.558	-0.0697565	1.22973}
+				{VolumeView "barrel.ply"}
+				{bone "muzzle"
+					{parameters "ID=Body;"}
+					{Position 2.85389	0.00376725	0.00255322}
+					{VolumeView "muzzle.ply"}
+				}
+			}
+			{bone "grip"
+				{parameters "ID=Body;"}
+				{Position -0.472254	-0.075061	-0.67622}
+				{VolumeView "grip.ply"}
+			}
+			{bone "link_sight"
+				{parameters "Voxels=0;"}
+				{Position 1.51038	0	1.74266}
+				{bone "sight"
+					{parameters "ID=Body;"}
+					{VolumeView "sight.ply"}
+				}
+			}
+			{bone "stock_bone"
+				{Matrix34
+					0	-1	0
+					1	0	0
+					0	0	1
+					-0.835656	-0.0750613	1.17553
+				}
+				{bone "stock"
+					{parameters "ID=Body;"}
+					{Matrix34
+						0	1	0
+						-1	0	0
+						0	0	1
+						0	-2.45709	-0.927917
+					}
+					{VolumeView "stock.ply"}
+				}
+			}
+			{bone "trigger_bone"
+				{Position 0.932317	-0.07504	0.21472}
+				{bone "trigger"
+					{parameters "ID=Body;"}
+					{Position -0.0707855	0	-0.296349}
+					{VolumeView "trigger.ply"}
+				}
+			}
+			{bone "recoil_bone"
+				{Position 1.91398	0	1.22697}
+				{bone "recoil"
+					{parameters "ID=Body;"}
+					{Orientation
+						0	-1	0
+						1	0	0
+						0	0	1
+					}
+					{VolumeView "recoil.ply"}
+				}
+				{bone "shell_drop"
+					{Matrix34
+						0	-0.984808	0.173648
+						1	0	0
+						0	0.173648	0.984808
+						1.6951	-0.0702692	0.00782394
+					}
+					{VolumeView "shell_drop.ply"}
+				}
+			}
+			{bone "clip_magazine"
+				{Matrix34
+					0.00657266	-0.999638	0.0261015
+					0.970297	6.30403e-05	-0.241918
+					0.241828	0.0269162	0.969946
+					2.3859	0	0
+				}
+				{bone "magazine"
+					{parameters "ID=Body;"}
+					{Orientation
+						0.00657257	0.970297	0.241828
+						-0.999638	6.29181e-05	0.0269163
+						0.0261016	-0.241918	0.969946
+					}
+					{VolumeView "magazine.ply"}
+					{bone "bullet"
+						{parameters "ID=Body;"}
+						{Position -0.0330362	-0.015035	0.889182}
+						{VolumeView "bullet.ply"}
+					}
+				}
+			}
+			{bone "armed_bone"
+				{Matrix34
+					0	-1	0
+					1	0	0
+					0	0	1
+					0.0717044	-0.0751955	1.69136
+				}
+				{bone "armed"
+					{parameters "ID=Body;"}
+					{Orientation
+						0	1	0
+						-1	0	0
+						0	0	1
+					}
+					{VolumeView "armed.ply"}
+				}
+			}
+			{bone "part3"
+				{parameters "ID=Body;"}
+				{Matrix34
+					0	-1	0
+					1	0	0
+					0	0	1
+					0.322853	0.163214	0.504749
+				}
+				{VolumeView "part3.ply"}
+			}
+		}
+	}
+}
+{Volume "armed"
+	{Box 1.66772 0.979688 0.211622}
+	{Bone "armed"}
+}
+{Volume "barrel"
+	{Box 4.69649 0.329921 0.324963}
+	{Bone "barrel"}
+	{Position 0	0	0}
+}
+{Volume "grip"
+	{Box 1.0373 0.520728 2.09371}
+	{Bone "grip"}
+	{Matrix34
+		0.939693	0	-0.34202
+		0	1	0
+		0.34202	0	0.939693
+		0.0338468	0	-0.0398757
+	}
+}
+{Volume "handguard"
+	{Box 4.37422 1.01245 1.23107}
+	{Bone "handguard"}
+}
+{Volume "magazine"
+	{Box 1.39954 0.557923 4.06377}
+	{Bone "magazine"}
+	{Matrix34
+		0.996195	0	0.0871556
+		0	1	0
+		-0.0871557	0	0.996195
+		0.035163	-0.0134867	-0.933431
+	}
+}
+{Volume "muzzle"
+	{Box 1.31265 0.54463 0.544629}
+	{Bone "muzzle"}
+	{Position 0	0	0}
+}
+{Volume "part1"
+	{Box 0.915234 0.447144 0.38457}
+	{Bone "part1"}
+}
+{Volume "part2"
+	{Box 0.914161 0.447144 0.472656}
+	{Bone "part2"}
+}
+{Volume "part3"
+	{Box 0.0903688 0.546677 0.250562}
+	{Bone "part3"}
+}
+{Volume "receiver"
+	{Box 4.14111 0.752518 2.45137}
+	{Bone "receiver"}
+	{Position 1.19722	0	0.619824}
+}
+{Volume "recoil"
+	{Box 0.46129 2.58938 0.427117}
+	{Bone "recoil"}
+	{Position 0.0779759	0	0}
+}
+{Volume "select"
+	{Box 15 4.5 6}
+	{Bone "receiver"}
+	{Position 1.53432	0	-0.0377803}
+}
+{Volume "shell_drop"
+	{Cylinder 0.09 0.790231}
+	{Bone "shell_drop"}
+	{Matrix34
+		-0.173647	0	-0.984808
+		-0.984808	0	0.173647
+		0	1	0
+		0	-0.00806335	0
+	}
+}
+{Volume "sight"
+	{Box 2.63774 1.0009 1.17412}
+	{Bone "sight"}
+	{Position 0.230115	-0.0267211	0.540599}
+}
+{Volume "stock"
+	{Box 5.23091 0.792506 2.61572}
+	{Bone "stock"}
+	{Position 0	0	0}
+}
+{Volume "trigger"
+	{Box 0.340527 0.150961 0.706836}
+	{Bone "trigger"}
+}
+{Extender "preview"
+	{"Stuff"
+		{camera
+			{origin 1.32696	-1.25047	15.4963}
+			{lookat 1.29796	2.10549	-31.3267}
+			{fov 45}
+			{horizon -175.346}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 21.0972	-17.64	-53.5502}
+			}
+			{"1"
+				{type directional}
+				{direction 0.0290608	0.166788	-0.470465}
+			}
+			{"2"
+				{type point}
+				{position -17.8925	15.3024	-57.8131}
+			}
+		}
+	}
+	{"Stuff_primary"
+		{camera
+			{origin 1.88319	-0.971493	16.0051}
+			{lookat 1.853	2.51864	-32.6908}
+			{fov 45}
+			{horizon 179.512}
+		}
+		{lights
+			{"0"
+				{type point}
+				{position 22.4693	-20.0123	-55.1144}
+			}
+			{"1"
+				{type directional}
+				{direction 0.0290606	0.166788	-0.470465}
+			}
+			{"2"
+				{type point}
+				{position -16.5203	12.9301	-59.3773}
+			}
+		}
+	}
+}
